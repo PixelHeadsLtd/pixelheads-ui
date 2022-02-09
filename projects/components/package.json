@@ -5,6 +5,9 @@
   "engines": {
     "node": "14.x"
   },
+  "scripts": {
+    "postinstall": "ng build --aot -prod"
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },

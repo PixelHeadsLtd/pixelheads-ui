@@ -13,7 +13,8 @@
     "lint": "ng lint",
     "magic": "ng build components && npm start",
     "install-magic": "npm install && ng build components && npm start",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "cd anglo-design-language && npm install"
   },
   "private": true,
   "dependencies": {
