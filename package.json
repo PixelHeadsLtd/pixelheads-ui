@@ -8,7 +8,7 @@
     "ng": "ng",
     "components": "ng build components --watch",
     "start": "ng serve --port 5200",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "magic": "ng build components && npm start",
