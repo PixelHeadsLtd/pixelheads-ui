@@ -1,3 +1,4 @@
+import { PopoverComponent } from '@angloamerican/components';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -6,6 +7,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./popover.component.scss']
 })
 export class DlPopoverComponent implements OnInit {
+  @ViewChild(PopoverComponent) popOver: PopoverComponent;
   
   constructor() { }
   
@@ -26,6 +28,10 @@ export class DlPopoverComponent implements OnInit {
     Your popover content here...
   </ng-container>
 </aa-popover>`;
+  
+  public togglePopover() {
+    this.popOver.close();
+  }
   
   copyToClipboard(item): void {
     let listener = (e: ClipboardEvent) => {
