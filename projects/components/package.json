@@ -1,7 +1,7 @@
 {
   "name": "@angloamerican/components",
   "description": "Anglo American shared Angular UI components",
-  "version": "0.0.0",
+  "version": "6.14.15",
   "engines": {
     "node": "14.x"
   },
