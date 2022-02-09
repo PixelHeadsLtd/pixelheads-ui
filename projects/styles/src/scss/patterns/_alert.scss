@@ -1,0 +1,72 @@
+[role=alert]{
+	background-repeat: no-repeat;
+  background-size: 1.15rem;
+  background-position: .85rem 50%;
+	border-radius: .5rem;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+	font-size: _font(size-default);
+	padding:  .5rem 1.25rem .5rem 2.75rem;
+	max-width: 35rem;
+  vertical-align: middle;
+
+	&.sentence {
+		display: block;
+	}
+
+  &.error {
+    background-color: _colour(alert-error-5);
+    color: _colour(alert-error-body);
+    background-image: url("#{$icon-path}/icon-alert-red.svg");
+  }
+
+  &.info {
+    background-color: _colour(alert-info-10);
+    color: _colour(alert-info-body);
+    background-image: url("#{$icon-path}/icon-info-blue.svg");
+  }
+
+  &.warning {
+    background-color: _colour(alert-warning-10);
+    color: _colour(alert-warning-body);
+    background-image: url("#{$icon-path}/icon-info-orange.svg");
+  }
+
+  &.success {
+    background-color: _colour(alert-success-5);
+    color: _colour(alert-success-body);
+    background-image: url("#{$icon-path}/icon-check-green.svg");
+  }
+
+  .is-invalid {
+    border: 1px solid _colour(alert-error-100) !important;
+    background-color: _palette(aa-red-5);
+    border-radius: .25rem;
+  }
+}
+
+.field.error {
+  [role='alert'] {
+    margin-top: .5rem;
+    background-color: _colour(alert-error-5);
+    border-color: _colour(alert-error-10);
+    color: _colour(alert-error-body);
+    background-image: url("#{$icon-path}/icon-alert-red.svg");
+  }
+}
+
+//fieldset {
+//    [role='alert'].error {
+//      margin-top: .5rem;
+//    }
+//}
+
+.alert-group {
+	[role=alert] {
+	margin-top: .5rem;
+		&:not(:last-of-type) {
+			margin-right: .5rem;
+		}
+	}
+}

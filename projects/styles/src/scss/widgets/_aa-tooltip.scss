@@ -1,0 +1,98 @@
+
+.aa-tooltip {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  padding: 0;
+  margin: 0;
+  opacity: 1 !important; //override bs
+  font-size: _font(size-default);
+
+  h4 {
+    margin: 0 0 .5rem 0;
+  }
+
+  .feature-box { // TODO this needs to be controlled using the reusable component feature-box which we should not alter here
+    position: absolute;
+    margin-top: -1rem; // TODO negative margin alert
+    display: none;
+  }
+
+  &:hover div {
+    display: block;
+  }
+
+  .right.bottom {
+    left: 1.5rem;
+    top: .25rem;
+  }
+
+  .right.top {
+    left: 1.75rem
+  }
+
+  .left.bottom {
+    right: 1.5rem;
+    top: .25rem;
+  }
+
+  .right.top {
+    left: 1.5rem;
+    bottom: 0;
+  }
+
+  .left.top {
+    right: 1.5rem;
+    bottom: 0;
+  }
+
+  &.is-warning {
+    color: _colour(alert-warning-header);
+    .feature-box {
+      color: _colour(alert-warning-body);
+      border-color: _colour(alert-warning-100);
+    }
+  }
+
+  &.is-error {
+    color: _colour(alert-error-header);
+    .feature-box {
+      color: _colour(alert-error-body);
+      border-color: _colour(alert-error-100);
+    }
+  }
+
+  &.is-info {
+    color: _colour(alert-info-header);
+    .feature-box {
+      color: _colour(alert-info-body) !important;
+      border-color: _colour(alert-info-100);
+    }
+  }
+
+  &.is-success {
+    color: _colour(alert-success-header);
+    .feature-box {
+      color: _colour(alert-success-body);
+      border-color: _colour(alert-success-100);
+    }
+  }
+  &.custom-icon {
+    .material-icons {
+      font-size: _font(size-medium);
+      &.is-warning {color: _colour(alert-warning-header);}   
+      &.is-error {color: _colour(alert-error-header);}
+      &.is-info {color: _colour(alert-info-header);}
+      &.is-success {color: _colour(alert-success-header);}
+    }
+    &:before {
+      content: "";
+    }
+  }
+}
+
+.aa-tooltip.icon-info {
+  &:before {
+    position: static;
+  }
+}

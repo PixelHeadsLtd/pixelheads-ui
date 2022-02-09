@@ -1,0 +1,31 @@
+<div class="accordion-favourites-list">
+  <div class="flex-group flex-start flex-align-center">
+    <button (click)="onFavClick($event)" class="icon-star-favourites transparent width-3 margin-right-0-5" [class.selected]="isFavourite"></button>
+    <div class="margin-top-1 margin-bottom-0-75">
+      <a (click)="onAnchorClick($event)" class="anchor-underline" title="{{itemAnchorTitle}}"
+         type="button" [attr.href]="itemAnchorURL">{{(itemAnchor.length > 50) ? (itemAnchor | slice:0:50) + '...' : (itemAnchor)}}</a><br/>
+      <div class="margin-top-0-25">{{(itemDescription.length > 50) ? (itemDescription | slice:0:50) + '...' : (itemDescription)}}</div>
+    </div>
+  </div>
+  <div (click)="showTags=!showTags" class="icon-info margin-top-0-25"></div>
+  <div *ngIf="showTags" class="width-100">
+    <div class="more-info">
+      <div class="field boxed">
+        <label>Tags</label>
+        <p>{{tagName}}</p>
+      </div>
+      <div class="field">
+        <label>Last viewed</label>
+        <p>{{lastViewed}}</p>
+      </div>
+      <div class="field">
+        <label>Title</label>
+        <p>{{favouritesTitle}}</p>
+      </div>
+      <div class="field">
+        <label>Description</label>
+        <p>{{favDescription}}</p>
+      </div>
+    </div>
+  </div>
+</div>

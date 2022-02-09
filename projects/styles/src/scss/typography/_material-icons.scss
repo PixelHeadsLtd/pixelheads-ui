@@ -1,0 +1,54 @@
+.material-icons {
+  font-family: 'material-icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.85rem;
+  display: inline-block;
+  line-height: initial;
+
+  &.small {
+    font-size: _font(size-medium);
+  }
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+
+  &.icon-red {
+      color: _palette(aa-red-100);
+  }
+  &.icon-green {
+      color: _palette(aa-green-100);
+  }
+
+  &.icon-blue {
+      color: _palette(aa-light-blue-100);
+  }
+
+  &.icon-dark-blue {
+      color: _palette(aa-blue-100);
+  }
+
+  &.icon-black {
+      color: _palette(aa-dark-grey-100);
+  }
+
+  &.icon-orange {
+      color: _palette(aa-orange-100);
+  }
+
+  &.icon-body-text {
+     color: _colour(body-text);
+  }
+}
+
+.icon-body-text {
+  color: _colour(body-text);
+}

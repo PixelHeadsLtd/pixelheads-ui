@@ -1,0 +1,104 @@
+.accordion-container {
+   background-color: _colour(white);
+   border-radius: .25rem;
+   margin-bottom: .75rem;
+
+   .accordion-trigger {
+      background-color: _colour(bg-accordion);
+      border: none;
+      border-radius: .25rem;
+      font-family: _font(family-regular);
+      text-align: left;
+      padding: 0 1rem 0 .75rem;
+      width: 100%;
+
+      &.disabled {
+         background-color: _colour(bg-accordion-disabled);
+         &:hover {
+            @include button-disabled;
+            background-color: _colour(bg-accordion-disabled)!important;
+         }
+         .material-icons,
+         .accordion-heading {
+            color: _colour(body-text);
+            opacity: .5;
+         }
+         .icon-chevron-down {
+            visibility: hidden;
+         }
+      }
+      
+      input[type=checkbox] {
+         width: .75rem;
+         height: .75rem;
+      }
+
+      &.expanded {
+         border-radius: .25rem .25rem 0 0;
+      }
+
+     &:focus {
+       outline: 0;
+       border: none;
+       box-shadow: none;
+     }
+     
+     &.clean {
+        background-color: _colour(bg-accordion-clean);
+        padding-left: 0;
+        
+        .accordion-icon {
+           width: 1.75rem;
+           height: 1.75rem;
+           margin-right: .5rem;
+           margin-left: .75rem;
+           border-radius: 50%;
+           color: _palette(white);
+           font-size: _font(size-default);
+           text-align: center;
+           line-height: 1.75rem;
+           padding-left: .05rem;
+
+           &.fab {
+            font-size: _font(size-regular);
+           }
+
+           &.material-icons {
+            font-size: _font(size-medium);
+           }
+        }
+     }
+   }
+
+   .accordion-icon {
+     color: _colour(heading-1);
+     font-size: 1.75rem;
+      float: left;
+      width: 2.25rem;
+   }
+
+   .accordion-heading {
+      color: _colour(heading-1);
+      font-size: 1rem;
+      letter-spacing: -.0015rem;
+      margin-left: .25rem;
+   }
+
+   .accordion-panel {
+      background-color: _colour(bg-accordion-body);
+      border: 1px solid _colour(border-accordion);
+      border-top: none;
+      border-radius: 0 0 .25rem .25rem;
+      font-size: _font(size-default);
+
+      &:not(.padding-0) {
+         padding: 1rem;
+     }
+     
+     &.clean {
+        background-color: _colour(bg);
+        border: none;
+     }
+   }
+}
+

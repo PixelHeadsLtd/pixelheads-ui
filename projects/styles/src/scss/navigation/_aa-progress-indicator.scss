@@ -1,0 +1,162 @@
+[role='progressbar'] {
+  padding: 0.5rem 0 1rem 0;
+
+  ol {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0.675rem;
+      background-color: _colour(secondary);
+    }
+  }
+
+  aa-progress-indicator {
+    flex: 1;
+  }
+
+  li {
+    flex: 1;
+    list-style-type: none;
+
+    div {
+      background-color: _colour(white);
+      position: relative;
+      border-radius: 50%;
+      color: _colour(primary);
+      font-size: _font(size-default);
+      padding: 0.6875rem 0.93rem 0.6875rem 0.475rem;
+      width: 0;
+      height: 0;
+      margin: 0 auto;
+      line-height: 0.1rem;
+    }
+
+    .material-icons {
+      font-size: 2.25rem;
+      background-color: _colour(bg);
+      position: relative;
+      border-radius: 50%;
+      width: 2.75rem;
+      height: 2.75rem;
+        + a, + span {
+          padding: .25rem 0.25rem 0 0.25rem;
+      }
+    }
+    
+    a {
+      text-decoration: underline;
+    }
+
+    a,
+    span {
+      padding: 0.75rem 0.25rem 0 0.25rem;
+      color: _colour(body-text);
+      font-family: _font(family-medium);
+      text-align: center;
+      display: none;
+    }
+
+    &.complete {
+      .material-icons {
+        color: _colour(complete);
+      }
+      div {
+        color: _colour(white);
+        background-color: _colour(complete);
+        @include icon-material-center-solid;
+        &:before {
+          content: '\e5ca';
+          margin: -0.2rem 0 0 -0.2rem;
+        }
+      }
+    }
+
+    &.current {
+      .material-icons {
+        color: _colour(current);
+      }
+      div {
+        background-color: _colour(current);
+        color: _colour(body-text-reverse);
+      }
+      a,
+      span {
+        font-family: _font(family-medium);
+      }
+    }
+
+    &.error {
+      .material-icons {
+        color: _colour(alert-error-100);
+      }
+      div {
+        background-color: _colour(alert-error-100);
+        color: _colour(white);
+      }
+    }
+
+    &.next {
+      .material-icons {
+        color: _colour(next);
+      }
+      div {
+        background-color: _colour(next);
+        color: _colour(body-text-reverse);
+      }
+    }
+    
+    &.visited {
+      .material-icons {
+        color: _colour(visited);
+      }
+      div {
+        background-color: _colour(visited);
+        color: _colour(white);
+      }
+    }
+  }
+
+  a,
+  span {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: _breakpoint(breakpoint-570)) {
+  [role='progressbar'] {
+    ol {
+      &:before {
+        top: 1rem;
+      }
+    }
+
+    li {
+      div {
+        padding: 1rem 1.25rem 1rem 0.75rem;
+      }
+
+      &.complete {
+        div {
+          padding: 0.95rem 1.6rem 1.05rem 0.4rem;
+          @include icon-material-center-solid-large;
+          &:before {
+            margin: auto;
+          }
+        }
+      }
+
+      a,
+      span {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div 
+    class="{{fieldClass}} field slider"
+    [ngClass]="{'flex-group flex-start margin-top-1-75 nowrap' : sliderInline}"
+>
+    <label>{{labelText}}</label>
+    <label>
+        <input 
+            type="checkbox"
+            value={{sliderValue}} 
+            name={{sliderName}} 
+            id={{sliderId}} 
+            checked={{sliderChecked}}
+            disabled="{{disabled}}"
+         />
+        <span class="slider-btn"></span>
+    </label>
+</div>

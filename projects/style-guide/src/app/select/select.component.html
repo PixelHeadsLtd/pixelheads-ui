@@ -1,0 +1,265 @@
+<section class="control-bar">
+  <h1>Select</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Data list</h2>
+      <div class="describe margin-bottom-1">
+        <p>The datalist tag specifies a list of pre-defined options for an input element.
+          The datalist tag is used to provide an "autocomplete" feature for inputelements.
+           Users will see a drop-down list of pre-defined options as they input data. The datalist
+           element's id attribute must be equal to the input element's list
+           attribute (this binds them together).</p>
+      </div>
+      <form>
+        <div class="field small boxed">
+          <label for="ice-cream-choice">Data list - favourite ice cream</label>
+          <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" class="list"/>
+          <datalist id="ice-cream-flavors">
+            <option value="Please select" disabled selected>
+            <option value="Chocolate">
+            <option value="Coconut">
+            <option value="Mint">
+            <option value="Strawberry">
+            <option value="Vanilla">
+          </datalist>
+        </div>
+      </form>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Input class</td>
+            <td datalabel="Attribute">list</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Data list</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Data list</td>
+            <td datalabel="Attribute">datalist</td>
+            <td datalabel="Type">HTML element</td>
+            <td datalabel="Default">datalist</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(dataListHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); dataList=true; standardSelect=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Standard select</h2>
+      <div class="describe margin-bottom-1">
+        <p>The default value of the select element can be set 
+          by using the 'selected' attribute on the required option. 
+          This is a boolean attribute.</p>
+      </div>
+      <form class="flex-group">
+        <div class="field small">
+          <label for="pet-select">Select - choose a pet</label>
+          <select name="pets" id="pet-select">
+            <option value="" selected>Please select</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+          </select>
+        </div>
+        <div class="field small">
+          <label for="pet-select">Select (disabled="true")</label>
+          <select name="pets" id="pet-select" disabled="true">
+            <option value="" selected>Please select</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+          </select>
+        </div>
+      </form>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Select</td>
+            <td datalabel="Attribute">select</td>
+            <td datalabel="Type">HTML element</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Select disabled</td>
+            <td datalabel="Attribute">disabled</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Option</td>
+            <td datalabel="Attribute">option</td>
+            <td datalabel="Type">HTML element</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(standardSelectHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); standardSelect=true; dataList=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Ng-select</h2>
+      <div class="describe margin-bottom-1">
+        <p>For selects that use a typeahead or other features such as tags, 
+          please use <a href="https://github.com/ng-select/ng-select" target="_blank">ng-select</a>.</p>
+      </div>
+      <div class="field">
+        <label>Ng select</label>
+        <ng-select 
+          [items]="cities"
+          bindLabel="name"
+          placeholder="Select city"
+          [(ngModel)]="selectedCity"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Multiselect</label>
+        <ng-select 
+          [items]="cities2"
+          bindLabel="name"
+          bindValue="id"
+          [multiple]="true"
+          placeholder="Select cities"
+          [(ngModel)]="selectedCityIds"
+        >
+      </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Custom tags</label>
+        <ng-select 
+          [items]="users"
+          bindLabel="name"
+          bindValue="id"
+          [addTag]="addCustomUser"
+          [multiple]="true"
+          placeholder="Add tag"
+          [(ngModel)]="selectedUserIds"
+          >
+      </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - High performance. Handles over 10,000 items</label>
+        <ng-select 
+          [items]="cities4"
+          [virtualScroll]="true"
+          bindLabel="name"
+          bindValue="id"
+          placeholder="Select city"
+          [(ngModel)]="selectedCityId"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Grouping sections</label>
+        <ng-select 
+          [items]="accounts"
+          bindLabel="name"
+          bindValue="name"
+          groupBy="country"
+          [(ngModel)]="selectedAccount"
+        >
+        </ng-select>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-group flex-column">
+      <section class="getting-started">
+        <div class="flex-group flex-start">
+          <div class="material-icons star aa-orange-100 margin-right-0-5">star_border</div>
+          <h2 class="margin-top-0-25">Useful links</h2>
+        </div>
+        <div class="margin-left-0-25">
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <div class="material-icons small aa-light-blue-100 margin-right-0-75">east</div>
+            <a href="https://github.com/ng-select/ng-select" target="_blank" class="cursor-pointer">ng-select repo on GitHub</a>
+          </div>
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <div class="material-icons small aa-light-blue-100 margin-right-0-75">east</div>
+            <a href="https://stackblitz.com/edit/ng-select" target="_blank" class="cursor-pointer">Example on StackBlitz</a>
+          </div>
+        </div>
+      </section>
+  </section>
+</section>
+
+<aa-blade 
+  [showModal]="false"
+  [toggleBlade]="toggleBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="2"
+  bladeSize="one-column-width"
+  bladeHeading="Gist"
+  [enableIcon]="true"
+  iconName="table_rows"
+  (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div *ngIf="dataList">
+      <app-gist src="angloux/d50913b7862cd92c14a53cb7eb013633"></app-gist>
+      <a href="https://gist.github.com/angloux/d50913b7862cd92c14a53cb7eb013633" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="standardSelect">
+      <app-gist src="angloux/3de1370b449eddbd1624e44965dcd1e8"></app-gist>
+      <a href="https://gist.github.com/angloux/3de1370b449eddbd1624e44965dcd1e8" target="_blank">View Gist on GitHub</a>
+    </div>
+  </article>
+</aa-blade>

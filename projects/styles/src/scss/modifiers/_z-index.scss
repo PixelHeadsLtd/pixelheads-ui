@@ -1,0 +1,42 @@
+.loading-spinner,
+.loading-spinner-page,
+.aa-modal,
+.user-feedback,
+.aa-ip-results {z-index: 999999}
+
+footer,
+.toast-container,
+.user-feedback {z-index: 9999}
+
+.footer,
+.blade-bottom {z-index: 999}
+
+.input-group-append button {z-index: 800}
+
+.aa-popover.show-popover {z-index: 200}
+
+.blade.show-blade {z-index: 20}
+
+.aa-blade-modal {z-index: 19}
+
+.ng-tooltip,
+.aa-tooltip:hover div {z-index: 5}
+
+.hover-card,
+.aa-popover,
+.file-upload input[type="file"],
+.progress-circle .value,
+.nav-context,
+.sticky {z-index: 1}
+
+.backgound,
+.nav-w-submenu-container {z-index: 0}
+
+[role="progressbar"] {
+  ol {div {z-index: 1;} &:before {z-index: 0}}
+}
+
+.aa-popover .arrow,
+.info-panel-stacked .background {z-index: -1}
+
+

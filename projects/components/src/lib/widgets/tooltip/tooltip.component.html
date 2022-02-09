@@ -1,0 +1,32 @@
+<div class="flex-group" [ngClass]="{ 'space-between' : includeLabel, 'flex-start' : includeLegend }">
+  <label *ngIf="includeLabel">{{labelName}}</label>
+  <legend class="margin-right-0-5" *ngIf="includeLegend">{{labelName}}</legend>
+  <div 
+    class="aa-tooltip icon-info" 
+    [ngClass]="{
+      'is-success': isSuccess, 
+      'is-info': isInfo, 
+      'is-warning': isWarning, 
+      'is-error': isError,
+      'custom-icon': customIcon
+    }"
+    [ngStyle]="{'z-index' : zIndex}"
+    >
+    
+    <div 
+      *ngIf="customIcon" 
+      class="material-icons"
+      [ngClass]="{
+        'is-success': isSuccess, 
+        'is-info': isInfo, 
+        'is-warning': isWarning, 
+        'is-error': isError,
+        'custom-icon': customIcon
+      }">{{iconName}}</div>
+      
+    
+    <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width': setMinWidth+'rem'}">
+        <ng-content></ng-content>
+    </div>
+  </div>
+</div>

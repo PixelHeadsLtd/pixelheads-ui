@@ -1,0 +1,13 @@
+<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION -->
+<ng-container *ngIf="!templateRef">
+  <li [ngClass]="{'tab-disabled' : tabDisabled}">
+    <a *ngIf="!tabDisabled" [id]="tabId" [routerLink]="route">
+      {{ tabName }}
+      <span *ngIf="enableIcons" class="material-icons {{iconColour}}">{{iconName}}</span>
+    </a>
+    <span *ngIf="tabDisabled">
+      {{ tabName }}
+      <span *ngIf="enableIcons" class="material-icons {{iconColour}}">{{iconName}}</span>
+    </span>
+  </li>
+</ng-container>

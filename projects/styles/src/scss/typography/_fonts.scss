@@ -1,0 +1,112 @@
+@import url("//hello.myfonts.net/count/3c1f34");
+$font-path: '../../assets/fonts';
+
+/* AA Smart Sans */
+@font-face {
+  font-family: "aa-smart-sans-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Light.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "aa-smart-sans-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Regular.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "aa-smart-sans-medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-SemiBold.woff") format("truetype");
+}
+
+@font-face {
+  font-family: "aa-smart-sans-bold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Bold.woff") format("truetype");
+}
+
+/* Din */
+@font-face {
+  font-family: "din-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/ff-din-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "din-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/ff-din-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "din-medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/ff-din-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "din-bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/ff-din-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "roboto-light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/Roboto-Light.ttf") format("truetype");
+}
+
+/* Roboto */
+@font-face {
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("#{$font-path}/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font-awesome";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("#{$font-path}/font-awesome/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font-awesome-brands";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("#{$font-path}/font-awesome/webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "material-icons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("#{$font-path}/material-design-icons/material.ttf") format("truetype");
+}

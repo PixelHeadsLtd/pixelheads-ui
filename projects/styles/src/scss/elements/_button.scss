@@ -1,0 +1,538 @@
+button {
+  position: relative;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  font-family: _font(family-medium);
+  font-size: _font(size-default);
+  letter-spacing: 0.0575rem;
+  line-height: 1.15rem;
+  padding: .425rem .75rem;
+
+  &:focus:not(.accordion-trigger) {
+    outline: none;
+    border: 1px solid _colour(highlight-input);
+    box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    button {
+      padding: .8rem .75rem .1rem;
+    }
+  }
+
+  // Used for creating our own custon icons on a standard button that does have text.
+  &.custom-icons {
+    padding: 0.425rem 1rem;
+    border: none;
+    color: _palette(aa-white-100);
+    
+    &.small {
+      padding-left: 0;
+      .material-icons {
+        font-size: _font(size-small);
+        line-height: 1.5rem;
+        width: 1.5rem;
+        left: 0;
+      }
+    }
+    .material-icons {
+      font-size: 1.2rem;
+      position: absolute;
+      left: .25rem;
+      top: 0;
+      bottom: 0;
+      width: 2rem;
+      line-height: 2rem;
+      + span {
+        padding-left: 1.25rem
+      }
+    }
+  }
+  
+  // Used for when we want a material-icon to be a button with no text.
+  &.material-icons:not(.page-header .material-icons, .context-menu .material-icons) {
+    &:focus, &:hover {
+      box-shadow: none;
+      border: none;
+    }
+  }
+  &.material-icons:not(.context-menu .material-icons) {
+    font-size: 1.15rem;
+    padding: .25rem;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    letter-spacing: -.015rem;
+
+    &.small {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: _font(size-small);
+    }
+    
+    
+    &.approve {
+      @include button-green;
+      &:hover {
+        @include button-green-hover;
+      }
+    }
+    
+    &.reject {
+      @include button-red;
+      &:hover {
+        @include button-red-hover;
+      }
+    }
+    
+    &.void {
+      @include button-orange;
+      &:hover {
+        @include button-orange-hover;
+      }
+    }
+  }
+
+  &.button-small,
+  &.small {
+    padding: 0.25rem 0.5rem;
+    font-size: _font(size-xsmall);
+    min-width: auto;
+    min-height: 1.5rem;
+    line-height: .75rem;
+    &:before {
+      font-size: 1rem!important;
+    }
+  }
+
+  &.no-text {
+    padding-left: 1.5rem !important; // override button padding
+    > span {
+      margin-left: -999px;
+    }
+  }
+
+  &.primary {
+    @include button-light-blue;
+    &:hover {
+      @include button-light-blue-hover;
+    }
+  }
+  &.secondary {
+    @include button-blue;
+    &:hover {
+      @include button-blue-hover;
+    }
+  }
+  &.tertiary,
+  &.menu {
+    // menu is now deprecated, use .tertiary
+    @include button-blue-outline;
+    &:hover {
+      @include button-blue-outline-hover;
+    }
+  }
+  &.red {
+    @include button-red;
+    &:hover {
+      @include button-red-hover;
+    }
+  }
+  &.blue {
+    @include button-blue;
+    &:hover {
+      @include button-blue-hover;
+    }
+  }
+  &.light-blue {
+    @include button-light-blue;
+    &:hover {
+      @include button-light-blue-hover;
+    }
+  }
+  &.orange {
+    @include button-orange;
+    &:hover {
+      @include button-orange-hover;
+    }
+  }
+  &.green {
+    @include button-green;
+    &:hover {
+      @include button-green-hover;
+    }
+  }
+  &.white {
+    @include button-all-white;
+    &:hover {
+      @include button-all-white;
+    }
+  }
+  &.transparent {
+    border-color: transparent;
+    background-color: transparent;
+    color: _colour(body-text);
+  }
+  &.cancel {
+    @include button-white;
+    &:hover {
+      @include button-white-hover;
+    }
+  }
+  &.delete {
+    @include button-red-outline;
+    &:hover {
+      @include button-red-outline-hover;
+    }
+  }
+  &.white-bg {
+    @include button-white-bg;
+  }
+  &.add {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\2b';
+    }
+  }
+  &.calendar {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f073';
+    }
+  }
+  &.download {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f063';
+    }
+  }
+  &.chevron-up {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f077';
+    }
+  }
+  &.chevron-down {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f078';
+    }
+  }
+  &.next {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f101';
+    }
+  }
+  &.previous {
+    @include icon-left;
+    &:after {
+      @include icon-button-medium-left;
+      content: '\f100';
+    }
+  }
+  &.excel {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f1c3';
+    }
+  }
+  &.add-selected {
+    @include icon-left;
+    &:before {
+      @include icon-button-large-material;
+      margin-top: .2rem;
+      content: '\e9bd';
+    }
+  }
+
+  &.action-primary {
+    @include button-blue;
+    &:hover {
+      @include button-blue-hover;
+    }
+  }
+
+  &.reject:not(.material-icons) {
+    &.small {
+      padding-left: 1.75rem;
+    }
+    @include icon-left-medium;
+    @include button-red;
+    &:hover {
+      @include button-red-hover;
+    }
+    &:before {
+      @include icon-button-large-solid-test;
+      content: "\f057";
+    }
+  }
+  &.void:not(.material-icons) {
+    &.small {
+      padding-left: 1.75rem;
+    }
+    @include icon-left-medium;
+    @include button-orange;
+    &:hover {
+      @include button-orange-hover;
+    }
+    &:before {
+      @include icon-button-large-solid;
+      content: '\f057';
+    }
+  }
+  &.review:not(.material-icons) {
+    &.small {
+      padding-left: 1.5rem;
+    }
+    @include icon-left-medium;
+    &:before {
+      @include icon-button-xlarge-material;
+      content: '\e933';
+    }
+  }
+  &.approve:not(.material-icons) {
+    @include icon-left-medium;
+    @include button-green;
+    &.small {
+      padding-left: 1.75rem;
+    }
+    &:hover {
+      @include button-green-hover;
+    }
+    &:before {
+      @include icon-button-large-solid;
+      content: '\f058';
+    }
+  }
+  &.return:not(.material-icons) {
+    &.small {
+      padding-left: 1.75rem;
+    }
+    @include icon-left-medium;
+    &:before {
+      @include icon-button-large-solid;
+      content: "\f359";
+    }
+  }
+
+  &.filter {
+    @include button-icon;
+    background-image: url(#{$icon-path}/filter_list-24px.svg);
+    min-width: 2.15rem;
+  }
+
+  &.settings {
+    @include button-icon;
+    background-image: url(#{$icon-path}/cog-solid.svg);
+    min-width: 2.15rem;
+  }
+  &.filter {
+    @include button-icon;
+    background-image: url(#{$icon-path}/filter_list-24px.svg);
+    min-width: 2.15rem;
+  }
+
+  &.icon-cog {
+    // deprecated - use .settings
+    color: _colour(white);
+    background-color: _colour(secondary);
+    font-size: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+  }
+
+  &.face-very-dissatisfied-blk,
+  &.face-dissatisfied-blk,
+  &.face-neutral-blk,
+  &.face-satisfied-blk,
+  &.face-very-satisfied-blk {
+    background-color: transparent;
+    padding: 0;
+    &:hover {
+      &:nth-child(2) {background-image: url("#{$icon-path}/face-very-dissatisfied.svg")}
+      &:nth-child(3) {background-image: url("#{$icon-path}/face-dissatisfied.svg")}
+      &:nth-child(4) {background-image: url("#{$icon-path}/face-neutral.svg")}
+      &:nth-child(5) {background-image: url("#{$icon-path}/face-satisfied.svg")}
+      &:nth-child(6) {background-image: url("#{$icon-path}/face-very-satisfied.svg")}
+    }
+    &:focus, 
+    &:hover {
+      border: none;
+    }
+  }
+
+  &:disabled, // this must be the last item otherwise button styles override it
+  &:disabled:hover {
+    @include button-disabled;
+    &.hide-disabled {
+      display: none;
+    }
+  }
+  
+  &.small {
+    &::before {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+button {
+  &.btn-enriched {
+    position: relative;
+    font-family: _font(family-regular);
+    font-size: _font(size-small);
+    cursor: pointer;
+    padding: 1rem .5rem 1rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid _colour(border-box);
+
+    .btn-enriched-toolbar {
+      position: absolute;
+      top: .5rem;
+      right: .75rem;
+      .aa-tooltip {
+        width: .75rem;
+        margin: -.05rem 0 0 .25rem;
+        &:before {
+          font-size: .75rem;
+          top: 0;
+          right: 0;
+        }
+      }
+      .material-icons {
+        margin: 0 0 0 .25rem;
+        font-size: _font(size-regular)
+      }
+    }
+    .btn-enriched-content {
+      .material-icons {
+        font-size: _font(size-xxlarge);
+        margin-right: .5rem;
+      }
+      h2 {
+        text-align: left;
+        width: 15rem;
+        padding-right: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: _font(size-regular);
+      }
+    }
+  }
+}
+
+
+.button-star {
+  @include icon-left;
+  padding: 0 0 0 2rem;
+  height: auto;
+  width: auto;
+  line-height: 1.5rem;
+  background: none;
+  border: none;
+  &:before {
+    @include icon-left-before;
+    content: "\f005";
+  }
+  &.selected {
+    color: _palette(aa-orange-100);
+    &:before {
+      @include icon-left-before-solid;
+    }
+  }
+}
+
+.context-menu {
+  button {
+    &.material-icons {
+      color: _colour(body-text);
+    }
+  }
+}
+
+table:not(.table-feature, .table-feature *) {
+  button.primary {
+    @include button-light-blue-outline;
+    &:hover {
+      @include button-light-blue-outline-hover;
+    }
+    &:disabled {
+      @include button-disabled;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// toggle grid layout
+.grid-small {@include view-switch}
+.grid-large {@include view-switch-large}
+.grid-list {@include view-switch-list}
+.grid-list-alt {@include view-switch-list-alt}
+.grid-small,
+.grid-large,
+.grid-list,
+.grid-list-alt {
+  @include icon-button-small-svg;
+  border-radius: unset;
+}
+
+.button-split {
+  position: relative;
+  float: left;
+  button:not(nav button) {
+    padding: 0 2.5rem 0 .75rem;
+    border: none;
+    height: 2.25rem;
+    color: _colour(white);
+    &:after {
+      top: 0;
+      right: 0.75rem;
+      bottom: 0;
+      border-left: 1px solid _colour(white-transparency);
+      padding: .5rem 0 0 .5rem;
+    }
+  }
+  nav {
+    position: absolute;
+    overflow: hidden;
+    left: calc(100% - 2.1rem);
+    bottom: 100%;
+    background-color: _colour(bg);
+    button {
+      border: none;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      padding: .5rem .75rem;
+      color: inherit;
+      background-color: transparent;
+      white-space: nowrap;
+      width: 100%;
+      text-align: left;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      &:hover {
+        background-color: _colour(lh-hover-bg);
+      }
+      .material-icons {
+        font-size: _font(size-regular);
+        margin-right: .25rem;
+      }
+    }
+  }
+}

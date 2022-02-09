@@ -1,0 +1,1047 @@
+.dash-icon-nav {
+  background: url('#{$icon-path}/stars-24px-white.svg')!important;
+  background-repeat: no-repeat!important;
+  background-position: 50% 50%!important;
+}
+
+.icon-chevron-left {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f053";
+  }
+}
+.icon-chevron-right {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f054";
+  }
+}
+.icon-chevron-up {
+  .grid-list {@include view-switch-list}
+  @include icon-center;
+
+  &:before {
+    @include icon-center-before-solid;
+    content: "\f077";
+  }
+}
+
+.icon-chevron-down {
+  @include icon-center;
+
+  &:before {
+    @include icon-center-before-solid;
+    content: "\f078";
+  }
+}
+
+
+.icon-user-check{
+  @include icon-center;
+
+  &:before {
+    @include icon-center-before-solid;
+    content: "\f4fc";
+  }}
+
+.icon-edit {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f044";
+  }
+}
+
+.icon-info, .icon-info-right {
+  @include icon-right;
+
+  &:before {
+    @include icon-right-before-solid;
+    content: "\f05a";
+  }
+}
+
+.icon-info-left {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before-solid;
+    content: "\f05a";
+  }
+}
+
+.icon-delete, .delete-icon { // delete-icon is deprecated
+  background-image: url("#{$icon-path}/icon-delete-24px-blue.svg");
+  @include icon-button-large-svg;
+}
+
+.icon-filter, .filter-icon { // filter-icon is deprecated
+  background-image: url("#{$icon-path}/icon-filter-40px-blue.svg");
+  @include icon-button-large-svg;
+}
+
+.icon-calendar {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f073";
+  }
+}
+
+
+
+.icon-check {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f058";
+  }
+  &.solid {
+    &:before {
+      @include icon-left-before-solid;
+      content: "\f058";
+    }
+  }
+}
+
+.icon-remove {
+  @include icon-left;
+
+  &:before {
+    @include icon-left-before;
+    content: "\f057";
+  }
+}
+
+.icon-graph {
+  @include icon-left;
+  &:before {
+    @include icon-left-before;
+    content: "\f64e";
+  }
+}
+
+.icon-cog {
+  &:before {
+    @include icon-center-solid;
+    content: "\f013";
+    letter-spacing: 0;
+  }
+}
+
+.icon-open-blade {
+  @include icon-button-small-svg;
+  background-image: url("#{$icon-path}/icon-blade-24px-blue.svg");
+}
+
+// .icon-open-accordion {
+//   @include icon-left-small;
+//   color: _palette(grey-50);
+//   &:before {
+//     @include icon-left-before;
+//     content: "\f055";
+//     font-size: .8rem;
+//     color: _colour(body-text);
+//   }
+// }
+
+// .icon-close-accordion {
+//   @include icon-left-small;
+//   &:before {
+//     @include icon-left-before;
+//     content: "\f056";
+//     font-size: .8rem;
+//     color: _colour(body-text);
+//   }
+// }
+
+.icon-number {
+  &:before {
+    @include icon-left-before;
+    content: "\f64e";
+  }
+}
+
+.icon-alert-comment {
+  @include icon-left;
+  &:before {
+    @include icon-left-before;
+    content: "\f4a5";
+  }
+}
+
+.icon-star {
+  @include icon-left;
+  &:before {
+    @include icon-left-before;
+    content: "\f005";
+  }
+  &.selected {
+    color: _palette(aa-orange-100);
+    &:before {
+      @include icon-left-before-solid;
+    }
+  }
+}
+
+.icon-star-favourites {
+  &:before {
+    @include icon-left-before-favourites;
+    color: _palette(aa-plum-100);
+    content: "\f005";
+  }
+  &.selected {
+    color: _palette(aa-red-100);
+    &:before {
+      @include icon-left-before-favourites-solid;
+    }
+  }
+}
+
+.icon-close {
+  @include icon-right;
+  &:before {
+    @include icon-right-before;
+    content: "\f00d";
+  }
+}
+
+.icon-email {
+  display: inline-block;
+  background-image: url(#{$icon-path}/icon-email.png);
+  @include icon-center;
+  background-position: center;
+  background-size: 100%;
+  width:1.25rem;
+  height:1.25rem;
+}
+
+.icon-teams {
+  display: inline-block;
+  background-image: url(#{$icon-path}/icon-teams.png);
+  @include icon-center;
+  background-position: center;
+  background-size: 100%;
+  width:1.25rem;
+  height:1.25rem;
+}
+
+.icon-flag {
+  border-radius: 5rem;
+  overflow: hidden;
+}
+
+.icon-flag-uk {
+  @include icon-center;
+  background-image: url(#{$icon-path}/icon-flag-uk.png);
+  background-position: center;
+  background-size: 100%;
+  min-width: 1.25rem;
+}
+
+.icon-red {
+  &:before {
+    color: _palette(aa-red-100);
+  }
+}
+
+.icon-green {
+  &:before {
+    color: _palette(aa-green-100);
+  }
+}
+
+.icon-blue {
+  &:before {
+    color: _palette(aa-light-blue-100);
+  }
+}
+
+.icon-dark-blue {
+  &:before {
+    color: _palette(aa-blue-100);
+  }
+}
+
+.icon-black {
+  &:before {
+    color: _palette(aa-dark-grey-100);
+  }
+}
+
+.icon-orange {
+  &:before {
+    color: _palette(aa-orange-100);
+  }
+}
+
+.icon-bg {
+  background-color: _palette(grey-10);
+}
+
+.icon-solid {
+  &:before {
+    font-family: font-awesome;
+  }
+}
+
+.icon-drag {
+  background-image: url("#{$icon-path}/icon-drag-white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.25rem;
+  height: 1.5rem;
+  width: 1.25rem;
+}
+
+// Icons for Favourites and Accordions
+.dashboard-container,
+aa-dashboard-favourites {
+  .icon-pgms {
+    @include icon-favourite-solid;
+    color: _palette(aa-plum-100);
+    &:before {
+      content: "\f1b3";
+    }
+  }
+  
+  .icon-credit-card {
+    @include icon-favourite-solid;
+    color: _palette(aa-red-100);
+    &:before {
+      content: "\f09d";
+    }
+  }
+
+  .icon-people {
+    @include icon-favourite-solid;
+    color: _palette(aa-blue-sky-100);
+    &:before {
+      content: "\f0c0";
+    }
+  }
+
+  .icon-dollar {
+    @include icon-favourite;
+    color: _palette(aa-plum-100);
+    &:before {
+      content: "\f2e8";
+    }
+  }
+
+  .icon-pig {
+    @include icon-favourite-solid;
+    color: _palette(aa-pink-100);
+    &:before {
+      content: "\f4d3";
+    }
+  }
+
+  .icon-coal-thermal {
+    @include icon-favourite-solid;
+    color: _palette(aa-burgundy-100);
+    &:before {
+      content: "\f90c";
+    }
+  }
+
+  .icon-coal {
+    @include icon-favourite-solid;
+    color: _palette(aa-dark-grey-100);
+    &:before {
+      content: "\f06d";
+    }
+  }
+
+  .icon-thermal-coal {
+    @include icon-favourite-solid;
+    color: _palette(aa-burgundy-100);
+    &:before {
+      content: "\f7e4";
+    }
+  }
+
+  .icon-ship {
+    background-image: url("#{$icon-path}/icon-ship.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2.5rem 3rem;
+    float: left;
+    margin-right: .5rem;
+    height: 2.5rem;
+    width: 3rem;
+  }
+
+  .icon-asterisk {
+    @include icon-favourite-solid;
+    color: _palette(aa-red-100);
+    &:before {
+      content: "\f069";
+    }
+  }
+
+  .icon-spinner {
+    @include icon-favourite;
+    color: _palette(aa-red-100);
+    &:before {
+      content: "\f110";
+    }
+  }
+
+  .icon-ellipsis {
+    @include icon-favourite;
+    color: _palette(aa-dark-grey-100);
+    &:before {
+      content: "\f141";
+    }
+  }
+
+  .icon-quil {
+    @include icon-favourite-solid;
+    color: _palette(aa-dark-grey-100);
+    &:before {
+      content: "\f56b";
+    }
+  }
+
+  .icon-user-access-reports {
+    @include icon-favourite-solid;
+    color: _palette(aa-blue-sky-100);
+    &:before {
+      content: "\f3e0";
+    }
+  }
+
+  .icon-upload {
+    @include icon-favourite-solid;
+    color: _palette(aa-plum-100);
+    &:before {
+      content: "\f0aa";
+    }
+  }
+
+  .icon-reports-dashboard {
+    @include icon-favourite-solid;
+    color: _palette(aa-burgundy-100);
+    &:before {
+      content: "\f3fd";
+    }
+  }
+
+  .icon-fav-market-data {
+    @include icon-favourite-solid;
+    color: _palette(aa-blue-sky-100);
+    &:before {
+      content: "\f201";
+    }
+  }
+
+  .icon-bau-support {
+    @include icon-favourite-solid;
+    color: _palette(aa-plum-100);
+    &:before {
+      content: "\f0f1";
+    }
+  }
+
+  .icon-user-guide {
+    @include icon-favourite-solid;
+    color: _palette(aa-brown-100);
+    &:before {
+      content: "\f5da";
+    }
+  }
+
+  .icon-meta-data {
+    @include icon-favourite;
+    font-size: 2.2rem;
+    color: _palette(aa-dark-grey-100);
+    &:before {
+      content: "\f78a";
+    }
+  }
+  &.check-green {
+    @include button-icon;
+    background-image: url("#{$icon-path}/check_circle-green-24px.svg");
+  }
+  &.cross {
+    @include button-icon;
+    background-image: url("#{$icon-path}/icon-delete-24px-blue.svg");
+  }
+  &.comment {
+    @include button-icon;
+    background-image: url("#{$icon-path}/icon-comment.svg");
+  }
+}
+// Icons for Menu Blade
+.icon-grid {
+  @include icon-right-00-before;
+  color: _palette(white);
+  cursor: pointer;
+  &:before {
+    @include icon-right-00-before-material;
+    content: "\e5c3";
+  }
+}
+
+.blade-navigation, .accordion-trigger {
+  // for CORE menu-blade ONLY. Here we are mapping our nice icons to the font-awesome "fa-" icons that are coming from the back-end
+  .fa-book,
+  .fa-book-open,
+  .icon-mine-visit {
+    background-image: url("#{$icon-path}/icon-book.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-sitemap, 
+  .icon-organisation {
+      background-image: url("#{$icon-path}/icon-sitemap.svg");
+      @include icon-button-large-svg;
+  }
+
+  .icon-angular {
+    background-image: url("#{$icon-path}/icon-angular.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-cogs,
+  .fa-list-ol,
+  .icon-performance-reports {
+    background-image: url("#{$icon-path}/icon-admin.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-database, 
+  .icon-master-data {
+    background-image: url("#{$icon-path}/icon-master-data.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-map-marker, 
+  .icon-core {
+    background-image: url("#{$icon-path}/icon-core.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-tachometer-alt, 
+  .icon-dashboard {
+    background-image: url("#{$icon-path}/icon-dashboard.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-command-queue {
+    background-image: url("#{$icon-path}/icon-command-queue.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .fa-heartbeat,
+  .icon-system-health {
+    background-image: url("#{$icon-path}/icon-system-health.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-bacon, 
+  .icon-command-queue {
+    background-image: url("#{$icon-path}/icon-workflow.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .fa-envelope-open-text {
+    background-image: url("#{$icon-path}/icon-envelope-open.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-live-reporting {
+    background-image: url("#{$icon-path}/icon-live-reporting.svg");
+    @include icon-button-large-svg;
+  }
+
+  .compliance-and-training
+  .fa-check-circle,
+  .fa-clipboard-check,
+  .fa-clipboard-list {
+    background-image: url("#{$icon-path}/icon-compliance.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-compliance {
+    background-image: url("#{$icon-path}/icon-compliance-red.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-chart-line, 
+  .icon-market-risk,
+  .icon-reporting,
+  .icon-traders-dashboard {
+    background-image: url("#{$icon-path}/icon-traders-dashboard.svg");
+    @include icon-button-large-svg;
+    &.apple {
+      background-image: url("#{$icon-path}/icon-traders-dashboard-apple.svg");
+    }
+    &.darkblue {
+      background-image: url("#{$icon-path}/icon-traders-dashboard-darkblue.svg");
+    }
+  }
+
+  .fa-chart-area, 
+  .icon-market-analytics,
+  .icon-trader-analytics {
+    background-image: url("#{$icon-path}/icon-analytics.svg");
+    @include icon-button-large-svg;
+    &.rust {
+      background-image: url("#{$icon-path}/icon-analytics-rust.svg");
+    }
+  }
+
+  .fa-file-invoice, 
+  .icon-invoicing {
+    background-image: url("#{$icon-path}/icon-invoice.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-chart-pie,
+  .fa-reports,
+  .icon-reporting {
+    background-image: url("#{$icon-path}/icon-reports.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-users-cog,
+  .fa-lock,
+  .fa-folder,
+  .fa-user-shield,
+  .icon-security-amp {
+    background-image: url("#{$icon-path}/icon-security.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-route,
+  .icon-travel-safety {
+    background-image: url("#{$icon-path}/icon-travel-safety.svg");
+    @include icon-button-large-svg;
+    &.purple {
+      background-image: url("#{$icon-path}/icon-travel-safety-purple.svg");
+      @include icon-button-large-svg;
+    }
+  }
+
+
+  .fa-calculator, 
+  .icon-finance {
+    background-image: url("#{$icon-path}/icon-finance.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-handshake, 
+  .icon-agreement, 
+  .icon-receive-discount {
+    background-image: url("#{$icon-path}/icon-handshake.svg");
+    @include icon-button-large-svg;
+    &.burgundyred {
+      background-image: url("#{$icon-path}/icon-handshake-burgundy.svg");
+    }
+  }
+
+  .fa-fire-alt,
+  .icon-thermal-coal {
+    background-image: url("#{$icon-path}/icon-fire.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-square-root-alt,
+  .icon-risk {
+    background-image: url("#{$icon-path}/icon-fire.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-atlas, 
+  .icon-logistics-portal {
+    background-image: url("#{$icon-path}/icon-globe.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-exclamation, 
+  .icon-incident-reg,
+  .icon-incident-workflow-tool {
+    background-image: url("#{$icon-path}/icon-incident.svg");
+    @include icon-button-large-svg;
+    &.burgundyred {
+      background-image: url("#{$icon-path}/icon-incident-burgundy.svg");
+      @include icon-button-large-svg;
+    }
+  }
+
+  .fa-bolt.blue, 
+  .icon-flash {
+    background-image: url("#{$icon-path}/icon-flash.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-file-signature,
+  .icon-reporting-portal {
+    background-image: url("#{$icon-path}/icon-reports-file.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-ship, 
+  .icon-shipping {
+    background-image: url("#{$icon-path}/icon-fa-ship.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-project-diagram, 
+  .icon-integration {
+    background-image: url("#{$icon-path}/icon-integration.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-users {
+    background-image: url("#{$icon-path}/icon-users.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-bolt {
+    background-image: url("#{$icon-path}/icon-conflict.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-calender {
+    background-image: url("#{$icon-path}/icon-calendar.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-question {
+    background-image: url("#{$icon-path}/icon-question.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-gift {
+    background-image: url("#{$icon-path}/icon-gift.svg");
+    @include icon-button-large-svg;
+  }
+
+  .fa-comment {
+    background-image: url("#{$icon-path}/icon-comment.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-optimove-logo {
+    background-image: url("#{$icon-path}/icon-optimove.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .scm-logo {
+    background-image: url("#{$icon-path}/icon-scm.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .optimove-logo {
+    background-image: url("#{$icon-path}/icon-optimove.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .scm-logo {
+    background-image: url("#{$icon-path}/icon-scm.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-declarations {
+    background-image: url("#{$icon-path}/icon-declarations.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-operations {
+    background-image: url("#{$icon-path}/icon-operations.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .fa-chart-bar, 
+  .icon-market-data {
+    background-image: url("#{$icon-path}/icon-market-data.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-block-leave {
+    background-image: url("#{$icon-path}/icon-block-leave.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .fa-print, 
+  .icon-finance-integ, 
+  .icon-financial-reporting {
+    background-image: url("#{$icon-path}/icon-finance-green.svg");
+    @include icon-button-large-svg;
+    &.burgundy {
+      background-image: url("#{$icon-path}/icon-finance-burgundy.svg");
+      @include icon-button-large-svg;
+    }
+    &.blue {
+      background-image: url("#{$icon-path}/icon-finance-blue.svg");
+      @include icon-button-large-svg;
+    }
+  }
+  
+  .icon-aspect {
+    background-image: url("#{$icon-path}/icon-aspect.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-common-app {
+    background-image: url("#{$icon-path}/icon-common.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-comp-and-train {
+    background-image: url("#{$icon-path}/icon-training.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-customer-onboarding {
+    background-image: url("#{$icon-path}/icon-customer-onboarding.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-op-risk {
+    background-image: url("#{$icon-path}/icon-op-risk.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-ext-data-provider {
+    background-image: url("#{$icon-path}/icon-ext-data-provider.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-customer-portal {
+    background-image: url("#{$icon-path}/icon-customer-portal.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .fa-globe,
+  .icon-hive {
+    background-image: url("#{$icon-path}/icon-hive.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-workflow {
+    background-image: url("#{$icon-path}/icon-workflow-alt.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-trading-trans {
+    background-image: url("#{$icon-path}/icon-trading-trans.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-supply-chain {
+    background-image: url("#{$icon-path}/icon-supply-chain.svg");
+    @include icon-button-large-svg;
+  }
+  
+  .icon-tag {
+    background-image: url("#{$icon-path}/icon-tag.svg");
+    @include icon-button-large-svg;
+  }
+}
+
+.icon-company {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e0af";
+  }
+}
+
+.icon-receipt {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e8b0";
+  }
+}
+
+.icon-account-balance {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e84f";
+  }
+}
+
+.icon-contact-mail {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e0d0";
+  }
+}
+
+.icon-insert-chart {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e24b";
+  }
+}
+
+.icon-handshake {
+  background-image: url("#{$icon-path}/icon-handshake-line.svg");
+  background-size: 1.7rem;
+  @include icon-center;
+  width: 2.25rem!important;
+}
+
+.icon-piggy-bank {
+  @include icon-center-solid;
+  margin-top: .25rem!important;
+  &:before {
+    content: "\f4d3";
+    font-size: 1.75rem;
+  }
+}
+
+.icon-vpn-key {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e0da";
+  }
+}
+
+.icon-lock {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e897";
+  }
+}
+
+.icon-supervisor {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e8d3";
+  }
+}
+
+.icon-accessibility {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e84e";
+  }
+}
+
+.icon-attach-money {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e227";
+  }
+}
+
+.icon-verified {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e834";
+  }
+}
+
+.icon-verified-user {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e8e8";
+  }
+}
+
+.icon-history-edu {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e150";
+  }
+}
+
+.icon-done {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e876";
+  }
+}
+
+.icon-done-all {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e877";
+  }
+}
+
+.icon-globe {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e894";
+  }
+}
+
+.icon-assignment {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e85d";
+  }
+}
+
+.icon-error-solid {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e000";
+  }
+}
+
+.icon-error-outline {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e001";
+  }
+}
+
+.icon-check-simple {
+  @include icon-material-center-solid;
+  &:before {
+    content: "\e5ca";
+  }
+}
+
+.icon-error-outline {
+  @include icon-material-center-solid-large;
+  &:before {
+    content: "\e001";
+  }
+}
+
+.fingerprint, .avatar > div {
+  @include icon-center-svg;
+  background-image: url("#{$icon-path}/fingerprint-24px.svg");
+}
+
+.face-very-dissatisfied-blk {background-image: url("#{$icon-path}/face-very-dissatisfied-blk.svg");}
+.face-dissatisfied-blk {background-image: url("#{$icon-path}/face-dissatisfied-blk.svg")}
+.face-neutral-blk {background-image: url("#{$icon-path}/face-neutral-blk.svg")}
+.face-satisfied-blk {background-image: url("#{$icon-path}/face-satisfied-blk.svg")}
+.face-very-satisfied-blk {background-image: url("#{$icon-path}/face-very-satisfied-blk.svg")}
+
+.face-very-dissatisfied {background-image: url("#{$icon-path}/face-very-dissatisfied.svg");}
+.face-dissatisfied {background-image: url("#{$icon-path}/face-dissatisfied.svg")}
+.face-neutral {background-image: url("#{$icon-path}/face-neutral.svg")}
+.face-satisfied {background-image: url("#{$icon-path}/face-satisfied.svg")}
+.face-very-satisfied {background-image: url("#{$icon-path}/face-very-satisfied.svg")}
+
+.face-very-dissatisfied,
+.face-dissatisfied,
+.face-neutral,
+.face-satisfied,
+.face-very-satisfied,
+.face-very-dissatisfied-blk,
+.face-dissatisfied-blk,
+.face-neutral-blk,
+.face-satisfied-blk,
+.face-very-satisfied-blk {
+  @include icon-button-medium-svg;
+  border: none;
+  padding: 0;
+}
+

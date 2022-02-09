@@ -1,0 +1,344 @@
+<header class="page-header flex-group space-between flex-align-center">
+  <!--LEFT SECTION -->
+  <nav class="flex-align-center app-name">
+    <div 
+      class="
+        material-icons 
+        aa-white-100
+        bg-aa-orange-100
+        bd-aa-orange-100
+        border-orange
+        margin-right-0-75
+        "
+      >
+      design_services
+    </div>
+    <a title="Design Language homepage" routerLink="/">Design Language</a>
+  </nav>
+  
+  <!-- MIDDLE SECTION - LOGO -->
+  <div class="aa-logo" title="Anglo American"><span>Anglo American</span></div>
+  
+  <!-- MOBILE MENU - HIDDEN FOR DESKTOP -->
+  <div class="mobile-menu flex-group">
+    <div *ngIf="mobileMenu" class="aa-blade-modal"></div>
+    <button (click)="toggleTheme()" class="material-icons">brightness_2</button>
+    <button (click)="mobileMenu=!mobileMenu" class="material-icons">menu</button>
+  </div>
+
+  
+  <!-- RIGHT SECTION NAV-->
+  <nav class="flex-group flex-end flex-align-center">
+    <ul>
+      <!-- search -->
+      <li class="cursor-pointer" (click)="toggleAppsBlade=false; toggleLoginBlade=false">
+        <div class="aa-search" [ngClass]="{'show-search' : showSearch}">
+          <input
+            class="animate-normal"
+            type="text"
+            id="search-text"
+            aria-describedby="search-text"
+            [(ngModel)]="searchText"
+            placeholder="Search"
+            autofocus
+            >
+          <div 
+            (click)="toggleSearchInput(); searchText=''" 
+            class="material-icons flex-1 cursor-pointer animate-normal"
+          >
+            saved_search
+          </div>
+          <section class="search-results" *ngIf="searchText.length && showSearch">
+            <ul>
+              <li *ngFor="let c of components | appFilter: searchText" (click)="toggleSearchInput()">
+                <a routerLink="/{{c}}" appHighlight [searchedWord]="searchText" [content]="c.toString().split('-').join('\n')" [classToApply]="'highlight'" [setTitle]="'false'">
+                  {{c}}
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </li>
+      <!-- apps blade -->
+      <li class="cursor-pointer" (click)="toggleAppsBlade=!toggleAppsBlade; toggleLoginBlade=false; showSearch=false">
+        <div class="apps">
+          <div class="material-icons">apps</div>
+        </div>
+      </li>
+    
+      <!-- login blade -->
+      <li class="cursor-pointer" (click)="toggleLoginBlade=!toggleLoginBlade; toggleAppsBlade=false; showSearch=false">
+        <div class="avatar">
+          <div>
+            <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<nav [ngClass]="{'show-mobile-menu' : mobileMenu}" class="nav-container strip-margin-right width-16">
+  <ul>
+    <li class="expand-collapse flex-group flex-start">
+      <button *ngIf="!areAllExpanded() || !isAnyExpanded()" class="transparent" (click)="setExpandedForAllSections(true)">Expand</button>
+      <button *ngIf="areAllExpanded() || isAnyExpanded()" class="transparent" (click)="setExpandedForAllSections(false)">Collapse</button>
+    </li>
+    <li [ngClass]="{ 'show' : Ani }">
+      <a class="flex-group flex-start flex-align-center" (click)="Ani=!Ani">
+        <div><div class="material-icons">motion_photos_paused</div></div>
+        <div>Animations</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/loading-spinner" routerLinkActive="selected">Loading spinner inline</a></li>
+        <li><a routerLink="/loading-spinner-page" routerLinkActive="selected">Loading spinner page</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Ele }">
+      <a class="flex-group flex-start flex-align-center" (click)="Ele=!Ele">
+        <div><div class="material-icons">check_box</div></div>
+        <div>Elements and inputs</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><label>Elements</label></li>
+        <li><a routerLink="/anchor" routerLinkActive="selected">Anchor</a></li>
+        <li><a routerLink="/buttons" routerLinkActive="selected">Button</a></li>
+        <li><a routerLink="/select" routerLinkActive="selected">Select</a></li>
+        <li><a routerLink="/tables" routerLinkActive="selected">Table</a></li>
+
+        <li><label>Inputs</label></li>
+        <li><a routerLink="/checkbox" routerLinkActive="selected">Checkbox</a></li>
+        <li><a routerLink="/field" routerLinkActive="selected">Field - input wrapper</a></li>
+        <li><a routerLink="/fieldset" routerLinkActive="selected">Fieldset</a></li>
+        <li><a routerLink="/field-validation" routerLinkActive="selected">Field - validation</a></li>
+        <li><a routerLink="/file-upload" routerLinkActive="selected">File upload</a></li>
+        <li><a routerLink="/input-radio" routerLinkActive="selected">Radio</a></li>
+        <li><a routerLink="/slider" routerLinkActive="selected">Slider</a></li>
+        <li><a routerLink="/input" routerLinkActive="selected">Text</a></li>
+        <li><a routerLink="/input-textarea" routerLinkActive="selected">Textarea</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Lay }">
+      <a class="flex-group flex-start flex-align-center" (click)="Lay=!Lay">
+        <div><div class="material-icons">dashboard</div></div>
+        <div>Layout</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/blade" routerLinkActive="selected">Blade</a></li>
+        <li><a routerLink="/blade-bottom" routerLinkActive="selected">Blade bottom</a></li>
+        <li><a routerLink="/blade-top" routerLinkActive="selected">Blade top</a></li>
+        <li><a routerLink="/filter" routerLinkActive="selected">Filter</a></li>
+        <li><a routerLink="/flex" routerLinkActive="selected">Flex</a></li>
+        <li><a routerLink="/footer" routerLinkActive="selected">Footer</a></li>
+        <li><a routerLink="/header" routerLinkActive="selected">Header</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Nav }">
+      <a class="flex-group flex-start flex-align-center" (click)="Nav=!Nav">
+        <div><div class="material-icons">menu_open</div></div>
+        <div>Navigation</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/context-menu" routerLinkActive="selected">Context menu</a></li>
+        <li><a routerLink="/nav-context" routerLinkActive="selected">Nav context</a></li>
+        <li><a routerLink="/nav-core" routerLinkActive="selected">Nav core</a></li>
+        <li><a routerLink="/progress-indicator" routerLinkActive="selected">Progress indicator</a></li>
+        <li><a routerLink="/progress-indicator-lh" routerLinkActive="selected">Progress indicator LH</a></li>
+        <!-- <li><a routerLink="/stepper" routerLinkActive="selected">Stepper</a></li> -->
+        <li><a routerLink="/tab-navigation" routerLinkActive="selected">Tab navigation</a></li>
+        <!-- <li><a routerLink="/tree-menu" routerLinkActive="selected">Tree menu</a></li> -->
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Pat }">
+      <a class="flex-group flex-start flex-align-center" (click)="Pat=!Pat">
+        <div><div class="material-icons">apps</div></div>
+        <div>Patterns</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/alerts" routerLinkActive="selected">Alert</a></li>
+        <li><a routerLink="/shields" routerLinkActive="selected">Alert shield</a></li>
+        <li><a routerLink="/box" routerLinkActive="selected">Box</a></li>
+        <li><a routerLink="/colours" routerLinkActive="selected">Colour</a></li>
+        <li><a routerLink="/icons" routerLinkActive="selected">Icons</a></li>
+        <li><a routerLink="/progress-bar" routerLinkActive="selected">Progress bar</a></li>
+        <li><a routerLink="/progress-circle" routerLinkActive="selected">Progress circle</a></li>
+        <li><a routerLink="/tags" routerLinkActive="selected">Tags</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Wid }">
+      <a class="flex-group flex-start flex-align-center" (click)="Wid=!Wid">
+        <div><div class="material-icons">touch_app</div></div>
+        <div>Widgets</div>
+      </a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/accordion" routerLinkActive="selected">Accordion</a></li>
+        <li><a routerLink="/accordion-fancy" routerLinkActive="selected">Accordion fancy</a></li>
+        <li><a routerLink="/card" routerLinkActive="selected">Card</a></li>
+        <li><a routerLink="/dashboard-favourites" routerLinkActive="selected">Faves - dashboard</a></li>
+        <li><a routerLink="/icon-picker" routerLinkActive="selected">Icon picker</a></li>
+        <li><a routerLink="/info-panel" routerLinkActive="selected">Info panel</a></li>
+        <li><a routerLink="/modal" routerLinkActive="selected">Modal</a></li>
+        <li><a routerLink="/overlay" routerLinkActive="selected">Overlay</a></li>
+        <li><a routerLink="/popover" routerLinkActive="">Popover</a></li>
+        <li><a routerLink="/summary-top" routerLinkActive="selected">Summary top</a></li>
+        <li><a routerLink="/toastr" routerLinkActive="selected">Toastr</a></li>
+        <li><a routerLink="/tooltip" routerLinkActive="selected">Tooltip</a></li>
+        <li><a routerLink="/user-feedback" routerLinkActive="selected">User feedback</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <li [ngClass]="{ 'show' : Mod }"><a (click)="Mod=!Mod">Modifiers</a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/border" routerLinkActive="selected">Border</a></li>
+        <li><a routerLink="/border-radius" routerLinkActive="selected">Border radius</a></li>
+        <li><a routerLink="/colours" routerLinkActive="selected">Colours</a></li>
+        <li><a routerLink="/margin" routerLinkActive="selected">Margin</a></li>
+        <li><a routerLink="/markup" routerLinkActive="selected">Markup</a></li>
+        <li><a routerLink="/padding" routerLinkActive="selected">Padding</a></li>
+        <li><a routerLink="/widths" routerLinkActive="selected">Width</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Typ }"><a (click)="Typ=!Typ">Typography</a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/editorial-content" routerLinkActive="selected">Editorial content</a></li>
+        <li><a routerLink="/typography" routerLinkActive="selected">Typography</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Oth }"><a (click)="Oth=!Oth">Other widgets</a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/ag-grid" routerLinkActive="selected">Ag Grid</a></li>
+        <li><a routerLink="/ngb-datepicker" routerLinkActive="selected">ngb datepicker</a></li>
+        <li><a routerLink="/ng-select" routerLinkActive="selected">ng select</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Ema }"><a (click)="Ema=!Ema">Email templates</a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/html-email" routerLinkActive="selected">Email standard</a></li>
+      </ul>
+    </li>
+    <li [ngClass]="{ 'show' : Add }"><a (click)="Add=!Add">Addendum</a>
+      <ul (click)="mobileMenu=false">
+        <li><a routerLink="/elements-alignment" routerLinkActive="selected">Elements alignment</a></li>
+        <li><a routerLink="/page-layout-examples" routerLinkActive="selected">Page layout examples</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+  </ul>
+</nav>
+
+<main class="padding-left-16">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- BLADES -->
+<!--toggleAppsBlade-->
+<aa-blade
+  class="apps-blade"
+  [customBlade]="false"
+  [showModal]="false"
+  [toggleBlade]="toggleAppsBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="99999"
+  bladeSize="one-column-width"
+  bladeHeading="Hello"
+  [enableIcon]="true"
+  iconName="directions_bike"
+  (close)="toggleAppsBlade = false"
+  [enablePinning]="false"
+>
+
+<div>
+  <div class="blade-header flex-group space-between">
+    <input 
+    type="text" 
+    class="search" 
+    placeholder="Search" 
+    
+    id="search-text"
+    aria-describedby="search-text"
+    [(ngModel)]="searchText"
+    placeholder="Filter by App name"
+    autofocus
+    />
+  </div>
+
+  <article class="blade-content">
+    <div *ngIf="!hideMe" class="describe">
+      Please note that these icons are currently
+      mapped to the Font Awesome (fa) classnames
+      written in Core Db. We have now added the 
+      (.icon-app-name) class that correspond to the
+      actual App itself. It would be good to 
+      update these in the Db at some point. <a (click)="hideMe=true">Hide</a>
+    </div>
+    <section class="blade-navigation flex-group">
+      
+      <div class="nav-icon" *ngFor="let i of appIconItems | appIcons: searchText; let f = index">
+        <button 
+          (click)="favClicked(f)" 
+          class="icon-star-favourites transparent width-3" 
+          [class.selected]="favIndex === f">
+        </button>
+        <a class="{{i.appIconClass}}"></a>
+        <p>{{i.appIconName}}</p>
+      </div>
+      
+    </section>
+  </article>
+  <aa-blade-footer>
+    <aa-button 
+      (buttonClick)="toggleAppsBlade=false" 
+      buttonText="Close" 
+      buttonClass="cancel">
+    </aa-button>
+  </aa-blade-footer>
+</div>
+</aa-blade>
+
+<!--toggleLoginBlade-->
+<aa-blade 
+  class="login-blade"
+  [customBlade]="false"
+  [showModal]="false"
+  [toggleBlade]="toggleLoginBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="999"
+  bladeSize="one-column-width"
+  [enableIcon]="true"
+  iconName="directions_bike"
+  (close)="toggleLoginBlade = false"
+  [enablePinning]="false"
+>
+
+<article class="blade-content">
+  <div class="flex-group flex-start">
+    <div class="avatar">
+      <div>
+        <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+      </div>
+    </div>
+    <div>
+      <h2 class="margin-bottom-0-25">Michael King</h2>
+      <a class="cursor-pointer" mailto="michael.king@angloamerican.com">michael.king@angloamerican.com</a>
+    </div>
+  </div>
+</article>
+<article class="blade-footer flex-group space-between">
+  <div class="field">
+    <button (click)="toggleTheme()" class="transparent anchor-blue padding-0">
+      <div class="flex-group ng-star-inserted">
+        Switch to dark mode
+      </div>
+    </button>
+  </div>
+  <div class="field">
+    <button (click)="toggleLoginBlade=false" class="transparent anchor-blue padding-0">
+      Close
+    </button>
+  </div>
+</article>
+</aa-blade>

@@ -1,0 +1,304 @@
+// AG-GRID PARENT COMPONENT STYLING
+.blade {
+  .ag-grid {
+    .ag-header, 
+    .ag-body-viewport {
+      padding-left: .5rem;
+    }
+  }
+}
+
+.feature-box {
+  .ag-header {
+    white-space: normal;
+  }
+}
+
+// START AG-GRID CUSTOM STYLING
+.ag-theme-balham {
+  // custom tooltip sits at top level within ag-grid wrapper
+  .custom-tooltip {
+    background-color: _colour(bg-primary);
+    padding: .5rem;
+    border-radius: .5rem;
+
+    p {
+      margin: 0 0 .25rem 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // Styling for ag-grid context-menu
+  &.ag-popup {
+    .ag-menu {
+      .ag-menu-list {
+        padding: 0!important;
+      }
+    }
+  }
+  // wrappers
+  .ag-root-wrapper {border: none;}
+  .ag-root {background-color: _colour(bg-ag-grid);}
+  .ag-column-drop-wrapper {
+    .ag-column-drop {
+      background-color: _colour(bg-ag-grid);
+      border-bottom-color: _colour(border-ag-grid);
+      .ag-icon {
+        color: _colour(ag-grid-body);
+      }
+      .ag-column-drop-cell {
+        background-color: _colour(bg-ag-grid-drop);
+        color: _colour(ag-grid-body);
+      }
+    }
+  }
+
+  // ------------------ SHARED ACROSS HEADER & ROWS -------------------
+  .link-grid-primary {
+    color: _colour(link);
+  }
+  .ag-checkbox-input-wrapper,
+  .ag-radio-button-input-wrapper {
+    &:after {
+      background-color: _colour(bg-primary)!important;
+    }
+    
+    &.ag-checked {
+      &:after {
+        color: _colour(link);
+      }
+    }
+  }
+  // ---------------------------- HEADER ------------------------------
+  .ag-header {
+    color: _colour(body-text);
+    font-family: _font(family-main);
+    font-size: _font(size-default);
+    font-weight: _font(weight-regular);
+    background-color: _colour(bg-ag-grid);
+    border-bottom: solid 1px _colour(border-primary);
+
+    .ag-header-row {
+      color: _colour(body-text);
+
+      .ag-header-group-cell {
+        &:first-child {
+          padding-left:$cell-horizontal-padding-first;
+        }
+      }
+    }
+
+    .feature-box {
+      white-space: normal;
+    }
+
+    .ag-header-cell {
+      &:first-child {
+        padding-left:$cell-horizontal-padding-first;
+      }
+      .ag-header-icon {
+        color: _colour(body-text);
+      }
+      .ag-header-cell-text {
+        color: _colour(body-text);
+        font-size: _font(size-default);
+        font-weight: _font(weight-bold);
+      }
+    }
+  }
+
+  // ------------------------ MAIN CONTENT ROWS -------------------------
+  .ag-row {
+    color: _colour(body-text);
+    font-family: _font(family-main);
+    font-size: _font(size-default);
+    font-weight: _font(weight-regular);
+    border-color: _colour(border-ag-grid);
+    background-color: _colour(bg-ag-grid);
+    border-width: 1px;
+    min-height: 2.25rem!important;
+
+    &.ag-row-hover, 
+    &.ag-row-focus {
+        background-color: _colour(bg-ag-grid-hover);
+    }
+
+    .ag-cell {
+      padding-left: calc(#{$cell-horizontal-padding}) !important;
+      padding-right: calc(#{$cell-horizontal-padding}) !important;
+      line-height: 2.25rem!important;
+      border: 1px solid transparent;
+
+      .ag-select {
+        .ag-picker-field-wrapper {
+          background-color: _colour(bg-ag-grid)!important;
+          color: _colour(body-text)!important;
+        }
+      }
+      
+      .ag-icon {
+        color: _colour(body-text)!important;
+      }
+      
+      .alert-shield {
+        line-height: 1rem;
+        float: left;
+        margin-top: .158rem;
+        background-size: 1rem;
+        font-size: _font(size-small);
+        padding: .275rem .75rem .275rem 1.75rem;
+
+        &.small {
+          line-height: 1rem;
+        }
+        
+        &.green,
+        &.blue,
+        &.orange,
+        &.red {
+          padding-left: .75rem;
+        }
+      }
+
+      &.ag-cell-range-selected {
+        button {
+          &.material-icons {
+            box-shadow: 0 0 3pt 1pt _palette(aa-light-blue-50);
+          }
+        }
+      }
+      
+      button:not(.ag-paging-panel) {
+        line-height: 14px !important;
+      }
+
+      button {
+        float: left;
+        margin-top: .158rem;
+        padding-top: .4rem;
+        padding-bottom: .4rem;
+        letter-spacing: 0rem;
+        font-size: _font(size-small);
+        min-width: auto;
+        &:after {
+          top: .35rem;
+        }
+        
+        &:before {
+          font-size: 1.2rem!important;
+        }
+        
+        &.material-icons {
+          width: 1.5rem;
+          height: 1.5rem;
+          padding: 0;
+        }
+      }
+
+      .checkbox, 
+      .radio {
+        label {
+          margin-top: .158rem;
+          display: flex;
+          align-items: center;
+          float: left;
+          padding: 0.25rem 0.75rem 0.25rem 0.75rem!important;
+          span {
+            line-height: initial;
+          }
+        }
+      }
+      &:first-child {
+        padding-left:1.25rem!important;
+      }
+    }
+  }
+
+  // header menus - sits outside header at top level
+  .ag-list-item {
+    background-color: _colour(bg-ag-grid);
+    color: _colour(body-text)!important;
+    &.ag-active-item {
+      background-color: _colour(bg-ag-grid-hover)!important;
+    }
+  }
+
+  .ag-menu, 
+  .ag-menu-header, 
+  .ag-tab-selected {
+    background-color: _colour(bg-ag-grid);
+    border-color: _colour(border-ag-grid);
+    color: _colour(body-text);
+  }
+
+  .ag-menu-separator {
+    height: 3px!important;
+    .ag-menu-separator-part {
+      &:after {
+        border-color: _colour(border-ag-grid);
+      }
+    }
+  }
+
+  .ag-menu-option-active, .ag-compact-menu-option-active {
+    background-color: _colour(bg-ag-grid-hover);
+    color: _colour(body-text);
+  }
+
+  .ag-menu-list {
+    padding: 4px 0 0!important
+  }
+  
+  // pagination
+  .ag-paging-panel {
+    padding: 1.5rem 0;
+    justify-content: left;
+    background-color: _colour(bg-ag-grid);
+    color: _colour(body-text);
+    border-color: _colour(border-ag-grid);
+    
+    .ag-paging-button {
+      padding: .25rem .5rem;
+      font-size: _font(size-small);
+    }
+    
+    button[ref=btFirst] {
+      margin-left: 1rem;
+      @include button-white;
+      &:hover {
+        @include button-white-hover;
+      }
+    }
+  
+    button[ref=btPrevious] {
+      margin-right: 1rem;
+      @include button-light-blue;
+      &:hover {
+        @include button-light-blue-hover;
+      }
+    }
+  
+    button[ref=btNext] {
+      margin-left: 1rem;
+      @include button-light-blue;
+      &:hover {
+        @include button-light-blue-hover;
+      }
+    }
+  
+    button[ref=btLast] {
+      margin-right: 1rem;
+        @include button-white;
+        &:hover {
+          @include button-white-hover;
+        }
+    }
+  }
+  
+  .ag-row-drag {
+    background-position-y: calc(#{$grid-size} / 2 + 2px) !important;
+  }
+} // END
+
+

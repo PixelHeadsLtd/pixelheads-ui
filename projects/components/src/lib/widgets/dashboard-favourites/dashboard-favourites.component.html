@@ -1,0 +1,24 @@
+<article class="dashboard-favourite">
+  <div *ngIf="!materialIcons" [class]="favIconClass"></div>
+  <div *ngIf="materialIcons" class="material-icons {{iconColour}}">{{favIconClass}}</div>
+  <a (click)="onAnchorClick($event)" [attr.href]="favouritesURL">{{(favouritesTitle.length>35)? (favouritesTitle | slice:0:35)+'...':(favouritesTitle)}}</a>
+  <button (click)="onFavClick($event)" [class.selected]="isFavourite" class="icon-star-favourites transparent"></button>
+  <div class="hover-card animate-all">
+    <div class="field boxed">
+      <label>Tags</label>
+      <p>{{tagName}}</p>
+    </div>
+    <div class="field">
+      <label>Last viewed</label>
+      <p>{{lastViewed}}</p>
+    </div>
+    <div class="field">
+      <label>Title</label>
+      <p>{{favouritesTitle}}</p>
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <p>{{favDescription}}</p>
+    </div>
+  </div>
+</article>

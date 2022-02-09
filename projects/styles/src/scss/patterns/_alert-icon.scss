@@ -1,0 +1,21 @@
+.alert-icon {
+    display: inline-block;
+    height: 95%;
+    width: 2rem;
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
+    background-size: 1rem;
+
+    &.check {
+        background-image: url("#{$icon-path}/check_circle-24px-green.svg");
+    }
+
+    &.go {
+        background-image: url("#{$icon-path}/keyboard_arrow_right-24px-blue.svg");
+    }
+
+    &.info {
+        background-image: url("#{$icon-path}/icon-info-blue.svg");
+        color:_colour(secondary);
+    }
+}

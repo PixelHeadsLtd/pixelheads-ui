@@ -1,0 +1,107 @@
+.aa-modal {
+  background-color:_colour(bg-modal);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  //z-index: 10;
+}
+
+.aa-modal-container {
+  position: fixed;
+  padding: .75rem 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: _colour(bg);
+  border: 1px solid _colour(border-primary);
+  max-height: 80%;
+  min-width: 15rem;
+  border-radius: 0.5rem;
+  
+  &.red {
+    border: 3px solid _palette(aa-red-100);
+    h1, h2, h3, h4 {
+      color: _palette(aa-red-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(aa-red-100);
+      border: 1px solid _palette(aa-red-100);
+    }
+  }
+  &.orange {
+    border: 3px solid _palette(aa-orange-100);
+    h1, h2, h3, h4 {
+      color: _palette(aa-orange-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(aa-orange-100);
+      border: 1px solid _palette(aa-orange-100);
+    }
+  }
+  &.green {
+    border: 3px solid _palette(aa-green-100);
+    h1, h2, h3, h4 {
+      color: _palette(aa-green-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(aa-green-100);
+      border: 1px solid _palette(aa-green-100);
+    }
+  }
+  &.blue {
+    border: 3px solid _palette(aa-light-blue-100);
+    h1, h2, h3, h4 {
+      color: _palette(aa-light-blue-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(aa-light-blue-100);
+      border: 1px solid _palette(aa-light-blue-100);
+    }
+  }
+}
+
+.aa-modal-header {
+  height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.aa-modal-content {
+  position: relative;
+  overflow: auto;
+  max-height: calc(80vh - 11rem);
+  margin-bottom: .75rem;
+  font-size: _font(size-default);
+}
+
+.aa-modal-footer {
+  display: block;
+
+  button {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: _breakpoint(breakpoint-570)) {
+
+  .aa-modal-content {
+    max-height: calc(80vh - 6rem);
+  }
+  .aa-modal-footer {
+    bottom: .75rem;
+    display: flex;
+
+    button {
+      flex: 1;
+      margin-right: .75rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

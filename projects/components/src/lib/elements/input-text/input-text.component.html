@@ -1,0 +1,14 @@
+<div class="field {{fieldClass}}">
+  <label for="{{inputTextId}}">
+    {{inputTextLabel}}
+    <span class="optional" *ngIf="isOptional">Optional</span>
+  </label>
+  <input 
+    type="text" 
+    name="{{inputTextId}}" 
+    id="{{inputTextId}}" 
+    placeholder="{{inputPlaceholder}}" 
+    readonly="{{readOnly}}"
+    value="{{inputValue}}"
+    >
+</div>

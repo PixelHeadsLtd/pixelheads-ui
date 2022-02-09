@@ -1,0 +1,54 @@
+.alignment-marker {
+  margin: 0;
+  z-index: 1000;
+  margin-right: 0!important;
+
+  &.shields {
+    > div {
+      top: 0;
+
+      div {
+        top: .75rem;
+      }
+    }
+  }
+
+  &.shields.small {
+    > div {
+      top: 0;
+      height: 1.65rem;
+      div {
+        top: .55rem;
+      }
+    }
+  }
+
+  &.shields-double {
+    > div {
+      top: 0;
+      height: 3rem;
+      div {
+        top: 1.25rem;
+      }
+    }
+  }
+
+  div {
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    border: 1px dotted _palette(aa-burgundy-100);
+    border-left: none;
+    border-right: none;
+    height: 2.1rem;
+
+    div {
+      border: 1px dotted _palette(aa-lime-100);
+      border-left: none;
+      border-right: none;
+      height: 0.5rem;
+      top: 0.75rem;
+    }
+
+  }
+}

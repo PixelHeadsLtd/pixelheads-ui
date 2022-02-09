@@ -1,0 +1,26 @@
+@function _font($keys...) {
+  @return val($font, $keys...);
+}
+
+@function _breakpoint($keys...) {
+  @return val($breakpoint, $keys...);
+}
+
+@function _palette($keys...) {
+  @return val($palette, $keys...);
+}
+
+@function _colour($keys...) {
+  @return val($colour, $keys...);
+}
+
+@function _size($keys...) {
+  @return val($size, $keys...);
+}
+
+@function val($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

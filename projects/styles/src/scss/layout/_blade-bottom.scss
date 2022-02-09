@@ -1,0 +1,139 @@
+.blade-bottom.show {
+  transition: all 0.25s linear;
+  
+  .ag-theme-balham {
+    &.ag-grid {
+      height: calc(50vh - 8.5rem);
+    }
+  }
+
+  .scroll-panel {
+    margin-top: 2rem;
+    height: calc(50% + 4.5rem);
+    position: absolute;
+    overflow: auto;
+
+    thead {
+      th {
+        position: relative;
+        border-bottom: none;
+        padding-bottom: 0;
+
+        &:first-child {
+          padding-left: 0;
+
+          span.mask {
+            padding-left: 1.5rem !important;
+          }
+        }
+
+        label {
+          position: fixed;
+          width: 100%;
+
+          span.mask {
+            position: absolute;
+            background-color: _colour(bg-ag-grid);
+            border-bottom: solid 1px #002776;
+            width: 100%;
+            top: -2.5rem;
+            left: 0;
+            padding-bottom: 0.25rem;
+            padding-top: .5rem;
+          }
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:first-child {
+        td {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.blade-bottom.pinned {
+  transition: all 0.25s linear;
+  .pin {
+    transform: rotate(0deg);
+    margin: 0 .25rem 0 0;
+    padding: .5rem;
+  }
+
+  .ag-theme-balham {
+    &.ag-grid {
+      height: calc(50vh - 8.5rem);
+    }
+  }
+}
+
+.blade-bottom.fullscreen {
+  .ag-theme-balham {
+    &.ag-grid {
+      height: calc(90vh - 8.5rem);
+    }
+  }
+  .scroll-panel {
+    height: calc(100% - 12.5rem);
+  }
+}
+
+.blade-bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: _colour(bg);
+  transition: all 0.25s linear;
+  
+  table {
+    table-layout: fixed;
+  }
+
+  /* Below table settings are required for the blade to display fullscreen width and height.
+    Would otherwise have to set left and right pos on blade, but then that wouldn't
+    update when left menu is collapsed */
+  .blade-bottom-content {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+}
+
+.blade-bottom-header {
+  padding: 0 0 0 1.25rem;
+  height: 2.25rem;
+
+  .material-icons {
+    font-size: 1.5rem;
+  }
+
+  .controls {
+    .material-icons {
+      font-size: _font(size-medium);
+
+      &:last-child {
+        margin-top: 0.4rem;
+        padding: 0 1.25rem 0 0;
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  aa-tab-navigation,
+  .tab-navigation {
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .pin {
+    transform: rotate(90deg);
+    margin-right: .75rem;
+    padding: 0 .5rem 0 .5rem;
+  }
+}

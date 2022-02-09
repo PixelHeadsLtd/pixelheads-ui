@@ -1,0 +1,254 @@
+table {
+  &.table-fixed {
+    table-layout: fixed;
+  }
+}
+
+table:not(.table-feature) {
+  td {
+    overflow-wrap: break-word;
+    vertical-align: inherit;
+  }
+  button {
+    min-width: unset;
+  }
+}
+
+table:not(.table-condensed, .email-container, .table-feature, .js-file-line-container) {
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background-color: _colour(bg-ag-grid);
+
+  &.half-width,
+  &.small {
+    width: 50%;
+  }
+
+  caption {
+    text-align: left;
+    caption-side: top;
+    font-size: _font(size-medium);
+    padding-bottom: 0.75rem;
+    *.boxed {
+      font-size: _font(size-default);
+    }
+  }
+
+  thead {
+    th, [datalabel] {
+      border-bottom: solid 2px _colour(secondary);
+      font-family: _font(family-medium);
+      font-weight: normal;
+      padding: 0.5rem 1rem;
+      &:first-child {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &.row-selected {
+        background-color: _palette(aa-light-blue-5);
+      }
+
+      td {
+        padding: 0.5rem 1rem;
+        border-bottom: solid 1px _colour(border-subtle);
+        &:first-child {
+          padding-left: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// start table feature...
+table.table-feature {
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tr {
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+    td {
+      padding: .25rem .75rem;
+      border-top: none;
+      border-bottom: 1px solid _colour(border-secondary);
+      font-family: _font(family-medium);
+      font-size: _font(size-default);
+      height: 3.25rem;
+      &.feature-cell {
+        max-width: 15rem;
+        background-color: transparent;
+        border: none;
+        text-align: left;
+        vertical-align: top;
+        padding: 0;
+      
+        table {
+          background-color: transparent;
+          border-collapse: collapse;
+          width: 100%;
+          tr {
+            &:first-child {
+              td {
+                background-color: transparent;
+                padding: .5rem 0 0 0;
+                vertical-align: bottom;
+                > div {
+                  border-radius: .5rem .5rem 0 0;  
+                  padding-top: .75rem;
+                }
+              }
+            }
+            &:last-child {
+              td {
+                background-color: transparent;
+                padding: 0 0 .5rem 0;
+                vertical-align: top;
+                > div {
+                  border-radius: 0 0 .5rem .5rem;
+                  text-align: center;
+                }
+              }
+            }
+            td {
+              background-color: _colour(border-feature-box);
+              > div {
+                background-color: _colour(border-feature-box);
+                padding: .5rem .75rem;
+                h3 {
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.scroll-panel {
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 2rem;
+  .scroll-panel-content {
+    overflow-y: auto;
+    table {
+      th {
+        border-bottom: none;
+        padding: 0;
+        &:first-child {
+          padding-left: 0;
+          span {
+            padding-left: 1.5rem;
+          }
+        }
+        div {
+          position: absolute;
+          border-bottom: solid 2px _colour(secondary);
+          padding-bottom: 1rem;
+          top: 1rem;
+          width: 100%;
+  
+          span {
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            padding: .5rem 1rem .25rem .75rem;
+          }
+        }
+      }
+      
+      td {
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .bs-datepicker-body {
+    table {
+      th,
+      td {
+        display: table-cell;
+      }
+    }
+  }
+  
+  .blade-bottom {
+    table {
+      tbody tr th, 
+      tbody tr td {
+        padding: .5rem 1.5rem .5rem 1.5rem!important;
+      }
+    }
+  }
+
+  table:not(.email-container, .table-feature, .js-file-line-container) {
+    &.two-col-row {
+      th[scope='row'] {
+        display: none;
+      }
+    }
+
+    thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    tr + tr,
+    .table-td-spacer-top {
+      td:first-child {
+        margin-top: 1rem;
+      }
+    }
+
+    tbody tr td,
+    thead tr th {
+      display: block;
+      text-align: right;
+      margin-bottom: 0.25rem;
+      padding: .5rem 0 .5rem 0;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &.empty-cell,
+      &.cell-title {
+        display: none;
+      }
+    }
+
+    th[scope='row'] {
+      text-align: left;
+    }
+
+    td::before,
+    th::before {
+      content: attr(datalabel);
+      float: left;
+      display: inline-block;
+      font-family: _font(family-medium);
+    }
+  }
+}
+
+.slim {
+  width: 4rem;
+}

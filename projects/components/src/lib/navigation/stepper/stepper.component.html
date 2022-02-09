@@ -1,0 +1,13 @@
+<div class="aa-stepper">
+    <form formGroup="formName">
+        <ul class="aa-stepper-header flex-group">
+        <ng-content select="[steps-header]"></ng-content>
+        </ul>
+        <section class="aa-stepper-content">
+            <ng-content select="[steps-content]"></ng-content>
+        </section>
+        <nav class="aa-stepper-footer">
+            <ng-content select="[steps-footer]"></ng-content>
+        </nav>
+    </form>
+</div>

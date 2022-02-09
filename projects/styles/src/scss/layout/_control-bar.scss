@@ -1,0 +1,11 @@
+.control-bar {
+  background-color: _colour(bg-control-bar);
+  border-bottom: 2px solid _colour(border-secondary);
+  padding: .75rem _size(medium);
+}
+
+@media screen and (min-width: 991px) {
+  .control-bar {
+    // margin-left: -1rem;
+  }
+}

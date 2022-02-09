@@ -1,0 +1,407 @@
+<section class="control-bar">
+  <h1>Tables</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Standard table</h2>
+      <div class="describe margin-bottom-1">
+        <p>The default native table spans the full width of the browser window.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>Approver</th>
+            <th class="align-right">Created date</th>
+            <th class="align-right">Modified date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let approval of approvals">
+            <td datalabel="Status"><span class="alert-shield small" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
+            <td datalabel="Approver">{{ approval.approver }}</td>
+            <td datalabel="Created date" class="align-right">{{ approval.created }}</td>
+            <td datalabel="Modified date" class="align-right">{{ approval.modified }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Table</td>
+            <td datalabel="Attribute">table</td>
+            <td datalabel="Type">HTML element</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(tableStandardHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tableStandard=true; tableStandardScrolling=false; tableHalfWidth=false; tableRowHeadings=false; tableFeature=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Standard table with fixed header</h2>
+      <div class="describe margin-bottom-1">
+        <p>For a scrollable table with a fixed header you will need to nest your table inside 
+          two div elements. Add the class .scroll-panel to the outer div and .scroll-panel-content 
+          to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
+          table thead th cell, add a div with a nested span, inside this span add you cell text.
+        </p>
+      </div>
+      <div class="scroll-panel">
+        <div class="scroll-panel-content" [ngStyle]="{'max-height':'8rem'}">
+          <table>
+            <thead>
+              <tr>
+                <th><div><span>Status</span></div></th>
+                <th><div><span>Approver</span></div></th>
+                <th><div><span>Created date</span></div></th>
+                <th><div><span>Modified date</span></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let approval of approvals">
+                <td datalabel="Status"><span class="alert-shield small" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
+                <td datalabel="Approver">{{ approval.approver }}</td>
+                <td datalabel="Created date" class="align-right">{{ approval.created }}</td>
+                <td datalabel="Modified date" class="align-right">{{ approval.modified }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Outer div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">HTML</td>
+            <td datalabel="Default">.scroll-panel</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Inner div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">HTML</td>
+            <td datalabel="Default">.scroll-panel-content</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Table</td>
+            <td datalabel="Attribute">Thead th</td>
+            <td datalabel="Type">Nested div</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Table</td>
+            <td datalabel="Attribute">Thead th</td>
+            <td datalabel="Type">Nested span</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(tableStandardScrollingHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tableStandard=false; tableStandardScrolling=true; tableHalfWidth=false; tableRowHeadings=false; tableFeature=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>.half-width</h2>
+      <div class="describe margin-bottom-1">
+        <p>Add the class .half-width to reduce the table width by 50%.</p>
+      </div>
+      <table class="half-width">
+        <thead>
+          <tr>
+            <th>Created by</th>
+            <th>Modified by</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let approval of approvals">
+            <td datalabel="Created by">{{approval.createdBy}}</td>
+            <td datalabel="Modified by">{{approval.modifiedBy}}</td>
+            <td datalabel="Empty cell" class="align-right">
+              <button class="delete small">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Table</td>
+            <td datalabel="Attribute">table</td>
+            <td datalabel="Type">HTML element</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Table class</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">Classname</td>
+            <td datalabel="Default">.half-width</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(tableHalfWidthHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tableHalfWidth=true; tableStandard=false; tableStandardScrolling=false; tableRowHeadings=false; tableFeature=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Table row headings</h2>
+        <div class="describe margin-bottom-1">
+          <p>Specify that the first header cell is a header for a column.</p>
+        </div>
+        <table>
+          <thead>
+            <th></th>
+            <th>Created by</th>
+            <th>Modified by</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let approval of approvals">
+              <th scope="row">QA team</th>
+              <td datalabel="Created by">{{approval.createdBy}}</td>
+              <td datalabel="Modified by">{{approval.modifiedBy}}</td>
+              <td class="align-right">
+                <button class="delete small">Remove</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Table</td>
+              <td datalabel="Attribute">table</td>
+              <td datalabel="Type">HTML element</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Th first-child</td>
+              <td datalabel="Attribute">scope="row"</td>
+              <td>Cell attribute</td>
+              <td datalabel="Default">row</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons small bg-aa-light-blue-100" 
+            (click)="copyToClipboard(tableRowHeadingsHTML)">
+            <span class="material-icons">content_copy</span><span>Copy component</span>
+          </button>
+          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tableRowHeadings=true; tableStandard=false; tableStandardScrolling=false; tableHalfWidth=false; tableFeature=false">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+    
+        <!-- start content repeater -->
+        <section class="content-repeater flex-group">
+          <section class="flex-1 col-left flex-start">
+            <h2>Table feature</h2>
+            <div class="describe margin-bottom-1">
+              <p>Currently only used for CMaT application.</p>
+            </div>
+            <section class="margin-top-1 overflow-x-scroll">
+              <table class="table-feature">
+                <tr>
+                  <td>&nbsp;</td>
+                  <td class="feature-cell" rowspan="6">
+                    <table>
+                      <tr>
+                        <td>
+                          <div class="flex-group space-between">
+                            <h3>CMaT</h3>
+                            <aa-tooltip [isInfo]="true" setMinWidth="11" ypos="bottom" xpos="right">
+                              <h4>Ahoy there</h4>
+                              <p>Mr Beaver had begun telling them that the<br/> White Witch wasn’t really human at all </p>
+                            </aa-tooltip>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
+                      <tr><td><input type="text" placeholder="Company BRN" /></td></tr>
+                      <tr><td><input type="text" placeholder="Company type" /></td></tr>
+                      <tr><td><input type="text" placeholder="Current status" /></td></tr>
+                      <tr><td><div><button class="approve small">Accept</button></div></td></tr>
+                    </table>
+                  </td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                </tr>
+                
+                <tr><td>Full legal name</td><td>&nbsp;</td><td>&nbsp;</td></tr>  
+                <tr><td>Company number (BRN)</td><td>&nbsp;</td><td>&nbsp;</td></tr> 
+                <tr><td>Company type</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr><td>Current status</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+                <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+              </table>
+            </section>
+          </section>
+            
+          <section class="flex-2 col-right flex-start">
+            <table class="half-width">
+              <caption>Attributes</caption>
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Attribute</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td datalabel="Element">Table</td>
+                  <td datalabel="Attribute">table</td>
+                  <td datalabel="Type">HTML element</td>
+                  <td datalabel="Default">N/A</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">Table class</td>
+                  <td datalabel="Attribute">class</td>
+                  <td datalabel="Type">Classname</td>
+                  <td datalabel="Default">.table-feature</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          
+          <!-- mini menu -->
+          <nav class="mini-menu flex-group flex-end">
+              <button class="custom-icons small bg-aa-light-blue-100" 
+                (click)="copyToClipboard(tableFeatureHTML)">
+                <span class="material-icons">content_copy</span><span>Copy component</span>
+              </button>
+              <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tableFeature=true; tableRowHeadings=false; tableStandardScrolling=false; tableStandard=false; tableHalfWidth=false">
+                <span class="material-icons">visibility</span><span>View gist</span>
+              </button>
+            </nav>
+        </section>
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div *ngIf="tableStandard">
+      <app-gist src="angloux/d578a74086b9bff7b9a6872d7fcea316"></app-gist>
+      <a href="https://gist.github.com/angloux/d578a74086b9bff7b9a6872d7fcea316" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="tableStandardScrolling">
+      <app-gist src="angloux/6837ab47f7d60c9fba2d24754fe95510"></app-gist>
+      <a href="https://gist.github.com/angloux/6837ab47f7d60c9fba2d24754fe95510" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="tableHalfWidth">
+      <app-gist src="angloux/c47e21b038a33bfcc5eabdbee7a6a3ba"></app-gist>
+      <a href="https://gist.github.com/angloux/c47e21b038a33bfcc5eabdbee7a6a3ba" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="tableRowHeadings">
+      <app-gist src="angloux/d9661f4ed516aa52aa8f7eee2f2a5672"></app-gist>
+      <a href="https://gist.github.com/angloux/d9661f4ed516aa52aa8f7eee2f2a5672" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="tableFeature">
+      <app-gist src="angloux/6a1ac7be032e564528323f69a815644f"></app-gist>
+      <a href="https://gist.github.com/angloux/6a1ac7be032e564528323f69a815644f" target="_blank">View Gist on GitHub</a>
+    </div>
+  </article>
+</aa-blade>

@@ -1,0 +1,204 @@
+<section class="control-bar">
+  <h1>Blade bottom</h1>
+</section>
+
+<section class="content-container padding-0" [ngStyle]="isPinned && {'height' : 'calc(50vh - 7.5rem)', 'overflow-y' : 'scroll', 'border' : '2px dashed #e98300'}">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Blade bottom</h2>
+      <div class="describe margin-bottom-1">
+        <p>To get pinning to work, you must add the following to the page content-container <br/>
+          <strong>[ngStyle]=&quot;isPinned && &#123;&#8216;'height' : 'calc(50vh - 10.5rem)', 'overflow-y' : 'scroll'&#x7d;&quot;</strong>
+        </p>
+        <p>These setting are adjustable.</p>
+        <p>For <strong>ag-grid</strong> scrolling to fill height, you must set <strong>domLayout to 'normal'</strong></p>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">disablePinning</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">initiallyPinned</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">closedPos</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">calc(100% - 2.25rem)</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">fullScreenPos</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">7.25rem</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">splitScreenPos</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">50vh</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">zIndex</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">1</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">(bladePinned)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">bladeIsPinned($event)</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">(bladeOpen)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">bladeIsClosed($event)</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">headerBgColor</td>
+            <td datalabel="Type">Class/string</td>
+            <td datalabel="Default">bg-aa-orange-100</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade-bottom</td>
+            <td datalabel="Attribute">controlsColor</td>
+            <td datalabel="Type">Class/string</td>
+            <td datalabel="Default">aa-white-100</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(bladeBottomHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <app-gist src="angloux/0bef4442d8a7efe7e241f4a39be332ec"></app-gist>
+    <a href="https://gist.github.com/angloux/0bef4442d8a7efe7e241f4a39be332ec" target="_blank">View Gist on GitHub</a>
+  </article>
+</aa-blade>
+
+
+<aa-blade-bottom
+  [innitiallyPinned]="true"
+  [disablePinning]="false"
+  closedPos="calc(100% - 2.25rem)"
+  fullScreenPos="7.25rem"
+  splitScreenPos="50vh"
+  zIndex="1"
+  (bladePinned)="bladeIsPinned($event)"
+  (bladeOpen)="bladeIsClosed($event)"
+  headerBgColor="bg-aa-orange-100"
+  controlsColor="aa-white-100"
+  >
+  <ng-container custom-header>
+    <div class="material-icons margin-right-0-5 aa-white-100">monetization_on</div>
+    <h2 class="aa-white-100">Costs</h2>
+  </ng-container>
+
+  <ng-container custom-content>
+    <div class="content-container padding-top-0">
+      <div class="flex-group space-between">
+        <h2>Blade bottom content</h2>
+        <div class="margin-top-1-5">
+          <div class="flex-group flex-end">
+            <div *ngIf="toggleTable" role="alert" class="error">If you use a native table it must be wrapped in a div with classname <strong>scroll-panel</strong></div>
+            <div>
+              <button (click)="toggleTable=!toggleTable" type="button" class="primary">
+                <span *ngIf="!toggleTable">Show standard table</span>
+                <span *ngIf="toggleTable">Show aG Grid table</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Method for using ag-grid -->
+    <div *ngIf="!toggleTable">
+      <ag-grid-angular #agGrid id="myGrid" class="ag-theme-balham ag-grid" [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef" [rowData]="rowData" [pagination]="true" (gridReady)="onGridReady($event)">
+      </ag-grid-angular>
+    </div>
+
+    <!-- Method for using a native table -->
+    <div *ngIf="toggleTable" class="scroll-panel">
+      <table>
+        <thead>
+          <tr>
+            <th><label><span class="mask">Athlete</span></label></th>
+            <th><label><span class="mask">Age</span></label></th>
+            <th><label><span class="mask">Country</span></label></th>
+            <th><label><span class="mask">Year</span></label></th>
+            <th><label><span class="mask">Date</span></label></th>
+            <th><label><span class="mask">Sport</span></label></th>
+            <th><label><span class="mask">Gold</span></label></th>
+            <th><label><span class="mask">Silver</span></label></th>
+            <th><label><span class="mask">Bronze</span></label></th>
+            <th><label><span class="mask">Total</span></label></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of columnDefs">
+            <td datalabel="athlete">Michael Phelps</td>
+            <td datalabel="age">23</td>
+            <td datalabel="country">United States</td>
+            <td datalabel="year">2008</td>
+            <td datalabel="date">24/08/2008</td>
+            <td datalabel="sport">Swimming</td>
+            <td datalabel="gold">8</td>
+            <td datalabel="silver">0</td>
+            <td datalabel="bronze">0</td>
+            <td datalabel="total">8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </ng-container>
+</aa-blade-bottom>

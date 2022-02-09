@@ -1,0 +1,93 @@
+<section class="control-bar">
+    <h1>Tree menu</h1>
+</section>
+
+<section class="content-container padding-0">
+    
+    <section class="content-repeater flex-group">
+            
+        <section class="flex-1 col-left flex-start">
+          <h2>Tree menu</h2>
+          <div class="describe margin-bottom-1">
+            <p>Info abotu tree menu</p>
+          </div>
+
+          <div class="aa-tree">
+            <ul>
+                <li><span class="caret">Beverages</span>
+                  <ul class="nested">
+                    <li>Water</li>
+                    <li>Coffee</li>
+                    <li><span class="caret">Tea</span>
+                      <ul class="nested">
+                        <li>Black Tea</li>
+                        <li>White Tea</li>
+                        <li><span class="caret">Green Tea</span>
+                          <ul class="nested">
+                            <li>Sencha</li>
+                            <li>Gyokuro</li>
+                            <li>Matcha</li>
+                            <li>Pi Lo Chun</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </section>
+          
+        <section class="flex-2 col-right flex-start">
+          <table class="half-width">
+            <caption>Attributes</caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td datalabel="Element">aa-tree-menu</td>
+                <td datalabel="Attribute">aa-tre-menu</td>
+                <td datalabel="Type">Component</td>
+                <td datalabel="Default">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+            <button class="custom-icons small bg-aa-light-blue-100" 
+              (click)="copyToClipboard(treeHTML)">
+              <span class="material-icons">content_copy</span><span>Copy component</span>
+            </button>
+            <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+              <span class="material-icons">visibility</span><span>View gist</span>
+            </button>
+          </nav>
+      </section>
+      
+      <aa-blade 
+        [showModal]="false"
+        [toggleBlade]="toggleBlade"
+        suppressAutoClose="false"
+        topPosition="3.5"
+        zIndex="2"
+        bladeSize="one-column-width"
+        bladeHeading="Gist"
+        [enableIcon]="true"
+        iconName="table_rows"
+        (close)="toggleBlade = false"
+        >
+        <article class="blade-content">
+            <app-gist src="angloux/9e6c8132425e1a4a431014747fbe029b"></app-gist>
+            <a href="https://gist.github.com/angloux/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
+        </article>
+      </aa-blade>
+    
+</section>

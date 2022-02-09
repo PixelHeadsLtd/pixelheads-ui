@@ -1,0 +1,51 @@
+.feature {
+  padding: 1rem;
+  background-color: _colour(primary);
+  color: _palette(aa-white-100);
+  border-radius: .25rem;
+  p, h1, h2, h3, h4, a {
+    color: _palette(aa-white-100);
+  }
+}
+
+.feature-box {
+  padding: .75rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: _colour(border-feature-box);
+  border-radius: .5rem;
+  background-color: _colour(bg-feature-box);
+
+  &.padding-large {
+    padding: 1rem;
+  }
+
+  &.solid {
+    background-color: _colour(bg-feature-box-solid);
+  }
+
+  &.small {
+    width: 10rem;
+  }
+
+  &.secondary {
+    background-color: _palette(aa-light-blue-5);
+    display: inline;
+  }
+
+  &.tertiary {
+    border: 1px solid _palette(grey-50);
+  }
+  
+  &.approve {
+    border-color: _palette(aa-green-100);
+  }
+  
+  &.reject {
+    border-color: _palette(aa-red-100);
+  }
+  
+  &.return {
+    border-color: _palette(aa-orange-100);
+  }
+}

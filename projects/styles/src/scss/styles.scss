@@ -1,0 +1,49 @@
+// 28/9/2020 Upgraded to v24.0.0 - see https://www.ag-grid.com/javascript-grid-themes-v23-migration/
+@import "~ag-grid-community/src/styles/ag-theme-balham/sass/legacy/_ag-theme-balham-v22-compat.scss";
+@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import './typography/fonts';
+@import './elements/scrollbars';
+
+body {
+  font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif;
+
+  &.dark-mode {
+    @import './lib/mixins';
+    @import './lib/functions';
+    @import './lib/vars';
+
+    @import './lib/elements-dark';
+    @import './widgets/anglo-framework';
+    @import './lib/ag-theme-anglo-vars';
+    @import './widgets/ag-grid';
+
+    @import 'style-imports';
+    background-color: _colour(bg);
+    color: _colour(body-text);
+    line-height: initial;
+    letter-spacing: .015rem;
+    font-size: 16px;
+    margin: 0;
+    min-width: _breakpoint(breakpoint-320);
+  }
+
+  &.light-mode {
+    @import './lib/mixins';
+    @import './lib/functions';
+    @import './lib/vars';
+    @import './lib/elements-light';
+
+    @import './widgets/anglo-framework';
+    @import './lib/ag-theme-anglo-vars';
+    @import './widgets/ag-grid';
+
+    @import 'style-imports';
+    background-color: _colour(bg);
+    color: _colour(body-text);
+    line-height: initial;
+    letter-spacing: .015rem;
+    font-size: 16px;
+    margin: 0;
+    min-width: _breakpoint(breakpoint-320);
+  }
+}

@@ -1,0 +1,44 @@
+.aa-toastr {
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    z-index: 999;
+    article {
+        position: absolute;
+        overflow: hidden;
+        opacity: 0;
+        transition-duration: 0.3s;
+        width: 20rem;
+        padding: .75rem 1rem 1rem 1rem;
+        margin-bottom: .5rem;
+        border-radius: .25rem 0 0 .25rem;
+        right: -100%;
+
+        &.show-toastr {
+            position: relative;
+            right: 0;
+            opacity: 1;
+            transition-duration: 0.3s;
+        }
+        button {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+            &:hover, &:focus, &:active {
+                background-color: transparent;
+                transform: rotate(180deg);
+                transition-duration: 0.3s;
+            }
+        }
+    
+        section {
+            &:first-child {
+                width: 10%;
+            }
+            &:last-child {
+                width: 80%;
+            }
+        }
+    }
+}

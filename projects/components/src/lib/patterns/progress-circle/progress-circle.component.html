@@ -1,0 +1,32 @@
+<div *ngIf="!isSmall" class="progress-circle" [ngClass]="{'panel-view' : panelView}">
+  <h3 class="flex-center title" [ngClass]="{'padding-right-1' : enableTooltip}">
+    <span title="{{name}}">{{ (name.length>19)? (name | slice:0:19)+'...':(name) }}</span>
+    <div *ngIf="enableTooltip" class="aa-tooltip icon-info margin-left-0-25" [ngStyle]="{'position' : 'absolute', 'right' : '.75rem'}">
+      <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width' : tooltipMinWidth+'rem'}">
+        <p>{{tooltipBody}}</p>
+      </div>
+    </div>
+    <span *ngIf="panelView" class="material-icons">chevron_right</span>
+  </h3>
+  <div class="percent">
+    <svg viewBox="20 0 60 100">
+      <circle [ngStyle]="{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+      <circle [ngStyle]="{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+    </svg>
+    <span class="value margin-0">{{percent}} <span>%</span></span>
+  </div>
+  <span class="align-center number" *ngIf="panelView">{{value}}</span>
+</div>
+
+<li *ngIf="isSmall" class="flex-group flex-start">
+  <div class="progress-circle small margin-right-0-5">
+    <div class="percent">
+      <svg>
+        <circle [ngStyle]="{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }" cx="15" cy="15" r="15"></circle>
+        <circle [ngStyle]="{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }" cx="15" cy="15" r="15"></circle>
+      </svg>
+      <span class="value margin-0">{{percent}} <span>%</span></span>
+    </div>
+  </div>
+  <div class="margin-top-0-75">{{name}}</div>
+</li>

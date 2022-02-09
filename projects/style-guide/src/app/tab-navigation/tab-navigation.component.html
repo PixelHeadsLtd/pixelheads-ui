@@ -1,0 +1,400 @@
+<section class="control-bar">
+  <h1>Tab navigation</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Tab navigation - use with ng-template</h2>
+      <div class="describe margin-bottom-1">
+        <p>Tab navigation should always sit inside the page <strong>control-bar</strong>.</p>
+        <p>Use this version when there are state changes, for example validation messages from a modal or blade</p>
+      </div>
+
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <aa-tab-navigation-item tabName="Tab 1" [enableIcons]="true" iconName="error" iconColour="aa-red-100"> 
+          <ng-template aaTabNavigationContent>
+            <h1 class="boxed">Tab 1 content</h1>
+            <p>This is Tab 1 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Tab 2" [enableIcons]="true" iconName="check_circle" iconColour="aa-green-100">
+          <ng-template aaTabNavigationContent>
+            <h1 class="boxed">Tab 2 content</h1>
+            <p>This is Tab 2 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Tab 3" [tabDisabled]="true" [enableIcons]="true" iconName="error" iconColour="aa-orange-100">
+          <ng-template aaTabNavigationContent>
+            <h1 class="boxed">Tab 3 content</h1>
+            <p>This is Tab 3 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Tab 4" [tabDisabled]="false" [enableIcons]="false" [enableCount]="true" tabCount="200">
+          <ng-template aaTabNavigationContent>
+            <h1 class="boxed">Tab 4 content</h1>
+            <p>This is Tab 4 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+      <section class="content-container padding-bottom-0" *ngIf="activeTab">
+        <aa-tab-navigation-secondary>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 1'"></aa-tab-navigation-secondary-item>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 2'"></aa-tab-navigation-secondary-item>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 3'"></aa-tab-navigation-secondary-item>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 4'"></aa-tab-navigation-secondary-item>
+        </aa-tab-navigation-secondary>
+        <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+      </section>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation</td>
+            <td datalabel="Attribute">[ngTemplate]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation</td>
+            <td datalabel="Attribute">[displayTabContent]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation</td>
+            <td datalabel="Attribute">(tabChanged)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">Your method</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">(tabChanged)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">Active tab change</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">tabName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your tab name</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">[enableIcons]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">iconName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Your icon name</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">iconColour</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default"><a routerLink="/colours">Your icon colour</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">enableCount</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">tabCount</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your value</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">[tabDisabled]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(tabNgTemplateHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=true; tabRouterOutlet=false; tabInfo=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+   <!-- start content repeater -->
+   <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Tab navigation - use with router-outlet</h2>
+      <div class="describe margin-bottom-1">
+        <p>Tab navigation should always sit inside the page <strong>control-bar</strong>. 
+          This version will not work with state changes like validation.</p>
+      </div>
+      
+      <aa-tab-navigation [routerOutlet]="true">
+        <ng-container list-items>
+            <li *ngFor="let tab of tabs" [ngClass]="{'tab-disabled':tab.tabDisabled}">
+              <a 
+                *ngIf="!tab.tabDisabled"
+                [id]="tab.tabId" 
+                routerLinkActive="active"
+                [routerLink]="tab.routerLink"
+              >
+                {{ tab.name }}
+                <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
+              </a>
+              <span *ngIf="tab.tabDisabled">
+                {{ tab.name }}
+                <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
+              </span>
+            </li>
+        </ng-container>
+      </aa-tab-navigation>
+      
+      <section class="content-container padding-bottom-0">
+        <aa-tab-navigation-secondary>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 1'"></aa-tab-navigation-secondary-item>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 2'"></aa-tab-navigation-secondary-item>
+          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 3'"></aa-tab-navigation-secondary-item>
+        </aa-tab-navigation-secondary>
+      </section>
+      
+      <section class="router-outlet">
+        <router-outlet></router-outlet>
+      </section>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation</td>
+            <td datalabel="Attribute">[routerOutlet]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">ng-container</td>
+            <td datalabel="Attribute">ng-container</td>
+            <td datalabel="Type">Ng-content selector</td>
+            <td datalabel="Default">list-items</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">li</td>
+            <td datalabel="Attribute">li</td>
+            <td datalabel="Type">Li</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Anchor</td>
+            <td datalabel="Attribute">a</td>
+            <td datalabel="Type">Anchor</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Id</td>
+            <td datalabel="Attribute">id</td>
+            <td datalabel="Type">Anchor id</td>
+            <td datalabel="Default">tab.tabId</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">routerLinkActive</td>
+            <td datalabel="Attribute">routerLinkActive</td>
+            <td datalabel="Type">Anchor active state</td>
+            <td datalabel="Default">active</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">[routerLink]</td>
+            <td datalabel="Attribute">[routerLink]</td>
+            <td datalabel="Type">RouterLink</td>
+            <td datalabel="Default">tab.routerLink</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Tab name</td>
+            <td datalabel="Attribute">tab.name</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your name</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">enableCount</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">tabCount</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your value</td>
+          </tr>
+          <tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(tabRouterOutletHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=true; tabInfo=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+     <!-- start content repeater -->
+     <section class="content-repeater">
+       <div class="flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Tab navigation - Info panel version</h2>
+        <div class="describe margin-bottom-1">
+          <p>For setting .active class, please use Angular's built-in directive 
+            <a href="https://www.tektutorialshub.com/angular/routerlinkactive-router-outlet-styling/" target="_BLANK">routerLinkActive</a>. 
+            You just need to set up your child routes in your routing.module.ts and you're ready to go.</p>
+          <p>For information regarding router-outlet implementation, please refer to the 
+            <a href="https://angular.io/api/router/RouterOutlet" target="_blank">Angular documentation</a>
+          </p>
+          <p>The Info panel version is designed to hold other components. In this example we have
+            injected the progress-circle component. For progress-circle attributes please <a routerLink="/progress-circle">go here</a>,
+            for tooltip component please <a routerLink="/tooltip">go here</a>.
+          </p>
+        </div>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation</td>
+              <td datalabel="Attribute">[tabInfoRouterOutlet]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Anchor</td>
+              <td datalabel="Attribute">routerLinkActive</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.active</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Anchor</td>
+              <td datalabel="Attribute">[routerLink]</td>
+              <td datalabel="Type">Path</td>
+              <td datalabel="Default">Your link</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Anchor</td>
+              <td datalabel="Attribute">tabColor</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">Your tab colour</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons small bg-aa-light-blue-100" 
+            (click)="copyToClipboard(tabInfoHTML)">
+            <span class="material-icons">content_copy</span><span>Copy component</span>
+          </button>
+          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=false; tabInfo=true">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+      </div>
+      <div class="margin-top-1">
+        <aa-tab-navigation [tabInfoRouterOutlet]="true">
+          <li tabs *ngFor="let item of tabDataItems; let i">
+            <a (click)="setIndex(i)" [class.active]="selectedIndex === i" class="cursor-none {{item.tabColor}}">
+              <aa-progress-circle 
+                [panelView]="true" 
+                [name]="item.tabName" 
+                [percent]="item.percentage"
+                [value]="item.valueSplit"
+                [enableTooltip]="item.tooltipEnabled" 
+                [tooltipMinWidth]="'12'" 
+                [tooltipBody]="item.tooltipText" 
+                [xpos]="'bottom'" 
+                [ypos]="'right'"
+                >
+            </aa-progress-circle>
+            </a>
+          </li>
+        </aa-tab-navigation>
+        <!-- <router-outlet></router-outlet> -->
+      </div>
+    </section>
+</section>
+
+<aa-blade 
+  [showModal]="false"
+  [toggleBlade]="toggleBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="2"
+  bladeSize="one-column-width"
+  bladeHeading="Gist"
+  [enableIcon]="true"
+  iconName="table_rows"
+  (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div *ngIf="tabNgTemplate">
+      <app-gist src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
+      <a href="https://gist.github.com/angloux/fc6fe846adfb3b2a34bb516498e12039" target="_blank">View Gist on GitHub</a>
+    </div>
+    
+    <div *ngIf="tabRouterOutlet">
+      <app-gist src="angloux/49376fbd40cdc740ac32d68ea19fc150"></app-gist>
+      <a href="https://gist.github.com/angloux/49376fbd40cdc740ac32d68ea19fc150" target="_blank">View Gist on GitHub</a>
+    </div>
+    
+    <div *ngIf="tabInfo">
+      <app-gist src="angloux/f08af42ced9a4788dca64d6ced828ecf"></app-gist>
+      <a href="https://gist.github.com/angloux/f08af42ced9a4788dca64d6ced828ecf" target="_blank">View Gist on GitHub</a>
+    </div>
+    <app-gist [ngStyle]="{'display': 'none'}" src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
+  </article>
+</aa-blade>
+

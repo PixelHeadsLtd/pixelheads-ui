@@ -1,0 +1,14 @@
+.filter-tile {
+
+  &.minimised {
+    padding: 3px 7px;
+
+    &:hover {
+      .show-grid {
+        right: unset;
+        left: 5px;
+      }
+    }
+  }
+}
+

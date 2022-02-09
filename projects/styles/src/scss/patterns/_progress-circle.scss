@@ -1,0 +1,110 @@
+.progress-circle {
+  position: relative;
+  width: 6rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &.panel-view {
+    background-color: _colour(bg-primary);
+    border: 1px solid _colour(border-box);
+    width: 13rem;
+    height: 13rem;
+
+    h3.title {
+      position: relative;
+      margin: 0 0 1.25rem 0;
+      width: 13rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid _colour(border-box);
+
+      .material-icons {
+        position: absolute;
+        right: .25rem;
+        top: .75rem;
+      }
+    }
+
+    .number {
+      font-size: _font(size-small);
+      margin: .5rem 0 0 0;
+    }
+  }
+
+  .percent {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .value {
+    //color: _colour(secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: _font(size-regular);
+  }
+
+    svg {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        circle {
+            fill: none;
+            stroke-width: 5;
+            transform: translate(.5rem, .5rem);
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+            stroke-linecap: round;
+        }
+    }
+}
+
+.progress-circle.small {
+  width: 2.5rem;
+
+  + div {
+    font-size: _font(size-small);
+  }
+
+  h3.title {
+    font-size: _font(size-small);
+    font-weight: _font(weight-medium);
+  }
+
+  .percent {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+    + div {
+        font-size: _font(size-small);
+    }
+    h3.title {
+        font-size: _font(size-small);
+        font-weight: _font(weight-medium);
+    }
+    .percent {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+  .value {
+    font-size: _font(size-small);
+  }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        circle {
+            stroke-width: 2;
+            transform: translate(.3rem, .3rem);
+        }
+    }
+}

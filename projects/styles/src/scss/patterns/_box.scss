@@ -1,0 +1,52 @@
+.box {
+  border-radius: .25rem;
+  background-color: _colour(bg-primary);
+  &.light-blue {
+    background-color: _palette(aa-light-blue-10);
+  }
+}
+
+.box-border {
+  border: 1px solid _colour(primary);;
+}
+
+.box-medium, .box-medium-max {
+  max-width: 30rem;
+}
+
+.box-small-min {
+  min-width: 18rem;
+}
+
+.feature-box {
+  padding: .75rem;
+  border-radius: .5rem;
+  border: 2px solid _palette(aa-light-blue-15);
+
+  tr:last-child {
+    td {
+      border-bottom: none;
+    }
+  }
+
+  &.padding-large {
+    padding: 1rem;
+  }
+
+  &.solid {
+    background-color: _palette(aa-light-blue-10);
+  }
+
+  &.small {
+    width: 150px;
+  }
+
+  &.secondary {
+    background-color: _palette(aa-light-blue-5);
+    display: inline;
+  }
+
+  &.tertiary {
+    border: 1px solid _palette(grey-50);
+  }
+}

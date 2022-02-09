@@ -1,0 +1,28 @@
+<div 
+  class="aa-popover" 
+  [ngClass]="{
+  'show-popover' : showPopover, 
+  'btn-small' : btnSmall
+  }">
+  <div class="aa-popover-header" (click)="showPopover=!showPopover" [ngClass]="{'label-hidden' : hideLabel}">
+    <ng-content select="[call-to-action]"></ng-content>
+    <div
+      class="arrow"
+      [ngStyle]="popoverTop && {
+        'top' : arrowPos+'rem',
+        'bottom' : 'unset',
+        'transform' : 'rotate(180deg)' 
+      }"
+    ></div>
+  </div>
+  <div 
+    class="aa-popover-content feature-box" 
+    [ngStyle]="{
+    'left': leftPos+'rem', 
+    'top': topPos+'rem', 
+    'bottom': bottomPos+'rem', 
+    'width': width+'rem' 
+  }">
+    <ng-content select="[custom-content]"></ng-content>
+  </div>
+</div>

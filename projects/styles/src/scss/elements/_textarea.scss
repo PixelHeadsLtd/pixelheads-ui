@@ -1,0 +1,68 @@
+textarea {
+  display: block;
+  background-color: _colour(bg-input);
+  border: 1px solid _colour(border-input);
+  color: _colour(body-text);
+  border-radius: .25rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  font-size: _font(size-default);
+  font-family: _font(family-regular);
+  min-height: 10rem;
+
+  &.auto-resize {
+    min-height: 2.1rem;
+    overflow: hidden;
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid _colour(highlight-input);
+    box-shadow: 0 0 3pt 1pt _palette(aa-light-blue-40);
+  }
+
+  &[aria-readonly=true],
+  &[readonly] {
+    border: none;
+    border-bottom: 1px solid _colour(readonly);
+    border-radius: 0;
+    cursor: not-allowed;
+    &:focus {
+      border: none;
+      border-bottom: 1px solid _colour(readonly);
+      box-shadow: none;
+    }
+  }
+
+  &.no-resize {
+    resize: none;
+  }
+
+  + .textarea-counter {
+    text-align: right;
+    font-size: _font(size-small);
+  }
+  
+  // override chrome's autofill bg color for darkmode
+  &:-webkit-autofill, 
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: _colour(body-text);
+    -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
+  }
+}
+
+.field .field.has-error { 
+  &.error,
+  &.has-error,
+  &.field.is-invalid {
+    textarea {
+      border: 1px solid _palette(aa-red-100);
+      &:focus {
+        outline: 0;
+        border: 1px solid _palette(aa-red-100);
+        box-shadow: 0 0 3pt 1pt _palette(aa-red-100);
+      }
+    }
+  }
+}

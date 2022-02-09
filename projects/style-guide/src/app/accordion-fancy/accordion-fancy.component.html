@@ -1,0 +1,422 @@
+<section class="control-bar">
+  <h1>Accordion fancy</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater">
+    <div class="flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Accordion fancy</h2>
+      <div class="describe margin-bottom-1">
+        <p>The accordion-fancy is currently used for Performance Reporting app and 
+          in conjuction with the <a routerLink="/dashboard-favourites">dashboard-favourites</a> component.
+        </p>
+        <p>
+          To use the material icons, set <strong>[materialIcons]=&quot;true&quot;</strong> then update <strong>[iconName]</strong> with your
+          chosen icon. Finally, set the icon colour with <strong>iconColour=&quot;aa-mycolour-100&quot;</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">HTML</td>
+            <td datalabel="Default">.flex-group</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-container</td>
+            <td datalabel="Attribute">Id</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your Id</td>
+          </tr>
+          <ng-container *ngIf="showMore">
+          <tr>
+            <td datalabel="Element">aa-dashboard-container</td>
+            <td datalabel="Attribute">dashboardHeading</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your heading</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-container</td>
+            <td datalabel="Attribute">headerColor</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default"><a routerLink="/colours">Background colour</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion-fancy</td>
+            <td datalabel="Attribute">Id</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your Id</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion-fancy</td>
+            <td datalabel="Attribute">iconName</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Speak to UX team</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion-fancy</td>
+            <td datalabel="Attribute">itemTitle</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">(favClick)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">Your event</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">[isFavourite]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">isFavourite</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">itemAnchor</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your text</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">itemAnchorTitle</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">tagName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your tag</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">lastViewed</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your date</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">favouritesTitle</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
+          </tr>
+          <tr>
+            <td datalabel="Element" title="aa-dashboard-favourites-list">aa-dashboard-favourites-list</td>
+            <td datalabel="Attribute">favDescription</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your description</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+      <nav class="margin-top-1">
+        <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+        <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+      </nav>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(accordionFancyHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </div>
+  <div class="flex-group margin-top-2">
+    <aa-dashboard-container [id]="'dashboardId1'" [dashboardHeading]="'Commodities'" [headerColor]="'bg-aa-lime-100'">
+      <!-- new accordion -->
+      <aa-accordion-fancy
+        [materialIcons]="true"
+        iconName="local_fire_department"
+        iconColour="aa-grey-100"
+        id="accordionId1"
+        itemTitle="The example uses material icons"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          itemAnchor="This is a much longer favourite name to show how the truncation should work"
+          itemAnchorTitle="Favourite title tag"
+          itemDescription="This is a much longer description to show when the truncation begins"
+          tagName="Gold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, CopperGold, Copper"
+          lastViewed="20-04-2020"
+          favouritesTitle="This is an example of the favourites title"
+          favDescription="This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+
+      <aa-accordion-fancy 
+        [iconName]="'icon-ship'" 
+        [id]="'accordionId1'"
+        [itemTitle]="'Shipping'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-fire-alt aa-red-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Thermal coal'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+    </aa-dashboard-container>
+    <!-- new accordion -->
+    <aa-dashboard-container 
+      [id]="'dashboardId2'" 
+      [dashboardHeading]="'Functions'" 
+      [headerColor]="'bg-aa-blue-sky-100'"
+    >
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-credit-card aa-burgundy-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Credit risk'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-users aa-blue-sky-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'ExCo'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-piggy-bank aa-pink-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Finance'"
+      >
+      <aa-dashboard-favourites-list
+        (favClick)="onFavClick($event)"
+        [isFavourite]="isFavourite"
+        [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+        [itemAnchorTitle]="'Favourite title tag'"
+        [itemDescription]="'This is a much longer description to show when the truncation begins'"
+        [tagName]="'Gold, Copper'"
+        [lastViewed]="'20-04-2020'"
+        [favouritesTitle]="'This is an example of the favourites title'"
+        [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+      >
+      </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-skull-crossbones aa-red-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Market risk'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-spinner aa-red-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Operational risk'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-ellipsis-h aa-grey-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'General'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+    </aa-dashboard-container>
+    <!-- new accordion -->
+    <aa-dashboard-container 
+      [id]="'dashboardId3'" 
+      [dashboardHeading]="'Admin'" 
+      [headerColor]="'bg-aa-burgundy-100'"
+    >
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-feather-alt aa-blue-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Reports admin'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-globe aa-orange-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Meta data admin'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-upload'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'Manual data upload'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+      <aa-accordion-fancy 
+        [iconName]="'fas fa-user-cog aa-brown-100'" 
+        [id]="'accordionId1'" 
+        [itemTitle]="'User access reports'"
+      >
+        <aa-dashboard-favourites-list
+          (favClick)="onFavClick($event)"
+          [isFavourite]="isFavourite"
+          [itemAnchor]="'This is a much longer favourite name to show how the truncation should work'"
+          [itemAnchorTitle]="'Favourite title tag'"
+          [itemDescription]="'This is a much longer description to show when the truncation begins'"
+          [tagName]="'Gold, Copper'"
+          [lastViewed]="'20-04-2020'"
+          [favouritesTitle]="'This is an example of the favourites title'"
+          [favDescription]="'This is a very long description to show how the it would look within the fancy accordion. It appears when the user hovers over the small black icon on the right'"
+        >
+        </aa-dashboard-favourites-list>
+      </aa-accordion-fancy>
+    </aa-dashboard-container>
+  </div>
+  </section>
+</section>
+
+<aa-blade
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+>
+  <article class="blade-content">
+    <app-gist src="angloux/54619d83340d8573987febe75d23d43c"></app-gist>
+    <a href="https://gist.github.com/angloux/54619d83340d8573987febe75d23d43c" target="_blank">View Gist on GitHub</a>
+  </article>
+</aa-blade>

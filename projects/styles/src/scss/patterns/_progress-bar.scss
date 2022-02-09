@@ -1,0 +1,16 @@
+.progress-bar {
+    font-size: _font(size-xsmall);
+    .progress {
+        background-color: _colour(bg-secondary);
+        margin: .15rem 0;
+        overflow: hidden;
+        border-radius: .5rem;
+        height: .2rem;
+        width: 100%;
+        
+        div {
+            background-color: _colour(progress-bar);
+            height: .2rem;
+        }
+    }
+}

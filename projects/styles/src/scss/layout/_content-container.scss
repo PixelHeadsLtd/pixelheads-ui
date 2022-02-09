@@ -1,0 +1,12 @@
+.content-container, .blade-content {
+    display: block;
+
+    &:not(.padding-0):not(.grid) {
+        padding: _size(default) _size(medium); 
+    }
+    &.grid {
+        > div.field {
+            padding: 0 1rem;
+        }
+    }
+}

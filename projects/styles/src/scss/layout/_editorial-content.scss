@@ -1,0 +1,20 @@
+.editorial-content {
+  font-size: .9rem;
+  line-height: 1.35rem;
+  max-width: 40rem;
+  
+  ul:not(.list-arrows), ol {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style-position: outside;
+  }
+}
+
+.flex-group {
+  .editorial-content {
+    margin-right: 2rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

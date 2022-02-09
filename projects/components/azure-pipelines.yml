@@ -1,0 +1,46 @@
+trigger:
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - workspace/projects/components/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  Version.MajorMinor: 11.2
+  Version.Revision: $[counter(variables['Version.MajorMinor'], 0)]
+
+steps:
+  - task: Npm@1
+    displayName: Install
+    inputs:
+      command: install
+      workingDir: workspace
+  - task: Npm@1
+    displayName: Lint
+    inputs:
+      command: custom
+      workingDir: workspace
+      customCommand: run lint -- components
+  - task: Npm@1
+    displayName: Version
+    inputs:
+      command: custom
+      workingDir: workspace/projects/components
+      customCommand: version $(Version.MajorMinor).$(Version.Revision) --git-tag-version=false --commit-hooks=false
+  - task: Npm@1
+    displayName: Build
+    inputs:
+      command: custom
+      workingDir: workspace
+      customCommand: run build -- components --prod
+  - task: Npm@1
+    displayName: Publish to Core feed
+    inputs:
+      command: publish
+      workingDir: workspace/dist/components
+      publishRegistry: useFeed
+      publishFeed: Core

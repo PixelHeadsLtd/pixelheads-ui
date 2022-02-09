@@ -1,0 +1,17 @@
+.detail-tile {
+
+  &.minimised {
+    padding: 0;
+  }
+
+  &:hover {
+      .show-grid {
+    }
+  }
+
+  .detail-content {
+    height: 100%;
+  }
+}
+
+

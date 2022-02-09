@@ -1,0 +1,5 @@
+<article class="feature-box solid favourite">
+  <a (click)="onFavClick($event)" class="margin-left-2">{{(favouritesTitle.length>40)? (favouritesTitle | slice:0:40)+'...':(favouritesTitle)}}</a>
+  <button (click)="onAnchorClick($event)" [class.selected]="isFavourite" class="icon-star transparent"><span>Click to add as favourite</span></button>
+  <p>{{(favouritesText.length>120)? (favouritesText | slice:0:120)+'...':(favouritesText)}}</p>
+</article>

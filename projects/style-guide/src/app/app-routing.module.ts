@@ -1,0 +1,169 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
+// Animation
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { LoadingSpinnerPageComponent } from './loading-spinner-page/loading-spinner-page.component';
+
+// Elements and Inputs
+import {AnchorComponent} from './anchor/anchor.component';
+import {ButtonsComponent} from './buttons/buttons.component';
+import {SelectComponent} from './select/select.component';
+import {TablesComponent} from './tables/tables.component';
+import {CheckboxComponent} from './checkbox/checkbox.component';
+import {FieldComponent} from './field/field.component';
+import {FieldsetComponent} from './fieldset/fieldset.component';
+import {FieldValidationComponent} from './field-validation/field-validation.component';
+import {FileUploadComponent} from './file-upload/file-upload.component';
+import {InputRadioComponent} from './input-radio/input-radio.component';
+import {SliderComponent} from './slider/slider.component';
+import {InputComponent} from './input/input.component';
+import {InputTextareaComponent} from './input-textarea/input-textarea.component';
+
+// Layout
+import {BladeComponent} from './blade/blade.component';
+import {BladeBottomComponent} from './blade-bottom/blade-bottom.component';
+import {BladeTopComponent} from './blade-top/blade-top.component';
+import {FilterComponent} from './filter/filter.component';
+import {FlexComponent} from './flex/flex.component';
+import {FooterComponent} from './footer/footer.component';
+import {HeaderComponent} from './header/header.component';
+
+// Navigation
+import {ContextMenuComponent} from './context-menu/context-menu.component';
+import {NavContextComponent} from './nav-context/nav-context.component';
+import {NavCoreComponent} from './nav-core/nav-core.component';
+import {ProgressIndicatorComponent} from './progress-indicator/progress-indicator.component';
+import {ProgressIndicatorLhComponent} from './progress-indicator-lh/progress-indicator-lh.component';
+import {StepperComponent} from './stepper/stepper.component'; // STEPPER NOT YET RELEASED
+import {TreeMenuComponent} from './tree-menu/tree-menu.component';
+import {TabNavigationComponent} from './tab-navigation/tab-navigation.component';
+
+// Patterns
+import {AlertsComponent} from './alerts/alerts.component';
+import {ShieldsComponent} from './shields/shields.component';
+import {BoxComponent} from './box/box.component';
+import {ColoursComponent} from './colours/colours.component';
+import {IconsComponent} from './icons/icons.component';
+import {ProgressBarComponent} from './progress-bar/progress-bar.component';
+import {ProgressCircleComponent} from './progress-circle/progress-circle.component';
+import {TagsComponent} from './tags/tags.component';
+
+// Widgets
+import {AccordionComponent} from './accordion/accordion.component';
+import {AccordionFancyComponent} from './accordion-fancy/accordion-fancy.component';
+import {CardComponent} from './card/card.component';
+import {DashboardFavouritesComponent} from './dashboard-favourites/dashboard-favourites.component';
+import {IconPickerComponent} from './icon-picker/icon-picker.component';
+import {InfoPanelComponent} from './info-panel/info-panel.component';
+import {ModalComponent} from './modal/modal.component';
+import {OverlayComponent} from './overlay/overlay.component';
+import {DlPopoverComponent} from './popover/popover.component';
+import {SummaryTopComponent} from './summary-top/summary-top.component';
+import {ToastrComponent} from './toastr/toastr.component';
+import {TooltipComponent} from './tooltip/tooltip.component';
+import {UserFeedbackComponent} from './user-feedback/user-feedback.component';
+
+// Modifiers
+import {BorderComponent} from './border/border.component';
+import {BorderRadiusComponent} from './border-radius/border-radius.component';
+import {MarginComponent} from './margin/margin.component';
+import {MarkupComponent} from './markup/markup.component';
+import {PaddingComponent} from './padding/padding.component';
+import {WidthsComponent} from './widths/widths.component';
+
+// Typography
+import {EditorialComponent} from './editorial/editorial.component';
+import {TypographyComponent} from './typography/typography.component';
+
+// Other Widgets
+import {AgGridComponent} from './ag-grid/ag-grid.component';
+import {NgbDatepickerComponent} from './ngb-datepicker/ngb-datepicker.component';
+import {NgSelectComponent} from './ng-select/ng-select.component';
+
+// Email Templates
+import {HtmlEmailComponent} from './html-email/html-email.component';
+
+// Addendum
+import {ElementsAlignmentComponent} from './elements-alignment/elements-alignment.component';
+import {PageLayoutExamplesComponent} from './page-layout-examples/page-layout-examples.component';
+
+const routes: Routes = [
+  { path: '', component: LandingPageComponent },
+  { path: 'accordion', component: AccordionComponent },
+  { path: 'accordion-fancy', component: AccordionFancyComponent },
+  { path: 'ag-grid', component: AgGridComponent },
+  { path: 'alerts', component: AlertsComponent },
+  { path: 'anchor', component: AnchorComponent },
+  { path: 'blade', component: BladeComponent },
+  { path: 'blade-bottom', component: BladeBottomComponent },
+  { path: 'blade-top', component: BladeTopComponent },
+  { path: 'border', component: BorderComponent },
+  { path: 'border-radius', component: BorderRadiusComponent },
+  { path: 'box', component: BoxComponent },
+  { path: 'buttons', component: ButtonsComponent },
+  { path: 'card', component: CardComponent },
+  { path: 'checkbox', component: CheckboxComponent },
+  { path: 'colours', component: ColoursComponent },
+  { path: 'context-menu', component: ContextMenuComponent },
+  { path: 'dashboard-favourites', component: DashboardFavouritesComponent },
+  { path: 'editorial-content', component: EditorialComponent },
+  { path: 'field', component: FieldComponent },
+  { path: 'field-validation', component: FieldValidationComponent },
+  { path: 'fieldset', component: FieldsetComponent },
+  { path: 'file-upload', component: FileUploadComponent },
+  { path: 'filter', component: FilterComponent },
+  { path: 'flex', component: FlexComponent },
+  { path: 'footer', component: FooterComponent },
+  { path: 'header', component: HeaderComponent },
+  { path: 'icons', component: IconsComponent },
+  { path: 'input', component: InputComponent },
+  { path: 'input-radio', component: InputRadioComponent },
+  { path: 'input-textarea', component: InputTextareaComponent },
+  { path: 'slider', component: SliderComponent },
+  { path: 'loading-spinner', component: LoadingSpinnerComponent },
+  { path: 'loading-spinner-page', component: LoadingSpinnerPageComponent },
+  { path: 'icon-picker', component: IconPickerComponent },
+  { path: 'info-panel', component: InfoPanelComponent },
+  { path: 'margin', component: MarginComponent },
+  { path: 'markup', component: MarkupComponent },
+  { path: 'modal', component: ModalComponent },
+  { path: 'nav-context', component: NavContextComponent },
+  { path: 'nav-core', component: NavCoreComponent },
+  { path: 'overlay', component: OverlayComponent },
+  { path: 'tab-navigation', component: TabNavigationComponent, children: [
+    { path: 'loading-spinner', component: LoadingSpinnerComponent },
+    { path: 'anchor', component: AnchorComponent },
+  ] },
+  { path: 'padding', component: PaddingComponent },
+  { path: 'page-layout-examples', component: PageLayoutExamplesComponent },
+  { path: 'widths', component: WidthsComponent },
+  { path: 'progress-indicator', component: ProgressIndicatorComponent },
+  { path: 'progress-indicator-lh', component: ProgressIndicatorLhComponent },
+  { path: 'popover', component: DlPopoverComponent },
+  { path: 'progress-bar', component: ProgressBarComponent },
+  { path: 'progress-circle', component: ProgressCircleComponent },
+  { path: 'select', component: SelectComponent },
+  { path: 'shields', component: ShieldsComponent },
+  { path: 'stepper', component: StepperComponent },
+  { path: 'summary-top', component: SummaryTopComponent },
+  { path: 'tables', component: TablesComponent },
+  { path: 'tags', component: TagsComponent },
+  { path: 'toastr', component: ToastrComponent },
+  { path: 'tooltip', component: TooltipComponent },
+  { path: 'tree-menu', component: TreeMenuComponent },
+  { path: 'user-feedback', component: UserFeedbackComponent },
+  { path: 'typography', component: TypographyComponent },
+  { path: 'ng-select', component: NgSelectComponent },
+  { path: 'ngb-datepicker', component: NgbDatepickerComponent },
+  { path: 'html-email', component: HtmlEmailComponent },
+  { path: 'elements-alignment', component: ElementsAlignmentComponent }
+];
+
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
+})
+
+export class AppRoutingModule { }

@@ -1,0 +1,24 @@
+.animate-out-y {
+    transition: all .25s linear;
+    position: absolute;
+    top: 1rem;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.animate-in-y {
+    transition: all .25s linear;
+    position: absolute;
+    top:100%!important;
+    visibility: visible!important;
+    opacity: 1!important;
+}
+
+.animate-all {
+    transition: all .25s linear;
+    transition-delay: .5s;
+}
+
+.animate-normal {
+    transition: all .25s linear;
+}

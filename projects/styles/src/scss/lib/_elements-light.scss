@@ -1,0 +1,260 @@
+$colour: (
+  primary:                 _palette(aa-blue-100),
+  secondary:               _palette(aa-light-blue-100),
+  tertiary:               rgb(192, 192, 192),
+
+  highlight-default:       _palette(aa-blue-100),
+  highlight-secondary:     _palette(aa-light-blue-100),
+  highlight-tertiary:      _palette(aa-light-blue-15),
+  highlight-input:         _palette(aa-light-blue-30),
+  highlight-glow:          _palette(aa-light-blue-15),
+  theme-primary:           _palette(aa-orange-100),
+
+  tab-nav-link:            _palette(aa-light-blue-100),
+
+  blade-bottom-header:     _palette(aa-blue-100),
+  blade-icon:              _palette(aa-blue-100),
+
+  bg:                      _palette(grey-2),
+  bg-primary:              _palette(white),
+  bg-control-bar:          _palette(white),
+  bg-secondary:            _palette(aa-light-blue-30),
+  bg-tertiary:             _palette(aa-light-blue-5),
+  bg-nav-link:             _palette(aa-light-blue-30),
+  bg-nav-link-hover:       _palette(aa-blue-100),
+  bg-nav-link-active:      _palette(aa-plum-100),
+  lh-hover-bg:             _palette(aa-light-blue-5),
+  bg-highlight:            _palette(aa-light-blue-5),
+  bg-describe:             _palette(grey-5),
+  bg-input:                _palette(white),
+  bg-filter:               _palette(aa-light-blue-15),
+  bg-footer:               _palette(aa-light-blue-15),
+  bg-header:               _palette(aa-blue-100),
+  bg-accordion:            _palette(aa-light-blue-30),
+  bg-accordion-disabled:   _palette(grey-5),
+  bg-accordion-body:       _palette(bg),
+  bg-favourites:           _palette(white),
+  bg-feature-box:          _palette(white),
+  bg-feature-box-solid:    _palette(aa-light-blue-10),
+  bg-gist:                 _palette(grey-2),
+  bg-ag-grid:              _palette(white),
+  bg-ag-grid-hover:        _palette(grey-5),
+  ag-grid-body:            _palette(aa-grey-100),
+  bg-ag-grid-drop:         _palette(white),
+  bg-modal:                 rgba(0, 39, 118, 0.15),
+  bg-selected:             _palette(grey-5),
+  bg-search-input:         _palette(aa-light-blue-100),
+  bg-card:                 _palette(white),
+  bg-ng-select-selected:   _palette(aa-light-blue-5),
+  bg-card-hover:           _palette(grey-5),
+  bg-slider:               _palette(grey-25),
+  bg-slider-button:        _palette(white),
+  bg-button-white:         _palette(white),
+  bg-button-white-hover:   _palette(grey-2),
+
+  border-feature-box:      _palette(aa-light-blue-15),
+  border-box:              _palette(grey-10),
+  border-primary:          _palette(grey-25),
+  border-secondary:        _palette(aa-light-blue-30),
+  border-accordion:        _palette(aa-light-blue-30),
+  border-highlight:        _palette(aa-light-blue-15),
+  border-grey-dark:        _palette(aa-grey-100),
+  border-grey:             _palette(grey-40),
+  border-subtle:           _palette(grey-10),
+  border-input:            _palette(grey-25),
+  border-ag-grid:          _palette(aa-light-blue-30),
+  border-nav:              _palette(aa-light-blue-10),
+  border-blue:             _palette(aa-light-blue-100),
+  border-header:           _palette(aa-blue-100),
+  border-header-avatar:    _palette(aa-light-blue-100),
+  border-quick-links:      _palette(aa-light-blue-100),
+  border-button-white:     _palette(grey-25),
+
+  heading-1:               _palette(aa-blue-100),
+  heading-2:               _palette(aa-light-blue-100),
+  body-text:               _palette(aa-grey-100),
+  body-text-reverse:       _palette(white),
+  header-text:             _palette(white),
+  label-text:              _palette(aa-grey-100),
+  text-dark:               _palette(aa-grey-100),
+  text-mid:                _palette(grey-50),
+  text-input:              _palette(aa-grey-100),
+  search-input:            _palette(aa-white-100),
+  search-placeholder:      _palette(aa-light-blue-50),
+  quick-links:             _palette(aa-light-blue-100),
+
+  dt:                      _palette(aa-light-blue-100),
+  link:                    _palette(aa-light-blue-100),
+  link-light:              _palette(aa-light-blue-100),
+  link-secondary:          _palette(aa-light-blue-100),
+  link-hover:              _palette(aa-dark-blue-100),
+  link-grid-primary:       _palette(aa-light-blue-100),
+
+  footer-bg:               rgb(240, 240, 255),
+  footer-txt:              rgb(32, 32, 32),
+  border-dark:             rgb(76, 0, 153),
+  border-light:            rgb(229, 204, 225),
+  border-white:            rgb(255, 255, 255),
+
+  white:                   _palette(white),
+  white-50:                _palette(white-50),
+  white-100:               _palette(white),
+
+  alert-error-5:           _palette(aa-red-5),
+  alert-error-10:          _palette(aa-red-10),
+  alert-error-100:         _palette(aa-red-100),
+  alert-error-header:      _palette(aa-red-100),
+  alert-error-body:        _palette(aa-red-100),
+  
+  alert-warning-5:         _palette(aa-orange-5),
+  alert-warning-10:        _palette(aa-orange-10),
+  alert-warning-100:        _palette(aa-orange-100),
+  alert-warning-header:    _palette(aa-orange-100),
+  alert-warning-body:      _palette(aa-orange-100),
+  
+  alert-success-15:        _palette(aa-green-15),
+  alert-success-5:         _palette(aa-green-5),
+  alert-success-100:       _palette(aa-green-100),
+  alert-success-header:    _palette(aa-green-100),
+  alert-success-body:      _palette(aa-green-100),
+
+  alert-info-10:           _palette(aa-light-blue-10),
+  alert-info-15:           _palette(aa-light-blue-15),
+  alert-info-header:       _palette(aa-light-blue-100),
+  alert-info-body:         _palette(aa-light-blue-100),
+
+  alert-success-text:      _palette(white),
+  alert-info-text:         _palette(white),
+  alert-error-text:        _palette(white),
+  alert-warning-text:      _palette(white),
+
+  alert-draft-10:          _palette(grey-10),
+  alert-draft-body:        _palette(grey-100),
+
+  list-highlight:          _palette(aa-light-blue-100),
+  keyword-highlight:       _palette(aa-blue-sky-100),
+  disabled-dark:           _palette(grey-100),
+  disabled-light:          _palette(grey-25),
+
+  next:                    _palette(aa-blue-100),
+  visited:                 _palette(aa-plum-100),
+  current:                 _palette(aa-blue-100),
+  complete:                _palette(aa-light-blue-100),
+
+  info-panel-red:          _palette(aa-red-10),
+  info-panel-orange:       _palette(aa-orange-10),
+  info-panel-light-blue:   _palette(aa-light-blue-10),
+  info-panel-green:        _palette(aa-green-15),
+
+  blue-primary:            _palette(aa-blue-100),
+
+  ufb-red-primary:         _palette(aa-red-8),
+  ufb-red-secondary:       _palette(aa-red-3),
+  ufb-orange-primary:      _palette(aa-orange-10),
+  ufb-orange-secondary:    _palette(aa-orange-5),
+  ufb-ochre-primary:       _palette(aa-ochre-20),
+  ufb-ochre-secondary:     _palette(aa-ochre-8),
+  ufb-lime-primary:        _palette(aa-lime-15),
+  ufb-lime-secondary:      _palette(aa-lime-4),
+  ufb-green-primary:       _palette(aa-green-15),
+  ufb-green-secondary:     _palette(aa-green-4),
+
+  date-picker-hover:       _palette(aa-blue-100),
+  
+  lh-nav-shadow:           rgba(104, 104, 104, 0.1),
+  lh-nav-bg-primary:       _palette(white),
+  lh-nav-bg-secondary:     _palette(grey-2),
+  lh-nav-border-primary:   _palette(aa-light-blue-15),
+  lh-nav-border-secondary: _palette(aa-light-blue-10),
+  lh-nav-bg-hover:         _palette(aa-blue-100),
+  lh-nav-bg-active:        _palette(aa-plum-100),
+  lh-nav-text-primary:     _palette(aa-blue-100),
+  lh-nav-text-secondary:   _palette(grey-50),
+  lh-nav-text-hover:       _palette(aa-white-100),
+  lh-nav-text-active:      _palette(aa-white-100),
+  lh-nav-icon-hover:       _palette(aa-white-100),
+  lh-nav-icon-active:      _palette(aa-white-100),
+  lh-nav-icon-primary:     _palette(aa-blue-100),
+  lh-nav-icon-secondary:   _palette(aa-light-blue-80),
+  lh-nav-active:           _palette(grey-5),
+  
+  tour-hover:             rgb(110, 62, 106),
+  tour-shadow:            rgba(92, 30, 128, 0.10),
+  
+  progress-bar:            _palette(aa-blue-100),
+  
+  dl-gradient-light:       rgb(248, 251, 253),
+  dl-gradient-dark:        rgb(243, 249, 251),
+  dl-blue:                 _palette(aa-light-blue-50),
+  dl-blue-light:           _palette(aa-light-blue-10),
+  dl-pink:                 _palette(aa-pink-100),
+  dl-pink-light:           rgb(255, 243, 247),
+  dl-green:                _palette(aa-green-50),
+  dl-green-light:          _palette(aa-green-5),
+  dl-ochre:                _palette(aa-ochre-100),
+  dl-ochre-light:          _palette(aa-ochre-8),
+  dl-orange:               _palette(aa-orange-100),
+  dl-orange-light:         _palette(aa-orange-5),
+  dl-highlight:           rgb(252, 243, 244),
+  
+  gradient-blue-start:    rgb(2, 76, 146) 0%,
+  gradient-blue-middle:   rgb(19, 109, 161) 50%,
+  gradient-blue-end:      rgb(12, 166, 209) 100%,
+
+  gradient-grey-start:    rgb(255, 255, 255),
+  gradient-grey-end:      rgb(251, 251, 251),
+
+  box-shadow:              _palette(grey-5),
+  box-shadow-strong:       _palette(grey-10),
+  
+  icons-light:             _palette(grey-40),
+  
+  aa-blue-100:             _palette(aa-blue-100),
+  bg-aa-blue-100:          _palette(aa-blue-100),
+
+  white-transparency:     rgba(255, 255, 255, 0.26),
+
+  dl-info:                rgba(255, 161, 195, 0.103),
+);
+
+@mixin chevron-down {
+  background-image: url('#{$icon-path}/keyboard_arrow_down-light-24px.svg');
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
+
+@mixin view-switch {
+  background-image: url('#{$icon-path}/icon-grid-small.svg');
+}
+
+@mixin view-switch-large {
+  background-image: url('#{$icon-path}/icon-grid-large.svg');
+}
+
+@mixin view-switch-list {
+  background-image: url('#{$icon-path}/icon-grid-list.svg');
+}
+
+@mixin view-switch-list-alt {
+  background-image: url('#{$icon-path}/icon-grid-list-alt.svg');
+}
+
+@mixin dl-graphic {
+  background-image: url('#{$icon-path}/graphic.svg');
+}
+
+@mixin draft-bg-image {
+  background-image: url("#{$icon-path}/icon-draft.svg");
+}
+
+//$icon-alert-error: 'icon-alert-red.svg'
+
+$icon-alert-error: '#{$icon-path}/icon-alert-white.svg';
+//@mixin logo {
+//  background-image: url(#{$logo-img});
+//}
+//
+//.logo {
+//  max-width: 65px;
+//  @include logo;
+//}

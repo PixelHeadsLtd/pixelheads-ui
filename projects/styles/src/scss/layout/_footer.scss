@@ -1,0 +1,32 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid _colour(border-primary);
+  background-color: _colour(bg-primary);
+  padding: 0.5rem 1.25rem;
+  text-align: center;
+
+  ul {
+    font-size: _font(size-small);
+    list-style: none;
+    line-height: unset;
+
+    li {
+      display: inline-block;
+
+      &:after {
+        content: '|';
+        margin: 0 0.75rem;
+        color: _colour(secondary);
+      }
+    }
+
+    li:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+}

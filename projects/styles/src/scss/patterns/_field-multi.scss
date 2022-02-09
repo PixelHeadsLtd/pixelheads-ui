@@ -1,0 +1,22 @@
+.multi {
+    background-color: _colour(white);
+    border: 1px solid_colour(secondary);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    padding: .1rem .5rem .1rem .5rem;
+    font-weight: _font(weight-normal);
+    position: relative;
+    display: inline-block;
+    margin-right: 1rem;
+
+    label {
+        display: inline-block;
+        padding: .5rem 1rem !important;  // bootstrap
+    }
+
+    span {
+        display: inline-block;
+    }
+
+}

@@ -1,0 +1,257 @@
+.alert-shield {
+  border-radius: 1rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 0.3rem 50%;
+  font-size: _font(size-default);
+  padding: .425rem 1.25rem .425rem 2rem;
+  border: 2px solid transparent;
+
+  &.small {
+    background-size: 1rem;
+    font-size: _font(size-small);
+    padding: 0.275rem 0.75rem 0.275rem 1.75rem;
+  }
+  
+  &.success {
+    background-color: _colour(alert-success-5);
+    color: _colour(alert-success-body);
+    background-image: url("#{$icon-path}/icon-check-green.svg");
+  }
+  
+  &.info {
+    background-color: _colour(alert-info-10);
+    color: _colour(alert-info-body);
+    background-image: url("#{$icon-path}/icon-info-blue.svg");
+  }
+
+  &.pending {
+    background-color: _colour(alert-info-10);
+    background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
+    color: _colour(alert-info-body);
+  }
+
+  &.pending-orange {
+    background-color: _colour(alert-warning-10);
+    background-image: url("#{$icon-path}/timelapse-24px-orange.svg");
+    color: _colour(alert-warning-body);
+  }
+
+  &.pending-red {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/timelapse-24px-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.risk-green {
+    background-color: _colour(alert-success-5);
+    background-image: url("#{$icon-path}/icon-check-green.svg");
+    color: _colour(alert-success-body);
+  }
+
+  &.risk-blue {
+    background-color: _colour(alert-info-10);
+    background-image: url("#{$icon-path}/icon-check-blue.svg");
+    color: _colour(alert-success-body);
+  }
+
+  &.risk-low {
+    background-color: _colour(alert-info-10);
+    background-image: url("#{$icon-path}/icon-risk-24px-blue.svg");
+    color: _colour(alert-info-body);
+  }
+
+  &.risk-medium {
+    background-color: _colour(alert-warning-10);
+    background-image: url("#{$icon-path}/icon-risk-24px-orange.svg");
+    color: _colour(alert-warning-body);
+  }
+
+  &.risk-high {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/icon-risk-24px-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.risk-green-approved {
+    background-color: _colour(alert-success-5);
+    background-image: url("#{$icon-path}/icon-check-green.svg");
+    color: _colour(alert-success-body);
+    border: 2px dotted _colour(alert-success-body);
+  }
+
+  &.risk-low-approved {
+    background-color: _colour(alert-success-5);
+    background-image: url("#{$icon-path}/check_circle-blue-24px.svg");
+    color: _colour(alert-success-body);
+    border: 2px dotted _colour(alert-info-body);
+  }
+
+  &.risk-medium-approved {
+    background-color: _colour(alert-success-5);
+    background-image: url("#{$icon-path}/check_circle-orange-24px.svg");
+    color: _colour(alert-success-body);
+    border: 2px dotted _colour(alert-warning-body);
+  }
+
+  &.risk-high-approved {
+    background-color: _colour(alert-success-5);
+    background-image: url("#{$icon-path}/check_circle-red-24px.svg");
+    color: _colour(alert-success-body);
+    border: 2px dotted _colour(alert-error-body);
+  }
+
+  &.warning {
+    background-color: _colour(alert-warning-10);
+    color: _colour(alert-warning-body);
+    background-image: url("#{$icon-path}/icon-info-orange.svg");
+  }
+
+  &.void {
+    background-color: _colour(alert-warning-10);
+    background-image: url("#{$icon-path}/icon-cross-orange.svg");
+    color: _colour(alert-warning-body);
+  }
+
+  &.error {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/icon-alert-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.removed, &.circle-x-red, &.do-not-use {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/icon-close-24px-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.withdrawn {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/undo-red-24px.svg");
+    color: _colour(alert-error-body);
+  }
+  
+  &.returned {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/icon-returned-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.draft {
+    background-color: _colour(alert-draft-10);
+    color: _colour(alert-draft-body);
+    @include draft-bg-image;
+  }
+
+  &.import {
+    background-color: _colour(alert-warning-10);
+    @include icon-left-medium;
+    color: _colour(alert-warning-body);
+
+    &:before {
+      @include icon-button-large-material;
+      content: "\e15e";
+    }
+
+    &.small {
+      line-height: 1rem;
+      padding-left: 2rem;
+      &:before {
+        left: .4rem;
+      }
+    }
+  }
+
+  &.reject,
+  &.cancel {
+    background-color: _colour(alert-error-5);
+    background-image: url("#{$icon-path}/cancel-24px-red.svg");
+    color: _colour(alert-error-body);
+  }
+
+  &.vanilla, &.blue {
+    background-color: _colour(alert-info-10);
+    color: _colour(alert-info-body);
+    padding-left: .75rem;
+  }
+
+  &.green {
+    background-color: _colour(alert-success-5);
+    color: _colour(alert-success-body);
+    padding-left: .75rem;
+  }
+
+  &.orange {
+    background-color: _colour(alert-warning-10);
+    color: _colour(alert-warning-body);
+    padding-left: .75rem;
+  }
+
+  &.red {
+    background-color: _colour(alert-error-5);
+    color: _colour(alert-error-body);
+    padding-left: .75rem;
+  }
+}
+
+.force-breaks {
+  .alert-shield {
+    display: table;
+  }
+}
+
+.alert-shield.small {
+  &.no-text {
+    padding: 0.35rem 0.5rem 0.35rem 1.25rem;
+  }
+}
+
+// extras
+
+.icon-shield-container {
+  .alert-shield {
+    height: 1.9rem;
+  }
+}
+
+.ag-header-cell {
+  .alert-shield {
+    line-height: 1rem;
+  }
+}
+
+// MV specific styles - don't use or alter
+
+#mineVisitGrid .alert-shield {
+  background-position: 5% 50%;
+  height: 95%;
+  padding: 0 0.5rem 0 1.75rem;
+}
+
+.approved .alert-shield {
+  background-color: _colour(alert-success-5);
+  background-image: url("#{$icon-path}/check_circle-24px-green.svg");
+  color: _colour(alert-success-body);
+}
+
+.noMineVisitRegistered .alert-shield,
+.void .alert-shield {
+  background-color: _colour(alert-error-5);
+  background-image: url("#{$icon-path}/error_outline-24px-red.svg");
+  color: _palette(alert-error-body);
+}
+
+.pending .alert-shield {
+  background-color: _colour(alert-info-10);
+  background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
+  color: _colour(alert-info-body);
+}
+
+.rejected .alert-shield {
+  background-color: _colour(alert-error-5);
+  background-image: url("#{$icon-path}/highlight_off-24px-red.svg");
+  color: _palette(alert-error-body);
+}
+
+

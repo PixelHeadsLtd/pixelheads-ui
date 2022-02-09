@@ -1,0 +1,69 @@
+select:not(.custom-select) {
+  appearance: none;
+  background-color: _colour(bg-input);
+  @include chevron-down;
+  border: 1px solid _colour(border-input);
+  border-radius: .25rem;
+  color: _colour(body-text);
+  display: block;
+  font-family: _font(family-regular);
+  font-size: _font(size-default);
+  padding: .5rem 1.75rem .5rem .75rem; // avoid changing the vertical padding
+  width: 100%;
+  min-height: 2.1rem;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid _colour(highlight-input);
+    box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+  }
+  
+  // fix for IE11 where both chevrons where being displayed
+  &::-ms-expand {
+    display: none;
+  }
+  
+  // fix for IE11 where both chevrons where being displayed
+  &::-ms-expand {
+    display: none;
+  }
+    
+  // override chrome's autofill bg color for darkmode
+  &:-webkit-autofill, 
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: _colour(body-text);
+    -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
+  }
+  
+  &[aria-disabled=true],
+  &[disabled] {
+    border: none;
+    border-bottom: 1px solid _colour(readonly);
+    border-radius: 0;
+    cursor: not-allowed;
+    
+    option {
+      display: none;
+    }
+    
+    &:focus {
+      border: none;
+      border-bottom: 1px solid _colour(readonly);
+      box-shadow: none;
+    }
+  }
+}
+
+.gradient {
+  select {
+    background-color: _palette(aa-blue-100);
+    background-image: url("../../assets/icons/keyboard_arrow_down-wht-24px.svg");
+    border: none;
+    color: _palette(aa-white-100);
+    border-radius: 0;
+    &::placeholder {
+      color: _palette(aa-white-100);
+    }
+  }
+}

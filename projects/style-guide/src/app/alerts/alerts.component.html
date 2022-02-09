@@ -1,0 +1,151 @@
+<section class="control-bar">
+  <h1>Alerts</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Alert short</h2>
+      <div class="describe margin-bottom-1">
+        <p>Alerts are a handy UX pattern. We have four available states. Please refer
+            to the attributes table on the right for details.
+        </p>
+      </div>
+      <div class="flex-group flex-start">
+        <div>
+          <h3>Success</h3>
+          <aa-alert alertClass="success" alertText="Success"></aa-alert>
+        </div>
+        <div>
+          <h3>Info</h3>
+          <aa-alert alertClass="info" alertText="Info"></aa-alert>
+        </div>
+        <div>
+          <h3>Warning</h3>
+          <aa-alert alertClass="warning" alertText="Warning"></aa-alert>
+        </div>
+        <div>
+          <h3>Error</h3>
+          <aa-alert alertClass="error" alertText="Error"></aa-alert>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">alertClass</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">success, info,<br/> warning, error</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">alertText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your message</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(alertsHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+   <!-- start content repeater -->
+   <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Alert long</h2>
+      <div class="describe margin-bottom-1">
+        <p>You can add larger paragraphs of text if required.
+        </p>
+      </div>
+      <h3>Success</h3>
+      <aa-alert [alertClass]="'success'" [alertText]="'I wrote this story for you, but when I began it I had not realized that girls grow quicker than books. '"></aa-alert>
+      <h3>Info</h3>
+      <aa-alert [alertClass]="'info'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <h3>Warning</h3>
+      <aa-alert [alertClass]="'warning'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <h3>Error</h3>
+      <aa-alert [alertClass]="'error'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">alertClass</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">success, info,<br/> warning, error</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">alertText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your message</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(alertsHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+</section>
+
+<aa-blade
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+>
+  <article class="blade-content">
+    <app-gist src="angloux/595f67f71f76e5636ae715f0fcb78e33"></app-gist>
+    <a href="https://gist.github.com/angloux/595f67f71f76e5636ae715f0fcb78e33" target="_blank">View Gist on GitHub</a>
+  </article>
+</aa-blade>

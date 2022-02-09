@@ -1,0 +1,185 @@
+<section class="control-bar">
+  <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
+  <h1>AG Grid</h1>
+</section>
+<section class="content-container padding-0">
+  <section class="content-repeater flex-group">  
+      <section class="flex-1 col-left flex-start">
+        <h2>Anchor</h2>
+        <div class="describe">
+          <p>
+            There is currently a licencing issue with ag-grid v26.2.0 that is limiting some<br/>
+            functionality, so for now please continue to use v24.1.0 and<br/> 
+            include the enterprise version.
+          </p>
+          <p>
+            For details around setting ag-grid height, custom-tooltips and context-menus, please<br/>
+            click the "view gist" button on the right to open the side blade instructions.
+          </p>
+        </div>
+        <div class="flex-group flex-start">
+          <div class="field">
+            <button (click)="autoSizeAll()" class="primary small">Autosize all</button>
+          </div>
+          <div class="field">
+            <button (click)="sizeToFit()" class="primary small">Size to fit</button>
+          </div>
+        </div>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Ag-Grid class names</td>
+              <td datalabel="Attribute">class</td>
+              <td datalabel="Type">class name</td>
+              <td datalabel="Default">.ag-theme-balham .ag-grid</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">AG-Grid <a href="https://www.ag-grid.com/angular-data-grid/component-tooltip/" target="_blank">Custom tooltip</a></td>
+              <td datalabel="Attribute">tooltipComponent</td>
+              <td datalabel="Type">Component</td>
+              <td datalabel="Default">0</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">AG-Grid <a href="https://www.ag-grid.com/angular-data-grid/row-selection/" target="_blank">checkbox implementation</a></td>
+              <td datalabel="Attribute">checkboxSelection</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="bladeIsOpen($event)" class="margin-top-1 tertiary">See gist files for adding a custom tooltip...</button>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+
+    <ag-grid-angular 
+        #agGrid id="myGrid"
+        class="ag-theme-balham ag-grid"
+        [ngStyle]="{'height' : 'calc(100vh - 26rem)'}"
+        [tooltipShowDelay]="tooltipShowDelay"
+        [enableRangeSelection]="true"
+        [rowSelection]="'multiple'"
+        [gridOptions]="gridOptions"
+        [defaultColDef]="defaultColDef"
+        [rowData]="rowData"
+        [pagination]="true"
+        (gridReady)="onGridReady($event)"
+        [suppressClickEdit]="true">
+    </ag-grid-angular>
+    
+    <aa-blade 
+      [showModal]="false"
+      [toggleBlade]="toggleBlade"
+      suppressAutoClose="false"
+      topPosition="3.5"
+      zIndex="2"
+      bladeSize="one-column-width"
+      bladeHeading="Gist"
+      [enableIcon]="true"
+      iconName="table_rows"
+      (close)="toggleBlade = false"
+      >
+      <article class="blade-content">
+        <h2 #backToMenu class="boxed">Menu...</h2>
+        <nav class="margin-bottom-1 margin-top-0-75 bd-grey-10 bd-bottom">
+          <a (click)="scrollToElement(agGridHeight)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
+            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-light-blue-100 border-radius-50 padding-0-25">menu</span>
+            <span class="anchor">Setting ag-grid height</span>
+          </a>
+          <a (click)="scrollToElement(customTooltip)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
+            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-orange-100 border-radius-50 padding-0-25">help_outline</span>
+            <span class="anchor">Adding a custom tooltip</span>
+          </a>
+          <a (click)="scrollToElement(contextMenu)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
+            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-green-100 border-radius-50 padding-0-25">more_vert</span>
+            <span class="anchor">Adding a context-menu</span>
+          </a>
+        </nav>
+
+        <section #agGridHeight class="feature-box margin-top-1">
+          <div class="flex-group space-between">
+            <h2 class="boxed">Setting the grid height</h2>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+          </div>
+          <app-gist src="angloux/eb0cf91a2f53876188e72aa94a9b4000"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
+        </section>
+        
+        <section #customTooltip class="feature-box margin-top-1">
+          <div class="flex-group space-between">
+            <h2 class="boxed">Adding a custom tooltip</h2>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+          </div>
+          <h3>Part 1 of 4</h3>
+          <p>In packages.json, install <br/><strong class="aa-red-100">"ag-grid-angular": "^24.1.0"</strong> and... <br/><strong class="aa-red-100">"ag-grid-community": "^24.1.0"</strong></p>
+          <h3>Part 2 of 4</h3>
+          <p>
+            Update your ag-grid html & associated typescript file with the following
+          </p>
+          <app-gist src="angloux/41635eefa1d9656f3f8f9a719d82c7c7"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/41635eefa1d9656f3f8f9a719d82c7c7" target="_blank">View Gist on GitHub</a>
+          <h3>Part 3 of 4</h3>
+          <p>Create the tooltip component</p>
+          <app-gist src="angloux/2e68516ea72b5c8452e08175e501cfe4"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/2e68516ea72b5c8452e08175e501cfe4" target="_blank">View Gist on GitHub</a>
+          <h3>Part 4 of 4</h3>
+          <p>Update your app.module</p>
+          <app-gist src="angloux/cd4b84883f31fd781b81c14d121379dc"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/cd4b84883f31fd781b81c14d121379dc" target="_blank">View Gist on GitHub</a>
+        </section>
+
+        <!-- Context Menu -->
+        <section #contextMenu class="feature-box margin-top-1">
+          <div class="flex-group space-between">
+            <h2 class="boxed">Adding a context-menu</h2>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+          </div>
+
+          <h3>Part 1 of 5</h3>
+          <p>In packages.json, install <br/><strong class="aa-red-100">"ag-grid-angular": "^24.1.0"</strong> and... <br/><strong class="aa-red-100">"ag-grid-community": "^24.1.0"</strong></p>
+     
+          <h3>Part 2 of 5</h3>
+          <p>Create your ellipsis-context-menu files</p>
+          <app-gist src="angloux/a202bc532c366edf319b54a01ceac680"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/a202bc532c366edf319b54a01ceac680" target="_blank">View Gist on GitHub</a>
+    
+          <h3>Part 3 of 5</h3>
+          <p>
+            Add your ag-grid markup
+          </p>
+          <app-gist src="angloux/00f8d5c4dbb106c48372c66dec1fa304"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/00f8d5c4dbb106c48372c66dec1fa304" target="_blank">View Gist on GitHub</a>
+
+          <h3>Part 4 of 5</h3>
+          <p>
+            Update your ag-grid ts file
+          </p>
+          <app-gist src="angloux/43675ada24abcaa6a719cf48204f1ce2"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2" target="_blank">View Gist on GitHub</a>
+          
+          <h3>Part 5 of 5</h3>
+          <p>Update your app.module</p>
+          <app-gist src="angloux/0e113052792f52d886239294d063b2a0"></app-gist>
+          <a class="flex-group flex-end" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
+        </section>
+      </article>
+    </aa-blade>
+</section>

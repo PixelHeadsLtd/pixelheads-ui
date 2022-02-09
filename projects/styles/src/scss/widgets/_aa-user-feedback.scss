@@ -1,0 +1,95 @@
+.user-feedback {
+    position: fixed;
+    border-radius: .5rem;
+    background-color: _colour(bg);
+    -webkit-box-shadow: 0px 0px 13px 5px rgba(0,0,0,0.4); 
+    box-shadow: 0 0 13px 5px rgba(0,0,0,0.2);
+    top: 4.25rem;
+    right: 1rem;
+    
+    .user-feedback-content {
+        border-radius: 0 0 .5rem .5rem;
+    }
+    
+    .feature-box {
+        min-width: 19rem;
+        flex: none;
+        background-color: _colour(bg-primary);
+    }
+    
+    .faces {
+        border-width: 2px;
+        button {
+            padding: 0;
+        }
+    }
+
+    .thanks {
+        min-width: 25rem;
+        div {
+            @include icon-button-xl-svg;
+            margin: 2rem 0;
+        }
+    }
+    
+    // switch colours based on rating
+    &.rating-1  { 
+        .faces {
+            border-color: _palette(aa-red-100);
+        }
+        .describe {
+            background-color: _colour(ufb-red-primary);
+        }
+        .user-feedback-content:nth-child(2) {
+            background-color: _colour(ufb-red-secondary);
+        }
+    }
+    
+    &.rating-2 { 
+        .faces {
+            border-color: _palette(aa-orange-100);
+        }
+        .describe {
+            background-color: _colour(ufb-orange-primary);
+        }
+        .user-feedback-content:nth-child(2) {
+            background-color: _colour(ufb-orange-secondary);
+        }
+    }
+    
+    &.rating-3 { 
+        .faces {
+            border-color: _palette(aa-ochre-100);
+        }
+        .describe {
+            background-color: _colour(ufb-ochre-primary);
+        }
+        .user-feedback-content:nth-child(2) {
+            background-color: _colour(ufb-ochre-secondary);
+        }
+    }
+    
+    &.rating-4 { 
+        .faces {
+            border-color: _palette(aa-lime-100);
+        }
+        .describe {
+            background-color: _colour(ufb-lime-primary);
+        }
+        .user-feedback-content:nth-child(2) {
+            background-color: _colour(ufb-lime-secondary);
+        }
+    }
+    
+    &.rating-5 { 
+        .faces {
+            border-color: _palette(aa-green-100);
+        }
+        .describe {
+            background-color: _colour(ufb-green-primary);
+        }
+        .user-feedback-content:nth-child(2) {
+            background-color: _colour(ufb-green-secondary);
+        }
+    }
+}

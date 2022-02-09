@@ -1,0 +1,519 @@
+<section class="control-bar">
+  <h1>Alert shields</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Status shields</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          There are four available states for the status alert sheilds. These are .success, .info, .warning and .error as seen below. Using
+          these classname will pull in the associated icon and icon colour.
+        </p>
+      </div>
+
+      <h3>By status</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 info">Info</div>
+        <div class="alert-shield margin-bottom-0-5 success">Success</div>
+        <div class="alert-shield margin-bottom-0-5 warning">Warning</div>
+        <div class="alert-shield margin-bottom-0-5 error">Error</div>
+      </div>
+
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 small info">Info</div>
+        <div class="alert-shield margin-bottom-0-5 small success">Success</div>
+        <div class="alert-shield margin-bottom-0-5 small warning">Warning</div>
+        <div class="alert-shield margin-bottom-0-5 small error">Error</div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .info</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .success</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .warning</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .error</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Text</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your text</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(statusHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" 
+        (click)="bladeIsOpen($event); 
+        statusShields=true;
+        regularShields=false;
+        pendingShields=false;
+        riskShields=false;
+        mixedShields=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Regular shields</h2>
+      <div class="describe margin-bottom-1">
+        <p>There are four available states for the status alert sheilds. These are .success, .info, .warning and .error as seen below.</p>
+      </div>
+
+      <h3>By colour</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-1 blue">Blue</div>
+        <div class="alert-shield margin-bottom-1 green">Green</div>
+        <div class="alert-shield margin-bottom-1 orange">Orange</div>
+        <div class="alert-shield margin-bottom-1 red">Red</div>
+      </div>
+
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-1 small blue">Blue</div>
+        <div class="alert-shield margin-bottom-1 small green">Green</div>
+        <div class="alert-shield margin-bottom-1 small orange">Orange</div>
+        <div class="alert-shield margin-bottom-1 small red">Red</div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .blue</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .green</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .orange</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .red</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Text</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your text</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(regularHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" 
+        (click)="bladeIsOpen($event); 
+        statusShields=false;
+        regularShields=true;
+        pendingShields=false;
+        riskShields=false;
+        mixedShields=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Pending shields</h2>
+      <div class="describe margin-bottom-1">
+        <p>There are four available states for the status alert sheilds. These are .success, .info, .warning and .error as seen below.</p>
+      </div>
+
+      <h3>By pending status</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 pending">Pending</div>
+        <div class="alert-shield margin-bottom-0-5 pending-orange">Pending orange</div>
+        <div class="alert-shield margin-bottom-0-5 pending-red">Pending red</div>
+      </div>
+
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 small pending">Pending</div>
+        <div class="alert-shield margin-bottom-0-5 small pending-orange">Pending orange</div>
+        <div class="alert-shield margin-bottom-0-5 small pending-red">Pending red</div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .pending</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .pending-orange</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .pending-red</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(pendingHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" 
+        (click)="bladeIsOpen($event); 
+        statusShields=false;
+        regularShields=false;
+        pendingShields=true;
+        riskShields=false;
+        mixedShields=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Risk shields</h2>
+      <div class="describe margin-bottom-1">
+        <p>There are four available states for the status alert sheilds. These are .success, .info, .warning and .error as seen below.</p>
+      </div>
+
+      <h3>By colour</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-green">Risk green</div>
+        <div class="alert-shield margin-bottom-0-5 risk-blue">Risk blue</div>
+      </div>
+      
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-green small">Risk green</div>
+        <div class="alert-shield margin-bottom-0-5 risk-blue small">Risk blue</div>
+      </div>
+
+      <h3>By risk level</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-low">Risk low</div>
+        <div class="alert-shield margin-bottom-0-5 risk-medium">Risk medium</div>
+        <div class="alert-shield margin-bottom-0-5 risk-high">Risk high</div>
+      </div>
+      
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-low small">Risk low</div>
+        <div class="alert-shield margin-bottom-0-5 risk-medium small">Risk medium</div>
+        <div class="alert-shield margin-bottom-0-5 risk-high small">Risk high</div>
+      </div>
+
+      <h3>By approval risk and colour</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-green-approved">Risk green approved</div>
+        <div class="alert-shield margin-bottom-0-5 risk-low-approved">Risk low approved</div>
+      </div>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-medium-approved">Risk medium approved</div>
+        <div class="alert-shield margin-bottom-0-5 risk-high-approved">Risk high approved</div>
+      </div>
+      
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-green-approved small">Risk green approved</div>
+        <div class="alert-shield margin-bottom-0-5 risk-low-approved small">Risk low approved</div>
+      </div>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 risk-medium-approved small">Risk medium approved</div>
+        <div class="alert-shield margin-bottom-0-5 risk-high-approved small">Risk high approved</div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-green</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-blue</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-low</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-medium</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-high</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-medium-approved</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .risk-high-approved</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(riskHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" 
+        (click)="bladeIsOpen($event); 
+        statusShields=false;
+        regularShields=false;
+        pendingShields=false;
+        riskShields=true;
+        mixedShields=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Mixed shields</h2>
+      <div class="describe margin-bottom-1">
+        <p>There are four available states for the status alert sheilds. These are .success, .info, .warning and .error as seen below.</p>
+      </div>
+
+      <h3>Various</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 removed">Removed</div>
+        <div class="alert-shield margin-bottom-0-5 withdrawn">Withdrawn</div>
+        <div class="alert-shield margin-bottom-0-5 import">Import from AD</div>
+      </div>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 returned">Returned</div>
+        <div class="alert-shield margin-bottom-0-5 draft">Draft</div>
+      </div>
+      
+      <h3>Small</h3>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 removed small">Removed</div>
+        <div class="alert-shield margin-bottom-0-5 withdrawn small">Withdrawn</div>
+        <div class="alert-shield margin-bottom-0-5 import small">Import from AD</div>
+      </div>
+      <div class="flex-group flex-start">
+        <div class="alert-shield margin-bottom-0-5 returned small">Returned</div>
+        <div class="alert-shield margin-bottom-0-5 draft small">Draft</div>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .removed</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .withdrawn</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.alert-shield .import</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(mixedHTML)">
+        <span class="material-icons">content_copy</span><span>Copy component</span>
+      </button>
+      <button class="custom-icons small bg-aa-light-blue-100" 
+        (click)="bladeIsOpen($event); 
+        statusShields=false;
+        regularShields=false;
+        pendingShields=false;
+        riskShields=false;
+        mixedShields=true">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+</section>
+
+<aa-blade
+  [showModal]="false"
+  [toggleBlade]="toggleBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="2"
+  bladeSize="one-column-width"
+  bladeHeading="Gist"
+  [enableIcon]="true"
+  iconName="table_rows"
+  (close)="toggleBlade = false"
+>
+  <article class="blade-content">
+    <div *ngIf="statusShields">
+      <app-gist src="angloux/ca7010288f91ba667a0c869311842567"></app-gist>
+      <a href="https://gist.github.com/angloux/ca7010288f91ba667a0c869311842567" target="_blank">View Gist on GitHub</a>
+    </div>
+
+    <div *ngIf="regularShields">
+      <app-gist src="angloux/213004cc111f21ceaaf623c596f51330"></app-gist>
+      <a href="https://gist.github.com/angloux/213004cc111f21ceaaf623c596f51330" target="_blank">View Gist on GitHub</a>
+    </div>
+
+    <div *ngIf="pendingShields">
+      <app-gist src="angloux/1b1e89671b389637a626be618c8c2485"></app-gist>
+      <a href="https://gist.github.com/angloux/1b1e89671b389637a626be618c8c2485" target="_blank">View Gist on GitHub</a>
+    </div>
+
+    <div *ngIf="riskShields">
+      <app-gist src="angloux/6aa0a3b0595f39f5ab35e3728b5e5312"></app-gist>
+      <a href="https://gist.github.com/angloux/6aa0a3b0595f39f5ab35e3728b5e5312" target="_blank">View Gist on GitHub</a>
+    </div>
+
+    <div *ngIf="mixedShields">
+      <app-gist src="angloux/bff134b695c5b22a18430ca97e21b768"></app-gist>
+      <a href="https://gist.github.com/angloux/bff134b695c5b22a18430ca97e21b768" target="_blank">View Gist on GitHub</a>
+    </div>
+  </article>
+</aa-blade>

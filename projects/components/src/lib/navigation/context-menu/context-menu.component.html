@@ -1,0 +1,27 @@
+<nav 
+  class="context-menu flex-group width-control" 
+  [ngStyle]="{
+    'top' : topPos+'rem', 
+    'left' : leftPos+'rem', 
+    'right' : rightPos+'rem'
+  }" 
+  [ngClass]="{
+    'position-absolute' : absolutePosition
+  }"
+  >
+  <div>
+    <button 
+      (click)="showContextMenu=!showContextMenu" 
+      class="material-icons">
+      more_vert
+    </button>
+  </div>
+  <ul 
+    *ngIf="showContextMenu" 
+    class="strip-bullets" 
+    [ngClass]="{'show-on-left' : showOnLeft}"
+    [ngStyle]="{'min-width' : minWidth+'rem'}"
+  >
+    <ng-content></ng-content>
+  </ul>
+</nav>

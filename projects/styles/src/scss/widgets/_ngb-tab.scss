@@ -1,0 +1,26 @@
+.nav-tabs {
+    border-bottom: 1px solid _palette(grey-10);
+    background-color: _colour(white);
+
+    .nav-item {
+        display: inline-block;
+        margin-bottom: 0 !important;
+
+        .nav-link {
+            margin: 0 1rem;
+            padding: .5rem 0;
+            text-decoration: none;
+            display: inline-block;
+            color: _palette(aa-grey-100);
+            background-color: _colour(white) !important;
+            border: none;
+            font-size: _font(size-default);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            border-bottom: 3px solid_colour(secondary);
+            color:_colour(secondary);
+            background-color: _colour(white) !important;
+        }
+    }
+}

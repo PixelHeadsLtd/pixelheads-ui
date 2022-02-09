@@ -1,0 +1,113 @@
+.field {
+  max-width: 35rem;
+  padding-top: 1rem;
+
+  &.optional {
+    position: relative;
+    label {
+      &:after {
+        content: 'Optional';
+        position: absolute;
+        right: 0;
+        top: 1rem;
+        background-color: _colour(bg-tertiary);
+        border-radius: .25rem;
+        font-family: _font(family-light);
+        font-size: _font(size-small);
+        font-style: italic;
+        letter-spacing: .015rem;
+        padding: .25rem .5rem;
+      }
+    }
+  }
+  
+  &.error, 
+  &.has-error, 
+  &.is-invalid {
+    input, 
+    select, 
+    .ng-select-container {
+      border: 1px solid _palette(aa-red-100)!important;
+      &:focus {
+        outline: 0;
+        border: 1px solid _palette(aa-red-100);
+        box-shadow: 0 0 3pt 1pt _palette(aa-red-50);
+      }
+    }
+  }
+
+  .confirmation {
+    padding: .5rem 0 0 0;
+    p {
+      color: _colour(alert-info-body);
+    }
+    .material-icons {
+      margin: 0 .25rem 0 0;
+      font-size: 1.6rem;
+      color: _colour(alert-info-body)
+    }
+  }
+
+  &.small {
+    max-width: 17rem;
+  }
+
+  &.wide {
+    max-width: 100%;
+  }
+
+  &.boxed {
+    padding-top: 0;
+  }
+
+  &.inline {
+    label {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    input[type='text'],
+    select,
+    .ng-select {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  &.align-right {
+    text-align: right;
+    max-width: 100%;
+  }
+}
+
+.dependant, .child {
+  border-left: 3px solid rgb(102, 173, 208);
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 0;
+}
+
+.field-read-only {
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  background-color: _palette(aa-light-blue-5);
+  border: 1px solid _palette(aa-light-blue-5);
+  font-size: 0.8125rem;
+}
+
+.field-deprecated {
+  // this is from training app
+  .error {
+    border: none;
+    background-color: transparent;
+    color: _palette(aa-red-100);
+    font-size: _font(size-default);
+    padding: 0.25rem 0;
+  }
+}
+
+
+@media screen and (min-width: _breakpoint(breakpoint-570)) {
+  //&.boxed {
+  //  padding-top: unset;
+  //}
+}

@@ -1,0 +1,16 @@
+.text-pulsate {
+    animation: pulse 3s infinite;
+    opacity: 0.5;
+}
+
+@keyframes pulse {
+    0% { 
+        opacity: .25;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: .25;
+    }
+}

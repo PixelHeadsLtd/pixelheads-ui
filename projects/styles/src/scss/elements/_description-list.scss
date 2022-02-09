@@ -1,0 +1,59 @@
+dt,
+dd {
+  white-space: normal;
+}
+
+dl {
+  font-size: _font(size-default);
+  margin: 0 0 0 0;
+  padding: 0;
+
+    .dl-repeater {
+        margin: .25rem;
+        padding: .5rem .75rem;
+
+        &.highlight {
+            background-color: _colour(highlight-tertiary);
+            border-radius: .25rem;
+            margin-right: 1.75rem;
+
+            dt, dd {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+  &.no-wrap {
+    dt,
+    dd {
+      white-space: nowrap;
+    }
+  }
+
+  dt {
+    font-family: _font(family-medium);
+    color: _colour(dt);
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+
+    dd {
+        display: inline-block;
+        margin: 0 1.75rem 0 0;
+    }
+}
+
+@media screen and (min-width: _breakpoint(breakpoint-570)) {
+
+  .dl-container {
+    padding: 0;
+    border-radius: .5rem;
+    border: 2px solid _colour(border-feature-box);
+    background-color: _colour(bg-feature-box);
+    > dl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}

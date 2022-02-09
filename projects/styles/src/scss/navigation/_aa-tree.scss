@@ -1,0 +1,33 @@
+.aa-tree {
+/* Remove default bullets */
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+
+    .caret {
+        cursor: pointer;
+        user-select: none; /* Prevent text selection */
+    }
+    
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+    
+    .caret-down::before {
+        transform: rotate(90deg);
+    }
+    
+    .nested {
+        display: none;
+    }
+    
+    .active {
+        display: block;
+    }
+}

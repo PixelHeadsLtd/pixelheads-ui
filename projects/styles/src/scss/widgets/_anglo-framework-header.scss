@@ -1,0 +1,29 @@
+.header {
+  background-color: _colour(bg-header);
+  border-bottom: 2px solid _colour(primary);
+  color: _colour(header-text);
+  a {
+    color: _colour(header-text);
+    text-decoration: none;
+  }
+  .app-menu-dropdown {
+    font-size: 1.25rem;
+  }
+  .nav-link {
+    .thumb-image {
+      height: 1.75rem!important;
+      width: 1.75rem!important;
+    }
+  }
+  .navbar-brand {
+    .app-logo {
+      background-color: transparent!important;
+      font-size: 1.25rem;
+    }
+  }
+  .blade-content {
+    a {
+      color: _colour(link)!important;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+input:not(.ag-filter-filter) {
+  display: inline-block;
+  border: 1px solid _colour(border-input);
+  border-radius: 0.25rem;
+  font-family: _font(family-regular);
+  font-size: _font(size-default);
+  color: _colour(body-text);
+  background-color: _colour(bg-input);
+  -webkit-appearance: none;
+  
+  &[type=text], 
+  &[type=number] {
+    width: 100%;
+  }
+  
+  &:not([role='combobox']) { // for ng-select
+    padding: .51rem .75rem;
+  }
+
+  &:focus:not([type=checkbox], [type=radio], .ng-select input) {
+    outline: 0;
+    border: 1px solid _colour(highlight-input);
+    box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+  }
+
+  &[type=checkbox],
+  &[type=radio] {
+    padding: 0;
+    &:-moz-focusring {
+      outline:0;
+    }
+  }
+
+  &[type=radio] {
+    -webkit-appearance: radio;
+  }
+
+  &[type=checkbox] {
+    -webkit-appearance: checkbox;
+  }
+
+  &[aria-disabled=true],
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: transparent;
+    border: 1px solid _palette(grey-10);
+  }
+
+  &[aria-readonly=true],
+  &[readonly] {
+    border: none;
+    border-bottom: 1px solid _colour(readonly);
+    border-radius: 0;
+    cursor: not-allowed;
+    &:focus {
+      border: none;
+      border-bottom: 1px solid _colour(readonly);
+      box-shadow: none;
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    color: _palette(aa-grey-40);
+    font-style: italic;
+  }
+
+  ::-moz-placeholder {
+    color: _palette(aa-grey-40);
+    font-style: italic;
+  }
+
+  :-ms-input-placeholder {
+    color: _palette(aa-grey-40);
+    font-style: italic;
+  }
+  
+  // override chrome's autofill bg color for darkmode
+  &:-webkit-autofill, 
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: _colour(body-text);
+    -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
+  }
+}
+
+.date-picker {
+  position: relative;
+  input[type=text] {
+    padding-right: 2rem;
+    ~ button {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      color: #0075b0;
+      border-radius: 0;
+      width: 2rem;
+      height: 2rem;
+      &:hover, &:focus {
+        border: none;
+        background-color: transparent!important;
+        color: _colour(date-picker-hover);
+      }
+      &:disabled {
+        background-color: transparent !important;
+      }
+    }
+  }
+  input[type=date] {
+    + button {
+      display: none;
+    }
+  }
+}
+
+.gradient {
+  input {
+    background-color: _palette(aa-blue-100);
+    border: none;
+    color: _palette(aa-white-100);
+    border-radius: 0;
+    &::placeholder {
+      color: _palette(aa-white-100);
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  input:not(.ag-filter-filter) {
+    &[type='text'] {
+      padding: 0.5rem 0.5rem 0.75rem 0.75rem !important;
+    }
+  }
+}

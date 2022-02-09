@@ -1,0 +1,51 @@
+<div *ngIf="!buttonEnriched && !buttonSplit" class="field {{fieldClass}}">
+  <label [for]="buttonId">{{buttonLabel}}</label>
+  <button 
+    [type]="buttonType" 
+    [name]="buttonId" 
+    [id]="buttonId" 
+    [class]="buttonClass" 
+    [disabled]="disabled" 
+    (click)="onButtonClick($event)"
+  >
+    <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
+    <span>{{buttonText}}</span>
+  </button>
+</div>
+
+<div *ngIf="buttonEnriched" class="field {{fieldClass}}">
+  <button 
+    [type]="buttonType" 
+    [name]="buttonId" 
+    [id]="buttonId" 
+    [disabled]="disabled" 
+    (click)="onButtonClick($event)"
+    class="btn-enriched box-shadow gradient-v-grey"
+  >
+    <div class="flex-group flex-end btn-enriched-toolbar">
+      <ng-content select="[toolbar]"></ng-content>
+    </div>
+    <div class="btn-enriched-content flex-group flex-start flex-align-center">
+      <div class="material-icons {{iconColour}}">{{iconName}}</div>
+      <h2 class="margin-0">{{title}}</h2>
+    </div>
+  </button>
+</div>
+
+<div *ngIf="buttonSplit" class="field {{fieldClass}}">
+  <label [for]="buttonId">{{buttonLabel}}</label>
+  <div class="button-split">
+    <button
+      (click)="showBtnMenu=!showBtnMenu" 
+      [class]="buttonClass"
+      [type]="buttonType" 
+      [name]="buttonId" 
+      [id]="buttonId"
+     >
+      {{buttonText}}
+    </button>
+    <nav (click)="showBtnMenu=false" *ngIf="showBtnMenu" class="box-shadow-strong">
+      <ng-content select="[bs-buttons]"></ng-content>
+    </nav>
+  </div>
+</div>

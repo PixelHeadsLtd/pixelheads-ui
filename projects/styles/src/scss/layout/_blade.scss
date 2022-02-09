@@ -1,0 +1,179 @@
+.aa-blade-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: _colour(bg-modal);
+}
+
+.blade.half-column-width {
+  right: -20rem;
+}
+.blade.one-column-width {
+  right: -35rem;
+}
+.blade.two-column-width {
+  right: -50rem;
+}
+.blade.xl-column-width {
+  right: -66rem;
+}
+.blade.show-blade {
+  right: 0 !important;
+  box-shadow: 0.5rem 1rem 0.75rem 0.75rem _colour(box-shadow-strong);
+  -webkit-box-shadow: .5rem 1rem .75rem .75rem _colour(box-shadow-strong);
+  -moz-box-shadow: .5rem 1rem .75rem .75rem _colour(box-shadow-strong);
+}
+
+.blade {
+  position: fixed;
+  transition: all 0.25s linear;
+  top: 3.438rem;
+  bottom: 0;
+  background-color: _colour(bg);
+  height: unset;
+  
+  .blade-footer,
+  .blade-header,
+  .blade-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.blade-header {
+  border-bottom: 2px solid _colour(border-secondary);
+  background-color: _colour(bg-primary);
+  padding: 0.75rem 1.25rem;
+  top: 0;
+
+  .pin {
+    font-size: 1.25rem;
+    margin: .25rem .75rem 0 0;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    cursor: pointer;
+
+    &.pinned {
+      transform: rotate(0);
+    }
+  }
+  
+  .material-icons {
+    color: _colour(blade-icon);
+  }
+}
+
+.blade-content {
+  padding: 0 0 .75rem 0;
+  overflow-y: auto;
+  top: 3.5rem;
+  bottom: 5rem;
+
+  .ag-grid {
+    height: calc(100vh - 14rem);
+  }
+  
+  // menu blade setup
+  .blade-navigation {
+    .search-results {
+      .search-item 
+        * {
+          background-image: none!important;
+        }
+        span {
+          padding-bottom: .25rem;
+        }
+        i {
+          width: 1rem;
+          max-width: 1rem;
+          height: 1rem;
+          max-height: 1rem;
+        &.chevron, &.search {
+          font-size: 1rem;
+        }
+      }
+    }
+    
+    .nav-icon {
+      position: relative;
+      margin: .5rem .5rem 0;
+      min-width: 6.75rem;
+      max-width: 6.75rem;
+      min-height: 6.5rem;
+      text-align: center;
+      padding: 0;
+      
+      * {
+          &:before {
+            content: none!important;
+        }
+      }
+      
+      p {
+        color: _colour(body-text);
+      }
+  
+      .icon-star-favourites {
+          display: none;
+          position: absolute; 
+          top: -.5rem;
+          right: 0;
+          padding: 0;
+      }
+  
+      &:hover .icon-star-favourites,
+      .icon-star-favourites.selected {
+          display: block;
+      }
+      
+      // override bs in core, icons set up in DB
+      a.fas, a.fas:hover, a.fas:active {
+        font-family: none!important;
+        border: none;
+        outline: none;
+        color: unset;
+        border: unset;
+        text-decoration: unset;
+      }
+    }
+  }
+}
+
+.blade-footer {
+  border-top: 2px solid _colour(border-secondary);
+  background-color: _colour(bg-primary);
+  padding: 0 1.25rem 1.25rem;
+  bottom: 0;
+}
+
+.half-column-width {width: 20rem;}
+.one-column-width {width: 35rem;}
+.two-column-width {width: 50rem;}
+.xl-column-width {width: 66rem;}
+
+@media screen and (max-width: _breakpoint(breakpoint-570)) {
+  .blade {
+    // iPhone's get confused by the varying slide positions so just setting to display none/block.
+    display: none;
+    &.show-blade {
+      display: block;
+      width: auto;
+      left: 0;
+    }
+    .blade-content {
+      width: auto;
+      right: 0;
+      left: 0;
+      bottom: 8rem; // iPhone needed a bit more scroll area
+    }
+    .field {
+      max-width: 20rem; // reduced to fit hand-held
+    }
+    button + button {
+      margin-top: 0.75rem;
+    }
+  }
+}

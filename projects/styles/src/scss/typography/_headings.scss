@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5 {
+  color: _colour(heading-1);
+  line-height: initial;
+}
+
+h1 {
+  font-size: 1.625rem;
+  margin: 0;
+  font-weight: _font(weight-regular);
+}
+
+h2 {
+  font-size: _font(size-medium);
+  margin: 2rem 0 1rem 0;
+  font-weight: _font(weight-medium);
+}
+
+h3 {
+  font-size: _font(size-regular);
+  margin: 1rem 0 .5rem 0;
+  font-weight: _font(weight-medium);
+}
+
+h4 {
+  font-size: _font(size-default);
+  margin: 1rem 0 .5rem 0;
+  font-family: _font(family-bold);
+}
+
+h5 {
+  margin: 0 0 .25rem 0;
+  font-family: _font(family-regular);
+  font-size: _font(size-small);
+}
+
+.boxed {
+  margin-top: 0;
+}
+
+.gradient {
+  h2, h3 {
+    color: _palette(aa-white-100);
+  }
+}
+

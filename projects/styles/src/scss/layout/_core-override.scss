@@ -1,0 +1,46 @@
+// override core framework bootstrap
+html {
+  .container-fluid {
+    padding-left: 0;
+    padding-right:0;
+    .row {
+      margin-right: 0;
+      margin-left: 0;
+    }
+    .col {
+      padding-left: 0;
+      padding-right:0;
+    }
+  }
+}
+
+/* PLEASE DO NOT DELETE ---
+The below excludes specific dl components and 
+markup to override Bootstrap's "_reboot.scss"
+that's currently installed in CORE & used for 3rd party
+components that rely on Bootstrap. So far these are: 
+ngb-datepicker, ng-select and ag-grid */
+aa-blade, 
+aside, 
+section,
+article,
+.aa-card,
+.blade-top,
+.info-panel-content {
+  &:not(
+    .ag-grid *,
+    .ng-select *,
+    ngb-datepicker *,
+    ngbd-datepicker-multiple *,
+    input,
+    textarea,
+    button,
+    header *) {
+    box-sizing: unset!important;
+  }
+}
+
+// Uncomment below to see bs _reboot.scss behaviour on our stuff
+*, *::before, *::after {
+  box-sizing: border-box;
+}

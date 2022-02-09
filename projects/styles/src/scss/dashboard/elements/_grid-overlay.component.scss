@@ -1,0 +1,42 @@
+.grid-overlay {
+    z-index: 10;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+
+    .overlay-header {
+        padding: 1.25rem;
+    }
+
+    .grid-content {
+        position: relative;
+    }
+
+    .grid-wrapper {
+        position: absolute;
+        top: 4rem;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .grid-overlay-content {
+        height: 100%;
+        max-height: 600px;
+        background: #eee;
+        width: 90%;
+        margin: auto;
+
+        @media screen and (max-height: 700px) {
+            max-height: 400px;
+        }
+
+        @media screen and (min-height: 1200px) {
+            max-height: 900px;
+        }
+    }
+}
+
+

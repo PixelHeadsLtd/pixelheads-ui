@@ -1,0 +1,32 @@
+.tooltip-inner {
+    color: _palette(aa-grey-100);
+    font-family: _font(family-main);
+    font-size: _font(size-default);
+    max-width: 35rem !important;
+    height: auto;
+    padding:.75rem;
+    background-color: _colour(white);
+    border: 2px solid _palette(aa-light-blue-40);
+    text-align: left;
+    margin-right: 1rem;
+  }
+
+  .tooltip.show {
+    opacity: 1;
+  }
+
+  .tooltip.top .tooltip-arrow {
+    border-top-color: _palette(aa-light-blue-40);
+  }
+
+  .tooltip.right .tooltip-arrow {
+    border-right-color: _palette(aa-light-blue-40) !important;
+  }
+
+  .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: _palette(aa-light-blue-40);
+  }
+
+  .tooltip.left .tooltip-arrow {
+    border-left-color: _palette(aa-light-blue-40);
+  }

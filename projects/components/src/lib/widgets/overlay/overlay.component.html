@@ -1,0 +1,6 @@
+<article class="aa-overlay flex-center" *ngIf="showOverlay" [ngStyle]="{'z-index' : zIndex}">
+  <div class="aa-overlay-container">
+    <ng-content select="[overlay-header]"></ng-content>
+    <ng-content select="[overlay-content]"></ng-content>
+  </div>
+</article>

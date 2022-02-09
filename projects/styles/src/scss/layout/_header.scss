@@ -1,0 +1,125 @@
+header.page-header:not(header .blade) {
+  // background-image: linear-gradient(to right, _colour(gradient-start) , _colour(gradient-end));
+  // border-bottom: 1px solid _colour(gradient-start);
+  background-color: _colour(bg-header);
+  border-bottom: 1px solid _colour(border-primary);
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  
+  .app-name {
+    .material-icons {
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      align-items: center;
+      text-align: center;
+      display: grid;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  
+  a:not(.blade a),
+  .material-icons:not(
+    .blade .material-icons, 
+    .app-name .material-icons, 
+    .aa-search .material-icons,
+    button.material-icons) {
+    color: _colour(header-text);
+  }
+  
+  nav {
+    .material-icons {
+      font-size: _font(size-large);
+      display: block;
+    }
+    > ul {
+      display: flex;
+      list-style: none;
+      > li {
+        margin-right: 0.75rem;
+        width: 2.25rem;
+        height: 3.5rem;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        
+        > div,
+        > section,
+        > article,
+        > a,
+        > span,
+        > button,
+        > input,
+        > caption {
+          margin: auto;
+        }
+        
+        &:last-child {
+          margin-right: 0;
+        }
+        .avatar {
+          width: 2rem;
+          height: 2rem;
+          > div {
+              border: 1px solid _colour(border-header-avatar);
+          }
+        }
+      }
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .aa-logo {
+    color: _colour(header-text);
+  }
+
+  button {
+    &.material-icons {
+      background-color: _colour(bg-search-input);
+      color: _colour(search-input);
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.login-blade {
+  .blade-header {
+    display: none;
+  }
+  .blade-content {
+    top: 0;
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+      > div {
+        border: 1px solid _colour(border-primary);
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: _breakpoint(breakpoint-50rem)) {
+  header.page-header {
+    .aa-logo {
+      display: none;
+    }
+    
+    .flex-end {
+      display: none;
+    }
+  }
+}

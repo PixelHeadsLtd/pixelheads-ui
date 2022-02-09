@@ -1,0 +1,33 @@
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+blockquote,
+figure,
+legend,
+label,
+pre,
+iframe,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+// button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+img,
+embed,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}

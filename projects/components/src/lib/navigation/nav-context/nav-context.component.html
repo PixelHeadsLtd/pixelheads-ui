@@ -1,0 +1,15 @@
+<nav class="nav-context" 
+    [ngStyle]="{
+        'width' : navWidth+'rem', 
+        'left' : leftPos+'rem', 
+        'top' : topPos+'rem', 
+        'bottom' : bottomPos+'rem', 
+        'z-index' : zIndex
+    }">
+    <div class="nav-context-content">
+        <button (click)="toggle()" class="material-icons menu">menu</button>
+        <ul [ngClass]="{'show-menu' : showMenu}">
+            <ng-content></ng-content>
+        </ul>
+    </div>
+</nav>

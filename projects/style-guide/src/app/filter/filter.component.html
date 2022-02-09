@@ -1,0 +1,151 @@
+<section class="control-bar">
+  <h1>Filter</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group padding-bottom-1">
+    <section class="flex-1 col-left flex-start">
+      <h2>Filter</h2>
+      <div class="describe margin-bottom-1">
+        <p>The filter can be hidden by default. If this is the case, please use
+          the <a routerLink="/buttons">filter button</a> to toggle the filter.
+        </p>
+      </div>
+      <aa-button 
+        (buttonClick)="toggleFilter=!toggleFilter" 
+        fieldClass="boxed" 
+        buttonClass="secondary filter" 
+        buttonLabel="Filter"
+        buttonText="Filter" 
+        disabled="">
+      </aa-button>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.flex-group, .flex-start,<br/> .filter-container,<br/> .padding-1-25</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Child div</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.field</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(filterHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  <article *ngIf="!toggleFilter" class="flex-group flex-start filter-container padding-1-25 padding-top-0">
+    <div class="field">
+      <div class="flex-group space-between">
+        <label for="">Course name</label>
+        <aa-tooltip [customIcon]="true" iconName="help" [isInfo]="true" [setMinWidth]="'12'" [ypos]="'bottom'" [xpos]="'right'">
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+      </div>
+
+      <input type="text" name="" id="" />
+    </div>
+
+    <div class="field">
+      <label for="">Delegate name</label>
+      <input type="text" name="" id="" />
+    </div>
+
+    <div class="field">
+      <label for="pet-select">Assigned year</label>
+      <select name="pets" id="pet-select">
+        <option value="" disabled selected>Please select</option>
+        <option value="dog">2020</option>
+        <option value="cat">2019</option>
+        <option value="hamster">2018</option>
+        <option value="parrot">2017</option>
+        <option value="spider">2016</option>
+        <option value="goldfish">2015</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="pet-select">Course status</label>
+      <select name="pets" id="pet-select">
+        <option value="" disabled selected>Please select</option>
+        <option value="dog">Not registered</option>
+        <option value="cat">Incomplete</option>
+        <option value="hamster">Complete</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="pet-select">Country</label>
+      <select name="pets" id="pet-select">
+        <option value="" disabled selected>Please select</option>
+        <option value="dog">Afganistan</option>
+        <option value="cat">America</option>
+        <option value="hamster">Brazil</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="pet-select">Sub-discipline</label>
+      <select name="pets" id="pet-select">
+        <option value="" disabled selected>Please select</option>
+        <option value="dog">Market intelligence</option>
+        <option value="cat">Commercial strategy</option>
+        <option value="hamster">Product development</option>
+      </select>
+    </div>
+
+    <div>
+      <aa-button [buttonText]="'Apply'" [buttonId]="'buttonApply'" [buttonClass]="'secondary margin-top-1'" [disabled]="''"></aa-button>
+    </div>
+
+    <div>
+      <aa-button [buttonText]="'Clear'" [buttonId]="'buttonClear'" [buttonClass]="'cancel margin-top-1'" [disabled]="''"></aa-button>
+    </div>
+  </article>
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <app-gist src="angloux/3102c4fe214b14c9778de2908a2caccc"></app-gist>
+    <a href="https://gist.github.com/angloux/3102c4fe214b14c9778de2908a2caccc" target="_blank">View Gist on GitHub</a>
+  </article>
+</aa-blade>

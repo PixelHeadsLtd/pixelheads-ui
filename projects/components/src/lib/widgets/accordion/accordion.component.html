@@ -1,0 +1,27 @@
+<article class="accordion-container">
+  <h3 class="margin-0">
+    <button 
+      class="accordion-trigger flex-group space-between border-none" 
+      (click)="onOpen($event)" 
+      [attr.aria-expanded.true]="showBody"
+      [ngClass]="{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}"
+      aria-controls="sectionId" 
+      [id]="accordionId" 
+      type="button">
+        <span class="flex-align-center height-3">
+            <span *ngIf="dragable" class="accordion-icon material-icons">drag_indicator</span>
+            <span *ngIf="iconsEnabled && !fontAwesome" class="accordion-icon material-icons icon-body-text {{iconBgColor}}">{{iconName}}</span>
+            <span *ngIf="iconsEnabled && fontAwesome" class="accordion-icon {{fontClassName}}"></span>
+            <span class="accordion-heading">{{accordionHeading}}</span>
+        </span>
+        <div class="flex-group flex-end flex-align-center height-3">
+          <ng-content select="[header-custom]"></ng-content>
+          <div [class.icon-chevron-down]="!showBody" [class.icon-chevron-up]="showBody"
+                class="icon-body-text"></div>
+        </div>
+    </button>
+  </h3>
+  <div *ngIf="showBody" [id]="sectionId" class="accordion-panel" [ngClass]="{'clean': accordionClean}">
+    <ng-content></ng-content>
+  </div>
+</article>

@@ -1,0 +1,16 @@
+.read-only {
+    cursor: disabled;
+    // background-color: _palette(grey-5);
+}
+
+label {
+    &.read-only {
+      &:after {
+        @include icon-button-medium;
+        float: right;
+        content: "\f023";
+        color: _palette(grey-50);
+      }
+    }
+
+}

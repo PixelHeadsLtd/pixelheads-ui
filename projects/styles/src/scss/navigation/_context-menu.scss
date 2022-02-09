@@ -1,0 +1,46 @@
+.context-menu {
+    position: relative;
+    button.material-icons {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 1.25rem;
+        height: 1.25rem;
+        padding: 0;
+        font-size: 1rem;
+        letter-spacing: unset;
+        border: transparent;
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: _colour(border-secondary);
+        }
+    }
+    ul {
+        box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+        border: 1px solid _colour(border-subtle);
+        background: _colour(bg-primary);
+        position: absolute;
+        left: 1.75rem;
+        text-align: left;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        &.show-on-left {
+            left: unset;
+            right: 2.5rem;
+        }
+        a {
+            font-size: _font(size-default);
+            width: 100%;
+            text-decoration: none;
+            padding: .35rem 1rem;
+            display: inline-block;
+            &:hover {
+                background-color: _colour(lh-hover-bg);
+            }
+        }
+    }
+}

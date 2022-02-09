@@ -1,0 +1,9 @@
+{
+  "name": "@angloamerican/styles",
+  "version": "0.0.0-set-in-pipeline",
+  "description": "Anglo American stylesheets",
+  "files": [
+    "src/scss/**/*",
+    "src/assets/**/*"
+  ]
+}

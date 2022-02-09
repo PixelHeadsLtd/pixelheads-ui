@@ -1,0 +1,12 @@
+.aa-logo {
+  background-image: url("#{$logo-path}anglo-american-logo-white.svg");
+  background-size: 9.5em 2rem;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 10rem;
+  height: 2rem;
+  
+  span {
+    visibility: hidden;
+  }
+}

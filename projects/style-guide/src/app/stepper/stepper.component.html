@@ -1,0 +1,124 @@
+<section class="control-bar">
+    <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
+    <h1>Stepper</h1>
+</section>
+
+<section class="content-container padding-0">
+    
+    <section class="content-repeater flex-group">
+            
+        <section class="flex-1 col-left flex-start">
+          <h2>Stepper</h2>
+          <div class="describe margin-bottom-1">
+            <p>This is the stepper component used to step through large forms where we have 
+                limited space of the screen. Other components that can be used for this purpose are
+                the progress-indicator and the accordions.</p>
+          </div>
+        </section>
+          
+        <section class="flex-2 col-right flex-start">
+          <table class="half-width">
+            <caption>Attributes</caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td datalabel="Element">aa-stepper</td>
+                <td datalabel="Attribute">aa-stepper</td>
+                <td datalabel="Type">Component</td>
+                <td datalabel="Default">N/A</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+            <button class="custom-icons small bg-aa-light-blue-100" 
+              (click)="copyToClipboard(stepperHTML)">
+              <span class="material-icons">content_copy</span><span>Copy component</span>
+            </button>
+            <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+              <span class="material-icons">visibility</span><span>View gist</span>
+            </button>
+          </nav>
+      </section>
+
+      <aa-stepper [formGroup]="stepperForm">
+        <ng-container steps-header>
+          <li *ngFor="let item of stepsHeader; let i = index">
+            <a class="flex-align-center" [class.current-step]="currentIndex === i">
+                <span *ngIf="currentIndex > i" class="aa-step-status material-icons">{{item.stepIcon}}</span>
+                <span class="aa-step-status">{{item.stepNumber}}</span>
+                <label class="aa-step-label">{{item.stepName}}</label>
+            </a>
+          </li>
+        </ng-container>
+        <ng-container steps-content>
+          <div class="aa-steps flex-group" *ngFor="let item of stepsContent; let i = index" [class.selected]="currentIndex === i">
+            <div 
+              class="field" 
+              [class.error]="stepperForm.controls.name.errors"
+              [ngClass]="{'optional' : item.isOptional}"
+            >
+              <label>&nbsp;</label>
+              <input 
+                    type="text" 
+                    placeholder="{{item.stepName}}"
+                    formControlName="{{item.formInputName}}"
+                >
+            </div>
+            <div class="field error">
+                <div 
+                    *ngIf="stepperForm.controls.name.errors"
+                    class="error"
+                    role="alert" 
+                >
+                {{item.stepName}} is required
+                </div>
+            </div>
+          </div>
+          <aa-alert 
+            *ngIf="currentIndex>3" 
+            alertClass="success" 
+            alertText="Your details have been added successfully. You can now submit this form or start from the beginning by clicking the 'Reset' button."
+            >
+          </aa-alert>
+        </ng-container>
+        <ng-container steps-footer>
+          <div *ngIf="currentIndex<4" class="flex-group flex-start">
+            <button *ngIf="currentIndex>0" (click)="prevStep()" class="secondary">Previous</button>
+            <button *ngIf="!stepperForm.controls.name.errors" class="primary" (click)="nextStep()">Next</button>
+          </div>
+          <div *ngIf="currentIndex>3" class="flex-group flex-start">
+            <button class="reject" (click)="reset()">Reset</button>
+            <button class="approve" type="submit">Submit</button>
+          </div>
+        </ng-container>
+      </aa-stepper>
+      
+      <aa-blade 
+        [showModal]="false"
+        [toggleBlade]="toggleBlade"
+        suppressAutoClose="false"
+        topPosition="3.5"
+        zIndex="2"
+        bladeSize="one-column-width"
+        bladeHeading="Gist"
+        [enableIcon]="true"
+        iconName="table_rows"
+        (close)="toggleBlade = false"
+        >
+        <article class="blade-content">
+            <app-gist src="angloux/9e6c8132425e1a4a431014747fbe029b"></app-gist>
+            <a href="https://gist.github.com/angloux/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
+        </article>
+      </aa-blade>
+    
+</section>

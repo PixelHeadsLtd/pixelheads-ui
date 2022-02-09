@@ -1,0 +1,16 @@
+.gradient-h-blue {
+  background: linear-gradient(
+    90deg,
+    _colour(gradient-blue-start),
+    _colour(gradient-blue-middle),
+    _colour(gradient-blue-end)
+  );
+}
+
+.gradient-v-grey {
+  background: linear-gradient(
+    180deg,
+    _colour(gradient-grey-start),
+    _colour(gradient-grey-end)
+  );
+}

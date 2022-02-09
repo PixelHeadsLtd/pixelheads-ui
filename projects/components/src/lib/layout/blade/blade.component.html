@@ -1,0 +1,54 @@
+<!-- MODAL UI BLOCK -->
+<div class="aa-blade-modal" *ngIf="toggleBlade && showModal" [ngStyle]="{'z-index' : zIndex}"></div>
+
+<!-- HEADER BAKED IN -->
+<aside 
+  *ngIf="!customBlade" 
+  class="blade animate-all {{bladeSize}}" 
+  [ngClass]="{'show-blade' : toggleBlade}" 
+  [ngStyle]="{
+    'top' : topPosition + 'rem', 
+    'z-index' : zIndex+10
+  }"
+>
+  <article class="blade-header flex-group space-between">
+    <div class="flex-group flex-start flex-align-center">
+      <div 
+          *ngIf="enablePinning" 
+          (click)="toggleThePin($event)"
+          [ngClass]="{'pinned' : isPinned}" 
+          class="material-icons pin flex-end"
+      >
+        push_pin
+      </div>
+      <div *ngIf="enableIcon" class="material-icons margin-right-0-5">{{iconName}}</div>
+      <h2 class="margin-top-0-25 margin-0 flex-align-center">
+        {{bladeHeading}}
+      </h2>
+    </div>
+    <a class="anchor-close flex-align-center" (click)="onClose()">Close</a>
+    </article>
+  <ng-content></ng-content>
+</aside>
+
+<!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->
+<aside 
+  *ngIf="customBlade" 
+  class="blade animate-all {{bladeSize}}" 
+  [ngClass]="{'show-blade' : toggleBlade}" 
+  [ngStyle]="{
+    'top' : topPosition + 'rem', 
+    'z-index' : zIndex
+  }"
+>
+  <article class="blade-header">
+    <ng-content select="[custom-header]"></ng-content>
+  </article>
+  <article class="blade-content">
+    <ng-content select="[custom-content]"></ng-content>
+  </article>
+  <article class="blade-footer">
+    <ng-content select="[custom-footer]"></ng-content>
+  </article>
+</aside>
+

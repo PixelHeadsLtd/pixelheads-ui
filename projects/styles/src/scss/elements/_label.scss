@@ -1,0 +1,29 @@
+label:not(.ag-theme-balham), legend:not(.ag-theme-balham) {
+  display: block;
+  font-family: _font(family-medium);
+  font-size: _font(size-default);
+  font-weight: initial;
+  color: _colour(label-text);
+  padding: 0 0 .5rem 0;
+}
+
+// completely removes label
+.label-hidden {
+  label {
+    display: none;
+  }
+}
+
+// removes label visibility, maintains layout
+.label-transparent {
+  label {
+    visibility: hidden;
+  }
+}
+
+// gradient
+.gradient {
+  label {
+    color: _palette(aa-white-100);
+  }
+} 

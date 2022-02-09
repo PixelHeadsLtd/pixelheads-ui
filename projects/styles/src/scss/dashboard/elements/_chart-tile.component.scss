@@ -1,0 +1,83 @@
+.dark-mode {
+    .chart-tile {
+        background-color: rgb(27, 28, 34) !important;
+        color: rgb(220, 215, 215) !important;
+
+        .gridster-item {
+            background-color: rgb(27, 28, 34) !important;
+        }
+
+        rect {
+            fill: rgb(27, 28, 34);
+        }
+
+
+        .highcharts-legend {
+            display: none;
+
+            rect {
+                fill: rgb(27, 28, 34);
+            }
+        }
+    }
+}
+
+.light-mode {
+    .chart-tile {
+        background-color: rgb(255, 255, 255) !important;
+        font-family: 'aa-smart-sans-regular', 'din-regular', sans-serif;
+
+        .gridster-item {
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        rect {
+            fill: rgb(255, 255, 255);
+        }
+
+        .highcharts-label {
+        }
+    }
+}
+
+
+.chart-tile {
+
+    .highcharts-container {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    highcharts-chart {
+        height: calc(100% - 30px);
+        width: 100%;
+        display: block;
+    }
+
+    .highcharts-datalabels, .highcharts-grid, .highcharts-axis-labels, text, tspan {
+        font-family: 'aa-smart-sans-regular', 'din-regular', sans-serif;
+        font-size: .8125rem!important;
+
+        tspan {
+            //stroke: rgba(255,255,255,0) !important;
+            //fill: rgb(255,255,255);
+        }
+    }
+
+
+}
+
+.dark-mode .chart-tile {
+    .highcharts-datalabels, .highcharts-grid, .highcharts-axis-labels, text, tspan {
+      color: rgb(220,215,215)!important;
+    }
+}
+
+.light-mode .chart-tile {
+    .highcharts-datalabels, .highcharts-grid, .highcharts-axis-labels, text, tspan {
+        color: rgb(50,50,50)!important;
+    }
+}
+
+

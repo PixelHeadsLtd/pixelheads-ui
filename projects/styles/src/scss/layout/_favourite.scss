@@ -1,0 +1,22 @@
+.favourite {
+    position: relative;
+    min-height: 7rem;
+    min-width: 12rem;
+    max-width: 12rem;
+    margin-bottom: .75rem;
+
+    button.icon-star {
+      @include button-icon;
+      color: _colour(border-grey-dark);
+      position: absolute;
+      right: .75rem;
+      top: .5rem;
+      margin: 0;
+      padding: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      &.selected {
+        color: _palette(aa-orange-100);
+      }
+    }
+}

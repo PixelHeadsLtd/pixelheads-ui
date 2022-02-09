@@ -1,0 +1,500 @@
+<section class="control-bar">
+  <h1>Blade</h1>
+</section>
+
+<section class="content-container padding-0" [ngStyle]="{'width': toggleBlade && pinBlade ? 'calc(100% - 35rem)' : ''}">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Blade</h2>
+      <div class="describe margin-bottom-1">
+        <p class="aa-red-100">There are 3 sizes available - please pass the <strong>bladeSize</strong> value into the component, these are: one-column-width, two-column-width, or xl-column-width</p>
+        <p>For pinning, set <strong>[enablePinning]</strong> to true. Then add a conditional <strong>[ngStyle]</strong> to the content-container.
+          Modify the calculated width depending on the blade size you are using.
+          In the example below, we are setting the width for a <strong>one-column-width</strong> blade</p>
+          <p class="aa-red-100"><strong>[ngStyle]=&#8220;&#123;&#8216;width&#8217;: toggleBlade && pinBlade ? &#8216;calc(100% - 38rem)&#8217; : &#8216;&nbsp;&#8217;&nbsp;&#x7d;&#8221;</strong></p>
+          <p>These setting are adjustable.</p>
+        </div>
+      <div [ngStyle]="{'z-index' : 1, 'position' : 'relative'}">
+        <div class="flex-group">
+          <aa-button 
+            (buttonClick)="
+            bladeIsOpen($event);
+            bladeHalf=true;
+            bladeDemos=false; 
+            showBladeGist=false; 
+            showCustomBladeGist=false;
+            showIcon=false;
+            bladeIcon='directions_bike'; 
+            bladeHeading='Half column width'; 
+            theBladeSize='half-column-width';
+            enablePin=false" 
+            buttonText="Half column width" 
+            buttonClass="primary"
+            fieldClass="label-hidden"
+            >
+          </aa-button>
+          <aa-button 
+            (buttonClick)="
+            bladeIsOpen($event);
+            bladeDemos=true; 
+            bladeHalf=false;
+            showBladeGist=false; 
+            showCustomBladeGist=false;
+            showIcon=true;
+            bladeIcon='directions_bike'; 
+            bladeHeading='One column width'; 
+            theBladeSize='one-column-width';
+            enablePin=true
+            " 
+            buttonText="One column width" 
+            buttonClass="primary"
+            fieldClass="label-hidden">
+          </aa-button>
+        </div>
+        <div class="flex-group">
+          <aa-button 
+            (buttonClick)="
+            bladeIsOpen($event); 
+            bladeDemos=true; 
+            bladeHalf=false;
+            showBladeGist=false; 
+            showCustomBladeGist=false;
+            showIcon=true;
+            bladeIcon='directions_bike'; 
+            bladeHeading='Two column width'; 
+            theBladeSize='two-column-width';
+            enablePin=false" 
+            buttonText="Two column width" 
+            buttonClass="primary"
+            fieldClass="label-hidden">
+            </aa-button>
+          <aa-button 
+            (buttonClick)="
+            bladeIsOpen($event); 
+            bladeDemos=true; 
+            bladeHalf=false;
+            showBladeGist=false; 
+            showCustomBladeGist=false;
+            showIcon=true;
+            bladeIcon='directions_bike'; 
+            bladeHeading='XL width'; 
+            theBladeSize='xl-column-width';
+            enablePin=false" 
+            buttonText="XL column width" 
+            buttonClass="primary"
+            fieldClass="label-hidden">
+          </aa-button>
+        </div>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">showModal</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">toggleBlade</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">bladeSize</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">one-column-width</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">topPosition</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">3.5</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">zIndex</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">0</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">enableIcon</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">bladeHeading</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your heading</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">enablePinning</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">suppressAutoClose</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">(bladeOpen)</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">(bladePinned)</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(bladeHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="
+          bladeIsOpen($event); 
+          showBladeGist=true; 
+          showCustomBladeGist=false; 
+          bladeDemos=false;
+          bladeHalf=false;
+          enablePin=false; 
+          bladeHeading='Gist'; 
+          showIcon=true; 
+          bladeIcon='table_rows'
+          ">
+            <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Blade - custom header/footer</h2>
+      <div class="describe margin-bottom-1">
+        <p>If you need to customise the blade header and/or footer please use the below 
+          version of the Blade and remember to set <strong>[customBlade] to true.</strong>
+        </p>
+      </div>
+      <div [ngStyle]="{'z-index' : 1, 'position' : 'relative'}">
+        <div class="flex-group">
+          <aa-button 
+            (buttonClick)="
+            bladeIsOpen($event); 
+            bladeDemos=true; 
+            bladeHalf=false;
+            showBladeGist=false; 
+            showCustomBladeGist=false;
+            showIcon=false;
+            bladeIcon='directions_bike'; 
+            bladeHeading='Custom version'; 
+            theBladeSize='one-column-width';
+            enablePin=false" 
+            buttonText="Custom version" 
+            buttonClass="primary">
+          </aa-button>
+        </div>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">customBlade</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="copyToClipboard(bladeCustomHTML)">
+          <span class="material-icons">content_copy</span><span>Copy component</span>
+        </button>
+        <button class="custom-icons small bg-aa-light-blue-100" 
+          (click)="bladeIsOpen($event); showBladeGist=false; showCustomBladeGist=true; enablePin=false; bladeHeading='Gist'; showIcon=true; bladeIcon='table_rows'">
+            <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+</section>
+
+<aa-blade 
+  [showModal]="false"
+  [enablePinning]="enablePin"
+  [toggleBlade]="toggleBlade"
+  (bladeOpen)="bladeIsOpen($event)"
+  (bladePinned)="bladeIsPinned($event)"
+  [suppressAutoClose]="false"
+  topPosition="3.5"
+  zIndex="30"
+  bladeSize="{{theBladeSize}}"
+  bladeHeading="{{bladeHeading}}"
+  [enableIcon]="showIcon"
+  iconName="{{bladeIcon}}"
+  >
+  <!-- blade gist -->
+  <article *ngIf="showBladeGist" class="blade-content">
+    <div class="feature">
+      <p class="margin-bottom-1">Please note that for Blade 'pinning' to work correctly, you will require the following package versions...</p>
+      <div class="flex-group flex-column">
+        <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+          <div class="material-icons small margin-right-0-25 aa-orange-100">sticky_note_2</div>
+          <h4 class="margin-0">Minimum styles version</h4>
+          <a 
+            class="margin-left-0-5" 
+            target="_blank" 
+            href="https://angloteamproject.visualstudio.com/CoreTeamProject/_packaging?_a=package&feed=Core&view=versions&package=%40angloamerican/styles&version=0.2.120&protocolType=Npm"
+          >
+            11.2.204
+          </a>
+        </div>
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons small margin-right-0-25 aa-blue-sky-100">sticky_note_2</div>
+          <h4 class="margin-0">Minimum components version</h4>
+          <a 
+            class="margin-left-0-5" 
+            target="_blank" 
+            href="https://angloteamproject.visualstudio.com/CoreTeamProject/_packaging?_a=package&feed=Core&view=versions&package=%40angloamerican/styles&version=0.2.120&protocolType=Npm"
+          >
+            11.2.80
+          </a>
+        </div>
+      </div>
+    </div>
+    <app-gist src="angloux/69327c3e18e20b0f1b5a780d32945073"></app-gist>
+    <a href="https://gist.github.com/angloux/69327c3e18e20b0f1b5a780d32945073" target="_blank">View Gist on GitHub</a>
+  </article>
+  <!-- blade custom gist -->
+  <article *ngIf="showCustomBladeGist" class="blade-content">
+    <app-gist src="angloux/35c803fb8616ad17cacd53883d0de4f9"></app-gist>
+    <a href="https://gist.github.com/angloux/35c803fb8616ad17cacd53883d0de4f9" target="_blank">View Gist on GitHub</a>
+  </article>
+  
+  <!-- blade half demo -->
+  <div *ngIf="bladeHalf">
+    <article class="blade-content">
+      <ul class="aa-card-list">
+        <li class="flex-group" title="Obi-Wan">
+          <div class="card-list-image fingerprint">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+          </div>
+          <div class="margin-top-0-25">
+            <strong>Obi-Wan</strong>
+            <p>Member</p>
+          </div>
+          <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+            <ng-container card-menu>
+              <div class="flex-group space-between">
+                <div class="flex-group flex-start">
+                  <a class="icon-email margin-right-0-75 margin-top-0-5"></a>
+                  <a class="icon-teams margin-top-0-5"></a>
+                </div>
+                <div class="flex-group">
+                  <div class="flag gb"></div>
+                  <aa-context-menu (click)="menuClicked($event)" [showOnLeft]="true" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 1"></aa-context-menu-item>
+                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 2"></aa-context-menu-item>
+                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 3"></aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
+              </div>
+            </ng-container>
+          </aa-card>
+        </li>
+        <li class="flex-group" title="Darth Vader">
+          <div class="card-list-image fingerprint">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/darth.png" />
+          </div>
+          <div class="margin-top-0-25">
+            <strong>Darth Vader</strong>
+            <p>Member</p>
+          </div>
+          <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+            <ng-container card-menu>
+              <div class="flex-group space-between">
+                <div class="flex-group flex-start">
+                  <a class="icon-email margin-right-0-75 margin-top-0-5"></a>
+                  <a class="icon-teams margin-top-0-5"></a>
+                </div>
+                <div class="flex-group">
+                  <div class="flag gb"></div>
+                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
+              </div>
+            </ng-container>
+          </aa-card>
+        </li>
+        <li class="flex-group" title="Yoda">
+          <div class="card-list-image fingerprint">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/yoda.png" />
+          </div>
+          <div class="margin-top-0-25">
+            <strong>Yoda</strong>
+            <p>Member</p>
+          </div>
+          <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+            <ng-container card-menu>
+              <div class="flex-group space-between">
+                <div class="flex-group flex-start">
+                  <a class="icon-email margin-right-0-75 margin-top-0-5"></a>
+                  <a class="icon-teams margin-top-0-5"></a>
+                </div>
+                <div class="flex-group">
+                  <div class="flag gb"></div>
+                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
+              </div>
+            </ng-container>
+          </aa-card>
+        </li>
+        <li class="flex-group" title="Luke Skywalker">
+          <div class="card-list-image fingerprint">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/luke.png" />
+          </div>
+          <div class="margin-top-0-25">
+            <strong>Luke Skywalker</strong>
+            <p>Member</p>
+          </div>
+          <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+            <ng-container card-menu>
+              <div class="flex-group space-between">
+                <div class="flex-group flex-start">
+                  <a class="icon-email margin-right-0-75 margin-top-0-5"></a>
+                  <a class="icon-teams margin-top-0-5"></a>
+                </div>
+                <div class="flex-group">
+                  <div class="flag gb"></div>
+                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
+              </div>
+            </ng-container>
+          </aa-card>
+        </li>
+        <li class="flex-group" title="Han Solo">
+          <div class="card-list-image fingerprint">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
+          </div>
+          <div class="margin-top-0-25">
+            <strong>Han Solo</strong>
+            <p>Member</p>
+          </div>
+          <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+            <ng-container card-menu>
+              <div class="flex-group space-between">
+                <div class="flex-group flex-start">
+                  <a class="icon-email margin-right-0-75 margin-top-0-5"></a>
+                  <a class="icon-teams margin-top-0-5"></a>
+                </div>
+                <div class="flex-group">
+                  <div class="flag gb"></div>
+                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
+              </div>
+            </ng-container>
+          </aa-card>
+        </li>
+      </ul>
+    </article>
+  </div>
+  <!-- blade demos -->
+  <div *ngIf="bladeDemos">
+    <article class="blade-content">
+      <div class="field">
+        <label>First name</label>
+        <input type="text"/>
+      </div>
+      <div class="field">
+        <label>Last name</label>
+        <input type="text"/>
+      </div>
+      <div class="field">
+        <label>Comments</label>
+        <textarea></textarea>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="text"/>
+      </div>
+      <div class="field small">
+        <label>Phone</label>
+        <input type="text"/>
+      </div>
+      <div class="field small">
+        <label>Mobile</label>
+        <input type="text"/>
+      </div>
+      <div class="field small">
+        <label>Language</label>
+        <input type="text"/>
+      </div>
+      <div class="field small">
+        <label>Country</label>
+        <input type="text"/>
+      </div>
+    </article>
+
+    <aa-blade-footer>
+      <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden" [disabled]="''"></aa-button>
+      <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden" [disabled]="''"></aa-button>
+      <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
+    </aa-blade-footer>
+  </div>
+</aa-blade>

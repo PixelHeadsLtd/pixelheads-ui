@@ -1,0 +1,30 @@
+.flex-group {
+
+  display: inline-block;
+
+  > div, > button, > a {
+    flex: none;
+  }
+
+}
+
+@media screen and (min-width: _breakpoint(570px)) {
+
+  .flex-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div, > button, > a, > dl, > p {
+      flex: 1;
+      margin-right: .75rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.flex-grow-1 {
+  flex: none !important;
+}
