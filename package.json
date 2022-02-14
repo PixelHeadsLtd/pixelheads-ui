@@ -14,7 +14,8 @@
     "magic": "ng build components && npm start",
     "install-magic": "npm install && ng build components && npm start",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build -prod"
+    "build": "ng build",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,7 @@
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1100.2",
     "@angular/language-service": "~11.0.2",
     "@types/jasmine": "~3.6.2",
     "@types/jasminewd2": "~2.0.8",
