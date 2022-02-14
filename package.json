@@ -8,6 +8,7 @@
   "scripts": {
     "ng": "ng",
     "components": "ng build components --watch",
+    "start": "node index.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
