@@ -11,6 +11,7 @@ export class TextareaAutoresizeDirective implements OnInit, OnDestroy {
   @Input('aaTextareaAutoresize') set formControlInstance(control: AbstractControl) {
     this.cleanControlSubscription();
 
+    setTimeout(() => this.resize());
     this.formControlSubscription = control.valueChanges.subscribe(() => {
       this.resize();
     });

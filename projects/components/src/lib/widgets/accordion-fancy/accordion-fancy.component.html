@@ -4,7 +4,7 @@
         [attr.aria-expanded.true]="showBody" aria-controls="accordionId" type="button">
         <div class="flex-align-center">
           <div *ngIf="materialIcons" class="material-icons width-3 margin-right-0-5 {{iconColour}}">{{iconName}}</div>
-          <div *ngIf="!materialIcons" [class]="'width-3 colour-body-text ' + iconName"></div>
+          <div *ngIf="!materialIcons" class="width-3 {{iconName}}"></div>
           <span>{{itemTitle}}</span>
         </div>
         <div class="aa-toggle flex-align-center">

@@ -301,7 +301,15 @@
 
 @mixin icon-left-before {
   font-family: _font(font-awesome);
-  font-size: 1.25rem;
+  font-size: _font(size-medium);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin icon-left-before-small {
+  font-family: _font(font-awesome);
+  font-size: _font(size-default);
   left: 0;
   top: 0;
   position: absolute;
@@ -309,7 +317,7 @@
 
 @mixin icon-left-before-solid {
   font-family: _font(font-awesome);
-  font-size: 1.25rem;
+  font-size: _font(size-medium);
   left: 0;
   top: 0;
   position: absolute;
@@ -317,7 +325,7 @@
 
 @mixin icon-left-before-material {
   font-family: material-icons;
-  font-size: 1.25rem;
+  font-size: _font(size-medium);
   left: 0;
   top: 0;
   position: absolute;
@@ -327,7 +335,7 @@
 
 @mixin icon-left-before-favourites {
   font-family: _font(font-awesome);
-  font-size: 1rem;
+  font-size: _font(size-regular);
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -345,7 +353,7 @@
 
 @mixin icon-right-before {
   font-family: _font(font-awesome);
-  font-size: 1rem;
+  font-size: _font(size-regular);
   right: 1rem;
   top: 1rem;
   position: absolute;
@@ -361,7 +369,7 @@
 
 @mixin icon-right-00-before {
   font-family: _font(font-awesome);
-  font-size: 1rem;
+  font-size: _font(size-regular);
   position: absolute;
   right: 0;
   top: 0;
@@ -424,7 +432,7 @@
 
 @mixin icon-material-center-solid-large {
   font-family: _font(material-icons);
-  font-size: 1.25rem;
+  font-size: _font(size-medium);
   text-align: center;
   margin: auto;
 }
@@ -441,7 +449,7 @@
 }
 
 @mixin icon-medium {
-  font-size: 1rem;
+  font-size: _font(size-regular);
 }
 
 

@@ -1,5 +1,5 @@
 <div class="position-relative">
-    <div [ngClass]="{'tour-active' : tourMode}" [ngStyle]="tourMode && {'position' : 'relative', 'z-index' : '999999999'}">
+    <div [ngClass]="{'tour-active' : tourMode}" [ngStyle]="tourMode && {'position' : 'relative', 'z-index' : zIndex+1}">
         <ng-content select="[nested-component]"></ng-content>
     </div>
     <div *ngIf="tourMode">
@@ -9,7 +9,8 @@
               'top' : topPos, 
               'right' : rightPos, 
               'bottom' : bottomPos,
-              'left' : leftPos
+              'left' : leftPos,
+              'z-index' : zIndex+1
           }">
           
           <div *ngIf="arrowTop" class="arrow-top" [ngStyle]="{'left' : arrowPos}" [ngClass]="{'arrow-plum':arrowIsPlum}"></div>
@@ -27,6 +28,6 @@
             <ng-content select="[tour-navigation]"></ng-content>
           </div>
         </div>
-      <div class="tour-mode-overlay"></div>
+      <div class="tour-mode-overlay" [ngStyle]="{'z-index':zIndex}"></div>
     </div>
 </div>

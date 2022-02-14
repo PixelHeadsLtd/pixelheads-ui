@@ -1,33 +1,50 @@
 .aa-tree {
-/* Remove default bullets */
     ul {
         list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
+        font-family: _font(family-regular);
 
-    .caret {
-        cursor: pointer;
-        user-select: none; /* Prevent text selection */
-    }
-    
-    .caret::before {
-        content: "\25B6";
-        color: black;
-        display: inline-block;
-        margin-right: 6px;
-    }
-    
-    .caret-down::before {
-        transform: rotate(90deg);
-    }
-    
-    .nested {
-        display: none;
-    }
-    
-    .active {
-        display: block;
+        li {
+            padding-top: .25rem;
+            span {
+                cursor: pointer;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+
+        ul {
+            margin-left: .5rem;
+        }
+        .chevron {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .chevron {
+            position: relative;
+            padding-right: 1rem;
+            line-height: 1rem;
+            &:before {
+                @include icon-left-before-small;
+                content: "\f054";
+                color: _colour(secondary);
+            }
+        }
+        
+        .chevron-down {
+            &:before {
+                transform: rotate(90deg);
+                color: _palette(aa-orange-100);
+            }
+        }
+        
+        .nested {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
     }
 }

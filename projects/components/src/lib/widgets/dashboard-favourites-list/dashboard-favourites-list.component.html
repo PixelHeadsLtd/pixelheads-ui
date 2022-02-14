@@ -7,7 +7,7 @@
       <div class="margin-top-0-25">{{(itemDescription.length > 50) ? (itemDescription | slice:0:50) + '...' : (itemDescription)}}</div>
     </div>
   </div>
-  <div (click)="showTags=!showTags" class="icon-info margin-top-0-25"></div>
+  <div (click)="showTags=!showTags" class="icon-info"></div>
   <div *ngIf="showTags" class="width-100">
     <div class="more-info">
       <div class="field boxed">

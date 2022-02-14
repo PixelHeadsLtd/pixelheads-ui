@@ -184,16 +184,16 @@ $colour: (
   
   dl-gradient-light:     rgb(14, 14, 14),
   dl-gradient-dark:      rgb(38, 39, 47),
-  dl-blue:                 _palette(aa-light-blue-50),
-  dl-blue-light:           _palette(aa-light-blue-10),
+  dl-blue:                 _palette(aa-light-blue-100),
+  dl-blue-light:           _palette(aa-light-blue-100),
   dl-pink:                 _palette(aa-pink-100),
-  dl-pink-light:         rgb(255, 243, 247),
+  dl-pink-light:           _palette(aa-pink-100),
   dl-green:                _palette(aa-green-50),
-  dl-green-light:          _palette(aa-green-5),
+  dl-green-light:          _palette(aa-green-50),
   dl-ochre:                _palette(aa-ochre-100),
-  dl-ochre-light:          _palette(aa-ochre-8),
+  dl-ochre-light:          _palette(aa-ochre-100),
   dl-orange:               _palette(aa-orange-100),
-  dl-orange-light:         _palette(aa-orange-5),
+  dl-orange-light:         _palette(aa-orange-100),
   dl-highlight:           rgb(27, 28, 34),
   
   gradient-blue-start:    rgb(2, 76, 146) 0%,
@@ -210,6 +210,8 @@ $colour: (
   
   aa-blue-100:             _palette(aa-light-blue-100),
   bg-aa-blue-100:          rgb(0, 59, 179),
+  aa-grey-100:             _palette(grey-25),
+  aa-red-100:              _palette(aa-red-100),
 
   white-transparency:     rgba(255, 255, 255, 0.26),
 

@@ -6,7 +6,6 @@
     -moz-box-shadow: 0 0 .75rem .25rem _colour(tour-shadow);
     color: _colour(body-text);
     font-size: _font(size-small);
-    z-index: 999999999;
     border-radius: 0.75rem 0;
 
     
@@ -116,7 +115,6 @@
     left: 0;
     background-color: _palette(aa-blue-100);
     opacity: .2;
-    z-index: 99999999;
 }
 
 .tour-active {

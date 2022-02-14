@@ -23,6 +23,7 @@ export class ProjectTourComponent implements OnInit {
   @Input() arrowBottom: boolean;
   @Input() arrowLeft: boolean;
   @Input() arrowIsPlum: boolean;
+  @Input() zIndex: number;
 
   constructor() { }
 

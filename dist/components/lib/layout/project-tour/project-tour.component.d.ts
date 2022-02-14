@@ -15,6 +15,7 @@ export declare class ProjectTourComponent implements OnInit {
     arrowBottom: boolean;
     arrowLeft: boolean;
     arrowIsPlum: boolean;
+    zIndex: number;
     constructor();
     ngOnInit(): void;
 }

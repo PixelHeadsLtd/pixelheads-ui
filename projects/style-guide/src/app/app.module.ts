@@ -94,7 +94,8 @@ import { NavCoreComponent } from './nav-core/nav-core.component';
 import { HeaderComponent } from './header/header.component';
 import { AvatarComponent } from './ag-grid/avatar.component'
 import { EllipsisContextMenuComponent } from './ag-grid/ellipsis-context-menu/ellipsis-context-menu.component';
-import { ToastrComponent } from './toastr/toastr.component'
+import { ToastrComponent } from './toastr/toastr.component';
+import { TreeComponent } from './tree-menu/tree/tree.component'
 
 @NgModule({
   declarations: [
@@ -179,6 +180,7 @@ import { ToastrComponent } from './toastr/toastr.component'
     AvatarComponent,
     EllipsisContextMenuComponent,
     ToastrComponent,
+    TreeComponent,
   ],
   imports: [
     FormsModule,

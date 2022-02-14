@@ -37,6 +37,8 @@
     "ag-grid-enterprise": "^24.1.0",
     "angular-postscribe": "0.0.1",
     "core-js": "^3.7.0",
+    "highcharts": "^8.2.2",
+    "highcharts-angular": "^2.8.2",
     "express": "^4.17.2",
     "path": "^0.12.7",
     "postscribe": "^2.0.8",

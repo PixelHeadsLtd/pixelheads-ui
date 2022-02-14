@@ -1,9 +1,6 @@
 {
   "name": "@angloamerican/styles",
-  "version": "6.14.15",
-  "engines": {
-    "node": "14.x"
-  },
+  "version": "0.0.0-set-in-pipeline",
   "description": "Anglo American stylesheets",
   "files": [
     "src/scss/**/*",

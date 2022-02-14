@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NODES } from '../class/tree-mock-nodes';
 
 @Component({
   selector: 'app-tree-menu',
@@ -7,22 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TreeMenuComponent implements OnInit {
 
-  constructor() { 
-    let toggler = document.getElementsByClassName("caret");
-    let i;
+  nodes = NODES;
 
-    for (i = 0; i < toggler.length; i++) {
-      toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("active");
-        this.classList.toggle("caret-down");
-      });
-    }
-  }
+  constructor() { }
 
-  treeHTML = 'markuk here';
-  levelOne: boolean;
-
-  copyToClipboard(item): void {
+  copyToClipboard(item: string): void {
     let listener = (e: ClipboardEvent) => {
         e.clipboardData.setData('text/plain', (item));
         e.preventDefault();

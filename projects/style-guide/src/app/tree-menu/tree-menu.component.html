@@ -9,33 +9,13 @@
         <section class="flex-1 col-left flex-start">
           <h2>Tree menu</h2>
           <div class="describe margin-bottom-1">
-            <p>Info abotu tree menu</p>
+            <p>To get the markup, please refer to the gist file on the right</p>
           </div>
 
           <div class="aa-tree">
-            <ul>
-                <li><span class="caret">Beverages</span>
-                  <ul class="nested">
-                    <li>Water</li>
-                    <li>Coffee</li>
-                    <li><span class="caret">Tea</span>
-                      <ul class="nested">
-                        <li>Black Tea</li>
-                        <li>White Tea</li>
-                        <li><span class="caret">Green Tea</span>
-                          <ul class="nested">
-                            <li>Sencha</li>
-                            <li>Gyokuro</li>
-                            <li>Matcha</li>
-                            <li>Pi Lo Chun</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <app-tree [treeData]="nodes"></app-tree>
           </div>
+
         </section>
           
         <section class="flex-2 col-right flex-start">
@@ -51,10 +31,16 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-tree-menu</td>
-                <td datalabel="Attribute">aa-tre-menu</td>
+                <td datalabel="Element">Div</td>
+                <td datalabel="Attribute">Classname</td>
+                <td datalabel="Type">Class</td>
+                <td datalabel="Default">aa-tree</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">app-tree</td>
+                <td datalabel="Attribute">treeData</td>
                 <td datalabel="Type">Component</td>
-                <td datalabel="Default">N/A</td>
+                <td datalabel="Default">nodes</td>
               </tr>
             </tbody>
           </table>
@@ -62,10 +48,6 @@
         
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons small bg-aa-light-blue-100" 
-              (click)="copyToClipboard(treeHTML)">
-              <span class="material-icons">content_copy</span><span>Copy component</span>
-            </button>
             <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
@@ -85,8 +67,8 @@
         (close)="toggleBlade = false"
         >
         <article class="blade-content">
-            <app-gist src="angloux/9e6c8132425e1a4a431014747fbe029b"></app-gist>
-            <a href="https://gist.github.com/angloux/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
+          <a href="https://gist.github.com/angloux/7b2bddeb005feb84a1ea5264bbbb8368" target="_blank">View Gist on GitHub</a>
+          <app-gist src="angloux/7b2bddeb005feb84a1ea5264bbbb8368"></app-gist>
         </article>
       </aa-blade>
     

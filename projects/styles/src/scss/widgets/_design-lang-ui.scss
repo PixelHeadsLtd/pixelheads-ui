@@ -296,24 +296,28 @@
         div {
           border-color: _colour(dl-pink);
           background-color: _colour(dl-pink-light);
+          color: _palette(aa-grey-100);
         }
       }
       &.green {
         div {
           border-color: _colour(dl-green);
           background-color: _colour(dl-green-light);
+          color: _palette(aa-grey-100);
         }
       }
       &.ochre {
         div {
           border-color: _colour(dl-ochre);
           background-color: _colour(dl-ochre-light);
+          color: _palette(aa-grey-100);
         }
       }
       &.orange {
         div {
           border-color: _colour(dl-orange);
           background-color: _colour(dl-orange-light);
+          color: _palette(aa-grey-100);
         }
       }
     }

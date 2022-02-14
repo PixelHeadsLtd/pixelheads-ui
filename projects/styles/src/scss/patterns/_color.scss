@@ -1,5 +1,4 @@
 .text-white {color: white!important;}
-.colour-body-text {color: _colour(body-text)!important;}
 
 // COLOURS
 // blue
@@ -17,13 +16,13 @@
 .aa-light-blue-10 {color: _palette(aa-light-blue-10)!important}
 .aa-light-blue-5 {color: _palette(aa-light-blue-5)!important}
 // red
-.aa-red-100 {color: _palette(aa-red-100)!important}
+.aa-red-100 {color: _colour(aa-red-100)!important}
 .aa-red-80 {color: _palette(aa-red-80)!important}
 .aa-red-50 {color: _palette(aa-red-50)!important}
 .aa-red-5 {color: _palette(aa-red-5)!important}
 // grey
-.aa-grey-100 {color: _palette(aa-grey-100)!important}
-.grey-100 {color: _palette(grey-100)!important}
+.aa-grey-100 {color: _colour(aa-grey-100)!important} // allow dark-mode switching
+.grey-100 {color: _colour(aa-grey-100)!important}
 .grey-50 {color: _palette(grey-50)!important}
 .grey-25 {color: _palette(grey-25)!important}
 .grey-10 {color: _palette(grey-10)!important}
