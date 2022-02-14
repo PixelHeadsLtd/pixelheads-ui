@@ -59,5 +59,9 @@
     "ts-node": "~9.0.0",
     "tsickle": "^0.39.1",
     "tslint": "~6.1.0"
-  }
+  },
+  "cacheDirectories": [
+    "client/node_modules",
+    "server/node_modules"
+  ]
 }
