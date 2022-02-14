@@ -1,0 +1,23 @@
+{
+  "name": "@angloamerican/components",
+  "description": "Anglo American shared Angular UI components",
+  "version": "6.14.15",
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "11.x",
+    "@angular/core": "11.x"
+  },
+  "main": "bundles/angloamerican-components.umd.js",
+  "module": "fesm2015/angloamerican-components.js",
+  "es2015": "fesm2015/angloamerican-components.js",
+  "esm2015": "esm2015/angloamerican-components.js",
+  "fesm2015": "fesm2015/angloamerican-components.js",
+  "typings": "angloamerican-components.d.ts",
+  "metadata": "angloamerican-components.metadata.json",
+  "sideEffects": false
+}
