@@ -1,21 +1,22 @@
 {
   "name": "projects",
   "version": "6.14.15",
-  "engines": {
-    "node": "14.x",
-    "npm": "6.x"
-  },
   "scripts": {
+    "start": "node server.js",
     "ng": "ng",
     "components": "ng build components --watch",
-    "start": "node index.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "magic": "ng build components && npm start",
     "install-magic": "npm install && ng build components && npm start",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run production"
+    "heroku-postbuild": "npm run production",
+    "postinstall": "ng build --aot -prod",
+  },
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
   },
   "private": true,
   "dependencies": {
