@@ -15,7 +15,7 @@
     "install-magic": "npm install && ng build components && npm start",
     "e2e": "ng e2e",
     "build": "ng build",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "npm run production"
   },
   "private": true,
   "dependencies": {
