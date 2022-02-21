@@ -159,6 +159,8 @@
       <div class="describe margin-bottom-1">
         <p>For selects that use a typeahead or other features such as tags, 
           please use <a href="https://github.com/ng-select/ng-select" target="_blank">ng-select</a>.</p>
+          <p class="aa-red-100">After installing the latest ng-select package in your packages.json, please remember to point to the node_modules ng-select default.theme.css by adding this at the top of your styles.scss 
+            file: @import "~@ng-select/ng-select/themes/default.theme.css";</p>
       </div>
       <div class="field">
         <label>Ng select</label>
@@ -167,6 +169,17 @@
           bindLabel="name"
           placeholder="Select city"
           [(ngModel)]="selectedCity"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - [readonly]="true"</label>
+        <ng-select 
+          [items]="cities"
+          bindLabel="name"
+          placeholder="Select city"
+          [(ngModel)]="selectedCity"
+          [readonly]="true"
         >
         </ng-select>
       </div>

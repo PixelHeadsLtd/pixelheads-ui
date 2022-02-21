@@ -25,6 +25,7 @@
   &.has-error, 
   &.is-invalid {
     input, 
+    textarea,
     select, 
     .ng-select-container {
       border: 1px solid _palette(aa-red-100)!important;

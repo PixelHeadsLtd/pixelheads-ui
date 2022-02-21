@@ -2,6 +2,25 @@
 .ng-select {
   font-size: _font(size-default);
 
+  &.ng-select-disabled {
+    border: none;
+    border-bottom: 1px solid _colour(readonly);
+    border-radius: 0;
+    cursor: not-allowed!important;
+
+    .ng-select-container,
+    .ng-input>input {
+      border: none!important;
+      cursor: not-allowed!important;
+    }
+
+    &:focus {
+      border: none;
+      border-bottom: 1px solid _colour(readonly);
+      box-shadow: none;
+    }
+  }
+
   .ng-arrow-wrapper {
     width: 30px;
   }

@@ -14,7 +14,13 @@ table:not(.table-feature) {
   }
 }
 
-table:not(.table-condensed, .email-container, .table-feature, .js-file-line-container) {
+table:not(
+  .table-condensed, 
+  .email-container, 
+  .table-feature, 
+  .js-file-line-container,
+  .table-comments
+  ) {
   text-align: left;
   border-collapse: separate;
   border-spacing: 0;
@@ -129,6 +135,52 @@ table.table-feature {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.aa-comments {
+  .scroll-panel {
+    border: 1px solid _colour(border-box);
+    border-radius: .25rem;
+    padding-top: 1.75rem;
+    .table-comments {
+      font-size: _font(size-small);
+      td, th {
+        .material-icons {
+          height: unset;
+          padding: 0;
+        }
+      }
+
+      th {
+        &:first-child {
+          span {
+            padding-left: .5rem;
+          }
+        }
+        div {
+          padding-bottom: .5rem;
+          span {
+            padding: .5rem;
+          }
+        }
+      }
+      td {
+        vertical-align: middle;
+        padding: 0 .5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 8rem;
+        &:nth-child(2),
+        &:nth-child(3) {
+          max-width: 5rem;
+        }
+        &:last-child {
+          padding-right: 0;
         }
       }
     }

@@ -115,7 +115,8 @@ export class AppComponent {
     'ng-select',
     'html-email',
     'elements-alignment',
-    'slider'
+    'slider',
+    'comments'
   ];
   
   toggleSearchInput() {

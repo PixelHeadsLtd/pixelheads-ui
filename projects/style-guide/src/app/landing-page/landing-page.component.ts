@@ -124,7 +124,8 @@ export class LandingPageComponent implements OnInit {
       'ng-select',
       'html-email',
       'elements-alignment',
-      'slider'
+      'slider',
+      'comments'
     ];
     
     toggleSearchInput() {

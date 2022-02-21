@@ -9,6 +9,7 @@ import { LoadingSpinnerPageComponent } from './loading-spinner-page/loading-spin
 // Elements and Inputs
 import {AnchorComponent} from './anchor/anchor.component';
 import {ButtonsComponent} from './buttons/buttons.component';
+import {CommentsComponent} from './comments/comments.component';
 import {SelectComponent} from './select/select.component';
 import {TablesComponent} from './tables/tables.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
@@ -103,6 +104,7 @@ const routes: Routes = [
   { path: 'border-radius', component: BorderRadiusComponent },
   { path: 'box', component: BoxComponent },
   { path: 'buttons', component: ButtonsComponent },
+  { path: 'comments', component: CommentsComponent },
   { path: 'card', component: CardComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'colours', component: ColoursComponent },

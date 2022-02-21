@@ -344,6 +344,10 @@
             <div class="material-icons aa-green-100">check_box</div>
             <p>Checkbox</p>
           </a>
+          <a class="call-to-action flex-center" routerLink="/comments">
+            <div class="material-icons aa-green-100">chat</div>
+            <p>Comments</p>
+          </a>
           <a class="call-to-action flex-center" routerLink="/field">
             <div class="material-icons aa-green-100">web</div>
             <p>Field</p>
@@ -732,7 +736,7 @@
         
         <h2 class="margin-bottom-0-5">Configure your app files</h2>
         <label>Styles</label>
-        <p>In your project angular.json call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
+        <p>In your project <strong class="aa-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;"styles": [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"path/to/all/other/scss/files.scss",</li>
@@ -741,7 +745,7 @@
         </ol>
         
         <label class="margin-top-1-5">Components</label>
-        <p>In your project app.module.ts import the modules</p>
+        <p>In your project <strong class="aa-red-100">app.module.ts </strong> import the modules</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;import &#123;</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
@@ -755,7 +759,7 @@
         
         <p>and declare them as imports</p>
         <ol class="code margin-top-0-5">
-          <li>&nbsp;imports [</li>
+          <li>&nbsp;imports: [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;ElementsModule, </li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;LayoutModule, </li>
@@ -765,7 +769,7 @@
           <li>&nbsp;],</li>
         </ol>
         
-        <p>In your project tsconfig.json declare the paths.</p>
+        <p>In your project <strong class="aa-red-100">tsconfig.json</strong> declare the paths.</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;"paths": &#123;</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components": [ "node_modules/@angloamerican/components" ],</li>
