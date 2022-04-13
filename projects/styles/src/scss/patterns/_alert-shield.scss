@@ -7,6 +7,7 @@
   font-size: _font(size-default);
   padding: .425rem 1.25rem .425rem 2rem;
   border: 2px solid transparent;
+  flex: none;
 
   &.small {
     background-size: 1rem;

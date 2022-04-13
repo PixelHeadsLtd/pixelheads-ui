@@ -4,9 +4,8 @@
 </section>
 
 <section class="content-container padding-0">
-    
+    <!-- start content repeater -->
     <section class="content-repeater flex-group">
-            
         <section class="flex-1 col-left flex-start">
           <h2>Anchor</h2>
           <div class="describe margin-bottom-1">
@@ -47,11 +46,7 @@
         
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons small bg-aa-light-blue-100" 
-              (click)="copyToClipboard(anchorHTML)">
-              <span class="material-icons">content_copy</span><span>Copy component</span>
-            </button>
-            <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>

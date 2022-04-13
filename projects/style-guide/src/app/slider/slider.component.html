@@ -1,5 +1,6 @@
-<section class="control-bar">
+<section class="control-bar flex-group space-between">
   <h1>Slider</h1>
+  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
 </section>
 <section class="content-container padding-0">
   <!-- start content repeater -->
@@ -34,15 +35,15 @@
         >
         </aa-slider>
         <aa-slider
-        [sliderInline]="false"
-        sliderChecked=""
-        labelText="Tomatoes"
-        fieldClass=""
-        sliderId=""
-        sliderName=""
-        sliderValue=""
-        disabled=""
-      >
+          [sliderInline]="false"
+          sliderChecked=""
+          labelText="Tomatoes"
+          fieldClass=""
+          sliderId=""
+          sliderName=""
+          sliderValue=""
+          disabled=""
+        >
       </aa-slider>
       </div>
       <h3 class="margin-top-2 margin-bottom-0">Inline version</h3>
@@ -143,11 +144,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(sliderHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>

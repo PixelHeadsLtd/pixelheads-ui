@@ -21,14 +21,18 @@
             (buttonClick)="
             bladeIsOpen($event);
             bladeHalf=true;
-            bladeDemos=false; 
+            oneCol=false; 
+            twoCol=false; 
+            xlCol=false; 
+            showCustomBlade=false;
             showBladeGist=false; 
             showCustomBladeGist=false;
             showIcon=false;
             bladeIcon='directions_bike'; 
             bladeHeading='Half column width'; 
             theBladeSize='half-column-width';
-            enablePin=false" 
+            enablePin=false;
+            hasBladeTabs=false"
             buttonText="Half column width" 
             buttonClass="primary"
             fieldClass="label-hidden"
@@ -37,16 +41,19 @@
           <aa-button 
             (buttonClick)="
             bladeIsOpen($event);
-            bladeDemos=true; 
             bladeHalf=false;
+            oneCol=true; 
+            twoCol=false; 
+            xlCol=false; 
+            showCustomBlade=false;
             showBladeGist=false; 
             showCustomBladeGist=false;
             showIcon=true;
             bladeIcon='directions_bike'; 
             bladeHeading='One column width'; 
             theBladeSize='one-column-width';
-            enablePin=true
-            " 
+            enablePin=true;
+            hasBladeTabs=true" 
             buttonText="One column width" 
             buttonClass="primary"
             fieldClass="label-hidden">
@@ -56,15 +63,19 @@
           <aa-button 
             (buttonClick)="
             bladeIsOpen($event); 
-            bladeDemos=true; 
             bladeHalf=false;
+            oneCol=false; 
+            twoCol=true; 
+            xlCol=false; 
+            showCustomBlade=false;
             showBladeGist=false; 
             showCustomBladeGist=false;
             showIcon=true;
             bladeIcon='directions_bike'; 
             bladeHeading='Two column width'; 
             theBladeSize='two-column-width';
-            enablePin=false" 
+            enablePin=false;
+            hasBladeTabs=false" 
             buttonText="Two column width" 
             buttonClass="primary"
             fieldClass="label-hidden">
@@ -72,15 +83,19 @@
           <aa-button 
             (buttonClick)="
             bladeIsOpen($event); 
-            bladeDemos=true; 
             bladeHalf=false;
+            oneCol=false; 
+            twoCol=false; 
+            xlCol=true; 
+            showCustomBlade=false;
             showBladeGist=false; 
             showCustomBladeGist=false;
             showIcon=true;
             bladeIcon='directions_bike'; 
             bladeHeading='XL width'; 
             theBladeSize='xl-column-width';
-            enablePin=false" 
+            enablePin=false;
+            hasBladeTabs=false" 
             buttonText="XL column width" 
             buttonClass="primary"
             fieldClass="label-hidden">
@@ -104,6 +119,12 @@
           <tr>
             <td datalabel="Element">aa-blade</td>
             <td datalabel="Attribute">showModal</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">bladeTabs</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
@@ -173,22 +194,21 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(bladeHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" 
+        <button class="custom-icons bg-aa-light-blue-100" 
           (click)="
           bladeIsOpen($event); 
           showBladeGist=true; 
           showCustomBladeGist=false; 
-          bladeDemos=false;
           bladeHalf=false;
+          oneCol=false; 
+          twoCol=false; 
+          xlCol=false; 
+          showCustomBlade=false;
           enablePin=false; 
           bladeHeading='Gist'; 
           showIcon=true; 
-          bladeIcon='table_rows'
-          ">
+          bladeIcon='table_rows';
+          hasBladeTabs=false">
             <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -207,16 +227,19 @@
         <div class="flex-group">
           <aa-button 
             (buttonClick)="
-            bladeIsOpen($event); 
-            bladeDemos=true; 
+            bladeIsOpen(false); 
             bladeHalf=false;
+            oneCol=false; 
+            twoCol=false; 
+            xlCol=false; 
+            showCustomBlade=true;
             showBladeGist=false; 
             showCustomBladeGist=false;
             showIcon=false;
             bladeIcon='directions_bike'; 
-            bladeHeading='Custom version'; 
             theBladeSize='one-column-width';
-            enablePin=false" 
+            enablePin=false;
+            hasBladeTabs=false" 
             buttonText="Custom version" 
             buttonClass="primary">
           </aa-button>
@@ -242,18 +265,35 @@
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">customBladeTabs</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
         </tbody>
       </table>
     </section>
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(bladeCustomHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="bladeIsOpen($event); showBladeGist=false; showCustomBladeGist=true; enablePin=false; bladeHeading='Gist'; showIcon=true; bladeIcon='table_rows'">
+        <button class="custom-icons bg-aa-light-blue-100" 
+          (click)="
+          bladeIsOpen($event); 
+          showBladeGist=false; 
+          showCustomBladeGist=true; 
+          bladeHalf=false;
+          oneCol=false; 
+          twoCol=false; 
+          xlCol=false; 
+          showCustomBlade=false;
+          enablePin=false; 
+          bladeHeading='Gist'; 
+          showIcon=true; 
+          bladeIcon='table_rows';
+          theBladeSize='one-column-width';
+          hasBladeTabs=false"
+          >
             <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -263,6 +303,7 @@
 <aa-blade 
   [showModal]="false"
   [enablePinning]="enablePin"
+  [bladeTabs]="hasBladeTabs"
   [toggleBlade]="toggleBlade"
   (bladeOpen)="bladeIsOpen($event)"
   (bladePinned)="bladeIsPinned($event)"
@@ -276,7 +317,7 @@
   >
   <!-- blade gist -->
   <article *ngIf="showBladeGist" class="blade-content">
-    <div class="feature">
+    <div class="feature margin-bottom-1">
       <p class="margin-bottom-1">Please note that for Blade 'pinning' to work correctly, you will require the following package versions...</p>
       <div class="flex-group flex-column">
         <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
@@ -303,16 +344,16 @@
         </div>
       </div>
     </div>
-    <app-gist src="angloux/69327c3e18e20b0f1b5a780d32945073"></app-gist>
     <a href="https://gist.github.com/angloux/69327c3e18e20b0f1b5a780d32945073" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/69327c3e18e20b0f1b5a780d32945073"></app-gist>
   </article>
   <!-- blade custom gist -->
-  <article *ngIf="showCustomBladeGist" class="blade-content">
-    <app-gist src="angloux/35c803fb8616ad17cacd53883d0de4f9"></app-gist>
+  <article *ngIf="showCustomBladeGist" class="blade-content padding-top-1">
     <a href="https://gist.github.com/angloux/35c803fb8616ad17cacd53883d0de4f9" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/35c803fb8616ad17cacd53883d0de4f9"></app-gist>
   </article>
   
-  <!-- blade half demo -->
+  <!-- blade half width -->
   <div *ngIf="bladeHalf">
     <article class="blade-content">
       <ul class="aa-card-list">
@@ -454,41 +495,26 @@
       </ul>
     </article>
   </div>
-  <!-- blade demos -->
-  <div *ngIf="bladeDemos">
+  <!-- Blade oneCol -->
+  <div *ngIf="oneCol">
+    <ng-container blade-tabs>
+      <aa-tab-navigation [routerOutlet]="true">
+        <ng-container list-items>
+            <li *ngFor="let tab of tabs">
+              <a 
+                [id]="tab.tabId" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true, isActive: true}"
+                [routerLink]="tab.routerLink"
+              >
+                {{ tab.name }}
+              </a>
+            </li>
+        </ng-container>
+      </aa-tab-navigation>
+    </ng-container>
     <article class="blade-content">
-      <div class="field">
-        <label>First name</label>
-        <input type="text"/>
-      </div>
-      <div class="field">
-        <label>Last name</label>
-        <input type="text"/>
-      </div>
-      <div class="field">
-        <label>Comments</label>
-        <textarea></textarea>
-      </div>
-      <div class="field">
-        <label>Email</label>
-        <input type="text"/>
-      </div>
-      <div class="field small">
-        <label>Phone</label>
-        <input type="text"/>
-      </div>
-      <div class="field small">
-        <label>Mobile</label>
-        <input type="text"/>
-      </div>
-      <div class="field small">
-        <label>Language</label>
-        <input type="text"/>
-      </div>
-      <div class="field small">
-        <label>Country</label>
-        <input type="text"/>
-      </div>
+      <router-outlet></router-outlet>
     </article>
 
     <aa-blade-footer>
@@ -497,4 +523,196 @@
       <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
     </aa-blade-footer>
   </div>
+    <!-- Blade twoCol -->
+    <div *ngIf="twoCol">
+      <article class="blade-content">
+        <div class="flex-group">
+          <div class="field">
+            <label>First name</label>
+            <input type="text"/>
+          </div>
+          <div class="field">
+            <label>Last name</label>
+            <input type="text"/>
+          </div>
+        </div>
+        <div class="flex-group">
+          <div class="field">
+            <label>Email</label>
+            <input type="text"/>
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="text"/>
+          </div>
+        </div>
+        <div class="flex-group">
+          <div class="field">
+            <label>Mobile</label>
+            <input type="text"/>
+          </div>
+          <div class="field">
+            <label>Country</label>
+            <input type="text"/>
+          </div>
+        </div>
+        <div class="flex-group">
+          <div class="field">
+            <label>Language</label>
+            <input type="text"/>
+          </div>
+          <div class="field">
+            <label>Region</label>
+            <input type="text"/>
+          </div>
+        </div>
+        <div class="field max-width-unset">
+          <label>Comments</label>
+          <textarea></textarea>
+        </div>
+      </article>
+  
+      <aa-blade-footer>
+        <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden" [disabled]="''"></aa-button>
+        <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden" [disabled]="''"></aa-button>
+        <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
+      </aa-blade-footer>
+    </div>
+
+      <!-- Blade xlCol -->
+      <div *ngIf="xlCol">
+        <article class="blade-content">
+          <div class="flex-group">
+            <div class="field">
+              <label>First name</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Middle name</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Last name</label>
+              <input type="text"/>
+            </div>
+          </div>
+
+          <div class="flex-group">
+            <div class="field">
+              <label>Email</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Mobile</label>
+              <input type="text"/>
+            </div>
+          </div>
+
+          <div class="flex-group">
+            <div class="field">
+              <label>Language</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Country</label>
+              <input type="text"/>
+            </div>
+            <div class="field">
+              <label>Region</label>
+              <input type="text"/>
+            </div>
+          </div>
+          <div class="field max-width-unset">
+            <label>Comments</label>
+            <textarea></textarea>
+          </div>
+          <table class="margin-top-1">
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>Approver</th>
+                <th class="align-right">Created date</th>
+                <th class="align-right">Modified date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let approval of approvals">
+                <td datalabel="Status"><span class="alert-shield small" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
+                <td datalabel="Approver">{{ approval.approver }}</td>
+                <td datalabel="Created date" class="align-right">{{ approval.created }}</td>
+                <td datalabel="Modified date" class="align-right">{{ approval.modified }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+    
+        <aa-blade-footer>
+          <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden" [disabled]="''"></aa-button>
+          <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden" [disabled]="''"></aa-button>
+          <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
+        </aa-blade-footer>
+      </div>
+</aa-blade>
+
+<aa-blade 
+  [customBlade]="true"
+  [showModal]="false"
+  [customBladeTabs]="true"
+  [toggleBlade]="showCustomBlade"
+  suppressAutoClose="false"
+  topPosition="3.5"
+  zIndex="10"
+  bladeSize="one-column-width"
+  (close)="showCustomBlade = false"
+  [enablePinning]="false"
+  (pinned)="pinBlade=!pinBlade"
+>
+  <ng-container custom-header>
+    <div class="flex-group space-between">
+      <h2>Custom header</h2>
+      <div class="flex-group">
+        <div class="alert-shield risk-green-approved">Risk green approved</div>
+        <aa-button
+        [customIcons]="true"
+        buttonId="buttonId"
+        buttonClass="custom-icons light-blue"
+        fieldClass="boxed"
+        buttonLabel="Custom icons"
+        buttonText="Visibility"
+        buttonIcon="visibility"
+        disabled="">
+      </aa-button>
+      </div>
+    </div>
+    <ng-container custom-blade-tabs>
+      <aa-tab-navigation [routerOutlet]="true">
+        <ng-container list-items>
+            <li *ngFor="let tab of tabs">
+              <a 
+                [id]="tab.tabId" 
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true, isActive: true}"
+                [routerLink]="tab.routerLink"
+              >
+                {{ tab.name }}
+              </a>
+            </li>
+        </ng-container>
+      </aa-tab-navigation>
+    </ng-container>
+  </ng-container>
+  <ng-container custom-content>
+    <router-outlet></router-outlet>
+  </ng-container>
+    <ng-container custom-footer>
+      <div class="flex-group flex-start">
+        <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden" [disabled]="''"></aa-button>
+        <aa-button (buttonClick)="showCustomBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden" [disabled]="''"></aa-button>
+        <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
+      </div>
+  </ng-container>
 </aa-blade>

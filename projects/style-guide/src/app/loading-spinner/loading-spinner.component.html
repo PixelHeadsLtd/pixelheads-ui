@@ -11,7 +11,7 @@
         The version below is for page elements that you want to load inline<br/>
         so that users can still interact with the page</p>
       </div>
-      <aa-loading-spinner loadingText="Loading..."></aa-loading-spinner>
+      <aa-loading-spinner loadingText="Loading"></aa-loading-spinner>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -38,11 +38,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" 
-        (click)="copyToClipboard(loadingSpinnerHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>

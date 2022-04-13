@@ -19,7 +19,8 @@
   }
   
   button {
-    &.material-icons {
+    &.material-icons,
+    &.material-icons-outlined {
       &:hover {
         background-color: _palette(aa-light-blue-100);
       }

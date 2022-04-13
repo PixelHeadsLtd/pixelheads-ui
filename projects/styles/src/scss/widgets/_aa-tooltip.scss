@@ -78,7 +78,8 @@
     }
   }
   &.custom-icon {
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: _font(size-medium);
       &.is-warning {color: _colour(alert-warning-header);}   
       &.is-error {color: _colour(alert-error-header);}

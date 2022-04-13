@@ -24,11 +24,13 @@
           color:_colour(search-placeholder);
         }
       }
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         transform: rotate(90deg);
       }
     }
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: _font(size-large);
       color: _colour(search-input);
       position: absolute;

@@ -8,21 +8,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BladeBottomComponent {
 
-  public isPinned: boolean;
-  public isOpen : boolean;
-  public toggleTable: boolean;
-  public fullScreenPos: string;
-  public splitScreenPos: string;
-  public closedPos: string;
-
-  bladeIsClosed(closed: boolean) {
-    this.isOpen = closed;
-  }
-
-  bladeIsPinned(togglePinned: boolean) {
-    this.isPinned = togglePinned;
-  }
-
+  isPinned: boolean;
+  isOpen : boolean;
+  toggleTable: boolean;
+  fullScreenPos: string;
+  splitScreenPos: string;
+  closedPos: string;
+  toggleBlade: boolean;
   gridApi;
   gridColumnApi;
   columnDefs;
@@ -78,6 +70,14 @@ export class BladeBottomComponent {
     this.defaultColDef = { resizable: true, sortable: true };
   }
 
+  bladeIsClosed(closed: boolean) {
+    this.isOpen = closed;
+  }
+
+  bladeIsPinned(togglePinned: boolean) {
+    this.isPinned = togglePinned;
+  }
+
   sizeToFit() {
     this.gridApi.sizeColumnsToFit();
   }
@@ -102,41 +102,6 @@ export class BladeBottomComponent {
         this.rowData = data;
       });
   }
-  
-  bladeBottomHTML =
-  `<aa-blade-bottom 
-  closedPos="calc(100% - 2.1rem)"
-  fullScreenPos="7.25rem"
-  splitScreenPos="50%"
-  (bladePinned)="bladeIsPinned($event)"
-  (bladeOpen)="bladeIsClosed($event)"
-  (bladeFullScreen)="bladeIsFullScreen($event)"
-  [disablePinning]="false"
-  [innitiallyPinned]="true"
-  headerBgColor="bg-aa-orange-50"
-  controlsColor="aa-blue-100"
->
-  <ng-container custom-header>
-      <div class="material-icons margin-right-0-5 aa-blue-100">monetization_on</div>
-      <h2 class="aa-blue-100">Costs</h2>
-  </ng-container>
-  <ng-container custom-content>
-    <CUSTOM CONTENT>
-  </ng-container>
-</aa-blade-bottom>`;
-  
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
-  }
-  
-  toggleBlade: boolean;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

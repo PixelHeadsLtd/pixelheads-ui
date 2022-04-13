@@ -9,38 +9,75 @@
       <h2>Material icons</h2>
       <div class="describe margin-bottom-1">
         <p>
-          We use Google's Material icons. There are some legacy Font Awesome icons around, but we are moving towards Material. The easy way
-          to use them is to find one you like and call it by its name in a wrapper element with class=&quot;material-icons&quot;
+          We use Google's Material icons. There are some legacy Font Awesome icons around, but we are 
+          moving towards Material. The easy way to use them is to find one you like and call it by its 
+          name in a wrapper element with class <strong class="aa-red-100">'material-icons' or 'material-icons-outlined'</strong>
         </p>
       </div>
-      <div class="flex-group">
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-red">face</div>
-          <p class="flex-align-center">.icon-red</p>
+      <h3>Solid</h3>
+      <div>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-red">face</div>
+            <p class="flex-align-center">.icon-red</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-blue">face</div>
+            <p class="flex-align-center">.icon-blue</p>
+          </div>
         </div>
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-blue">face</div>
-          <p class="flex-align-center">.icon-blue</p>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-orange">face</div>
+            <p class="flex-align-center">.icon-orange</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-dark-blue">face</div>
+            <p class="flex-align-center">.icon-dark-blue</p>
+          </div>
+        </div>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-green">face</div>
+            <p class="flex-align-center">.icon-green</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons icon-black">face</div>
+            <p class="flex-align-center">.icon-black</p>
+          </div>
         </div>
       </div>
-      <div class="flex-group">
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-orange">face</div>
-          <p class="flex-align-center">.icon-orange</p>
+      <h3>Outlined</h3>
+      <div>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-red">face</div>
+            <p class="flex-align-center">.icon-red</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-blue">face</div>
+            <p class="flex-align-center">.icon-blue</p>
+          </div>
         </div>
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-dark-blue">face</div>
-          <p class="flex-align-center">.icon-dark-blue</p>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-orange">face</div>
+            <p class="flex-align-center">.icon-orange</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-dark-blue">face</div>
+            <p class="flex-align-center">.icon-dark-blue</p>
+          </div>
         </div>
-      </div>
-      <div class="flex-group">
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-green">face</div>
-          <p class="flex-align-center">.icon-green</p>
-        </div>
-        <div class="flex-group flex-start margin-bottom-1">
-          <div class="material-icons icon-black">face</div>
-          <p class="flex-align-center">.icon-black</p>
+        <div class="flex-group">
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-green">face</div>
+            <p class="flex-align-center">.icon-green</p>
+          </div>
+          <div class="flex-group flex-start margin-bottom-1">
+            <div class="material-icons-outlined icon-black">face</div>
+            <p class="flex-align-center">.icon-black</p>
+          </div>
         </div>
       </div>
     </section>
@@ -67,13 +104,15 @@
           </tr>
           <tr>
             <td datalabel="Element">Any</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.material-icons-outlined</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Any</td>
             <td datalabel="Attribute">Colour</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">
-              icon-red .icon-orange<br />
-              icon-green .icon-blue<br />
-              icon-dark-blue .icon-black<br />
-            </td>
+            <td datalabel="Default"><a routerLink="/colours">Your colour</a></td>
           </tr>
           <tr>
             <td datalabel="Element">Inner HTML</td>
@@ -89,10 +128,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(materialHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons = true; countryFlags = false">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons = true; countryFlags = false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -171,10 +207,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(countryFlagsHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons = false; countryFlags=true">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons = false; countryFlags=true">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>

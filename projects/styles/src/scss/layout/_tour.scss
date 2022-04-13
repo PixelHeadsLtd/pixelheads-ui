@@ -85,7 +85,8 @@
             font-size: _font(size-xsmall);
             display: flex;
             align-items: center;
-            .material-icons {
+            .material-icons,
+            .material-icons-outlined {
                 margin-right: .5rem;
                 font-size: _font(size-regular)!important;
             }

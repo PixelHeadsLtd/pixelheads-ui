@@ -7,6 +7,8 @@ export declare class BladeComponent implements OnInit {
     customBlade: boolean;
     enableIcon: boolean;
     iconName: string;
+    bladeTabs: boolean;
+    customBladeTabs: boolean;
     showModal: boolean;
     oneColWidth: boolean;
     bladeSize: string;

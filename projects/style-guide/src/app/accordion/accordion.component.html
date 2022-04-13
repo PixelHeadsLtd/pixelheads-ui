@@ -16,7 +16,7 @@
 
       <aa-accordion
         (open)="showBodyOne=true"
-        [dragable]="true"
+        [dragable]="false"
         [showBody]="showBodyOne"
         accordionHeading="Accordion heading 1"
         accordionId="accordion01"
@@ -86,7 +86,7 @@
         <tbody>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[showBody]</td>
+            <td datalabel="Attribute">showBody</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody</td>
           </tr>
@@ -98,7 +98,7 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[enableIcons]</td>
+            <td datalabel="Attribute">enableIcons</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
@@ -144,7 +144,7 @@
             <td datalabel="Element">header-custom</td>
             <td datalabel="Attribute">header-custom</td>
             <td datalabel="Type">Custom HTML</td>
-            <td datalabel="Default">Add you content</td>
+            <td datalabel="Default">Add your content</td>
           </tr>
         </tbody>
       </table>
@@ -152,10 +152,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(accordionHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=true; showAccordionAlt=false">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=true; showAccordionAlt=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -163,7 +160,7 @@
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
-      <h2>Accordion alternate version</h2>
+      <h2>Accordion clean version</h2>
       <div class="describe margin-bottom-1">
         <p>
           The below is an alternative version of the accordion. You can choose to use Material Icons or alternatively you can use our
@@ -243,19 +240,19 @@
         <tbody>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[accordionClean]</td>
+            <td datalabel="Attribute">accordionClean</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[iconsEnabled]</td>
+            <td datalabel="Attribute">iconsEnabled</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[fontAwesome]</td>
+            <td datalabel="Attribute">fontAwesome</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true (false if using Material icons)</td>
           </tr>
@@ -267,9 +264,9 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[iconName] (Material icons only)</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">true</td>
+            <td datalabel="Attribute">iconName - Material icons only</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Material icons friendly name</a></td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
@@ -279,7 +276,7 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[showBody]</td>
+            <td datalabel="Attribute">showBody</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody</td>
           </tr>
@@ -291,13 +288,13 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[iconsEnabled]</td>
+            <td datalabel="Attribute">iconsEnabled</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">[fontAwesome]</td>
+            <td datalabel="Attribute">fontAwesome</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
@@ -335,7 +332,7 @@
             <td datalabel="Element">header-custom</td>
             <td datalabel="Attribute">header-custom</td>
             <td datalabel="Type">Custom HTML</td>
-            <td datalabel="Default">Add you content</td>
+            <td datalabel="Default">Add your content</td>
           </tr>
         </tbody>
       </table>
@@ -343,10 +340,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(accordionAltHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=false; showAccordionAlt=true">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=false; showAccordionAlt=true">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>

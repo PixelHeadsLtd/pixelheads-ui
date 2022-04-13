@@ -39,23 +39,17 @@ input:not(.ag-filter-filter) {
     -webkit-appearance: checkbox;
   }
 
+  &[aria-readonly=true],
+  &[readonly],
   &[aria-disabled=true],
   &[disabled] {
+    background-color: _colour(readonly);
+    border-style: dashed;
     cursor: not-allowed;
-    background-color: transparent;
-    border: 1px solid _palette(grey-10);
-  }
 
-  &[aria-readonly=true],
-  &[readonly] {
-    border: none;
-    border-bottom: 1px solid _colour(readonly);
-    border-radius: 0;
-    cursor: not-allowed;
     &:focus {
-      border: none;
-      border-bottom: 1px solid _colour(readonly);
-      box-shadow: none;
+      border-color: _colour(border-input)!important;
+      box-shadow: none!important;
     }
   }
 
@@ -104,6 +98,13 @@ input:not(.ag-filter-filter) {
       }
       &:disabled {
         background-color: transparent !important;
+      }
+    }
+    &[readonly] {
+      + button {
+        opacity: .5;
+        color: _colour(readonly);
+        cursor: not-allowed;
       }
     }
   }

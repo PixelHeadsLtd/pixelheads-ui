@@ -5,7 +5,10 @@
 <aside 
   *ngIf="!customBlade" 
   class="blade animate-all {{bladeSize}}" 
-  [ngClass]="{'show-blade' : toggleBlade}" 
+  [ngClass]="{
+    'show-blade' : toggleBlade,
+    'show-tabs' : bladeTabs
+  }"
   [ngStyle]="{
     'top' : topPosition + 'rem', 
     'z-index' : zIndex+10
@@ -21,13 +24,14 @@
       >
         push_pin
       </div>
-      <div *ngIf="enableIcon" class="material-icons margin-right-0-5">{{iconName}}</div>
+      <div *ngIf="enableIcon" class="material-icons header-icon margin-right-0-5">{{iconName}}</div>
       <h2 class="margin-top-0-25 margin-0 flex-align-center">
         {{bladeHeading}}
       </h2>
     </div>
     <a class="anchor-close flex-align-center" (click)="onClose()">Close</a>
-    </article>
+    <ng-content *ngIf="bladeTabs" select="[blade-tabs]"></ng-content>
+  </article>
   <ng-content></ng-content>
 </aside>
 
@@ -35,14 +39,18 @@
 <aside 
   *ngIf="customBlade" 
   class="blade animate-all {{bladeSize}}" 
-  [ngClass]="{'show-blade' : toggleBlade}" 
+  [ngClass]="{
+    'show-blade' : toggleBlade,
+    'show-tabs custom-header-tabs' : customBladeTabs
+  }" 
   [ngStyle]="{
     'top' : topPosition + 'rem', 
     'z-index' : zIndex
   }"
 >
-  <article class="blade-header">
+  <article class="blade-header custom-header">
     <ng-content select="[custom-header]"></ng-content>
+    <ng-content *ngIf="customBladeTabs" select="[custom-blade-tabs]"></ng-content>
   </article>
   <article class="blade-content">
     <ng-content select="[custom-content]"></ng-content>

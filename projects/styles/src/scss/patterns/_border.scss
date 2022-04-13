@@ -1,26 +1,122 @@
+// ----------------------------- GLOBAL BORDERS --------------------------
 
-.border-none {border: none!important;}
-.border {border: 1px solid _colour(border-subtle);}
-.border-dashed {border-style: dashed;}
-.border-right-dashed-light {border-right: 1px dashed _palette(aa-white-100);}
-.border-bottom {border-bottom: 1px solid grey;}
-.border-right-dashed-light {border-right: 1px dashed _palette(aa-white-100);}
-.border-right {border-right: 1px solid _palette(grey-10);}
-.border-left {border-left: 1px solid _palette(grey-10);}
-.border-light {border: 1px solid _palette(grey-10);}
-.border-medium {border: 1px solid _palette(grey-50);}
-.border-top-light {border-top: 1px solid _palette(grey-10);}
-.border-bottom-light {border-bottom: 1px solid _palette(grey-10);}
-.border-bottom-light-blue {border-bottom: 1px solid _palette(aa-light-blue-50);}
-.border-radius-0-5 {border-radius: .5rem;}
-.border-light {border: 1px solid _colour(border-light)}
-.border-horizontal-light {
-    border-style: solid;
-    border-color: _palette(grey-10);
-    border-width: 1px 0;
-}
+.bd-1 {border-width: 1px!important}
+.bd-2 {border-width: 2px!important}
+.bd-3 {border-width: 3px!important}
+.bd-1-5 {border-width: .085rem!important}
+// ...
+.bd-solid {border-style: solid!important}
+.bd-dashed {border-style: dashed!important}
+// ...
+.bd-red {border-color: _palette(aa-red-100)!important}
+.bd-orange {border-color: _palette(aa-orange-100)!important}
+.bd-green {border-color: _palette(aa-green-100)!important}
+.bd-blue {border-color: _palette(aa-blue-100)!important}
+.bd-green-50 {border-color: _palette(aa-green-50)!important}
+.bd-light-blue {border-color: _palette(aa-light-blue-100)!important}
+.bd-plum {border-color: _palette(aa-plum-100)!important}
+.bd-pink {border-color: _palette(aa-pink-100)!important}
+.bd-burgundy {border-color: _palette(aa-burgundy-100)!important}
+.bd-brown {border-color: _palette(aa-brown-100)!important}
+.bd-grey {border-color: _palette(aa-grey-100)!important}
+.bd-mid-grey {border-color: _palette(aa-grey-25)!important}
+.bd-light-grey {border-color: _palette(aa-grey-5)!important}
 
-// BORDER COLOURS
+// ------------------------------ TOP BORDERS -----------------------------
+
+.bd-top-1 {border-top-width: 1px!important}
+.bd-top-1-5 {border-top-width: .085rem!important}
+.bd-top-2 {border-top-width: 2px!important}
+.bd-top-3 {border-top-width: 3px!important}
+// ...
+.bd-top-solid {border-top-style: solid!important}
+.bd-top-dashed {border-top-style: dashed!important}
+// ...
+.bd-top-red {border-top-color: _palette(aa-red-100)!important}
+.bd-top-orange {border-top-color: _palette(aa-orange-100)!important}
+.bd-top-green {border-top-color: _palette(aa-green-100)!important}
+.bd-top-green-50 {border-top-color: _palette(aa-green-50)!important}
+.bd-top-blue {border-top-color: _palette(aa-blue-100)!important}
+.bd-top-light-blue {border-top-color: _palette(aa-light-blue-100)!important}
+.bd-top-plum {border-top-color: _palette(aa-plum-100)!important}
+.bd-top-pink {border-top-color: _palette(aa-pink-100)!important}
+.bd-top-burgundy {border-top-color: _palette(aa-burgundy-100)!important}
+.bd-top-brown {border-top-color: _palette(aa-brown-100)!important}
+.bd-top-grey {border-top-color: _palette(aa-grey-100)!important}
+.bd-top-mid-grey {border-top-color: _palette(aa-grey-25)!important}
+.bd-top-light-grey {border-top-color: _palette(aa-grey-5)!important}
+
+// ----------------------------- RIGHT BORDERS ----------------------------
+
+.bd-right-1 {border-right-width: 1px!important}
+.bd-right-2 {border-right-width: 2px!important}
+.bd-right-3 {border-right-width: 3px!important}
+// ...
+.bd-right-solid {border-right-style: solid!important}
+.bd-right-dashed {border-right-style: dashed!important}
+// ...
+.bd-right-red {border-right-color: _palette(aa-red-100)!important}
+.bd-right-orange {border-right-color: _palette(aa-orange-100)!important}
+.bd-right-green {border-right-color: _palette(aa-green-100)!important}
+.bd-right-green-50 {border-right-color: _palette(aa-green-50)!important}
+.bd-right-blue {border-right-color: _palette(aa-blue-100)!important}
+.bd-right-light-blue {border-right-color: _palette(aa-light-blue-100)!important}
+.bd-right-plum {border-right-color: _palette(aa-plum-100)!important}
+.bd-right-pink {border-right-color: _palette(aa-pink-100)!important}
+.bd-right-burgundy {border-right-color: _palette(aa-burgundy-100)!important}
+.bd-right-brown {border-right-color: _palette(aa-brown-100)!important}
+.bd-right-grey {border-right-color: _palette(aa-grey-100)!important}
+.bd-right-mid-grey {border-right-color: _palette(aa-grey-25)!important}
+.bd-right-light-grey {border-right-color: _palette(aa-grey-5)!important}
+
+// ----------------------------- BOTTOM BORDERS ---------------------------
+
+.bd-bottom-1 {border-bottom-width: 1px!important}
+.bd-bottom-2 {border-bottom-width: 2px!important}
+.bd-bottom-3 {border-bottom-width: 3px!important}
+// ...
+.bd-bottom-solid {border-bottom-style: solid!important}
+.bd-bottom-dashed {border-bottom-style: dashed!important}
+// ...
+.bd-bottom-red {border-bottom-color: _palette(aa-red-100)!important}
+.bd-bottom-orange {border-bottom-color: _palette(aa-orange-100)!important}
+.bd-bottom-green {border-bottom-color: _palette(aa-green-100)!important}
+.bd-bottom-green-50 {border-bottom-color: _palette(aa-green-50)!important}
+.bd-bottom-blue {border-bottom-color: _palette(aa-blue-100)!important}
+.bd-bottom-light-blue {border-bottom-color: _palette(aa-light-blue-100)!important}
+.bd-bottom-plum {border-bottom-color: _palette(aa-plum-100)!important}
+.bd-bottom-pink {border-bottom-color: _palette(aa-pink-100)!important}
+.bd-bottom-burgundy {border-bottom-color: _palette(aa-burgundy-100)!important}
+.bd-bottom-brown {border-bottom-color: _palette(aa-brown-100)!important}
+.bd-bottom-grey {border-bottom-color: _palette(aa-grey-100)!important}
+.bd-bottom-mid-grey {border-bottom-color: _palette(aa-grey-25)!important}
+.bd-bottom-light-grey {border-bottom-color: _palette(aa-grey-5)!important}
+
+// ------------------------------ LEFT BORDERS ----------------------------
+
+.bd-left-1 {border-bottom-width: 1px!important}
+.bd-left-2 {border-bottom-width: 2px!important}
+.bd-left-3 {border-bottom-width: 3px!important}
+// ...
+.bd-left-solid {border-bottom-style: solid!important}
+.bd-left-dashed {border-bottom-style: dashed!important}
+// ...
+.bd-left-red {border-left-color: _palette(aa-red-100)!important}
+.bd-left-orange {border-left-color: _palette(aa-orange-100)!important}
+.bd-left-green {border-left-color: _palette(aa-green-100)!important}
+.bd-left-green-50 {border-left-color: _palette(aa-green-50)!important}
+.bd-left-blue {border-left-color: _palette(aa-blue-100)!important}
+.bd-left-light-blue {border-left-color: _palette(aa-light-blue-100)!important}
+.bd-left-plum {border-left-color: _palette(aa-plum-100)!important}
+.bd-left-pink {border-left-color: _palette(aa-pink-100)!important}
+.bd-left-burgundy {border-left-color: _palette(aa-burgundy-100)!important}
+.bd-left-brown {border-left-color: _palette(aa-brown-100)!important}
+.bd-left-grey {border-left-color: _palette(aa-grey-100)!important}
+.bd-left-mid-grey {border-left-color: _palette(aa-grey-25)!important}
+.bd-left-light-grey {border-left-color: _palette(aa-grey-5)!important}
+
+// FULL BORDERS ----------------------------------------------------------------
+
 // blue
 .bd-aa-blue-100 {border: 1px solid _colour(aa-blue-100)!important}
 .bd-aa-blue-70 {border: 1px solid _colour(aa-blue-70)!important}
@@ -40,14 +136,22 @@
 .bd-aa-red-80 {border: 1px solid _palette(aa-red-80)!important}
 .bd-aa-red-50 {border: 1px solid _palette(aa-red-50)!important}
 .bd-aa-red-5 {border: 1px solid _palette(aa-red-5)!important}
-// grey
+// grey legacy classes
+.bd-grey-100 {border: 1px solid _palette(aa-grey-100)!important}
+.bd-grey-100 {border: 1px solid _palette(aa-grey-100)!important}
+.bd-grey-50 {border: 1px solid _palette(aa-grey-50)!important}
+.bd-grey-25 {border: 1px solid _palette(aa-grey-25)!important}
+.bd-grey-10 {border: 1px solid _palette(aa-grey-10)!important}
+.bd-grey-5 {border: 1px solid _palette(aa-grey-5)!important}
+.bd-grey-2 {border: 1px solid _palette(aa-grey-2)!important}
+// grey updated classes
 .bd-aa-grey-100 {border: 1px solid _palette(aa-grey-100)!important}
-.bd-grey-100 {border: 1px solid _palette(grey-100)!important}
-.bd-grey-50 {border: 1px solid _palette(grey-50)!important}
-.bd-grey-25 {border: 1px solid _palette(grey-25)!important}
-.bd-grey-10 {border: 1px solid _palette(grey-10)!important}
-.bd-grey-5 {border: 1px solid _palette(grey-5)!important}
-.bd-grey-2 {border: 1px solid _palette(grey-2)!important}
+.bd-aa-grey-100 {border: 1px solid _palette(aa-grey-100)!important}
+.bd-aa-grey-50 {border: 1px solid _palette(aa-grey-50)!important}
+.bd-aa-grey-25 {border: 1px solid _palette(aa-grey-25)!important}
+.bd-aa-grey-10 {border: 1px solid _palette(aa-grey-10)!important}
+.bd-aa-grey-5 {border: 1px solid _palette(aa-grey-5)!important}
+.bd-aa-grey-2 {border: 1px solid _palette(aa-grey-2)!important}
 // green
 .bd-aa-green-100 {border: 1px solid _palette(aa-green-100)!important}
 .bd-aa-green-50 {border: 1px solid _palette(aa-green-50)!important}
@@ -67,9 +171,27 @@
 .bd-aa-pink-100 {border: 1px solid _palette(aa-pink-100)!important}
 .bd-aa-white-100 {border: 1px solid _palette(aa-white-100)!important}
 
-// Border position
-.bd-top {border-width: 1px 0 0 0!important}
-.bd-right {border-width: 0 1px 0 0!important}
-.bd-bottom {border-width: 0 0 1px 0!important}
-.bd-left {border-width: 0 0 0 1px!important}
+// LEGACY COLOURS DO NOT USE  ------------------------------------------------------
 
+.border-none {border: none!important;}
+.border-bottom-none {border-bottom: none!important;}
+.border {border: 1px solid _colour(border-subtle);}
+.border-dashed {border-style: dashed;}
+.border-right-dashed-light {border-right: 1px dashed _palette(aa-white-100);}
+.border-bottom {border-bottom: 1px solid grey;}
+.border-right-dashed-light {border-right: 1px dashed _palette(aa-white-100);}
+.border-right {border-right: 1px solid _palette(grey-10);}
+.border-left {border-left: 1px solid _palette(grey-10);}
+.border-light {border: 1px solid _palette(grey-10);}
+.border-medium {border: 1px solid _palette(grey-50);}
+.border-top-light {border-top: 1px solid _palette(grey-10);}
+.border-top-blue-dashed {border-top: 1px dashed _colour(primary);}
+.border-bottom-light {border-bottom: 1px solid _palette(grey-10);}
+.border-bottom-light-blue {border-bottom: 1px solid _palette(aa-light-blue-50);}
+.border-radius-0-5 {border-radius: .5rem;}
+.border-light {border: 1px solid _colour(border-light)}
+.border-horizontal-light {
+    border-style: solid;
+    border-color: _palette(grey-10);
+    border-width: 1px 0;
+}

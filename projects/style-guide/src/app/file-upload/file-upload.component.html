@@ -1,6 +1,8 @@
-<section class="control-bar">
+<section class="control-bar flex-group space-between">
   <h1>File upload</h1>
+  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
 </section>
+
 <section class="content-container padding-0">
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
@@ -75,11 +77,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(fileUploadHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>

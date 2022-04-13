@@ -1,66 +1,50 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { 
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
+import { ModalService } from 'projects/components/src/lib/widgets/services/modal-service/modal.service';
+// path in node_modules for devs - import { ModalService } from '@angloamerican/components/lib/widgets/services/modal-service/modal.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent implements OnInit, OnDestroy {
 
-  @Input() toggleModal: boolean;
-
-  constructor() { }
-  
-  modalHTML = 
-  `<aa-modal 
-  *ngIf="toggleModal"
-  [red]=""
-  [orange]="true"
-  [blue]=""
-  [green]=""
-  topPos=""
-  rightPos=""
-  leftPos=""
-  minWidth=""
-  maxWidth="20rem"
-  zIndex="999"
-  [heading]="'Are you sure?'"
->
-  <div content-custom>Custom content</div>
-  <aa-button 
-    (buttonClick)="toggleModal=!toggleModal" 
-    buttonClass="primary" 
-    fieldClass="boxed label-hidden" 
-    buttonId="buttonId" 
-    buttonText="Yes">
-  </aa-button>
-  <aa-button 
-    (buttonClick)="toggleModal=!toggleModal" 
-    buttonClass="cancel" 
-    fieldClass="boxed label-hidden" 
-    buttonId="buttonId" 
-    buttonText="No">
-  </aa-button>
-</aa-modal>`;
-  
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
-  }
-  
+  toggleModal: boolean;
   toggleBlade: boolean;
+  showModalGist: boolean;
+  showModalEventGist: boolean;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
 
-  ngOnInit() {
+  constructor(private modalService: ModalService) {}
+
+  @ViewChild('modal', { read: ViewContainerRef })
+  entry!: ViewContainerRef;
+  sub!: Subscription;
+
+  ngOnInit(): void {}
+
+  openModal() {
+    this.sub = this.modalService
+      .openModal(this.entry, 
+        'Are you sure?', 
+        'This is your message to be displayed')
+      .subscribe((v) => {
+        //your logic
+      });
+  }
+
+  ngOnDestroy(): void {
+    if (this.sub) this.sub.unsubscribe();
   }
 
 }

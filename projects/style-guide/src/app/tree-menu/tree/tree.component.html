@@ -1,10 +1,12 @@
 <ul *ngIf="treeData">
     <li *ngFor="let node of treeData">
-        <span (click)="toggleChild(node)">
-            {{ node.mike }}
-            <span class="chevron" [ngClass]="{'chevron-down': node.showChildren}" *ngIf="node.children != 0"></span>
-            <strong *ngIf="node.children != 0"> {{ node.name }} </strong>
-            <a href="{{node.url}}" target="_blank" *ngIf="node.children == 0"> {{ node.name }} </a>
+        <span class="tree-group flex-group flex-start flex-align-center">
+            <span (click)="toggleChild(node)" class="flex-group flex-start">
+                <span class="chevron" [ngClass]="{'chevron-down': node.showChildren}" *ngIf="node.children != 0"></span>
+                <strong *ngIf="node.children != 0"> {{ node.name }} </strong>
+                <a href="{{node.url}}" target="_blank" *ngIf="node.children == 0"> {{ node.name }} </a>
+            </span>
+            <!-- <button class="material-icons">edit</button> -->
         </span>
         <ul>
             <li>

@@ -2,7 +2,7 @@
   <h1>Tab navigation</h1>
 </section>
 
-<section class="content-container padding-0">
+<section class="content-container padding-0 tab-nav-page">
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
@@ -133,11 +133,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(tabNgTemplateHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=true; tabRouterOutlet=false; tabInfo=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=true; tabRouterOutlet=false; tabInfo=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -263,11 +259,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(tabRouterOutletHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=true; tabInfo=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=true; tabInfo=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -334,11 +326,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(tabInfoHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=false; tabInfo=true">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); tabNgTemplate=false; tabRouterOutlet=false; tabInfo=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>

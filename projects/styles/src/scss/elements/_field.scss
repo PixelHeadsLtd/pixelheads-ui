@@ -42,7 +42,8 @@
     p {
       color: _colour(alert-info-body);
     }
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       margin: 0 .25rem 0 0;
       font-size: 1.6rem;
       color: _colour(alert-info-body)

@@ -9,6 +9,11 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class StepperComponent implements OnInit {
 
+  stepperHTML = '';
+  currentIndex = 0;
+  stepComplete: boolean = false;
+  toggleBlade: boolean;
+
   stepperForm = new FormGroup({
     name: new  FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]),
     company: new  FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
@@ -16,8 +21,6 @@ export class StepperComponent implements OnInit {
     postcode: new  FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
     //email: new FormControl('', [Validators.required, Validators.email]),
   });
-
-  stepperHTML = '';
 
   stepsHeader = [
     new StepperData('check', '1', 'Please tell us your name', '', false),
@@ -35,11 +38,6 @@ export class StepperComponent implements OnInit {
 
   stepsHeaderData = this.stepsHeader[0];
   stepContentData = this.stepsContent[0];
-
-  currentIndex = 0;
-  stepComplete: boolean = false;
-
-  toggleBlade: boolean;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

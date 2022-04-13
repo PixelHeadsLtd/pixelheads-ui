@@ -34,7 +34,8 @@
                     align-items: center;
                     text-align: center;
 
-                    &.material-icons {
+                    &.material-icons,
+                    &.material-icons-outlined {
                         z-index: 1;
                         font-size: _font(size-regular);
                         background-color: _palette(aa-green-100);

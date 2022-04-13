@@ -11,8 +11,10 @@ export class OverlayComponent implements OnInit {
   
   showOverlay: boolean;
   obi: boolean;
-  public activeTab: TabNavigationItemComponent;
-  public selectedIndex: number = null;
+  activeTab: TabNavigationItemComponent;
+  selectedIndex: number = null;
+  toggleBlade: boolean;
+  imgPath = "./assets/images/samples/obi-wan.png"
 
   constructor() { }
   
@@ -33,34 +35,6 @@ export class OverlayComponent implements OnInit {
   setIndex(index: number) {
     this.selectedIndex = index;
   }
-  
-  imgPath = "./assets/images/samples/obi-wan.png"
-
-  overlayHTML = 
-  `<aa-overlay 
-  [showOverlay]="showOverlay"
-  zIndex="999"
->
-  <ng-container overlay-header>
-    Your content...
-  </ng-container>
-  <ng-container overlay-content>
-    Your content...
-  </ng-container>
-</aa-overlay>`;
-  
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
-  }
-  
-  toggleBlade: boolean;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

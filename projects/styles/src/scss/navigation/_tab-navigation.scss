@@ -15,12 +15,14 @@
   padding-left: 1.5rem;
 
   .tab-count {
-    background-color: _colour(primary);
+    background-color: _colour(aa-light-blue-100);
     color: _colour(body-text-reverse);
     border-radius: .25rem;
     font-size: _font(size-tiny);
     padding: .18rem;
     margin: 0 0 0 .25rem;
+    min-width: .9rem;
+    text-align: center;
   }
 
   &.tab-navigation-right {
@@ -40,7 +42,7 @@
       a {
         margin: 0 2rem 0 0;
         padding: .5rem 0 0 0;
-        min-height: 2.7rem;
+        min-height: 2.6rem;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -57,7 +59,8 @@
           color: _colour(link);
         }
       }
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         font-size: _font(size-medium);
         margin-left: .25rem;
       }
@@ -73,7 +76,7 @@
           background-color: _colour(bg);
         }
       }
-      span:not(.material-icons, .tab-count) {
+      span:not(.material-icons, .material-icons-outlined, .tab-count) {
         font-family: _font(family-medium);
         margin: 0 2rem 0 0;
       }
@@ -93,7 +96,8 @@
   padding: 1rem 1rem 0;
 
   button {
-    &.material-icons {
+    &.material-icons,
+    &.material-icons-outlined {
       background-color: _colour(bg-secondary);
       color: _colour(primary);
     }
@@ -111,7 +115,8 @@
   }
   
   .toggle-fullscreen {
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       color: _colour(heading-1);
     }
   }
@@ -131,7 +136,8 @@
         border-bottom: none;
         margin: 0;
         padding: 1rem 0 .5rem 0;
-        .material-icons {
+        .material-icons,
+        .material-icons-outlined {
           display: none;
         }
       }
@@ -225,8 +231,11 @@
     .aa-tooltip, .number {
       display: none;
     }
-    button.material-icons {
-      margin-top: .5rem;
+    button {
+      &.material-icons,
+      &.material-icons-outlined {
+        margin-top: .5rem;
+      }
     }
     .progress-circle {
       display: inline-block;

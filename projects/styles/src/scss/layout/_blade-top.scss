@@ -10,7 +10,8 @@
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       color: _palette(white);
       background-color: _palette(aa-blue-100);
     }
@@ -74,7 +75,8 @@
     }
     
     button {
-      &.material-icons {
+      &.material-icons,
+      &.material-icons-outlined {
         &:hover, &:focus {
           background-color: _palette(aa-light-blue-100);
         }

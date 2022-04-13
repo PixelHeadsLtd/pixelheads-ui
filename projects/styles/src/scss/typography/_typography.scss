@@ -40,6 +40,10 @@ table, p {
   font-style: _font(style-italic);
 }
 
+.strikethrough {
+  text-decoration: line-through;
+}
+
 // will need to set a max-width in conjunction with .ellipsis
 .ellipsis {
     text-overflow: ellipsis;

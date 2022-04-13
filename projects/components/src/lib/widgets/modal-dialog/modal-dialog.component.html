@@ -1,0 +1,26 @@
+<article class="aa-modal">
+    <div 
+      class="aa-modal-container" 
+      [ngClass]="{'green':green, 'orange':orange, 'red':red, 'blue':blue}"
+      [ngStyle]="{
+        'top' : topPos,
+        'right' : rightPos,
+        'left' : leftPos,
+        'min-width' : minWidth,
+        'max-width' : maxWidth,
+        'z-index' : zIndex
+      }"
+    >
+      <section class="aa-modal-header">
+        <h2 class="boxed align-center">{{heading}}</h2>
+      </section>
+      <section class="aa-modal-content">
+        {{message}}
+        <ng-content></ng-content>
+      </section>
+      <section class="aa-modal-footer flex-group flex-center">
+        <button (click)="closeMe()" class="cancel">Close</button>
+        <button (click)="confirm()" class="primary">Confirm</button>
+      </section>
+    </div>
+  </article>

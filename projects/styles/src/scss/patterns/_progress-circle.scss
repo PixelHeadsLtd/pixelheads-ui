@@ -18,7 +18,8 @@
       padding: 1rem 0;
       border-bottom: 1px solid _colour(border-box);
 
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         position: absolute;
         right: .25rem;
         top: .75rem;

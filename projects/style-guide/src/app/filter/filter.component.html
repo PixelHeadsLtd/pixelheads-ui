@@ -10,6 +10,10 @@
       <div class="describe margin-bottom-1">
         <p>The filter can be hidden by default. If this is the case, please use
           the <a routerLink="/buttons">filter button</a> to toggle the filter.
+          <strong class="aa-red-100">Please remember to place the filter inbetween the 
+            'control-bar' and the 'content-container'. For details, 
+            please refer to the <a routerLink="/page-layout-examples">Page layout examples</a>
+          </strong>
         </p>
       </div>
       <aa-button 
@@ -52,14 +56,10 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(filterHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
-          <span class="material-icons">visibility</span><span>View gist</span>
-        </button>
-      </nav>
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFilter=true; showFilterLeft=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
   </section>
   <article *ngIf="!toggleFilter" class="flex-group flex-start filter-container padding-1-25 padding-top-0">
     <div class="field">
@@ -130,6 +130,112 @@
       <aa-button [buttonText]="'Clear'" [buttonId]="'buttonClear'" [buttonClass]="'cancel margin-top-1'" [disabled]="''"></aa-button>
     </div>
   </article>
+
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2 class="boxed">Filter left</h2>
+        <div class="describe margin-bottom-1">
+          <p>Filter left can be useful for displaying the page in in two columns, 
+            it also reducuces vertical page scrolling. <strong class="aa-red-100"> Place this filter inside your 'content-container' adding the 
+              class names 'padding-left-0 flex-group flex-start'</strong>. This will push the filter over to the left side so there is no left spacing 
+              on the page whilst also setting up your container to display it's contents horizontally using flex. You're right side content 
+              will need to be wrapped in some container. You'll need to set the filter to be a lot narrower than your right-side content, to 
+              do this use a flex value on each, for example 'flex-1' for the filter and 'flex-5' for the right-side content. 
+              <strong class="aa-red-100">See the <a routerLink="/flex">Flex section</a> for more details.</strong>
+            </p>
+        </div>
+  
+        <div class="padding-1-25 bg-aa-grey-5">
+          <h2>Details</h2>
+          <div class="field boxed">
+            <label for="name">Name</label>
+            <input type="text" name="name" />
+          </div>
+          <div class="field">
+            <label for="dept">Department</label>
+            <select name="dept" id="dept">
+              <option value="" selected>Please select</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="country">Country</label>
+            <select name="country" id="country">
+              <option value="" selected>Please select</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="year">Year</label>
+            <select name="year" id="year">
+              <option value="" selected>Please select</option>
+            </select>
+          </div>
+          <div class="flex-group flex-start">
+            <aa-button 
+              (buttonClick)="onClick()" 
+              fieldClass="label-hidden" 
+              buttonClass="primary" 
+              buttonId="" 
+              buttonLabel="Primary"
+              buttonText="Search" 
+              disabled=""
+            >
+            </aa-button>
+            <aa-button 
+              (buttonClick)="onClick()" 
+              fieldClass="label-hidden" 
+              buttonClass="cancel" 
+              buttonId="" 
+              buttonLabel="Cancel"
+              buttonText="Reset" 
+              disabled=""
+            >
+            </aa-button>
+          </div>
+        </div>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Page content container section</td>
+              <td datalabel="Attribute">Class name</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.content-container .flex-group .flex-start</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Left-side nested filter div</td>
+              <td datalabel="Attribute">Class names</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.flex-1 .padding-1-25 .bg-aa-grey-5</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Right-side content container div</td>
+              <td datalabel="Attribute">Class names</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.flex-5</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFilter=false; showFilterLeft=true">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
 </section>
 
 <aa-blade 
@@ -145,7 +251,13 @@
     (close)="toggleBlade = false"
   >
   <article class="blade-content">
-    <app-gist src="angloux/3102c4fe214b14c9778de2908a2caccc"></app-gist>
-    <a href="https://gist.github.com/angloux/3102c4fe214b14c9778de2908a2caccc" target="_blank">View Gist on GitHub</a>
+    <div *ngIf="showFilter">
+      <a href="https://gist.github.com/angloux/3102c4fe214b14c9778de2908a2caccc" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/3102c4fe214b14c9778de2908a2caccc"></app-gist>
+    </div>
+    <div *ngIf="showFilterLeft">
+      <a href="https://gist.github.com/angloux/348f9ee97ea749ec31fed4bb80868f28" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/348f9ee97ea749ec31fed4bb80868f28"></app-gist>
+    </div>
   </article>
 </aa-blade>

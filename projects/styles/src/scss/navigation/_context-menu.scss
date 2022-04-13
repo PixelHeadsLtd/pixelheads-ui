@@ -1,6 +1,7 @@
 .context-menu {
     position: relative;
-    button.material-icons {
+    button.material-icons,
+    button.material-icons-outlined {
         background-color: transparent;
         border-radius: 50%;
         width: 1.25rem;

@@ -48,7 +48,7 @@
                 </aa-button>
             </div>
 
-            <aa-toastr>
+            <aa-toastr [zIndex]="10">
                 <aa-toastr-item
                     (closeToastr)="triggerToastr; error=false"
                     [showToastr]="error" 
@@ -103,6 +103,12 @@
                         <td datalabel="Default">N/A</td>
                     </tr>
                     <tr>
+                        <td datalabel="Element">aa-toastr</td>
+                        <td datalabel="Attribute">zIndex</td>
+                        <td datalabel="Type">Number</td>
+                        <td datalabel="Default">10</td>
+                    </tr>
+                    <tr>
                         <td datalabel="Element">aa-toastr-item</td>
                         <td datalabel="Attribute">(closeToastr)</td>
                         <td datalabel="Type">Function</td>
@@ -138,10 +144,7 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons small bg-aa-light-blue-100" (click)="copyToClipboard(toastrHTML)">
-                <span class="material-icons">content_copy</span><span>Copy component</span>
-            </button>
-            <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
@@ -160,8 +163,8 @@
         (close)="toggleBlade = false"
     >
         <article class="blade-content">
-            <app-gist src="angloux/1cc8971c036b29d7c76a36ec92b7e583"></app-gist>
             <a href="https://gist.github.com/angloux/1cc8971c036b29d7c76a36ec92b7e583" target="_blank">View Gist on GitHub</a>
+            <app-gist src="angloux/1cc8971c036b29d7c76a36ec92b7e583"></app-gist>
         </article>
     </aa-blade>
 

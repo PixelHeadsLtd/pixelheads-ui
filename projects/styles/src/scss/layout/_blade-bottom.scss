@@ -106,12 +106,14 @@
   padding: 0 0 0 1.25rem;
   height: 2.25rem;
 
-  .material-icons {
+  .material-icons,
+  .material-icons-outlined {
     font-size: 1.5rem;
   }
 
   .controls {
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: _font(size-medium);
 
       &:last-child {

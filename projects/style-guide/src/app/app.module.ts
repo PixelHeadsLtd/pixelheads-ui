@@ -5,9 +5,9 @@ import {
   NavigationModule,
   PatternsModule,
   WidgetsModule,
-  DirectivesModule,
+  DirectivesModule
 } from '@angloamerican/components';
-
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -37,6 +37,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { DashboardFavouritesComponent } from './dashboard-favourites/dashboard-favourites.component';
+import { dateFormatPipe } from '../pipes/date-pipe';
 import { EditorialComponent } from './editorial/editorial.component';
 import { FieldComponent } from './field/field.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
@@ -45,7 +46,6 @@ import { FilterComponent } from './filter/filter.component';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { FlexComponent } from './flex/flex.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormElementsComponent } from './form-elements/form-elements.component';
 import { IconsComponent } from './icons/icons.component';
 import { InputComponent } from './input/input.component';
 import { InputTextareaComponent } from './input-textarea/input-textarea.component';
@@ -57,6 +57,9 @@ import { MarkupComponent } from './markup/markup.component';
 import { ModalComponent } from './modal/modal.component';
 import { OverlayComponent } from './overlay/overlay.component';
 import { TabNavigationComponent } from './tab-navigation/tab-navigation.component';
+import { TabPageOneComponent } from './tab-page-one/tab-page-one.component';
+import { TabPageTwoComponent } from './tab-page-two/tab-page-two.component';
+import { TabPageThreeComponent } from './tab-page-three/tab-page-three.component'
 import { PaddingComponent } from './padding/padding.component';
 import { DlPopoverComponent } from './popover/popover.component';
 import { PageLayoutExamplesComponent } from './page-layout-examples/page-layout-examples.component';
@@ -76,27 +79,27 @@ import { TagsComponent } from './tags/tags.component';
 import { TreeMenuComponent } from './tree-menu/tree-menu.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
-import { ButtonIconComponent } from './button-icon/button-icon.component';
 import { WidthsComponent } from './widths/widths.component';
 import { NavContextComponent } from './nav-context/nav-context.component';
 import { NgbDatepickerComponent } from './ngb-datepicker/ngb-datepicker.component';
 import { NgSelectComponent } from './ng-select/ng-select.component';
 import { HtmlEmailComponent } from './html-email/html-email.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
-import { FieldValidationComponent } from './field-validation/field-validation.component';
+import { ValidationComponent } from './validation/validation.component';
 import { IconPickerComponent } from './icon-picker/icon-picker.component';
 import { InfoPanelComponent } from './info-panel/info-panel.component';
 import { ElementsAlignmentComponent } from './elements-alignment/elements-alignment.component';
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { HighlightDirective } from '../directives/highlight.directive';
 import { SliderComponent } from './slider/slider.component';
-import { NavCoreComponent } from './nav-core/nav-core.component';
 import { HeaderComponent } from './header/header.component';
 import { AvatarComponent } from './ag-grid/avatar.component'
 import { EllipsisContextMenuComponent } from './ag-grid/ellipsis-context-menu/ellipsis-context-menu.component';
 import { ToastrComponent } from './toastr/toastr.component';
 import { TreeComponent } from './tree-menu/tree/tree.component';
-import { CommentsComponent } from './comments/comments.component'
+import { CommentsComponent } from './comments/comments.component';
+import { ModalService } from 'projects/components/src/lib/widgets/services/modal-service/modal.service';
+import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-dialog/modal-dialog.component';
 
 @NgModule({
   declarations: [
@@ -121,13 +124,13 @@ import { CommentsComponent } from './comments/comments.component'
     ColoursComponent,
     ContextMenuComponent,
     DashboardFavouritesComponent,
+    dateFormatPipe,
     EditorialComponent,
     FilterComponent,
     FilterPipe,
-    FormElementsComponent,
     FlexComponent,
     FieldComponent,
-    FieldValidationComponent,
+    ValidationComponent,
     FieldsetComponent,
     FileUploadComponent,
     FooterComponent,
@@ -138,12 +141,14 @@ import { CommentsComponent } from './comments/comments.component'
     MarginComponent,
     MarkupComponent,
     ModalComponent,
-    NavCoreComponent,
     OverlayComponent,
     LandingPageComponent,
     LoadingSpinnerComponent,
     LoadingSpinnerPageComponent,
     TabNavigationComponent,
+    TabPageOneComponent,
+    TabPageTwoComponent,
+    TabPageThreeComponent,
     PageLayoutExamplesComponent,
     PaddingComponent,
     ProgressIndicatorComponent,
@@ -162,7 +167,6 @@ import { CommentsComponent } from './comments/comments.component'
     TreeMenuComponent,
     TypographyComponent,
     TooltipComponent,
-    ButtonIconComponent,
     WidthsComponent,
     NavContextComponent,
     NgbDatepickerComponent,
@@ -183,6 +187,7 @@ import { CommentsComponent } from './comments/comments.component'
     ToastrComponent,
     TreeComponent,
     CommentsComponent,
+    ModalDialogComponent
   ],
   imports: [
     FormsModule,
@@ -200,12 +205,13 @@ import { CommentsComponent } from './comments/comments.component'
     NavigationModule,
     PatternsModule,
     WidgetsModule,
+    DragDropModule,
     AgGridModule.withComponents([CustomTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
-  providers: [],
+  providers: [ModalService],
   bootstrap: [AppComponent],
   entryComponents: [
-    EllipsisContextMenuComponent
-  ]
+    EllipsisContextMenuComponent, ModalDialogComponent
+  ],
 })
 export class AppModule {}

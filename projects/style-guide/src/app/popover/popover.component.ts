@@ -7,48 +7,20 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./popover.component.scss']
 })
 export class DlPopoverComponent implements OnInit {
+
   @ViewChild(PopoverComponent) popOver: PopoverComponent;
-  
+  toggleBlade: boolean;
+
   constructor() { }
-  
-  popoverHTML =
-  `<aa-popover 
-  btnLabel="Show popover" 
-  leftPos="0" 
-  topPos="5.5"
-  width="20"
->
-  <ng-container call-to-action>
-  <div class="field label-transparent">
-    <label>Edit name</label>
-    <button class="primary">Edit name</button>
-  </div>
-  </ng-container>
-  <ng-container custom-content>
-    Your popover content here...
-  </ng-container>
-</aa-popover>`;
-  
+
   public togglePopover() {
     this.popOver.close();
   }
-  
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
-  }
-  
-  toggleBlade: boolean;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-  
+
   ngOnInit() {}
+
 }

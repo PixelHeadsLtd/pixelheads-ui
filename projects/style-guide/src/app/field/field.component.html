@@ -1,5 +1,6 @@
-<section class="control-bar">
+<section class="control-bar flex-group space-between">
   <h1>Field</h1>
+  <aa-alert alertClass="error" alertText="All form inputs must be wrapped in div.field"></aa-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -16,41 +17,6 @@
         <div class="field">
           <label for="text-input-1">Field</label>
           <input type="text" name="text-input-1" id="text-input-1" placeholder="Field" />
-        </div>
-        <div class="field optional">
-          <label for="text-input-1">Field optional</label>
-          <input type="text" name="text-input-1" id="text-input-1" placeholder="Field" />
-        </div>
-        <div class="field">
-          <label for="text-input-1">Field readonly</label>
-          <input readonly type="text" name="text-input-1" id="text-input-1" placeholder="Readonly" />
-        </div>
-        <div class="field">
-          <label for="text-input-1">Confirmation dialog</label>
-          <input type="text" placeholder="Test" />
-          <article class="confirmation flex-group">
-            <div class="flex-group flex-start flex-2">
-              <div class="material-icons flex-1">error_outline</div>
-              <p class="small flex-4">
-                This field must be completed in English. Would you also<br/>
-                like to enter this information in your native language?
-              </p>
-            </div>
-            <div class="flex-group flex-end flex-1">
-              <div class="field radio small">
-                <label [ngClass]="{'checked': myRadios==='yes'}">
-                  <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="yes">
-                  <span>Yes</span>
-                </label>
-              </div>
-              <div class="field radio small">
-                <label [ngClass]="{'checked': myRadios==='no'}">
-                  <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="no">
-                  <span>No</span>
-                </label>
-              </div>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -91,11 +57,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(fieldHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showField=true; showFieldSmall=false; showFieldInline=false; showDate=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showField=true; showFieldSmall=false; showFieldInline=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -151,11 +113,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(fieldSmallHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldSmall=true; showField=false; showFieldInline=false; showDate=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldSmall=true; showField=false; showFieldInline=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -204,85 +162,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(fieldInlineHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldInline=true; showField=false; showFieldSmall=false; showDate=false;">
-            <span class="material-icons">visibility</span><span>View gist</span>
-          </button>
-        </nav>
-    </section>
-        
-    <!-- start content repeater -->
-    <section class="content-repeater flex-group">
-      <section class="flex-1 col-left flex-start">
-        <h2>Field date picker</h2>
-        <div class="describe margin-bottom-1">
-          <p>For date-pickers, use the 
-            <a href="https://ng-bootstrap.github.io/#/components/datepicker/examples" target="_blank">NGB datepicker</a> 
-            along with our markup which is styled specifically to match our branding.</p>
-        </div>
-        <div class="flex-group">
-          <div class="field">
-            <label for="text-input-2">Date</label>
-            <div class="date-picker">
-              <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" />
-              <button class="material-icons">date_range</button>
-            </div>
-          </div>
-          
-          <div class="field">
-            <label for="text-input-2">Date readonly</label>
-            <div class="date-picker">
-              <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" readonly />
-              <button class="material-icons">date_range</button>
-            </div>
-          </div>
-        </div>
-      </section>
-        
-      <section class="flex-2 col-right flex-start">
-        <table class="half-width">
-          <caption>Attributes</caption>
-          <thead>
-            <tr>
-              <th>Element</th>
-              <th>Attribute</th>
-              <th>Type</th>
-              <th>Default</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td datalabel="Element">Div</td>
-              <td datalabel="Attribute">.field</td>
-              <td datalabel="Type">Class</td>
-              <td datalabel="Default">.field</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Child div</td>
-              <td datalabel="Attribute">.date-picker</td>
-              <td datalabel="Type">Class</td>
-              <td datalabel="Default">.date-picker</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Child div button</td>
-              <td datalabel="Attribute">.material-icons</td>
-              <td datalabel="Type">String</td>
-              <td datalabel="Default">date_range</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      
-      <!-- mini menu -->
-      <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(dateHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showDate=true; showFieldSmall=false; showFieldInline=false; showField=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldInline=true; showField=false; showFieldSmall=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -314,9 +194,5 @@
       <app-gist src="angloux/717cc6a05b0488023d85920201771e98"></app-gist>
       <a href="https://gist.github.com/angloux/717cc6a05b0488023d85920201771e98" target="_blank">View Gist on GitHub</a>
     </div>
-    <div *ngIf="showDate">
-      <app-gist src="angloux/c137711141d9d093475458e9dbc16709"></app-gist>
-      <a href="https://gist.github.com/angloux/c137711141d9d093475458e9dbc16709" target="_blank">View Gist on GitHub</a>
-    </div> 
   </article>
 </aa-blade>

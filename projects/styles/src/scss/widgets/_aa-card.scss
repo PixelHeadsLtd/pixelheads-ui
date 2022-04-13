@@ -225,13 +225,14 @@
         border:none;
     }
     
-    h5, div:not(.material-icons) {
+    h5, div:not(.material-icons, .material-icons-outlined) {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: _font(size-medium);
       margin-right: 1.25rem;
       color: _colour(icons-light);

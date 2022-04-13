@@ -35,22 +35,22 @@ select:not(.custom-select) {
     -webkit-text-fill-color: _colour(body-text);
     -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
   }
-  
+
+  &[aria-readonly=true],
+  &[readonly],
   &[aria-disabled=true],
   &[disabled] {
-    border: none;
-    border-bottom: 1px solid _colour(readonly);
-    border-radius: 0;
+    background-color: _colour(readonly);
+    background-image: none;
+    border-style: dashed;
     cursor: not-allowed;
-    
     option {
-      display: none;
+      display: none!important;
     }
     
     &:focus {
-      border: none;
-      border-bottom: 1px solid _colour(readonly);
-      box-shadow: none;
+      border-color: _colour(border-input)!important;
+      box-shadow: none!important;
     }
   }
 }

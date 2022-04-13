@@ -1,11 +1,13 @@
 .nav-core {
   width: 16rem;
   position: fixed;
-  top: 3.75rem;
+  z-index: 10;
+  top: 3.5rem;
   bottom: 0;
   left: 0;
+  padding-bottom: 4rem;
   background-color: _colour(lh-nav-bg-primary);
-  border-right: 1px solid _colour(lh-nav-border-primary);
+  border-right: 1px solid _colour(lh-nav-border-secondary);
   transition: all .25s linear;
   box-shadow: 0 4px 8px _colour(lh-nav-shadow);
   ::-webkit-scrollbar {
@@ -13,115 +15,172 @@
   }
 
   &.minimize-menu {
-    width: 5.25rem;
+    width: 5.05rem;
     button {
-      &.material-icons {
+      &.material-icons,
+      &.material-icons-outlined {
         transform: rotate(180deg);
       }
     }
-    span {
-      &:not(.material-icons) {
-        display: none;
-      }
+
+    span:not(.material-icons, .material-icons-outlined),
+    a:after,
+    .nav-min-max div {
+        opacity: 0;
+        transition: all .25s linear;
     }
-    a {
-      &:after {
-        right: .65rem;
-        width: .4rem;
-        height: .4rem;
-      }
+
+    .nav-min-max div {
+      max-width: 1rem
     }
   }
   
-  // global
+  // ---------------------------- GLOBAL STYLES ----------------------------
   ul, li {list-style: none; padding:0; margin: 0;}
+  
   a {
     text-decoration: none; 
     cursor: pointer; 
     padding: .325rem .5rem .325rem 1.5rem; 
-    color: _colour(lh-nav-text-primary)
+    color: _colour(lh-nav-text-primary);
+
+    span {
+      &.material-icons, 
+      &.material-icons-outlined {
+        position: absolute;
+      }
+    }
   }
+  
   span {
     vertical-align: top;
-    &:not(.material-icons) {
-      display: inline-block; 
+    &:not(.material-icons, .material-icons-outlined) {
       max-width: 9.25rem;
-      padding-top: .5rem;
+      opacity: 1;
+      transition: all .5s linear;
+    }
+    &.small {
+      font-size: _font(size-small);
+      margin-top: .12rem;
     }
   }
 
+  // -------------------------------- PARENT UL ---------------------------
   > ul {
-    // perent ul styles
     overflow-y: auto;
-    height: 87vh;
+    height: 100%;
 
-    // parent li
+    // ------------------------------ PARENT LI ---------------------------
     > li {
       overflow: hidden;
       
-      // child ul styles
-      ul {
-        transition: all .25s linear;
-        //margin-top: -50rem;
-        max-height: 0;
-        
-        // child li, material-icon and anchor
-        li {
-          &:last-child {
-            a {
-              border-bottom: none;
-            }
-          }
-          a {
-            padding: .25rem .5rem .25rem 1.25rem;
-            border-bottom: 1px solid _colour(lh-nav-border-secondary);
-            
-            &.active {
-              background-color: _colour(lh-nav-active);
-            }
-            span {
-              &:not(.material-icons) {
-                padding-top: .25rem;
-              }
-              &.material-icons {
-                font-size: _font(size-medium);
-                padding-left: .6rem;
-                margin-right: 1.25rem;
-              }
-            }
-           
-          }
-        }
-      }
-      
-      // selected chevron styles and animation
-      &.expanded {
-        a {
-          &::after {
-            transform: rotate(135deg);
-            transition: all .25s linear;
-            top: 1rem;
-          }
-        }
-        ul {
-          transition: all .25s linear;
-          max-height: unset;
-        }
-      }
-      
-      // parent anchor, material-icons and chevron
+      // -------------------------- PARENT ANCHOR -------------------------
       > a {
         position: relative;
-        display: inline-block;
+        min-height: 2.75rem;
         width: 100%;
-        background-color: _colour(lh-nav-bg-secondary);
         font-family: _font(family-medium);
         border-bottom: 1px solid _colour(lh-nav-border-primary);
+        box-shadow: 0 8px 20px rgb(0 39 118 / 15%);
+
+        span:not(.material-icons, .material-icons-outlined) {
+          margin-left: 2.75rem;
+        }
+
+        // PARENT ANCHOR & SIBLING UL - (EXPANDED, HOVER AND SELECTED COLOURS)
+        // red
+        &.red:hover, 
+        &.red.expanded,
+        &.red.expanded + ul li a:hover,
+        &.red.expanded + ul li a.selected {background-color: _colour(tinted-red)}
+        &.red.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-red-100)}
+        &.red + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-red-100)}}
+        &.red:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-red-100)}}
+        &.red:not(.expanded, :hover).reversed {background-color: transparent}
+        &.red.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-red-50)}}
+        // green
+        &.green:hover, 
+        &.green.expanded,
+        &.green.expanded + ul li a:hover,
+        &.green.expanded + ul li a.selected {background-color: _colour(tinted-green)}
+        &.green.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-green-100)}
+        &.green + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-green-100)}}
+        &.green:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-green-100)}}
+        &.green:not(.expanded, :hover).reversed {background-color: transparent}
+        &.green.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-green-50)}}
+        // blue
+        &.blue:hover, 
+        &.blue.expanded,
+        &.blue.expanded + ul li a:hover,
+        &.blue.expanded + ul li a.selected {background-color: _colour(tinted-blue)}
+        &.blue.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-blue-100)}
+        &.blue + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-blue-100)}}
+        &.blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-blue-100)}}
+        &.blue:not(.expanded, :hover).reversed {background-color: transparent}
+        &.blue.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-blue-50)}}
+        // orange
+        &.orange:hover, 
+        &.orange.expanded,
+        &.orange.expanded + ul li a:hover,
+        &.orange.expanded + ul li a.selected {background-color: _colour(tinted-orange)}
+        &.orange.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-orange-100)}
+        &.orange + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-orange-100)}}
+        &.orange:not(.reversed) .material-icons {background-color: _palette(aa-orange-100)}
+        &.orange:not(.expanded, :hover).reversed {background-color: transparent}
+        &.orange.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-orange-50)}}
+        // plum
+        &.plum:hover, 
+        &.plum.expanded,
+        &.plum.expanded + ul li a:hover,
+        &.plum.expanded + ul li a.selected {background-color: _colour(tinted-plum)}
+        &.plum.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-plum-100)}
+        &.plum + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-plum-100)}}
+        &.plum:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-plum-100)}}
+        &.plum:not(.expanded, :hover).reversed {background-color: transparent}
+        &.plum.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-plum-50)}}
+        // light-blue
+        &.light-blue:hover, 
+        &.light-blue.expanded,
+        &.light-blue.expanded + ul li a:hover,
+        &.light-blue.expanded + ul li a.selected {background-color: _colour(tinted-light-blue)}
+        &.light-blue.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-light-blue-100)}
+        &.light-blue + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-light-blue-100)}}
+        &.light-blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-light-blue-100)}}
+        &.light-blue:not(.expanded, :hover).reversed {background-color: transparent}
+        &.light-blue.reversed {.material-icons, .material-icons {color: _palette(aa-light-blue-50)}}
+        // burgundy
+        &.burgundy:hover, 
+        &.burgundy.expanded,
+        &.burgundy.expanded + ul li a:hover,
+        &.burgundy.expanded + ul li a.selected {background-color: _colour(tinted-burgundy)}
+        &.burgundy.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-burgundy-100)}
+        &.burgundy + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-burgundy-100)}}
+        &.burgundy:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-burgundy-100)}}
+        &.burgundy:not(.expanded, :hover).reversed {background-color: transparent}
+        &.burgundy.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-burgundy-50)}}
+      
+        &.expanded {
+            &::after {
+              transform: rotate(135deg);
+              transition: all .25s linear;
+              top: 1rem;
+            }
+          
+          + ul {
+            transition: all .25s linear;
+          }
+        }
+
+        &:hover {
+          background-color: _colour(bg-feature-box-solid);
+        }
+
         &.hide-chevron {
           &::after {
             display: none;
           }
         }
+
         &:after {
           content: '';
           position: absolute;
@@ -134,7 +193,9 @@
           transform: rotate(-45deg);
           transition: all .25s linear;
         }
-        span.material-icons {
+
+        span.material-icons,
+        span.material-icons-outlined {
           border-radius: 50%;
           width: 2rem;
           height: 2rem;
@@ -145,16 +206,85 @@
           line-height: 1.5rem;
         }
       }
+
+      // PARENT ANCHOR - (DESIGN LANGUAGE ONLY - SETTING WHITE BG COLOUR ON MENU ITEMS)
+      > a {
+        background-color: _colour(lh-nav-bg-secondary);
+      }
+
+      // ---------------------------- CHILD UL ----------------------------
+      ul {
+        transition: all .25s linear;
+        max-height: 0;
+        
+        // CHILD LI
+        li {
+          // CHILD ANCHOR
+          a {
+            position: relative;
+            padding: .5rem .5rem .5rem 1.25rem;
+            border-bottom: 1px solid _colour(lh-nav-border-secondary);
+            &:hover,
+            &.selected {
+              .material-icons,
+              .material-icons-outlined {
+                font-size: 1.6rem; 
+                padding-left: .44rem;
+                padding-top: .075rem;
+                opacity: 1;
+              }
+            }
+            span {
+              &.material-icons,
+              &.material-icons-outlined {
+                opacity: .4;
+                transition: all .25s linear; 
+                font-size: _font(size-medium);
+                padding-left: .6rem;
+                margin-right: 1.15rem;
+                &.rotate {
+                  transform: rotate(180deg);
+                  padding-left: 0;
+                  margin-left: .6rem;
+                }
+              }
+              &:not(.material-icons, .material-icons-outlined) {
+                margin-left: 3rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 10.75rem;
+              }
+            }
+          }
+        }
+      }
     }
   }
   
-  button {
-    &.material-icons {
-      position: absolute;
-      bottom: 1rem;
-      right: 1rem;
-      color: _colour(body-text);
-      background-color: transparent;
+  .nav-min-max {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    padding: 0 .5rem 0 1.5rem;
+    font-size: _font(size-small);
+    div {
+      color: _palette(aa-green-100);
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    button {
+      &.material-icons,
+      &.material-icons-outlined {
+        color: _colour(body-text);
+        background-color: transparent;
+      }
+      &:hover {
+        background-color: transparent!important;
+        color: _colour(body-text)!important;
+      }
     }
   }
 }

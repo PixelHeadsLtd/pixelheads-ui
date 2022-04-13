@@ -1,9 +1,9 @@
-.accordion-container {
-   background-color: _colour(white);
+.accordion-container:not(.blade .accordion-container) {
    border-radius: .25rem;
-   margin-bottom: .75rem;
+   margin-bottom: .5rem;
 
    .accordion-trigger {
+      height: 3rem;
       background-color: _colour(bg-accordion);
       border: none;
       border-radius: .25rem;
@@ -12,6 +12,11 @@
       padding: 0 1rem 0 .75rem;
       width: 100%;
 
+      .toggle-icons,
+      .nested-icons {
+         display: none;
+      }
+
       &.disabled {
          background-color: _colour(bg-accordion-disabled);
          &:hover {
@@ -19,6 +24,7 @@
             background-color: _colour(bg-accordion-disabled)!important;
          }
          .material-icons,
+         .material-icons-outlined,
          .accordion-heading {
             color: _colour(body-text);
             opacity: .5;
@@ -37,50 +43,59 @@
          border-radius: .25rem .25rem 0 0;
       }
 
-     &:focus {
-       outline: 0;
-       border: none;
-       box-shadow: none;
-     }
+      &:focus {
+         outline: 0;
+         border: none;
+         box-shadow: none;
+      }
      
-     &.clean {
-        background-color: _colour(bg-accordion-clean);
-        padding-left: 0;
-        
-        .accordion-icon {
-           width: 1.75rem;
-           height: 1.75rem;
-           margin-right: .5rem;
-           margin-left: .75rem;
-           border-radius: 50%;
-           color: _palette(white);
-           font-size: _font(size-default);
-           text-align: center;
-           line-height: 1.75rem;
-           padding-left: .05rem;
+      &.clean {
+         background-color: _colour(bg-accordion-clean);
+         border: 1px solid _colour(border-subtle);
+         padding-left: 0;
+         
+         .accordion-icon {
+            width: 1.75rem;
+            height: 1.75rem;
+            margin-right: .5rem;
+            margin-left: .75rem;
+            border-radius: 50%;
+            color: _palette(white);
+            font-size: _font(size-default);
+            text-align: center;
+            line-height: 1.75rem;
+            padding-left: .05rem;
 
-           &.fab {
-            font-size: _font(size-regular);
-           }
+            &.fab {
+               font-size: _font(size-regular);
+            }
 
-           &.material-icons {
-            font-size: _font(size-medium);
-           }
-        }
-     }
+            &.material-icons,
+            &.material-icons-outlined {
+               font-size: _font(size-medium);
+            }
+         }
+      }
    }
 
-   .accordion-icon {
-     color: _colour(heading-1);
-     font-size: 1.75rem;
-      float: left;
+   .accordion-icon:not(.drag-icon) {
+      color: _colour(heading-1);
+      font-size: _font(size-large);
       width: 2.25rem;
+   }
+
+   .drag-icon {
+      font-size: _font(size-medium);
+      margin-right: .25rem;;
+   }
+
+   .toggle-chevrons {
+      color: _palette(aa-blue-100);
    }
 
    .accordion-heading {
       color: _colour(heading-1);
       font-size: 1rem;
-      letter-spacing: -.0015rem;
       margin-left: .25rem;
    }
 

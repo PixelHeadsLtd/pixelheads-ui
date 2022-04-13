@@ -3,6 +3,7 @@ button {
   border-radius: 1.5rem;
   border-width: 1px;
   border-style: solid;
+  flex: none;
   cursor: pointer;
   font-family: _font(family-medium);
   font-size: _font(size-default);
@@ -30,14 +31,16 @@ button {
     
     &.small {
       padding-left: 0;
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         font-size: _font(size-small);
         line-height: 1.5rem;
         width: 1.5rem;
         left: 0;
       }
     }
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: 1.2rem;
       position: absolute;
       left: .25rem;
@@ -52,13 +55,29 @@ button {
   }
   
   // Used for when we want a material-icon to be a button with no text.
-  &.material-icons:not(.page-header .material-icons, .context-menu .material-icons) {
+  &.material-icons:not(
+    .page-header .material-icons, 
+    .context-menu .material-icons
+    ),
+  &.material-icons-outlined:not(
+    .page-header .material-icons-outlined, 
+    .context-menu .material-icons-outlined
+    ) {
     &:focus, &:hover {
       box-shadow: none;
       border: none;
     }
   }
-  &.material-icons:not(.context-menu .material-icons) {
+  &.material-icons:not(
+    .context-menu .material-icons, 
+    .aa-tree .material-icons, 
+    .material-icons.toggle
+    ),
+  &.material-icons-outlined:not(
+    .context-menu .material-icons-outlined, 
+    .aa-tree .material-icons, 
+    .material-icons.toggle
+    ) {
     font-size: 1.15rem;
     padding: .25rem;
     border: none;
@@ -66,6 +85,19 @@ button {
     width: 2rem;
     height: 2rem;
     letter-spacing: -.015rem;
+    flex: none;
+
+    &:hover:not(
+      .date-picker .material-icons, 
+      .aa-toastr .material-icons,
+      .info-panel .material-icons,
+      .date-picker .material-icons-outlined, 
+      .aa-toastr .material-icons-outlined,
+      .info-panel .material-icons-outlined
+      ) {
+      background-color: _colour(primary);
+      color: _palette(aa-white-100);
+    }
 
     &.small {
       width: 1.5rem;
@@ -263,7 +295,7 @@ button {
     }
   }
 
-  &.reject:not(.material-icons) {
+  &.reject:not(.material-icons, .material-icons-outlined) {
     &.small {
       padding-left: 1.75rem;
     }
@@ -277,7 +309,7 @@ button {
       content: "\f057";
     }
   }
-  &.void:not(.material-icons) {
+  &.void:not(.material-icons, .material-icons-outlined) {
     &.small {
       padding-left: 1.75rem;
     }
@@ -291,7 +323,7 @@ button {
       content: '\f057';
     }
   }
-  &.review:not(.material-icons) {
+  &.review:not(.material-icons, .material-icons-outlined) {
     &.small {
       padding-left: 1.5rem;
     }
@@ -301,7 +333,7 @@ button {
       content: '\e933';
     }
   }
-  &.approve:not(.material-icons) {
+  &.approve:not(.material-icons, .material-icons-outlined) {
     @include icon-left-medium;
     @include button-green;
     &.small {
@@ -315,7 +347,7 @@ button {
       content: '\f058';
     }
   }
-  &.return:not(.material-icons) {
+  &.return:not(.material-icons, .material-icons-outlined) {
     &.small {
       padding-left: 1.75rem;
     }
@@ -361,11 +393,11 @@ button {
     background-color: transparent;
     padding: 0;
     &:hover {
-      &:nth-child(2) {background-image: url("#{$icon-path}/face-very-dissatisfied.svg")}
-      &:nth-child(3) {background-image: url("#{$icon-path}/face-dissatisfied.svg")}
+      &:nth-child(2) {background-image: url("#{$icon-path}/face-very-satisfied.svg")}
+      &:nth-child(3) {background-image: url("#{$icon-path}/face-satisfied.svg")}
       &:nth-child(4) {background-image: url("#{$icon-path}/face-neutral.svg")}
-      &:nth-child(5) {background-image: url("#{$icon-path}/face-satisfied.svg")}
-      &:nth-child(6) {background-image: url("#{$icon-path}/face-very-satisfied.svg")}
+      &:nth-child(5) {background-image: url("#{$icon-path}/face-dissatisfied.svg")}
+      &:nth-child(6) {background-image: url("#{$icon-path}/face-very-dissatisfied.svg")}
     }
     &:focus, 
     &:hover {
@@ -457,7 +489,8 @@ button {
 
 .context-menu {
   button {
-    &.material-icons {
+    &.material-icons,
+    &.material-icons-outlined {
       color: _colour(body-text);
     }
   }
@@ -529,7 +562,8 @@ table:not(.table-feature, .table-feature *) {
       &:hover {
         background-color: _colour(lh-hover-bg);
       }
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         font-size: _font(size-regular);
         margin-right: .25rem;
       }

@@ -94,8 +94,6 @@
   }
 }
 
-
-
 .icon-check {
   @include icon-left;
 
@@ -140,27 +138,6 @@
   @include icon-button-small-svg;
   background-image: url("#{$icon-path}/icon-blade-24px-blue.svg");
 }
-
-// .icon-open-accordion {
-//   @include icon-left-small;
-//   color: _palette(grey-50);
-//   &:before {
-//     @include icon-left-before;
-//     content: "\f055";
-//     font-size: .8rem;
-//     color: _colour(body-text);
-//   }
-// }
-
-// .icon-close-accordion {
-//   @include icon-left-small;
-//   &:before {
-//     @include icon-left-before;
-//     content: "\f056";
-//     font-size: .8rem;
-//     color: _colour(body-text);
-//   }
-// }
 
 .icon-number {
   &:before {

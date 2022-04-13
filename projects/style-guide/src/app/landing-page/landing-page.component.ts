@@ -1,6 +1,7 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { TabData } from '../class/tab-data';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,7 +11,6 @@ import { TabData } from '../class/tab-data';
 export class LandingPageComponent implements OnInit {
   
   isSticky: boolean = false;
-  
   showSearch: boolean;
   showSearchResults: boolean;
   inputValue: string;
@@ -19,6 +19,14 @@ export class LandingPageComponent implements OnInit {
   showOverlay: boolean;
   showEmailTemplates: boolean;
   bladeHeading: string;
+  openPageBuilder: boolean;
+  showLeftNav: boolean;
+  showIconPicker: boolean;
+  toggleDataType: boolean;
+  showHeaderPicker: boolean;
+  showHeading: boolean;
+  showBlade: boolean;
+  selectedColor = 'aa-light-blue-100';
   
   stepOne = "./assets/images/samples/email-templates/step1.png";
   stepTwo = "./assets/images/samples/email-templates/step2.png";
@@ -43,8 +51,11 @@ export class LandingPageComponent implements OnInit {
     this.isSticky = window.pageYOffset >= 350;
   }
 
-  constructor() { }
-  
+  selectColor(event: any) {
+    this.selectedColor = event.target.value;
+    this.toggleDataType = false;
+  }
+
   tabDataItems = [
     new TabData('orange', 'Total team', '60', '6/10', true, true, 'Some other text'),
     new TabData('green', 'Unchanged', '40', '4/10',  true, true, 'Some text for the tooltip'),
@@ -59,94 +70,193 @@ export class LandingPageComponent implements OnInit {
     this.activeTab = tab;
   }
   
-    // update when a new components is added...
-    components = [
-      'loading-spinner',
-      'loading-spinner-page',
-      'field',
-      'field-validation',
-      'checkbox',
-      'fieldset',
-      'file-upload',
-      'radio',
-      'input',
-      'input-textarea',
-      'anchor',
-      'buttons',
-      'select',
-      'tables',
-      'blade',
-      'blade-bottom',
-      'blade-top',
-      'border',
-      'border-radius',
-      'box',
-      'filter',
-      'flex',
-      'footer',
-      'margin',
-      'markup',
-      'padding',
-      'widths',
-      'nav-context',
-      'nav-core',
-      'tab-navigation',
-      'progress-indicator',
-      'progress-indicator-lh',
-      'alerts',
-      'shields',
-      'colours',
-      'icon-picker',
-      'icons',
-      'input-textarea',
-      'page-layout-examples',
-      'progress-bar',
-      'progress-circle',
-      'editorial-content',
-      'typography',
-      'accordion',
-      'accordion-fancy',
-      'card',
-      'context-menu',
-      'dashboard-favourites',
-      'info-panel',
-      'modal',
-      'popover',
-      'stepper',
-      'summary-top',
-      'tags',
-      'toastr',
-      'tooltip',
-      'tree-menu',
-      'user-feedback',
-      'ag-grid',
-      'ngb-datepicker',
-      'ng-select',
-      'html-email',
-      'elements-alignment',
-      'slider',
-      'comments'
-    ];
-    
-    toggleSearchInput() {
-      this.showSearch = ! this.showSearch;
-      if(this.showSearch) {
-        document.getElementById('search-text').focus();
-      } else {
-        this.searchText = '';
-      }
-    }
-
-    tourCount: number = null;
+  // update when a new components is added...
+  components = [
+    'loading-spinner',
+    'loading-spinner-page',
+    'field',
+    'validation',
+    'checkbox',
+    'fieldset',
+    'file-upload',
+    'radio',
+    'input',
+    'input-textarea',
+    'anchor',
+    'buttons',
+    'select',
+    'tables',
+    'blade',
+    'blade-bottom',
+    'blade-top',
+    'border',
+    'border-radius',
+    'box',
+    'filter',
+    'flex',
+    'footer',
+    'margin',
+    'markup',
+    'padding',
+    'widths',
+    'nav-context',
+    'nav-core',
+    'tab-navigation',
+    'progress-indicator',
+    'progress-indicator-lh',
+    'alerts',
+    'shields',
+    'colours',
+    'icon-picker',
+    'icons',
+    'input-textarea',
+    'page-layout-examples',
+    'progress-bar',
+    'progress-circle',
+    'editorial-content',
+    'typography',
+    'accordion',
+    'accordion-fancy',
+    'card',
+    'context-menu',
+    'dashboard-favourites',
+    'info-panel',
+    'modal',
+    'popover',
+    'stepper',
+    'summary-top',
+    'tags',
+    'toastr',
+    'tooltip',
+    'tree-menu',
+    'user-feedback',
+    'ag-grid',
+    'ngb-datepicker',
+    'ng-select',
+    'html-email',
+    'elements-alignment',
+    'slider',
+    'comments'
+  ];
   
-    incrementTourCount() {
-      this.tourCount++;
+  toggleSearchInput() {
+    this.showSearch = ! this.showSearch;
+    if(this.showSearch) {
+      document.getElementById('search-text').focus();
+    } else {
+      this.searchText = '';
     }
-    
-    setTourCount(step:number) {
-      this.tourCount = step;
-      this.toggleBlade = false;
+  }
+
+  tourCount: number = null;
+
+  incrementTourCount() {
+    this.tourCount++;
+  }
+  
+  setTourCount(step:number) {
+    this.tourCount = step;
+    this.toggleBlade = false;
+  }
+
+  componentMenu = [
+    "control-bar",
+    "blade-bottom",
+    "filter",
+    "table",
+    "tab-navigation",
+    "h2",
+    "h2",
+    "h2",
+    "input",
+    "input",
+    "input",
+    "input",
+    "input",
+    "select",
+    "select",
+    "select",
+    "select",
+    "select"
+  ];
+
+  pageTemplate = [];
+
+  onDrop(event: CdkDragDrop<string []>) {
+    if(event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex,
+      );
     }
+  }
+
+  myRadios:boolean;
+  filterInputs = [];
+  bladeInputs = [];
+  tableCellInputs = [];
+  tableRowInputs = [];
+  navItemsInputs = [];
+  tabNavInputs = [];
+  pickerIcons = [];
+  // filter
+  removeFilterInput(i) {
+    this.filterInputs.splice(i);
+  }
+  addFilterInput(type:string) {
+    this.filterInputs.push({input: "" , type });
+  }
+  // blade
+  removeBladeInput(i) {
+    this.bladeInputs.splice(i);
+  }
+  addBladeInput(type:string) {
+    this.bladeInputs.push({input: "" , type });
+  }
+  // table cl
+  removeTableCellInput(i) {
+    this.tableCellInputs.splice(i);
+  }
+  addTableCellInput(type:string) {
+    this.tableCellInputs.push({input: "" , type });
+  }
+  // table row
+  removeTableRowInput(i) {
+    this.tableRowInputs.splice(i);
+  }
+  addTableRowInput(type:string) {
+    this.tableRowInputs.push({input: "" , type });
+  }
+  // nav items
+  removeNavItemsInput(i) {
+    this.navItemsInputs.splice(i);
+  }
+  addNavItemsInput(type:string) {
+    this.navItemsInputs.push({input: "" , type });
+  }
+  // tab-navigation
+  removeTabNavInputs(i) {
+    this.tabNavInputs.splice(i);
+  }
+  addTabNavInputs(type:string) {
+    this.tabNavInputs.push({input: "" , type });
+  }
+
+  savedFiles = [
+    { id: 1, name: 'My saved file' },
+    { id: 2, name: 'Another' },
+    { id: 3, name: 'Mikes quick mock' },
+    { id: 4, name: 'Mockup' },
+    { id: 5, name: 'AMP screen' }
+  ];
 
   ngOnInit() {
   }

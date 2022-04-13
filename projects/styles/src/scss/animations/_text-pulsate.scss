@@ -1,6 +1,13 @@
 .text-pulsate {
     animation: pulse 3s infinite;
     opacity: 0.5;
+
+    &:after {
+        overflow: hidden;
+        animation: ellipsis steps(6,end) 1.5s infinite;
+        content: "\2026";
+        width: 0px;
+    }
 }
 
 @keyframes pulse {
@@ -12,5 +19,11 @@
     }
     100% { 
         opacity: .25;
+    }
+}
+
+@keyframes ellipsis {
+    to {
+      width: 1rem;    
     }
 }

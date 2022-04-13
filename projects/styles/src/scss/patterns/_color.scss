@@ -20,14 +20,22 @@
 .aa-red-80 {color: _palette(aa-red-80)!important}
 .aa-red-50 {color: _palette(aa-red-50)!important}
 .aa-red-5 {color: _palette(aa-red-5)!important}
-// grey
-.aa-grey-100 {color: _colour(aa-grey-100)!important} // allow dark-mode switching
+// grey legacy classes
 .grey-100 {color: _colour(aa-grey-100)!important}
-.grey-50 {color: _palette(grey-50)!important}
-.grey-25 {color: _palette(grey-25)!important}
-.grey-10 {color: _palette(grey-10)!important}
-.grey-5 {color: _palette(grey-5)!important}
-.grey-2 {color: _palette(grey-2)!important}
+.grey-100 {color: _colour(aa-grey-100)!important}
+.grey-50 {color: _palette(aa-grey-50)!important}
+.grey-25 {color: _palette(aa-grey-25)!important}
+.grey-10 {color: _palette(aa-grey-10)!important}
+.grey-5 {color: _palette(aa-grey-5)!important}
+.grey-2 {color: _palette(aa-grey-2)!important}
+// grey updated classes
+.aa-grey-100 {color: _colour(aa-grey-100)!important}
+.aa-grey-100 {color: _colour(aa-grey-100)!important}
+.aa-grey-50 {color: _palette(aa-grey-50)!important}
+.aa-grey-25 {color: _palette(aa-grey-25)!important}
+.aa-grey-10 {color: _palette(aa-grey-10)!important}
+.aa-grey-5 {color: _palette(aa-grey-5)!important}
+.aa-grey-2 {color: _palette(aa-grey-2)!important}
 // green
 .aa-green-100 {color: _palette(aa-green-100)!important}
 .aa-green-50 {color: _palette(aa-green-50)!important}
@@ -45,6 +53,7 @@
 .aa-blue-sky-100 {color: _palette(aa-blue-sky-100)!important}
 .aa-plum-100 {color: _palette(aa-plum-100)!important}
 .aa-pink-100 {color: _palette(aa-pink-100)!important}
+.aa-pink-25 {color: _colour(aa-pink-25)!important}
 .aa-white-100 {color: _palette(aa-white-100)!important}
 
 .aa-transparent {color: transparent!important}

@@ -1,24 +1,24 @@
 <section class="user-feedback box-shadow margin-bottom-1 rating-{{ rating }}" *ngIf="toggleUserFeedback">
   <div class="position-relative">
-    <article class="flex-group max-readable-width padding-1" *ngIf="startRating">
+    <article class="flex-group padding-1" *ngIf="startRating">
       <h3 class="text-align-center margin-top-0-5">
         <span>{{ question }} </span>
         <strong class="italic">{{ appName }}</strong>
       </h3>
       <div class="feature-box faces tertiary flex-group flex-align-center">
-        <div>Poor</div>
-        <button (click)="onFaceClick(1)" [ngClass]="{ 'face-very-dissatisfied': rating === 1 }" class="face-very-dissatisfied-blk"></button>
-        <button (click)="onFaceClick(2)" [ngClass]="{ 'face-dissatisfied': rating === 2 }" class="face-dissatisfied-blk"></button>
-        <button (click)="onFaceClick(3)" [ngClass]="{ 'face-neutral': rating === 3 }" class="face-neutral-blk"></button>
-        <button (click)="onFaceClick(4)" [ngClass]="{ 'face-satisfied': rating === 4 }" class="face-satisfied-blk"></button>
-        <button (click)="onFaceClick(5)" [ngClass]="{ 'face-very-satisfied': rating === 5 }" class="face-very-satisfied-blk"></button>
         <div>Great</div>
+        <button (click)="onFaceClick(5)" [ngClass]="{ 'face-very-satisfied': rating === 5 }" class="face-very-satisfied-blk"></button>
+        <button (click)="onFaceClick(4)" [ngClass]="{ 'face-satisfied': rating === 4 }" class="face-satisfied-blk"></button>
+        <button (click)="onFaceClick(3)" [ngClass]="{ 'face-neutral': rating === 3 }" class="face-neutral-blk"></button>
+        <button (click)="onFaceClick(2)" [ngClass]="{ 'face-dissatisfied': rating === 2 }" class="face-dissatisfied-blk"></button>
+        <button (click)="onFaceClick(1)" [ngClass]="{ 'face-very-dissatisfied': rating === 1 }" class="face-very-dissatisfied-blk"></button>
+        <div>Poor</div>
       </div>
     </article>
 
     <article *ngIf="faceClicked && !userClosedPanel" class="user-feedback-content padding-1">
       <form name="sendFeedback" [formGroup]="feedbackForm">
-        <div class="field boxed">
+        <div>
           <label for="feedback">{{ label }}</label>
           <div class="describe width-100">{{ description }}</div>
           <textarea formControlName="comment" id="feedback"></textarea>
@@ -26,38 +26,38 @@
         <div class="padding-top-1 max-readable-width">
           <em>{{ footNote }}</em>
         </div>
-        <div class="field align-center">
+        <div class="align-center">
           <button type="button" class="primary" (click)="sendFB()">Send feedback</button>
         </div>
       </form>
     </article>
 
     <article *ngIf="userClosedPanel">
-      <div class="flex-group max-readable-width padding-1">
+      <div class="flex-group voting-panel padding-1">
         <h3 class="text-align-center margin-top-0-5">
           <span>{{ question }} </span>
           <strong class="italic">{{ appName }}</strong>?
         </h3>
-        <div class="feature-box tertiary flex-group flex-align-center">
-          <div>Poor</div>
-          <div [ngClass]="{ 'face-very-dissatisfied': rating === 1 }" class="face-very-dissatisfied-blk"></div>
-          <div [ngClass]="{ 'face-dissatisfied': rating === 2 }" class="face-dissatisfied-blk"></div>
-          <div [ngClass]="{ 'face-neutral': rating === 3 }" class="face-neutral-blk"></div>
-          <div [ngClass]="{ 'face-satisfied': rating === 4 }" class="face-satisfied-blk"></div>
-          <div [ngClass]="{ 'face-very-satisfied': rating === 5 }" class="face-very-satisfied-blk"></div>
+        <div class="feature-box faces tertiary flex-group flex-align-center">
           <div>Great</div>
+          <div [ngClass]="{ 'face-very-satisfied': rating === 5 }" class="face-very-satisfied-blk"></div>
+          <div [ngClass]="{ 'face-satisfied': rating === 4 }" class="face-satisfied-blk"></div>
+          <div [ngClass]="{ 'face-neutral': rating === 3 }" class="face-neutral-blk"></div>
+          <div [ngClass]="{ 'face-dissatisfied': rating === 2 }" class="face-dissatisfied-blk"></div>
+          <div [ngClass]="{ 'face-very-dissatisfied': rating === 1 }" class="face-very-dissatisfied-blk"></div>
+          <div>Poor</div>
         </div>
       </div>
       <article class="user-feedback-content padding-1">
         <p>{{ closingMessage }}</p>
         <div class="thanks align-center">
-          <div *ngIf="rating === 1" class="face-very-dissatisfied"></div>
-          <div *ngIf="rating === 2" class="face-dissatisfied"></div>
-          <div *ngIf="rating === 3" class="face-neutral"></div>
-          <div *ngIf="rating === 4" class="face-satisfied"></div>
           <div *ngIf="rating === 5" class="face-very-satisfied"></div>
+          <div *ngIf="rating === 4" class="face-satisfied"></div>
+          <div *ngIf="rating === 3" class="face-neutral"></div>
+          <div *ngIf="rating === 2" class="face-dissatisfied"></div>
+          <div *ngIf="rating === 1" class="face-very-dissatisfied"></div>
         </div>
-        <div class="field align-center">
+        <div class="align-center">
           <button type="button" class="tertiary" (click)="onClose()">Close</button>
         </div>
       </article>

@@ -28,13 +28,16 @@
         > li {
             position: relative;
             padding: .25rem 1.25rem;
-            .material-icons:not(button) {
-                font-size: _font(size-large);
-                text-align: center;
-                border-radius: 50%;
-                line-height: 2rem;
-                width: 2rem;
-                height: 2rem;
+            .material-icons,
+            .material-icons-outlined {
+                &:not(button) {
+                    font-size: _font(size-large);
+                    text-align: center;
+                    border-radius: 50%;
+                    line-height: 2rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
             a {
                 cursor: pointer;

@@ -6,6 +6,18 @@
 
 body {
   font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif;
+  // for showing header-secondary
+  &.show-header-secondary {
+    .header-secondary {
+      display: block!important;
+    }
+    .main-container-fluid {
+      padding-top: 6.9rem!important;
+    }
+    .nav-w-submenu-container .nav-vertical {
+      top: 6.9rem!important;
+    }
+  }
 
   &.dark-mode {
     @import './lib/mixins';
@@ -45,5 +57,5 @@ body {
     font-size: 16px;
     margin: 0;
     min-width: _breakpoint(breakpoint-320);
-  }
+  }    
 }

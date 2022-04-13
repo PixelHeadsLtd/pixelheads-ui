@@ -3,10 +3,30 @@
 </section>
 <section class="content-container">
   <div class="flex-group flex-column">
-    <a href="https://ng-bootstrap.github.io/#/components/datepicker/overview">NGB datepicker info</a>
-    <div class="describe margin-top-1">
-      <p>For all NG11 > apps, please uninstall Bootstrap with the following:<br /> <strong>'npm uninstall bootstrap'</strong>.</p>
-      <p>The NGB datepicker CSS is now included in Design Language.</p>
+    <div class="describe margin-bottom-1 max-width-40">
+      <p>For date-pickers, use the 
+        <a href="https://ng-bootstrap.github.io/#/components/datepicker/examples" target="_blank">NGB datepicker</a> 
+        along with our markup which is styled specifically to match our branding. <strong class="aa-red-100">The date-picker placeholder
+          format should be dd-mon-yyyy and the rendered date format that then appears in the UI should be unhyphenated and capitalized, for
+          example 01 Jan 2021
+        </strong></p>
+    </div>
+    <div class="flex-group max-width-40">
+      <div class="field">
+        <label for="text-input-2">Date</label>
+        <div class="date-picker">
+          <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" />
+          <button class="material-icons">date_range</button>
+        </div>
+      </div>
+      
+      <div class="field">
+        <label for="text-input-2">Date readonly</label>
+        <div class="date-picker">
+          <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" readonly />
+          <button class="material-icons">date_range</button>
+        </div>
+      </div>
     </div>
     <h2 class="margin-bottom-0">Example</h2>
     <app-gist src="angloux/cd720ceeb8278c691e52facbf8a27990"></app-gist>

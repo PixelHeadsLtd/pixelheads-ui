@@ -15,7 +15,7 @@ import {TablesComponent} from './tables/tables.component';
 import {CheckboxComponent} from './checkbox/checkbox.component';
 import {FieldComponent} from './field/field.component';
 import {FieldsetComponent} from './fieldset/fieldset.component';
-import {FieldValidationComponent} from './field-validation/field-validation.component';
+import {ValidationComponent} from './validation/validation.component';
 import {FileUploadComponent} from './file-upload/file-upload.component';
 import {InputRadioComponent} from './input-radio/input-radio.component';
 import {SliderComponent} from './slider/slider.component';
@@ -34,12 +34,14 @@ import {HeaderComponent} from './header/header.component';
 // Navigation
 import {ContextMenuComponent} from './context-menu/context-menu.component';
 import {NavContextComponent} from './nav-context/nav-context.component';
-import {NavCoreComponent} from './nav-core/nav-core.component';
 import {ProgressIndicatorComponent} from './progress-indicator/progress-indicator.component';
 import {ProgressIndicatorLhComponent} from './progress-indicator-lh/progress-indicator-lh.component';
 import {StepperComponent} from './stepper/stepper.component'; // STEPPER NOT YET RELEASED
 import {TreeMenuComponent} from './tree-menu/tree-menu.component';
 import {TabNavigationComponent} from './tab-navigation/tab-navigation.component';
+import {TabPageOneComponent} from './tab-page-one/tab-page-one.component';
+import {TabPageTwoComponent} from './tab-page-two/tab-page-two.component';
+import {TabPageThreeComponent} from './tab-page-three/tab-page-three.component';
 
 // Patterns
 import {AlertsComponent} from './alerts/alerts.component';
@@ -97,7 +99,11 @@ const routes: Routes = [
   { path: 'ag-grid', component: AgGridComponent },
   { path: 'alerts', component: AlertsComponent },
   { path: 'anchor', component: AnchorComponent },
-  { path: 'blade', component: BladeComponent },
+  { path: 'blade', component: BladeComponent, children: [
+    { path: 'tab-page-one', component: TabPageOneComponent },
+    { path: 'tab-page-two', component: TabPageTwoComponent },
+    { path: 'tab-page-three', component: TabPageThreeComponent },
+  ] },
   { path: 'blade-bottom', component: BladeBottomComponent },
   { path: 'blade-top', component: BladeTopComponent },
   { path: 'border', component: BorderComponent },
@@ -112,7 +118,7 @@ const routes: Routes = [
   { path: 'dashboard-favourites', component: DashboardFavouritesComponent },
   { path: 'editorial-content', component: EditorialComponent },
   { path: 'field', component: FieldComponent },
-  { path: 'field-validation', component: FieldValidationComponent },
+  { path: 'validation', component: ValidationComponent },
   { path: 'fieldset', component: FieldsetComponent },
   { path: 'file-upload', component: FileUploadComponent },
   { path: 'filter', component: FilterComponent },
@@ -132,11 +138,11 @@ const routes: Routes = [
   { path: 'markup', component: MarkupComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'nav-context', component: NavContextComponent },
-  { path: 'nav-core', component: NavCoreComponent },
   { path: 'overlay', component: OverlayComponent },
   { path: 'tab-navigation', component: TabNavigationComponent, children: [
-    { path: 'loading-spinner', component: LoadingSpinnerComponent },
-    { path: 'anchor', component: AnchorComponent },
+    { path: 'tab-page-one', component: TabPageOneComponent },
+    { path: 'tab-page-two', component: TabPageTwoComponent },
+    { path: 'tab-page-three', component: TabPageThreeComponent },
   ] },
   { path: 'padding', component: PaddingComponent },
   { path: 'page-layout-examples', component: PageLayoutExamplesComponent },

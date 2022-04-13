@@ -1,10 +1,27 @@
 &.design-language {
+  main {
+    padding-left: 16rem;
+    transition: all .25s linear;
+  }
+  .header-secondary {
+    display: block;
+    position: static;
+    max-height: 3rem;
+    padding: .5rem 1.5rem;
+    background-color: _colour(secondary);
+    color: _palette(aa-white-100);
+    h1, h2, h3, h4 {
+      color: _palette(aa-white-100);
+    }
+  }
+
   header.page-header {
     .mobile-menu {
       display: none;
       margin-right: 0;
       .aa-blade-modal {
         top: 3.5rem;
+        width: 100%;
       }
       button {
         position: relative;
@@ -31,159 +48,6 @@
     .control-bar {
       border-bottom: none;
       padding-top: 0;
-    }
-  }
-  
-  .nav-container {
-    background-color: _colour(bg-primary);
-    border-right: 1px solid _colour(border-primary);
-    transition: all .25s linear;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    padding-top: 2.5rem;
-    top: 3.5rem;
-    position: fixed;
-    z-index: 1;
-    overflow: auto;
-    width: 16rem;
-
-    .expand-collapse {
-      background-color: _colour(bg-primary);
-      position: fixed;
-      top: 3.5rem;
-      width: 15.95rem;
-    }
-
-    button {
-      margin: .25rem 0 0 0;
-      padding: .5rem;
-      font-size: _font(size-small);
-      &:first-child {
-        margin-left: 1rem;
-      }
-    }
-
-    > ul {
-      &:nth-child(2) {   
-        ul {
-          border-top: none;
-          padding-top: 0;
-        }
-        
-        a {
-          display: inline-block;
-          padding-left: 1.5rem;
-          width: 100%
-        }
-      }
-    }
-    
-    ul li {
-      list-style-type: none;
-      
-      li {
-        &:last-child {
-          a {
-            border-bottom: none;
-          }
-        }
-      }
-      
-      &:nth-child(2) {
-        .material-icons {
-          background-color: _palette(aa-red-100);
-        }
-      }
-      &:nth-child(3) {
-        .material-icons {
-          background-color: _palette(aa-green-100);
-        }
-      }
-      &:nth-child(4) {
-        .material-icons {
-          background-color: _palette(aa-blue-100);
-        }
-      }
-      &:nth-child(5) {
-        .material-icons {
-          background-color: _palette(aa-orange-100);
-        }
-      }
-      &:nth-child(6) {
-        .material-icons {
-          background-color: _palette(aa-plum-100);
-        }
-      }
-      &:nth-child(7) {
-        .material-icons {
-          background-color: _palette(aa-light-blue-100);
-        }
-      }
-    }
-
-    > ul > li {
-      font-size: _font(size-default);
-
-      label {
-        padding: 1rem 0 .25rem 4.25rem;
-      }
-
-      > ul {
-        display: none;
-      }
-
-      > a {
-        color: _colour(body-text);
-        font-family: _font(family-medium);
-        line-height: 1.75rem;
-
-        &:after {
-          @include icon-right-after;
-          content: '\f078';
-        }
-      }
-
-      a {
-        cursor: pointer;
-        padding: 0.325rem 1.5rem;
-        text-decoration: none;
-        font-size: _font(size-default);
-        
-        .material-icons {
-          border-radius: 50%;
-          width: 2rem;
-          height: 2rem;
-          color: _palette(white);
-          padding: .25rem;
-          font-size: _font(size-medium);
-          text-align: center;
-          line-height: 1.5rem;
-        }
-      }
-
-      &.show {
-        > a:after {
-          @include icon-right-after;
-          content: '\f077' !important;
-        }
-
-        ul {
-          display: block;
-        }
-      }
-    }
-
-    > ul > li > ul > li > a {
-      display: inline-block;
-      width: 100%;
-      padding: .5rem 0 .5rem 4.25rem;
-      border-bottom: 1px solid _colour(border-nav);
-      
-      &:hover,
-      &.selected {
-        background-color: _colour(lh-hover-bg);
-      }
     }
   }
 
@@ -265,10 +129,21 @@
       right: 0;
       button {
         margin: 0;
+        padding: 0.25rem 1rem;
         border-radius: 0;
         border-right: 1px solid _colour(border-primary);
-        span:not(.material-icons) {
-          line-height: initial;
+        font-size: .7rem;
+        span {
+          &.material-icons,
+          &.material-icons-outlined {
+            font-size: _font(size-regular);
+            line-height: 1.75rem;
+          }
+        }
+        span {
+          &:not(.material-icons, .material-icons-outlined) {
+            line-height: initial;
+          }
         }
         &:last-child {
           border-right: none;
@@ -378,8 +253,7 @@
     }
   }
   
-  .landing-page {
-    
+  .landing-page {  
     &.sticky {
       .quick-links {
         position: fixed;
@@ -391,6 +265,11 @@
         box-shadow: 0 .25rem 2rem _colour(box-shadow);
       }
     }
+
+    .drop-area {
+      padding: 10rem;
+      border: 1px solid red
+    }
     
     .content-repeater {
       padding: 5rem 10%;
@@ -398,6 +277,12 @@
 
       &.dl-info {
         background-color: _colour(dl-info);
+
+        h3 {
+          strong {
+            font-size: _font(size-medium);
+          }
+        }
 
         div {
           margin-right: 4rem;
@@ -436,7 +321,8 @@
         border: 1px dashed _colour(border-primary);
         border-radius: 0;
         background-color: _colour(bg-primary);
-        .material-icons {
+        .material-icons,
+        .material-icons-outlined {
           font-size: 2.5rem;
           margin: .75rem 0 0 0;
           &.small {
@@ -470,7 +356,8 @@
       .search {
         position: relative;
         width: 18rem;
-        .material-icons {
+        .material-icons,
+        .material-icons-outlined {
           position: absolute;
           color: _colour(dl-orange);
           right: .5rem;
@@ -481,7 +368,8 @@
           padding: .75rem 3rem .75rem 1rem;
           font-size: _font(size-regular);
           &:focus + {
-            .material-icons {
+            .material-icons,
+            .material-icons-outlined {
               transform: rotate(90deg);
             }
           }
@@ -520,7 +408,8 @@
       .getting-started {
         margin: 0 0 1rem 0;
         min-width: 19rem;
-        .material-icons {
+        .material-icons,
+        .material-icons-outlined {
           font-size: _font(size-medium);
           
           &.star {
@@ -540,10 +429,14 @@
         background-repeat: no-repeat;
         background-position: left bottom;
         background-size: 100%;
-        min-width: 38rem;
+        min-width: 37rem;
         max-width: 38rem;
-        margin-right: 18rem;
+        margin-right: 13%;
         min-height: 20rem;
+      }
+
+      .features {
+        min-width: 27rem;
       }
     }
     
@@ -580,6 +473,18 @@
   
   .loading-spinner-page {
     z-index: 0;
+  }
+}
+
+.blade {
+  .poem {
+    display: none;
+  }
+}
+
+.tab-nav-page {
+  .blades-data {
+    display: none;
   }
 }
 
@@ -670,7 +575,8 @@
       > div {
         margin: 4rem 0 0 4.5rem;
         text-align: center;
-        .material-icons {
+        .material-icons,
+        .material-icons-outlined {
           font-size: _font(size-regular);
           margin-right: .25rem;
         }
@@ -678,7 +584,8 @@
         &.copied {
           margin: 2.5rem 0 0 0;
           text-align: center;
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
             font-size: 4rem;
             margin: 0;
           }
@@ -860,6 +767,9 @@
           .search-section {
             margin-bottom: 0;
           }
+          .features {
+            min-width: auto;
+          }
         }
         .content-repeater {
           padding: 5rem 1.5rem;
@@ -891,8 +801,10 @@
         display: block;
       }
     }
-  
-    .nav-container {
+    
+    // mobile
+    .nav-core.nav-container {
+      position: fixed;
       height: 0;
       transition: all .25s linear;
       overflow: auto;
@@ -903,8 +815,12 @@
       border-right: none;
       z-index: 99999;
       
+      .nav-min-max {
+        display: none;
+      }
+
       &.show-mobile-menu {
-        height: 18rem;
+        height: 16.75rem;
         border-bottom: 1px solid _colour(border-primary);
         box-shadow: 0 .5rem 1rem _colour(box-shadow);
         padding-top: .25rem;

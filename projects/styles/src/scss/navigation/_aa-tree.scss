@@ -4,12 +4,29 @@
         font-family: _font(family-regular);
 
         li {
-            padding-top: .25rem;
+            padding: 0;
+            span, strong, a {
+                margin-right: .5rem;
+            }
             span {
                 cursor: pointer;
             }
+            .tree-group {
+                padding: 0;
+                min-height: 1.75rem;
+            }
             a {
                 text-decoration: none;
+            }
+
+            button.material-icons {
+                background-color: transparent;
+                color: _palette(aa-light-blue-100);
+                font-size: _font(size-regular);
+                border: none;
+                padding: 0;
+                width: auto;
+                height: auto;
             }
         }
 
@@ -23,8 +40,7 @@
         
         .chevron {
             position: relative;
-            padding-right: 1rem;
-            line-height: 1rem;
+            padding-right: .5rem;
             &:before {
                 @include icon-left-before-small;
                 content: "\f054";

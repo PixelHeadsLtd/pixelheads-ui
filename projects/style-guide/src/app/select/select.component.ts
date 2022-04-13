@@ -7,68 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectComponent implements OnInit {
 
-  public toggleBlade: boolean;
+  toggleBlade: boolean;
+  standardSelect: boolean;
+  dataList: boolean;
+  selectedCityIds: string[];
+  selectedCity: string;
+  selectedCityName = 'Vilnius';
+  selectedCityId: number;
+  selectedUserIds: number[];
+
+  constructor() {this.create10kCities();}
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-  
-  standardSelect: boolean;
-  dataList: boolean;
-  
-  dataListHTML =
-  `<form>
-  <div class="field small boxed">
-    <label for="ice-cream-choice">Data list - favourite ice cream</label>
-    <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" class="list"/>
-    <datalist id="ice-cream-flavors">
-      <option value="Please select" disabled selected>
-      <option value="Chocolate">
-      <option value="Coconut">
-      <option value="Mint">
-      <option value="Strawberry">
-      <option value="Vanilla">
-    </datalist>
-  </div>
-</form>`;
-
-standardSelectHTML =
-` <form class="flex-group">
-<div class="field small">
-  <label for="pet-select">Select - choose a pet</label>
-  <select name="pets" id="pet-select">
-    <option value="" selected>Please select</option>
-    <option value="dog">Dog</option>
-    <option value="cat">Cat</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
-  </select>
-</div>
-<div class="field small">
-  <label for="pet-select">Select (disabled="true")</label>
-  <select name="pets" id="pet-select" disabled="true">
-    <option value="" selected>Please select</option>
-    <option value="dog">Dog</option>
-    <option value="cat">Cat</option>
-    <option value="hamster">Hamster</option>
-    <option value="parrot">Parrot</option>
-    <option value="spider">Spider</option>
-    <option value="goldfish">Goldfish</option>
-  </select>
-</div>
-</form>`;
-  
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
   }
 
   cities = [
@@ -114,24 +65,15 @@ standardSelectHTML =
     { name: 'Nicolás', email: 'nicole@email.com', age: 43, country: 'Colombia' }
   ];
 
-  selectedCityIds: string[];
-  selectedCity: string;
-  selectedCityName = 'Vilnius';
-  selectedCityId: number;
-  selectedUserIds: number[];
-
-  constructor() {this.create10kCities();}
-
   addCustomUser = (term) => ({ id: term, name: term });
 
-  private create10kCities() {
+  create10kCities() {
     this.cities4 = Array.from({ length: 10000 }, (value, key) => key)
       .map(val => ({
         id: val,
         name: `city ${val}`
       }));
   }
-
 
   ngOnInit() {
   }

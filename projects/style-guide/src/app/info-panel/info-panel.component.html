@@ -81,11 +81,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(infoPanelHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=true; showInfoPanelStacked=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=true; showInfoPanelStacked=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -272,11 +268,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(infoPanelStackedHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=false; showInfoPanelStacked=true">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=false; showInfoPanelStacked=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -305,7 +297,7 @@
                   <h3>{{p.headerTitle}}</h3>
                 </div>
                 <div class="flex-group flex-end">
-                  <div class="alert-shield pending-red small">In progress</div>
+                  <div class="alert-shield pending-red">In progress</div>
                   <button class="material-icons aa-light-blue-100">create</button>
                 </div>
               </section>

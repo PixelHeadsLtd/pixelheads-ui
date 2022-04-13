@@ -20,13 +20,17 @@ aa-info-panel {
       
       &:hover {
         .info-panel-footer {
-          button.material-icons {
-            visibility: visible;
+          button {
+            &.material-icons,
+            &.material-icons-outlined {
+              visibility: visible;
+            }
           }
         }    
       }
     
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
           &:not(button) {
             font-size: _font(size-large);
           }
@@ -35,7 +39,8 @@ aa-info-panel {
       .info-panel-header {
           border-bottom: 1px solid _palette(aa-light-blue-50);
           // maintain the section icon colour
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
             color: _palette(aa-light-blue-100);
           }
           h3 {
@@ -50,27 +55,41 @@ aa-info-panel {
       .info-panel-footer {
         padding: 0 .5rem .5rem 1rem;
         align-items: baseline;
-        div.material-icons {
-            visibility: hidden;
-        }
-        button.material-icons {
+        button {
+          &.material-icons,
+          &.material-icons-outlined {
             visibility: hidden;
             margin-right: 0;
+        }
         }
     }
       
       .info-panel-content {
           height: calc(100% - 8rem);
+          .image {
+            width: 4rem;
+            height: 5rem;
+            overflow: hidden;
+            border-radius: .25rem;
+            img {
+              outline: none;
+              width: 100%;
+              height: 100%;
+              vertical-align: initial;
+            }
+          }
       }
       
       // colour changes based on status
       &.approved .foreground {
         border: 2px solid _palette(aa-green-100);
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
               color: _palette(aa-green-100);
           }
           button {
-              &.material-icons {
+              &.material-icons,
+              &.material-icons-outlined {
                   &:focus, &:hover {
                     background-color: _colour(info-panel-green);
                   }
@@ -79,11 +98,13 @@ aa-info-panel {
       }
       &.pending .foreground {
         border: 2px solid _palette(aa-orange-100);
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
               color: _palette(aa-orange-100);
           }
           button {
-              &.material-icons {
+              &.material-icons,
+              &.material-icons-outlined {
                   &:focus, &:hover {
                     background-color: _colour(info-panel-orange);
                   }
@@ -96,11 +117,13 @@ aa-info-panel {
       &.abandoned .foreground,
       &.withdrawn-pending .foreground {
         border: 2px solid _palette(aa-red-100);
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
               color: _palette(aa-red-100);
           }
           button {
-              &.material-icons {
+              &.material-icons,
+              &.material-icons-outlined {
                   &:focus, &:hover {
                     background-color: _colour(info-panel-red);
                   }
@@ -109,11 +132,13 @@ aa-info-panel {
       }
       &.draft .foreground {
         border: 2px solid _palette(grey-100);
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
               color: _palette(grey-100);
           }
           button {
-              &.material-icons {
+              &.material-icons,
+              &.material-icons-outlined {
                   &:focus, &:hover {
                     background-color: _colour(info-panel-light-blue);
                   }
@@ -122,11 +147,13 @@ aa-info-panel {
       }
       &.info .foreground {
         border: 2px solid _palette(aa-light-blue-100);
-          .material-icons {
+          .material-icons,
+          .material-icons-outlined {
               color: _palette(aa-light-blue-100);
           }
           button {
-              &.material-icons {
+              &.material-icons,
+              &.material-icons-outlined {
                   &:focus, &:hover {
                     background-color: _colour(info-panel-light-blue);
                   }
@@ -134,11 +161,14 @@ aa-info-panel {
           }
       }
       &.approved {
-        div.material-icons {
-          visibility: visible;
-          color: _palette(aa-light-blue-100);
+        div {
+          &.material-icons,
+          &.material-icons-outlined {
+            visibility: visible;
+            color: _palette(aa-light-blue-100);
+          }
         }
-      }
+        }
    }
 }
 

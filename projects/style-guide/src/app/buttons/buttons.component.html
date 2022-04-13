@@ -1,6 +1,8 @@
-<section class="control-bar">
-  <h1>Buttons</h1>
+<section class="control-bar flex-group space-between">
+  <h1>Button</h1>
+  <aa-alert alertClass="error max-width-unset" alertText="Ensure ALL elements are wrapped in div.field. Hide label with field.label-transparent or field.label-hidden"></aa-alert>
 </section>
+
 
 <section class="content-container padding-0">
   <!-- start content repeater -->
@@ -10,7 +12,11 @@
       <div class="describe margin-bottom-1">
         <p>In curtain circumstances, if an existing button is not available you<br/>
           might want to create your own. To do this use the below tool to preview<br/>
-          one of the Material Icons and then choose your background colour.</p>
+          one of the Material Icons and then choose your background colour.<br/>
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
+            the parent div.field element. DO NOT remove the label as this maintains the 
+            vertical alignment when alongside other form elements</strong>
+          </p>
       </div>
       <div>
         <div class="flex-group flex-start margin-bottom-2">
@@ -192,11 +198,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(customButtonHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=true; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=true; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -210,7 +212,10 @@
         <p>If you want a button with just an icon and no text, you can simply use
           a button with the .material-icons class and the 
           <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon friendly name</a>,
-          also remember to include the relevant button class, .primary, .secondary etc...
+          also remember to include the relevant button class, .primary, .secondary etc. <br/>
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
+            the parent div.field element. DO NOT remove the label as this maintains the 
+            vertical alignment when alongside other form elements</strong>
         </p>
       </div>
       <div class="flex-group">
@@ -289,11 +294,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(iconButtonHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); iconButtons=true; customButton=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); iconButtons=true; customButton=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -306,7 +307,10 @@
         <div class="describe margin-bottom-1">
           <p>There is an array of standard buttons available in<br/> 
             Design Language. For consistency, please try and use the <br/> 
-            standard versions wherever possible.</p>
+            standard versions wherever possible.<br/>
+            <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
+              the parent div.field element. DO NOT remove the label as this maintains the 
+              vertical alignment when alongside other form elements</strong></p>
         </div>
         <div class="filter-container flex-group">
           <aa-button 
@@ -446,11 +450,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons small bg-aa-light-blue-100" 
-            (click)="copyToClipboard(standardButtonHTML)">
-            <span class="material-icons">content_copy</span><span>Copy component</span>
-          </button>
-          <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); standardButtons=true; customButton=false; iconButtons=false; buttonEnriched=false; buttonSplit=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); standardButtons=true; customButton=false; iconButtons=false; buttonEnriched=false; buttonSplit=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -606,11 +606,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(buttonEnrichedHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=true; buttonSplit=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=true; buttonSplit=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -621,7 +617,10 @@
         <section class="flex-1 col-left flex-start">
           <h2>Button split</h2>
           <div class="describe margin-bottom-1">
-            <p>To reduce clutter in the UI, you might want to use the Button Split component</p>
+            <p>To reduce clutter in the UI, you might want to use the Button Split component.<br/>
+              <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
+                the parent div.field element. DO NOT remove the label as this maintains the 
+                vertical alignment when alongside other form elements</strong></p>
           </div>
 
           <section class="flex-group flex-start margin-bottom-1">
@@ -764,11 +763,7 @@
         
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons small bg-aa-light-blue-100" 
-              (click)="copyToClipboard(buttonSplitHTML)">
-              <span class="material-icons">content_copy</span><span>Copy component</span>
-            </button>
-            <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=true">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=true">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>

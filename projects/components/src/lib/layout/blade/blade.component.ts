@@ -14,6 +14,8 @@ export class BladeComponent implements OnInit {
   @Input() customBlade: boolean;
   @Input() enableIcon: boolean;
   @Input() iconName: string;
+  @Input() bladeTabs: boolean;
+  @Input() customBladeTabs: boolean;
 
   @Input() showModal: boolean;
   @Input() oneColWidth: boolean;

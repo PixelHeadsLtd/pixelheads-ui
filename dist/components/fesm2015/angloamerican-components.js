@@ -1,7 +1,9 @@
-import { EventEmitter, Directive, ElementRef, Output, HostListener, Input, NgModule, Component, ChangeDetectionStrategy, TemplateRef, ContentChild, ContentChildren, Pipe } from '@angular/core';
+import * as i0 from '@angular/core';
+import { EventEmitter, Directive, ElementRef, Output, HostListener, Input, NgModule, Component, ChangeDetectionStrategy, TemplateRef, ContentChild, ContentChildren, Pipe, Injectable, ComponentFactoryResolver } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
+import { Subject } from 'rxjs';
 
 class ClickOutsideDirective {
     constructor(elementRef) {
@@ -296,7 +298,7 @@ class SliderComponent {
 SliderComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-slider',
-                template: "<div \r\n    class=\"{{fieldClass}} field slider\"\r\n    [ngClass]=\"{'flex-group flex-start margin-top-1-75 nowrap' : sliderInline}\"\r\n>\r\n    <label>{{labelText}}</label>\r\n    <label>\r\n        <input \r\n            type=\"checkbox\"\r\n            value={{sliderValue}} \r\n            name={{sliderName}} \r\n            id={{sliderId}} \r\n            checked={{sliderChecked}}\r\n            disabled=\"{{disabled}}\"\r\n         />\r\n        <span class=\"slider-btn\"></span>\r\n    </label>\r\n</div>",
+                template: "<div \r\n    class=\"{{fieldClass}} field slider\"\r\n    [ngClass]=\"{'slider-inline flex-group flex-start nowrap' : sliderInline}\"\r\n>\r\n    <label>{{labelText}}</label>\r\n    <label>\r\n        <input \r\n            type=\"checkbox\"\r\n            value={{sliderValue}} \r\n            name={{sliderName}} \r\n            id={{sliderId}} \r\n            checked={{sliderChecked}}\r\n            disabled=\"{{disabled}}\"\r\n         />\r\n        <span class=\"slider-btn\"></span>\r\n    </label>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -349,7 +351,7 @@ class BladeComponent {
 BladeComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-blade',
-                template: "<!-- MODAL UI BLOCK -->\r\n<div class=\"aa-blade-modal\" *ngIf=\"toggleBlade && showModal\" [ngStyle]=\"{'z-index' : zIndex}\"></div>\r\n\r\n<!-- HEADER BAKED IN -->\r\n<aside \r\n  *ngIf=\"!customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{'show-blade' : toggleBlade}\" \r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex+10\r\n  }\"\r\n>\r\n  <article class=\"blade-header flex-group space-between\">\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <div \r\n          *ngIf=\"enablePinning\" \r\n          (click)=\"toggleThePin($event)\"\r\n          [ngClass]=\"{'pinned' : isPinned}\" \r\n          class=\"material-icons pin flex-end\"\r\n      >\r\n        push_pin\r\n      </div>\r\n      <div *ngIf=\"enableIcon\" class=\"material-icons margin-right-0-5\">{{iconName}}</div>\r\n      <h2 class=\"margin-top-0-25 margin-0 flex-align-center\">\r\n        {{bladeHeading}}\r\n      </h2>\r\n    </div>\r\n    <a class=\"anchor-close flex-align-center\" (click)=\"onClose()\">Close</a>\r\n    </article>\r\n  <ng-content></ng-content>\r\n</aside>\r\n\r\n<!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->\r\n<aside \r\n  *ngIf=\"customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{'show-blade' : toggleBlade}\" \r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex\r\n  }\"\r\n>\r\n  <article class=\"blade-header\">\r\n    <ng-content select=\"[custom-header]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-content\">\r\n    <ng-content select=\"[custom-content]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-footer\">\r\n    <ng-content select=\"[custom-footer]\"></ng-content>\r\n  </article>\r\n</aside>\r\n\r\n",
+                template: "<!-- MODAL UI BLOCK -->\r\n<div class=\"aa-blade-modal\" *ngIf=\"toggleBlade && showModal\" [ngStyle]=\"{'z-index' : zIndex}\"></div>\r\n\r\n<!-- HEADER BAKED IN -->\r\n<aside \r\n  *ngIf=\"!customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade' : toggleBlade,\r\n    'show-tabs' : bladeTabs\r\n  }\"\r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex+10\r\n  }\"\r\n>\r\n  <article class=\"blade-header flex-group space-between\">\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <div \r\n          *ngIf=\"enablePinning\" \r\n          (click)=\"toggleThePin($event)\"\r\n          [ngClass]=\"{'pinned' : isPinned}\" \r\n          class=\"material-icons pin flex-end\"\r\n      >\r\n        push_pin\r\n      </div>\r\n      <div *ngIf=\"enableIcon\" class=\"material-icons header-icon margin-right-0-5\">{{iconName}}</div>\r\n      <h2 class=\"margin-top-0-25 margin-0 flex-align-center\">\r\n        {{bladeHeading}}\r\n      </h2>\r\n    </div>\r\n    <a class=\"anchor-close flex-align-center\" (click)=\"onClose()\">Close</a>\r\n    <ng-content *ngIf=\"bladeTabs\" select=\"[blade-tabs]\"></ng-content>\r\n  </article>\r\n  <ng-content></ng-content>\r\n</aside>\r\n\r\n<!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->\r\n<aside \r\n  *ngIf=\"customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade' : toggleBlade,\r\n    'show-tabs custom-header-tabs' : customBladeTabs\r\n  }\" \r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex\r\n  }\"\r\n>\r\n  <article class=\"blade-header custom-header\">\r\n    <ng-content select=\"[custom-header]\"></ng-content>\r\n    <ng-content *ngIf=\"customBladeTabs\" select=\"[custom-blade-tabs]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-content\">\r\n    <ng-content select=\"[custom-content]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-footer\">\r\n    <ng-content select=\"[custom-footer]\"></ng-content>\r\n  </article>\r\n</aside>\r\n\r\n",
                 styles: [""]
             },] }
 ];
@@ -362,6 +364,8 @@ BladeComponent.propDecorators = {
     customBlade: [{ type: Input }],
     enableIcon: [{ type: Input }],
     iconName: [{ type: Input }],
+    bladeTabs: [{ type: Input }],
+    customBladeTabs: [{ type: Input }],
     showModal: [{ type: Input }],
     oneColWidth: [{ type: Input }],
     bladeSize: [{ type: Input }],
@@ -1061,7 +1065,7 @@ class AccordionComponent {
 AccordionComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-accordion',
-                template: "<article class=\"accordion-container\">\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between border-none\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <span class=\"flex-align-center height-3\">\r\n            <span *ngIf=\"dragable\" class=\"accordion-icon material-icons\">drag_indicator</span>\r\n            <span *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons icon-body-text {{iconBgColor}}\">{{iconName}}</span>\r\n            <span *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></span>\r\n            <span class=\"accordion-heading\">{{accordionHeading}}</span>\r\n        </span>\r\n        <div class=\"flex-group flex-end flex-align-center height-3\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n          <div [class.icon-chevron-down]=\"!showBody\" [class.icon-chevron-up]=\"showBody\"\r\n                class=\"icon-body-text\"></div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" [id]=\"sectionId\" class=\"accordion-panel\" [ngClass]=\"{'clean': accordionClean}\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
+                template: "<article class=\"accordion-container\">\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-align-center\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <span class=\"flex-align-center\">\r\n            <span *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</span>\r\n            <span *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</span>\r\n            <span *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></span>\r\n            <span class=\"nested-icons\">\r\n              <span class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</span>\r\n              <span class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</span>\r\n            </span>\r\n            <span class=\"accordion-heading\">{{accordionHeading}}</span>\r\n        </span>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n          <div>\r\n            <div \r\n              class=\"toggle-chevrons\"\r\n              [class.icon-chevron-down]=\"!showBody\" \r\n              [class.icon-chevron-up]=\"showBody\"\r\n            >\r\n            </div>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" [id]=\"sectionId\" class=\"accordion-panel\" [ngClass]=\"{'clean': accordionClean}\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -1223,7 +1227,7 @@ class DashboardFavouritesListComponent {
 DashboardFavouritesListComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-dashboard-favourites-list',
-                template: "<div class=\"accordion-favourites-list\">\r\n  <div class=\"flex-group flex-start flex-align-center\">\r\n    <button (click)=\"onFavClick($event)\" class=\"icon-star-favourites transparent width-3 margin-right-0-5\" [class.selected]=\"isFavourite\"></button>\r\n    <div class=\"margin-top-1 margin-bottom-0-75\">\r\n      <a (click)=\"onAnchorClick($event)\" class=\"anchor-underline\" title=\"{{itemAnchorTitle}}\"\r\n         type=\"button\" [attr.href]=\"itemAnchorURL\">{{(itemAnchor.length > 50) ? (itemAnchor | slice:0:50) + '...' : (itemAnchor)}}</a><br/>\r\n      <div class=\"margin-top-0-25\">{{(itemDescription.length > 50) ? (itemDescription | slice:0:50) + '...' : (itemDescription)}}</div>\r\n    </div>\r\n  </div>\r\n  <div (click)=\"showTags=!showTags\" class=\"icon-info\"></div>\r\n  <div *ngIf=\"showTags\" class=\"width-100\">\r\n    <div class=\"more-info\">\r\n      <div class=\"field boxed\">\r\n        <label>Tags</label>\r\n        <p>{{tagName}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Last viewed</label>\r\n        <p>{{lastViewed}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Title</label>\r\n        <p>{{favouritesTitle}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Description</label>\r\n        <p>{{favDescription}}</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                template: "<div class=\"accordion-favourites-list\">\r\n  <div class=\"flex-group flex-start flex-align-center\">\r\n    <button (click)=\"onFavClick($event)\" class=\"icon-star-favourites transparent width-3 margin-right-0-5\" [class.selected]=\"isFavourite\"></button>\r\n    <div class=\"margin-top-1 margin-bottom-0-75 description\">\r\n      <a (click)=\"onAnchorClick($event)\" class=\"anchor-underline\" title=\"{{itemAnchorTitle}}\"\r\n         type=\"button\" [attr.href]=\"itemAnchorURL\">{{itemAnchor}}</a><br/>\r\n      <div class=\"margin-top-0-25\">{{itemDescription}}</div>\r\n    </div>\r\n  </div>\r\n  <div (click)=\"showTags=!showTags\" class=\"icon-info\"></div>\r\n  <div *ngIf=\"showTags\" class=\"width-100\">\r\n    <div class=\"more-info\">\r\n      <div class=\"field boxed\">\r\n        <label>Tags</label>\r\n        <p>{{tagName}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Last viewed</label>\r\n        <p>{{lastViewed}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Title</label>\r\n        <p>{{favouritesTitle}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Description</label>\r\n        <p>{{favDescription}}</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -1333,7 +1337,7 @@ class IconPickerComponent {
 IconPickerComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-icon-picker',
-                template: "<section class=\"aa-icon-picker margin-bottom-1\">\r\n    <label for=\"{{selectedIcon}}\" *ngIf=\"showLabel\">{{labelName}}</label>\r\n    <article class=\"aa-ip-filter flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons margin-right-0-5 {{selectedColor}}\">{{selectedIcon}}</div>\r\n      <div class=\"field boxed\">\r\n        <input \r\n          (click)=\"showIcons=true\" \r\n          [(ngModel)]=\"searchIcon\"\r\n          placeholder=\"Search for an icon\"\r\n          type=\"text\" \r\n          class=\"use-material-icon-picker\" \r\n          value=\"{{selectedIcon}}\" \r\n          name=\"{{selectedIcon}}\"\r\n        >\r\n      </div>\r\n      <div class=\"field boxed\">\r\n        <select (change)=\"selectColor($event)\">\r\n          <option value=\"aa-light-blue-100\">Blue light</option>\r\n          <option value=\"aa-blue-100\">Blue</option>\r\n          <option value=\"aa-brown-100\">Brown</option>\r\n          <option value=\"aa-burgundy-100\">Burgundy</option>\r\n          <option value=\"aa-green-100\">Green</option>\r\n          <option value=\"grey-50\">Grey 50</option>\r\n          <option value=\"grey-25\">Grey 25</option>\r\n          <option value=\"grey-10\">Grey 10</option>\r\n          <option value=\"grey-5\">Grey 5</option>\r\n          <option value=\"aa-lime-100\">Lime</option>\r\n          <option value=\"aa-ochre-100\">Ochre</option>\r\n          <option value=\"aa-orange-100\">Orange</option>\r\n          <option value=\"aa-pink-100\">Pink</option>\r\n          <option value=\"aa-plum-100\">Plum</option>\r\n          <option value=\"aa-red-100\">Red</option>\r\n          <option value=\"aa-blue-sky-100\">Sky blue</option>\r\n        </select>\r\n      </div>\r\n    </article>\r\n    <article *ngIf=\"showIcons\" class=\"aa-ip-results\">\r\n      <div \r\n        *ngFor=\"let icon of icons | iconFilter: searchIcon\" \r\n        (click)=\"selectIcon(icon); showIcons=false\" \r\n        class=\"material-icons cursor-pointer\">\r\n        {{icon}}\r\n      </div>\r\n    </article>\r\n  </section>",
+                template: "<section class=\"aa-icon-picker margin-bottom-1\">\r\n    <label for=\"{{selectedIcon}}\" *ngIf=\"showLabel\">{{labelName}}</label>\r\n    <article class=\"aa-ip-filter flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons margin-right-0-5 {{selectedColor}}\">{{selectedIcon}}</div>\r\n      <div class=\"field boxed\">\r\n        <input \r\n          (click)=\"showIcons=true\" \r\n          [(ngModel)]=\"searchIcon\"\r\n          placeholder=\"Search for an icon\"\r\n          type=\"text\" \r\n          class=\"use-material-icon-picker\" \r\n          value=\"{{selectedIcon}}\" \r\n          name=\"{{selectedIcon}}\"\r\n        >\r\n      </div>\r\n      <div class=\"field boxed\">\r\n        <select (change)=\"selectColor($event)\">\r\n          <option value=\"aa-light-blue-100\">Blue light</option>\r\n          <option value=\"aa-blue-100\">Blue</option>\r\n          <option value=\"aa-brown-100\">Brown</option>\r\n          <option value=\"aa-burgundy-100\">Burgundy</option>\r\n          <option value=\"aa-green-100\">Green</option>\r\n          <option value=\"aa-grey-50\">Grey 50</option>\r\n          <option value=\"aa-grey-25\">Grey 25</option>\r\n          <option value=\"aa-grey-10\">Grey 10</option>\r\n          <option value=\"aa-grey-5\">Grey 5</option>\r\n          <option value=\"aa-lime-100\">Lime</option>\r\n          <option value=\"aa-ochre-100\">Ochre</option>\r\n          <option value=\"aa-orange-100\">Orange</option>\r\n          <option value=\"aa-pink-100\">Pink</option>\r\n          <option value=\"aa-plum-100\">Plum</option>\r\n          <option value=\"aa-red-100\">Red</option>\r\n          <option value=\"aa-blue-sky-100\">Sky blue</option>\r\n        </select>\r\n      </div>\r\n    </article>\r\n    <article *ngIf=\"showIcons\" class=\"aa-ip-results\">\r\n      <div \r\n        *ngFor=\"let icon of icons | iconFilter: searchIcon\" \r\n        (click)=\"selectIcon(icon); showIcons=false\" \r\n        class=\"material-icons cursor-pointer\">\r\n        {{icon}}\r\n      </div>\r\n    </article>\r\n  </section>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -1435,7 +1439,7 @@ class OverlayComponent {
 OverlayComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-overlay',
-                template: "<article class=\"aa-overlay flex-center\" *ngIf=\"showOverlay\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n  <div class=\"aa-overlay-container\">\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
+                template: "<article \r\n  class=\"aa-overlay flex-center\" \r\n  *ngIf=\"showOverlay\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex, \r\n    'top' : topPos,\r\n    'right' : rightPos,\r\n    'bottom' : bottomPos,\r\n    'left' : leftPos\r\n  }\">\r\n  <div class=\"aa-overlay-container\">\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -1443,7 +1447,11 @@ OverlayComponent.decorators = [
 OverlayComponent.ctorParameters = () => [];
 OverlayComponent.propDecorators = {
     zIndex: [{ type: Input }],
-    showOverlay: [{ type: Input }]
+    showOverlay: [{ type: Input }],
+    topPos: [{ type: Input }],
+    rightPos: [{ type: Input }],
+    bottomPos: [{ type: Input }],
+    leftPos: [{ type: Input }]
 };
 
 class PopoverComponent {
@@ -1531,12 +1539,15 @@ class ToastrComponent {
 ToastrComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-toastr',
-                template: "<div class=\"aa-toastr\">\r\n    <ng-content></ng-content>\r\n</div>",
+                template: "<div class=\"aa-toastr\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n    <ng-content></ng-content>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
 ];
 ToastrComponent.ctorParameters = () => [];
+ToastrComponent.propDecorators = {
+    zIndex: [{ type: Input }]
+};
 
 class ToastrItemComponent {
     constructor() {
@@ -1631,7 +1642,7 @@ class UserFeedbackComponent {
 UserFeedbackComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-user-feedback',
-                template: "<section class=\"user-feedback box-shadow margin-bottom-1 rating-{{ rating }}\" *ngIf=\"toggleUserFeedback\">\r\n  <div class=\"position-relative\">\r\n    <article class=\"flex-group max-readable-width padding-1\" *ngIf=\"startRating\">\r\n      <h3 class=\"text-align-center margin-top-0-5\">\r\n        <span>{{ question }} </span>\r\n        <strong class=\"italic\">{{ appName }}</strong>\r\n      </h3>\r\n      <div class=\"feature-box faces tertiary flex-group flex-align-center\">\r\n        <div>Poor</div>\r\n        <button (click)=\"onFaceClick(1)\" [ngClass]=\"{ 'face-very-dissatisfied': rating === 1 }\" class=\"face-very-dissatisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(2)\" [ngClass]=\"{ 'face-dissatisfied': rating === 2 }\" class=\"face-dissatisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(3)\" [ngClass]=\"{ 'face-neutral': rating === 3 }\" class=\"face-neutral-blk\"></button>\r\n        <button (click)=\"onFaceClick(4)\" [ngClass]=\"{ 'face-satisfied': rating === 4 }\" class=\"face-satisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(5)\" [ngClass]=\"{ 'face-very-satisfied': rating === 5 }\" class=\"face-very-satisfied-blk\"></button>\r\n        <div>Great</div>\r\n      </div>\r\n    </article>\r\n\r\n    <article *ngIf=\"faceClicked && !userClosedPanel\" class=\"user-feedback-content padding-1\">\r\n      <form name=\"sendFeedback\" [formGroup]=\"feedbackForm\">\r\n        <div class=\"field boxed\">\r\n          <label for=\"feedback\">{{ label }}</label>\r\n          <div class=\"describe width-100\">{{ description }}</div>\r\n          <textarea formControlName=\"comment\" id=\"feedback\"></textarea>\r\n        </div>\r\n        <div class=\"padding-top-1 max-readable-width\">\r\n          <em>{{ footNote }}</em>\r\n        </div>\r\n        <div class=\"field align-center\">\r\n          <button type=\"button\" class=\"primary\" (click)=\"sendFB()\">Send feedback</button>\r\n        </div>\r\n      </form>\r\n    </article>\r\n\r\n    <article *ngIf=\"userClosedPanel\">\r\n      <div class=\"flex-group max-readable-width padding-1\">\r\n        <h3 class=\"text-align-center margin-top-0-5\">\r\n          <span>{{ question }} </span>\r\n          <strong class=\"italic\">{{ appName }}</strong>?\r\n        </h3>\r\n        <div class=\"feature-box tertiary flex-group flex-align-center\">\r\n          <div>Poor</div>\r\n          <div [ngClass]=\"{ 'face-very-dissatisfied': rating === 1 }\" class=\"face-very-dissatisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-dissatisfied': rating === 2 }\" class=\"face-dissatisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-neutral': rating === 3 }\" class=\"face-neutral-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-satisfied': rating === 4 }\" class=\"face-satisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-very-satisfied': rating === 5 }\" class=\"face-very-satisfied-blk\"></div>\r\n          <div>Great</div>\r\n        </div>\r\n      </div>\r\n      <article class=\"user-feedback-content padding-1\">\r\n        <p>{{ closingMessage }}</p>\r\n        <div class=\"thanks align-center\">\r\n          <div *ngIf=\"rating === 1\" class=\"face-very-dissatisfied\"></div>\r\n          <div *ngIf=\"rating === 2\" class=\"face-dissatisfied\"></div>\r\n          <div *ngIf=\"rating === 3\" class=\"face-neutral\"></div>\r\n          <div *ngIf=\"rating === 4\" class=\"face-satisfied\"></div>\r\n          <div *ngIf=\"rating === 5\" class=\"face-very-satisfied\"></div>\r\n        </div>\r\n        <div class=\"field align-center\">\r\n          <button type=\"button\" class=\"tertiary\" (click)=\"onClose()\">Close</button>\r\n        </div>\r\n      </article>\r\n    </article>\r\n  </div>\r\n</section>\r\n",
+                template: "<section class=\"user-feedback box-shadow margin-bottom-1 rating-{{ rating }}\" *ngIf=\"toggleUserFeedback\">\r\n  <div class=\"position-relative\">\r\n    <article class=\"flex-group padding-1\" *ngIf=\"startRating\">\r\n      <h3 class=\"text-align-center margin-top-0-5\">\r\n        <span>{{ question }} </span>\r\n        <strong class=\"italic\">{{ appName }}</strong>\r\n      </h3>\r\n      <div class=\"feature-box faces tertiary flex-group flex-align-center\">\r\n        <div>Great</div>\r\n        <button (click)=\"onFaceClick(5)\" [ngClass]=\"{ 'face-very-satisfied': rating === 5 }\" class=\"face-very-satisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(4)\" [ngClass]=\"{ 'face-satisfied': rating === 4 }\" class=\"face-satisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(3)\" [ngClass]=\"{ 'face-neutral': rating === 3 }\" class=\"face-neutral-blk\"></button>\r\n        <button (click)=\"onFaceClick(2)\" [ngClass]=\"{ 'face-dissatisfied': rating === 2 }\" class=\"face-dissatisfied-blk\"></button>\r\n        <button (click)=\"onFaceClick(1)\" [ngClass]=\"{ 'face-very-dissatisfied': rating === 1 }\" class=\"face-very-dissatisfied-blk\"></button>\r\n        <div>Poor</div>\r\n      </div>\r\n    </article>\r\n\r\n    <article *ngIf=\"faceClicked && !userClosedPanel\" class=\"user-feedback-content padding-1\">\r\n      <form name=\"sendFeedback\" [formGroup]=\"feedbackForm\">\r\n        <div>\r\n          <label for=\"feedback\">{{ label }}</label>\r\n          <div class=\"describe width-100\">{{ description }}</div>\r\n          <textarea formControlName=\"comment\" id=\"feedback\"></textarea>\r\n        </div>\r\n        <div class=\"padding-top-1 max-readable-width\">\r\n          <em>{{ footNote }}</em>\r\n        </div>\r\n        <div class=\"align-center\">\r\n          <button type=\"button\" class=\"primary\" (click)=\"sendFB()\">Send feedback</button>\r\n        </div>\r\n      </form>\r\n    </article>\r\n\r\n    <article *ngIf=\"userClosedPanel\">\r\n      <div class=\"flex-group voting-panel padding-1\">\r\n        <h3 class=\"text-align-center margin-top-0-5\">\r\n          <span>{{ question }} </span>\r\n          <strong class=\"italic\">{{ appName }}</strong>?\r\n        </h3>\r\n        <div class=\"feature-box faces tertiary flex-group flex-align-center\">\r\n          <div>Great</div>\r\n          <div [ngClass]=\"{ 'face-very-satisfied': rating === 5 }\" class=\"face-very-satisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-satisfied': rating === 4 }\" class=\"face-satisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-neutral': rating === 3 }\" class=\"face-neutral-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-dissatisfied': rating === 2 }\" class=\"face-dissatisfied-blk\"></div>\r\n          <div [ngClass]=\"{ 'face-very-dissatisfied': rating === 1 }\" class=\"face-very-dissatisfied-blk\"></div>\r\n          <div>Poor</div>\r\n        </div>\r\n      </div>\r\n      <article class=\"user-feedback-content padding-1\">\r\n        <p>{{ closingMessage }}</p>\r\n        <div class=\"thanks align-center\">\r\n          <div *ngIf=\"rating === 5\" class=\"face-very-satisfied\"></div>\r\n          <div *ngIf=\"rating === 4\" class=\"face-satisfied\"></div>\r\n          <div *ngIf=\"rating === 3\" class=\"face-neutral\"></div>\r\n          <div *ngIf=\"rating === 2\" class=\"face-dissatisfied\"></div>\r\n          <div *ngIf=\"rating === 1\" class=\"face-very-dissatisfied\"></div>\r\n        </div>\r\n        <div class=\"align-center\">\r\n          <button type=\"button\" class=\"tertiary\" (click)=\"onClose()\">Close</button>\r\n        </div>\r\n      </article>\r\n    </article>\r\n  </div>\r\n</section>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             },] }
@@ -1651,6 +1662,81 @@ UserFeedbackComponent.propDecorators = {
     sendFeedback: [{ type: Output }],
     close: [{ type: Output }]
 };
+
+class ModalDialogComponent {
+    constructor() {
+        this.closeMeEvent = new EventEmitter();
+        this.confirmEvent = new EventEmitter();
+    }
+    ngOnInit() {
+        console.log('Modal init');
+    }
+    closeMe() {
+        this.closeMeEvent.emit();
+    }
+    confirm() {
+        this.confirmEvent.emit();
+    }
+    ngOnDestroy() {
+        console.log(' Modal destroyed');
+    }
+}
+ModalDialogComponent.decorators = [
+    { type: Component, args: [{
+                selector: 'aa-modal-dialog',
+                template: "<article class=\"aa-modal\">\r\n    <div \r\n      class=\"aa-modal-container\" \r\n      [ngClass]=\"{'green':green, 'orange':orange, 'red':red, 'blue':blue}\"\r\n      [ngStyle]=\"{\r\n        'top' : topPos,\r\n        'right' : rightPos,\r\n        'left' : leftPos,\r\n        'min-width' : minWidth,\r\n        'max-width' : maxWidth,\r\n        'z-index' : zIndex\r\n      }\"\r\n    >\r\n      <section class=\"aa-modal-header\">\r\n        <h2 class=\"boxed align-center\">{{heading}}</h2>\r\n      </section>\r\n      <section class=\"aa-modal-content\">\r\n        {{message}}\r\n        <ng-content></ng-content>\r\n      </section>\r\n      <section class=\"aa-modal-footer flex-group flex-center\">\r\n        <button (click)=\"closeMe()\" class=\"cancel\">Close</button>\r\n        <button (click)=\"confirm()\" class=\"primary\">Confirm</button>\r\n      </section>\r\n    </div>\r\n  </article>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+                styles: [""]
+            },] }
+];
+ModalDialogComponent.ctorParameters = () => [];
+ModalDialogComponent.propDecorators = {
+    heading: [{ type: Input }],
+    message: [{ type: Input }],
+    topPos: [{ type: Input }],
+    rightPos: [{ type: Input }],
+    leftPos: [{ type: Input }],
+    minWidth: [{ type: Input }],
+    maxWidth: [{ type: Input }],
+    green: [{ type: Input }],
+    orange: [{ type: Input }],
+    red: [{ type: Input }],
+    blue: [{ type: Input }],
+    zIndex: [{ type: Input }],
+    closeMeEvent: [{ type: Output }],
+    confirmEvent: [{ type: Output }]
+};
+
+class ModalService {
+    constructor(resolver) {
+        this.resolver = resolver;
+    }
+    openModal(entry, modalHeading, modalMessage) {
+        const factory = this.resolver.resolveComponentFactory(ModalDialogComponent);
+        this.componentRef = entry.createComponent(factory);
+        this.componentRef.instance.heading = modalHeading;
+        this.componentRef.instance.message = modalMessage;
+        this.componentRef.instance.closeMeEvent.subscribe(() => this.closeModal());
+        this.componentRef.instance.confirmEvent.subscribe(() => this.confirm());
+        this.componentSubscriber = new Subject();
+        return this.componentSubscriber.asObservable();
+    }
+    closeModal() {
+        this.componentSubscriber.complete();
+        this.componentRef.destroy();
+    }
+    confirm() {
+        this.componentSubscriber.next('confirm');
+        this.closeModal();
+    }
+}
+ModalService.ɵprov = i0.ɵɵdefineInjectable({ factory: function ModalService_Factory() { return new ModalService(i0.ɵɵinject(i0.ComponentFactoryResolver)); }, token: ModalService, providedIn: "root" });
+ModalService.decorators = [
+    { type: Injectable, args: [{ providedIn: 'root' },] }
+];
+ModalService.ctorParameters = () => [
+    { type: ComponentFactoryResolver }
+];
 
 class WidgetsModule {
 }
@@ -1678,8 +1764,10 @@ WidgetsModule.decorators = [
                     ToastrItemComponent,
                     TooltipComponent,
                     UserFeedbackComponent,
+                    ModalDialogComponent,
                 ],
                 imports: [CommonModule, FormsModule, ReactiveFormsModule],
+                providers: [ModalService],
                 exports: [
                     PopoverComponent,
                     AccordionComponent,
@@ -1702,7 +1790,9 @@ WidgetsModule.decorators = [
                     ToastrItemComponent,
                     TooltipComponent,
                     UserFeedbackComponent,
+                    ModalDialogComponent,
                 ],
+                entryComponents: [ModalDialogComponent]
             },] }
 ];
 
@@ -1714,5 +1804,5 @@ WidgetsModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { AccordionComponent, AccordionFancyComponent, AlertComponent, AnchorBackComponent, AnimationsModule, BladeBottomComponent, BladeComponent, BladeFooterComponent, BladeTopComponent, ButtonComponent, CardComponent, CheckboxComponent, ClickOutsideDirective, ContextMenuComponent, ContextMenuItemComponent, DashboardContainerComponent, DashboardFavouritesComponent, DashboardFavouritesListComponent, DirectivesModule, ElementsModule, FavouritesComponent, FavouritesListComponent, FieldComponent, FileUploadComponent, FooterComponent, IconPickerComponent, InfoPanelComponent, InfoPanelStackedComponent, InputTextComponent, LayoutModule, LoadingSpinnerComponent, LoadingSpinnerPageComponent, ModalComponent, NavContextComponent, NavigationModule, OverlayComponent, PatternsModule, PopoverComponent, ProgressBarComponent, ProgressCircleComponent, ProgressIndicatorComponent, ProjectTourComponent, SliderComponent, StepperComponent, SummaryTopComponent, SummaryTopListComponent, TabNavigationComponent, TabNavigationContentDirective, TabNavigationHeaderContentDirective, TabNavigationItemComponent, TabNavigationSecondaryComponent, TabNavigationSecondaryItemComponent, TextareaAutoresizeDirective, ToastrComponent, ToastrItemComponent, TooltipComponent, UserFeedbackComponent, WidgetsModule, IconFilterPipe as ɵa };
+export { AccordionComponent, AccordionFancyComponent, AlertComponent, AnchorBackComponent, AnimationsModule, BladeBottomComponent, BladeComponent, BladeFooterComponent, BladeTopComponent, ButtonComponent, CardComponent, CheckboxComponent, ClickOutsideDirective, ContextMenuComponent, ContextMenuItemComponent, DashboardContainerComponent, DashboardFavouritesComponent, DashboardFavouritesListComponent, DirectivesModule, ElementsModule, FavouritesComponent, FavouritesListComponent, FieldComponent, FileUploadComponent, FooterComponent, IconPickerComponent, InfoPanelComponent, InfoPanelStackedComponent, InputTextComponent, LayoutModule, LoadingSpinnerComponent, LoadingSpinnerPageComponent, ModalComponent, ModalDialogComponent, ModalService, NavContextComponent, NavigationModule, OverlayComponent, PatternsModule, PopoverComponent, ProgressBarComponent, ProgressCircleComponent, ProgressIndicatorComponent, ProjectTourComponent, SliderComponent, StepperComponent, SummaryTopComponent, SummaryTopListComponent, TabNavigationComponent, TabNavigationContentDirective, TabNavigationHeaderContentDirective, TabNavigationItemComponent, TabNavigationSecondaryComponent, TabNavigationSecondaryItemComponent, TextareaAutoresizeDirective, ToastrComponent, ToastrItemComponent, TooltipComponent, UserFeedbackComponent, WidgetsModule, IconFilterPipe as ɵa };
 //# sourceMappingURL=angloamerican-components.js.map

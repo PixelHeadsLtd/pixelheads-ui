@@ -22,6 +22,9 @@ import { ToastrItemComponent } from './toastr-item/toastr-item.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ModalService } from './services/modal-service/modal.service';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -46,8 +49,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToastrItemComponent,
     TooltipComponent,
     UserFeedbackComponent,
+    ModalDialogComponent,
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  providers: [ModalService],
   exports: [
     PopoverComponent,
     AccordionComponent,
@@ -70,6 +75,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToastrItemComponent,
     TooltipComponent,
     UserFeedbackComponent,
+    ModalDialogComponent,
   ],
+  entryComponents: [ModalDialogComponent]
 })
 export class WidgetsModule {}

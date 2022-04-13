@@ -1,0 +1,316 @@
+<section class="control-bar flex-group space-between">
+  <h1>Validation</h1>
+  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater bg-aa-pink-25">
+    <h2 class="margin-bottom-0">How should validation work in our Apps?</h2>
+    <div class="flex-group">
+      <div class="margin-right-6">
+        <h3>Defaults</h3>
+        <p>
+          All our inputs are manadatory by default unless they are indicated as <strong class="aa-red-100">optional</strong> 
+          by including the optional class on the given field, refer <a routerLink="/input">here</a> for optional tag.
+          With this approach we have a much cleaner screen that's not littered with red messages which can be overwhelming for the user, 
+          particularly on screens with heavy data.
+        </p>
+      </div>
+      <div class="margin-right-6">
+        <h3>Touched, dirty or bad data</h3>
+        <p>
+          A validation message should appear if a given field has been <strong class="aa-red-100">touched</strong> or if the 
+          field is <strong class="aa-red-100">dirty</strong>, in other words a value has been added and then removed for example. Also if 
+          <strong class="aa-red-100">bad data</strong> has been added, for example an incorrect email format.
+        </p>
+      </div>
+      <div>
+        <h3>Submit</h3>
+        <p>
+          Do not set the submit button to disabled. We have made the decision to always display the submit button whether the form is valid or invalid. You 
+          will need to create an onSubmit() function and loop through the fields within the ngOnInit() and display the validation  
+          on any invalid fields.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Validation example</h2>
+      <div class="describe margin-bottom-1">
+        <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field 
+          and include the alert div element with <strong class="aa-red-100">role="alert"</strong></p>
+      </div>
+      <form [formGroup]="form" novalidate>
+        <div class="field" [class.error]="isFieldValid('name')">
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name" placeholder="Name" />
+          <div *ngIf="isFieldValid('name')" role="alert">Please provide your name</div>
+        </div>
+        <div class="field" [class.error]="isFieldValid('email')">
+          <label for="email">Email</label>
+          <input type="text" id="email" formControlName="email" placeholder="Email" />
+          <div *ngIf="isFieldValid('email')" role="alert">Please provide a valid email address</div>
+        </div>
+        <div formGroupName="address">
+          <div class="field" [class.error]="isFieldValid('address.street')">
+            <label for="street">Address line 1</label>
+            <input type="text" id="street" formControlName="street" placeholder="Address line 1" />
+            <div *ngIf="isFieldValid('address.street')" role="alert">Please provide your street name</div>
+          </div>
+          <div class="field optional">
+            <label for="street2">Address line 2</label>
+            <input type="text" id="street2" formControlName="street2" placeholder="Address line 2" />
+          </div>
+          <div class="field" [class.error]="isFieldValid('address.postCode')">
+            <label for="postcode">Post code</label>
+            <input type="text" id="postCode" formControlName="postCode" placeholder="Post code" />
+            <div *ngIf="isFieldValid('address.postCode')" role="alert">Please provide your Post code</div>
+          </div>
+          <div class="field" [class.error]="isFieldValid('address.country')">
+            <label for="country">Country</label>
+            <input type="text" id="country" formControlName="country" placeholder="Country" />
+            <div *ngIf="isFieldValid('address.country')" role="alert">Please provide Country</div>
+          </div>
+        </div>
+        <div class="flex-group flex-start">
+          <aa-button
+            buttonClass="primary"
+            fieldClass=""
+            buttonText="Submit"
+            (buttonClick)="onSubmit()"
+          >
+          </aa-button>
+          <aa-button
+            buttonClass="cancel"
+            fieldClass=""
+            buttonText="Reset"
+            (buttonClick)="reset()"
+          >
+          </aa-button>
+        </div>
+      </form>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Parent div</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">Classname</td>
+            <td datalabel="Default">.field .error</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Child div</td>
+            <td datalabel="Attribute">role</td>
+            <td datalabel="Type">Role</td>
+            <td datalabel="Default">alert</td>
+          </tr>
+        </tbody>
+      </table>
+      <aa-alert alertClass="info margin-top-1" alertText="I have added this working example in the Gist file to the right"></aa-alert>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showText=true; showCheck=false; showRadio=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Checkbox</h2>
+      <div class="describe margin-bottom-1">
+        <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
+          and include the alert div element with <strong class="aa-red-100">role="alert"</strong>
+        </p>
+      </div>
+      <fieldset class="boxed">
+        <legend>Checkbox</legend>
+        <div class="field error checkbox boxed">
+          <label for="checkboxIdOne">
+            <input 
+              type="checkbox" 
+              value="disabled" 
+              name="myCheckbox"
+              id="checkboxIdOne">
+            <span>Chickens</span>
+          </label>
+        </div>
+        <aa-checkbox 
+          checkboxId="checkboxIdTwo" 
+          checkboxName="myCheckboxes"
+          checkboxText="Foxes" 
+          checkboxValue="Foxes"
+          fieldClass="error boxed">
+        </aa-checkbox>
+        <div class="error" role="alert">Please select at least one option</div>
+      </fieldset>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Fieldset</td>
+            <td datalabel="Attribute">N/A</td>
+            <td datalabel="Type">N/A</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Fieldset child</td>
+            <td datalabel="Attribute">class & role</td>
+            <td datalabel="Type">Class & Role</td>
+            <td datalabel="Default">.error, role="alert"</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Child div</td>
+            <td datalabel="Attribute">role</td>
+            <td datalabel="Type">Role</td>
+            <td datalabel="Default">alert</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showText=false; showCheck=true; showRadio=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Radio</h2>
+        <div class="describe margin-bottom-1">
+          <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
+            and include the alert div element with <strong class="aa-red-100">role="alert"</strong>
+          </p>
+        </div>
+        <fieldset>
+          <legend>Radio button</legend>
+          <div class="field error radio">
+            <label [ngClass]="{'checked': myRadios1==='yes'}">
+              <input [(ngModel)]="myRadios1" name="myRadios1" type="radio" value="yes">
+              <span>Yes</span>
+            </label>
+          </div>
+          <div class="field error radio">
+            <label [ngClass]="{'checked': myRadios1==='no'}">
+              <input [(ngModel)]="myRadios1" name="myRadios1" type="radio" value="no">
+              <span>No</span>
+            </label>
+          </div>
+          <div class="error" role="alert">Please select an option</div>
+        </fieldset>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Fieldset</td>
+              <td datalabel="Attribute">N/A</td>
+              <td datalabel="Type">Fieldset</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Div</td>
+              <td datalabel="Attribute">class</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.field .radio .error</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Fieldset child</td>
+              <td datalabel="Attribute">class & role</td>
+              <td datalabel="Type">Class & Role</td>
+              <td datalabel="Default">.error, role="alert"</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Label</td>
+              <td datalabel="Attribute">[ngClass]</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.checked</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Input</td>
+              <td datalabel="Attribute">disabled</td>
+              <td datalabel="Type">Disabled</td>
+              <td datalabel="Default">false</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showText=false; showCheck=false; showRadio=true">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div *ngIf="showText">
+      <a href="https://gist.github.com/angloux/d857175e82d073b8f24e42dc6181d837" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/d857175e82d073b8f24e42dc6181d837"></app-gist>
+    </div>
+    <div *ngIf="showCheck">
+      <app-gist src="angloux/b68d128666b230aad9bbbd91eab729cf"></app-gist>
+      <a href="https://gist.github.com/angloux/b68d128666b230aad9bbbd91eab729cf" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="showRadio">
+      <app-gist src="angloux/e41a93ca5516811ca6b1583390f41ce6"></app-gist>
+      <a href="https://gist.github.com/angloux/e41a93ca5516811ca6b1583390f41ce6" target="_blank">View Gist on GitHub</a>
+    </div>
+  </article>
+</aa-blade>

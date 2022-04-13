@@ -22,14 +22,14 @@ textarea {
   }
 
   &[aria-readonly=true],
-  &[readonly] {
-    border: none;
-    border-bottom: 1px solid _colour(readonly);
-    border-radius: 0;
+  &[readonly],
+  &[aria-disabled=true],
+  &[disabled] {
+    background-color: _colour(readonly);
+    background-image: none;
+    border-style: dashed;
     cursor: not-allowed;
     &:focus {
-      border: none;
-      border-bottom: 1px solid _colour(readonly);
       box-shadow: none;
     }
   }

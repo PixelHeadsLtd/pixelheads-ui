@@ -48,6 +48,30 @@
             <td datalabel="Default">999</td>
           </tr>
           <tr>
+            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Attribute">topPos</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">default set in css</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Attribute">rightPos</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">default set in css</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Attribute">bottomPos</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">default set in css</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Attribute">leftPos</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">default set in css</td>
+          </tr>
+          <tr>
             <td datalabel="Element">ng-container</td>
             <td datalabel="Attribute">overlay-header</td>
             <td datalabel="Type">HTML</td>
@@ -65,11 +89,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons small bg-aa-light-blue-100" 
-        (click)="copyToClipboard(overlayHTML)">
-        <span class="material-icons">content_copy</span><span>Copy component</span>
-      </button>
-      <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>

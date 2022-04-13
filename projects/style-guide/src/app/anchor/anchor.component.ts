@@ -7,25 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnchorComponent {
 
-  public toggleBlade: boolean;
+  toggleBlade: boolean;
 
-  constructor() { }
+  constructor() {}
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  anchorHTML = '<aa-anchor-back anchorBackText="Previous page title"></aa-anchor-back>';
-
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
   }
 
 }

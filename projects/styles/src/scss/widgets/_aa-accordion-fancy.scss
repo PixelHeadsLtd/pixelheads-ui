@@ -1,7 +1,7 @@
 .dashboard-container {
     border: 1px solid _colour(border-box);
     border-radius: 0.25rem;
-    min-width: 23rem;
+    min-width: 27rem;
     margin-bottom: 0.75rem;
   
   .dashboard-heading {
@@ -28,13 +28,15 @@
       outline: none;
     }
     
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
       font-size: 2rem;
       text-align: center;
     }
 
     .aa-toggle {
-      .material-icons {
+      .material-icons,
+      .material-icons-outlined {
         font-size: _font(size-medium);
         color: _colour(body-text);
       }
@@ -63,6 +65,17 @@
       border-top: 1px solid _colour(border-secondary);
       padding: 0 0.75rem 0;
       font-size: _font(size-default);
+      .description {          
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 80%;
+        a, div {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
     }
   
     a {

@@ -6,7 +6,7 @@
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
-      <h2>Modal</h2>
+      <h2>Modal - component version</h2>
       <div class="describe margin-bottom-1">
         <p>Modals should only be used to inform the user of a particular event and or decision.
           Please avoid using modals for complex form data/tables etc, for this please use one 
@@ -22,7 +22,8 @@
         If you want to set the modal over aa-blade, 
         please set a rightPos and set lefPos to 'auto'</div>
       
-      <div class="field">
+      <h3>Component version</h3>
+      <div class="field boxed">
         <button 
           (click)="toggleModal=!toggleModal" 
           class="primary margin-auto"
@@ -33,8 +34,8 @@
       
       <aa-modal 
         *ngIf="toggleModal"
-        [red]=""
-        [orange]="true"
+        [red]="true"
+        [orange]=""
         [blue]=""
         [green]=""
         topPos=""
@@ -148,15 +149,73 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons small bg-aa-light-blue-100" 
-          (click)="copyToClipboard(modalHTML)">
-          <span class="material-icons">content_copy</span><span>Copy component</span>
-        </button>
-        <button class="custom-icons small bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showModalGist=true; showModalEventGist=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
+
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Modal - service version</h2>
+        <div class="describe margin-bottom-1">
+          <p>You do not require the aa-modal component to use this version. You just need to call it 
+            with the openModal() event. Please refer to the Gist.
+          </p>
+        </div>
+        
+        <h3>Service version</h3>
+        <aa-button 
+          (buttonClick)="openModal()" 
+          buttonClass="primary" 
+          fieldClass="boxed label-hidden" 
+          buttonId="BtnId" 
+          buttonLabel="Modal"
+          buttonText="Show modal" 
+          disabled=""
+        >
+        </aa-button>
+        <div #modal></div>
+
+  
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Button</td>
+              <td datalabel="Attribute">buttonClick</td>
+              <td datalabel="Type">Function</td>
+              <td datalabel="Default">openModal()</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Div</td>
+              <td datalabel="Attribute">Id</td>
+              <td datalabel="Type">Id</td>
+              <td datalabel="Default">#modal</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showModalGist=false; showModalEventGist=true">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
 </section>
 
 <aa-blade 
@@ -172,7 +231,13 @@
     (close)="toggleBlade = false"
   >
   <article class="blade-content">
-    <app-gist src="angloux/b1808895e0ff07b76375732574163aab"></app-gist>
-    <a href="https://gist.github.com/angloux/b1808895e0ff07b76375732574163aab" target="_blank">View Gist on GitHub</a>
+    <div *ngIf="showModalGist">
+      <app-gist src="angloux/b1808895e0ff07b76375732574163aab"></app-gist>
+      <a href="https://gist.github.com/angloux/b1808895e0ff07b76375732574163aab" target="_blank">View Gist on GitHub</a>
+    </div>
+    <div *ngIf="showModalEventGist">
+      <app-gist src="angloux/fb5164e0aa6b55024dfe9b509fc1d110"></app-gist>
+      <a href="https://gist.github.com/angloux/fb5164e0aa6b55024dfe9b509fc1d110" target="_blank">View Gist on GitHub</a>
+    </div>
   </article>
 </aa-blade>

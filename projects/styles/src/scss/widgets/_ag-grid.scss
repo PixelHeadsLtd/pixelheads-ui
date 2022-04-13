@@ -37,6 +37,11 @@
       }
     }
   }
+
+  .ag-popup-child:not(.ag-tooltip-custom) {
+    border: none!important;
+    background-color: none!important;
+  }
   // wrappers
   .ag-root-wrapper {border: none;}
   .ag-root {background-color: _colour(bg-ag-grid);}
@@ -163,7 +168,8 @@
 
       &.ag-cell-range-selected {
         button {
-          &.material-icons {
+          &.material-icons,
+          &.material-icons-outlined {
             box-shadow: 0 0 3pt 1pt _palette(aa-light-blue-50);
           }
         }
@@ -189,7 +195,8 @@
           font-size: 1.2rem!important;
         }
         
-        &.material-icons {
+        &.material-icons,
+        &.material-icons-outlined {
           width: 1.5rem;
           height: 1.5rem;
           padding: 0;

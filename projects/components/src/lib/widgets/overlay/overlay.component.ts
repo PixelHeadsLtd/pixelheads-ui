@@ -10,6 +10,10 @@ export class OverlayComponent implements OnInit {
 
   @Input() zIndex: number;
   @Input() showOverlay: boolean;
+  @Input() topPos: any;
+  @Input() rightPos: any;
+  @Input() bottomPos: any;
+  @Input() leftPos: any;
 
   constructor() { }
 

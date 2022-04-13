@@ -1,10 +1,13 @@
-.material-icons {
-  font-family: 'material-icons';
+.material-icons {font-family: 'material-icons'}
+.material-icons-outlined {font-family: 'material-icons-outlined'}
+
+.material-icons,
+.material-icons-outlined {
+  font-size: 1.85rem;
+  line-height: initial;
   font-weight: normal;
   font-style: normal;
-  font-size: 1.85rem;
   display: inline-block;
-  line-height: initial;
 
   &.small {
     font-size: _font(size-medium);
