@@ -1,53 +1,53 @@
+h1, h2, h3, h4, h5 {
+  color: _colour(heading-1);
+  line-height: initial;
+}
+
+h1 {
+  font-size: 1.625rem;
+  margin: 0;
+  font-weight: _font(weight-regular);
+}
+
+h2 {
+  font-size: _font(size-medium);
+  margin: 2rem 0 1rem 0;
+  font-weight: _font(weight-medium);
+}
+
+h3 {
+  font-size: _font(size-regular);
+  margin: 1rem 0 .5rem 0;
+  font-weight: _font(weight-medium);
+}
+
+h4 {
+  font-size: _font(size-default);
+  margin: 1rem 0 .5rem 0;
+  font-family: _font(family-bold);
+}
+
+h5 {
+  margin: 0 0 .25rem 0;
+  font-family: _font(family-regular);
+  font-size: _font(size-small);
+}
+
+.gradient {
+  h2, h3 {
+    color: _palette(aa-white-100);
+  }
+}
+
 table, p {
     font-size: _font(size-default);
 }
 
-.text-info {
-    color: _palette(aa-light-blue-100) !important;
-}
-.text-error {
-   color: _palette(aa-red-100) !important;
- }
-.text-warning {
-  color: _palette(aa-orange-100) !important;
-}
-.text-success {
-    color: _palette(aa-green-100) !important;
-}
-
-.text-semi-bold, .text-medium, strong { // semi-bold deprecated Oct 2020
+strong {
   font-family: _font(family-medium);
   font-weight: unset;
 }
 
-.text-bold {
-    font-family: _font(family-medium);
+pre { 
+  font-family: monospace; 
 }
-
-.text-regular {
-  font-family: _font(family-regular);
-}
-
-.text-default, .font-size-default {
-    font-size: _font(size-default);
-}
-
-.text-light {
-  font-family: _font(family-light);
-}
-
-.text-italic, .italic {
-  font-style: _font(style-italic);
-}
-
-.strikethrough {
-  text-decoration: line-through;
-}
-
-// will need to set a max-width in conjunction with .ellipsis
-.ellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommentArray } from 'projects/components/src/lib/elements/comments/comments.component';
 
 @Component({
   selector: 'app-comments',
@@ -8,30 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class CommentsComponent implements OnInit {
 
   toggleBlade: boolean;
-  toggleComments: boolean;
-  clicked = false;
-  comments: string[] = [];
-  txtComment: '';
-  date: any = '15-Feb-2022';
-  name: string = 'Michael Stuart King';
-
-  constructor() { }
+  userName: string = 'Michael King';
+  commentsArray: CommentArray[] = [];
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  addComment() {
-    if(this.txtComment) {
-      this.comments.push(this.txtComment);
-      this.txtComment = '';
-    } else {
-      this.clicked = true;
-    }
-  }
-
-  removeComment($index) {
-    this.comments.splice($index, 1);
   }
 
   ngOnInit(): void {

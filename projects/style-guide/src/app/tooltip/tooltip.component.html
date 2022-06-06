@@ -16,10 +16,12 @@
       </div>
       
       <div class="flex-group flex-start">
-        <h3>Tooltip stand-alone</h3>
+        <h3>Tooltip stand-alone with custom icon</h3>
         <aa-tooltip 
           class="margin-top-1"
           [isInfo]="true" 
+          [customIcon]="true" 
+          iconName="help"
           setMinWidth="12" 
           ypos="bottom" 
           xpos="right"
@@ -30,9 +32,10 @@
         </aa-tooltip>
       </div>
       
-      <div class="field">
+      <div class="field optional">
         <aa-tooltip 
           [includeLabel]="true"
+          labelFor="popup-position-bottom-right"
           labelName="Popup panel position - bottom right"
           class="margin-top-1"
           [isInfo]="true" 
@@ -50,6 +53,7 @@
       <div class="field">
         <aa-tooltip 
           [includeLabel]="true"
+          labelFor="popup-position-bottom-left"
           labelName="Popup panel position - bottom left"
           class="margin-top-1"
           [isWarning]="true" 
@@ -67,6 +71,7 @@
       <div class="field">
         <aa-tooltip 
           [includeLabel]="true"
+          labelFor="popup-position-top-right"
           labelName="Popup panel position - top right"
           class="margin-top-1"
           [isError]="true" 
@@ -84,6 +89,7 @@
       <div class="field">
         <aa-tooltip 
           [includeLabel]="true"
+          labelFor="popup-position-top-left"
           labelName="Popup panel position - top left"
           class="margin-top-1"
           [isSuccess]="true" 
@@ -178,6 +184,18 @@
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your label text</td>
           </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">customIcon</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">iconName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Material icon friendly name</a></td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -204,85 +222,7 @@
     (close)="toggleBlade = false"
   >
   <article class="blade-content">
-    <app-gist src="angloux/0a00c7d138cb756bab6cdc13771e35b3"></app-gist>
     <a href="https://gist.github.com/angloux/0a00c7d138cb756bab6cdc13771e35b3" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/0a00c7d138cb756bab6cdc13771e35b3"></app-gist>
   </article>
 </aa-blade>
-
-<!-- <section class="content-container padding-0">
-  <article>
-  <h2 class="boxed">Positioning</h2>
-  <table class="small">
-    <thead>
-    <th>Value</th>
-    <th>Options</th>
-    </thead>
-    <tbody>
-    <tr>
-      <td>[xpos]</td>
-      <td>left, right</td>
-    </tr>
-    <tr>
-      <td>[ypos]</td>
-      <td>bottom, top</td>
-    </tr>
-    </tbody>
-  </table>
-  </article>
-  <article>
-    <h2>Tooltip only</h2>
-    <aa-tooltip [isInfo]="true" [setMinWidth]="'12'" [ypos]="'bottom'" [xpos]="'right'">
-      <h4>Ahoy there</h4>
-      <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
-    </aa-tooltip>
-  </article>
-  
-  <article>
-    <h2>Tooltip with custom material icon</h2>
-    <aa-tooltip [customIcon]="true" iconName="alarm" [isError]="true" [setMinWidth]="'12'" [ypos]="'bottom'" [xpos]="'right'">
-      <h4>Ahoy there</h4>
-      <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
-    </aa-tooltip>
-  </article>
-
-  <article>
-    <h2>Tooltip on a form element</h2>
-    <div class="field">
-      <aa-tooltip [includeLabel]="true" [labelName]="'Default - bottom, right'" [setMinWidth]="'12'" [isInfo]="true" [ypos]="'bottom'" [xpos]="'right'">
-        <h4>Info</h4>
-        <p>It was then that he began very quietly to edge himself under the curtain which hung over the door</p>
-      </aa-tooltip>
-      <input type="text" value="default"/>
-    </div>
-
-    <div class="field">
-      <aa-tooltip [includeLabel]="true" [labelName]="'Bottom, left'" [isWarning]="true" [setMinWidth]="'12'" [ypos]="'bottom'" [xpos]="'left'">
-        <div>
-          <h4>Warning</h4>
-          <p>Above the dam there was what ought to have been a deep pool</p>
-        </div>
-      </aa-tooltip>
-      <input type="text" value="warning">
-    </div>
-
-    <div class="field">
-      <aa-tooltip [includeLabel]="true" [labelName]="'Top, right'" [isError]="true" [ypos]="'top'" [setMinWidth]="'12'" [xpos]="'right'">
-        <h4>Error</h4>
-        <p>Where the water had been trickling over and spurting through the dam there was now a glittering wall of
-          icicles</p>
-      </aa-tooltip>
-      <input type="text" value="error">
-    </div>
-
-    <div class="field">
-      <aa-tooltip [includeLabel]="true" [labelName]="'Top, left'" [isSuccess]="true" [ypos]="'top'" [setMinWidth]="'12'" [xpos]="'left'">
-        <h4>Success</h4>
-        <p> Along this route Mr Beaver led them in single file right out to the middle</p>
-      </aa-tooltip>
-      <input type="text" value="success">
-    </div>
-  </article>
-
-  <app-gist src="angloux/0a00c7d138cb756bab6cdc13771e35b3"></app-gist>
-
-</section> -->

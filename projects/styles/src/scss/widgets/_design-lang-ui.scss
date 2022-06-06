@@ -3,16 +3,9 @@
     padding-left: 16rem;
     transition: all .25s linear;
   }
+  
   .header-secondary {
     display: block;
-    position: static;
-    max-height: 3rem;
-    padding: .5rem 1.5rem;
-    background-color: _colour(secondary);
-    color: _palette(aa-white-100);
-    h1, h2, h3, h4 {
-      color: _palette(aa-white-100);
-    }
   }
 
   header.page-header {
@@ -111,7 +104,7 @@
       margin-bottom: 1.5rem;
     }
     
-    h2 {
+    h2:not(.ql-editor h2) {
       margin-top: 0;
     }
     &:nth-child(odd) {

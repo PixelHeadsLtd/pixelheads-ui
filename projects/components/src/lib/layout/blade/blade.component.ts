@@ -16,6 +16,7 @@ export class BladeComponent implements OnInit {
   @Input() iconName: string;
   @Input() bladeTabs: boolean;
   @Input() customBladeTabs: boolean;
+  @Input() headingMaxWidth: number;
 
   @Input() showModal: boolean;
   @Input() oneColWidth: boolean;
@@ -28,7 +29,7 @@ export class BladeComponent implements OnInit {
   @Output() bladePinned = new EventEmitter<boolean>();
 
   onClose() {
-    this.toggleBlade = false;
+    this.bladeOpen.emit(this.toggleBlade = false);
     if (!this.suppressAutoClose) {
       this.bladeOpen.emit(this.toggleBlade);
     }

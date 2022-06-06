@@ -8,10 +8,73 @@
     <div class="flex-group">
       <section class="flex-1 col-left flex-start">
         <h2>Progress indicator</h2>
-        <div class="describe margin-bottom-1">
+        <div class="describe">
           <p>We have two versions of the progress indicator component, the standard version
             seen here and an additional version that uses material-icons.
           </p>
+        </div>
+
+        <h3>Start the demo</h3>
+        <div class="flex-group flex-start">
+          <aa-button
+            *ngIf="!showIncomplete"
+            [customIcons]="true"
+            (buttonClick)="showIncomplete=true; checkProgress()"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-white-100 bd-aa-green-100 aa-green-100"
+            fieldClass="boxed label-hidden"
+            buttonText="Click to see an example of an 'incomplete' stop"
+            buttonIcon="more_horiz"
+            disabled="">
+          </aa-button>
+
+          <aa-button
+            *ngIf="showIncomplete && !showComplete"
+            [customIcons]="true"
+            (buttonClick)="showComplete=true; checkProgress()"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-green-100"
+            fieldClass="boxed label-hidden"
+            buttonText="Step one is incomplete. Complete step one"
+            buttonIcon="done"
+            disabled="">
+          </aa-button>
+
+          <aa-button
+            *ngIf="showComplete && !showError"
+            [customIcons]="true"
+            (buttonClick)="showError=true; checkProgress()"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-red-100"
+            fieldClass="boxed label-hidden"
+            buttonText="Go to the next step and see how an 'error' state appears"
+            buttonIcon="priority_high"
+            disabled="">
+          </aa-button>
+
+          <aa-button *ngIf="showError && !progressComplete"
+            [customIcons]="true"
+            (buttonClick)="
+              progressComplete=true;
+              checkProgress()
+            " 
+            buttonIcon="thumb_up"
+            buttonClass="custom-icons green" 
+            fieldClass="boxed label-hidden" 
+            buttonText="Complete the progress" 
+            >
+          </aa-button>
+          <aa-button
+            *ngIf="progressComplete && !reset"
+            [customIcons]="true"
+            (buttonClick)="reset=true; checkProgress()"
+            buttonId="buttonId"
+            buttonClass="custom-icons light-blue"
+            fieldClass="boxed label-hidden"
+            buttonText="Restart"
+            buttonIcon="refresh"
+            disabled="">
+          </aa-button>
         </div>
       </section>
         
@@ -29,48 +92,48 @@
           <tbody>
             <tr>
               <td datalabel="Element">Nav</td>
-              <td datalabel="Attribute">role</td>
-              <td datalabel="Type">HTML</td>
-              <td datalabel="Default">progressbar</td>
+              <td datalabel="Attribute">Class</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.aa-progress-indicator, .flex-group</td>
             </tr>
             <tr>
-              <td datalabel="Element">Ordered list</td>
-              <td datalabel="Attribute">ol</td>
-              <td datalabel="Type">HTML</td>
+              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Attribute">asLink</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Attribute">progressLink</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">Your URL</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Attribute">Component</td>
+              <td datalabel="Type">Component</td>
               <td datalabel="Default">N/A</td>
             </tr>
+            <ng-container *ngIf="showMore">
             <tr>
-              <td datalabel="Element">aa-progress-indicator</td>
-              <td datalabel="Attribute">[asLink]</td>
-              <td datalabel="Type">Boolean</td>
-              <td datalabel="Default">false</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">aa-progress-indicator</td>
-              <td datalabel="Attribute">progressLink</td>
-              <td datalabel="Type">Anchor</td>
-              <td datalabel="Default">Your path</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">aa-progress-indicator</td>
+              <td datalabel="Element">aa-progress-indicator-advanced</td>
               <td datalabel="Attribute">progressClass</td>
               <td datalabel="Type">Class</td>
-              <td datalabel="Default">Refer to Gist</td>
+              <td datalabel="Default">.current, .incomplete, .complete, .error</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-indicator</td>
-              <td datalabel="Attribute">progressCount</td>
-              <td datalabel="Type">Number</td>
-              <td datalabel="Default">Your number</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">aa-progress-indicator</td>
+              <td datalabel="Element">aa-progress-indicator-advanced</td>
               <td datalabel="Attribute">progressLabel</td>
               <td datalabel="Type">String</td>
-              <td datalabel="Default">Your label</td>
+              <td datalabel="Default">Your bus-stop label</td>
             </tr>
+          </ng-container>
           </tbody>
         </table>
+        <nav class="margin-top-1">
+          <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+          <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+        </nav>
       </section>
       
       <!-- mini menu -->
@@ -80,7 +143,64 @@
           </button>
         </nav>
     </div>
-    <nav role="progressbar" class="margin-top-1">
+
+    <nav 
+      class="aa-progress-indicator flex-group margin-top-4"
+      [ngStyle]="{'padding' : '3rem 15%'}"
+    >
+      <aa-progress-indicator-advanced
+        [asLink]="false"
+        progressLink="#"
+        progressClass="{{stepOneClass}}"
+        progressLabel="Personal details"
+        [showDescription]="stepOne"
+        description="{{stepOneText}}"
+        iconClass="{{stepOneIconColour}}"
+      >
+      </aa-progress-indicator-advanced>
+      <aa-progress-indicator-advanced
+        [asLink]="false"
+        progressLink="#"
+        progressClass="{{stepTwoClass}}"
+        progressLabel="Company details"
+        [showDescription]="stepTwo"
+        description="{{stepTwoText}}"
+        iconClass="{{stepTwoIconColour}}"
+      >
+      </aa-progress-indicator-advanced>
+      <aa-progress-indicator-advanced
+        [asLink]="false"
+        progressLink="#"
+        progressClass="{{stepThreeClass}}"
+        progressLabel="Bank account"
+        [showDescription]="stepThree"
+        description="{{stepThreeText}}"
+        iconClass="{{stepThreeIconColour}}"
+      >
+      </aa-progress-indicator-advanced>
+      <aa-progress-indicator-advanced
+        [asLink]="false"
+        progressLink="#"
+        progressClass="{{stepFourClass}}"
+        progressLabel="Legal documents"
+        [showDescription]="stepFour"
+        description="{{stepFourText}}"
+        iconClass="{{stepFourIconColour}}"
+      >
+      </aa-progress-indicator-advanced>
+      <aa-progress-indicator-advanced
+        [asLink]="false"
+        progressLink="#"
+        progressClass="{{stepFiveClass}}"
+        progressLabel="Summary"
+        [showDescription]="stepFive"
+        description="{{stepFiveText}}"
+        iconClass="{{stepFiveIconColour}}"
+      >
+      </aa-progress-indicator-advanced>
+    </nav>
+
+    <!-- <nav role="progressbar" class="margin-top-1">
       <ol>
         <aa-progress-indicator
           [asLink]="true"
@@ -118,11 +238,11 @@
           [progressLabel]="'Next'"
         ></aa-progress-indicator>
       </ol>
-    </nav>
+    </nav> -->
   </section>
   
   <!-- start content repeater -->
-  <section class="content-repeater">
+  <!-- <section class="content-repeater">
     <div class="flex-group">
       <section class="flex-1 col-left flex-start">
         <h2>Progress indicator</h2>
@@ -159,7 +279,6 @@
         </table>
       </section>
       
-      <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
           <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); progressIndicator=false; progressIndicatorIcons=true">
             <span class="material-icons">visibility</span><span>View gist</span>
@@ -210,7 +329,7 @@
         ></aa-progress-indicator>
       </ol>
     </nav>
-  </section>
+  </section> -->
 </section>
 
 <aa-blade 
@@ -227,12 +346,12 @@
   >
   <article class="blade-content">
     <div *ngIf="progressIndicator">
-      <app-gist src="angloux/c731c7e7af543ce49b210c442fbb4952"></app-gist>
       <a href="https://gist.github.com/angloux/c731c7e7af543ce49b210c442fbb4952" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/c731c7e7af543ce49b210c442fbb4952"></app-gist>
     </div>
     <div *ngIf="progressIndicatorIcons">
-      <app-gist src="angloux/166d065af3e4273089273a6fdcb3bc35"></app-gist>
       <a href="https://gist.github.com/angloux/166d065af3e4273089273a6fdcb3bc35" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/166d065af3e4273089273a6fdcb3bc35"></app-gist>
     </div>
   </article>
 </aa-blade>

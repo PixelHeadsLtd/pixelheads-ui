@@ -136,6 +136,174 @@
   }
 }
 
+// NEW ADVANCED VERSION
+.aa-progress-indicator {
+  aa-progress-indicator-advanced {
+    margin-right: 0;
+    &:last-child {
+      flex: none;
+    }
+  }
+  .indicator-item {
+    position: relative;
+    margin-right: 0;
+    background: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+
+    &:last-child {
+      flex: none;
+    }
+
+    &:not(:last-child):after,
+    &:not(.aa-progress-indicator aa-progress-indicator-advanced:last-child .indicator-item):after {
+      content: "";
+      height: 2px;
+      background-color: _colour(aa-grey-10);
+      position: absolute;
+      top: 1rem;
+      left: 2.5rem;
+      width: calc(100% - 3rem);
+    }
+
+    &.current {
+      .bus-stop .material-icons {
+        border-color: _palette(aa-light-blue-100);
+        color: _palette(aa-light-blue-100);
+        &:before {
+          content: 'fiber_manual_record';
+          font-size: _font(size-xsmall);
+          top: .105rem;
+          left: .025rem;
+        }
+      }
+    }
+
+    &.visited,
+    &.incomplete {
+      .bus-stop .material-icons {
+        border: 2px solid _palette(aa-green-100);
+        color: _palette(aa-green-100);
+        &:before {
+          content: 'more_horiz';
+        }
+      }
+      // &:after {
+      //   background: linear-gradient(
+      //     to right,
+      //     _palette(aa-green-100) 0%,
+      //     _palette(aa-green-100) 50%,
+      //     _colour(aa-grey-10) 50%,
+      //     _colour(aa-grey-10) 100%
+      //   );
+      // }
+    }
+  
+    &.complete {
+      .bus-stop .material-icons {
+        background-color: _palette(aa-green-100);
+        border-color: _palette(aa-green-100);
+        color: _palette(aa-white-100);
+        &:before {
+          content: 'done';
+          left: .025rem;
+          top: .025rem;
+        }
+      }
+      &:after {
+        background-color: _palette(aa-green-100)!important;
+      }
+    }
+  
+    &.error {
+      .bus-stop .material-icons {
+        background-color: _palette(aa-red-100);
+        border-color: _palette(aa-red-100);
+        color: _palette(aa-white-100);
+        &:before {
+          content: 'priority_high';
+          top: .035rem;
+        }
+      }
+      // &:after {
+      //   background: linear-gradient(
+      //     to right,
+      //     _palette(aa-red-100) 0%,
+      //     _palette(aa-red-100) 50%,
+      //     _colour(aa-grey-10) 50%,
+      //     _colour(aa-grey-10) 100%
+      //   );
+      // }
+    }
+    .description {
+      position: absolute;
+      bottom: 2.75rem;
+      p {
+        margin: 0 0 .25rem calc(-50% + 3rem);
+        width: 16rem;
+        font-size: _font(size-small);
+        line-height: 1rem;
+        font-style: italic;
+        border: 3px solid _palette(aa-pink-25);
+        background-color: _colour(aa-white-100);
+        border-radius: .5rem;
+        padding: 1rem;
+      }
+      .material-icons {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .bus-stop {
+    position: relative;
+    width: 2rem;
+    max-width: 2rem;
+    min-width: 2rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+
+    label {
+      position: absolute;
+      top: 2.75rem;
+      white-space: nowrap;
+      letter-spacing: .025rem;
+    }
+
+    a.material-icons {
+      &:hover {
+        box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+        -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+        -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+      }
+    }
+
+    .material-icons {
+      position: relative;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      background-color: _colour(aa-white-100);
+      margin-bottom: .75rem;
+      font-size: _font(size-medium);
+      color: _colour(aa-grey-25);
+      border: 1px solid _colour(border-primary);
+      
+      &:before {
+        min-width: 100%;
+        text-align: center;
+        position: absolute;
+        line-height: 1.75rem;
+        content: 'chevron_right';
+        top: .05rem;
+        left: 0;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: _breakpoint(breakpoint-570)) {
   [role='progressbar'] {
     ol {

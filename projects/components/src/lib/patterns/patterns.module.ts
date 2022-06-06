@@ -7,10 +7,20 @@ import { ProgressCircleComponent } from './progress-circle/progress-circle.compo
 
 
 @NgModule({
-  declarations: [AlertComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent],
+  declarations: [
+    AlertComponent,
+    AnchorBackComponent,
+    ProgressBarComponent,
+    ProgressCircleComponent
+  ],
   imports: [
     CommonModule
   ],
-  exports: [AlertComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent]
+  exports: [
+    AlertComponent,
+    AnchorBackComponent,
+    ProgressBarComponent,
+    ProgressCircleComponent
+  ]
 })
 export class PatternsModule { }

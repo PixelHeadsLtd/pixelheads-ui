@@ -45,6 +45,7 @@
                 @include icon-left-before-small;
                 content: "\f054";
                 color: _colour(secondary);
+                transition: all .25s linear;
             }
         }
         

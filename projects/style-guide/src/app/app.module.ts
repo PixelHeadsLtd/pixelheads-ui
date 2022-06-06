@@ -7,6 +7,7 @@ import {
   WidgetsModule,
   DirectivesModule
 } from '@angloamerican/components';
+import { QuillModule } from 'ngx-quill'
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,13 +32,14 @@ import { BorderRadiusComponent } from './border-radius/border-radius.component';
 import { BoxComponent } from './box/box.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
 import { CustomTooltipComponent } from './ag-grid/custom-tooltip.component';
 import { CustomCardComponent } from './ag-grid/custom-card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { DashboardFavouritesComponent } from './dashboard-favourites/dashboard-favourites.component';
-import { dateFormatPipe } from '../pipes/date-pipe';
+import { DateFormatPipe } from '../pipes/date-pipe';
 import { EditorialComponent } from './editorial/editorial.component';
 import { FieldComponent } from './field/field.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
@@ -60,6 +62,7 @@ import { TabNavigationComponent } from './tab-navigation/tab-navigation.componen
 import { TabPageOneComponent } from './tab-page-one/tab-page-one.component';
 import { TabPageTwoComponent } from './tab-page-two/tab-page-two.component';
 import { TabPageThreeComponent } from './tab-page-three/tab-page-three.component'
+import { TextComponent } from './text/text.component'
 import { PaddingComponent } from './padding/padding.component';
 import { DlPopoverComponent } from './popover/popover.component';
 import { PageLayoutExamplesComponent } from './page-layout-examples/page-layout-examples.component';
@@ -98,8 +101,9 @@ import { EllipsisContextMenuComponent } from './ag-grid/ellipsis-context-menu/el
 import { ToastrComponent } from './toastr/toastr.component';
 import { TreeComponent } from './tree-menu/tree/tree.component';
 import { CommentsComponent } from './comments/comments.component';
-import { ModalService } from 'projects/components/src/lib/widgets/services/modal-service/modal.service';
-import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-dialog/modal-dialog.component';
+//import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-dialog/modal-dialog.component';
+import { NgxQuillComponent } from './ngx-quill/ngx-quill.component';
+import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-and-answers.component';
 
 @NgModule({
   declarations: [
@@ -118,13 +122,14 @@ import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-
     ButtonsComponent,
     BoxComponent,
     CardComponent,
+    CarouselComponent,
     CustomCardComponent,
     CustomTooltipComponent,
     CheckboxComponent,
     ColoursComponent,
     ContextMenuComponent,
     DashboardFavouritesComponent,
-    dateFormatPipe,
+    DateFormatPipe,
     EditorialComponent,
     FilterComponent,
     FilterPipe,
@@ -164,6 +169,7 @@ import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-
     SummaryTopComponent,
     TablesComponent,
     TagsComponent,
+    TextComponent,
     TreeMenuComponent,
     TypographyComponent,
     TooltipComponent,
@@ -187,7 +193,11 @@ import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-
     ToastrComponent,
     TreeComponent,
     CommentsComponent,
-    ModalDialogComponent
+    //ModalDialogComponent,
+    TextComponent,
+    NgxQuillComponent,
+    CarouselComponent,
+    QuestionsAndAnswersComponent
   ],
   imports: [
     FormsModule,
@@ -206,12 +216,12 @@ import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-
     PatternsModule,
     WidgetsModule,
     DragDropModule,
+    QuillModule.forRoot(),
     AgGridModule.withComponents([CustomTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
-  providers: [ModalService],
   bootstrap: [AppComponent],
   entryComponents: [
-    EllipsisContextMenuComponent, ModalDialogComponent
+    EllipsisContextMenuComponent, //ModalDialogComponent
   ],
 })
 export class AppModule {}

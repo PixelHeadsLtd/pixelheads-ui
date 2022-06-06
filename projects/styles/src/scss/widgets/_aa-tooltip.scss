@@ -80,7 +80,8 @@
   &.custom-icon {
     .material-icons,
     .material-icons-outlined {
-      font-size: _font(size-medium);
+      font-size: 1.15rem;
+      cursor: default;
       &.is-warning {color: _colour(alert-warning-header);}   
       &.is-error {color: _colour(alert-error-header);}
       &.is-info {color: _colour(alert-info-header);}
@@ -92,7 +93,8 @@
   }
 }
 
-.aa-tooltip.icon-info {
+.aa-tooltip.icon-info,
+.aa-tooltip.icon-edit {
   &:before {
     position: static;
   }

@@ -13,30 +13,35 @@
       </div>
 
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <!-- Tab 1 -->
         <aa-tab-navigation-item tabName="Tab 1" [enableIcons]="true" iconName="error" iconColour="aa-red-100"> 
           <ng-template aaTabNavigationContent>
-            <h1 class="boxed">Tab 1 content</h1>
+            <h2 class="boxed">Tab one content</h2>
             <p>This is Tab 1 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
           </ng-template>
         </aa-tab-navigation-item>
+        <!-- Tab 2 -->
         <aa-tab-navigation-item tabName="Tab 2" [enableIcons]="true" iconName="check_circle" iconColour="aa-green-100">
           <ng-template aaTabNavigationContent>
-            <h1 class="boxed">Tab 2 content</h1>
+            <h2 class="boxed">Tab two content</h2>
             <p>This is Tab 2 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
           </ng-template>
         </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Tab 3" [tabDisabled]="true" [enableIcons]="true" iconName="error" iconColour="aa-orange-100">
+        <!-- Tab 3 -->
+        <aa-tab-navigation-item tabName="Disabled" [showRightDivider]="true" [tabDisabled]="true" [enableIcons]="false" iconName="" iconColour="">
           <ng-template aaTabNavigationContent>
-            <h1 class="boxed">Tab 3 content</h1>
+            <h2 class="boxed">Tab three content</h2>
             <p>This is Tab 3 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
           </ng-template>
         </aa-tab-navigation-item>
+        <!-- Tab 4 -->
         <aa-tab-navigation-item tabName="Tab 4" [tabDisabled]="false" [enableIcons]="false" [enableCount]="true" tabCount="200">
           <ng-template aaTabNavigationContent>
-            <h1 class="boxed">Tab 4 content</h1>
+            <h2 class="boxed">Tab four content</h2>
             <p>This is Tab 4 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
           </ng-template>
         </aa-tab-navigation-item>
+
       </aa-tab-navigation>
       <section class="content-container padding-bottom-0" *ngIf="activeTab">
         <aa-tab-navigation-secondary>
@@ -127,6 +132,12 @@
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">[showRightDivider]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -149,7 +160,10 @@
       
       <aa-tab-navigation [routerOutlet]="true">
         <ng-container list-items>
-            <li *ngFor="let tab of tabs" [ngClass]="{'tab-disabled':tab.tabDisabled}">
+            <li 
+              *ngFor="let tab of tabs" 
+              [ngClass]="{'tab-disabled' : tab.tabDisabled, 'divider-tab' : tab.showRightDivider}"
+            >
               <a 
                 *ngIf="!tab.tabDisabled"
                 [id]="tab.tabId" 
@@ -158,6 +172,7 @@
               >
                 {{ tab.name }}
                 <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
+                <span *ngIf="tab.enableIcon" class="material-icons {{tab.iconColor}}">{{tab.iconName}}</span>
               </a>
               <span *ngIf="tab.tabDisabled">
                 {{ tab.name }}
@@ -206,13 +221,19 @@
           </tr>
           <tr>
             <td datalabel="Element">li</td>
-            <td datalabel="Attribute">li</td>
-            <td datalabel="Type">Li</td>
+            <td datalabel="Attribute">html</td>
+            <td datalabel="Type">N/A</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
+            <td datalabel="Element">Divider li</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.divider-tab</td>
+          </tr>
+          <tr>
             <td datalabel="Element">Anchor</td>
-            <td datalabel="Attribute">a</td>
+            <td datalabel="Attribute">html</td>
             <td datalabel="Type">Anchor</td>
             <td datalabel="Default">N/A</td>
           </tr>
@@ -333,7 +354,7 @@
       </div>
       <div class="margin-top-1">
         <aa-tab-navigation [tabInfoRouterOutlet]="true">
-          <li tabs *ngFor="let item of tabDataItems; let i">
+          <li tabs *ngFor="let item of tabInfoPanelItems; let i">
             <a (click)="setIndex(i)" [class.active]="selectedIndex === i" class="cursor-none {{item.tabColor}}">
               <aa-progress-circle 
                 [panelView]="true" 
@@ -369,18 +390,18 @@
   >
   <article class="blade-content">
     <div *ngIf="tabNgTemplate">
-      <app-gist src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
       <a href="https://gist.github.com/angloux/fc6fe846adfb3b2a34bb516498e12039" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
     </div>
     
     <div *ngIf="tabRouterOutlet">
-      <app-gist src="angloux/49376fbd40cdc740ac32d68ea19fc150"></app-gist>
       <a href="https://gist.github.com/angloux/49376fbd40cdc740ac32d68ea19fc150" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/49376fbd40cdc740ac32d68ea19fc150"></app-gist>
     </div>
     
     <div *ngIf="tabInfo">
-      <app-gist src="angloux/f08af42ced9a4788dca64d6ced828ecf"></app-gist>
       <a href="https://gist.github.com/angloux/f08af42ced9a4788dca64d6ced828ecf" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/f08af42ced9a4788dca64d6ced828ecf"></app-gist>
     </div>
     <app-gist [ngStyle]="{'display': 'none'}" src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
   </article>

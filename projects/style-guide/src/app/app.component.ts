@@ -25,6 +25,7 @@ export class AppComponent {
   toggleAppsBlade: boolean;
   @HostBinding('class.light-mode') lightTheme = true;
   @HostBinding('class.dark-mode') darkTheme = false;
+  //@HostBinding('attr.id') secondaryHeader = 'show-header-secondary';
   theme = 'Light';
 
   constructor() {
@@ -91,6 +92,7 @@ export class AppComponent {
     'accordion',
     'accordion-fancy',
     'card',
+    'carousel',
     'context-menu',
     'dashboard-favourites',
     'info-panel',
@@ -100,6 +102,7 @@ export class AppComponent {
     'stepper',
     'summary-top',
     'tags',
+    'text',
     'toastr',
     'tooltip',
     'tree-menu',
@@ -107,6 +110,7 @@ export class AppComponent {
     'ag-grid',
     'ngb-datepicker',
     'ng-select',
+    'ngx-quill',
     'html-email',
     'elements-alignment',
     'slider',
@@ -127,61 +131,61 @@ export class AppComponent {
   }
   
   appIconItems: AppIconsData[] = [
-    new AppIconsData('icon-agreement', 'Agreement'),
-    new AppIconsData('icon-aspect', 'Aspect'),
-    new AppIconsData('icon-block-leave', 'Block Leave'),
-    new AppIconsData('icon-command-queue', 'Command Queue'),
-    new AppIconsData('icon-common-app', 'Common App'),
-    new AppIconsData('icon-compliance', 'Compliance'),
-    new AppIconsData('icon-comp-and-train fa-check-circle', 'Compliance & Training'),
-    new AppIconsData('icon-core fa-map-marker', 'CORE'),
-    new AppIconsData('icon-customer-onboarding', 'Customer Onboarding'),
-    new AppIconsData('icon-customer-portal', 'Customer Portal'),
-    new AppIconsData('icon-dashboard fa-tachometer-alt', 'Dashboard'),
-    new AppIconsData('icon-declarations', 'Declarations'),
-    new AppIconsData('icon-ext-data-provider', 'External Data Provider'),
-    new AppIconsData('icon-finance fa-calculator', 'Finance'),
-    new AppIconsData('icon-finance-integ burgundy fa-print', 'Finance Integration'),
-    new AppIconsData('icon-financial-reporting blue fa-print', 'Finance Reporting'),
-    new AppIconsData('icon-flash fa-bolt', 'Flash'),
-    new AppIconsData('icon-hive fa-globe', 'Hive Customer Portal'),
-    new AppIconsData('icon-hive', 'Hive Trading Insights'),
-    new AppIconsData('icon-incident-reg burgundyred fa-exclamation', 'Incident Register'),
-    new AppIconsData('icon-incident-workflow-tool fa-exclamation', 'Incident Workflow Tool'),
-    new AppIconsData('icon-integration fa-project-diagram', 'Integration'),
-    new AppIconsData('icon-invoicing fa-file-invoice', 'Invoicing'),
-    new AppIconsData('icon-live-reporting', 'Live Reporting'),
-    new AppIconsData('icon-logistics-portal fa-atlas', 'Logistics Portal'),
-    new AppIconsData('icon-market-analytics fa-chart-area', 'Market Analytics'),
-    new AppIconsData('icon-market-data fa-chart-bar', 'Market Data'),
-    new AppIconsData('icon-market-risk fa-chart-line', 'Market Risk'),
-    new AppIconsData('icon-master-data fa-database ', 'Master Data'),
-    new AppIconsData('icon-mine-visit fa-book-open ', 'Mine Visit'),
-    new AppIconsData('icon-op-risk', 'Op Risk'),
-    new AppIconsData('icon-operations', 'Operations'),
-    new AppIconsData('icon-optimove-logo', 'Optimove'),
-    new AppIconsData('icon-organisation fa-sitemap ', 'Organisation'),
-    new AppIconsData('icon-performance-reports fa-list-ol ', 'Performance reports'),
-    new AppIconsData('icon-receive-discount burgundyred fa-handshake', 'Receivable Discounting'),
-    new AppIconsData('icon-reporting apple fa-chart-line', 'Reporting'),
-    new AppIconsData('icon-reporting fa-chart-pie ', 'Reporting (legacy)'),
-    new AppIconsData('icon-reporting-portal fa-file-signature ', 'Reporting Portal'),
-    new AppIconsData('icon-risk fa-square-root-alt', 'Risk'),
-    new AppIconsData('icon-security-amp fa-users-cog ', 'Security AMP'),
-    new AppIconsData('icon-shipping fa-ship', 'Shipping'),
-    new AppIconsData('icon-supply-chain', 'Supply Chain Manager'),
-    new AppIconsData('icon-system-health fa-heartbeat', 'System Health'),
-    new AppIconsData('icon-tag', 'Tag'),
-    new AppIconsData('icon-thermal-coal fa-fire-alt', 'Thermal Coal'),
-    new AppIconsData('icon-trader-analytics rust fa-chart-area', 'Trader Analytics'),
-    new AppIconsData('icon-trader-dashboard darkblue fa-chart-line', 'Traders Dashboard'),
-    new AppIconsData('icon-trading-trans', 'Trading Transactions'),
-    new AppIconsData('icon-travel-safety fa-route purple', 'Travel Safety'),
-    new AppIconsData('icon-workflow fa-check-circle', 'Workflow'),
+    {appIconClass: 'icon-agreement', appIconName: 'Agreement'},
+    {appIconClass: 'icon-aspect', appIconName: 'Aspect'},
+    {appIconClass: 'icon-tasks', appIconName: 'Assay Manager'},
+    {appIconClass: 'icon-banc', appIconName: 'BANC'},
+    {appIconClass: 'icon-block-leave', appIconName: 'Block Leave'},
+    {appIconClass: 'icon-command-queue', appIconName: 'Command Queue'},
+    {appIconClass: 'icon-common-app', appIconName: 'Common App'},
+    {appIconClass: 'icon-compliance', appIconName: 'Compliance'},
+    {appIconClass: 'icon-comp-and-train fa-check-circle', appIconName: 'Compliance & Training'},
+    {appIconClass: 'icon-core fa-map-marker', appIconName: 'CORE'},
+    {appIconClass: 'icon-customer-onboarding', appIconName: 'Customer Onboarding'},
+    {appIconClass: 'icon-customer-portal', appIconName: 'Customer Portal'},
+    {appIconClass: 'icon-dashboard fa-tachometer-alt', appIconName: 'Dashboard'},
+    {appIconClass: 'icon-declarations', appIconName: 'Declarations'},
+    {appIconClass: 'icon-ext-data-provider', appIconName: 'External Data Provider'},
+    {appIconClass: 'icon-finance fa-calculator', appIconName: 'Finance'},
+    {appIconClass: 'icon-finance-integ burgundy fa-print', appIconName: 'Finance Integration'},
+    {appIconClass: 'icon-financial-reporting blue fa-print', appIconName: 'Finance Reporting'},
+    {appIconClass: 'icon-flash fa-bolt', appIconName: 'Flash'},
+    {appIconClass: 'icon-hive fa-globe', appIconName: 'Hive Customer Portal'},
+    {appIconClass: 'icon-hive', appIconName: 'Hive Trading Insights'},
+    {appIconClass: 'icon-incident-reg burgundyred fa-exclamation', appIconName: 'Incident Register'},
+    {appIconClass: 'icon-incident-workflow-tool fa-exclamation', appIconName: 'Incident Workflow Tool'},
+    {appIconClass: 'icon-integration fa-project-diagram', appIconName: 'Integration'},
+    {appIconClass: 'icon-invoicing fa-file-invoice', appIconName: 'Invoicing'},
+    {appIconClass: 'icon-live-reporting', appIconName: 'Live Reporting'},
+    {appIconClass: 'icon-logistics-portal fa-atlas', appIconName: 'Logistics Portal'},
+    {appIconClass: 'icon-market-analytics fa-chart-area', appIconName: 'Market Analytics'},
+    {appIconClass: 'icon-market-data fa-chart-bar', appIconName: 'Market Data'},
+    {appIconClass: 'icon-market-risk fa-chart-line', appIconName: 'Market Risk'},
+    {appIconClass: 'icon-master-data fa-database ', appIconName: 'Master Data'},
+    {appIconClass: 'icon-mine-visit fa-book-open ', appIconName: 'Mine Visit'},
+    {appIconClass: 'icon-op-risk', appIconName: 'Op Risk'},
+    {appIconClass: 'icon-operations', appIconName: 'Operations'},
+    {appIconClass: 'icon-optimove-logo', appIconName: 'Optimove'},
+    {appIconClass: 'icon-organisation fa-sitemap ', appIconName: 'Organisation'},
+    {appIconClass: 'icon-performance-reports fa-list-ol ', appIconName: 'Performance reports'},
+    {appIconClass: 'icon-receive-discount burgundyred fa-handshake', appIconName: 'Receivable Discounting'},
+    {appIconClass: 'icon-reporting apple fa-chart-line', appIconName: 'Reporting'},
+    {appIconClass: 'icon-reporting fa-chart-pie ', appIconName: 'Reporting (legacy)'},
+    {appIconClass: 'icon-reporting-portal fa-file-signature ', appIconName: 'Reporting Portal'},
+    {appIconClass: 'icon-risk fa-square-root-alt', appIconName: 'Risk'},
+    {appIconClass: 'icon-security-amp fa-users-cog ', appIconName: 'Security AMP'},
+    {appIconClass: 'icon-shipping fa-ship', appIconName: 'Shipping'},
+    {appIconClass: 'icon-supply-chain', appIconName: 'Supply Chain Manager'},
+    {appIconClass: 'icon-system-health fa-heartbeat', appIconName: 'System Health'},
+    {appIconClass: 'icon-tag', appIconName: 'Tag'},
+    {appIconClass: 'icon-thermal-coal fa-fire-alt', appIconName: 'Thermal Coal'},
+    {appIconClass: 'icon-trader-analytics rust fa-chart-area', appIconName: 'Trader Analytics'},
+    {appIconClass: 'icon-trader-dashboard darkblue fa-chart-line', appIconName: 'Traders Dashboard'},
+    {appIconClass: 'icon-trading-trans', appIconName: 'Trading Transactions'},
+    {appIconClass: 'icon-travel-safety fa-route purple', appIconName: 'Travel Safety'},
+    {appIconClass: 'icon-workflow fa-check-circle', appIconName: 'Workflow'}
   ];
   
-  myAppIconItems = this.appIconItems[0];
-
   navDataItems:NavData[] = [
     // AMIMATIONS
     {color:'red', iconName:'motion_photos_paused', title:'Animations', nestedItems:
@@ -246,6 +250,7 @@ export class AppComponent {
       {iconName:'reorder', title:'Accordion', routerLink:'/accordion'},
       {iconName:'view_list', title:'Accordion fancy', routerLink:'/accordion-fancy'},
       {iconName:'account_box', title:'Card', routerLink:'/card'},
+      {iconName:'recent_actors', title:'Carousel', routerLink:'/carousel'},
       {iconName:'star', title:'Faves - dashboard', routerLink:'/dashboard-favourites'},
       {iconName:'face', title:'Icon picker', routerLink:'/icon-picker'},
       {iconName:'fact_check', title:'Info panel', routerLink:'/info-panel'},
@@ -266,6 +271,7 @@ export class AppComponent {
       {iconName:'margin', title:'Margin', routerLink:'/margin'},
       {iconName:'code', title:'Markup', routerLink:'/markup'},
       {iconName:'padding', title:'Padding', routerLink:'/padding'},
+      {iconName:'format_color_text', title:'Text', routerLink:'/text'},
       {iconName:'open_with', title:'Width', routerLink:'/widths'}
     ]},
     // TYPOGRAPHY
@@ -279,12 +285,18 @@ export class AppComponent {
     [
       {iconName:'table_rows', title:'Ag grid', routerLink:'/ag-grid'},
       {iconName:'edit_calendar', title:'Ngb datepicker', routerLink:'/ngb-datepicker'},
-      {iconName:'checklist', title:'Ng select', routerLink:'/ng-select'}
+      {iconName:'checklist', title:'Ng select', routerLink:'/ng-select'},
+      {iconName:'edit_note', title:'Ngx quill', routerLink:'/ngx-quill'}
     ]},
     // EMAIL TEMPLATES
     {color:'green reversed', iconName:'attach_email', title:'Email templates', nestedItems:
     [
       {iconName:'forward_to_inbox', title:'Email templates', routerLink:'/html-email'}
+    ]}, 
+    // Q&A's
+    {color:'green reversed', iconName:'help_outline', title:'Q&A`s', nestedItems:
+    [
+      {iconName:'psychology_alt', title:'Common Q&A`s', routerLink:'/questions-and-answers'}
     ]}, 
     // ADDENDUM
     {color:'green reversed', iconName:'subject', title:'Addendum', nestedItems:
@@ -302,11 +314,13 @@ export class AppComponent {
     }
   }
 
-  setSelectedItem(menuIem: NavData) {
+  setSelectedItem(nestedMenuItem: NavData) {
     this.navDataItems.forEach(parent=>{
-      parent.nestedItems.forEach(child=>{
-        child.isSelected = (child === menuIem);
-      });
+      if(parent.nestedItems != null) {
+        parent.nestedItems.forEach(child=>{
+          child.isSelected = (child === nestedMenuItem);
+        });
+      }
     });
   }
 }

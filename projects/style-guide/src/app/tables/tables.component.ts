@@ -16,6 +16,7 @@ export class TablesComponent {
   tableFeature: boolean;
   toggleBlade: boolean;
   expandedIndex: number = null;
+  multiTables: boolean;
 
   setExpandedIndex(index: number) {
     if(index !== this.expandedIndex) {

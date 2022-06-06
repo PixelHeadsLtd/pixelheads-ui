@@ -1,0 +1,12 @@
+<div 
+class="aa-carousel" 
+[ngStyle]="{ 'max-width' : maxWidth }"
+[ngClass]="{ 'margin-auto' : alignCenter }"
+>
+    <section class="aa-carousel-content">
+        <ng-content select="[carousel-content]"></ng-content>
+    </section>
+    <nav class="aa-carousel-footer">
+        <ng-content select="[carousel-footer]"></ng-content>
+    </nav>
+</div>

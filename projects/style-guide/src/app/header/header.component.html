@@ -86,7 +86,7 @@
         <div class="describe margin-bottom-1">
           <p>There is an option available to include a secondary header. The secondary header is fixed, similar to the main page 
             header. This allows the page content to scroll beneath. For this to work correctly in your App there a two things you'll 
-            need to do. Firstly, add the id name <strong class="aa-red-100">show-header-secondary</strong> to the body tag found in index.html. 
+            need to do. Firstly, in your app.components.ts file add a HostBinding <strong class="aa-red-100">@HostBinding('attr.id') secondaryHeader = 'show-header-secondary';</strong>. 
             Secondly, add the actual html element for the header inside <strong class="aa-red-100">app.component.html</strong> with the 
             class name <strong>header-secondary</strong>. This will pick up the correct css from Design Language and reposition the core anglo-framework 
             left navigation, main content container and any blades used.
@@ -94,7 +94,17 @@
         </div>
         <div>
           <header class="header-secondary">
-            <h1>Administration</h1>
+            <div class="flex-group flex-align-center space-between">
+              <h1>Administration</h1>
+              <aa-button 
+                buttonClass="secondary" 
+                fieldClass="boxed label-hidden" 
+                buttonId="buttonId" 
+                buttonLabel="Secondary"
+                buttonText="Secondary" 
+                disabled="">
+              </aa-button>
+            </div>
           </header>
         </div>
       </section>
@@ -104,22 +114,22 @@
           <caption>Attributes</caption>
           <thead>
             <tr>
-              <th>Element</th>
-              <th>Attribute</th>
+              <th>File</th>
+              <th>TypeScript/Markup</th>
               <th>Type</th>
               <th>Default</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">body tag (inside index.html)</td>
-              <td datalabel="Attribute">id</td>
-              <td datalabel="Type">Id</td>
-              <td datalabel="Default">show-header-secondary</td>
+              <td datalabel="Element">app.components.ts</td>
+              <td datalabel="Attribute">@HostBinding('attr.id') secondaryHeader = `show-header-secondary`;</td>
+              <td datalabel="Type">TypeScript</td>
+              <td datalabel="Default">N/A</td>
             </tr>
             <tr>
-              <td datalabel="Element">Header markup, inside (app.component.html)</td>
-              <td datalabel="Attribute">Html</td>
+              <td datalabel="Element">app.component.html</td>
+              <td datalabel="Attribute">Html (see gist)</td>
               <td datalabel="Type">Class</td>
               <td datalabel="Default">header-secondary</td>
             </tr>

@@ -45,6 +45,10 @@ export class TabNavigationComponent implements OnInit, AfterContentInit {
     return this.currentTab.tabName === tab.tabName;
   }
 
+  isDividerTab() {
+    return true;
+  }
+
   onTabClicked(tab: TabNavigationItemComponent) {
     this.tabClicked.emit(tab);
 

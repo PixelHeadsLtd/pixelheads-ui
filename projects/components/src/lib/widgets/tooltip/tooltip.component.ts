@@ -18,6 +18,7 @@ export class TooltipComponent implements OnInit {
   @Input() customIcon: boolean;
   @Input() iconName: string;
   @Input() zIndex: number;
+  @Input() labelFor: string;
 
   constructor() {}
 

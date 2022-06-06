@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './blade-bottom.component.html',
   styleUrls: ['./blade-bottom.component.scss']
 })
-export class BladeBottomComponent {
+export class BladeBottomComponent implements AfterContentChecked  {
 
   isPinned: boolean;
   isOpen : boolean;
@@ -21,7 +21,10 @@ export class BladeBottomComponent {
   defaultColDef;
   rowData;
 
-  constructor(public http: HttpClient) {
+  constructor(
+    public http: HttpClient,
+    private changeDetector: ChangeDetectorRef,
+    ) {
     this.columnDefs = [
       {
         field: 'athlete',
@@ -106,4 +109,9 @@ export class BladeBottomComponent {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
+
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
+  }
+
 }

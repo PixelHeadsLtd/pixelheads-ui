@@ -24,6 +24,7 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     ngOnInit(): void;
     ngAfterContentInit(): void;
     isActive(tab: TabNavigationItemComponent): boolean;
+    isDividerTab(): boolean;
     onTabClicked(tab: TabNavigationItemComponent): void;
     changeTab(tab: TabNavigationItemComponent): void;
     changeTabById(tabId: string): void;

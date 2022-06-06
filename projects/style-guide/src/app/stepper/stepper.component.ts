@@ -64,17 +64,6 @@ export class StepperComponent implements OnInit {
     this.stepperForm.reset();
   }
 
-  copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
-        e.clipboardData.setData('text/plain', (item));
-        e.preventDefault();
-    };
-
-    document.addEventListener('copy', listener);
-    document.execCommand('copy');
-    document.removeEventListener('copy', listener);
-  }
-
   ngOnInit() {
   }
 

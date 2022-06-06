@@ -14,6 +14,7 @@ export declare class TabNavigationItemComponent implements OnInit, AfterContentC
     tabCount: number;
     tabRoute: string;
     tabDisabled: boolean;
+    showRightDivider: boolean;
     routerLink: string | any[];
     routerLinkActive: boolean;
     templateRef: TemplateRef<any>;

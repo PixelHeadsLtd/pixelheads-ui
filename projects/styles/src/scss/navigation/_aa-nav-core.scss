@@ -13,7 +13,6 @@
   ::-webkit-scrollbar {
     display: none;
   }
-
   &.minimize-menu {
     width: 5.05rem;
     button {
@@ -22,36 +21,30 @@
         transform: rotate(180deg);
       }
     }
-
     span:not(.material-icons, .material-icons-outlined),
     a:after,
     .nav-min-max div {
         opacity: 0;
         transition: all .25s linear;
     }
-
     .nav-min-max div {
       max-width: 1rem
     }
   }
-  
   // ---------------------------- GLOBAL STYLES ----------------------------
   ul, li {list-style: none; padding:0; margin: 0;}
-  
   a {
-    text-decoration: none; 
-    cursor: pointer; 
-    padding: .325rem .5rem .325rem 1.5rem; 
+    text-decoration: none;
+    cursor: pointer;
+    padding: .325rem .5rem .325rem 1.5rem;
     color: _colour(lh-nav-text-primary);
-
     span {
-      &.material-icons, 
+      &.material-icons,
       &.material-icons-outlined {
         position: absolute;
       }
     }
   }
-  
   span {
     vertical-align: top;
     &:not(.material-icons, .material-icons-outlined) {
@@ -64,16 +57,14 @@
       margin-top: .12rem;
     }
   }
-
   // -------------------------------- PARENT UL ---------------------------
   > ul {
     overflow-y: auto;
     height: 100%;
-
     // ------------------------------ PARENT LI ---------------------------
-    > li {
+    > li,
+    > li .menu-item {
       overflow: hidden;
-      
       // -------------------------- PARENT ANCHOR -------------------------
       > a {
         position: relative;
@@ -81,15 +72,13 @@
         width: 100%;
         font-family: _font(family-medium);
         border-bottom: 1px solid _colour(lh-nav-border-primary);
-        box-shadow: 0 8px 20px rgb(0 39 118 / 15%);
-
+        box-shadow: 0 8px 20px rgba(0, 39, 118, 15%);
         span:not(.material-icons, .material-icons-outlined) {
           margin-left: 2.75rem;
         }
-
         // PARENT ANCHOR & SIBLING UL - (EXPANDED, HOVER AND SELECTED COLOURS)
         // red
-        &.red:hover, 
+        &.red:hover,
         &.red.expanded,
         &.red.expanded + ul li a:hover,
         &.red.expanded + ul li a.selected {background-color: _colour(tinted-red)}
@@ -99,7 +88,7 @@
         &.red:not(.expanded, :hover).reversed {background-color: transparent}
         &.red.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-red-50)}}
         // green
-        &.green:hover, 
+        &.green:hover,
         &.green.expanded,
         &.green.expanded + ul li a:hover,
         &.green.expanded + ul li a.selected {background-color: _colour(tinted-green)}
@@ -109,17 +98,17 @@
         &.green:not(.expanded, :hover).reversed {background-color: transparent}
         &.green.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-green-50)}}
         // blue
-        &.blue:hover, 
+        &.blue:hover,
         &.blue.expanded,
         &.blue.expanded + ul li a:hover,
         &.blue.expanded + ul li a.selected {background-color: _colour(tinted-blue)}
-        &.blue.expanded + ul {border-bottom: 0.085rem dashed _palette(aa-blue-100)}
-        &.blue + ul li {.material-icons, .material-icons-outlined {color: _palette(aa-blue-100)}}
-        &.blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-blue-100)}}
+        &.blue.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-blue-100)}
+        &.blue + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-blue-100)}}
+        &.blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-blue-100)}}
         &.blue:not(.expanded, :hover).reversed {background-color: transparent}
         &.blue.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-blue-50)}}
         // orange
-        &.orange:hover, 
+        &.orange:hover,
         &.orange.expanded,
         &.orange.expanded + ul li a:hover,
         &.orange.expanded + ul li a.selected {background-color: _colour(tinted-orange)}
@@ -129,7 +118,7 @@
         &.orange:not(.expanded, :hover).reversed {background-color: transparent}
         &.orange.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-orange-50)}}
         // plum
-        &.plum:hover, 
+        &.plum:hover,
         &.plum.expanded,
         &.plum.expanded + ul li a:hover,
         &.plum.expanded + ul li a.selected {background-color: _colour(tinted-plum)}
@@ -139,7 +128,7 @@
         &.plum:not(.expanded, :hover).reversed {background-color: transparent}
         &.plum.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-plum-50)}}
         // light-blue
-        &.light-blue:hover, 
+        &.light-blue:hover,
         &.light-blue.expanded,
         &.light-blue.expanded + ul li a:hover,
         &.light-blue.expanded + ul li a.selected {background-color: _colour(tinted-light-blue)}
@@ -149,7 +138,7 @@
         &.light-blue:not(.expanded, :hover).reversed {background-color: transparent}
         &.light-blue.reversed {.material-icons, .material-icons {color: _palette(aa-light-blue-50)}}
         // burgundy
-        &.burgundy:hover, 
+        &.burgundy:hover,
         &.burgundy.expanded,
         &.burgundy.expanded + ul li a:hover,
         &.burgundy.expanded + ul li a.selected {background-color: _colour(tinted-burgundy)}
@@ -158,29 +147,24 @@
         &.burgundy:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _palette(aa-burgundy-100)}}
         &.burgundy:not(.expanded, :hover).reversed {background-color: transparent}
         &.burgundy.reversed {.material-icons, .material-icons-outlined {color: _palette(aa-burgundy-50)}}
-      
         &.expanded {
             &::after {
               transform: rotate(135deg);
               transition: all .25s linear;
               top: 1rem;
             }
-          
           + ul {
             transition: all .25s linear;
           }
         }
-
         &:hover {
           background-color: _colour(bg-feature-box-solid);
         }
-
         &.hide-chevron {
           &::after {
             display: none;
           }
         }
-
         &:after {
           content: '';
           position: absolute;
@@ -193,7 +177,6 @@
           transform: rotate(-45deg);
           transition: all .25s linear;
         }
-
         span.material-icons,
         span.material-icons-outlined {
           border-radius: 50%;
@@ -206,19 +189,17 @@
           line-height: 1.5rem;
         }
       }
-
       // PARENT ANCHOR - (DESIGN LANGUAGE ONLY - SETTING WHITE BG COLOUR ON MENU ITEMS)
-      > a {
+      > a,
+      > a .menu-item {
         background-color: _colour(lh-nav-bg-secondary);
       }
-
       // ---------------------------- CHILD UL ----------------------------
       ul {
         transition: all .25s linear;
         max-height: 0;
-        
         // CHILD LI
-        li {
+        li  {
           // CHILD ANCHOR
           a {
             position: relative;
@@ -228,7 +209,7 @@
             &.selected {
               .material-icons,
               .material-icons-outlined {
-                font-size: 1.6rem; 
+                font-size: 1.6rem;
                 padding-left: .44rem;
                 padding-top: .075rem;
                 opacity: 1;
@@ -238,7 +219,7 @@
               &.material-icons,
               &.material-icons-outlined {
                 opacity: .4;
-                transition: all .25s linear; 
+                transition: all .25s linear;
                 font-size: _font(size-medium);
                 padding-left: .6rem;
                 margin-right: 1.15rem;
@@ -261,7 +242,6 @@
       }
     }
   }
-  
   .nav-min-max {
     position: absolute;
     bottom: 1rem;

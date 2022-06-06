@@ -127,13 +127,18 @@
           >
             <ng-container nested-component>
               <div class="margin-bottom-0-25">
-                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_packaging?_a=package&feed=Core&view=versions&package=%40angloamerican%2Fstyles&version=0.2.120&protocolType=Npm" target="_blank" class="anchor-small">
-                  Latest Styles package
+                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank" class="anchor-small">
+                  Latest Styles
                 </a>
               </div>
               <div class="margin-bottom-0-25">
-                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_packaging?_a=package&feed=Core&view=versions&package=%40angloamerican%2Fcomponents&version=9.0.14&protocolType=Npm" target="_blank" class="anchor-small">
-                  Latest Components package
+                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank" class="anchor-small">
+                  Latest Components
+                </a>
+              </div>
+              <div class="margin-bottom-0-25">
+                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/versions" target="_blank" class="anchor-small">
+                  Latest Anglo Framework
                 </a>
               </div>
             </ng-container>
@@ -203,6 +208,9 @@
             </aa-project-tour>
           </div>
           <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
+            <a routerLink="/flex" class="anchor-small">Understanding Flex</a>
+          </div>
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
             <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" class="anchor-small">Flexbox tips</a>
           </div>
           <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
@@ -251,7 +259,7 @@
         class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use 
         the components listed below. If you need sample markup, please visit the
          <a routerLink="/page-layout-examples">Page layout examples</a>. <strong class="aa-red-100">Do not use Bootstrap</strong>, instead
-        we use Flexbox which is a far cleaner approach, easy to use and very effective for responsive layouts
+        we use <a routerLink="/flex">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
       </p>
     </div>
 
@@ -675,6 +683,10 @@
           <div class="material-icons aa-light-blue-100">account_box</div>
           <p>Card</p>
         </a>
+        <a class="call-to-action flex-center" routerLink="/carousel">
+          <div class="material-icons aa-light-blue-100">recent_actors</div>
+          <p>Carousel</p>
+        </a>
         <a class="call-to-action flex-center" routerLink="/dashboard-favourites">
           <div class="material-icons aa-light-blue-100">star</div>
           <p>Favourites</p>
@@ -732,11 +744,20 @@
     [enablePinning]="false">
     <article class="blade-content">
       <div *ngIf="!showEmailTemplates">
-        <p>
-          <label>Styles and Components</label>
-          To get Styles and Components working in your project, install the npm packages<br/>
-          <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_packaging?_a=feed&feed=Core" target="_blank">Check for the latest versions here and install in your app</a>
-        </p>
+
+        <div>
+          <h2>Package versions</h2>
+          <label>To get Styles and Components working in your project, install the npm packages</label>
+          <p class="margin-top-0-25">
+            <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank">Latest Styles version</a>
+          </p>
+          <p class="margin-top-0-25">
+            <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank">Latest Components version</a>
+          </p>
+          <p class="margin-top-0-25">
+            <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/9.0.20/versions" target="_blank">Latest Anglo Framework (dark-mode requires 11.2^)</a>
+          </p>
+        </div>
         
         <h2 class="margin-bottom-0-5">Styles</h2>
         <ol class="code">
@@ -754,7 +775,7 @@
         <label>Styles</label>
         <p>In your project <strong class="aa-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
         <ol class="code margin-top-0-5">
-          <li>&nbsp;"styles": [</li>
+          <li>"styles": [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"path/to/all/other/scss/files.scss",</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"node_modules/@angloamerican/styles/src/scss/styles.scss"</li>
           <li>&nbsp;],</li>
@@ -770,7 +791,7 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;NavigationModule, </li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;PatternsModule,</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
-          <li>&nbsp;&#x007B; from '@angloamerican/components';</li>
+          <li>&nbsp;&#x007D; from '@angloamerican/components';</li>
         </ol>
         
         <p>and declare them as imports</p>
@@ -790,7 +811,7 @@
           <li>&nbsp;"paths": &#123;</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components": [ "node_modules/@angloamerican/components" ],</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components/*": [ "node_modules/@angloamerican/components/*" ]</li>
-          <li>&nbsp;&#x007B;</li>
+          <li>&nbsp;&#x007D;</li>
         </ol>
       </div>
       
@@ -1044,7 +1065,8 @@
           (cdkDropListDropped)="onDrop($event)"
           [cdkDropListData]="componentMenu"
           >
-          <!--this is just what you see in the toolbox-->
+
+          <!-------------------------------- BELOW IS WHAT'S DISPLAYED IN THE LEFT TOOLBOX ----------------------------------->
           <div class="drag-item bg-aa-white-100" cdkDrag *ngFor="let item of componentMenu">
             {{ item | titlecase }}
           </div>
@@ -1198,7 +1220,7 @@
             </div>
           </div>
 
-          <!-- below is what's actually displaying in the template -->
+          <!-------------------------------- BELOW IS WHAT'S DISPLAYED IN THE MAIN PAGE ----------------------------------->
           <div 
             class="drag-item {{item}}" 
             cdkDrag 

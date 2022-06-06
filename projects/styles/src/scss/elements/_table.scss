@@ -158,53 +158,6 @@ table.table-feature {
   }
 }
 
-.aa-comments {
-  .scroll-panel {
-    border: 1px solid _colour(border-box);
-    border-radius: .25rem;
-    padding-top: 1.75rem;
-    .table-comments {
-      font-size: _font(size-small);
-      td, th {
-        .material-icons,
-        .material-icons-outlined {
-          height: unset;
-          padding: 0;
-        }
-      }
-
-      th {
-        &:first-child {
-          span {
-            padding-left: .5rem;
-          }
-        }
-        div {
-          padding-bottom: .5rem;
-          span {
-            padding: .5rem;
-          }
-        }
-      }
-      td {
-        vertical-align: middle;
-        padding: 0 .5rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 8rem;
-        &:nth-child(2),
-        &:nth-child(3) {
-          max-width: 5rem;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-    }
-  }
-}
-
 .scroll-panel {
   position: relative;
   overflow-x: hidden;
@@ -321,4 +274,19 @@ table.table-feature {
 
 .slim {
   width: 4rem;
+}
+
+
+.multi-tables {
+  white-space: nowrap;
+  overflow-x: auto;
+  table {
+    display: inline-block;
+    width: auto;
+    border-right: 2px solid _palette(aa-light-blue-100);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
 }

@@ -88,7 +88,7 @@
         [class.expanded]="selectedIndex === i"
         (click)="setIndex(i)"
         class="flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}"
-        [ngClass]="{'hide-chevron':navDataItems.length<1}"
+        [ngClass]="{'hide-chevron':!item.nestedItems}"
       >
         <span class="material-icons">{{item.iconName}}</span>
         <span class="margin-right-0-5">{{item.title}}</span>
@@ -110,12 +110,12 @@
     </li>
   </ul>
   <div class="flex-group nav-min-max flex-align-center">
-    <div>{{currentDate | dateFormatPipe }}</div>
+    <div>{{currentDate | DateFormatPipe }}</div>
     <button (click)="minimizeMenu=!minimizeMenu" class="material-icons">chevron_left</button>
   </div>
 </nav>
 
-<main [ngStyle]="minimizeMenu && {'padding-left':'5rem'}">
+<main class="main-content" [ngStyle]="minimizeMenu && {'padding-left':'5rem'}">
   <router-outlet></router-outlet>
 </main>
 

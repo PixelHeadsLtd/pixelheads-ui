@@ -22,6 +22,7 @@
           <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
         </span>
       </li>
+      <li *ngIf="tab.showRightDivider" class="divider-tab"></li>
     </ng-container>
     <ng-content></ng-content>
   </ul>

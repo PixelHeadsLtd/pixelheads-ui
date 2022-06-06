@@ -1,0 +1,44 @@
+<div 
+  class="aa-custom-select"
+  [ngStyle]="{'width' : setWidth+'rem'}"
+>
+  <button 
+    class="
+    border-radius-0-25
+    flex-align-center"
+    (click)="showDropdown=!showDropdown"
+  >
+    <span 
+      class="
+      material-icons 
+      padding-right-0-5
+      {{ selectedOption?.iconColor || defaultIconColor }}"
+    >{{ selectedOption?.icon || defaultIcon }}
+    </span>
+
+    <span *ngIf="!selectedOption?.display">{{ defaultName }}</span>
+    <span *ngIf="selectedOption?.display">{{ selectedOption?.display }}</span>
+
+  </button>
+  <div 
+    [class.show-dropdown]="showDropdown" 
+    class="aa-custom-select-dropdown box-shadow-strong"
+  >
+    <div *ngFor=" let option of options; let i = index">
+      <button 
+        (click)="optionIsSelected($event, option); setIndex(i)" 
+        class="flex-align-center"
+        [class.selected]="selectedIndex === i"
+      >
+        <span 
+          *ngIf="option.showIcon"
+          class="
+          material-icons 
+          padding-right-0-5 
+          {{option.iconColor}}"
+        >{{ option.icon }}</span>
+          {{ option.display }}
+      </button>
+    </div>
+  </div>
+</div>

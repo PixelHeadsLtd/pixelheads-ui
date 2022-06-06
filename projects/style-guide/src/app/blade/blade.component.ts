@@ -38,6 +38,7 @@ export class BladeComponent implements OnInit {
   showNestedTwo: boolean;
   showNestedThree: boolean;
   hasBladeTabs: boolean;
+  setHeadingMaxWidth: number;
 
   pinBlade: boolean;
   toggleBlade: boolean;

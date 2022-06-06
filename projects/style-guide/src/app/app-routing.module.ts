@@ -57,6 +57,7 @@ import {TagsComponent} from './tags/tags.component';
 import {AccordionComponent} from './accordion/accordion.component';
 import {AccordionFancyComponent} from './accordion-fancy/accordion-fancy.component';
 import {CardComponent} from './card/card.component';
+import {CarouselComponent} from './carousel/carousel.component';
 import {DashboardFavouritesComponent} from './dashboard-favourites/dashboard-favourites.component';
 import {IconPickerComponent} from './icon-picker/icon-picker.component';
 import {InfoPanelComponent} from './info-panel/info-panel.component';
@@ -74,6 +75,7 @@ import {BorderRadiusComponent} from './border-radius/border-radius.component';
 import {MarginComponent} from './margin/margin.component';
 import {MarkupComponent} from './markup/markup.component';
 import {PaddingComponent} from './padding/padding.component';
+import {TextComponent} from './text/text.component';
 import {WidthsComponent} from './widths/widths.component';
 
 // Typography
@@ -84,9 +86,13 @@ import {TypographyComponent} from './typography/typography.component';
 import {AgGridComponent} from './ag-grid/ag-grid.component';
 import {NgbDatepickerComponent} from './ngb-datepicker/ngb-datepicker.component';
 import {NgSelectComponent} from './ng-select/ng-select.component';
+import {NgxQuillComponent} from './ngx-quill/ngx-quill.component';
 
 // Email Templates
 import {HtmlEmailComponent} from './html-email/html-email.component';
+
+// Common Q&A's
+import {QuestionsAndAnswersComponent} from './questions-and-answers/questions-and-answers.component';
 
 // Addendum
 import {ElementsAlignmentComponent} from './elements-alignment/elements-alignment.component';
@@ -112,6 +118,7 @@ const routes: Routes = [
   { path: 'buttons', component: ButtonsComponent },
   { path: 'comments', component: CommentsComponent },
   { path: 'card', component: CardComponent },
+  { path: 'carousel', component: CarouselComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'colours', component: ColoursComponent },
   { path: 'context-menu', component: ContextMenuComponent },
@@ -138,6 +145,7 @@ const routes: Routes = [
   { path: 'markup', component: MarkupComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'nav-context', component: NavContextComponent },
+  { path: 'ngx-quill', component: NgxQuillComponent },
   { path: 'overlay', component: OverlayComponent },
   { path: 'tab-navigation', component: TabNavigationComponent, children: [
     { path: 'tab-page-one', component: TabPageOneComponent },
@@ -158,6 +166,7 @@ const routes: Routes = [
   { path: 'summary-top', component: SummaryTopComponent },
   { path: 'tables', component: TablesComponent },
   { path: 'tags', component: TagsComponent },
+  { path: 'text', component: TextComponent },
   { path: 'toastr', component: ToastrComponent },
   { path: 'tooltip', component: TooltipComponent },
   { path: 'tree-menu', component: TreeMenuComponent },
@@ -165,6 +174,7 @@ const routes: Routes = [
   { path: 'typography', component: TypographyComponent },
   { path: 'ng-select', component: NgSelectComponent },
   { path: 'ngb-datepicker', component: NgbDatepickerComponent },
+  { path: 'questions-and-answers', component: QuestionsAndAnswersComponent },
   { path: 'html-email', component: HtmlEmailComponent },
   { path: 'elements-alignment', component: ElementsAlignmentComponent }
 ];

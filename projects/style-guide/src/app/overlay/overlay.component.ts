@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { TabData } from '../class/tab-data';
 
@@ -7,7 +7,7 @@ import { TabData } from '../class/tab-data';
   templateUrl: './overlay.component.html',
   styleUrls: ['./overlay.component.scss']
 })
-export class OverlayComponent implements OnInit {
+export class OverlayComponent implements AfterContentChecked  {
   
   showOverlay: boolean;
   obi: boolean;
@@ -16,7 +16,9 @@ export class OverlayComponent implements OnInit {
   toggleBlade: boolean;
   imgPath = "./assets/images/samples/obi-wan.png"
 
-  constructor() { }
+  constructor(
+    private changeDetector: ChangeDetectorRef,
+  ) {}
   
   tabDataItems = [
     new TabData('orange', 'Total team', '60', '6/10', true, true, 'Some other text'),
@@ -40,7 +42,8 @@ export class OverlayComponent implements OnInit {
     this.toggleBlade = open;
   }
 
-  ngOnInit() {
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
   }
 
 }

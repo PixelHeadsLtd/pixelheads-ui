@@ -93,7 +93,9 @@ button {
       .info-panel .material-icons,
       .date-picker .material-icons-outlined, 
       .aa-toastr .material-icons-outlined,
-      .info-panel .material-icons-outlined
+      .info-panel .material-icons-outlined,
+      .table-comments .material-icons,
+      .table-comments .material-icons-outlined
       ) {
       background-color: _colour(primary);
       color: _palette(aa-white-100);
@@ -567,6 +569,16 @@ table:not(.table-feature, .table-feature *) {
         font-size: _font(size-regular);
         margin-right: .25rem;
       }
+    }
+  }
+}
+
+.header-secondary {
+  button {
+    &:hover {
+      background-color: _palette(aa-light-blue-40);
+      color: _palette(aa-blue-100);
+      border-color: _palette(aa-light-blue-40);
     }
   }
 }

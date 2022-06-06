@@ -14,6 +14,13 @@
   border-bottom: 1px solid _colour(secondary);
   padding-left: 1.5rem;
 
+  .divider-tab {
+    width: 2px;
+    height: 12px;
+    margin-right: 2rem;
+    background-color: _palette(aa-grey-25);
+  }
+
   .tab-count {
     background-color: _colour(aa-light-blue-100);
     color: _colour(body-text-reverse);

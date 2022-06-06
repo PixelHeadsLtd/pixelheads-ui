@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectOption } from 'projects/components/src/public-api';
 
 @Component({
   selector: 'app-select',
@@ -9,70 +10,55 @@ export class SelectComponent implements OnInit {
 
   toggleBlade: boolean;
   standardSelect: boolean;
+  customSelect: boolean;
   dataList: boolean;
-  selectedCityIds: string[];
-  selectedCity: string;
-  selectedCityName = 'Vilnius';
-  selectedCityId: number;
-  selectedUserIds: number[];
 
-  constructor() {this.create10kCities();}
+  constructor() {}
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
 
-  cities = [
-    { id: 1, name: 'Vilnius' },
-    { id: 2, name: 'Kaunas' },
-    { id: 3, name: 'Pavilnys', disabled: true },
-    { id: 4, name: 'Pabradė' },
-    { id: 5, name: 'Klaipėda' }
+  optionArray: SelectOption[] = [
+    {
+      id: 'whichThirdPary', 
+      display: 'Which 3rd party components do we currently support?',
+      showIcon: true,
+      icon: 'widgets',
+      iconColor: 'aa-green-50'
+    },
+    {
+      id: 'whatDateFormat', 
+      display: 'What date format should I use for the NGB-datepicker?',
+      showIcon: true,
+      icon: 'edit_calendar',
+      iconColor: 'aa-orange-50'
+    },
+    {
+      id: 'contextMenu', 
+      display: 'How do I add a context-menu to AG-grid?',
+      showIcon: true,
+      icon: 'more_vert',
+      iconColor: 'aa-red-100'
+    },
+    {
+      id: 'toolTip', 
+      display: 'How do I add a tooltip to AG-grid?',
+      showIcon: true,
+      icon: 'mode_comment',
+      iconColor: 'aa-ochre-100'
+    },
+    {
+      id: 'setHeight', 
+      display: 'How do I set the height on AG-grid?',
+      showIcon: true,
+      icon: 'menu',
+      iconColor: 'aa-light-blue-80'
+    }
   ];
 
-  cities2 = [
-    { id: 1, name: 'Vilnius' },
-    { id: 2, name: 'Kaunas' },
-    { id: 3, name: 'Pavilnys', disabled: true },
-    { id: 4, name: 'Pabradė' },
-    { id: 5, name: 'Klaipėda' }
-  ];
-
-  cities3 = [
-    { id: 1, name: 'Vilnius', avatar: '//www.gravatar.com/avatar/b0d8c6e5ea589e6fc3d3e08afb1873bb?d=retro&r=g&s=30 2x' },
-    { id: 2, name: 'Kaunas', avatar: '//www.gravatar.com/avatar/ddac2aa63ce82315b513be9dc93336e5?d=retro&r=g&s=15' },
-    { id: 3, name: 'Pavilnys', avatar: '//www.gravatar.com/avatar/6acb7abf486516ab7fb0a6efa372042b?d=retro&r=g&s=15' }
-  ];
-
-  cities4 = [];
-
-  users = [
-    { id: 'anjmao', name: 'Anjmao' },
-    { id: 'varnas', name: 'Tadeus Varnas' }
-  ];
-
-  selectedAccount = 'Adam'
-  accounts = [
-    { name: 'Adam has a very long name indeed', email: 'adam@email.com', age: 12, country: 'United States' },
-    { name: 'Samantha', email: 'samantha@email.com', age: 30, country: 'United States' },
-    { name: 'Amalie', email: 'amalie@email.com', age: 12, country: 'Argentina' },
-    { name: 'Estefanía', email: 'estefania@email.com', age: 21, country: 'Argentina' },
-    { name: 'Adrian', email: 'adrian@email.com', age: 21, country: 'Ecuador' },
-    { name: 'Wladimir', email: 'wladimir@email.com', age: 30, country: 'Ecuador' },
-    { name: 'Natasha', email: 'natasha@email.com', age: 54, country: 'Ecuador' },
-    { name: 'Nicole', email: 'nicole@email.com', age: 43, country: 'Colombia' },
-    { name: 'Michael', email: 'michael@email.com', age: 15, country: 'Colombia' },
-    { name: 'Nicolás', email: 'nicole@email.com', age: 43, country: 'Colombia' }
-  ];
-
-  addCustomUser = (term) => ({ id: term, name: term });
-
-  create10kCities() {
-    this.cities4 = Array.from({ length: 10000 }, (value, key) => key)
-      .map(val => ({
-        id: val,
-        name: `city ${val}`
-      }));
+  onOptionSelected(selectOption : SelectOption) {
+    console.log("Do something");
   }
 
   ngOnInit() {

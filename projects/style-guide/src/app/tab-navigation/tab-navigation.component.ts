@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
-import { TabData } from '../class/tab-data';
-import { RouterOutletItem } from '../class/tab-router-oulet';
+import { TabNavInfoPanel } from '../class/tab-nav-info-panel';
+import { TabNavRouterOutlet } from '../class/tab-nav-router-oulet';
 
 @Component({
   selector: 'app-tab-navigation',
   templateUrl: './tab-navigation.component.html',
   styleUrls: ['./tab-navigation.component.scss']
 })
-export class TabNavigationComponent implements OnInit {
+export class TabNavigationComponent implements AfterContentChecked {
 
   activeTab: TabNavigationItemComponent;
   selectedIndex: number = null;
@@ -17,17 +17,121 @@ export class TabNavigationComponent implements OnInit {
   tabInfo: boolean;
   toggleBlade: boolean;
 
-  constructor() { }
+  public constructor(
+    private changeDetector: ChangeDetectorRef,
+  ) {}
 
-  tabDataItems = [
-    new TabData('orange', 'Total team', '60', '6/10', true, true, 'Some other text'),
-    new TabData('green', 'Unchanged', '40', '4/10',  true, true, 'Some text for the tooltip'),
-    new TabData('blue', 'Joiners', '60', '6/10',  true, true, 'Some text for the tooltip'),
-    new TabData('red', 'Leavers', '80', '8/10',  true, true, 'Some text for the tooltip'),
-    new TabData('light-blue', 'Movers', '90', '9/10', true, true, 'Some text for the tooltip'),
+  public readonly tabs: TabNavRouterOutlet[] = [
+    {
+      tabId: 'tabOne',
+      name: 'Tab one',
+      routerLink: ['tab-page-one'],
+      tabDisabled: false,
+      enableCount: true,
+      tabCount: 200,
+      showRightDivider: false,
+      enableIcons: false,
+      iconName: '',
+      iconColor: ''
+    },
+    {
+      tabId: 'tabTwo',
+      name: 'Tab two',
+      routerLink: ['tab-page-two'],
+      tabDisabled: false,
+      enableCount: false,
+      tabCount: null,
+      showRightDivider: false,
+      enableIcons: true,
+      iconName: 'error',
+      iconColor: 'aa-red-100'
+    },
+    {
+      tabId: 'tabThree',
+      name: 'Tab three',
+      routerLink: ['tab-page-three'],
+      tabDisabled: false,
+      enableCount: false,
+      tabCount: null,
+      showRightDivider: false,
+      enableIcons: false,
+      iconName: '',
+      iconColor: ''
+    },
+    {
+      tabId: 'tabDivider',
+      name: '',
+      routerLink: null,
+      tabDisabled: false,
+      enableCount: false,
+      tabCount: null,
+      showRightDivider: true,
+      enableIcons: false,
+      iconName: '',
+      iconColor: ''
+    },
+    {
+      tabId: 'disabled',
+      name: 'Disabled',
+      routerLink: [''],
+      tabDisabled: true,
+      enableCount: false,
+      tabCount: null,
+      showRightDivider: false,
+      enableIcons: false,
+      iconName: '',
+      iconColor: ''
+    }
   ];
 
-  myTabData = this.tabDataItems[0];
+  // info panel version
+  public readonly tabInfoPanelItems: TabNavInfoPanel[] = [
+    {
+      tabColor: 'orange', 
+      tabName: 'Total team', 
+      percentage: '60', 
+      valueSplit: '6/10', 
+      isActive: true, 
+      tooltipEnabled: true,
+      tooltipText: 'Some other text'
+    },
+    {
+      tabColor: 'green', 
+      tabName: 'Unchanged', 
+      percentage: '40', 
+      valueSplit: '4/10',  
+      isActive:true, 
+      tooltipEnabled: true, 
+      tooltipText: 'Some text for the tooltip'
+    },
+    {
+      tabColor: 'blue', 
+      tabName: 'Joiners', 
+      percentage: '60', 
+      valueSplit: '6/10',  
+      isActive:true, 
+      tooltipEnabled: true, 
+      tooltipText: 'Some text for the tooltip'
+    },
+    {
+      tabColor: 'red', 
+      tabName: 'Leavers', 
+      percentage: '80', 
+      valueSplit: '8/10',  
+      isActive:true, 
+      tooltipEnabled: true, 
+      tooltipText: 'Some text for the tooltip'
+    },
+    {
+      tabColor: 'light-blue', 
+      tabName: 'Movers', 
+      percentage: '90', 
+      valueSplit: '9/10', 
+      isActive:true, 
+      tooltipEnabled: true, 
+      tooltipText: 'Some text for the tooltip'
+    },
+  ];
 
   tabChanged(tab: TabNavigationItemComponent) {
     this.activeTab = tab;
@@ -37,38 +141,15 @@ export class TabNavigationComponent implements OnInit {
      this.selectedIndex = index;
   }
 
-  public readonly tabs: RouterOutletItem[] = [
-    {
-      tabId: 'tabOne',
-      name: 'Tab one',
-      routerLink: ['tab-page-one'],
-      tabDisabled: false,
-      enableCount: true,
-      tabCount: 200
-    },
-    {
-      tabId: 'tabTwo',
-      name: 'Tab two',
-      routerLink: ['tab-page-two'],
-      tabDisabled: false,
-      enableCount: false,
-      tabCount: null
-    },
-    {
-      tabId: 'tabThree',
-      name: 'Disabled',
-      routerLink: [''],
-      tabDisabled: true,
-      enableCount: true,
-      tabCount: null
-    }
-  ];
-
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
 
-  ngOnInit() {
+  // ngOnInit() {
+  // }
+
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
   }
 
 }

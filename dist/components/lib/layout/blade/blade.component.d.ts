@@ -9,6 +9,7 @@ export declare class BladeComponent implements OnInit {
     iconName: string;
     bladeTabs: boolean;
     customBladeTabs: boolean;
+    headingMaxWidth: number;
     showModal: boolean;
     oneColWidth: boolean;
     bladeSize: string;

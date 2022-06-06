@@ -1,0 +1,20 @@
+.text-info {color: _palette(aa-light-blue-100) !important}
+.text-error {color: _palette(aa-red-100) !important}
+.text-warning {color: _palette(aa-orange-100) !important}
+.text-success {color: _palette(aa-green-100) !important}
+.text-bold {font-family: _font(family-bold) !important}
+.text-semi-bold {font-family: _font(family-medium) !important}
+.text-regular {font-family: _font(family-regular) !important}
+.text-default {font-family: _font(family-default) !important}
+.text-light {font-family: _font(family-light) !important}
+.text-italic, .italic {font-style: _font(style-italic) !important}
+.strikethrough {text-decoration: line-through !important}
+.size-small {font-size: _font(size-small) !important}
+
+// will need to set a max-width in conjunction with .ellipsis
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}

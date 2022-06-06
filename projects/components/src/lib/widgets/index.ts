@@ -2,6 +2,7 @@ export * from './widgets.module';
 export * from './accordion/accordion.component';
 export * from './accordion-fancy/accordion-fancy.component';
 export * from './card/card.component';
+export * from './carousel/carousel.component';
 export * from './dashboard-container/dashboard-container.component';
 export * from './dashboard-favourites/dashboard-favourites.component';
 export * from './dashboard-favourites-list/dashboard-favourites-list.component';

@@ -14,6 +14,7 @@ export class FlexComponent implements OnInit {
   flexEnd: boolean;
   spaceBetween: boolean;
   flexCenter: boolean;
+  flexEllipsis: boolean;
   toggleBlade: boolean;
 
   bladeIsOpen(open: boolean) {

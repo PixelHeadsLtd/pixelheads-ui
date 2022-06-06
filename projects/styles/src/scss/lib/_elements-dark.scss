@@ -74,7 +74,7 @@ $colour: (
   heading-1:               _palette(white-50),
   heading-2:               _palette(aa-light-blue-100),
   body-text:               _palette(white-50),
-  body-text-reverse:       _palette(aa-grey-100),
+  body-text-reverse:       _palette(aa-grey-25),
   header-text:             _palette(white-50),
   label-text:              _palette(white-50),
   text-dark:               _palette(aa-light-blue-5),
@@ -83,7 +83,7 @@ $colour: (
   search-input:            _palette(aa-grey-100),
   search-placeholder:      _palette(aa-grey-50),
   quick-links:             _palette(aa-grey-5),
-  readonly:                _palette(aa-grey-5),
+  readonly:                rgb(14, 14, 14),
 
   dt:                      _palette(aa-light-blue-50),
   link:                   rgb(75, 174, 222),
@@ -211,7 +211,7 @@ $colour: (
   
   aa-white-100:            rgb(27, 28, 34),
   bg-aa-white-100:         rgb(27, 28, 34),
-  aa-blue-100:             _palette(aa-light-blue-100),
+  aa-blue-100:             rgb(0, 59, 179),
   aa-light-blue-100:       _palette(aa-light-blue-100),
   aa-light-blue-5:         _palette(aa-light-blue-5),
   bg-aa-blue-100:          rgb(0, 59, 179),
@@ -220,7 +220,8 @@ $colour: (
   aa-grey-100:             _palette(aa-grey-25),
   aa-grey-50:              _palette(aa-grey-80),
   aa-grey-25:              _palette(aa-grey-50),
-  aa-grey-5:               rgb(38, 39, 47),
+  aa-grey-10:              _palette(aa-grey-80),
+  aa-grey-5:               _palette(aa-grey-80),
   aa-grey-2:               rgb(38, 39, 47),
 
   aa-red-100:              _palette(aa-red-100),

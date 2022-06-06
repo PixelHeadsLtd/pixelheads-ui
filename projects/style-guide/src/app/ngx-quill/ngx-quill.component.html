@@ -1,0 +1,134 @@
+<section class="control-bar">
+  <h1>Ngx quill</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Context sensitive help</h2>
+        <div class="describe">
+          <p>
+            The <a href="https://www.npmjs.com/package/ngx-quill" target="_blank">NGX-quill</a> 
+            is used for Context-sensitive-help. <br/>
+            <strong class="aa-red-100">Please use version 13.0.0, versions above this do not support NG11</strong> 
+          </p>
+        </div>
+        <div class="field optional">
+        <!------------------------------- START CSH ------------------------------->
+          <div class="flex-group">
+            <label for="csh">Context sensitive help</label>
+            <div class="aa-csh {{popupPosition}}">
+              <div 
+                class="aa-tooltip icon-info is-info margin-x-05" 
+                [ngClass]="{'show-csh aa-green-100' : showCSH}" 
+                (click)="showCSH=!showCSH"
+              >
+                <div class="mask"></div>
+              </div>
+              <div class="feature-box padding-0" [ngClass]="{'bd-green' : showCSH}">
+                <div 
+                  *ngIf="showCSH" 
+                  class="
+                  aa-green-100 
+                  italic 
+                  margin-0-75 
+                  padding-top-0-25 
+                  size-small 
+                  text-pulsate"
+                >
+                  Edit mode
+              </div>
+                <form>
+                  <quill-editor></quill-editor>
+                </form>
+                <div *ngIf="showCSH" class="flex-group flex-start">
+                  <div>
+                    <button 
+                      (click)="showEditor=false; showCSH=false"
+                      type="button" 
+                      name="buttonIdC" 
+                      id="buttonIdC" 
+                      class="custom-icons green margin-0-75 margin-right-0"
+                    >
+                      <span class="material-icons">save</span>
+                      <span>Save</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button 
+                      (click)="areYouSure=true"
+                      type="button" 
+                      name="buttonIdC" 
+                      id="buttonIdC" 
+                      class="cancel margin-top-0-75 margin-left-0"
+                    >
+                    Cancel
+                  </button>
+                  </div>
+                <article *ngIf="areYouSure" class="confirmation flex-group space-between margin-0-5">
+                  <div class="flex-group flex-start">
+                    <div class="material-icons aa-red-100">error_outline</div>
+                    <p class="small aa-red-100">
+                      Are you sure you want to cancel?<br/>
+                      Your changes will be lost.
+                    </p>
+                  </div>
+                  <div class="flex-group flex-end">
+                    <div>
+                      <button 
+                        (click)="showEditor=false; showCSH=false; areYouSure=false"
+                        type="button" 
+                        class="reject small"
+                      >
+                      Yes
+                    </button>
+                    </div>
+                    <div>
+                      <button 
+                        (click)="areYouSure=false"
+                        type="button" 
+                        class="cancel small"
+                      >
+                      I'll stay
+                    </button>
+                    </div>
+                  </div>
+                </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------- END CSH ------------------------------->
+          <input type="text" placeholder="CSH" />
+        </div>
+
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+    
+    <aa-blade 
+      [showModal]="false"
+      [toggleBlade]="toggleBlade"
+      suppressAutoClose="false"
+      topPosition="3.5"
+      zIndex="2"
+      bladeSize="one-column-width"
+      bladeHeading="Gist"
+      [enableIcon]="true"
+      iconName="table_rows"
+      (close)="toggleBlade = false"
+      >
+      <article class="blade-content">
+        <a href="https://gist.github.com/angloux/6d9d4620a4e6de41687c34014360a2ef" target="_blank">View Gist on GitHub</a>
+          <app-gist src="angloux/6d9d4620a4e6de41687c34014360a2ef"></app-gist>
+      </article>
+    </aa-blade>
+  
+</section>

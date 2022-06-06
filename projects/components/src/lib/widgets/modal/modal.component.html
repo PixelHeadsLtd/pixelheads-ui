@@ -11,7 +11,7 @@
       'z-index' : zIndex
     }"
   >
-    <section class="aa-modal-header">
+    <section *ngIf="!hideHeader" class="aa-modal-header">
       <h2 class="boxed align-center">{{heading}}</h2>
     </section>
     <section class="aa-modal-content">

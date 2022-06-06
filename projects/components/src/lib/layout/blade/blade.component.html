@@ -25,7 +25,7 @@
         push_pin
       </div>
       <div *ngIf="enableIcon" class="material-icons header-icon margin-right-0-5">{{iconName}}</div>
-      <h2 class="margin-top-0-25 margin-0 flex-align-center">
+      <h2 class="margin-top-0-25 margin-0 ellipsis" [ngStyle]="{'max-width' : headingMaxWidth+'rem' }">
         {{bladeHeading}}
       </h2>
     </div>

@@ -1,9 +1,12 @@
 // ----------------------------- GLOBAL BORDERS --------------------------
 
 .bd-1 {border-width: 1px!important}
+.bd-1-5 {border-width: .085rem!important}
 .bd-2 {border-width: 2px!important}
 .bd-3 {border-width: 3px!important}
-.bd-1-5 {border-width: .085rem!important}
+.bd-4 {border-width: 4px!important}
+.bd-5 {border-width: 5px!important}
+.bd-6 {border-width: 6px!important}
 // ...
 .bd-solid {border-style: solid!important}
 .bd-dashed {border-style: dashed!important}
@@ -28,6 +31,9 @@
 .bd-top-1-5 {border-top-width: .085rem!important}
 .bd-top-2 {border-top-width: 2px!important}
 .bd-top-3 {border-top-width: 3px!important}
+.bd-top-4 {border-top-width: 4px!important}
+.bd-top-6 {border-top-width: 5px!important}
+.bd-top-3 {border-top-width: 6px!important}
 // ...
 .bd-top-solid {border-top-style: solid!important}
 .bd-top-dashed {border-top-style: dashed!important}
@@ -51,6 +57,9 @@
 .bd-right-1 {border-right-width: 1px!important}
 .bd-right-2 {border-right-width: 2px!important}
 .bd-right-3 {border-right-width: 3px!important}
+.bd-right-4 {border-right-width: 4px!important}
+.bd-right-5 {border-right-width: 5px!important}
+.bd-right-6 {border-right-width: 6px!important}
 // ...
 .bd-right-solid {border-right-style: solid!important}
 .bd-right-dashed {border-right-style: dashed!important}
@@ -74,6 +83,9 @@
 .bd-bottom-1 {border-bottom-width: 1px!important}
 .bd-bottom-2 {border-bottom-width: 2px!important}
 .bd-bottom-3 {border-bottom-width: 3px!important}
+.bd-bottom-4 {border-bottom-width: 4px!important}
+.bd-bottom-5 {border-bottom-width: 5px!important}
+.bd-bottom-6 {border-bottom-width: 6px!important}
 // ...
 .bd-bottom-solid {border-bottom-style: solid!important}
 .bd-bottom-dashed {border-bottom-style: dashed!important}
@@ -94,12 +106,15 @@
 
 // ------------------------------ LEFT BORDERS ----------------------------
 
-.bd-left-1 {border-bottom-width: 1px!important}
-.bd-left-2 {border-bottom-width: 2px!important}
-.bd-left-3 {border-bottom-width: 3px!important}
+.bd-left-1 {border-left-width: 1px!important}
+.bd-left-2 {border-left-width: 2px!important}
+.bd-left-3 {border-left-width: 3px!important}
+.bd-left-4 {border-left-width: 4px!important}
+.bd-left-5 {border-left-width: 5px!important}
+.bd-left-6 {border-left-width: 6px!important}
 // ...
-.bd-left-solid {border-bottom-style: solid!important}
-.bd-left-dashed {border-bottom-style: dashed!important}
+.bd-left-solid {border-left-style: solid!important}
+.bd-left-dashed {border-left-style: dashed!important}
 // ...
 .bd-left-red {border-left-color: _palette(aa-red-100)!important}
 .bd-left-orange {border-left-color: _palette(aa-orange-100)!important}

@@ -206,7 +206,7 @@ $colour: (
   gradient-grey-end:      rgb(251, 251, 251),
 
   box-shadow:              _palette(aa-grey-5),
-  box-shadow-strong:       _palette(aa-grey-10),
+  box-shadow-strong:      rgb(228, 228, 228),
   
   icons-light:             _palette(aa-grey-40),
   
@@ -221,6 +221,7 @@ $colour: (
   aa-grey-100:             _palette(aa-grey-100),
   aa-grey-50:              _palette(aa-grey-50),
   aa-grey-25:              _palette(aa-grey-25),
+  aa-grey-10:              _palette(aa-grey-10),
   aa-grey-5:               _palette(aa-grey-5),
   aa-grey-2:               _palette(aa-grey-2),
 

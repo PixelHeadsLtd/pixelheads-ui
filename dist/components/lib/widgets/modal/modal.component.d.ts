@@ -12,6 +12,7 @@ export declare class ModalComponent implements OnInit {
     red: boolean;
     blue: boolean;
     zIndex: number;
+    hideHeader: number;
     constructor();
     ngOnInit(): void;
 }

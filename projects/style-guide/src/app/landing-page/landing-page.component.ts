@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
+import { Component, OnInit, HostListener, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { TabData } from '../class/tab-data';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
@@ -8,7 +8,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit, AfterContentChecked  {
   
   isSticky: boolean = false;
   showSearch: boolean;
@@ -33,6 +33,10 @@ export class LandingPageComponent implements OnInit {
   stepThree = "./assets/images/samples/email-templates/step3.png";
   stepFour = "./assets/images/samples/email-templates/step4.png";
   stepFive = "./assets/images/samples/email-templates/step5.png";
+
+  public constructor(
+    private changeDetector: ChangeDetectorRef,
+  ) {}
   
   public activeTab: TabNavigationItemComponent;
 
@@ -118,6 +122,7 @@ export class LandingPageComponent implements OnInit {
     'accordion',
     'accordion-fancy',
     'card',
+    'carousel',
     'context-menu',
     'dashboard-favourites',
     'info-panel',
@@ -126,6 +131,7 @@ export class LandingPageComponent implements OnInit {
     'stepper',
     'summary-top',
     'tags',
+    'text',
     'toastr',
     'tooltip',
     'tree-menu',
@@ -133,6 +139,7 @@ export class LandingPageComponent implements OnInit {
     'ag-grid',
     'ngb-datepicker',
     'ng-select',
+    'ngx-quill',
     'html-email',
     'elements-alignment',
     'slider',
@@ -259,6 +266,10 @@ export class LandingPageComponent implements OnInit {
   ];
 
   ngOnInit() {
+  }
+
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
   }
 
 }

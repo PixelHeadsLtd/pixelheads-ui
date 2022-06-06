@@ -13,6 +13,7 @@ export declare class TooltipComponent implements OnInit {
     customIcon: boolean;
     iconName: string;
     zIndex: number;
+    labelFor: string;
     constructor();
     ngOnInit(): void;
 }

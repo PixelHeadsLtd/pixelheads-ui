@@ -6,5 +6,5 @@ export class TabData {
         public valueSplit: string,
         public isActive: boolean,
         public tooltipEnabled: boolean,
-        public tooltipText: string,) { }
+        public tooltipText: string) { }
 }

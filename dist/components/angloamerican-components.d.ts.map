@@ -1,1 +1,1 @@
-{"version":3,"file":"angloamerican-components.d.ts","sourceRoot":"","sources":["../../projects/components/src/angloamerican-components.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH,cAAc,cAAc,CAAC;AAE7B,OAAO,EAAC,cAAc,IAAI,EAAE,EAAC,MAAM,yBAAyB,CAAC"}
+{"version":3,"file":"angloamerican-components.d.ts","sourceRoot":"","sources":["../../projects/components/src/angloamerican-components.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH,cAAc,cAAc,CAAC;AAE7B,OAAO,EAAC,cAAc,IAAI,EAAE,EAAC,MAAM,uBAAuB,CAAC;AAC3D,OAAO,EAAC,cAAc,IAAI,EAAE,EAAC,MAAM,yBAAyB,CAAC"}

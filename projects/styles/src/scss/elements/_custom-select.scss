@@ -1,0 +1,65 @@
+.aa-custom-select {
+    position: relative;
+    button {
+        @include chevron-down;
+        width: 100%;
+        background-color: _colour(bg-primary);
+        color: _colour(body-text);
+        border: 1px solid _colour(border-input);
+        text-align: left;
+        white-space: nowrap;
+        padding: .25rem 2.5rem .25rem .5rem;
+        .material-icons,
+        .material-icons-outlined {
+            font-size: _font(size-large);
+        }
+    }
+
+    .aa-custom-select-dropdown {
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        background-color: _colour(bg-primary);
+        border-radius: .25rem;
+        margin-top: .25rem;
+        min-width: 100%;
+
+        &.show-dropdown {
+            display: block;
+        }
+        
+        button {
+            background-color: transparent;
+            background-image: none;
+            border: none;
+            border-radius: 0;
+            text-align: left;
+            padding: .4rem .5rem;
+            color: _colour(body-text);
+            font-family: _font(family-regular);
+            font-size: _font(size-default);
+
+            &:hover {
+                background-color: _colour(aa-grey-5);
+            }
+            &.selected {
+                background-color: _colour(primary);
+                color: _colour(body-text-reverse);
+                .material-icons,
+                .material-icons-outlined {
+                    color: _palette(aa-white-100)!important;
+                }
+            }
+            .material-icons,
+            .material-icons-outlined {
+                font-size: _font(size-large);
+            }
+        }
+    }
+}
+
+.aa-highlight {
+    background-color: _palette(aa-pink-25)!important;
+    border-left: 6px solid _palette(aa-pink-100)!important;
+}

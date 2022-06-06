@@ -10,6 +10,31 @@
     background-color: _colour(bg-card);
     box-sizing: unset;
     line-height: initial;
+
+    &.aa-card-icon {
+        height: 5rem;
+        min-height: 5rem;
+        max-height: 5rem;
+        a {
+            h3 {
+                font-size: _font(size-regular);
+                color: unset;
+            }
+        }
+        .card-icon {
+            font-size: _font(size-medium);
+            width: 2.25rem;
+            height: 2.25rem;
+        }
+        .context-menu {
+            left: 88%;
+            top: 1rem;
+        }
+        p {
+            white-space: normal;
+            max-width: unset;
+        }
+    }
     
     .flag {
         flex: none;
@@ -121,6 +146,7 @@
             object-fit: cover;
             outline: none;
             vertical-align: initial;
+            transform: translate(0, 0);
         }
     }
 
@@ -133,6 +159,7 @@
         left: unset;
     }
 }
+
 .aa-card-list {
     list-style: none;
     .card-list-image {

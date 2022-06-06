@@ -6,14 +6,35 @@
 
 body {
   font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif;
+  line-height: initial;
+  letter-spacing: .015rem;
+  font-size: 14px;
+  margin: 0;
+  
   // for showing header-secondary
-  &.show-header-secondary {
+  &.light-mode.show-header-secondary,
+  &.dark-mode.show-header-secondary,
+  &#show-header-secondary {
     .header-secondary {
-      display: block!important;
+      position: fixed;
+      left: 0;
+      top: 3.45rem;
+      width: 100%;
     }
+    
+    // New for 'Angular Elements' and using the new Left navigation
+    main.main-content {
+      padding-top: 7rem!important;
+    }
+    .nav-core {
+      top: 7rem!important;
+    }
+
+    // Legacy using 'Core Anglo Angular Framework' - Will eventually be removed
     .main-container-fluid {
       padding-top: 6.9rem!important;
     }
+
     .nav-w-submenu-container .nav-vertical {
       top: 6.9rem!important;
     }
@@ -23,19 +44,13 @@ body {
     @import './lib/mixins';
     @import './lib/functions';
     @import './lib/vars';
-
     @import './lib/elements-dark';
     @import './widgets/anglo-framework';
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
-
     @import 'style-imports';
     background-color: _colour(bg);
     color: _colour(body-text);
-    line-height: initial;
-    letter-spacing: .015rem;
-    font-size: 16px;
-    margin: 0;
     min-width: _breakpoint(breakpoint-320);
   }
 
@@ -44,18 +59,12 @@ body {
     @import './lib/functions';
     @import './lib/vars';
     @import './lib/elements-light';
-
     @import './widgets/anglo-framework';
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
-
     @import 'style-imports';
     background-color: _colour(bg);
     color: _colour(body-text);
-    line-height: initial;
-    letter-spacing: .015rem;
-    font-size: 16px;
-    margin: 0;
     min-width: _breakpoint(breakpoint-320);
   }    
 }

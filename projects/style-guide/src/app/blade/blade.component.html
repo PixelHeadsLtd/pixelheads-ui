@@ -21,6 +21,7 @@
             (buttonClick)="
             bladeIsOpen($event);
             bladeHalf=true;
+            setHeadingMaxWidth=13;
             oneCol=false; 
             twoCol=false; 
             xlCol=false; 
@@ -43,6 +44,7 @@
             bladeIsOpen($event);
             bladeHalf=false;
             oneCol=true; 
+            setHeadingMaxWidth=24;
             twoCol=false; 
             xlCol=false; 
             showCustomBlade=false;
@@ -66,6 +68,7 @@
             bladeHalf=false;
             oneCol=false; 
             twoCol=true; 
+            setHeadingMaxWidth=40;
             xlCol=false; 
             showCustomBlade=false;
             showBladeGist=false; 
@@ -87,6 +90,7 @@
             oneCol=false; 
             twoCol=false; 
             xlCol=true; 
+            setHeadingMaxWidth=57;
             showCustomBlade=false;
             showBladeGist=false; 
             showCustomBladeGist=false;
@@ -139,6 +143,12 @@
             <td datalabel="Attribute">bladeSize</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">one-column-width</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Attribute">headingMaxWidth</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Depending on blade size</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-blade</td>
@@ -314,6 +324,7 @@
   bladeHeading="{{bladeHeading}}"
   [enableIcon]="showIcon"
   iconName="{{bladeIcon}}"
+  headingMaxWidth="{{setHeadingMaxWidth}}"
   >
   <!-- blade gist -->
   <article *ngIf="showBladeGist" class="blade-content">

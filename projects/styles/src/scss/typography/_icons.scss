@@ -468,7 +468,7 @@ aa-dashboard-favourites {
   }
 }
 
-.blade-navigation, .accordion-trigger {
+.blade-navigation, .accordion-trigger, .global-search {
   // for CORE menu-blade ONLY. Here we are mapping our nice icons to the font-awesome "fa-" icons that are coming from the back-end
   .fa-book,
   .fa-book-open,
@@ -485,6 +485,17 @@ aa-dashboard-favourites {
 
   .icon-angular {
     background-image: url("#{$icon-path}/icon-angular.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-banc {
+    background-image: url("#{$icon-path}/icon-banc.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-tasks,
+  .fa-tasks {
+    background-image: url("#{$icon-path}/icon-tasks.svg");
     @include icon-button-large-svg;
   }
 

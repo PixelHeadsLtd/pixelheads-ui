@@ -20,6 +20,7 @@ export class TabNavigationItemComponent implements OnInit, AfterContentChecked {
   @Input() tabCount: number;
   @Input() tabRoute: string;
   @Input() tabDisabled: boolean;
+  @Input() showRightDivider: boolean;
   @Input() routerLink: string | any[];
   @Input() routerLinkActive: boolean;
   templateRef: TemplateRef<any>;

@@ -5,6 +5,7 @@ import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { ContextMenuItemComponent } from './context-menu-item/context-menu-item.component';
 import { NavContextComponent } from './nav-context/nav-context.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
+import { ProgressIndicatorAdvancedComponent } from './progress-indicator-advanced/progress-indicator-advanced.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { TabNavigationComponent } from './tab-navigation/tab-navigation.component';
 import { TabNavigationItemComponent } from './tab-navigation-item/tab-navigation-item.component';
@@ -19,6 +20,7 @@ import { TabNavigationHeaderContentDirective } from './tab-navigation-item/tab-n
     ContextMenuItemComponent,
     NavContextComponent,
     ProgressIndicatorComponent,
+    ProgressIndicatorAdvancedComponent,
     StepperComponent,
     TabNavigationComponent,
     TabNavigationItemComponent,
@@ -34,6 +36,7 @@ import { TabNavigationHeaderContentDirective } from './tab-navigation-item/tab-n
     NavContextComponent,
     StepperComponent,
     ProgressIndicatorComponent,
+    ProgressIndicatorAdvancedComponent,
     TabNavigationComponent,
     TabNavigationItemComponent,
     TabNavigationSecondaryComponent,

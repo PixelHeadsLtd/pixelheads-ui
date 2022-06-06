@@ -17,6 +17,7 @@ import { Subscription } from 'rxjs';
 export class ModalComponent implements OnInit, OnDestroy {
 
   toggleModal: boolean;
+  toggleModalTwo: boolean;
   toggleBlade: boolean;
   showModalGist: boolean;
   showModalEventGist: boolean;

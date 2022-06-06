@@ -20,6 +20,7 @@ export class ModalComponent implements OnInit {
   @Input() red: boolean;
   @Input() blue: boolean;
   @Input() zIndex: number;
+  @Input() hideHeader: number;
 
   constructor() { }
 

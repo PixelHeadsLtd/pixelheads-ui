@@ -91,6 +91,12 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-modal</td>
+            <td datalabel="Attribute">[hideHeader] (allows you to add a custom header inside the custom-content section)</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-modal</td>
             <td datalabel="Attribute">leftPos</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Unset by default</td>
@@ -166,7 +172,7 @@
         </div>
         
         <h3>Service version</h3>
-        <aa-button 
+        <!-- <aa-button 
           (buttonClick)="openModal()" 
           buttonClass="primary" 
           fieldClass="boxed label-hidden" 
@@ -176,9 +182,48 @@
           disabled=""
         >
         </aa-button>
-        <div #modal></div>
+        <div #modal></div> -->
 
-  
+        <div class="field boxed">
+          <button 
+            (click)="toggleModalTwo=!toggleModalTwo" 
+            class="primary margin-auto"
+          >
+            Show modal
+          </button>
+        </div>
+
+        <aa-modal 
+          *ngIf="toggleModalTwo"
+          [red]="true"
+          [orange]=""
+          [blue]=""
+          [green]=""
+          topPos=""
+          rightPos=""
+          leftPos=""
+          minWidth=""
+          maxWidth="20rem"
+          zIndex="999"
+          [heading]="'Are you sure?'"
+        >
+          <div content-custom>Custom content</div>
+          <aa-button 
+            (buttonClick)="toggleModalTwo=!toggleModalTwo" 
+            buttonClass="primary" 
+            fieldClass="boxed label-hidden" 
+            buttonId="buttonId" 
+            buttonText="Yes">
+          </aa-button>
+          <aa-button 
+              (buttonClick)="toggleModalTwo=!toggleModalTwo" 
+              buttonClass="cancel" 
+              fieldClass="boxed label-hidden" 
+              buttonId="buttonId" 
+              buttonText="No">
+          </aa-button>
+        </aa-modal>
+
       </section>
         
       <section class="flex-2 col-right flex-start">
@@ -232,12 +277,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showModalGist">
-      <app-gist src="angloux/b1808895e0ff07b76375732574163aab"></app-gist>
       <a href="https://gist.github.com/angloux/b1808895e0ff07b76375732574163aab" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/b1808895e0ff07b76375732574163aab"></app-gist>
     </div>
     <div *ngIf="showModalEventGist">
-      <app-gist src="angloux/fb5164e0aa6b55024dfe9b509fc1d110"></app-gist>
       <a href="https://gist.github.com/angloux/fb5164e0aa6b55024dfe9b509fc1d110" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/fb5164e0aa6b55024dfe9b509fc1d110"></app-gist>
     </div>
   </article>
 </aa-blade>

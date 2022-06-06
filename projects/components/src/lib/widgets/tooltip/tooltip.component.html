@@ -1,5 +1,5 @@
 <div class="flex-group" [ngClass]="{ 'space-between' : includeLabel, 'flex-start' : includeLegend }">
-  <label *ngIf="includeLabel">{{labelName}}</label>
+  <label for="{{labelFor}}" *ngIf="includeLabel">{{labelName}}</label>
   <legend class="margin-right-0-5" *ngIf="includeLegend">{{labelName}}</legend>
   <div 
     class="aa-tooltip icon-info" 
@@ -20,8 +20,7 @@
         'is-success': isSuccess, 
         'is-info': isInfo, 
         'is-warning': isWarning, 
-        'is-error': isError,
-        'custom-icon': customIcon
+        'is-error': isError
       }">{{iconName}}</div>
       
     

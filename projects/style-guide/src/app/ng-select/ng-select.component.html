@@ -1,9 +1,113 @@
 <section class="control-bar">
   <h1>Ng Select</h1>
 </section>
-<section class="content-container">
-  <div class="describe">
-    For multi-selects please use ng-select
-  </div>
-  <div><a routerLink="/select">Refer to the 'Elements' section</a></div>
-</section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Ng-select</h2>
+      <div class="describe margin-bottom-1">
+        <p>For selects that use a typeahead or other features such as tags, 
+          please use <a href="https://github.com/ng-select/ng-select" target="_blank">ng-select</a>.</p>
+          <p class="aa-red-100">After installing the latest ng-select package in your packages.json, please remember to point to the node_modules ng-select default.theme.css by adding this at the top of your styles.scss 
+            file: @import "~@ng-select/ng-select/themes/default.theme.css";</p>
+      </div>
+      <div class="field">
+        <label>Ng select</label>
+        <ng-select 
+          [items]="cities"
+          bindLabel="name"
+          placeholder="Select city"
+          [(ngModel)]="selectedCity"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - [readonly]="true"</label>
+        <ng-select 
+          [items]="cities"
+          bindLabel="name"
+          placeholder="Select city"
+          [(ngModel)]="selectedCity"
+          [readonly]="true"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - [disabled]="true"</label>
+        <ng-select 
+          [items]="cities"
+          bindLabel="name"
+          placeholder="Select city"
+          [(ngModel)]="selectedCity"
+          [disabled]="true"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Multiselect</label>
+        <ng-select 
+          [items]="cities2"
+          bindLabel="name"
+          bindValue="id"
+          [multiple]="true"
+          placeholder="Select cities"
+          [(ngModel)]="selectedCityIds"
+        >
+      </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Custom tags</label>
+        <ng-select 
+          [items]="users"
+          bindLabel="name"
+          bindValue="id"
+          [addTag]="addCustomUser"
+          [multiple]="true"
+          placeholder="Add tag"
+          [(ngModel)]="selectedUserIds"
+          >
+      </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - High performance. Handles over 10,000 items</label>
+        <ng-select 
+          [items]="cities4"
+          [virtualScroll]="true"
+          bindLabel="name"
+          bindValue="id"
+          placeholder="Select city"
+          [(ngModel)]="selectedCityId"
+        >
+        </ng-select>
+      </div>
+      <div class="field">
+        <label>Ng select - Grouping sections</label>
+        <ng-select 
+          [items]="accounts"
+          bindLabel="name"
+          bindValue="name"
+          groupBy="country"
+          [(ngModel)]="selectedAccount"
+        >
+        </ng-select>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-group flex-column">
+      <section class="getting-started">
+        <div class="flex-group flex-start">
+          <div class="material-icons star aa-orange-100 margin-right-0-5">star_border</div>
+          <h2 class="margin-top-0-25">Useful links</h2>
+        </div>
+        <div class="margin-left-0-25">
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <div class="material-icons small aa-light-blue-100 margin-right-0-75">east</div>
+            <a href="https://github.com/ng-select/ng-select" target="_blank" class="cursor-pointer">ng-select repo on GitHub</a>
+          </div>
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <div class="material-icons small aa-light-blue-100 margin-right-0-75">east</div>
+            <a href="https://stackblitz.com/edit/ng-select" target="_blank" class="cursor-pointer">Example on StackBlitz</a>
+          </div>
+        </div>
+      </section>
+  </section>

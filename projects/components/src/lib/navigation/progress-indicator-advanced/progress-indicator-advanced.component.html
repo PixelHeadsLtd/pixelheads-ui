@@ -1,0 +1,20 @@
+<section class="indicator-item flex-group {{ progressClass }}">
+    <div *ngIf="showDescription" class="description">
+        <p class="box-shadow">{{description}}</p>
+        <div class="material-icons {{iconClass}}">pan_tool_alt</div>
+    </div>
+    <div class="bus-stop flex-group flex-column flex-center">
+        <div 
+            *ngIf="!asLink" 
+            class="material-icons"
+        >
+        </div>
+        <a 
+            *ngIf="asLink" 
+            href="{{ progressLink }}"
+            class="material-icons"
+        >
+        </a>
+        <label>{{ progressLabel }}</label>
+    </div>
+</section>

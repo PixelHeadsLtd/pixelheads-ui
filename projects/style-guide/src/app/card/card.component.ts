@@ -20,6 +20,7 @@ export class CardComponent implements OnInit {
   showAvatar: boolean;
   showCardList: boolean;
   toggleBlade: boolean;
+  cardDescription: string = 'This is the card description, it must not exceed two lines, therefore we are truncating large descriptions';
   
   constructor() {}
   
