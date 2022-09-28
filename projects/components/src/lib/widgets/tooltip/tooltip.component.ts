@@ -6,6 +6,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class TooltipComponent implements OnInit {
   @Input() setMinWidth: number;
+  @Input() setMaxWidth: number;
   @Input() isSuccess: boolean;
   @Input() isInfo: boolean;
   @Input() isWarning: boolean;

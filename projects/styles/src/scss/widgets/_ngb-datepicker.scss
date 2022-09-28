@@ -1,5 +1,6 @@
 // NGB DATEPICKER CSS - this will ensure that the ngb-datepicker works when bootstrap is removed from a given project.
-ngb-datepicker.dropdown-menu {
+ngb-datepicker.dropdown-menu,
+.ngb-datepicker {
     z-index: 999999;
     float: left;
     min-width: 10rem;
@@ -9,19 +10,25 @@ ngb-datepicker.dropdown-menu {
     color: _palette(aa-grey-100);
     text-align: left;
     list-style: none;
-    background-color: #fff;
+    background-color: _colour(bg-ngb-datepicker-body);
     background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
+    box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
     
     // START HEADER STYLES
     .ngb-dp-header {
-      background-color: _palette(grey-5);;
+      background-color: _colour(bg-ngb-datepicker-head);
       border-bottom: 0;
       border-radius: .25rem .25rem 0 0;
       padding-top: .25rem;
+      display: flex;
+      flex: 1 1 9rem;
       
-      ngb-datepicker-navigation {
+      ngb-datepicker-navigation,
+      .ngb-datepicker-navigation {
+        width: 100%;
         align-items: center;
         display: flex;
         
@@ -51,7 +58,10 @@ ngb-datepicker.dropdown-menu {
             vertical-align: middle;
             -webkit-user-select: none;
             user-select: none;
-            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            transition: color .15s ease-in-out, 
+            background-color .15s ease-in-out, 
+            border-color .15s ease-in-out, 
+            box-shadow .15s ease-in-out;
             -webkit-appearance: button;
             
             .ngb-dp-navigation-chevron {
@@ -69,9 +79,13 @@ ngb-datepicker.dropdown-menu {
         .ngb-dp-navigation-select {
           display: flex;
           flex: 1 1 9rem;
+
+          select {
+            @include chevron-down;
+          }
           
           .custom-select {
-            background-color: _palette(aa-white-100);
+            background-color: _colour(bg);
             flex: 1 1 auto;
             font-size: .875rem;
             height: 1.85rem;
@@ -80,13 +94,15 @@ ngb-datepicker.dropdown-menu {
             border-radius: 0;
             border-bottom-width: 4px;
             margin-right: 4px;
-            transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            transition: background-color .15s ease-in-out,
+            border-color .15s ease-in-out,
+            box-shadow .15s ease-in-out;
             width: 100%;
             font-weight: 400;
             line-height: 1.5;
-            color: _palette(grey-50);
+            color: _colour(aa-grey-50);
             vertical-align: middle;
-            border: 1px solid _palette(grey-5);
+            border: 1px solid _colour(bg-ngb-datepicker-head);
             -webkit-appearance: none;
             min-height: 2.1rem;
           }
@@ -106,10 +122,13 @@ ngb-datepicker.dropdown-menu {
     // START CONTENT STYLES
     .ngb-dp-content {
       display: flex;
-      
+
       .text-white {
-        color: _palette(aa-grey-100)!important;
-        background-color: _palette(grey-10)!important;
+        color: _colour(body-text)!important;
+      }
+
+      .btn-light {
+        color: _colour(body-text);
       }
       
       // IF MONTHS
@@ -133,7 +152,7 @@ ngb-datepicker.dropdown-menu {
           height: 2rem;
           width: 2rem;
           &:hover {
-            background-color: _palette(grey-10);
+            background-color: _colour(aa-grey-10);
           }
         }
         
@@ -152,15 +171,14 @@ ngb-datepicker.dropdown-menu {
         }
         
         .ngb-dp-weekdays {
-          background-color: _palette(grey-5);
-          border-bottom: 1px solid rgba(0,0,0,.125);
+          background-color: _colour(bg-ngb-datepicker-head);
           border-radius: 0;
         }
         
         .ngb-dp-weekday {
           height: 2rem;
           width: 2rem;
-          color: _palette(aa-grey-100);
+          color: _colour(body-text)!important;
           font-style: italic;
           line-height: 2rem;
           text-align: center;
@@ -168,10 +186,17 @@ ngb-datepicker.dropdown-menu {
           font-weight: 400;
         }
         
-        ngb-datepicker-month {
+        ngb-datepicker-month,
+        .ngb-datepicker-month {
           display: block;
           pointer-events: auto;
         }
       }
     }
   }
+
+ // temp
+//  .ngb-datepicker {
+//     left: 65rem!important;
+//     top: 10rem!important;
+//  } 

@@ -14,9 +14,10 @@
 .bd-red {border-color: _palette(aa-red-100)!important}
 .bd-orange {border-color: _palette(aa-orange-100)!important}
 .bd-green {border-color: _palette(aa-green-100)!important}
-.bd-blue {border-color: _palette(aa-blue-100)!important}
+.bd-blue {border-color: _colour(aa-blue-100)!important}
 .bd-green-50 {border-color: _palette(aa-green-50)!important}
 .bd-light-blue {border-color: _palette(aa-light-blue-100)!important}
+.bd-blue-15 {border-color: _palette(aa-light-blue-15)!important}
 .bd-plum {border-color: _palette(aa-plum-100)!important}
 .bd-pink {border-color: _palette(aa-pink-100)!important}
 .bd-burgundy {border-color: _palette(aa-burgundy-100)!important}
@@ -44,6 +45,7 @@
 .bd-top-green-50 {border-top-color: _palette(aa-green-50)!important}
 .bd-top-blue {border-top-color: _palette(aa-blue-100)!important}
 .bd-top-light-blue {border-top-color: _palette(aa-light-blue-100)!important}
+.bd-top-blue-15 {border-top-color: _palette(aa-light-blue-15)!important}
 .bd-top-plum {border-top-color: _palette(aa-plum-100)!important}
 .bd-top-pink {border-top-color: _palette(aa-pink-100)!important}
 .bd-top-burgundy {border-top-color: _palette(aa-burgundy-100)!important}
@@ -68,8 +70,9 @@
 .bd-right-orange {border-right-color: _palette(aa-orange-100)!important}
 .bd-right-green {border-right-color: _palette(aa-green-100)!important}
 .bd-right-green-50 {border-right-color: _palette(aa-green-50)!important}
-.bd-right-blue {border-right-color: _palette(aa-blue-100)!important}
+.bd-right-blue {border-right-color: _colour(aa-blue-100)!important}
 .bd-right-light-blue {border-right-color: _palette(aa-light-blue-100)!important}
+.bd-right-blue-15 {border-right-color: _colour(aa-light-blue-15)!important}
 .bd-right-plum {border-right-color: _palette(aa-plum-100)!important}
 .bd-right-pink {border-right-color: _palette(aa-pink-100)!important}
 .bd-right-burgundy {border-right-color: _palette(aa-burgundy-100)!important}
@@ -94,8 +97,9 @@
 .bd-bottom-orange {border-bottom-color: _palette(aa-orange-100)!important}
 .bd-bottom-green {border-bottom-color: _palette(aa-green-100)!important}
 .bd-bottom-green-50 {border-bottom-color: _palette(aa-green-50)!important}
-.bd-bottom-blue {border-bottom-color: _palette(aa-blue-100)!important}
+.bd-bottom-blue {border-bottom-color: _colour(aa-blue-100)!important}
 .bd-bottom-light-blue {border-bottom-color: _palette(aa-light-blue-100)!important}
+.bd-bottom-blue-15 {border-bottom-color: _palette(aa-light-blue-15)!important}
 .bd-bottom-plum {border-bottom-color: _palette(aa-plum-100)!important}
 .bd-bottom-pink {border-bottom-color: _palette(aa-pink-100)!important}
 .bd-bottom-burgundy {border-bottom-color: _palette(aa-burgundy-100)!important}
@@ -120,8 +124,9 @@
 .bd-left-orange {border-left-color: _palette(aa-orange-100)!important}
 .bd-left-green {border-left-color: _palette(aa-green-100)!important}
 .bd-left-green-50 {border-left-color: _palette(aa-green-50)!important}
-.bd-left-blue {border-left-color: _palette(aa-blue-100)!important}
+.bd-left-blue {border-left-color: _colour(aa-blue-100)!important}
 .bd-left-light-blue {border-left-color: _palette(aa-light-blue-100)!important}
+.bd-left-blue-15 {border-left-color: _palette(aa-light-blue-15)!important}
 .bd-left-plum {border-left-color: _palette(aa-plum-100)!important}
 .bd-left-pink {border-left-color: _palette(aa-pink-100)!important}
 .bd-left-burgundy {border-left-color: _palette(aa-burgundy-100)!important}
@@ -174,6 +179,7 @@
 // orange
 .bd-aa-orange-100 {border: 1px solid _palette(aa-orange-100)!important}
 .bd-aa-orange-50 {border: 1px solid _palette(aa-orange-50)!important}
+.bd-aa-orange-10 {border: 1px solid _palette(aa-orange-10)!important}
 .bd-aa-orange-5 {border: 1px solid _palette(aa-orange-5)!important}
 // tertiary
 .bd-aa-burgundy-100 {border: 1px solid _palette(aa-burgundy-100)!important}

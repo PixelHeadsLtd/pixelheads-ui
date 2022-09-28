@@ -157,6 +157,7 @@
           [showAsProfile]="true"
           borderClass=""
           title="Obi-Wan Kenobi"  
+          (cardClick)="onClick()"
         >
           <ng-container profile-image>
             <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
@@ -170,7 +171,8 @@
           [cardMini]="true"
           [showAsProfile]="true"
           borderClass=""
-          title="Darh Vader"  
+          title="Darh Vader"
+          (cardClick)="onClick()"
         >
           <ng-container profile-image>
             <img onerror="this.style.display='none'" src="./assets/images/samples/darth.png" />
@@ -186,7 +188,7 @@
           [cardMini]="true"
           [showAsIcon]="true"
           iconName="mail_outline"
-          title="Email"  
+          title="Email"
         >
           <ng-container content>
             <a href="obi-wan@kenobi.com">obi-wan@kenobi.com</a>
@@ -225,6 +227,12 @@
             <td datalabel="Attribute">[cardMini]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-card</td>
+            <td datalabel="Attribute">(cardClick)</td>
+            <td datalabel="Type">Click event</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-card</td>

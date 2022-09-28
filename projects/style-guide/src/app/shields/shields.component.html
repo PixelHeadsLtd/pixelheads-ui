@@ -15,19 +15,135 @@
       </div>
 
       <h3>By status</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 info">Info</div>
-        <div class="alert-shield margin-bottom-0-5 success">Success</div>
-        <div class="alert-shield margin-bottom-0-5 warning">Warning</div>
-        <div class="alert-shield margin-bottom-0-5 error">Error</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="info"
+          alertShieldText="Info"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="success"
+          alertShieldText="Success"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="warning"
+          alertShieldText="Warning"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="error"
+          alertShieldText="Error"
+        >
+        </aa-alert-shield>
       </div>
 
-      <h3>Small</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 small info">Info</div>
-        <div class="alert-shield margin-bottom-0-5 small success">Success</div>
-        <div class="alert-shield margin-bottom-0-5 small warning">Warning</div>
-        <div class="alert-shield margin-bottom-0-5 small error">Error</div>
+      <h3>Small (Better for tables)</h3>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+        [alertShieldSmall]="true"
+        [showTooltip]="false"
+        minWidth="12rem"
+        alertShieldStatus="info"
+        alertShieldText="Info"
+      >
+      </aa-alert-shield>
+      <aa-alert-shield
+        [alertShieldSmall]="true"
+        [showTooltip]="false"
+        minWidth="12rem"
+        alertShieldStatus="success"
+        alertShieldText="Success"
+      >
+      </aa-alert-shield>
+      <aa-alert-shield
+        [alertShieldSmall]="true"
+        [showTooltip]="false"
+        minWidth="12rem"
+        alertShieldStatus="warning"
+        alertShieldText="Warning"
+      >
+      </aa-alert-shield>
+      <aa-alert-shield
+        [alertShieldSmall]="true"
+        [showTooltip]="false"
+        minWidth="12rem"
+        alertShieldStatus="error"
+        alertShieldText="Error"
+      >
+      </aa-alert-shield>
+      </div>
+
+      <h3 class="aa-red-100">With tooltip enabled</h3>
+        <div class="flex-group flex-start margin-bottom-1-5">
+          <aa-alert-shield
+            [alertShieldSmall]="false"
+            [showTooltip]="true"
+            minWidth="12rem"
+            alertShieldStatus="info"
+            alertShieldText="Info"
+            [showTooltipHeading]="true"
+            tooltipHeading="Heading"
+          >
+            <ng-container tooltip-content>
+              <p>This is my tooltip message</p>
+              <p>This is another tooltip message</p>
+            </ng-container>
+          </aa-alert-shield>
+          <aa-alert-shield
+            [alertShieldSmall]="false"
+            [showTooltip]="true"
+            minWidth="12rem"
+            alertShieldStatus="success"
+            alertShieldText="Success"
+            [showTooltipHeading]="true"
+            tooltipHeading="Heading"
+          >
+            <ng-container tooltip-content>
+              <p>This is my tooltip message</p>
+              <p>This is another tooltip message</p>
+            </ng-container>
+          </aa-alert-shield>
+          <aa-alert-shield
+            [alertShieldSmall]="false"
+            [showTooltip]="true"
+            minWidth="12rem"
+            alertShieldStatus="warning"
+            alertShieldText="Warning"
+            [showTooltipHeading]="true"
+            tooltipHeading="Heading"
+          >
+            <ng-container tooltip-content>
+              <p>This is my tooltip message</p>
+              <p>This is another tooltip message</p>
+            </ng-container>
+          </aa-alert-shield>
+          <aa-alert-shield
+            [alertShieldSmall]="false"
+            [showTooltip]="true"
+            minWidth="12rem"
+            alertShieldStatus="error"
+            alertShieldText="Error"
+            [showTooltipHeading]="true"
+            tooltipHeading="Heading"
+          >
+            <ng-container tooltip-content>
+              <p>This is my tooltip message</p>
+              <p>This is another tooltip message</p>
+            </ng-container>
+          </aa-alert-shield>
       </div>
     </section>
 
@@ -46,34 +162,61 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .info</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Component</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .success</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldSmall</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .warning</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your width</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .error</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Text</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
             <td datalabel="Type">String</td>
-            <td datalabel="Default">Your text</td>
+            <td datalabel="Default">.info, .error, .warning, .success</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your alert shield text</td>
+          </tr>
+          <tr colspan="4">
+            <h3 class="nowrap aa-red-100">Enable tooltips (Can be applied to ALL Alert shields)</h3>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">showTooltip</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">showTooltipHeading</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">tooltipHeading</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your tooltip heading</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">tooltip-content</td>
+            <td datalabel="Type">ng-container</td>
+            <td datalabel="Default">Your tooltip content</td>
           </tr>
         </tbody>
       </table>
@@ -102,19 +245,75 @@
       </div>
 
       <h3>By colour</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-1 blue">Blue</div>
-        <div class="alert-shield margin-bottom-1 green">Green</div>
-        <div class="alert-shield margin-bottom-1 orange">Orange</div>
-        <div class="alert-shield margin-bottom-1 red">Red</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="blue"
+          alertShieldText="Blue"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="green"
+          alertShieldText="Green"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="orange"
+          alertShieldText="Orange"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="red"
+          alertShieldText="Red"
+        >
+        </aa-alert-shield>
       </div>
 
       <h3>Small</h3>
       <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-1 small blue">Blue</div>
-        <div class="alert-shield margin-bottom-1 small green">Green</div>
-        <div class="alert-shield margin-bottom-1 small orange">Orange</div>
-        <div class="alert-shield margin-bottom-1 small red">Red</div>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="blue"
+          alertShieldText="Blue"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="green"
+          alertShieldText="Green"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="orange"
+          alertShieldText="Orange"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="red"
+          alertShieldText="Red"
+        >
+        </aa-alert-shield>
       </div>
     </section>
 
@@ -133,34 +332,34 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .blue</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Component</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .green</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldSmall</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .orange</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your width</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .red</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Text</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
             <td datalabel="Type">String</td>
-            <td datalabel="Default">Your text</td>
+            <td datalabel="Default">.blue, .green, .orange, .red</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your alert shield text</td>
           </tr>
         </tbody>
       </table>
@@ -190,16 +389,58 @@
 
       <h3>By pending status</h3>
       <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 pending">Pending</div>
-        <div class="alert-shield margin-bottom-0-5 pending-orange">Pending orange</div>
-        <div class="alert-shield margin-bottom-0-5 pending-red">Pending red</div>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending"
+          alertShieldText="Pending"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending-orange"
+          alertShieldText="Pending orange"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending-red"
+          alertShieldText="Pending red"
+        >
+        </aa-alert-shield>
       </div>
 
       <h3>Small</h3>
       <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 small pending">Pending</div>
-        <div class="alert-shield margin-bottom-0-5 small pending-orange">Pending orange</div>
-        <div class="alert-shield margin-bottom-0-5 small pending-red">Pending red</div>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending"
+          alertShieldText="Pending"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending-orange"
+          alertShieldText="Pending orange"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="pending-red"
+          alertShieldText="Pending red"
+        >
+        </aa-alert-shield>
       </div>
     </section>
 
@@ -218,22 +459,34 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .pending</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Component</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .pending-orange</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldSmall</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .pending-red</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your width</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">.pending-blue, .pending-orange, pending-red</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your alert shield text</td>
           </tr>
         </tbody>
       </table>
@@ -261,49 +514,175 @@
       </div>
 
       <h3>By colour</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-green">Risk green</div>
-        <div class="alert-shield margin-bottom-0-5 risk-blue">Risk blue</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-green"
+          alertShieldText="Rick green"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-blue"
+          alertShieldText="Risk blue"
+        >
+        </aa-alert-shield>
       </div>
       
       <h3>Small</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-green small">Risk green</div>
-        <div class="alert-shield margin-bottom-0-5 risk-blue small">Risk blue</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-green"
+          alertShieldText="Rick green"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-blue"
+          alertShieldText="Risk blue"
+        >
+        </aa-alert-shield>
       </div>
 
       <h3>By risk level</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-low">Risk low</div>
-        <div class="alert-shield margin-bottom-0-5 risk-medium">Risk medium</div>
-        <div class="alert-shield margin-bottom-0-5 risk-high">Risk high</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-low"
+          alertShieldText="Risk low"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-medium"
+          alertShieldText="Risk medium"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-high"
+          alertShieldText="Risk hish"
+        >
+        </aa-alert-shield>
       </div>
       
       <h3>Small</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-low small">Risk low</div>
-        <div class="alert-shield margin-bottom-0-5 risk-medium small">Risk medium</div>
-        <div class="alert-shield margin-bottom-0-5 risk-high small">Risk high</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-low"
+          alertShieldText="Risk low"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-medium"
+          alertShieldText="Risk medium"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-high"
+          alertShieldText="Risk hish"
+        >
+        </aa-alert-shield>
       </div>
 
       <h3>By approval risk and colour</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-green-approved">Risk green approved</div>
-        <div class="alert-shield margin-bottom-0-5 risk-low-approved">Risk low approved</div>
+      <div class="flex-group flex-start margin-bottom-0-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-green-approved"
+          alertShieldText="Risk green approved"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-low-approved"
+          alertShieldText="Risk low approved"
+        >
+        </aa-alert-shield>
       </div>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-medium-approved">Risk medium approved</div>
-        <div class="alert-shield margin-bottom-0-5 risk-high-approved">Risk high approved</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-medium-approved"
+          alertShieldText="Risk medium approved"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-high-approved"
+          alertShieldText="Risk high approved"
+        >
+        </aa-alert-shield>
       </div>
       
       <h3>Small</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-green-approved small">Risk green approved</div>
-        <div class="alert-shield margin-bottom-0-5 risk-low-approved small">Risk low approved</div>
+      <div class="flex-group flex-start margin-bottom-0-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-green-approved"
+          alertShieldText="Risk green approved"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-low-approved"
+          alertShieldText="Risk low approved"
+        >
+        </aa-alert-shield>
       </div>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 risk-medium-approved small">Risk medium approved</div>
-        <div class="alert-shield margin-bottom-0-5 risk-high-approved small">Risk high approved</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-medium-approved"
+          alertShieldText="Risk medium approved"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="risk-high-approved"
+          alertShieldText="Risk high approved"
+        >
+        </aa-alert-shield>
       </div>
     </section>
 
@@ -321,47 +700,59 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-green</td>
+          <tr colspan="4">
+            <h3 class="aa-red-100">Global</h3>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-blue</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Component</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-low</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldSmall</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-medium</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your width</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-high</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your alert shield text</td>
+          </tr>
+          <tr colspan="4">
+            <h3 class="aa-red-100">By colour</h3>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-medium-approved</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">.risk-green, .risk-blue</td>
+          </tr>
+          <tr colspan="4">
+            <h3 class="aa-red-100">By risk level</h3>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .risk-high-approved</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">.risk-low, .risk-medium, .risk-high</td>
+          </tr>
+          <tr colspan="4">
+            <h3 class="aa-red-100 nowrap">By approved risk and colour</h3>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">.risk-green-approved, .risk-low-approved, .risk-medium-approved, .risk-high-approved</td>
           </tr>
         </tbody>
       </table>
@@ -390,25 +781,95 @@
       </div>
 
       <h3>Various</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 removed">Removed</div>
-        <div class="alert-shield margin-bottom-0-5 withdrawn">Withdrawn</div>
-        <div class="alert-shield margin-bottom-0-5 import">Import from AD</div>
+      <div class="flex-group flex-start margin-bottom-0-5">
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="removed"
+          alertShieldText="Removed"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="withdrawn"
+          alertShieldText="Withdrawn"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="false"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="import"
+          alertShieldText="Import"
+        >
+        </aa-alert-shield>
       </div>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 returned">Returned</div>
-        <div class="alert-shield margin-bottom-0-5 draft">Draft</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="returned"
+          alertShieldText="Returned"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="draft"
+          alertShieldText="Draft"
+        >
+        </aa-alert-shield>
       </div>
       
       <h3>Small</h3>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 removed small">Removed</div>
-        <div class="alert-shield margin-bottom-0-5 withdrawn small">Withdrawn</div>
-        <div class="alert-shield margin-bottom-0-5 import small">Import from AD</div>
+      <div class="flex-group flex-start margin-bottom-0-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="removed"
+          alertShieldText="Removed"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="withdrawn"
+          alertShieldText="Withdrawn"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="import"
+          alertShieldText="Import"
+        >
+        </aa-alert-shield>
       </div>
-      <div class="flex-group flex-start">
-        <div class="alert-shield margin-bottom-0-5 returned small">Returned</div>
-        <div class="alert-shield margin-bottom-0-5 draft small">Draft</div>
+      <div class="flex-group flex-start margin-bottom-1-5">
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="returned"
+          alertShieldText="Returned"
+        >
+        </aa-alert-shield>
+        <aa-alert-shield
+          [alertShieldSmall]="true"
+          [showTooltip]="false"
+          minWidth="12rem"
+          alertShieldStatus="draft"
+          alertShieldText="Draft"
+        >
+        </aa-alert-shield>
       </div>
     </section>
 
@@ -427,22 +888,34 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .removed</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Component</td>
+            <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .withdrawn</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldSmall</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">.alert-shield .import</td>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your width</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldStatus</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">.removed, .withdrawn, .import, .returned, .draft</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">alertShieldText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your alert shield text</td>
           </tr>
         </tbody>
       </table>

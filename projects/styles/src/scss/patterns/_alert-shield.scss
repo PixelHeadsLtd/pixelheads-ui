@@ -1,3 +1,45 @@
+.alert-shield-tooltip-wrapper {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .alert-shield-tooltip {
+      display: block;
+    }
+  }
+  .alert-shield-tooltip {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: _colour(bg-primary);
+    bottom: calc(100% + .5rem);
+    border-radius: .5rem;
+    padding: .75rem;
+    border-style: solid;
+    font-size: _font(size-default);
+    border-width: 2px;
+    h4 {
+      margin-top: 0;
+    }
+
+    &.error {
+      border-color: _colour(aa-red-100);
+      h4 {color: _colour(aa-red-100)}
+    }
+    &.warning {
+      border-color: _palette(aa-orange-100);
+      h4 {color: _palette(aa-orange-100)}
+    }
+    &.success {
+      border-color: _palette(aa-green-100);
+      h4 {color: _palette(aa-green-100)}
+    }
+    &.info {
+      border-color: _palette(aa-light-blue-100);
+      h4 {color: _palette(aa-light-blue-100)}
+    }
+  }
+}
+
 .alert-shield {
   border-radius: 1rem;
   display: inline-block;

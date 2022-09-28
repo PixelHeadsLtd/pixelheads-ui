@@ -368,41 +368,48 @@
           (click)="
           approvedForward=true; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
           abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
         >Approved
         </button>
         <button class="void"
           (click)="
           approvedForward=false; pendingForward=true; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
           abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
         >Pending
         </button>
         <button class="reject" 
           (click)="
           approvedForward=false; pendingForward=false; rejectedForward=true; withdrawnForward=false; returnedForward=false; 
           abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Rejected
         </button>
         <button class="reject" 
           (click)="
           approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
           abandonedForward=true; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Abandoned
+        </button>
+        <button class="reject" 
+          (click)="
+          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=true; returnedForward=false; 
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
+          >Withdrawn
         </button>
         <button class="cancel" 
           (click)="
           approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
           abandonedForward=false; withdrawalPendingForward=false; draftForward=true; resetAll=false; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Draft</button>
         <button class="primary" 
           (click)="
           approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
           abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=true; 
-          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null"
+          panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Reset</button>
       </div>
       
@@ -414,6 +421,7 @@
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
           [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
           wrapperWidth="21"
@@ -456,6 +464,7 @@
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
           [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
           wrapperWidth="21"
@@ -498,6 +507,7 @@
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
           [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
           wrapperWidth="20"
@@ -540,6 +550,7 @@
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
           [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
           wrapperWidth="21"
@@ -549,6 +560,49 @@
             *ngFor="let p of infoPanelItemsFour; let i = index"
             (click)="panelFourClicked(i)" 
             [ngClass]="{'selected' : panelFourIndex===i}"
+            [preventOpacity]="false"
+            panelWidth="20" 
+            panelHeight="12.5" 
+            panelStatus="{{p.panelStatus}}"
+          >
+            <ng-container custom-header>
+              <section class="flex-group space-between">
+                <div class="flex-group flex-start flex-align-center">
+                  <div class="material-icons">{{p.headerIconOne}}</div>
+                  <h3>{{p.headerTitle}}</h3>
+                </div>
+                <div class="material-icons">{{p.headerIconTwo}}</div>
+              </section>
+            </ng-container>
+            <ng-container custom-content>
+              <p>
+                {{p.panelContent}}
+              </p>
+            </ng-container>
+            <ng-container custom-footer>
+              <div class="flex-group space-between">
+                <div class="material-icons">{{p.footerIconOne}}</div>
+                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+              </div>
+            </ng-container>
+          </aa-info-panel>
+        </aa-info-panel-stacked>
+
+        <aa-info-panel-stacked
+          [approvedForward]="approvedForward"
+          [pendingForward]="pendingForward"
+          [rejectedForward]="rejectedForward"
+          [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
+          [draftForward]="draftForward"
+          [resetAll]="resetAll"
+          wrapperWidth="21"
+          wrapperHeight="13.5"
+        >
+          <aa-info-panel 
+            *ngFor="let p of infoPanelItemsFive; let i = index"
+            (click)="panelFiveClicked(i)" 
+            [ngClass]="{'selected' : panelFiveIndex===i}"
             [preventOpacity]="false"
             panelWidth="20" 
             panelHeight="12.5" 

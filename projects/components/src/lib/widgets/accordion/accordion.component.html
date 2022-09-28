@@ -1,7 +1,7 @@
 <article class="accordion-container">
   <h3 class="margin-0">
     <button 
-      class="accordion-trigger flex-group space-between flex-align-center" 
+      class="accordion-trigger flex-group space-between flex-align-center {{customBgColor}}" 
       (click)="onOpen($event)" 
       [attr.aria-expanded.true]="showBody"
       [ngClass]="{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}"

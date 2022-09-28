@@ -22,6 +22,7 @@ export class ButtonsComponent {
   iconButtons: boolean;
   standardButtons: boolean;
   buttonEnriched: boolean;
+  buttonSummary: boolean;
   toggleBlade: boolean;
   
   bladeIsOpen(open: boolean) {

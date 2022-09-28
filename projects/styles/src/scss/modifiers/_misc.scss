@@ -1,0 +1,31 @@
+// Flip x or y
+.flip-x {-webkit-transform: scaleX(-1);transform: scaleX(-1);}
+.flip-y {-webkit-transform: scaleY(-1);transform: scaleY(-1);}
+
+// Rotate
+.rotate-45 {transform: rotate(45deg);}
+.rotate-m45 {transform: rotate(-45deg);}
+.rotate-90 {transform: rotate(90deg);}
+.rotate-m90 {transform: rotate(-90deg);}
+.rotate-180 {transform: rotate(180deg);}
+
+// Shadow
+.box-shadow, .box-shadow-light {
+    box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
+    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
+    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
+}
+
+.box-shadow-strong {
+    box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+}
+
+// Z-index
+.z-index-0 {z-index: 0!important;}
+.z-index-1 {z-index: 1!important;}
+.z-index-10 {z-index: 10!important;}
+.z-index-100 {z-index: 100!important;}
+.z-index-1000 {z-index: 1000!important;}
+.z-index-10000 {z-index: 10000!important;}

@@ -88,12 +88,22 @@ $font-path: '../../assets/fonts';
   src: url("#{$font-path}/Roboto-Bold.ttf") format("truetype");
 }
 
+// icons
+
 @font-face {
   font-family: "font-awesome";
   font-style: normal;
   font-weight: 900;
   font-display: block;
   src: url("#{$font-path}/font-awesome/webfonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "font-awesome-regular";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("#{$font-path}/font-awesome/webfonts/fa-regular-400.ttf") format("truetype");
 }
 
 @font-face {

@@ -16,6 +16,10 @@
   border-radius: .5rem;
   background-color: _colour(bg-feature-box);
 
+  h4 {
+    line-height: 1.8rem;
+  }
+
   &.padding-large {
     padding: 1rem;
   }
@@ -36,16 +40,27 @@
   &.tertiary {
     border: 1px solid _palette(grey-50);
   }
+
+  .default {
+    border-color: _colour(aa-blue-100);
+  }
+
+  .not-started {
+    border-color: _colour(aa-grey-25);
+  }
   
-  &.approve {
+  &.approved,
+  .approved {
     border-color: _palette(aa-green-100);
   }
   
-  &.reject {
+  &.rejected,
+  .rejected {
     border-color: _palette(aa-red-100);
   }
   
-  &.return {
+  &.returned,
+  .pending {
     border-color: _palette(aa-orange-100);
   }
 }

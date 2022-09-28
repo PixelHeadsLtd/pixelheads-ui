@@ -11,6 +11,7 @@ export * from './favourites-list/favourites-list.component';
 export * from './icon-picker/icon-picker.component';
 export * from './info-panel/info-panel.component';
 export * from './info-panel-stacked/info-panel-stacked.component';
+export * from './list-selectable/list-selectable.component';
 export * from './modal/modal.component';
 export * from './modal-dialog/modal-dialog.component';
 export * from './overlay/overlay.component';

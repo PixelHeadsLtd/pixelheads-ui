@@ -82,6 +82,36 @@
       </div>
     </fieldset>
 
+    <aa-slider
+      [sliderInline]="false"
+      sliderChecked=""
+      labelText="Slider"
+      fieldClass=""
+      sliderId=""
+      sliderName=""
+      sliderValue=""
+      disabled=""
+    >
+    </aa-slider>
+    <aa-slider
+      [sliderInline]="true"
+      sliderChecked=""
+      labelText="Slider inline"
+      fieldClass=""
+      sliderId=""
+      sliderName=""
+      sliderValue=""
+      disabled=""
+    >
+    </aa-slider>
+  </div>
+
+  <div class="flex-group flex-start position-relative">
+    <section class="alignment-marker" *ngIf="showMarkers">
+      <div>
+        <div><!-- marker --></div>
+      </div>
+    </section>
     <aa-button
       [buttonClass]="'primary settings'"
       [buttonLabel]="'Settings'"
@@ -112,36 +142,34 @@
       [buttonLabel]="'Calendar'"
       [buttonText]="'Calendar'"
     ></aa-button>
+    <aa-button 
+      buttonClass="custom-icons orange" 
+      fieldClass="" 
+      buttonLabel="Custom icons"
+      buttonText="Custom icons" 
+      [customIcons]="true" 
+      buttonIcon="alarm" 
+    ></aa-button>
     <aa-file-upload 
       fileUploadLabel="File upload" 
       fileUploadId="fileUploadId" 
       fileUploadExtentions=".csv,.xlsx,.xls,.pdf"
       fileUploadText="Choose file..."
+      fileUploadName=""
       fieldClass="">
     </aa-file-upload>
-    <aa-slider
-      [sliderInline]="false"
-      sliderChecked=""
-      labelText="Slider"
-      fieldClass=""
-      sliderId=""
-      sliderName=""
-      sliderValue=""
-      disabled=""
-    >
-    </aa-slider>
-    <aa-slider
-      [sliderInline]="true"
-      sliderChecked=""
-      labelText="Slider inline"
-      fieldClass=""
-      sliderId=""
-      sliderName=""
-      sliderValue=""
-      disabled=""
-    >
-    </aa-slider>
+    <aa-button 
+      [buttonLarge]="true"
+      buttonClass="custom-icons red" 
+      fieldClass="" 
+      buttonId="buttonIdC" 
+      buttonLabel="Custom icons"
+      buttonText="Button large" 
+      [customIcons]="true" 
+      buttonIcon="settings" 
+    ></aa-button>
   </div>
+  
 
   <h2 class="margin-bottom-0">Ng-Select variations</h2>
   <div class="flex-group flex-start position-relative">

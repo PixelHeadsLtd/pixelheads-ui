@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionFancyComponent } from './accordion-fancy/accordion-fancy.component';
+import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AnchorComponent } from './anchor/anchor.component';
@@ -104,6 +105,11 @@ import { CommentsComponent } from './comments/comments.component';
 //import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-dialog/modal-dialog.component';
 import { NgxQuillComponent } from './ngx-quill/ngx-quill.component';
 import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-and-answers.component';
+import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
+import { GraphicComponent } from './unauthorised/graphic.component';
+import { MiscComponent } from './misc/misc.component';
+import { ListSelectableComponent } from './list-selectable/list-selectable.component';
+import { UiBlockComponent } from './ui-block/ui-block.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +117,7 @@ import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-
     AppIconsPipe,
     AccordionComponent,
     AccordionFancyComponent,
+    ActionsSummaryComponent,
     AgGridComponent,
     AlertsComponent,
     AnchorComponent,
@@ -197,7 +204,12 @@ import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-
     TextComponent,
     NgxQuillComponent,
     CarouselComponent,
-    QuestionsAndAnswersComponent
+    QuestionsAndAnswersComponent,
+    UnauthorisedComponent,
+    GraphicComponent,
+    MiscComponent,
+    ListSelectableComponent,
+    UiBlockComponent
   ],
   imports: [
     FormsModule,

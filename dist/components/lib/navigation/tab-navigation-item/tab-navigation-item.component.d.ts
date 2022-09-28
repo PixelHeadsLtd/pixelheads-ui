@@ -12,6 +12,7 @@ export declare class TabNavigationItemComponent implements OnInit, AfterContentC
     iconColour: string;
     enableCount: boolean;
     tabCount: number;
+    countColour: string;
     tabRoute: string;
     tabDisabled: boolean;
     showRightDivider: boolean;

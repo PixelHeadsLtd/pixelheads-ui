@@ -12,6 +12,27 @@
       padding: 0 1rem 0 .75rem;
       width: 100%;
 
+      // custom colour classes for darker backgrounds
+      &.bg-aa-blue-100,
+      &.bg-aa-blue-70,
+      &.bg-aa-blue-60,
+      &.bg-aa-red-100,
+      &.bg-aa-light-blue-100,
+      &.bg-aa-grey-100,
+      &.bg-aa-green-100,
+      &.bg-aa-orange-100,
+      &.bg-aa-burgundy-100,
+      &.bg-aa-plum-100,
+      &.bg-aa-blue-sky-100 {
+         .accordion-heading,
+         .material-icons,
+         .material-icons-outlined,
+         .toggle-chevrons {
+            color: _palette(aa-white-100);
+         }
+      }
+
+
       .toggle-icons,
       .nested-icons {
          display: none;

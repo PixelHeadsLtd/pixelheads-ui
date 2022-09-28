@@ -70,8 +70,8 @@ export class InfoPanelComponent implements OnInit {
   ];
   
   infoPanelItemsFive: InfoPanel[] = [
-    new InfoPanel('rejected', 'work', 'VAT number', 'error_outline', 'MR-759348-9', 'thumb_up', 'create'),
-    new InfoPanel('approved', 'work', 'VAT number', 'done', 'MR-759348-9', 'thumb_up', 'create'),
+    new InfoPanel('withdrawn', 'work', 'Acc number', 'error_outline', 'ME-759228-4', 'thumb_up', 'create'),
+    new InfoPanel('draft', 'work', 'Acc number', 'done', 'MX-733348-9', 'thumb_up', 'create'),
   ];
   
   infoOne = this.infoPanelItemsOne[0];

@@ -1,6 +1,8 @@
 <section class="control-bar flex-group space-between">
   <h1>Button</h1>
-  <aa-alert alertClass="error max-width-unset" alertText="Ensure ALL elements are wrapped in div.field. Hide label with field.label-transparent or field.label-hidden"></aa-alert>
+  <aa-alert alertClass="error max-width-unset"
+    alertText="Ensure ALL elements are wrapped in div.field. Hide label with field.label-transparent or field.label-hidden">
+  </aa-alert>
 </section>
 
 
@@ -10,31 +12,24 @@
     <section class="flex-1 col-left flex-start">
       <h2>Custom button</h2>
       <div class="describe margin-bottom-1">
-        <p>In curtain circumstances, if an existing button is not available you<br/>
-          might want to create your own. To do this use the below tool to preview<br/>
-          one of the Material Icons and then choose your background colour.<br/>
-          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
-            the parent div.field element. DO NOT remove the label as this maintains the 
+        <p>In curtain circumstances, if an existing button is not available you<br />
+          might want to create your own. To do this use the below tool to preview<br />
+          one of the Material Icons and then choose your background colour.<br />
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to
+            the parent div.field element. DO NOT remove the label as this maintains the
             vertical alignment when alongside other form elements</strong>
-          </p>
+        </p>
       </div>
       <div>
         <div class="flex-group flex-start margin-bottom-2">
-          <aa-button 
-            (buttonClick)="onClick()" 
-            buttonClass="custom-icons {{selectedColor}}" 
-            fieldClass="" 
-            buttonId="buttonIdC" 
-            buttonLabel="Custom icons"
-            buttonText="{{selectedIcon}}" 
-            [customIcons]="true" 
-            buttonIcon="{{selectedIcon}}" 
-            disabled=""
-          ></aa-button>
+          <aa-button (buttonClick)="onClick()" buttonClass="custom-icons {{selectedColor}}" fieldClass=""
+            buttonId="buttonIdC" buttonLabel="Custom icons" buttonText="{{selectedIcon}}" [customIcons]="true"
+            buttonIcon="{{selectedIcon}}" disabled=""></aa-button>
           <div class="field">
             <label>
               Choose icon -
-              <a href="https://material.io/resources/icons/?icon=accessibility_new&style=baseline" target="_blank">Reference here...</a>
+              <a href="https://material.io/resources/icons/?icon=accessibility_new&style=baseline"
+                target="_blank">Reference here...</a>
             </label>
             <input type="text" placeholder="{{selectedIcon}}" (change)="selectIconHandler($event)" />
           </div>
@@ -46,80 +41,38 @@
               <option value="green">.green</option>
               <option value="red">.red</option>
               <option value="orange">.orange</option>
-          </select>
+            </select>
           </div>
         </div>
         <h2>Commonly used</h2>
         <div class="flex-group">
           <div>
-            <aa-button 
-              buttonClass="custom-icons orange" 
-              fieldClass="boxed" 
-              buttonId="buttonIdC" 
-              buttonLabel="Return"
-              buttonText="Return" 
-              [customIcons]="true" 
-              buttonIcon="reply" 
-              title="buttonClass='custom-icons orange', buttonIcon='reply'"
-            ></aa-button>
-            <aa-button 
-              buttonClass="custom-icons primary" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              buttonLabel="Edit"
-              buttonText="Edit" 
-              [customIcons]="true" 
-              buttonIcon="edit" 
-              title="buttonClass='custom-icons primary', buttonIcon='edit'"
-            ></aa-button>
-            <aa-button 
-              buttonClass="custom-icons orange" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              buttonLabel="Pending"
-              buttonText="Pending" 
-              [customIcons]="true" 
-              buttonIcon="update" 
-              title="buttonClass='custom-icons orange', buttonIcon='update'"
-            ></aa-button>
+            <aa-button buttonClass="custom-icons orange" fieldClass="boxed" buttonId="buttonIdC" buttonLabel="Return"
+              buttonText=".orange" [customIcons]="true" buttonIcon="reply"
+              title="buttonClass='custom-icons orange', buttonIcon='reply'"></aa-button>
+            <aa-button buttonClass="custom-icons primary" fieldClass="" buttonId="buttonIdC" buttonLabel="Edit"
+              buttonText=".light-blue" [customIcons]="true" buttonIcon="edit"
+              title="buttonClass='custom-icons primary', buttonIcon='edit'"></aa-button>
+            <aa-button buttonClass="custom-icons orange" fieldClass="" buttonId="buttonIdC" buttonLabel="Pending"
+              buttonText=".orange" [customIcons]="true" buttonIcon="update"
+              title="buttonClass='custom-icons orange', buttonIcon='update'"></aa-button>
           </div>
-          
+
           <div>
-            <aa-button 
-              buttonClass="custom-icons red" 
-              fieldClass="boxed" 
-              buttonId="buttonIdC" 
-              buttonLabel="Reject"
-              buttonText="Reject" 
-              [customIcons]="true" 
-              buttonIcon="clear" 
-              title="buttonClass='custom-icons red', buttonIcon='clear'"
-            ></aa-button>
-            <aa-button 
-              buttonClass="custom-icons green" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              buttonLabel="Approve"
-              buttonText="Approve" 
-              [customIcons]="true" 
-              buttonIcon="check" 
-              title="buttonClass='custom-icons green', buttonIcon='check'"
-            ></aa-button>
-            <aa-button 
-              buttonClass="custom-icons light-blue" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              buttonLabel="Review"
-              buttonText="Review" 
-              [customIcons]="true" 
-              buttonIcon="remove_red_eye" 
-              title="buttonClass='custom-icons light-blue', buttonIcon='remove_red_eye'"
-            ></aa-button>
+            <aa-button buttonClass="custom-icons red" fieldClass="boxed" buttonId="buttonIdC" buttonLabel="Reject"
+              buttonText=".red" [customIcons]="true" buttonIcon="clear"
+              title="buttonClass='custom-icons red', buttonIcon='clear'"></aa-button>
+            <aa-button buttonClass="custom-icons green" fieldClass="" buttonId="buttonIdC" buttonLabel="Approve"
+              buttonText=".green" [customIcons]="true" buttonIcon="check"
+              title="buttonClass='custom-icons green', buttonIcon='check'"></aa-button>
+            <aa-button buttonClass="custom-icons light-blue" fieldClass="" buttonId="buttonIdC" buttonLabel="Review"
+              buttonText=".light-blue" [customIcons]="true" buttonIcon="remove_red_eye"
+              title="buttonClass='custom-icons light-blue', buttonIcon='remove_red_eye'"></aa-button>
           </div>
         </div>
       </div>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -139,82 +92,118 @@
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Click event</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button class</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">custom-icons</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button type</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonType</td>
             <td datalabel="Type">Type</td>
             <td datalabel="Default">null</td>
           </tr>
           <tr>
-            <td datalabel="Element">Field class</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">boxed, label-hidden or label-transparent</td>
+            <td datalabel="Default">
+              <div class="flex-group nowrap flex-nowrap">
+                <strong class="aa-red-100">.boxed, .label-hidden or .label-transparent?</strong>
+                <aa-tooltip [includeLabel]="false" [includeLegend]="false" [isError]="true" [customIcon]="false"
+                  iconName="" setMinWidth="20" setMaxWidth="50" ypos="bottom" xpos="right" zIndex="1">
+                  <h4>Classes applied to fieldClass</h4>
+                  <p><strong class="aa-red-100">.boxed </strong>removes the top padding of the field wrapper.</p>
+                  <p><strong class="aa-red-100">.label-hidden </strong>completely removes the label on the button which
+                    causes
+                    the button to move up and out of alignment with other inputs that have labels.
+                  </p>
+                  <p><strong class="aa-red-100">.label-transparent </strong>hides the label on the button whilst
+                    maintaining vertical
+                    alignment with other inputs that have labels. <strong class="aa-red-100">This is the preferred
+                      approach</strong></p>
+                </aa-tooltip>
+              </div>
+            </td>
           </tr>
           <tr>
-            <td datalabel="Element">Button Id</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">buttonId</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button label</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonLabel</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Custom icons</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button text</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
           </tr>
           <tr>
-            <td datalabel="Element">Custom icon</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">[customIcons]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button icon</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonIcon</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">visibility</td>
           </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[buttonLarge]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">
+              <div class="flex-group nowrap flex-nowrap">
+                <strong class="aa-red-100">Only use if there's a business requirement</strong>
+                <aa-tooltip [includeLabel]="false" [includeLegend]="false" [isError]="true" [customIcon]="false"
+                  iconName="" setMinWidth="20" setMaxWidth="50" ypos="bottom" xpos="right" zIndex="1">
+                  <h4>Button large</h4>
+                  <p>We prefer it if you stick with the standard buttons for consistency across the UI. The
+                    standard buttons also align correctly. Using the large version can cause alignment issues
+                  </p>
+                </aa-tooltip>
+              </div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=true; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
-          <span class="material-icons">visibility</span><span>View gist</span>
-        </button>
-      </nav>
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); customButton=true; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
   </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
       <h2>Icon buttons</h2>
       <div class="describe margin-bottom-1">
         <p>If you want a button with just an icon and no text, you can simply use
-          a button with the .material-icons class and the 
-          <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon friendly name</a>,
-          also remember to include the relevant button class, .primary, .secondary etc. <br/>
-          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
-            the parent div.field element. DO NOT remove the label as this maintains the 
+          a button with the .material-icons class and the
+          <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon
+            friendly name</a>,
+          also remember to include the relevant button class, .primary, .secondary etc. <br />
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to
+            the parent div.field element. DO NOT remove the label as this maintains the
             vertical alignment when alongside other form elements</strong>
         </p>
       </div>
@@ -286,254 +275,203 @@
             <td datalabel="Element">HTML</td>
             <td datalabel="Attribute">Button</td>
             <td datalabel="Type">String</td>
-            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon friendly name</a></td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new"
+                target="_blank">icon friendly name</a></td>
           </tr>
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); iconButtons=true; customButton=false; standardButtons=false; buttonEnriched=false; buttonSplit=false">
-          <span class="material-icons">visibility</span><span>View gist</span>
-        </button>
-      </nav>
-    </section>
-  
-    <!-- start content repeater -->
-    <section class="content-repeater flex-group">
-      <section class="flex-1 col-left flex-start">
-        <h2>Standard buttons</h2>
-        <div class="describe margin-bottom-1">
-          <p>There is an array of standard buttons available in<br/> 
-            Design Language. For consistency, please try and use the <br/> 
-            standard versions wherever possible.<br/>
-            <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
-              the parent div.field element. DO NOT remove the label as this maintains the 
-              vertical alignment when alongside other form elements</strong></p>
-        </div>
-        <div class="filter-container flex-group">
-          <aa-button 
-            (buttonClick)="onClick()" 
-            fieldClass="" 
-            buttonClass="primary" 
-            buttonId="'uttonId" 
-            buttonLabel="Primary boxed"
-            buttonText=".primary" 
-            disabled="">
-          </aa-button>
-          <aa-button 
-            (buttonClick)="onClick()" 
-            fieldClass="inline margin-top-1-5" 
-            buttonClass="primary margin-top-0-25" 
-            buttonId="buttonId" 
-            buttonLabel="Primary inline"
-            buttonText=".primary inline" 
-            disabled="">
-          </aa-button>
-        </div>
-        
-        <div class="flex-group">
-          <div class="flex-1">
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary" buttonId="buttonId" buttonLabel="Primary"
-            buttonText=".primary" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="tertiary" buttonId="buttonId3"
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); iconButtons=true; customButton=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Standard buttons</h2>
+      <div class="describe margin-bottom-1">
+        <p>There is an array of standard buttons available in<br />
+          Design Language. For consistency, please try and use the <br />
+          standard versions wherever possible.<br />
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to
+            the parent div.field element. DO NOT remove the label as this maintains the
+            vertical alignment when alongside other form elements</strong>
+        </p>
+      </div>
+      <div class="filter-container flex-group">
+        <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary" buttonId="'uttonId"
+          buttonLabel="Primary boxed" buttonText=".primary" disabled="">
+        </aa-button>
+        <aa-button (buttonClick)="onClick()" fieldClass="inline margin-top-1-5" buttonClass="primary margin-top-0-25"
+          buttonId="buttonId" buttonLabel="Primary inline" buttonText=".primary inline" disabled="">
+        </aa-button>
+      </div>
+
+      <div class="flex-group">
+        <div class="flex-1">
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary" buttonId="buttonId"
+            buttonLabel="Primary" buttonText=".primary" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="tertiary" buttonId="buttonId3"
             buttonLabel="Tertiary" buttonText=".tertiary (deprecated .menu)" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="delete" buttonId="buttonId5" buttonLabel="Delete"
-            buttonText=".delete" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary add" buttonId="buttonId7" buttonLabel="Add"
-            buttonText=".primary .add" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary download" buttonId="buttonId9" buttonLabel="Download" 
-            buttonText="'.primary .download'" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary chevron-down" buttonId="buttonId11"
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="delete" buttonId="buttonId5"
+            buttonLabel="Delete" buttonText=".delete" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary add" buttonId="buttonId7"
+            buttonLabel="Add" buttonText=".primary .add" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary download" buttonId="buttonId9"
+            buttonLabel="Download" buttonText="'.primary .download'" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary chevron-down" buttonId="buttonId11"
             buttonLabel="Chevron down" buttonText=".primary .chevron-down" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary previous" buttonId="buttonId11"
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary previous" buttonId="buttonId11"
             buttonLabel="Previous" buttonText=".primary .previous" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="approve" buttonId="buttonIdA" buttonLabel="Approve"
-            buttonText=".approve" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="void" buttonId="buttonIdC" buttonLabel="Void"
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="approve" buttonId="buttonIdA"
+            buttonLabel="Approve" buttonText=".approve" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="void" buttonId="buttonIdC" buttonLabel="Void"
             buttonText=".void" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review blue" buttonId="buttonIdC" buttonLabel="Review (blue)"
-            buttonText=".review .blue" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="secondary return" buttonId="buttonIdC"
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review blue" buttonId="buttonIdC"
+            buttonLabel="Review (blue)" buttonText=".review .blue" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="secondary return" buttonId="buttonIdC"
             buttonLabel="Secondary return" buttonText=".secondary return" disabled=""></aa-button>
-          </div>
-          
-          <div class="flex-1">
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="secondary" buttonId="buttonId2" buttonLabel="Secondary"
-            buttonText=".secondary" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" [buttonClass]="'cancel'" [buttonId]="'buttonId4'" [buttonLabel]="'Cancel'"
-            buttonText=".cancel" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary" buttonId="buttonId6" buttonLabel="Disabled"
-            buttonText=".disabled" disabled="disabled"></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary calendar" buttonId="buttonId8" buttonLabel="Calendar"
-            buttonText=".primary .calendar" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary chevron-up" buttonId="buttonId10"
-            buttonLabel="Chevron up" buttonText=".primary .chevron-up" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary add-selected" buttonId="buttonId12"
-            buttonLabel="Add selected" buttonText=".primary .add-selected" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary next" buttonId="buttonId11"
-            buttonLabel="Next" buttonText=".primary .next" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="reject" buttonId="buttonIdB" buttonLabel="Reject"
-            buttonText=".reject" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review red" buttonId="buttonIdC" buttonLabel="Review (red)"
-            buttonText=".review .red" disabled=""></aa-button>
-            <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review light blue" buttonId="buttonIdC" buttonLabel="Review (light blue)"
-            buttonText=".review .blue .light" disabled=""></aa-button>
-          </div>
         </div>
-      </section>
-        
-      <section class="flex-2 col-right flex-start">
-        <table class="half-width">
-          <caption>Attributes</caption>
-          <thead>
-            <tr>
-              <th>Element</th>
-              <th>Attribute</th>
-              <th>Type</th>
-              <th>Default</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td datalabel="Element">aa-button</td>
-              <td datalabel="Attribute">N/A</td>
-              <td datalabel="Type">Component</td>
-              <td datalabel="Default">N/A</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Click event</td>
-              <td datalabel="Attribute">(buttonClick)</td>
-              <td datalabel="Type">Function</td>
-              <td datalabel="Default">onClick()</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Button class</td>
-              <td datalabel="Attribute">buttonClass</td>
-              <td datalabel="Type">Class</td>
-              <td datalabel="Default">E.g. primary</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Button type</td>
-              <td datalabel="Attribute">buttonType</td>
-              <td datalabel="Type">Type</td>
-              <td datalabel="Default">null</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Field class</td>
-              <td datalabel="Attribute">fieldClass</td>
-              <td datalabel="Type">Class</td>
-              <td datalabel="Default">boxed, label-hidden or label-transparent</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Button Id</td>
-              <td datalabel="Attribute">buttonId</td>
-              <td datalabel="Type">Id</td>
-              <td datalabel="Default">buttonId</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Button label</td>
-              <td datalabel="Attribute">buttonLabel</td>
-              <td datalabel="Type">String</td>
-              <td datalabel="Default">Your label...</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">Button text</td>
-              <td datalabel="Attribute">buttonText</td>
-              <td datalabel="Type">String</td>
-              <td datalabel="Default">Your text...</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      
-      <!-- mini menu -->
-      <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); standardButtons=true; customButton=false; iconButtons=false; buttonEnriched=false; buttonSplit=false">
-            <span class="material-icons">visibility</span><span>View gist</span>
-          </button>
-        </nav>
+
+        <div class="flex-1">
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="secondary" buttonId="buttonId2"
+            buttonLabel="Secondary" buttonText=".secondary" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" [buttonClass]="'cancel'" [buttonId]="'buttonId4'"
+            [buttonLabel]="'Cancel'" buttonText=".cancel" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary" buttonId="buttonId6"
+            buttonLabel="Disabled" buttonText=".disabled" disabled="disabled"></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary calendar" buttonId="buttonId8"
+            buttonLabel="Calendar" buttonText=".primary .calendar" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary chevron-up" buttonId="buttonId10"
+            buttonLabel="Chevron up" buttonText=".primary .chevron-up" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary add-selected" buttonId="buttonId12"
+            buttonLabel="Add selected" buttonText=".primary .add-selected" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="primary next" buttonId="buttonId11"
+            buttonLabel="Next" buttonText=".primary .next" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="reject" buttonId="buttonIdB"
+            buttonLabel="Reject" buttonText=".reject" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review red" buttonId="buttonIdC"
+            buttonLabel="Review (red)" buttonText=".review .red" disabled=""></aa-button>
+          <aa-button (buttonClick)="onClick()" fieldClass="" buttonClass="review light blue" buttonId="buttonIdC"
+            buttonLabel="Review (light blue)" buttonText=".review .blue .light" disabled=""></aa-button>
+        </div>
+      </div>
     </section>
-     <!-- start content repeater -->
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">(buttonClick)</td>
+            <td datalabel="Type">Function</td>
+            <td datalabel="Default">onClick()</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">E.g. primary</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonType</td>
+            <td datalabel="Type">Type</td>
+            <td datalabel="Default">null</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">fieldClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">boxed, label-hidden or label-transparent</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonId</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">buttonId</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonLabel</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your label...</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your text...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); standardButtons=true; customButton=false; iconButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+  <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
       <h2>Button enriched</h2>
       <div class="describe margin-bottom-1">
-        <p>In curtain circumstances, if an existing button is not available you<br/>
-          might want to create your own. To do this use the below tool to preview<br/>
+        <p>In curtain circumstances, if an existing button is not available you<br />
+          might want to create your own. To do this use the below tool to preview<br />
           one of the Material Icons and then choose your background colour.</p>
       </div>
 
-      <aa-button
-        [buttonEnriched]="true"
-        (buttonClick)="onClick()"
-        type="button"
-        buttonId="myBtnId"
-        title="Your meeting is at 14:00"
-        iconName="alarm"
-        iconColour="aa-burgundy-100"
-      >
+      <aa-button [buttonEnriched]="true" (buttonClick)="onClick()" type="button" buttonId="myBtnId"
+        title="Your meeting is at 14:00" iconName="alarm" iconColour="aa-burgundy-100">
         <ng-container toolbar>
           <div class="material-icons aa-light-blue-100" (click)="onSettingsClick($event)">settings</div>
-          <aa-tooltip 
-          class="align-left"
-          [isInfo]="true" 
-          setMinWidth="12" 
-          ypos="bottom" 
-          xpos="right"
-          zIndex="1"
-        >
-          <h4>More info</h4>
-          <p>Enter any extra information here.</p>
-        </aa-tooltip>
+          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12" ypos="bottom" xpos="right" zIndex="1">
+            <h4>More info</h4>
+            <p>Enter any extra information here.</p>
+          </aa-tooltip>
         </ng-container>
       </aa-button>
 
-      <aa-button
-        [buttonEnriched]="true"
-        title="Your airline tickets have arrived"
-        iconName="flight"
-        iconColour="aa-orange-100"
-      >
+      <aa-button [buttonEnriched]="true" title="Your airline tickets have arrived" iconName="flight"
+        iconColour="aa-orange-100">
         <ng-container toolbar>
-          <aa-tooltip 
-          class="align-left"
-          [isInfo]="true" 
-          setMinWidth="12" 
-          ypos="bottom" 
-          xpos="right"
-          zIndex="1"
-        >
-          <h4>More info</h4>
-          <p>Enter any extra information here.</p>
-        </aa-tooltip>
+          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12" ypos="bottom" xpos="right" zIndex="1">
+            <h4>More info</h4>
+            <p>Enter any extra information here.</p>
+          </aa-tooltip>
         </ng-container>
       </aa-button>
 
-      <aa-button
-        [buttonEnriched]="true"
-        title="Review figures"
-        iconName="insights"
-        iconColour="aa-green-100"
-      >
+      <aa-button [buttonEnriched]="true" title="Review figures" iconName="insights" iconColour="aa-green-100">
         <ng-container toolbar>
-          <aa-tooltip 
-          class="align-left"
-          [isInfo]="true" 
-          setMinWidth="12" 
-          ypos="bottom" 
-          xpos="right"
-          zIndex="1"
-        >
-          <h4>More info</h4>
-          <p>Enter any extra information here.</p>
-        </aa-tooltip>
+          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12" ypos="bottom" xpos="right" zIndex="1">
+            <h4>More info</h4>
+            <p>Enter any extra information here.</p>
+          </aa-tooltip>
         </ng-container>
       </aa-button>
 
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -553,49 +491,50 @@
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button enriched</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">[buttonEnriched]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">Click event</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button type</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonType</td>
             <td datalabel="Type">Type</td>
             <td datalabel="Default">null</td>
           </tr>
           <tr>
-            <td datalabel="Element">Field class</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">boxed, label-hidden or label-transparent</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button Id</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your button Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button text</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">title</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
           </tr>
           <tr>
-            <td datalabel="Element">Button icon</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">iconName</td>
             <td datalabel="Type">String</td>
-            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon friendly name</a></td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new"
+                target="_blank">icon friendly name</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">Main icon colour</td>
+            <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">iconColour</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your foreground <a routerLink="/colours">colour class name</a></td>
@@ -603,205 +542,328 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=true; buttonSplit=false">
-          <span class="material-icons">visibility</span><span>View gist</span>
-        </button>
-      </nav>
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=true; buttonSplit=false; buttonSummary=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
   </section>
 
-       <!-- start content repeater -->
-       <section class="content-repeater flex-group">
-        <section class="flex-1 col-left flex-start">
-          <h2>Button split</h2>
-          <div class="describe margin-bottom-1">
-            <p>To reduce clutter in the UI, you might want to use the Button Split component.<br/>
-              <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to 
-                the parent div.field element. DO NOT remove the label as this maintains the 
-                vertical alignment when alongside other form elements</strong></p>
-          </div>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Button split</h2>
+      <div class="describe margin-bottom-1">
+        <p>To reduce clutter in the UI, you might want to use the Button Split component.<br />
+          <strong class="aa-red-100">If you do not want to display the button label, add .label-transparent to
+            the parent div.field element. DO NOT remove the label as this maintains the
+            vertical alignment when alongside other form elements</strong>
+        </p>
+      </div>
 
-          <section class="flex-group flex-start margin-bottom-1">
-            <aa-button 
-              [buttonSplit]="true"
-              fieldClass="boxed margin-right-2"
-              buttonClass="bg-aa-light-blue-100 chevron-up"
-              buttonLabel="Primary"
-              buttonText="Publish"
-              buttonId="myBtnId"
-            >
-              <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
-                  <span class="material-icons">forward_to_inbox</span>
-                  Publish now
-                </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
-                  <span class="material-icons">schedule_send</span>
-                  Publish later
-                </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
-                  <span class="material-icons">unsubscribe</span>
-                  Cancel scheduled publish
-                </button>
-              </ng-container>
-            </aa-button>
-            
-            <div class="margin-top-2 italic">
-              <p *ngIf="showPub">Publish now...</p>
-              <p *ngIf="showPubLater">Publish later...</p>
-              <p *ngIf="showCancelPub">Cancel scheduled publish...</p>
-            </div>
-          </section>
-
-          <section class="flex-group flex-start margin-bottom-1">
-            <aa-button 
-              [buttonSplit]="true"
-              fieldClass="boxed"
-              buttonClass="bg-aa-blue-100 chevron-up"
-              buttonLabel="Secondary"
-              buttonText="Publish"
-              buttonId="myBtnId"
-            >
-              <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
-                  <span class="material-icons">forward_to_inbox</span>
-                  Publish now
-                </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
-                  <span class="material-icons">schedule_send</span>
-                  Publish later
-                </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
-                  <span class="material-icons">unsubscribe</span>
-                  Cancel scheduled publish
-                </button>
-              </ng-container>
-            </aa-button>
-          </section>
-
-          <section class="flex-group flex-start">
-            <aa-button 
-              [buttonSplit]="true"
-              fieldClass="boxed"
-              buttonClass="bg-aa-red-100 chevron-up"
-              buttonLabel="Error"
-              buttonText="Publish"
-              buttonId="myBtnId"
-            >
-              <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
-                  <span class="material-icons">forward_to_inbox</span>
-                  Publish now
-                </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
-                  <span class="material-icons">schedule_send</span>
-                  Publish later
-                </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
-                  <span class="material-icons">unsubscribe</span>
-                  Cancel scheduled publish
-                </button>
-              </ng-container>
-            </aa-button>
-          </section>
-
-        </section>
-          
-        <section class="flex-2 col-right flex-start">
-          <table class="half-width">
-            <caption>Attributes</caption>
-            <thead>
-              <tr>
-                <th>Element</th>
-                <th>Attribute</th>
-                <th>Type</th>
-                <th>Default</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td datalabel="Element">Button split</td>
-                <td datalabel="Attribute">[buttonSplit]</td>
-                <td datalabel="Type">Boolean</td>
-                <td datalabel="Default">true</td>
-              </tr>
-              <tr>
-                <td datalabel="Element">Field class</td>
-                <td datalabel="Attribute">fieldClass</td>
-                <td datalabel="Type">Class</td>
-                <td datalabel="Default">boxed, label-hidden or label-transparent</td>
-              </tr>
-              <tr>
-                <td datalabel="Element">Button background colour</td>
-                <td datalabel="Attribute">buttonClass</td>
-                <td datalabel="Type">Class</td>
-                <td datalabel="Default"><a routerLink="/colours">bg-aa-light-blue-100</a> chevron-up</td>
-              </tr>
-              <tr>
-                <td datalabel="Element">Button label</td>
-                <td datalabel="Attribute">buttonLabel</td>
-                <td datalabel="Type">string</td>
-                <td datalabel="Default">Your label</td>
-              </tr>
-              <tr>
-                <td datalabel="Element">Button Id</td>
-                <td datalabel="Attribute">buttonId</td>
-                <td datalabel="Type">Id</td>
-                <td datalabel="Default">Your button Id</td>
-              </tr>
-              <tr>
-                <td datalabel="Element">Button text</td>
-                <td datalabel="Attribute">buttonText</td>
-                <td datalabel="Type">String</td>
-                <td datalabel="Default">Your text</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        
-        <!-- mini menu -->
-        <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=true">
-              <span class="material-icons">visibility</span><span>View gist</span>
+      <section class="flex-group flex-start margin-bottom-1">
+        <aa-button [buttonSplit]="true" fieldClass="boxed margin-right-2" buttonClass="bg-aa-light-blue-100 chevron-up"
+          buttonLabel="Primary" buttonText="Publish" buttonId="myBtnId">
+          <ng-container bs-buttons>
+            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
+              <span class="material-icons">forward_to_inbox</span>
+              Publish now
             </button>
-          </nav>
+            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
+              <span class="material-icons">schedule_send</span>
+              Publish later
+            </button>
+            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
+              <span class="material-icons">unsubscribe</span>
+              Cancel scheduled publish
+            </button>
+          </ng-container>
+        </aa-button>
+
+        <div class="margin-top-2 italic">
+          <p *ngIf="showPub">Publish now...</p>
+          <p *ngIf="showPubLater">Publish later...</p>
+          <p *ngIf="showCancelPub">Cancel scheduled publish...</p>
+        </div>
       </section>
+
+      <section class="flex-group flex-start margin-bottom-1">
+        <aa-button [buttonSplit]="true" fieldClass="boxed" buttonClass="bg-aa-blue-100 chevron-up"
+          buttonLabel="Secondary" buttonText="Publish" buttonId="myBtnId">
+          <ng-container bs-buttons>
+            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
+              <span class="material-icons">forward_to_inbox</span>
+              Publish now
+            </button>
+            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
+              <span class="material-icons">schedule_send</span>
+              Publish later
+            </button>
+            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
+              <span class="material-icons">unsubscribe</span>
+              Cancel scheduled publish
+            </button>
+          </ng-container>
+        </aa-button>
+      </section>
+
+      <section class="flex-group flex-start">
+        <aa-button [buttonSplit]="true" fieldClass="boxed" buttonClass="bg-aa-red-100 chevron-up" buttonLabel="Error"
+          buttonText="Publish" buttonId="myBtnId">
+          <ng-container bs-buttons>
+            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
+              <span class="material-icons">forward_to_inbox</span>
+              Publish now
+            </button>
+            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
+              <span class="material-icons">schedule_send</span>
+              Publish later
+            </button>
+            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
+              <span class="material-icons">unsubscribe</span>
+              Cancel scheduled publish
+            </button>
+          </ng-container>
+        </aa-button>
+      </section>
+
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[buttonSplit]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">fieldClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">boxed, label-hidden or label-transparent</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default"><a routerLink="/colours">bg-aa-light-blue-100</a> chevron-up</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonLabel</td>
+            <td datalabel="Type">string</td>
+            <td datalabel="Default">Your label</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonId</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your button Id</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your text</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=true; buttonSummary=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Button summary</h2>
+      <div class="describe margin-bottom-1">
+        <p>If you want a clickable summary that includes a priority flag, then use our Button summary component</p>
+      </div>
+
+      <section class="flex-group flex-start">
+        <aa-button
+          class="flex-stretch"
+          [buttonSummary]="true"
+          [showDescription]="true"
+          fieldClass=""
+          status="insignificant"
+          level="1"
+          title="Insignificant"
+          desc="Technical non-compliance. No warning received; no regulatory reporting required"
+        >
+        </aa-button>
+        <aa-button
+          class="flex-stretch"
+          [buttonSummary]="true"
+          [showDescription]="true"
+          fieldClass=""
+          status="minor"
+          level="2"
+          title="Minor"
+          desc="Minor breach of regulatory requirements; 
+          reports/involvement of authority. Attracts 
+          administrative fine"
+        >
+        </aa-button>
+        <aa-button
+          class="flex-stretch"
+          [buttonSummary]="true"
+          [showDescription]="true"
+          fieldClass=""
+          status="moderate"
+          level="3"
+          title="Moderate"
+          desc="Moderate breach of law; report/investigation by
+          authority. Attracts compensation/penalties/
+          enforcement action"
+        >
+        </aa-button>
+        <aa-button
+          class="flex-stretch"
+          [buttonSummary]="true"
+          [showDescription]="true"
+          fieldClass=""
+          status="high"
+          level="4"
+          title="High"
+          desc="High breach of the law; may attract criminal
+          prosecution, penalties/enforcement action.
+          Individual license temporarily revoked"
+        >
+        </aa-button>
+        <aa-button
+          class="flex-stretch"
+          [buttonSummary]="true"
+          [showDescription]="true"
+          fieldClass=""
+          status="major"
+          level="5"
+          title="Major"
+          desc="Significant breach of the law. Individual or
+          company law suits; permit to operate
+          substantially modified or withdrawn"
+        >
+        </aa-button>
+      </section>
+
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[buttonSummary]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">stretch</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[buttonDescription]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">status</td>
+            <td datalabel="Type">string</td>
+            <td datalabel="Default">insignificant, minor, moderate, high or major</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">level</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your number</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">title</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">desc</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your description</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=true">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
 </section>
 
-<aa-blade 
-  [showModal]="false"
-  [toggleBlade]="toggleBlade"
-  suppressAutoClose="false"
-  topPosition="3.5"
-  zIndex="2"
-  bladeSize="one-column-width"
-  bladeHeading="Gist"
-  [enableIcon]="true"
-  iconName="table_rows"
-  (close)="toggleBlade = false"
-  >
+<aa-blade [showModal]="false" [toggleBlade]="toggleBlade" suppressAutoClose="false" topPosition="3.5" zIndex="2"
+  bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
+  (close)="toggleBlade = false">
   <article class="blade-content">
     <div *ngIf="customButton">
-      <app-gist src="angloux/5b70cd0840d5c0bd769ea6779c15b941"></app-gist>
       <a href="https://gist.github.com/angloux/5b70cd0840d5c0bd769ea6779c15b941" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/5b70cd0840d5c0bd769ea6779c15b941"></app-gist>
     </div>
     <div *ngIf="iconButtons">
-      <app-gist src="angloux/39c18050b054e45ee13058f134127528"></app-gist>
       <a href="https://gist.github.com/angloux/39c18050b054e45ee13058f134127528" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/39c18050b054e45ee13058f134127528"></app-gist>
     </div>
     <div *ngIf="standardButtons">
-      <app-gist src="angloux/c53c6e952f975b5c51dc58892970a25f"></app-gist>
       <a href="https://gist.github.com/angloux/c53c6e952f975b5c51dc58892970a25f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/c53c6e952f975b5c51dc58892970a25f"></app-gist>
     </div>
     <div *ngIf="buttonEnriched">
-      <app-gist src="angloux/3df7bd5d8164eedb7b51c9e4ed45f925"></app-gist>
       <a href="https://gist.github.com/angloux/3df7bd5d8164eedb7b51c9e4ed45f925" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/3df7bd5d8164eedb7b51c9e4ed45f925"></app-gist>
     </div>
     <div *ngIf="buttonSplit">
-      <app-gist src="angloux/013a7951b2bc64de155b2fd02763542d"></app-gist>
       <a href="https://gist.github.com/angloux/013a7951b2bc64de155b2fd02763542d" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/013a7951b2bc64de155b2fd02763542d"></app-gist>
+    </div>
+    <div *ngIf="buttonSummary">
+      <a href="https://gist.github.com/angloux/42bc778ad5f8ff285309173d52135dc8" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/42bc778ad5f8ff285309173d52135dc8"></app-gist>
     </div>
   </article>
 </aa-blade>

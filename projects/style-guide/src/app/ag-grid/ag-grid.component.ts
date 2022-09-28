@@ -83,6 +83,7 @@ export class AgGridComponent {
       width: 110,
       tooltipField: "sport",
       tooltipComponent: "CustomTooltipComponent",
+      cellClass: "cell-marker-orange"
     },
     {
       field: "gold",
@@ -98,7 +99,7 @@ export class AgGridComponent {
     },
     {
       field: "total",
-      width: 100,
+      width: 100
     },
     {
       field: "next",

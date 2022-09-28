@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 export declare class TooltipComponent implements OnInit {
     setMinWidth: number;
+    setMaxWidth: number;
     isSuccess: boolean;
     isInfo: boolean;
     isWarning: boolean;

@@ -3,8 +3,8 @@
     <button class="accordion-fancy-trigger box flex-group flex-align-center space-between" (click)="showBody=!showBody"
         [attr.aria-expanded.true]="showBody" aria-controls="accordionId" type="button">
         <div class="flex-align-center">
-          <div *ngIf="materialIcons" class="material-icons width-3 margin-right-0-5 {{iconColour}}">{{iconName}}</div>
-          <div *ngIf="!materialIcons" class="width-3 {{iconName}}"></div>
+          <div *ngIf="materialIcons" class="material-icons {{iconColour}}">{{iconName}}</div>
+          <div *ngIf="!materialIcons" class="font-awesome-icons {{iconName}} {{iconColour}}"></div>
           <span>{{itemTitle}}</span>
         </div>
         <div class="aa-toggle flex-align-center">

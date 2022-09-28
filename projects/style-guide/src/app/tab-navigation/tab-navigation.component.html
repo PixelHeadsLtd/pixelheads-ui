@@ -35,7 +35,7 @@
           </ng-template>
         </aa-tab-navigation-item>
         <!-- Tab 4 -->
-        <aa-tab-navigation-item tabName="Tab 4" [tabDisabled]="false" [enableIcons]="false" [enableCount]="true" tabCount="200">
+        <aa-tab-navigation-item tabName="Tab 4" [tabDisabled]="false" [enableIcons]="true" iconName="check_circle" iconColour="aa-red-100" [enableCount]="true" countColour="bg-aa-red-100" tabCount="200">
           <ng-template aaTabNavigationContent>
             <h2 class="boxed">Tab four content</h2>
             <p>This is Tab 4 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
@@ -119,6 +119,12 @@
             <td datalabel="Attribute">enableCount</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation-item</td>
+            <td datalabel="Attribute">countColour</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default"><a routerLink="/colours">Your colour</a></td>
           </tr>
           <tr>
             <td datalabel="Element">aa-tab-navigation-item</td>

@@ -3,6 +3,11 @@
     flex: none;
   }
 
+  // see actions-summary example
+  &.flex-strip-margins > * {
+    margin-right: 0;
+  }
+
   &.flex-start {
     justify-content: flex-start;
 
@@ -57,9 +62,22 @@
   }
 }
 
-.flex-align-end {
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-stretch {
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-none {
+  flex: none!important;
 }
 
 @media screen and (min-width: _breakpoint(breakpoint-320)) {
@@ -72,6 +90,9 @@
       > * {
         flex: none;
         margin-right: .75rem;
+        &:last-child {
+          margin-right: .75rem;
+        }
       }
     }
 
@@ -173,25 +194,3 @@
   }
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-stretch {
-  display: flex;
-  align-items: stretch;
-}
-
-.flex-align-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-align-end {
-  display: flex;
-  align-items: flex-end;
-}
-
-.flex-none {
-  flex: none!important;
-}

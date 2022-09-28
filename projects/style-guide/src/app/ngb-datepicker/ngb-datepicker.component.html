@@ -4,22 +4,230 @@
 <section class="content-container">
   <div class="flex-group flex-column">
     <div class="describe margin-bottom-1 max-width-40">
-      <p>For date-pickers, use the 
-        <a href="https://ng-bootstrap.github.io/#/components/datepicker/examples" target="_blank">NGB datepicker</a> 
-        along with our markup which is styled specifically to match our branding. <strong class="aa-red-100">The date-picker placeholder
-          format should be dd-mon-yyyy and the rendered date format that then appears in the UI should be unhyphenated and capitalized, for
+      <p>For date-pickers, use the
+        <a href="https://ng-bootstrap.github.io/#/components/datepicker/examples" target="_blank">NGB datepicker</a>
+        along with our markup which is styled specifically to match our branding. <strong class="aa-red-100">The
+          date-picker placeholder
+          format should be dd-mon-yyyy and the rendered date format that then appears in the UI should be unhyphenated
+          and capitalized, for
           example 01 Jan 2021
-        </strong></p>
+        </strong>
+      </p>
     </div>
     <div class="flex-group max-width-40">
-      <div class="field">
-        <label for="text-input-2">Date</label>
+      <div class="field position-relative">
+        <label for="text-input-2">Date (For demonstration purposes only)</label>
         <div class="date-picker">
           <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" />
-          <button class="material-icons">date_range</button>
+          <button (click)="showPopup=!showPopup" class="material-icons">date_range</button>
         </div>
+
+        <!--FOR DEMONSTRATION ONLY-->
+        <section *ngIf="showPopup" class="dropdown-menu show ngb-datepicker position-absolute top-2-25" data-popper-placement="bottom-start"
+        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);">
+        <div class="ngb-dp-header">
+          <section class="ngb-datepicker-navigation">
+            <div class="ngb-dp-arrow"><button type="button" aria-label="Previous month" title="Previous month"
+                class="btn btn-link ngb-dp-arrow-btn"><span class="ngb-dp-navigation-chevron"></span></button></div>
+            <section class="ngb-dp-navigation-select"><select aria-label="Select month" title="Select month"
+                class="form-select">
+                <option value="1" aria-label="January">Jan</option>
+                <option value="2" aria-label="February">Feb</option>
+                <option value="3" aria-label="March">Mar</option>
+                <option value="4" aria-label="April">Apr</option>
+                <option value="5" aria-label="May">May</option>
+                <option value="6" aria-label="June">Jun</option>
+                <option value="7" aria-label="July">Jul</option>
+                <option value="8" aria-label="August">Aug</option>
+                <option value="9" aria-label="September">Sep</option>
+                <option value="10" aria-label="October">Oct</option>
+                <option value="11" aria-label="November">Nov</option>
+                <option value="12" aria-label="December">Dec</option>
+              </select><select aria-label="Select year" title="Select year" class="form-select">
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+              </select>
+            </section>
+            <div class="ngb-dp-arrow right"><button type="button" aria-label="Next month" title="Next month"
+                class="btn btn-link ngb-dp-arrow-btn"><span class="ngb-dp-navigation-chevron"></span></button></div>
+            </section>
+        </div>
+        <div class="ngb-dp-content ngb-dp-months">
+          <div class="ngb-dp-month">
+            <section role="grid" class="ngb-datepicker-month">
+              <div role="row" class="ngb-dp-week ngb-dp-weekdays">
+                <div role="columnheader" class="ngb-dp-weekday small">Mo</div>
+                <div role="columnheader" class="ngb-dp-weekday small">Tu</div>
+                <div role="columnheader" class="ngb-dp-weekday small">We</div>
+                <div role="columnheader" class="ngb-dp-weekday small">Th</div>
+                <div role="columnheader" class="ngb-dp-weekday small">Fr</div>
+                <div role="columnheader" class="ngb-dp-weekday small">Sa</div>
+                <div role="columnheader" class="ngb-dp-weekday small">Su</div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, August 29, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">29</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, August 30, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">30</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, August 31, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">31</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Thursday, September 1, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">1</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, September 2, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">2</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, September 3, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">3</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, September 4, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">4</div>
+                </div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, September 5, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">5</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, September 6, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">6</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, September 7, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">7</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Thursday, September 8, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">8</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, September 9, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">9</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, September 10, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">10</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, September 11, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">11</div>
+                </div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, September 12, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">12</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, September 13, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">13</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, September 14, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">14</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day ngb-dp-today" tabindex="0" aria-label="Thursday, September 15, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">15</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, September 16, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">16</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, September 17, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">17</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, September 18, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">18</div>
+                </div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, September 19, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">19</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, September 20, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">20</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, September 21, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">21</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Thursday, September 22, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">22</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, September 23, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">23</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, September 24, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">24</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, September 25, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">25</div>
+                </div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, September 26, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">26</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, September 27, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">27</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, September 28, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">28</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Thursday, September 29, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">29</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, September 30, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light">30</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, October 1, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">1</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, October 2, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">2</div>
+                </div>
+              </div>
+              <div role="row" class="ngb-dp-week">
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Monday, October 3, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">3</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Tuesday, October 4, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">4</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Wednesday, October 5, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">5</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Thursday, October 6, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">6</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Friday, October 7, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">7</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Saturday, October 8, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">8</div>
+                </div>
+                <div role="gridcell" class="ngb-dp-day" tabindex="-1" aria-label="Sunday, October 9, 2022">
+                  <div ngbdatepickerdayview="" class="btn-light text-muted outside">9</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        </section>
+        <!--END - FOR DEMONSTRATION ONLY-->
       </div>
-      
+
       <div class="field">
         <label for="text-input-2">Date readonly</label>
         <div class="date-picker">

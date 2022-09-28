@@ -24,7 +24,7 @@
       }">{{iconName}}</div>
       
     
-    <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width': setMinWidth+'rem'}">
+    <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width': setMinWidth+'rem', 'max-width': setMaxWidth+'rem'}">
         <ng-content></ng-content>
     </div>
   </div>

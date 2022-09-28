@@ -1,5 +1,9 @@
-<div *ngIf="!buttonEnriched && !buttonSplit" class="field {{fieldClass}}">
-  <label [for]="buttonId">{{buttonLabel}}</label>
+<div 
+  *ngIf="!buttonEnriched && !buttonSplit &&!buttonSummary" 
+  class="field {{fieldClass}}"
+  [class.button-large]="buttonLarge"
+>
+  <label *ngIf="!buttonLarge" [for]="buttonId">{{buttonLabel}}</label>
   <button 
     [type]="buttonType" 
     [name]="buttonId" 
@@ -48,4 +52,18 @@
       <ng-content select="[bs-buttons]"></ng-content>
     </nav>
   </div>
+</div>
+
+<div *ngIf="buttonSummary" class="field {{fieldClass}} flex-stretch">
+  <button
+    class="{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5"
+  >
+    <div class="flex-group flex-start flex-align-center">
+      <h1 class="priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid">{{level}}</h1>
+      <h2 class="margin-0">{{title}}</h2>
+    </div>
+    <p *ngIf="showDescription" class="margin-top-1">
+      {{desc}}
+    </p>
+  </button>
 </div>

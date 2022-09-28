@@ -5,14 +5,15 @@
   align-items: center;
   margin-bottom: .5rem;
   min-height: 1.6rem;
-  padding-left: .75rem;
+  padding: 0 .75rem;
+  width: max-content;
   .material-icons,
   .material-icons-outlined {
     font-size: _font(size-regular);
     margin: 0 .25rem 0 0;
   }
   span {
-    padding-right: .75rem;
+    padding-right: .25rem;
   }
   .anchor-close {
     padding: .25rem 1rem .5rem 0;
@@ -22,7 +23,7 @@
     }
     &:after {
       top: 0;
-      right: .75rem;
+      right: 0;
     }
   }
   button {

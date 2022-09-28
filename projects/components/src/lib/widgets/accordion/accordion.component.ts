@@ -20,6 +20,7 @@ export class AccordionComponent implements OnInit {
   @Input() fontAwesome: boolean;
   @Input() fontClassName: string;
   @Input() iconBgColor: string;
+  @Input() customBgColor: string;
   @Output() open = new EventEmitter<void>();
 
   onOpen(e: { stopPropagation: () => void; }) {

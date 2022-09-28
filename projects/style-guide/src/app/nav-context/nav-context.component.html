@@ -24,10 +24,10 @@
           bottomPos="">          
           <li *ngFor="let item of navContextDataItems; let i = index" [class.selected]="selectedIndex === i" class="flex-group space-between">
               <a (click)="setIndex(i)" class="flex-group flex-start flex-2 flex-align-center">
-                  <div><span class="material-icons aa-white-100 {{item.color}}">{{item.iconName}}</span></div>
+                  <span class="material-icons aa-white-100 {{item.color}}">{{item.iconName}}</span>
                   <span>{{item.title}}</span>
               </a>
-              <aa-context-menu class="padding-right-0-75" minWidth="7.5" [absolutePosition]="true" topPos=".5">
+              <aa-context-menu class="padding-right-0-75" minWidth="7.5" [absolutePosition]="true" topPos=".6">
                   <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>

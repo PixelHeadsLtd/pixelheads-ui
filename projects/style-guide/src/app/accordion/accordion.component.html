@@ -68,6 +68,57 @@
         <div header-custom><div class="alert-shield small info">Custom content</div></div>
         <p>Add accordion content in here</p>
       </aa-accordion>
+
+      <aa-accordion
+        (open)="showBodyCustom=true"
+        [dragable]="false"
+        [showBody]="showBodyTwo"
+        customBgColor="bg-aa-red-100"
+        accordionHeading="Using a custom bg class (see inside)"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconName="extension"
+      >
+        <h3 class="boxed">There are currently 11 available custom colours</h3>
+        <div class="editorial-content">
+          <ol>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-70</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-60</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-red-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-light-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-grey-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-green-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-orange-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-burgundy-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-plum-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-sky-100</a>
+            </li>
+          </ol>
+        </div>
+      </aa-accordion>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -109,6 +160,12 @@
             <td datalabel="Default">
               <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Your Material icon</a>
             </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">customBgColor</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Expand the left "red" accordion for details</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>

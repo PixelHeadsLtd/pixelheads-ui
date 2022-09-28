@@ -223,11 +223,6 @@
                 font-size: _font(size-medium);
                 padding-left: .6rem;
                 margin-right: 1.15rem;
-                &.rotate {
-                  transform: rotate(180deg);
-                  padding-left: 0;
-                  margin-left: .6rem;
-                }
               }
               &:not(.material-icons, .material-icons-outlined) {
                 margin-left: 3rem;

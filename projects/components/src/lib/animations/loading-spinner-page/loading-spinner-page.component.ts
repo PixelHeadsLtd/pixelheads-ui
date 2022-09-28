@@ -9,6 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class LoadingSpinnerPageComponent implements OnInit {
 
   @Input() loadingMessage: string;
+  @Input() zIndex: number;
 
   constructor() { }
 

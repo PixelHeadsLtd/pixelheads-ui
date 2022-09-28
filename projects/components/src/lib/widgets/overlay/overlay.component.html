@@ -8,7 +8,7 @@
     'bottom' : bottomPos,
     'left' : leftPos
   }">
-  <div class="aa-overlay-container">
+  <div class="aa-overlay-container" [ngStyle]="{'min-width' : minWidth}">
     <ng-content select="[overlay-header]"></ng-content>
     <ng-content select="[overlay-content]"></ng-content>
   </div>

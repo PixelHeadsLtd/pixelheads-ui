@@ -1,0 +1,12 @@
+<div *ngIf="!showTooltip" class="alert-shield {{alertShieldStatus}}" [class.small]="alertShieldSmall">{{alertShieldText}}</div>
+
+<div *ngIf="showTooltip" class="alert-shield-tooltip-wrapper">
+    <div 
+        class="alert-shield-tooltip {{alertShieldStatus}}"
+        [ngStyle]="{'min-width' : minWidth}"
+    >
+        <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
+        <ng-content select="[tooltip-content]"></ng-content>
+    </div>
+    <div class="alert-shield {{alertShieldStatus}}" [class.small]="alertShieldSmall">{{alertShieldText}}</div>
+</div>

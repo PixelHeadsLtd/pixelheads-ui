@@ -151,14 +151,15 @@
     LoadingSpinnerPageComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-loading-spinner-page',
-                    template: "<section class=\"loading-spinner-page\">\r\n  <div class=\"foreground\">\r\n    <div class=\"loading-spinner-small\"></div>\r\n    <div class=\"margin-top-1 italic grey-50\">{{loadingMessage}}</div>\r\n  </div>\r\n  <div class=\"background\"></div>\r\n</section>\r\n",
+                    template: "<section class=\"loading-spinner-page\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n  <div class=\"foreground\">\r\n    <div class=\"loading-spinner-small\"></div>\r\n    <div class=\"margin-top-1 italic grey-50\">{{loadingMessage}}</div>\r\n  </div>\r\n  <div class=\"background\"></div>\r\n</section>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
     ];
     LoadingSpinnerPageComponent.ctorParameters = function () { return []; };
     LoadingSpinnerPageComponent.propDecorators = {
-        loadingMessage: [{ type: i0.Input }]
+        loadingMessage: [{ type: i0.Input }],
+        zIndex: [{ type: i0.Input }]
     };
 
     var AnimationsModule = /** @class */ (function () {
@@ -205,7 +206,7 @@
     ButtonComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-button',
-                    template: "<div *ngIf=\"!buttonEnriched && !buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n  >\r\n    <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n    <span>{{buttonText}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\">\r\n    <button\r\n      (click)=\"showBtnMenu=!showBtnMenu\" \r\n      [class]=\"buttonClass\"\r\n      [type]=\"buttonType\" \r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\"\r\n     >\r\n      {{buttonText}}\r\n    </button>\r\n    <nav (click)=\"showBtnMenu=false\" *ngIf=\"showBtnMenu\" class=\"box-shadow-strong\">\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n",
+                    template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label *ngIf=\"!buttonLarge\" [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n  >\r\n    <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n    <span>{{buttonText}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\">\r\n    <button\r\n      (click)=\"showBtnMenu=!showBtnMenu\" \r\n      [class]=\"buttonClass\"\r\n      [type]=\"buttonType\" \r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\"\r\n     >\r\n      {{buttonText}}\r\n    </button>\r\n    <nav (click)=\"showBtnMenu=false\" *ngIf=\"showBtnMenu\" class=\"box-shadow-strong\">\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
@@ -228,6 +229,12 @@
         iconName: [{ type: i0.Input }],
         title: [{ type: i0.Input }],
         iconColour: [{ type: i0.Input }],
+        buttonLarge: [{ type: i0.Input }],
+        buttonSummary: [{ type: i0.Input }],
+        showDescription: [{ type: i0.Input }],
+        status: [{ type: i0.Input }],
+        level: [{ type: i0.Input }],
+        desc: [{ type: i0.Input }],
         buttonClick: [{ type: i0.Output }],
         onClick: [{ type: i0.HostListener, args: ['document:click', ['$event.target'],] }]
     };
@@ -481,7 +488,7 @@
     FileUploadComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-file-upload',
-                    template: "<div class=\"field {{fieldClass}}\">\r\n  <label for=\"{{fileUploadId}}\">{{fileUploadLabel}}</label>\r\n  <div class=\"flex-group flex-start\">\r\n    <div class=\"file-upload\">\r\n      <input name=\"file-upload\" type=\"file\" id=\"{{fileUploadId}}\" accept=\"{{fileUploadExtentions}}\" value=\"{{fileUploadValue}}\">\r\n      <div class=\"file-upload-graphic\">\r\n        <div>{{fileUploadText}}</div>\r\n      </div>\r\n    </div>\r\n    <div class=\"file-upload-name margin-top-0-5\">{{ fileUploadName }}</div>\r\n  </div>\r\n</div>\r\n",
+                    template: "<div class=\"field {{fieldClass}}\">\r\n  <label for=\"{{fileUploadId}}\">{{fileUploadLabel}}</label>\r\n  <div class=\"flex-group flex-start\">\r\n    <div class=\"file-upload\">\r\n      <input name=\"file-upload\" type=\"file\" id=\"{{fileUploadId}}\" accept=\"{{fileUploadExtentions}}\" value=\"{{fileUploadValue}}\">\r\n      <div class=\"file-upload-graphic\">\r\n        <div>{{fileUploadText}}</div>\r\n      </div>\r\n    </div>\r\n    <div *ngIf=\"fileUploadName\" class=\"file-upload-name margin-top-0-5 italic\">{{ fileUploadName }}</div>\r\n  </div>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -812,6 +819,31 @@
         zIndex: [{ type: i0.Input }]
     };
 
+    var UiBlockComponent = /** @class */ (function () {
+        function UiBlockComponent() {
+        }
+        UiBlockComponent.prototype.ngOnInit = function () {
+        };
+        return UiBlockComponent;
+    }());
+    UiBlockComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-ui-block',
+                    template: "<article \n    *ngIf=\"showUiBlock\" \n    class=\"aa-ui-block flex-group flex-center\"\n    [ngStyle]=\"{\n        'top' : topPos+'rem',\n        'bottom' : bottomPos+'rem'\n    }\"\n>\n    <h1\n        [ngStyle]=\"{\n            'font-size' : fontSize+'rem',\n            'text-transform' : allCaps&&'uppercase'\n        }\"\n    >\n        {{message}}\n    </h1>\n    <div class=\"background\"></div>\n</article>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: [""]
+                },] }
+    ];
+    UiBlockComponent.propDecorators = {
+        showUiBlock: [{ type: i0.Input }],
+        topPos: [{ type: i0.Input }],
+        bottomPos: [{ type: i0.Input }],
+        fontSize: [{ type: i0.Input }],
+        allCaps: [{ type: i0.Input }],
+        message: [{ type: i0.Input }],
+        zIndex: [{ type: i0.Input }]
+    };
+
     var LayoutModule = /** @class */ (function () {
         function LayoutModule() {
         }
@@ -826,6 +858,7 @@
                         BladeBottomComponent,
                         BladeTopComponent,
                         ProjectTourComponent,
+                        UiBlockComponent
                     ],
                     imports: [common.CommonModule, router.RouterModule],
                     exports: [
@@ -835,6 +868,7 @@
                         BladeBottomComponent,
                         BladeTopComponent,
                         ProjectTourComponent,
+                        UiBlockComponent
                     ],
                 },] }
     ];
@@ -862,7 +896,7 @@
     ContextMenuComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-context-menu',
-                    template: "<nav \r\n  class=\"context-menu flex-group width-control\" \r\n  [ngStyle]=\"{\r\n    'top' : topPos+'rem', \r\n    'left' : leftPos+'rem', \r\n    'right' : rightPos+'rem'\r\n  }\" \r\n  [ngClass]=\"{\r\n    'position-absolute' : absolutePosition\r\n  }\"\r\n  >\r\n  <div>\r\n    <button \r\n      (click)=\"showContextMenu=!showContextMenu\" \r\n      class=\"material-icons\">\r\n      more_vert\r\n    </button>\r\n  </div>\r\n  <ul \r\n    *ngIf=\"showContextMenu\" \r\n    class=\"strip-bullets\" \r\n    [ngClass]=\"{'show-on-left' : showOnLeft}\"\r\n    [ngStyle]=\"{'min-width' : minWidth+'rem'}\"\r\n  >\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>",
+                    template: "<nav \r\n  class=\"context-menu flex-group width-control\" \r\n  [ngStyle]=\"{\r\n    'top' : topPos+'rem', \r\n    'left' : leftPos+'rem', \r\n    'right' : rightPos+'rem'\r\n  }\" \r\n  [ngClass]=\"{\r\n    'position-absolute' : absolutePosition\r\n  }\"\r\n  >\r\n  <div class=\"margin-right-0\">\r\n    <button \r\n      (click)=\"showContextMenu=!showContextMenu\" \r\n      class=\"material-icons\">\r\n      more_vert\r\n    </button>\r\n  </div>\r\n  <ul \r\n    *ngIf=\"showContextMenu\" \r\n    class=\"strip-bullets\" \r\n    [ngClass]=\"{'show-on-left' : showOnLeft}\"\r\n    [ngStyle]=\"{'min-width' : minWidth+'rem'}\"\r\n  >\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1080,6 +1114,7 @@
         iconColour: [{ type: i0.Input }],
         enableCount: [{ type: i0.Input }],
         tabCount: [{ type: i0.Input }],
+        countColour: [{ type: i0.Input }],
         tabRoute: [{ type: i0.Input }],
         tabDisabled: [{ type: i0.Input }],
         showRightDivider: [{ type: i0.Input }],
@@ -1135,7 +1170,7 @@
     TabNavigationComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tab-navigation',
-                    template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n        <a *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" [class.active]=\"isActive(tab)\" (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count\">{{tab.tabCount}}</span>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count\">{{tab.tabCount}}</span>\r\n        </span>\r\n      </li>\r\n      <li *ngIf=\"tab.showRightDivider\" class=\"divider-tab\"></li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- INFO-PANEL NG-TEMPLATE -->\r\n<div *ngIf=\"tabInfo\">\r\n  <nav class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n    <div class=\"float-right flex-group\">\r\n      <div class=\"flex-align-center\">\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">close_fullscreen</button>\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">open_in_full</button>\r\n      </div>\r\n    </div>\r\n    <ul class=\"flex-group flex-center\">\r\n      <ng-container *ngFor=\"let tab of contentTabs\">\r\n        <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n          <a class=\"{{tab.activeColor}}\" title=\"{{ tab.tabName }}\" *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" (click)=\"onTabClicked(tab)\" [ngClass]=\"{'active': isActive(tab)}\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </a>\r\n          <span title=\"{{ tab.tabName }}\" *ngIf=\"tab.tabDisabled\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </span>\r\n        </li>\r\n      </ng-container>\r\n    </ul>\r\n  </nav>\r\n  \r\n  <ng-container *ngIf=\"displayTabContent && currentTab\">\r\n    <ng-template *ngTemplateOutlet=\"currentTab.templateRef\"></ng-template>\r\n  </ng-container>\r\n</div>\r\n\r\n<!-- INFO PANEL ROUTER-OUTLET -->\r\n<nav *ngIf=\"tabInfoRouterOutlet\" class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n  <div class=\"float-right flex-group\">\r\n    <div class=\"flex-align-center\">\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"material-icons\">close_fullscreen</button>\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"material-icons\">open_in_full</button>\r\n    </div>\r\n  </div>\r\n  <ul class=\"flex-group flex-center\">\r\n    <ng-content select=\"[tabs]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n",
+                    template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n        <a *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" [class.active]=\"isActive(tab)\" (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n        </span>\r\n      </li>\r\n      <li *ngIf=\"tab.showRightDivider\" class=\"divider-tab\"></li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- INFO-PANEL NG-TEMPLATE -->\r\n<div *ngIf=\"tabInfo\">\r\n  <nav class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n    <div class=\"float-right flex-group\">\r\n      <div class=\"flex-align-center\">\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">close_fullscreen</button>\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">open_in_full</button>\r\n      </div>\r\n    </div>\r\n    <ul class=\"flex-group flex-center\">\r\n      <ng-container *ngFor=\"let tab of contentTabs\">\r\n        <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n          <a class=\"{{tab.activeColor}}\" title=\"{{ tab.tabName }}\" *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" (click)=\"onTabClicked(tab)\" [ngClass]=\"{'active': isActive(tab)}\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </a>\r\n          <span title=\"{{ tab.tabName }}\" *ngIf=\"tab.tabDisabled\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </span>\r\n        </li>\r\n      </ng-container>\r\n    </ul>\r\n  </nav>\r\n  \r\n  <ng-container *ngIf=\"displayTabContent && currentTab\">\r\n    <ng-template *ngTemplateOutlet=\"currentTab.templateRef\"></ng-template>\r\n  </ng-container>\r\n</div>\r\n\r\n<!-- INFO PANEL ROUTER-OUTLET -->\r\n<nav *ngIf=\"tabInfoRouterOutlet\" class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n  <div class=\"float-right flex-group\">\r\n    <div class=\"flex-align-center\">\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"material-icons\">close_fullscreen</button>\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"material-icons\">open_in_full</button>\r\n    </div>\r\n  </div>\r\n  <ul class=\"flex-group flex-center\">\r\n    <ng-content select=\"[tabs]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n",
                     styles: [""]
                 },] }
     ];
@@ -1148,13 +1183,7 @@
         routerOutlet: [{ type: i0.Input }],
         ngTemplate: [{ type: i0.Input }],
         tabInfoRouterOutlet: [{ type: i0.Input }],
-        enableIcons: [{ type: i0.Input }],
-        enableCount: [{ type: i0.Input }],
-        tabCount: [{ type: i0.Input }],
-        iconName: [{ type: i0.Input }],
-        iconColour: [{ type: i0.Input }],
         toggleFullscreen: [{ type: i0.Input }],
-        activeColor: [{ type: i0.Input }],
         standardTabs: [{ type: i0.Input }],
         tabClicked: [{ type: i0.Output }],
         tabChanged: [{ type: i0.Output }]
@@ -1265,6 +1294,32 @@
         alertText: [{ type: i0.Input }]
     };
 
+    var AlertShieldComponent = /** @class */ (function () {
+        function AlertShieldComponent() {
+        }
+        AlertShieldComponent.prototype.ngOnInit = function () {
+        };
+        return AlertShieldComponent;
+    }());
+    AlertShieldComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-alert-shield',
+                    template: "<div *ngIf=\"!showTooltip\" class=\"alert-shield {{alertShieldStatus}}\" [class.small]=\"alertShieldSmall\">{{alertShieldText}}</div>\n\n<div *ngIf=\"showTooltip\" class=\"alert-shield-tooltip-wrapper\">\n    <div \n        class=\"alert-shield-tooltip {{alertShieldStatus}}\"\n        [ngStyle]=\"{'min-width' : minWidth}\"\n    >\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\n        <ng-content select=\"[tooltip-content]\"></ng-content>\n    </div>\n    <div class=\"alert-shield {{alertShieldStatus}}\" [class.small]=\"alertShieldSmall\">{{alertShieldText}}</div>\n</div>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: [""]
+                },] }
+    ];
+    AlertShieldComponent.ctorParameters = function () { return []; };
+    AlertShieldComponent.propDecorators = {
+        alertShieldStatus: [{ type: i0.Input }],
+        alertShieldText: [{ type: i0.Input }],
+        showTooltip: [{ type: i0.Input }],
+        showTooltipHeading: [{ type: i0.Input }],
+        tooltipHeading: [{ type: i0.Input }],
+        minWidth: [{ type: i0.Input }],
+        alertShieldSmall: [{ type: i0.Input }]
+    };
+
     var AnchorBackComponent = /** @class */ (function () {
         function AnchorBackComponent() {
         }
@@ -1339,6 +1394,29 @@
         tooltipMinWidth: [{ type: i0.Input }]
     };
 
+    var ActionsSummaryComponent = /** @class */ (function () {
+        function ActionsSummaryComponent() {
+        }
+        ActionsSummaryComponent.prototype.ngOnInit = function () {
+        };
+        return ActionsSummaryComponent;
+    }());
+    ActionsSummaryComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-actions-summary',
+                    template: "<section \n    [ngClass]=\"{'bd-right-2 bd-right-blue-15 bd-right-solid' : divider}\"\n    class=\"\n        flex-center \n        flex-group \n        flex-column \n        margin-0\n        margin-bottom-0-75 \n        padding-x-1\n    \"\n>\n    <strong class=\"nowrap aa-blue-100 margin-0\">{{title}}</strong>\n    <h4 class=\"\n        {{status}} \n        flex-center \n        bd-2 \n        bd-solid \n        border-radius-50 \n        width-2 \n        height-2 \n        margin-top-0-75\n        margin-right-0\"\n        >\n        {{value}}\n    </h4>\n</section>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: [""]
+                },] }
+    ];
+    ActionsSummaryComponent.ctorParameters = function () { return []; };
+    ActionsSummaryComponent.propDecorators = {
+        title: [{ type: i0.Input }],
+        value: [{ type: i0.Input }],
+        status: [{ type: i0.Input }],
+        divider: [{ type: i0.Input }]
+    };
+
     var PatternsModule = /** @class */ (function () {
         function PatternsModule() {
         }
@@ -1348,18 +1426,23 @@
         { type: i0.NgModule, args: [{
                     declarations: [
                         AlertComponent,
+                        AlertShieldComponent,
                         AnchorBackComponent,
                         ProgressBarComponent,
-                        ProgressCircleComponent
+                        ProgressCircleComponent,
+                        AlertShieldComponent,
+                        ActionsSummaryComponent
                     ],
                     imports: [
                         common.CommonModule
                     ],
                     exports: [
                         AlertComponent,
+                        AlertShieldComponent,
                         AnchorBackComponent,
                         ProgressBarComponent,
-                        ProgressCircleComponent
+                        ProgressCircleComponent,
+                        ActionsSummaryComponent
                     ]
                 },] }
     ];
@@ -1402,7 +1485,7 @@
     AccordionComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-accordion',
-                    template: "<article class=\"accordion-container\">\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-align-center\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <span class=\"flex-align-center\">\r\n            <span *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</span>\r\n            <span *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</span>\r\n            <span *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></span>\r\n            <span class=\"nested-icons\">\r\n              <span class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</span>\r\n              <span class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</span>\r\n            </span>\r\n            <span class=\"accordion-heading\">{{accordionHeading}}</span>\r\n        </span>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n          <div>\r\n            <div \r\n              class=\"toggle-chevrons\"\r\n              [class.icon-chevron-down]=\"!showBody\" \r\n              [class.icon-chevron-up]=\"showBody\"\r\n            >\r\n            </div>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" [id]=\"sectionId\" class=\"accordion-panel\" [ngClass]=\"{'clean': accordionClean}\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
+                    template: "<article class=\"accordion-container\">\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-align-center {{customBgColor}}\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <span class=\"flex-align-center\">\r\n            <span *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</span>\r\n            <span *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</span>\r\n            <span *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></span>\r\n            <span class=\"nested-icons\">\r\n              <span class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</span>\r\n              <span class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</span>\r\n            </span>\r\n            <span class=\"accordion-heading\">{{accordionHeading}}</span>\r\n        </span>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n          <div>\r\n            <div \r\n              class=\"toggle-chevrons\"\r\n              [class.icon-chevron-down]=\"!showBody\" \r\n              [class.icon-chevron-up]=\"showBody\"\r\n            >\r\n            </div>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" [id]=\"sectionId\" class=\"accordion-panel\" [ngClass]=\"{'clean': accordionClean}\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1421,6 +1504,7 @@
         fontAwesome: [{ type: i0.Input }],
         fontClassName: [{ type: i0.Input }],
         iconBgColor: [{ type: i0.Input }],
+        customBgColor: [{ type: i0.Input }],
         open: [{ type: i0.Output }]
     };
 
@@ -1434,7 +1518,7 @@
     AccordionFancyComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-accordion-fancy',
-                    template: "<section [id]=\"accordionId\">\r\n  <h3 class=\"margin-0\">\r\n    <button class=\"accordion-fancy-trigger box flex-group flex-align-center space-between\" (click)=\"showBody=!showBody\"\r\n        [attr.aria-expanded.true]=\"showBody\" aria-controls=\"accordionId\" type=\"button\">\r\n        <div class=\"flex-align-center\">\r\n          <div *ngIf=\"materialIcons\" class=\"material-icons width-3 margin-right-0-5 {{iconColour}}\">{{iconName}}</div>\r\n          <div *ngIf=\"!materialIcons\" class=\"width-3 {{iconName}}\"></div>\r\n          <span>{{itemTitle}}</span>\r\n        </div>\r\n        <div class=\"aa-toggle flex-align-center\">\r\n          <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n          <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" class=\"accordion-fancy-panel\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</section>\r\n",
+                    template: "<section [id]=\"accordionId\">\r\n  <h3 class=\"margin-0\">\r\n    <button class=\"accordion-fancy-trigger box flex-group flex-align-center space-between\" (click)=\"showBody=!showBody\"\r\n        [attr.aria-expanded.true]=\"showBody\" aria-controls=\"accordionId\" type=\"button\">\r\n        <div class=\"flex-align-center\">\r\n          <div *ngIf=\"materialIcons\" class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n          <div *ngIf=\"!materialIcons\" class=\"font-awesome-icons {{iconName}} {{iconColour}}\"></div>\r\n          <span>{{itemTitle}}</span>\r\n        </div>\r\n        <div class=\"aa-toggle flex-align-center\">\r\n          <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n          <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div *ngIf=\"showBody\" class=\"accordion-fancy-panel\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</section>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1464,7 +1548,7 @@
     CardComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-card',
-                    template: "<article \r\n  *ngIf=\"!cardOptional && !cardMini\" \r\n  class=\"aa-card flex-group width-control\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos+'rem',\r\n    'left' : leftPos+'rem',\r\n    'right' : rightPos+'rem'\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img alt=\"{{cardName}}\" onerror=\"this.style.display='none'\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <h3 title=\"{{cardName}}\">{{cardName}}</h3>\r\n    <p title=\"{{cardRole}}\">{{cardRole}}</p>\r\n    <div class=\"aa-toolbar\">\r\n      <ng-content select=\"[card-menu]\"></ng-content>\r\n    </div>\r\n  </div>\r\n</article>\r\n\r\n<article *ngIf=\"cardOptional && !cardMini\" class=\"aa-card-opt margin-bottom-0-75 box-shadow-light\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n    <div class=\"flex-group flex-end flex-align-center\">\r\n      <ng-content select=\"[card-menu-opt]\"></ng-content>\r\n    </div>\r\n    <div class=\"cursor-pointer\" (click)=\"onCardClick($event)\">\r\n      <div class=\"card-image fingerprint\" [ngStyle]=\"{'border' : '.35rem solid ' +themeColour, 'background-color' : themeColour}\">\r\n        <img alt=\"{{cardName}}\" onerror=\"this.style.display='none'\" [src]=\"imgPath\">\r\n      </div>\r\n      <h3 title=\"{{cardName}}\" [ngStyle]=\"{'color' : themeColour }\">{{ (cardName.length>14)? (cardName | slice:0:14)+'...':(cardName) }}</h3>\r\n      <p title=\"{{cardRole}}\">{{ (cardRole.length>37)? (cardRole | slice:0:37)+'...':(cardRole) }}</p>\r\n    </div>\r\n</article>\r\n\r\n<button *ngIf=\"cardMini && !cardOptional\" class=\"card-mini flex-align-center flex-start {{borderClass}}\">\r\n  <div *ngIf=\"showAsIcon\" class=\"material-icons\">{{iconName}}</div>\r\n  <div *ngIf=\"showAsProfile\" class=\"card-image fingerprint\">\r\n    <ng-content select=\"[profile-image]\"></ng-content>\r\n  </div>\r\n  <div>\r\n    <h5>{{title}}</h5>\r\n    <ng-content select=\"[content]\"></ng-content>\r\n  </div>\r\n</button>\r\n",
+                    template: "<article \r\n  *ngIf=\"!cardOptional && !cardMini\" \r\n  class=\"aa-card flex-group width-control\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos+'rem',\r\n    'left' : leftPos+'rem',\r\n    'right' : rightPos+'rem'\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img alt=\"{{cardName}}\" onerror=\"this.style.display='none'\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <h3 title=\"{{cardName}}\">{{cardName}}</h3>\r\n    <p title=\"{{cardRole}}\">{{cardRole}}</p>\r\n    <div class=\"aa-toolbar\">\r\n      <ng-content select=\"[card-menu]\"></ng-content>\r\n    </div>\r\n  </div>\r\n</article>\r\n\r\n<article \r\n  *ngIf=\"cardOptional && !cardMini\" \r\n  class=\"aa-card-opt margin-bottom-0-75 box-shadow-light\" \r\n  [ngStyle]=\"{'z-index' : zIndex}\"\r\n>\r\n    <div class=\"flex-group flex-end flex-align-center\">\r\n      <ng-content select=\"[card-menu-opt]\"></ng-content>\r\n    </div>\r\n    <div class=\"cursor-pointer\" (click)=\"onCardClick($event)\">\r\n      <div class=\"card-image fingerprint\" [ngStyle]=\"{'border' : '.35rem solid ' +themeColour, 'background-color' : themeColour}\">\r\n        <img alt=\"{{cardName}}\" onerror=\"this.style.display='none'\" [src]=\"imgPath\">\r\n      </div>\r\n      <h3 title=\"{{cardName}}\" [ngStyle]=\"{'color' : themeColour }\">{{ (cardName.length>14)? (cardName | slice:0:14)+'...':(cardName) }}</h3>\r\n      <p title=\"{{cardRole}}\">{{ (cardRole.length>37)? (cardRole | slice:0:37)+'...':(cardRole) }}</p>\r\n    </div>\r\n</article>\r\n\r\n<button \r\n  *ngIf=\"cardMini && !cardOptional\" \r\n  class=\"card-mini flex-align-center flex-start {{borderClass}}\"\r\n  (click)=\"onCardClick($event)\"\r\n>\r\n  <div *ngIf=\"showAsIcon\" class=\"material-icons\">{{iconName}}</div>\r\n  <div *ngIf=\"showAsProfile\" class=\"card-image fingerprint\">\r\n    <ng-content select=\"[profile-image]\"></ng-content>\r\n  </div>\r\n  <div>\r\n    <h5>{{title}}</h5>\r\n    <ng-content select=\"[content]\"></ng-content>\r\n  </div>\r\n</button>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1784,7 +1868,7 @@
     ModalComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-modal',
-                    template: "<article class=\"aa-modal\">\r\n  <div \r\n    class=\"aa-modal-container\" \r\n    [ngClass]=\"{'green':green, 'orange':orange, 'red':red, 'blue':blue}\"\r\n    [ngStyle]=\"{\r\n      'top' : topPos,\r\n      'right' : rightPos,\r\n      'left' : leftPos,\r\n      'min-width' : minWidth,\r\n      'max-width' : maxWidth,\r\n      'z-index' : zIndex\r\n    }\"\r\n  >\r\n    <section *ngIf=\"!hideHeader\" class=\"aa-modal-header\">\r\n      <h2 class=\"boxed align-center\">{{heading}}</h2>\r\n    </section>\r\n    <section class=\"aa-modal-content\">\r\n      {{message}}\r\n      <ng-content select=\"[content-custom]\"></ng-content>\r\n    </section>\r\n    <section class=\"aa-modal-footer flex-group flex-center\">\r\n        <ng-content></ng-content>\r\n    </section>\r\n  </div>\r\n</article>\r\n",
+                    template: "<article class=\"aa-modal\">\r\n  <div \r\n    class=\"aa-modal-container\" \r\n    [ngClass]=\"{'aa-green' : green, 'aa-orange' : orange, 'aa-red' : red, 'aa-blue' : blue}\"\r\n    [ngStyle]=\"{\r\n      'top' : topPos,\r\n      'right' : rightPos,\r\n      'left' : leftPos,\r\n      'min-width' : minWidth,\r\n      'max-width' : maxWidth,\r\n      'z-index' : zIndex\r\n    }\"\r\n  >\r\n    <section *ngIf=\"!hideHeader\" class=\"aa-modal-header\">\r\n      <h2 class=\"boxed align-center\">{{heading}}</h2>\r\n    </section>\r\n    <section class=\"aa-modal-content\">\r\n      {{message}}\r\n      <ng-content select=\"[content-custom]\"></ng-content>\r\n    </section>\r\n    <section class=\"aa-modal-footer flex-group flex-center\">\r\n        <ng-content></ng-content>\r\n    </section>\r\n  </div>\r\n</article>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1861,7 +1945,7 @@
     OverlayComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-overlay',
-                    template: "<article \r\n  class=\"aa-overlay flex-center\" \r\n  *ngIf=\"showOverlay\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex, \r\n    'top' : topPos,\r\n    'right' : rightPos,\r\n    'bottom' : bottomPos,\r\n    'left' : leftPos\r\n  }\">\r\n  <div class=\"aa-overlay-container\">\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
+                    template: "<article \r\n  class=\"aa-overlay flex-center\" \r\n  *ngIf=\"showOverlay\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex, \r\n    'top' : topPos,\r\n    'right' : rightPos,\r\n    'bottom' : bottomPos,\r\n    'left' : leftPos\r\n  }\">\r\n  <div class=\"aa-overlay-container\" [ngStyle]=\"{'min-width' : minWidth}\">\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1873,7 +1957,8 @@
         topPos: [{ type: i0.Input }],
         rightPos: [{ type: i0.Input }],
         bottomPos: [{ type: i0.Input }],
-        leftPos: [{ type: i0.Input }]
+        leftPos: [{ type: i0.Input }],
+        minWidth: [{ type: i0.Input }]
     };
 
     var PopoverComponent = /** @class */ (function () {
@@ -2019,13 +2104,14 @@
     TooltipComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tooltip',
-                    template: "<div class=\"flex-group\" [ngClass]=\"{ 'space-between' : includeLabel, 'flex-start' : includeLegend }\">\r\n  <label for=\"{{labelFor}}\" *ngIf=\"includeLabel\">{{labelName}}</label>\r\n  <legend class=\"margin-right-0-5\" *ngIf=\"includeLegend\">{{labelName}}</legend>\r\n  <div \r\n    class=\"aa-tooltip icon-info\" \r\n    [ngClass]=\"{\r\n      'is-success': isSuccess, \r\n      'is-info': isInfo, \r\n      'is-warning': isWarning, \r\n      'is-error': isError,\r\n      'custom-icon': customIcon\r\n    }\"\r\n    [ngStyle]=\"{'z-index' : zIndex}\"\r\n    >\r\n    \r\n    <div \r\n      *ngIf=\"customIcon\" \r\n      class=\"material-icons\"\r\n      [ngClass]=\"{\r\n        'is-success': isSuccess, \r\n        'is-info': isInfo, \r\n        'is-warning': isWarning, \r\n        'is-error': isError\r\n      }\">{{iconName}}</div>\r\n      \r\n    \r\n    <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width': setMinWidth+'rem'}\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                    template: "<div class=\"flex-group\" [ngClass]=\"{ 'space-between' : includeLabel, 'flex-start' : includeLegend }\">\r\n  <label for=\"{{labelFor}}\" *ngIf=\"includeLabel\">{{labelName}}</label>\r\n  <legend class=\"margin-right-0-5\" *ngIf=\"includeLegend\">{{labelName}}</legend>\r\n  <div \r\n    class=\"aa-tooltip icon-info\" \r\n    [ngClass]=\"{\r\n      'is-success': isSuccess, \r\n      'is-info': isInfo, \r\n      'is-warning': isWarning, \r\n      'is-error': isError,\r\n      'custom-icon': customIcon\r\n    }\"\r\n    [ngStyle]=\"{'z-index' : zIndex}\"\r\n    >\r\n    \r\n    <div \r\n      *ngIf=\"customIcon\" \r\n      class=\"material-icons\"\r\n      [ngClass]=\"{\r\n        'is-success': isSuccess, \r\n        'is-info': isInfo, \r\n        'is-warning': isWarning, \r\n        'is-error': isError\r\n      }\">{{iconName}}</div>\r\n      \r\n    \r\n    <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width': setMinWidth+'rem', 'max-width': setMaxWidth+'rem'}\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
     TooltipComponent.ctorParameters = function () { return []; };
     TooltipComponent.propDecorators = {
         setMinWidth: [{ type: i0.Input }],
+        setMaxWidth: [{ type: i0.Input }],
         isSuccess: [{ type: i0.Input }],
         isInfo: [{ type: i0.Input }],
         isWarning: [{ type: i0.Input }],
@@ -2097,6 +2183,32 @@
         close: [{ type: i0.Output }]
     };
 
+    var ListSelectableComponent = /** @class */ (function () {
+        function ListSelectableComponent() {
+        }
+        ListSelectableComponent.prototype.ngOnInit = function () {
+        };
+        return ListSelectableComponent;
+    }());
+    ListSelectableComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-list-selectable',
+                    template: "<nav \n    class=\"\n        aa-list-selectable\n        flex-group\n    \" \n    [ngStyle]=\"fixedPosition && {\n        'position' : 'fixed', \n        'left' : leftPos+'rem', \n        'top' : topPos+'rem', \n        'bottom' : bottomPos+'rem', \n        'z-index' : zIndex\n    }\"\n    [ngClass]=\"{\n        'flex-start' : flexStart\n    }\"\n    >\n    <ul>\n        <ng-content></ng-content>\n    </ul>\n</nav>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: [""]
+                },] }
+    ];
+    ListSelectableComponent.propDecorators = {
+        minWidth: [{ type: i0.Input }],
+        topPos: [{ type: i0.Input }],
+        leftPos: [{ type: i0.Input }],
+        rightPos: [{ type: i0.Input }],
+        bottomPos: [{ type: i0.Input }],
+        zIndex: [{ type: i0.Input }],
+        flexStart: [{ type: i0.Input }],
+        fixedPosition: [{ type: i0.Input }]
+    };
+
     var WidgetsModule = /** @class */ (function () {
         function WidgetsModule() {
         }
@@ -2127,7 +2239,8 @@
                         ToastrComponent,
                         ToastrItemComponent,
                         TooltipComponent,
-                        UserFeedbackComponent
+                        UserFeedbackComponent,
+                        ListSelectableComponent
                     ],
                     imports: [common.CommonModule, forms.FormsModule, forms.ReactiveFormsModule],
                     providers: [],
@@ -2154,7 +2267,8 @@
                         ToastrComponent,
                         ToastrItemComponent,
                         TooltipComponent,
-                        UserFeedbackComponent
+                        UserFeedbackComponent,
+                        ListSelectableComponent
                     ],
                     entryComponents: []
                 },] }
@@ -2203,7 +2317,9 @@
 
     exports.AccordionComponent = AccordionComponent;
     exports.AccordionFancyComponent = AccordionFancyComponent;
+    exports.ActionsSummaryComponent = ActionsSummaryComponent;
     exports.AlertComponent = AlertComponent;
+    exports.AlertShieldComponent = AlertShieldComponent;
     exports.AnchorBackComponent = AnchorBackComponent;
     exports.AnimationsModule = AnimationsModule;
     exports.BladeBottomComponent = BladeBottomComponent;
@@ -2235,6 +2351,7 @@
     exports.InfoPanelStackedComponent = InfoPanelStackedComponent;
     exports.InputTextComponent = InputTextComponent;
     exports.LayoutModule = LayoutModule;
+    exports.ListSelectableComponent = ListSelectableComponent;
     exports.LoadingSpinnerComponent = LoadingSpinnerComponent;
     exports.LoadingSpinnerPageComponent = LoadingSpinnerPageComponent;
     exports.ModalComponent = ModalComponent;
@@ -2264,6 +2381,7 @@
     exports.ToastrComponent = ToastrComponent;
     exports.ToastrItemComponent = ToastrItemComponent;
     exports.TooltipComponent = TooltipComponent;
+    exports.UiBlockComponent = UiBlockComponent;
     exports.UserFeedbackComponent = UserFeedbackComponent;
     exports.WidgetsModule = WidgetsModule;
     exports["ɵ0"] = ɵ0;

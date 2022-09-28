@@ -45,7 +45,9 @@ table, p {
 
 strong {
   font-family: _font(family-medium);
-  font-weight: unset;
+  &.small {
+    font-size: _font(size-small);
+  }
 }
 
 pre { 

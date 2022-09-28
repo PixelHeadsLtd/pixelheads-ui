@@ -15,7 +15,6 @@
         </div>
       <div>
         <button 
-          [ngStyle]="showOverlay && {'z-index':'999999'}"
           (click)="showOverlay=!showOverlay; obi=true"
           class="primary"
           fieldClass="label-hidden">Show overlay
@@ -40,6 +39,12 @@
             <td datalabel="Attribute">[showOverlay]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your min width in % or rem</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-overlay</td>

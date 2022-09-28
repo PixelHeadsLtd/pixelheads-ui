@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgbDatepickerComponent implements OnInit {
 
+  showPopup: boolean;
+
   constructor() { }
 
   ngOnInit() {

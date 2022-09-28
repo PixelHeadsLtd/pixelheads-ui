@@ -16,6 +16,12 @@ export declare class ButtonComponent implements OnInit {
     iconName: string;
     title: string;
     iconColour: string;
+    buttonLarge: boolean;
+    buttonSummary: boolean;
+    showDescription: boolean;
+    status: string;
+    level: number;
+    desc: any;
     buttonClick: EventEmitter<Event>;
     onButtonClick(e: Event): void;
     constructor(elementRef: ElementRef);

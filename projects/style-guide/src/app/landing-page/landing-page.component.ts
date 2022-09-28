@@ -26,6 +26,8 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
   showHeaderPicker: boolean;
   showHeading: boolean;
   showBlade: boolean;
+  showReleaseNotes: boolean;
+  showDesignPrinciples: boolean;
   selectedColor = 'aa-light-blue-100';
   
   stepOne = "./assets/images/samples/email-templates/step1.png";
@@ -114,6 +116,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'icon-picker',
     'icons',
     'input-textarea',
+    'list-selectable',
     'page-layout-examples',
     'progress-bar',
     'progress-circle',
@@ -125,6 +128,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'carousel',
     'context-menu',
     'dashboard-favourites',
+    'header',
     'info-panel',
     'modal',
     'popover',
@@ -135,6 +139,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'toastr',
     'tooltip',
     'tree-menu',
+    'ui-block',
     'user-feedback',
     'ag-grid',
     'ngb-datepicker',
@@ -143,7 +148,8 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'html-email',
     'elements-alignment',
     'slider',
-    'comments'
+    'comments',
+    'actions-summary'
   ];
   
   toggleSearchInput() {

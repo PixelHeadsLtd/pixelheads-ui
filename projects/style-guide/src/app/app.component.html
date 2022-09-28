@@ -1,19 +1,20 @@
 <header class="page-header flex-group space-between flex-align-center">
   <!--LEFT SECTION -->
-  <nav class="flex-align-center app-name">
-    <div
-      class="
-        material-icons
-        aa-white-100
-        bg-aa-orange-100
-        bd-aa-orange-100
-        border-orange
-        margin-right-0-75
-        "
-      >
-      design_services
-    </div>
-    <a title="Design Language homepage" routerLink="/" (click)="selectedIndex=null">Design Language</a>
+  <nav>
+    <a class="flex-align-center app-name" title="Design Language homepage" routerLink="/" (click)="selectedIndex=null">
+      <span
+        class="
+          material-icons
+          aa-white-100
+          bg-aa-orange-100
+          bd-aa-orange-100
+          border-orange
+          margin-right-0-75
+          "
+        >
+        design_services
+      </span>
+      Design Language</a>
   </nav>
 
   <!-- MIDDLE SECTION - LOGO -->
@@ -102,11 +103,11 @@
             routerLink="{{nestedItem.routerLink}}"
             title="{{nestedItem.title}}"
           >
-            <span class="material-icons">{{nestedItem.iconName}}</span>
+            <span class="material-icons {{nestedItem.customClass}}">{{nestedItem.iconName}}</span>
             <span>{{nestedItem.title}}</span>
           </a>
         </li>
-      </ul>
+      </ul> 
     </li>
   </ul>
   <div class="flex-group nav-min-max flex-align-center">
@@ -115,7 +116,7 @@
   </div>
 </nav>
 
-<main class="main-content" [ngStyle]="minimizeMenu && {'padding-left':'5rem'}">
+<main class="main-content" [ngClass]="{'menu-minimized' : minimizeMenu}">
   <router-outlet></router-outlet>
 </main>
 
@@ -178,7 +179,8 @@
     <aa-button
       (buttonClick)="toggleAppsBlade=false"
       buttonText="Close"
-      buttonClass="cancel">
+      buttonClass="cancel"
+      fieldClass="label-hidden">
     </aa-button>
   </ng-container>
 

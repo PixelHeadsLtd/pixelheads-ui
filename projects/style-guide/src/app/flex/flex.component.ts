@@ -12,6 +12,8 @@ export class FlexComponent implements OnInit {
   flexGroup: boolean;
   flexStart: boolean;
   flexEnd: boolean;
+  flexColumn: boolean;
+  flexStretch: boolean;
   spaceBetween: boolean;
   flexCenter: boolean;
   flexEllipsis: boolean;

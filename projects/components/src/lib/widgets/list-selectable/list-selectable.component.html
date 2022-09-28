@@ -1,0 +1,20 @@
+<nav 
+    class="
+        aa-list-selectable
+        flex-group
+    " 
+    [ngStyle]="fixedPosition && {
+        'position' : 'fixed', 
+        'left' : leftPos+'rem', 
+        'top' : topPos+'rem', 
+        'bottom' : bottomPos+'rem', 
+        'z-index' : zIndex
+    }"
+    [ngClass]="{
+        'flex-start' : flexStart
+    }"
+    >
+    <ul>
+        <ng-content></ng-content>
+    </ul>
+</nav>

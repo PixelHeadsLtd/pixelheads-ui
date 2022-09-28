@@ -13,6 +13,8 @@
       <table>
         <thead>
           <tr>
+            <th>Created by</th>
+            <th>Modified by</th>
             <th>Status</th>
             <th>Approver</th>
             <th class="align-right">Created date</th>
@@ -21,6 +23,8 @@
         </thead>
         <tbody>
           <tr *ngFor="let approval of approvals">
+            <td datalabel="Created by">{{ approval.createdBy }}</td>
+            <td datalabel="Modified by">{{ approval.modifiedBy }}</td>
             <td datalabel="Status"><span class="alert-shield small" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
             <td datalabel="Approver">{{ approval.approver }}</td>
             <td datalabel="Created date" class="align-right">{{ approval.created }}</td>
@@ -77,24 +81,36 @@
       <h2>Standard table with fixed header</h2>
       <div class="describe margin-bottom-1">
         <p>For a scrollable table with a fixed header you will need to nest your table inside 
-          two div elements. Add the class .scroll-panel to the outer div and .scroll-panel-content 
+          two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
           to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
           table thead th cell, add a div with a nested span, inside this span add you cell text.
         </p>
       </div>
-      <div class="scroll-panel">
-        <div class="scroll-panel-content" [ngStyle]="{'max-height':'8rem'}">
+      <div class="tbl-container">
+        <div class="tbl-fixed" [ngStyle]="{ 'max-height' : 'calc(100vh - 73rem)' }">
           <table>
             <thead>
               <tr>
-                <th><div><span>Status</span></div></th>
-                <th><div><span>Approver</span></div></th>
-                <th><div><span>Created date</span></div></th>
-                <th><div><span>Modified date</span></div></th>
+                <th></th>
+                <th>Created by</th>
+                <th>Modified by</th>
+                <th>Status</th>
+                <th>Approver</th>
+                <th>Created date</th>
+                <th>Modified date</th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let approval of approvals">
+                <td>
+                  <aa-context-menu [showOnLeft]="false" minWidth="11.5">
+                    <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></aa-context-menu-item>
+                    <aa-context-menu-item menuItemText="View blades" routerLink="/blade"></aa-context-menu-item>
+                  </aa-context-menu>
+                </td>
+                <td datalabel="Created by">{{ approval.createdBy }}</td>
+                <td datalabel="Modified by">{{ approval.modifiedBy }}</td>
                 <td datalabel="Status"><span class="alert-shield small" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
                 <td datalabel="Approver">{{ approval.approver }}</td>
                 <td datalabel="Created date">{{ approval.created }}</td>
@@ -120,15 +136,15 @@
         <tbody>
           <tr>
             <td datalabel="Element">Outer div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">HTML</td>
-            <td datalabel="Default">.scroll-panel</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.tbl-container</td>
           </tr>
           <tr>
             <td datalabel="Element">Inner div</td>
-            <td datalabel="Attribute">Class</td>
-            <td datalabel="Type">HTML</td>
-            <td datalabel="Default">.scroll-panel-content</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.tbl-fixed</td>
           </tr>
           <tr>
             <td datalabel="Element">Table</td>
@@ -171,20 +187,20 @@
         <h2>Standard table with fixed header and expandable rows</h2>
         <div class="describe margin-bottom-1">
           <p>For a scrollable table with a fixed header you will need to nest your table inside 
-            two div elements. Add the class .scroll-panel to the outer div and .scroll-panel-content 
+            two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
             to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
             table thead th cell, add a div with a nested span, inside this span add you cell text.
           </p>
         </div>
-        <div class="scroll-panel">
-          <div class="scroll-panel-content" [ngStyle]="{'max-height':'8rem'}">
+        <div class="tbl-container">
+          <div class="tbl-fixed" [ngStyle]="{ 'max-height' : 'calc(100vh - 74rem)' }">
             <table class="expandable-rows">
               <thead>
                 <tr>
-                  <th><div><span>&nbsp;</span></div></th>
-                  <th><div><span>Name</span></div></th>
-                  <th><div><span>Created date</span></div></th>
-                  <th><div><span>Modified date</span></div></th>
+                  <th></th>
+                  <th>Name</th>
+                  <th>Created date</th>
+                  <th>Modified date</th>
                 </tr>
               </thead>
               <tbody>
@@ -226,13 +242,13 @@
               <td datalabel="Element">Outer div</td>
               <td datalabel="Attribute">Class</td>
               <td datalabel="Type">HTML</td>
-              <td datalabel="Default">.scroll-panel</td>
+              <td datalabel="Default">.tbl-container</td>
             </tr>
             <tr>
               <td datalabel="Element">Inner div</td>
               <td datalabel="Attribute">Class</td>
               <td datalabel="Type">HTML</td>
-              <td datalabel="Default">.scroll-panel-content</td>
+              <td datalabel="Default">.tbl-fixed</td>
             </tr>
             <tr>
               <td datalabel="Element">Table</td>
@@ -434,30 +450,49 @@
           <table class="table-feature">
             <tr>
               <td>&nbsp;</td>
+              <!-- start feature -->
               <td class="feature-cell" rowspan="6">
                 <table>
                   <tr>
-                    <td>
-                      <div class="flex-group space-between">
-                        <h3>CMaT</h3>
+                    <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
+                        <h3>Feature 1</h3>
                         <aa-tooltip [isInfo]="true" setMinWidth="11" ypos="bottom" xpos="right">
                           <h4>Ahoy there</h4>
                           <p>Mr Beaver had begun telling them that the<br/> White Witch wasn’t really human at all </p>
                         </aa-tooltip>
-                      </div>
                     </td>
                   </tr>
                   <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
                   <tr><td><input type="text" placeholder="Company BRN" /></td></tr>
                   <tr><td><input type="text" placeholder="Company type" /></td></tr>
                   <tr><td><input type="text" placeholder="Current status" /></td></tr>
-                  <tr><td><div><button class="approve small">Accept</button></div></td></tr>
+                  <tr><td><button class="approve small">Accept</button></td></tr>
                 </table>
               </td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+              <td><!-- spacer cell --></td>
+              <!-- end feature -->
+
+              <!-- start feature -->
+              <td class="feature-cell" rowspan="6">
+                <table>
+                  <tr>
+                    <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
+                        <h3>Feature 2</h3>
+                        <select class="width-auto"><option>Please select</option></select>
+                    </td>
+                  </tr>
+                  <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
+                  <tr><td><input type="text" placeholder="Company BRN" /></td></tr>
+                  <tr><td><input type="text" placeholder="Company type" /></td></tr>
+                  <tr><td><input type="text" placeholder="Current status" /></td></tr>
+                  <tr><td><button class="approve small">Accept</button></td></tr>
+                </table>
+              </td>
+              <td><!-- spacer cell --></td>
+              <!-- end feature -->
             </tr>
             
+            <!-- these are your left column row labels -->
             <tr><td>Full legal name</td><td>&nbsp;</td><td>&nbsp;</td></tr>  
             <tr><td>Company number (BRN)</td><td>&nbsp;</td><td>&nbsp;</td></tr> 
             <tr><td>Company type</td><td>&nbsp;</td><td>&nbsp;</td></tr>

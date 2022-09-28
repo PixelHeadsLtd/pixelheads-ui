@@ -468,8 +468,44 @@ aa-dashboard-favourites {
   }
 }
 
+// not part of the free set
+.fa-chart-line-up {
+    &:before {
+      content: ""!important;
+      background: url("#{$icon-path}/fa-chart-line-up.svg") no-repeat;
+      color: transparent;
+    }
+}
+
+.fa-chart-line-up-wht {
+  &:before {
+    content: ""!important;
+    background: url("#{$icon-path}/fa-chart-line-up-wht.svg") no-repeat;
+    color: transparent;
+  }
+}
+
+// legacy header using hosted icons - Natasha insisted on an icon that wasn't in the FA set
+.navbar-brand {
+  .icon-banc {
+    background-image: url("#{$icon-path}/icon-banc.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 100%;
+    display: inline!important;
+    padding: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+
 .blade-navigation, .accordion-trigger, .global-search {
   // for CORE menu-blade ONLY. Here we are mapping our nice icons to the font-awesome "fa-" icons that are coming from the back-end
+
+  .icon-curve-manager {
+    background-image: url("#{$icon-path}/icon-curve-manager.svg");
+    @include icon-button-large-svg;
+  }
+
   .fa-book,
   .fa-book-open,
   .icon-mine-visit {
@@ -481,6 +517,11 @@ aa-dashboard-favourites {
   .icon-organisation {
       background-image: url("#{$icon-path}/icon-sitemap.svg");
       @include icon-button-large-svg;
+  }
+
+  .icon-search {
+    background-image: url("#{$icon-path}/icon-search.svg");
+    @include icon-button-large-svg;
   }
 
   .icon-angular {
@@ -620,10 +661,14 @@ aa-dashboard-favourites {
     }
   }
 
-
   .fa-calculator, 
   .icon-finance {
     background-image: url("#{$icon-path}/icon-finance.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-monitoring {
+    background-image: url("#{$icon-path}/icon-monitoring.svg");
     @include icon-button-large-svg;
   }
 

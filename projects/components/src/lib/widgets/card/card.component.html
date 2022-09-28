@@ -20,7 +20,11 @@
   </div>
 </article>
 
-<article *ngIf="cardOptional && !cardMini" class="aa-card-opt margin-bottom-0-75 box-shadow-light" [ngStyle]="{'z-index' : zIndex}">
+<article 
+  *ngIf="cardOptional && !cardMini" 
+  class="aa-card-opt margin-bottom-0-75 box-shadow-light" 
+  [ngStyle]="{'z-index' : zIndex}"
+>
     <div class="flex-group flex-end flex-align-center">
       <ng-content select="[card-menu-opt]"></ng-content>
     </div>
@@ -33,7 +37,11 @@
     </div>
 </article>
 
-<button *ngIf="cardMini && !cardOptional" class="card-mini flex-align-center flex-start {{borderClass}}">
+<button 
+  *ngIf="cardMini && !cardOptional" 
+  class="card-mini flex-align-center flex-start {{borderClass}}"
+  (click)="onCardClick($event)"
+>
   <div *ngIf="showAsIcon" class="material-icons">{{iconName}}</div>
   <div *ngIf="showAsProfile" class="card-image fingerprint">
     <ng-content select="[profile-image]"></ng-content>

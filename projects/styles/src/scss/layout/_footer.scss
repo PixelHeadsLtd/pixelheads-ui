@@ -5,7 +5,7 @@ footer {
   background-color: _colour(bg-primary);
   padding: 0.5rem 1.25rem;
   text-align: center;
-  width: 100%;
+  width: -webkit-fill-available;
 
   ul {
     font-size: _font(size-small);

@@ -12,6 +12,7 @@ export declare class AccordionComponent implements OnInit {
     fontAwesome: boolean;
     fontClassName: string;
     iconBgColor: string;
+    customBgColor: string;
     open: EventEmitter<void>;
     onOpen(e: {
         stopPropagation: () => void;

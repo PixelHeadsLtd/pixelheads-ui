@@ -10,7 +10,7 @@
         <p>Loading spinner page blocks the UI whilst the page is loading.<br/>
         If required, please add <strong>loadingMessage="Your message..."</strong></p>
       </div>
-      <aa-loading-spinner-page class="dl-version"></aa-loading-spinner-page>
+      <aa-loading-spinner-page class="dl-version" [zIndex]="1"></aa-loading-spinner-page>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -26,10 +26,16 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Text</td>
+            <td datalabel="Element">aa-loading-spinner-page</td>
             <td datalabel="Attribute">loadingMessage</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Null</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-loading-spinner-page</td>
+            <td datalabel="Attribute">z-index</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">1</td>
           </tr>
         </tbody>
       </table>

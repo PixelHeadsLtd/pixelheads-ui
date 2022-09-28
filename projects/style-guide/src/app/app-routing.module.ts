@@ -30,6 +30,7 @@ import {FilterComponent} from './filter/filter.component';
 import {FlexComponent} from './flex/flex.component';
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
+import {UiBlockComponent} from './ui-block/ui-block.component';
 
 // Navigation
 import {ContextMenuComponent} from './context-menu/context-menu.component';
@@ -46,6 +47,7 @@ import {TabPageThreeComponent} from './tab-page-three/tab-page-three.component';
 // Patterns
 import {AlertsComponent} from './alerts/alerts.component';
 import {ShieldsComponent} from './shields/shields.component';
+import {ActionsSummaryComponent} from './actions-summary/actions-summary.component';
 import {BoxComponent} from './box/box.component';
 import {ColoursComponent} from './colours/colours.component';
 import {IconsComponent} from './icons/icons.component';
@@ -61,6 +63,7 @@ import {CarouselComponent} from './carousel/carousel.component';
 import {DashboardFavouritesComponent} from './dashboard-favourites/dashboard-favourites.component';
 import {IconPickerComponent} from './icon-picker/icon-picker.component';
 import {InfoPanelComponent} from './info-panel/info-panel.component';
+import {ListSelectableComponent} from './list-selectable/list-selectable.component';
 import {ModalComponent} from './modal/modal.component';
 import {OverlayComponent} from './overlay/overlay.component';
 import {DlPopoverComponent} from './popover/popover.component';
@@ -74,6 +77,7 @@ import {BorderComponent} from './border/border.component';
 import {BorderRadiusComponent} from './border-radius/border-radius.component';
 import {MarginComponent} from './margin/margin.component';
 import {MarkupComponent} from './markup/markup.component';
+import {MiscComponent} from './misc/misc.component';
 import {PaddingComponent} from './padding/padding.component';
 import {TextComponent} from './text/text.component';
 import {WidthsComponent} from './widths/widths.component';
@@ -97,11 +101,13 @@ import {QuestionsAndAnswersComponent} from './questions-and-answers/questions-an
 // Addendum
 import {ElementsAlignmentComponent} from './elements-alignment/elements-alignment.component';
 import {PageLayoutExamplesComponent} from './page-layout-examples/page-layout-examples.component';
+import {UnauthorisedComponent} from './unauthorised/unauthorised.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'accordion', component: AccordionComponent },
   { path: 'accordion-fancy', component: AccordionFancyComponent },
+  { path: 'actions-summary', component: ActionsSummaryComponent },
   { path: 'ag-grid', component: AgGridComponent },
   { path: 'alerts', component: AlertsComponent },
   { path: 'anchor', component: AnchorComponent },
@@ -136,6 +142,7 @@ const routes: Routes = [
   { path: 'input', component: InputComponent },
   { path: 'input-radio', component: InputRadioComponent },
   { path: 'input-textarea', component: InputTextareaComponent },
+  { path: 'list-selectable', component: ListSelectableComponent },
   { path: 'slider', component: SliderComponent },
   { path: 'loading-spinner', component: LoadingSpinnerComponent },
   { path: 'loading-spinner-page', component: LoadingSpinnerPageComponent },
@@ -143,6 +150,7 @@ const routes: Routes = [
   { path: 'info-panel', component: InfoPanelComponent },
   { path: 'margin', component: MarginComponent },
   { path: 'markup', component: MarkupComponent },
+  { path: 'misc', component: MiscComponent },
   { path: 'modal', component: ModalComponent },
   { path: 'nav-context', component: NavContextComponent },
   { path: 'ngx-quill', component: NgxQuillComponent },
@@ -170,13 +178,15 @@ const routes: Routes = [
   { path: 'toastr', component: ToastrComponent },
   { path: 'tooltip', component: TooltipComponent },
   { path: 'tree-menu', component: TreeMenuComponent },
+  { path: 'ui-block', component: UiBlockComponent },
   { path: 'user-feedback', component: UserFeedbackComponent },
   { path: 'typography', component: TypographyComponent },
   { path: 'ng-select', component: NgSelectComponent },
   { path: 'ngb-datepicker', component: NgbDatepickerComponent },
   { path: 'questions-and-answers', component: QuestionsAndAnswersComponent },
   { path: 'html-email', component: HtmlEmailComponent },
-  { path: 'elements-alignment', component: ElementsAlignmentComponent }
+  { path: 'elements-alignment', component: ElementsAlignmentComponent },
+  { path: 'unauthorised', component: UnauthorisedComponent }
 ];
 
 @NgModule({

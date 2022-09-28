@@ -104,7 +104,7 @@
           <h2 class="margin-bottom-0-5 margin-top-1-5">Latest packages</h2>
           <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
             <div class="material-icons small aa-orange-100 margin-right-0-5">event_note</div>
-            <a (click)="showOverlay=!showOverlay" class="anchor-small cursor-pointer">
+            <a (click)="showOverlay=!showOverlay; showReleaseNotes=true; showDesignPrinciples=false" class="anchor-small cursor-pointer">
               Release notes
             </a>
           </div>
@@ -236,10 +236,19 @@
       <h3><strong class="number">1.</strong> What is the Design Language?</h3>
       <p>
         The Design Language project was built to provide design styleguides and 
-        a component library to be used across ALL applications within Marketing IM. 
-        Please do not use any 3rd party components other than those listed
-        in the left navigation under the heading <strong class="aa-red-100 nowrap">Other widgets</strong>
+        a component library to be used across ALL applications within Marketing IM.
       </p>
+      <aa-button
+        [customIcons]="true"
+        (buttonClick)="showOverlay=true; showDesignPrinciples=true; showReleaseNotes=false"
+        buttonId="buttonId"
+        buttonClass="custom-icons blue"
+        fieldClass="boxed label-hidden margin-top-0-5"
+        buttonLabel=""
+        buttonText="Design Principles?"
+        buttonIcon="design_services"
+        disabled="">
+      </aa-button>
     </div>
 
     <div>
@@ -476,6 +485,14 @@
         <div class="material-icons aa-blue-100">call_to_action</div>
         <p>Footer</p>
       </a>
+      <a class="call-to-action flex-center" routerLink="/header">
+        <div class="material-icons aa-blue-100 flip-y">call_to_action</div>
+        <p>Header</p>
+      </a>
+      <a class="call-to-action flex-center" routerLink="/ui-block">
+        <div class="material-icons aa-blue-100">block</div>
+        <p>UI block</p>
+      </a>
     </div>
   </section>
   
@@ -592,6 +609,10 @@
           and we'll look at adding your suggested component.</p>
       </div>
       <div class="flex-2 col-right flex-group flex-end margin-top-1">
+        <a class="call-to-action flex-center" routerLink="/actions-summary">
+          <div class="material-icons aa-plum-100">rocket_launch</div>
+          <p>Actions summary</p>
+        </a>
         <a class="call-to-action flex-center" routerLink="/alerts">
           <div class="material-icons aa-plum-100">add_alert</div>
           <p>Alert</p>
@@ -698,6 +719,10 @@
         <a class="call-to-action flex-center" routerLink="/info-panel">
           <div class="material-icons aa-light-blue-100">fact_check</div>
           <p>Info panel</p>
+        </a>
+        <a class="call-to-action flex-center" routerLink="/list-selectable">
+          <div class="material-icons aa-light-blue-100">checklist_rtl</div>
+          <p>List selectable</p>
         </a>
         <a class="call-to-action flex-center" routerLink="/modal">
           <div class="material-icons aa-light-blue-100">border_clear</div>
@@ -820,7 +845,7 @@
         <h2 class="boxed">Getting started</h2>
         <div class="flex-align-center">
           <span class="material-icons aa-orange-100 margin-right-0-5">download_for_offline</span>
-          <a target="_blank" href="../../assets/sample-email-template.zip">Download sample template</a>
+          <a target="_blank" href="https://dev.core.angloamerican.com/designlanguage/assets/sample-email-template.zip">Download sample template</a>
         </div>  
         <h2 class="margin-top-1">Setup</h2>
         <p>Create a basic html page with your preferred HTML editor. Set your 
@@ -984,37 +1009,332 @@
 <aa-overlay 
   [showOverlay]="showOverlay"
   zIndex="999"
+  minWidth="55rem"
 >
   <ng-container overlay-header>
-    <section class="aa-overlay-header flex-group space-between">
-      <div class="flex-group flex-start flex-align-center">
-        <div class="material-icons aa-orange-100">event_note</div>
-        <h1>Release notes</h1>
-      </div>
-      <button (click)="showOverlay=false" class="material-icons">close</button>
-    </section>
+    <!-- START RELEASE NOTES HEADERS -->
+    <div *ngIf="showReleaseNotes">
+      <section class="aa-overlay-header flex-group space-between">
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons aa-orange-100">event_note</div>
+          <h1>Release notes</h1>
+        </div>
+        <button (click)="showOverlay=false" class="material-icons">close</button>
+      </section>
+    </div>
+
+    <!-- START DESIGN PRINCIPLES HEADER -->
+    <div *ngIf="showDesignPrinciples">
+      <section class="aa-overlay-header flex-group space-between">
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons aa-orange-100">design_services</div>
+          <h1>Marketing IM UX Design Principles</h1>
+        </div>
+        <button (click)="showOverlay=false; showDesignPrinciples=false" class="material-icons">close</button>
+      </section>
+    </div>
   </ng-container>
   
   <ng-container overlay-content>
-    <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-      <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="" routerLinkActive> 
-        <ng-template aaTabNavigationContent>
-          <h2 class="boxed padding-1-5 padding-bottom-0-5">Styles</h2>
-          <app-release-notes-styles [styles]="true"></app-release-notes-styles>
-        </ng-template>
-      </aa-tab-navigation-item>
-      <aa-tab-navigation-item tabName="Components" [enableIcons]="false" iconName="" iconColour="">
-        <ng-template aaTabNavigationContent>
-          <h2 class="boxed padding-1-5 padding-bottom-0-5">Components</h2>
-          <app-release-notes-components [components]="true"></app-release-notes-components>
-        </ng-template>
-      </aa-tab-navigation-item>
-    </aa-tab-navigation>
+    <!-- START RELEASE NOTES TABS AND TAB CONTENT -->
+    <div *ngIf="showReleaseNotes">
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="" routerLinkActive> 
+          <ng-template aaTabNavigationContent>
+            <h2 class="boxed padding-1-25 padding-bottom-0-5">Styles</h2>
+            <app-release-notes-styles [styles]="true"></app-release-notes-styles>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Components" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <h2 class="boxed padding-1-25 padding-bottom-0-5">Components</h2>
+            <app-release-notes-components [components]="true"></app-release-notes-components>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+      
+      <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
+        <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+      </section>
+    </div>
     
-    <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
-      <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
-    </section>
+    <!-- START DESIGN PRINCIPLES TABS AND TAB CONTENT -->
+    <div *ngIf="showDesignPrinciples">
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <aa-tab-navigation-item tabName="Introduction" [enableIcons]="false" iconName="" iconColour="" routerLinkActive> 
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-1 margin-bottom-0">Why should you use them?</h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content">
+
+                  <div class="flex-group">
+                    <p class="margin-top-1 margin-right-2">
+                      In Anglo American, we design applications that users use
+                      extensively. They can forgive less-than-perfect functionality as
+                      they are expert users and know their tasks. Nevertheless, our
+                      designs should offer an experience that is confidence-building
+                      and optimal.
+                    </p>
+                    <p class="margin-right-2">
+                      These design principles offer fundamental advice for making
+                      easy-to-use and pleasing designs. They outline ways to improve
+                      usability, influence user perception of systems, increase the
+                      appeal and help you make effective design decisions in your
+                      projects.
+                    </p>
+                    <h3 class="aa-orange-100">
+                      "Design used to be the seasoning you'd sprinkle
+                      on for taste; now it's the flour you need at the
+                      start of the recipe."
+                    </h3>
+                  </div>
+
+                  <h2 class="margin-bottom-0">Complimentary resources</h2>
+                  <div class="flex-group">
+                    <p class="margin-top-1 margin-right-2">
+                      These design principles support the Design Language project, which provides style guides and a
+                      component library used across ALL applications within Marketing IM.
+                    </p>
+                    <p>
+                      It is important to prioritise a design approach that minimises users' cognitive load and decision-making
+                      time and optimises data usage. Also, we can achieve consistency across the Anglo digital landscape if
+                      we follow these principles.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Accessibility" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-0 max-width-40 feature-box">
+                "Accessibility means that all people can perceive, understand,
+                navigate, and interact with digital information"
+              </h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content editorial-content">
+                  <ol>
+                    <li class="margin-bottom-0-5">
+                      Use plain language and avoid confusing content
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Ensure there is visible focus style for interactive elements 
+                      that are navigated to via keyboard input
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make sure all 'img' elements have an 'alt' attribute
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Ensure the viewport zoom is not disabled
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Provide a text alternative for complex images such as charts, graphs, and maps
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Use heading elements to introduce content and use one H1 element per page/view
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Ensure that links are recognisable as links and if they open in a new tab or window, inform the user
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Maintain good proximity between content, but enough space to not be visually overpowering
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Maintain good colour contrast
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Communication" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-0 feature-box">
+                "True interactivity is not about clicking on icons or downloading files,
+                  it's about encouraging communication"
+              </h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content editorial-content">
+                  <ol>
+                    <li class="margin-bottom-0-5">
+                      Understand the purpose of your design and stick to it. If you deviate, it will cause confusion
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Use simple language - jargon requires <strong>prior</strong> knowledge, this might not be the case
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Keep users informed with constant feedback (includes errors, page load and system status)
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make sure that error, warning, and success states are not visually communicated by just colour
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      If errors are possible, ensure users are informed prior to error, through validation and error handling
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Do not expect users to remember information, keep options and instructions always visible
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Choose the correct component. If the user needs to provide a simple
+                      binary response, make sure your design only asks them that
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Stick to the Design Language style guidelines as it offers familiarity and consistency
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Learnability" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-0 feature-box">
+                "Learnability is the ease and speed with which users learn to interact
+                with a system, application or service"
+              </h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content editorial-content">
+                  <ol>
+                    <li class="margin-bottom-0-5">
+                      Do not fear simplicity. Even expert users will appreciate being able to do their complex tasks easily,
+                      and novice users will learn quickly
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make items easy to find
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Keep users informed with constant feedback (includes errors, page load and system status)Remove mundane, 
+                      repetitive tasks (like copy and paste) and have the system support these processes
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Use the power of defaults. If we know how the user will answer, then have that selected first. It
+                      shows that we understand the user and reduces the time taken to complete their task
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Explain to a user exactly where they are and what is going on, and where to go next
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Repeat the same interaction with the same outcome: this will reinforce how it works and provide consistency
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Remove distractions. Let the user know their route by performing tasks consecutively, not
+                      simultaneously
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Navigation" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-0 feature-box">
+                "Good navigation seamlessly takes users where they want to go"
+              </h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content editorial-content">
+                  <ol>
+                    <li class="margin-bottom-0-5">
+                      Page hierarchy - ensure a user knows where they are in the application and that they can get back
+                      to where they came from (and forward if available)
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Ensure that navigation elements have correct weight in the design. Do not let them get lost in the page
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Set information in a natural, logical order
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Choose the correct type of navigation - menu items, tab menus, hyperlinks. And ensure your user
+                      knows what to do to progress with their task
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Put navigation items in familiar locations, place them where a user expects them to be
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make labels easy to scan and understand, clearly describe what the navigation does
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make menu links look interactive if they are. Don't make content look like a link if it isn't
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Usability" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="margin-top-0 feature-box">
+                "It doesn’t matter how many times I have to click, as long as each click
+                is an unambiguous choice. Don’t make me think"
+              </h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content editorial-content">
+                  <ol>
+                    <li class="margin-bottom-0-5">
+                      Never assume that the user will know what to do, make sure your design is aligned directly to their goal
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Maintain consistent interactions - so users know what to do next
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Make every design element have a purpose
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Allow users to easily undo/redo actions
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Concentrate on achieving clarity by bringing only useful features to the user's attention
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Aim for efficiency. Don't make a user to repeat a task (no double keying of data) Let the system do the heavy lifting
+                    </li>
+                    <li class="margin-bottom-0-5">
+                      Test your design with your users and be happy to change it based on their feedback
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Contact details" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <div class="content-container">
+              <h2 class="boxed">Contact details</h2>
+              <div class="scroll-panel padding-top-0">
+                <div class="scroll-panel-content">
+                  <p>
+                    <label>Michael King</label>
+                    <a href="maito:michael.king@angloamerican.com">Michael.King@AngloAmercian.com</a>
+                  </p>
+                  <p>
+                    <label>Claire Burns</label>
+                    <a href="maito:claire.burns@angloamerican.com">Claire.Burns@AngloAmerican.com</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+      
+      <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
+        <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+      </section>
+    </div>
   </ng-container>
+  
 </aa-overlay>
 
 <aa-overlay 
@@ -1422,3 +1742,4 @@
     </section>
   </ng-container>
 </aa-overlay>
+

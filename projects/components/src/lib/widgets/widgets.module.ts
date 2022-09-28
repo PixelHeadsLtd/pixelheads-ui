@@ -24,6 +24,7 @@ import { ToastrComponent } from './toastr/toastr.component';
 import { ToastrItemComponent } from './toastr-item/toastr-item.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
+import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
     ToastrComponent,
     ToastrItemComponent,
     TooltipComponent,
-    UserFeedbackComponent
+    UserFeedbackComponent,
+    ListSelectableComponent
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -77,7 +79,8 @@ import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
     ToastrComponent,
     ToastrItemComponent,
     TooltipComponent,
-    UserFeedbackComponent
+    UserFeedbackComponent,
+    ListSelectableComponent
   ],
   entryComponents: []
 })

@@ -10,6 +10,7 @@ header.page-header:not(header .blade) {
   height: 3.5rem;
   
   .app-name {
+    text-decoration: none;
     .material-icons,
     .material-icons-outlined {
       border-radius: 50%;

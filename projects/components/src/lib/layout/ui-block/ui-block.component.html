@@ -1,0 +1,18 @@
+<article 
+    *ngIf="showUiBlock" 
+    class="aa-ui-block flex-group flex-center"
+    [ngStyle]="{
+        'top' : topPos+'rem',
+        'bottom' : bottomPos+'rem'
+    }"
+>
+    <h1
+        [ngStyle]="{
+            'font-size' : fontSize+'rem',
+            'text-transform' : allCaps&&'uppercase'
+        }"
+    >
+        {{message}}
+    </h1>
+    <div class="background"></div>
+</article>

@@ -1,7 +1,31 @@
 &.design-language {
-  main {
+
+  .minimize-menu + main {
+    .unauthorised {
+      left: 5rem;
+    }
+  }
+
+  .unauthorised {
+    left: 16rem;
+    transition: all .25s linear;
+  }
+  
+  main.main-content {
     padding-left: 16rem;
     transition: all .25s linear;
+
+    &.menu-minimized {
+      padding-left: 5rem;
+
+      .questions-and-answers {
+        width: calc(100% - 5rem);
+      }
+    }
+  }
+
+  .questions-and-answers {
+    width: calc(100% - 16rem);
   }
   
   .header-secondary {
@@ -100,11 +124,11 @@
     
     > .col-left {
       margin-right: 4rem;
-      min-width: 30rem;
+      //min-width: 30rem;
       margin-bottom: 1.5rem;
     }
     
-    h2:not(.ql-editor h2) {
+    h2:not(.ql-editor h2, .csh-container h2) {
       margin-top: 0;
     }
     &:nth-child(odd) {
@@ -130,7 +154,6 @@
           &.material-icons,
           &.material-icons-outlined {
             font-size: _font(size-regular);
-            line-height: 1.75rem;
           }
         }
         span {
@@ -325,6 +348,7 @@
         p {
           font-size: _font(size-small);
           color: _colour(body-text);
+          line-height: .9rem;
         }
         
         &:hover {
@@ -462,10 +486,6 @@
         }
       }
     }
-  }
-  
-  .loading-spinner-page {
-    z-index: 0;
   }
 }
 

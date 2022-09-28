@@ -69,6 +69,7 @@ export class AppComponent {
     'filter',
     'flex',
     'footer',
+    'header',
     'margin',
     'markup',
     'padding',
@@ -85,6 +86,7 @@ export class AppComponent {
     'icon-picker',
     'icons',
     'input-textarea',
+    'list-selectable',
     'progress-bar',
     'progress-circle',
     'editorial-content',
@@ -106,6 +108,7 @@ export class AppComponent {
     'toastr',
     'tooltip',
     'tree-menu',
+    'ui-block',
     'user-feedback',
     'ag-grid',
     'ngb-datepicker',
@@ -114,7 +117,8 @@ export class AppComponent {
     'html-email',
     'elements-alignment',
     'slider',
-    'comments'
+    'comments',
+    'actions-summary'
   ];
   
   toggleSearchInput() {
@@ -141,6 +145,7 @@ export class AppComponent {
     {appIconClass: 'icon-compliance', appIconName: 'Compliance'},
     {appIconClass: 'icon-comp-and-train fa-check-circle', appIconName: 'Compliance & Training'},
     {appIconClass: 'icon-core fa-map-marker', appIconName: 'CORE'},
+    {appIconClass: 'icon-curve-manager', appIconName: 'Curve Manager'},
     {appIconClass: 'icon-customer-onboarding', appIconName: 'Customer Onboarding'},
     {appIconClass: 'icon-customer-portal', appIconName: 'Customer Portal'},
     {appIconClass: 'icon-dashboard fa-tachometer-alt', appIconName: 'Dashboard'},
@@ -156,6 +161,7 @@ export class AppComponent {
     {appIconClass: 'icon-incident-workflow-tool fa-exclamation', appIconName: 'Incident Workflow Tool'},
     {appIconClass: 'icon-integration fa-project-diagram', appIconName: 'Integration'},
     {appIconClass: 'icon-invoicing fa-file-invoice', appIconName: 'Invoicing'},
+    {appIconClass: 'icon-monitoring', appIconName: 'Monitoring'},
     {appIconClass: 'icon-live-reporting', appIconName: 'Live Reporting'},
     {appIconClass: 'icon-logistics-portal fa-atlas', appIconName: 'Logistics Portal'},
     {appIconClass: 'icon-market-analytics fa-chart-area', appIconName: 'Market Analytics'},
@@ -174,6 +180,7 @@ export class AppComponent {
     {appIconClass: 'icon-reporting-portal fa-file-signature ', appIconName: 'Reporting Portal'},
     {appIconClass: 'icon-risk fa-square-root-alt', appIconName: 'Risk'},
     {appIconClass: 'icon-security-amp fa-users-cog ', appIconName: 'Security AMP'},
+    {appIconClass: 'icon-search', appIconName: 'Search'},
     {appIconClass: 'icon-shipping fa-ship', appIconName: 'Shipping'},
     {appIconClass: 'icon-supply-chain', appIconName: 'Supply Chain Manager'},
     {appIconClass: 'icon-system-health fa-heartbeat', appIconName: 'System Health'},
@@ -220,7 +227,8 @@ export class AppComponent {
       {iconName:'filter_alt', title:'Filter', routerLink:'/filter'},
       {iconName:'view_week', title:'Flex', routerLink:'/flex'},
       {iconName:'call_to_action', title:'Footer', routerLink:'/footer'},
-      {customClass:'rotate', iconName:'call_to_action', title:'Header', routerLink:'/header'}
+      {customClass:'flip-y', iconName:'call_to_action', title:'Header', routerLink:'/header'},
+      {iconName:'block', title:'UI block', routerLink:'/ui-block'}
     ]},
     // NAVIGATION
     {color:'orange', iconName:'menu_open', title:'Navigation', nestedItems:
@@ -235,6 +243,7 @@ export class AppComponent {
     // PATTERNS
     {color:'plum', iconName:'apps', title:'Patterns', nestedItems:
     [
+      {iconName:'rocket_launch', title:'Actions summary', routerLink:'/actions-summary'},
       {iconName:'add_alert', title:'Alert', routerLink:'/alerts'},
       {iconName:'remove_moderator', title:'Alert shield', routerLink:'/shields'},
       {iconName:'check_box_outline_blank', title:'Box', routerLink:'/box'},
@@ -254,6 +263,7 @@ export class AppComponent {
       {iconName:'star', title:'Faves - dashboard', routerLink:'/dashboard-favourites'},
       {iconName:'face', title:'Icon picker', routerLink:'/icon-picker'},
       {iconName:'fact_check', title:'Info panel', routerLink:'/info-panel'},
+      {iconName:'checklist_rtl', title:'List selectable', routerLink:'/list-selectable'},
       {iconName:'border_clear', title:'Modal', routerLink:'/modal'},
       {iconName:'border_outer', title:'Overlay', routerLink:'/overlay'},
       {iconName:'sms', title:'Popover', routerLink:'/popover'},
@@ -270,6 +280,7 @@ export class AppComponent {
       {iconName:'palette', title:'Colours', routerLink:'/colours'},
       {iconName:'margin', title:'Margin', routerLink:'/margin'},
       {iconName:'code', title:'Markup', routerLink:'/markup'},
+      {iconName:'help_outline', title:'Miscellaneous', routerLink:'/misc'},
       {iconName:'padding', title:'Padding', routerLink:'/padding'},
       {iconName:'format_color_text', title:'Text', routerLink:'/text'},
       {iconName:'open_with', title:'Width', routerLink:'/widths'}
@@ -302,7 +313,8 @@ export class AppComponent {
     {color:'green reversed', iconName:'subject', title:'Addendum', nestedItems:
     [
       {iconName:'view_comfy', title:'Elements alignment', routerLink:'/elements-alignment'},
-      {iconName:'view_quilt', title:'Page layout examples', routerLink:'/page-layout-examples'}
+      {iconName:'view_quilt', title:'Page layout examples', routerLink:'/page-layout-examples'},
+      {iconName:'block', title:'Unauthorised', routerLink:'/unauthorised'}
     ]},
   ];
 

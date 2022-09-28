@@ -1,0 +1,40 @@
+.actions-summary {
+    padding: .75rem 0 0 0;
+    overflow: hidden;
+    width: fit-content;
+    border-width: 2px;
+    border-style: solid;
+    border-color: _colour(border-feature-box);
+    border-radius: .5rem;
+    background-color: _colour(bg-feature-box);
+
+    // hack to hide double right border when wrapping
+    aa-actions-summary {
+        margin-right: -3px;
+        margin-left: 3px;
+    }
+
+    > * {
+        margin-right: 0;
+    }
+
+    .default {
+        border-color: _colour(aa-blue-100);
+    }
+
+    .not-started {
+        border-color: _colour(aa-grey-25);
+    }
+
+    .approved {
+        border-color: _palette(aa-green-100);
+    }
+
+    .rejected {
+        border-color: _palette(aa-red-100);
+    }
+
+    .pending {
+        border-color: _palette(aa-orange-100);
+    }
+}

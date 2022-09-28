@@ -8,13 +8,7 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     routerOutlet: boolean;
     ngTemplate: boolean;
     tabInfoRouterOutlet: boolean;
-    enableIcons: boolean;
-    enableCount: boolean;
-    tabCount: number;
-    iconName: string;
-    iconColour: string;
     toggleFullscreen: boolean;
-    activeColor: string;
     standardTabs: boolean;
     tabClicked: EventEmitter<TabNavigationItemComponent>;
     tabChanged: EventEmitter<TabNavigationItemComponent>;

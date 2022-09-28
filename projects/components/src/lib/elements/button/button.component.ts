@@ -21,6 +21,12 @@ export class ButtonComponent implements OnInit {
   @Input() iconName: string;
   @Input() title: string;
   @Input() iconColour: string;
+  @Input() buttonLarge: boolean;
+  @Input() buttonSummary: boolean;
+  @Input() showDescription: boolean;
+  @Input() status: string;
+  @Input() level: number;
+  @Input() desc: any;
 
   @Output() buttonClick = new EventEmitter<Event>();
 

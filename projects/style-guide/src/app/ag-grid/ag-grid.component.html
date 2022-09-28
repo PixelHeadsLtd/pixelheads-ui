@@ -2,7 +2,7 @@
   <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
   <h1>AG Grid</h1>
 </section>
-<section class="content-container padding-0">
+<section class="content-container grid ag-grid-full-height" [ngStyle]="{'height' : 'calc(100vh - 9rem)'}">
   <section class="content-repeater flex-group">  
       <section class="flex-1 col-left flex-start">
         <h2>Anchor</h2>
@@ -40,26 +40,44 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">Ag-Grid class names</td>
+              <td datalabel="Element">Page-level content-container</td>
+              <td datalabel="Attribute">Class</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.content-container .grid .ag-grid-full-height</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Page-level content-container</td>
+              <td datalabel="Attribute">[NgStyle]</td>
+              <td datalabel="Type">Custom style</td>
+              <td datalabel="Default">height : calc(100vh - 9rem)</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">ag-grid wrapper div</td>
+              <td datalabel="Attribute">Class</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.ag-grid-wrapper</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">ag-grid-angular</td>
               <td datalabel="Attribute">class</td>
               <td datalabel="Type">class name</td>
               <td datalabel="Default">.ag-theme-balham .ag-grid</td>
             </tr>
             <tr>
-              <td datalabel="Element">AG-Grid <a href="https://www.ag-grid.com/angular-data-grid/component-tooltip/" target="_blank">Custom tooltip</a></td>
-              <td datalabel="Attribute">tooltipComponent</td>
-              <td datalabel="Type">Component</td>
-              <td datalabel="Default">0</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">AG-Grid <a href="https://www.ag-grid.com/angular-data-grid/row-selection/" target="_blank">checkbox implementation</a></td>
-              <td datalabel="Attribute">checkboxSelection</td>
-              <td datalabel="Type">Boolean</td>
-              <td datalabel="Default">true</td>
+              <td datalabel="Element">TypeScript</td>
+              <td datalabel="Attribute"><strong class="aa-red-100">cellClass</strong> for your cell in columnDefs array</td>
+              <td datalabel="Type">Optional class for the <strong class="aa-red-100">tooltip marker chevron</strong></td>
+              <td datalabel="Default">
+                <strong class="aa-grey-25">.cell-marker-grey, </strong>
+                <strong class="aa-light-blue-100">.cell-marker-blue, </strong>
+                <strong class="aa-green-100">.cell-marker-green, </strong>
+                <strong class="aa-orange-100">.cell-marker-orange, </strong>
+                <strong class="aa-red-100">.cell-marker-red</strong>
+              </td>
             </tr>
           </tbody>
         </table>
-        <button (click)="bladeIsOpen($event)" class="margin-top-1 tertiary">See gist files for adding a custom tooltip...</button>
+        <button (click)="bladeIsOpen($event)" class="margin-top-1 tertiary">See Gist for sample HTML, custom tooltips and context-menus</button>
       </section>
       
       <!-- mini menu -->
@@ -70,10 +88,10 @@
         </nav>
     </section>
 
-    <ag-grid-angular 
+    <div class="ag-grid-wrapper">
+      <ag-grid-angular 
         #agGrid id="myGrid"
         class="ag-theme-balham ag-grid"
-        [ngStyle]="{'height' : 'calc(100vh - 26rem)'}"
         [tooltipShowDelay]="tooltipShowDelay"
         [enableRangeSelection]="true"
         [rowSelection]="'multiple'"
@@ -84,6 +102,7 @@
         (gridReady)="onGridReady($event)"
         [suppressClickEdit]="true">
     </ag-grid-angular>
+    </div>
     
     <aa-blade 
       [showModal]="false"
@@ -99,7 +118,7 @@
       >
       <article class="blade-content">
         <h2 #backToMenu class="boxed">Menu...</h2>
-        <nav class="margin-bottom-1 margin-top-0-75 bd-aa-grey-10 bd-bottom">
+        <nav class="margin-bottom-1 margin-top-0-75">
           <a (click)="scrollToElement(agGridHeight)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
             <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-light-blue-100 border-radius-50 padding-0-25">menu</span>
             <span class="anchor">Setting ag-grid height</span>
@@ -117,7 +136,7 @@
         <section #agGridHeight class="feature-box margin-top-1">
           <div class="flex-group space-between">
             <h2 class="boxed">Setting the grid height</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
           </div>
           <app-gist src="angloux/eb0cf91a2f53876188e72aa94a9b4000"></app-gist>
           <a class="flex-group flex-end" href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
@@ -126,7 +145,7 @@
         <section #customTooltip class="feature-box margin-top-1">
           <div class="flex-group space-between">
             <h2 class="boxed">Adding a custom tooltip</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
           </div>
           <h3>Part 1 of 4</h3>
           <p>In packages.json, install <br/><strong class="aa-red-100">"ag-grid-angular": "^24.1.0"</strong> and... <br/><strong class="aa-red-100">"ag-grid-community": "^24.1.0"</strong></p>
@@ -150,7 +169,7 @@
         <section #contextMenu class="feature-box margin-top-1">
           <div class="flex-group space-between">
             <h2 class="boxed">Adding a context-menu</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25">Back to top</a>
+            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
           </div>
 
           <h3>Part 1 of 5</h3>

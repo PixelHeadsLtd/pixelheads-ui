@@ -7,6 +7,7 @@ import { BladeBottomComponent } from './blade-bottom/blade-bottom.component';
 import { BladeTopComponent } from './blade-top/blade-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectTourComponent } from './project-tour/project-tour.component';
+import { UiBlockComponent } from './ui-block/ui-block.component';
 @NgModule({
   declarations: [
     BladeComponent,
@@ -15,6 +16,7 @@ import { ProjectTourComponent } from './project-tour/project-tour.component';
     BladeBottomComponent,
     BladeTopComponent,
     ProjectTourComponent,
+    UiBlockComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -24,6 +26,7 @@ import { ProjectTourComponent } from './project-tour/project-tour.component';
     BladeBottomComponent,
     BladeTopComponent,
     ProjectTourComponent,
+    UiBlockComponent
   ],
 })
 export class LayoutModule {}

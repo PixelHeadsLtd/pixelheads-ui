@@ -8,6 +8,6 @@ p {
     }
 }
 
-p + p {
+p + p:not(.aa-csh p) {
   margin-top: 1rem;
 }

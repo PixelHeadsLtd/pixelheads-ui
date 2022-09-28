@@ -320,6 +320,12 @@
     background-color: _colour(bg-primary);
     padding: 0 1.25rem 1.25rem;
     bottom: 0;
+
+    aa-button {
+      label {
+        display: none;
+      }
+    }
   }
 }
 

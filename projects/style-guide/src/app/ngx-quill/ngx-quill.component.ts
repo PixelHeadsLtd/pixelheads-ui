@@ -9,10 +9,23 @@ export class NgxQuillComponent {
 
   html: '';
   showEditor: boolean;
-  showCSH: boolean;
   popupPosition: string = 'display-top-right';
   toggleBlade: boolean;
   areYouSure: boolean;
+  showOnH1: boolean;
+  showOnH2: boolean;
+  showOnH3: boolean;
+  showOnH4: boolean;
+  showOnLabel: boolean;
+  showOnButton: boolean;
+  showOnAlert: boolean;
+  showOnCheckBoxOne: boolean;
+  showOnCheckBoxTwo: boolean;
+  showOnTextarea: boolean;
+  showOnPara: boolean;
+  showOnSelect: boolean;
+  showOnShield: boolean;
+  fullScreen: boolean;
 
   constructor() {}
 

@@ -135,6 +135,61 @@
       line-height: 2.25rem!important;
       border: 1px solid transparent;
 
+      &.cell-marker-red,
+      &.cell-marker-orange,
+      &.cell-marker-green,
+      &.cell-marker-blue,
+      &.cell-marker-grey
+       {
+        &:after {
+          content:'';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0; 
+          height: 0; 
+          border-bottom: .25rem solid transparent;
+          border-left: .25rem solid transparent;
+        }
+      }
+
+      &.cell-marker-red {
+        &:after {
+          border-top: .25rem solid _palette(aa-red-100);
+          border-right: .25rem solid _palette(aa-red-100);
+
+        }
+      }
+
+      &.cell-marker-orange {
+        &:after {
+          border-top: .25rem solid _palette(aa-orange-100);
+          border-right: .25rem solid _palette(aa-orange-100);
+
+        }
+      }
+
+      &.cell-marker-green {
+        &:after {
+          border-top: .25rem solid _palette(aa-green-100);
+          border-right: .25rem solid _palette(aa-green-100);
+        }
+      }
+
+      &.cell-marker-blue {
+        &:after {
+          border-top: .25rem solid _palette(aa-light-blue-100);
+          border-right: .25rem solid _palette(aa-light-blue-100);
+        }
+      }
+
+      &.cell-marker-grey {
+        &:after {
+          border-top: .25rem solid _palette(aa-grey-10);
+          border-right: .25rem solid _palette(aa-grey-10);
+        }
+      }
+
       .ag-select {
         .ag-picker-field-wrapper {
           background-color: _colour(bg-ag-grid)!important;
