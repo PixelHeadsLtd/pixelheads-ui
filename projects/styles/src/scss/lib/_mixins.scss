@@ -1,6 +1,6 @@
 @mixin button-blue {
-  background-color: _colour(bg-aa-blue-100);
-  border-color: _palette(aa-blue-100);
+  background-color: _colour(aa-blue-100);
+  border-color: _colour(aa-blue-100);
   color: _palette(white);
 }
 
@@ -66,18 +66,18 @@
 
 @mixin button-red-outline {
   background-color: _colour(bg-button-white);
-  border-color: _palette(aa-red-50);
+  border-color: _colour(aa-red-100);
   color: _palette(aa-red-100);
 }
 
 @mixin button-red-outline-hover {
   background-color: _colour(bg-button-white-hover);
-  border-color: _palette(aa-red-50);
+  border-color: _colour(aa-red-100);
 }
 
 @mixin button-blue-outline {
   background-color: _colour(bg-button-white);
-  border-color: _colour(border-blue);
+  border-color: _colour(aa-blue-100);
   color: _colour(aa-blue-100);
 }
 
@@ -545,4 +545,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 65%;
+}
+
+@mixin icon-center-large-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.15rem;
 }

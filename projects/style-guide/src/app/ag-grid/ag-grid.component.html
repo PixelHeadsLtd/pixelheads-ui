@@ -6,16 +6,23 @@
   <section class="content-repeater flex-group">  
       <section class="flex-1 col-left flex-start">
         <h2>Anchor</h2>
+        <div 
+          role="alert"
+          class="error margin-bottom-1" 
+          >
+          If the functionality AG-Grid offers is not required for your project, such as the ability to reorder columns etc, 
+          please always use a <a class="aa-red-100" routerLink="/tables">native table</a> 
+        </div>
         <div class="describe">
           <p>
-            There is currently a licencing issue with ag-grid v26.2.0 that is limiting some<br/>
-            functionality, so for now please continue to use v24.1.0 and<br/> 
-            include the enterprise version.
+            Use ag-grid version <strong class="aa-red-100">v24.1.0</strong>. We have the licence for 26.2.0
+            but this introduces a bug on the click event of the context-menu and only right-click works.
           </p>
           <p>
             For details around setting ag-grid height, custom-tooltips and context-menus, please<br/>
             click the "view gist" button on the right to open the side blade instructions.
           </p>
+          <p>For ag-grid documentation, please visit the <a href="https://www.ag-grid.com/angular-data-grid/getting-started/" target="_blank">ag-grid website.</a> </p>
         </div>
         <div class="flex-group flex-start">
           <div class="field">
@@ -93,13 +100,14 @@
         #agGrid id="myGrid"
         class="ag-theme-balham ag-grid"
         [tooltipShowDelay]="tooltipShowDelay"
-        [enableRangeSelection]="true"
+        [enableRangeSelection]="false"
         [rowSelection]="'multiple'"
         [gridOptions]="gridOptions"
         [defaultColDef]="defaultColDef"
         [rowData]="rowData"
         [pagination]="true"
         (gridReady)="onGridReady($event)"
+        [preventDefaultOnContextMenu]="true"
         [suppressClickEdit]="true">
     </ag-grid-angular>
     </div>
@@ -110,95 +118,474 @@
       suppressAutoClose="false"
       topPosition="3.5"
       zIndex="2"
-      bladeSize="one-column-width"
+      bladeSize="two-column-width"
       bladeHeading="Gist"
       [enableIcon]="true"
       iconName="table_rows"
       (close)="toggleBlade = false"
       >
       <article class="blade-content">
-        <h2 #backToMenu class="boxed">Menu...</h2>
-        <nav class="margin-bottom-1 margin-top-0-75">
-          <a (click)="scrollToElement(agGridHeight)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
-            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-light-blue-100 border-radius-50 padding-0-25">menu</span>
-            <span class="anchor">Setting ag-grid height</span>
-          </a>
-          <a (click)="scrollToElement(customTooltip)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
-            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-orange-100 border-radius-50 padding-0-25">help_outline</span>
-            <span class="anchor">Adding a custom tooltip</span>
-          </a>
-          <a (click)="scrollToElement(contextMenu)" class="flex-group margin-bottom-1 cursor-pointer flex-start flex-align-center bg-transparent border-none padding-0 text-decoration-none">
-            <span class="material-icons small margin-right-0-5 aa-white-100 bg-aa-green-100 border-radius-50 padding-0-25">more_vert</span>
-            <span class="anchor">Adding a context-menu</span>
-          </a>
-        </nav>
-
-        <section #agGridHeight class="feature-box margin-top-1">
-          <div class="flex-group space-between">
-            <h2 class="boxed">Setting the grid height</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
+        <!-- licence -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = true;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="getLicence"
+          accordionHeading="Get the latest Ag-grid licence"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor=""
+          iconName="settings"
+        >
+          <h2 class="margin-top-1">Copy and paste the licence code into your 'environment.ts' file</h2>
+          <div class="flex-group flex-start">
+            <button class="secondary" (click)="copyToClipboard(agGridLicence)">Click here to copy the code</button>
+            <div *ngIf="codeCopied" class="copied flex-group flex-start flex-align-center">
+              <div class="material-icons aa-orange-100 margin-right-0-25">thumb_up_alt</div>
+              <p class="padding-top-0-25 italic">Licence copied!</p>
+            </div>
           </div>
-          <app-gist src="angloux/eb0cf91a2f53876188e72aa94a9b4000"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
-        </section>
+        </aa-accordion>
+        <!-- setting height -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=true;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="settingHeight"
+          accordionHeading="Instructions for setting the ag-grid height"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor=""
+          iconName="settings"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Setting the grid height to use all the available space</h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 53rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
+
+        <!-- adding a custom tooltip - part 1 -->
+        <h2 class="margin-top-1 margin-bottom-0-25">Creating a custom tooltip</h2>
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=true; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="customTooltipOne"
+          accordionHeading="Part 1 of 4"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-blue-100"
+          iconName="sms"
+        >
+          <h2 class="margin-top-1">Part 1 of 4</h2>
+          <h3>Install the following packages in packages.json</h3>
+          <p>
+            <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
+            <strong class="aa-red-100">"ag-grid-community": "^26.2.0"</strong>
+          </p>
+        </aa-accordion>
+
+        <!-- adding a custom tooltip - part 2 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=true; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="customTooltipTwo"
+          accordionHeading="Part 2 of 4"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-blue-100"
+          iconName="sms"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/41635eefa1d9656f3f8f9a719d82c7c7" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Part 2 of 4 - Add ag-grid</h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 46rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/41635eefa1d9656f3f8f9a719d82c7c7.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
+
+        <!-- adding a custom tooltip - part 3 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=true; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="customTooltipThree"
+          accordionHeading="Part 3 of 4"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-blue-100"
+          iconName="sms"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/2e68516ea72b5c8452e08175e501cfe4" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Part 3 of 4 - Create the tooltip component to be imported in part 2</h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 50rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/2e68516ea72b5c8452e08175e501cfe4.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
+
+        <!-- adding a custom tooltip - part 4 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=true; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="customTooltipFour"
+          accordionHeading="Part 4 of 4"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-blue-100"
+          iconName="sms"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/cd4b84883f31fd781b81c14d121379dc" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Part 4 of 4 - Update your app.module</h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 25rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/cd4b84883f31fd781b81c14d121379dc.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
+
+        <!-- adding a context menu - part 1 -->
+        <h2 class="margin-top-1 margin-bottom-0-25">Creating a context-menu</h2>
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=true; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="contextMenuOne"
+          accordionHeading="Part 1 of 5"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-yellow-100"
+          iconName="menu_open"
+        >
+          <h2 class="margin-top-1">Part 1 of 5</h2>
+          <h3>Install the following packages in packages.json</h3>
+          <p>
+            <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
+            <strong class="aa-red-100">"ag-grid-community": "^26.2.0"</strong>
+          </p>
+        </aa-accordion>
+
+        <!-- adding a context menu - part 2 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=true; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="contextMenuTwo"
+          accordionHeading="Part 2 of 5"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-yellow-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/a202bc532c366edf319b54a01ceac680" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Part 2 of 5 - Create the ellipsis button & context-menu click function
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 82rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/a202bc532c366edf319b54a01ceac680.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
         
-        <section #customTooltip class="feature-box margin-top-1">
-          <div class="flex-group space-between">
-            <h2 class="boxed">Adding a custom tooltip</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
+        <!-- adding a context menu - part 3 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=true; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="contextMenuThree"
+          accordionHeading="Part 3 of 5"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-yellow-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/00f8d5c4dbb106c48372c66dec1fa304" target="_blank">View Gist on GitHub</a>
           </div>
-          <h3>Part 1 of 4</h3>
-          <p>In packages.json, install <br/><strong class="aa-red-100">"ag-grid-angular": "^24.1.0"</strong> and... <br/><strong class="aa-red-100">"ag-grid-community": "^24.1.0"</strong></p>
-          <h3>Part 2 of 4</h3>
-          <p>
-            Update your ag-grid html & associated typescript file with the following
-          </p>
-          <app-gist src="angloux/41635eefa1d9656f3f8f9a719d82c7c7"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/41635eefa1d9656f3f8f9a719d82c7c7" target="_blank">View Gist on GitHub</a>
-          <h3>Part 3 of 4</h3>
-          <p>Create the tooltip component</p>
-          <app-gist src="angloux/2e68516ea72b5c8452e08175e501cfe4"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/2e68516ea72b5c8452e08175e501cfe4" target="_blank">View Gist on GitHub</a>
-          <h3>Part 4 of 4</h3>
-          <p>Update your app.module</p>
-          <app-gist src="angloux/cd4b84883f31fd781b81c14d121379dc"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/cd4b84883f31fd781b81c14d121379dc" target="_blank">View Gist on GitHub</a>
-        </section>
+          <h2 class="margin-top-1">Part 3 of 5 - Add ag-grid-angular to your template
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 13rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/00f8d5c4dbb106c48372c66dec1fa304.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>       
 
-        <!-- Context Menu -->
-        <section #contextMenu class="feature-box margin-top-1">
-          <div class="flex-group space-between">
-            <h2 class="boxed">Adding a context-menu</h2>
-            <a (click)="scrollToElement(backToMenu)" class="margin-top-0-25 cursor-pointer">Back to top</a>
+        <!-- adding a context menu - part 4 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=true; 
+            contextMenuFive=false;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="contextMenuFour"
+          accordionHeading="Part 4 of 5"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-yellow-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2" target="_blank">View Gist on GitHub</a>
           </div>
+          <h2 class="margin-top-1">Import your 'ellipsis-context-menu' from part 2 and update columnDefs          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 82rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>
+        
+        <!-- adding a context menu - part 5 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence = false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=true;
+            validation=false
+          "
+          [dragable]="false"
+          [showBody]="contextMenuFive"
+          accordionHeading="Part 5 of 5"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-yellow-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-1">Add your EllipsisContextMenuComponent to your app.module
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 24rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>   
 
-          <h3>Part 1 of 5</h3>
-          <p>In packages.json, install <br/><strong class="aa-red-100">"ag-grid-angular": "^24.1.0"</strong> and... <br/><strong class="aa-red-100">"ag-grid-community": "^24.1.0"</strong></p>
-     
-          <h3>Part 2 of 5</h3>
-          <p>Create your ellipsis-context-menu files</p>
-          <app-gist src="angloux/a202bc532c366edf319b54a01ceac680"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/a202bc532c366edf319b54a01ceac680" target="_blank">View Gist on GitHub</a>
-    
-          <h3>Part 3 of 5</h3>
-          <p>
-            Add your ag-grid markup
-          </p>
-          <app-gist src="angloux/00f8d5c4dbb106c48372c66dec1fa304"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/00f8d5c4dbb106c48372c66dec1fa304" target="_blank">View Gist on GitHub</a>
+        <!-- validation -->
+        <h2 class="margin-top-1 margin-bottom-0-25">Validation</h2>
+        <aa-accordion
+        [disabled]="false"
+        (open)="
+          getLicence = false;
+          settingHeight=false;
+          customTooltipOne=false; 
+          customTooltipTwo=false; 
+          customTooltipThree=false; 
+          customTooltipFour=false; 
+          contextMenuOne=false; 
+          contextMenuTwo=false; 
+          contextMenuThree=false; 
+          contextMenuFour=false; 
+          contextMenuFive=false;
+          validation=true
+        "
+        [dragable]="false"
+        [showBody]="validation"
+        accordionHeading="Adding validation"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconBgColor="aa-white-100"
+        iconName="error_outline"
+      >
+        <div header-custom>
+          <a class="aa-white-100" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
+        </div>
+        <h2 class="margin-top-1">Adding validation</h2>
+        <p>
+          Begin by creating your custom tooltip as described above <strong class="aa-red-100">Creating a custom tooltip</strong> <br/>and inject your error message as required.
+        </p>
+        <p class="margin-bottom-1">
+          Then do the following...
+        </p>
+        <a href="https://gist.github.com/angloux/4d619eaff00d00449b7c871d59cd4d65" target="_blank">Further notes here in the Gist</a>
+        <iframe frameborder=0 
+        style="width: 100%; height: 24rem;" 
+        scrolling="no" 
+        seamless="seamless" 
+        srcdoc='<html><body><script src="https://gist.github.com/angloux/4d619eaff00d00449b7c871d59cd4d65.js"></script></body></html>'
+        ></iframe>
+      </aa-accordion>  
 
-          <h3>Part 4 of 5</h3>
-          <p>
-            Update your ag-grid ts file
-          </p>
-          <app-gist src="angloux/43675ada24abcaa6a719cf48204f1ce2"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2" target="_blank">View Gist on GitHub</a>
-          
-          <h3>Part 5 of 5</h3>
-          <p>Update your app.module</p>
-          <app-gist src="angloux/0e113052792f52d886239294d063b2a0"></app-gist>
-          <a class="flex-group flex-end" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
-        </section>
       </article>
     </aa-blade>
 </section>

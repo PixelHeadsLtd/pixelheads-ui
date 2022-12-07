@@ -1,4 +1,8 @@
-<article class="accordion-container">
+<article 
+  class="accordion-container"
+  [ngStyle]="{'min-width' : minWidth+'rem'}"
+  [ngClass]="{'box-shadow-strong' : showBody}"
+>
   <h3 class="margin-0">
     <button 
       class="accordion-trigger flex-group space-between flex-align-center {{customBgColor}}" 
@@ -20,22 +24,37 @@
         </span>
         <div class="flex-group flex-end flex-align-center">
           <ng-content select="[header-custom]"></ng-content>
-          <div>
-            <div 
-              class="toggle-chevrons"
-              [class.icon-chevron-down]="!showBody" 
-              [class.icon-chevron-up]="showBody"
-            >
-            </div>
             <div class="toggle-icons flex-align-center">
               <div *ngIf="!showBody" class="material-icons">add</div>
               <div *ngIf="showBody" class="material-icons">remove</div>
             </div>
-          </div>
         </div>
     </button>
   </h3>
-  <div *ngIf="showBody" [id]="sectionId" class="accordion-panel" [ngClass]="{'clean': accordionClean}">
-    <ng-content></ng-content>
+
+  <div 
+    *ngIf="showBody && !enableAnimation" 
+    [id]="sectionId" 
+    class="accordion-panel"
+    >
+      <section class="padding-1 padding-top-0">
+        <ng-content></ng-content>
+      </section>
+  </div>
+
+  <div 
+    *ngIf="enableAnimation" 
+    [ngClass]="{'show-accordion-panel' : showBody}" 
+    [id]="sectionId" 
+    class="accordion-panel"
+    >
+    <section 
+      class="dynamic-height"
+      [ngStyle]="{'height': setHeight ? eleHeight+'px' : '0'}"
+    >
+      <div class="accordion-content" #myIdentifier>
+        <ng-content select="[animate]"></ng-content>
+      </div>
+    </section>
   </div>
 </article>

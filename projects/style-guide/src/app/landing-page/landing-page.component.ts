@@ -35,6 +35,8 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
   stepThree = "./assets/images/samples/email-templates/step3.png";
   stepFour = "./assets/images/samples/email-templates/step4.png";
   stepFive = "./assets/images/samples/email-templates/step5.png";
+  stepSix = "./assets/images/samples/email-templates/step6.png";
+  stepSeven = "./assets/images/samples/email-templates/step7.png";
 
   public constructor(
     private changeDetector: ChangeDetectorRef,
@@ -111,7 +113,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'progress-indicator',
     'progress-indicator-lh',
     'alerts',
-    'shields',
+    'alert-shields',
     'colours',
     'icon-picker',
     'icons',
@@ -148,6 +150,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     'html-email',
     'elements-alignment',
     'slider',
+    'status-indicator',
     'comments',
     'actions-summary'
   ];

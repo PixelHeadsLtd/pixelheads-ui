@@ -13,6 +13,11 @@ export class AccordionComponent implements OnInit {
   showBodyFour: boolean;
   showBodyFive: boolean;
   showBodySix: boolean;
+  showBodySeven: boolean;
+  showBodyEight: boolean;
+  showBodyNine: boolean;
+  showBodyTen: boolean;
+  showBodyOneNested: boolean;
   showBodyCustom: boolean;
   showAccordion: boolean;
   showAccordionAlt: boolean;

@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   agGridLicense:
-  'SoftwareOne_UK_on_behalf_of_Anglo_American_Services_UK_LTD_Expertly_Managed_Computers_Multiple_Applications_10_Devs__9_January_2021_[v2]_MTYxMDE1MDQwMDAwMA==3c9f6bd614ae697eb4368e4a2933321f'
+  'CompanyName=SparkDynamic GmbH_on_behalf_of_ANGLO AMERICAN SERVICES (UK) LTD.,LicensedGroup=Expertly Managed Computers,LicenseType=MultipleApplications,LicensedConcurrentDeveloperCount=50,LicensedProductionInstancesCount=0,AssetReference=AG-022882,ExpiryDate=19_February_2023_[v2]_MTY3Njc2NDgwMDAwMA==946d390650835fc8398c4575b3c1c97a'
 };

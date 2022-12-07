@@ -11,6 +11,8 @@ export class SummaryTopListComponent implements OnInit {
   @Input() itemTitle: string;
   @Input() itemDescription: string;
   @Input() highlight: boolean;
+  @Input() truncate: boolean;
+  @Input() maxWidth: number;
 
   constructor() { }
 

@@ -11,16 +11,18 @@
         <p>The slider can be used as an alternative for a standard checkbox.
         </p>
       </div>
+      <!-- <button (click)="setChecked(true)">Test</button> -->
       <div class="flex-group flex-start">
         <aa-slider
           [sliderInline]="false"
-          sliderChecked=""
           labelText="Apples"
           fieldClass=""
           sliderId=""
           sliderName=""
           sliderValue=""
           disabled=""
+          (sliderCheckedChanged)="onSliderCheckedChanged($event)"
+          [sliderChecked]="testSlider"
         >
         </aa-slider>
         <aa-slider
@@ -164,7 +166,7 @@
     (close)="toggleBlade = false"
   >
   <article class="blade-content">
-    <app-gist src="angloux/46a72ba8314eee3db9bc42ad028da675"></app-gist>
     <a href="https://gist.github.com/angloux/46a72ba8314eee3db9bc42ad028da675" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/46a72ba8314eee3db9bc42ad028da675"></app-gist>
   </article>
 </aa-blade>

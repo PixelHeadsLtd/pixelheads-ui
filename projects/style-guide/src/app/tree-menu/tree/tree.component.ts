@@ -14,7 +14,7 @@ export class TreeComponent implements OnInit {
   }
 
   toggleChild(node: { showChildren: boolean; }) {
-    node.showChildren = !node.showChildren;
+    node.showChildren =! node.showChildren;
   }
-
+ 
 }

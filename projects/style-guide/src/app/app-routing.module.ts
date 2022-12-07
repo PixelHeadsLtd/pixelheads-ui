@@ -46,13 +46,14 @@ import {TabPageThreeComponent} from './tab-page-three/tab-page-three.component';
 
 // Patterns
 import {AlertsComponent} from './alerts/alerts.component';
-import {ShieldsComponent} from './shields/shields.component';
+import {AlertShieldsComponent} from './alert-shields/alert-shields.component';
 import {ActionsSummaryComponent} from './actions-summary/actions-summary.component';
 import {BoxComponent} from './box/box.component';
 import {ColoursComponent} from './colours/colours.component';
 import {IconsComponent} from './icons/icons.component';
 import {ProgressBarComponent} from './progress-bar/progress-bar.component';
 import {ProgressCircleComponent} from './progress-circle/progress-circle.component';
+import {StatusIndicatorComponent} from './status-indicator/status-indicator.component';
 import {TagsComponent} from './tags/tags.component';
 
 // Widgets
@@ -169,7 +170,8 @@ const routes: Routes = [
   { path: 'progress-bar', component: ProgressBarComponent },
   { path: 'progress-circle', component: ProgressCircleComponent },
   { path: 'select', component: SelectComponent },
-  { path: 'shields', component: ShieldsComponent },
+  { path: 'alert-shields', component: AlertShieldsComponent },
+  { path: 'status-indicator', component: StatusIndicatorComponent },
   { path: 'stepper', component: StepperComponent },
   { path: 'summary-top', component: SummaryTopComponent },
   { path: 'tables', component: TablesComponent },

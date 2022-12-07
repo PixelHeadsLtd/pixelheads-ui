@@ -51,7 +51,7 @@ $colour: (
   bg-slider:               _palette(aa-grey-25),
   bg-slider-button:        _palette(white),
   bg-button-white:         _palette(white),
-  bg-button-white-hover:   _palette(aa-grey-2),
+  bg-button-white-hover:   _palette(aa-grey-5),
   bg-ngb-datepicker-head:  _palette(aa-grey-5),
   bg-ngb-datepicker-body:  _palette(aa-grey-2),
 
@@ -86,6 +86,7 @@ $colour: (
   search-placeholder:      _palette(aa-light-blue-50),
   quick-links:             _palette(aa-light-blue-100),
   readonly:                _palette(aa-grey-5),
+  accordion-toggle:        _palette(aa-blue-100),
 
   dt:                      _palette(aa-light-blue-100),
   link:                    _palette(aa-light-blue-100),
@@ -215,12 +216,6 @@ $colour: (
   
   aa-white-100:            _palette(aa-white-100),
   bg-aa-white-100:         _palette(aa-white-100),
-  aa-blue-100:             _palette(aa-blue-100),
-  aa-light-blue-100:       _palette(aa-light-blue-100),
-  aa-light-blue-15:        _palette(aa-light-blue-15),
-  aa-light-blue-5:         _palette(aa-light-blue-5),
-  bg-aa-blue-100:          _palette(aa-blue-100),
-  aa-orange-5:             _palette(aa-orange-5),
 
   aa-grey-100:             _palette(aa-grey-100),
   aa-grey-50:              _palette(aa-grey-50),
@@ -229,8 +224,60 @@ $colour: (
   aa-grey-5:               _palette(aa-grey-5),
   aa-grey-2:               _palette(aa-grey-2),
 
+  // TINTS - Blue
+  aa-blue-100:             _palette(aa-blue-100),
+  aa-blue-70:              _palette(aa-blue-70),
+  aa-blue-60:              _palette(aa-blue-60),
+  aa-blue-50:              _palette(aa-blue-50),
+  aa-blue-40:              _palette(aa-blue-40),
+
+  // TINTS - Light blue
+  aa-light-blue-100:       _palette(aa-light-blue-100),
+  aa-light-blue-80:        _palette(aa-light-blue-80),
+  aa-light-blue-60:        _palette(aa-light-blue-60),
+  aa-light-blue-50:        _palette(aa-light-blue-50),
+  aa-light-blue-40:        _palette(aa-light-blue-40),
+  aa-light-blue-30:        _palette(aa-light-blue-30),
+  aa-light-blue-15:        _palette(aa-light-blue-15),
+  aa-light-blue-5:         _palette(aa-light-blue-5),
+
+  // TINTS - Red
   aa-red-100:              _palette(aa-red-100),
+  aa-red-80:               _palette(aa-red-80),
+  aa-red-50:               _palette(aa-red-50),
+  aa-red-25:               _palette(aa-red-25),
+  aa-red-10:               _palette(aa-red-10),
+  aa-red-8:                _palette(aa-red-8),
+  aa-red-5:                _palette(aa-red-5),
+  aa-red-3:                _palette(aa-red-3),
+
+  // TINTS - Green
+  aa-green-5:              _palette(aa-green-5),
+  aa-green-15:             _palette(aa-green-15),
+
+  // TINTS - Orange
+  aa-orange-100:           _palette(aa-orange-100),
+  aa-orange-50:            _palette(aa-orange-50),
+  aa-orange-25:            _palette(aa-orange-25),
+  aa-orange-10:            _palette(aa-orange-10),
+  aa-orange-5:             _palette(aa-orange-5),
+
+  // TINTS - Plum
+  aa-plum-100:             _palette(aa-plum-100),
+  aa-plum-50:              _palette(aa-plum-50),
+  aa-plum-25:              _palette(aa-plum-25),
+  aa-plum-15:              _palette(aa-plum-15),
+  aa-plum-5:               _palette(aa-plum-5),
+
+  // TINTS - Burgundy
+  aa-burgundy-100:         _palette(aa-burgundy-100),
+  aa-burgundy-50:          _palette(aa-burgundy-50),
+  aa-burgundy-25:          _palette(aa-burgundy-25),
+  aa-burgundy-15:          _palette(aa-burgundy-15),
+  aa-burgundy-5:           _palette(aa-burgundy-5),
+
   aa-blue-sky-100:         _palette(aa-blue-sky-100),
+
   aa-pink-25:            rgb(255, 243, 247),
 
   white-transparency:     rgba(255, 255, 255, 0.26),

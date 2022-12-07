@@ -23,8 +23,10 @@
 
         <aa-popover 
           leftPos="0" 
+          rightPos="initial" 
           topPos="5.5" 
           width="22"
+          zIndex="10"
           >
           <ng-container call-to-action>
             <div class="field label-transparent">
@@ -167,9 +169,15 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
-            <td datalabel="Attribute">leftPos</td>
+            <td datalabel="Attribute">leftPos - <strong class="aa-red-100">to show popover on the left</strong></td>
             <td datalabel="Type">Number</td>
-            <td datalabel="Default">0</td>
+            <td datalabel="Default">0 <strong class="aa-red-100">(set rightPos to initial)</strong></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Attribute">rightPos - <strong class="aa-red-100">to show popover on the right</strong></td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">0 <strong class="aa-red-100">(set leftPos to initial)</strong></td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
@@ -194,6 +202,12 @@
             <td datalabel="Attribute">togglePopover()</td>
             <td datalabel="Type">Event</td>
             <td datalabel="Default">this.popOver.close();</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Attribute">zIndex</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">10</td>
           </tr>
           <tr>
             <td colspan="4">
@@ -250,7 +264,7 @@
     (close)="toggleBlade = false"
 >
   <article class="blade-content">
-    <app-gist src="angloux/2dbf290ef0c433a5ae3b075dabddbcd1"></app-gist>
     <a href="https://gist.github.com/angloux/2dbf290ef0c433a5ae3b075dabddbcd1" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/2dbf290ef0c433a5ae3b075dabddbcd1"></app-gist>
   </article>
 </aa-blade>

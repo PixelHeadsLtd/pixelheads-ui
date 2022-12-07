@@ -1,7 +1,8 @@
-import { Component, ViewChild, Output, EventEmitter } from "@angular/core";
+import { Component } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { GridOptions, MenuItemDef } from 'ag-grid-community';
 import { CustomTooltipComponent } from './custom-tooltip.component';
+import { CustomValidationTooltipComponent } from './custom-validation-tooltip.component';
 import { CustomCardComponent } from './custom-card.component';
 import { AvatarComponent } from "./avatar.component";
 import { EllipsisContextMenuComponent } from './ellipsis-context-menu/ellipsis-context-menu.component';
@@ -18,6 +19,19 @@ export class AgGridComponent {
   defaultColDef;
   rowData;
   headerCheckboxSelection:boolean;
+  settingHeight: boolean;
+  customTooltipOne: boolean;
+  customTooltipTwo: boolean;
+  customTooltipThree: boolean;
+  customTooltipFour: boolean;
+  contextMenuOne: boolean;
+  contextMenuTwo: boolean;
+  contextMenuThree: boolean;
+  contextMenuFour: boolean;
+  contextMenuFive: boolean;
+  validation: boolean;
+  getLicence: boolean;
+  codeCopied: boolean;
   
   awarded: string = 'Gold';
   awardDate: string = '19-Apr-2021';
@@ -27,6 +41,26 @@ export class AgGridComponent {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
+  agGridLicence = `export const environment = {
+    production: false,
+    agGridLicense:
+      'CompanyName=SparkDynamic GmbH_on_behalf_of_ANGLO AMERICAN SERVICES (UK) LTD.,LicensedGroup=Expertly Managed Computers,LicenseType=MultipleApplications,LicensedConcurrentDeveloperCount=50,LicensedProductionInstancesCount=0,AssetReference=AG-022882,ExpiryDate=19_February_2023_[v2]_MTY3Njc2NDgwMDAwMA==946d390650835fc8398c4575b3c1c97a'
+  };`;
+
+  copyToClipboard(item): void {
+    let listener = (e: ClipboardEvent) => {
+        e.clipboardData.setData('text/plain', (item));
+        e.preventDefault();
+    };
+
+    document.addEventListener('copy', listener);
+    document.execCommand('copy');
+    document.removeEventListener('copy', listener);
+    this.codeCopied = true;
+    setTimeout(()=>{                         
+      this.codeCopied = false;
+    }, 3000);
+  }
 
   constructor(public http: HttpClient) {
     this.defaultColDef = { 
@@ -35,6 +69,11 @@ export class AgGridComponent {
       editable: true,
     };
     this.tooltipShowDelay = 0;
+  }
+
+  private cellClass(params) {
+    if (params.value === 19 || params.value === '29/08/2004' || params.value === 'Gymnastics' || params.value === 0)
+      return "error"
   }
 
   private columnDefs = [
@@ -46,7 +85,7 @@ export class AgGridComponent {
       headerCheckboxSelection: true,
       headerCheckboxSelectionFilteredOnly: true,
       checkboxSelection: true,
-      cellClass: "text-medium link-grid-primary anchor-underline",
+      cellClass: this.cellClass,
       tooltipField: "age", // tell ag-grid to use this cell as a tooltip
       tooltipComponent: "CustomCardComponent", // pass in our custom-card.component
       cellRenderer: 'AvatarComponent', // display the image avatar in ag-grid cell
@@ -60,14 +99,16 @@ export class AgGridComponent {
     {
       field: "Context menu",
       width: 110,
-      cellRenderer: 'ellipsisContextMenuCell'
+      cellRenderer: 'ellipsisContextMenuCell',
+      cellClass: this.cellClass
     },
     {
       headerName: 'Age',
-      colId: 'action',
       field: "age",
-      width: 140,
-      editable: true,
+      width: 50,
+      tooltipField: "age",
+      tooltipComponent: "CustomValidationTooltipComponent",
+      cellClass: this.cellClass
     },
     {
       field: "year",
@@ -76,6 +117,9 @@ export class AgGridComponent {
     {
       field: "date",
       width: 110,
+      tooltipField: "date",
+      tooltipComponent: "CustomValidationTooltipComponent",
+      cellClass: this.cellClass
     },
     {
       headerName: 'Hover for custom tooltip',
@@ -96,6 +140,9 @@ export class AgGridComponent {
     {
       field: "bronze",
       width: 100,
+      tooltipField: "bronze",
+      tooltipComponent: "CustomValidationTooltipComponent",
+      cellClass: this.cellClass
     },
     {
       field: "total",
@@ -121,6 +168,7 @@ export class AgGridComponent {
     },
     frameworkComponents: {
       CustomTooltipComponent: CustomTooltipComponent, 
+      CustomValidationTooltipComponent: CustomValidationTooltipComponent, 
       CustomCardComponent: CustomCardComponent, 
       AvatarComponent: AvatarComponent,
       ellipsisContextMenuCell: EllipsisContextMenuComponent
@@ -166,7 +214,7 @@ export class AgGridComponent {
     this.http
       .get(
         "https://raw.githubusercontent.com/ag-grid/ag-grid/master/packages/ag-grid-docs/src/olympicWinnersSmall.json"
-        //"../assets/data.json"
+        // "../assets/data.json"
       )
       .subscribe((data) => {
         this.rowData = data;

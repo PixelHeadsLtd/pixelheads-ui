@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'aa-slider',
@@ -13,13 +13,30 @@ export class SliderComponent implements OnInit {
   @Input() sliderInline: boolean;
   @Input() sliderId: any;
   @Input() sliderName: any;
-  @Input() sliderValue: any;
-  @Input() sliderChecked: any;
   @Input() disabled: any;
+  sliderCheckedValue: any;
+  @Input() set sliderChecked(value: any) {
+    this.sliderCheckedValue = value;
+    if (value) {
+      this.sliderCheckedChanged.emit(true);
+    } else {
+      this.sliderCheckedChanged.emit(false);
+    }
+  }
+  @Output() sliderCheckedChanged = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onChange(event: any) {
+    if (event.target.checked) {
+      this.sliderCheckedChanged.emit(true);
+      this.sliderCheckedValue = true;
+    } else {
+      this.sliderCheckedChanged.emit(false);
+      this.sliderCheckedValue = false;
+    }
+  }
 }

@@ -35,6 +35,12 @@
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
+            <td datalabel="Element">aa-summary-top</td>
+            <td datalabel="Attribute">displayBlock</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
             <td datalabel="Element">aa-summary-top-list</td>
             <td datalabel="Attribute">[highlight]</td>
             <td datalabel="Type">Boolean</td>
@@ -52,6 +58,18 @@
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your Descripton</td>
           </tr>
+          <tr>
+            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Attribute">truncate</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Attribute">maxWidth (Only if using truncate)</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your number</td>
+          </tr>
         </tbody>
       </table>
     </section>
@@ -64,11 +82,35 @@
       </nav>
     </div>
     <div class="margin-top-2">
-      <aa-summary-top>
-        <aa-summary-top-list highlight="true" class="component" [itemTitle]="'Employee name'" [itemDescription]="'Paul Smith'"></aa-summary-top-list>
-        <aa-summary-top-list class="component" [itemTitle]="'Role'" [itemDescription]="'Project Manager'"></aa-summary-top-list>
-        <aa-summary-top-list class="component" [itemTitle]="'Department'" [itemDescription]="'Security'"></aa-summary-top-list>
-        <aa-summary-top-list class="component" [itemTitle]="'Country'" [itemDescription]="'United Kingdom'"></aa-summary-top-list>
+      <aa-summary-top [displayBlock]="false">
+        <aa-summary-top-list 
+          highlight="true" 
+          class="component" 
+          itemTitle="Employee name" 
+          itemDescription="Paul Smith">
+        </aa-summary-top-list>
+        <aa-summary-top-list 
+          class="component" 
+          itemTitle="Role" 
+          itemDescription="Project Manager">
+        </aa-summary-top-list>
+        <aa-summary-top-list 
+          class="component" 
+          itemTitle="Department" 
+          itemDescription="Security">
+        </aa-summary-top-list>
+        <aa-summary-top-list 
+          class="component" 
+          itemTitle="Country" 
+          itemDescription="United Kingdom">
+        </aa-summary-top-list>
+        <aa-summary-top-list 
+          class="component" 
+          [truncate]="true"
+          maxWidth="10"
+          itemTitle="Enabling truncation" 
+          itemDescription="Set 'truncate' to true then add a 'maxWidth' number">
+        </aa-summary-top-list>
       </aa-summary-top>
     </div>
   </section>

@@ -35,6 +35,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CustomTooltipComponent } from './ag-grid/custom-tooltip.component';
+import { CustomValidationTooltipComponent } from './ag-grid/custom-validation-tooltip.component';
 import { CustomCardComponent } from './ag-grid/custom-card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
@@ -75,7 +76,7 @@ import { ReleaseNotesComponentsComponent } from './_release-notes/release-notes-
 import { ReleaseNotesStylesComponent } from './_release-notes/release-notes-styles.component';
 import { SelectComponent } from './select/select.component';
 import { SharedModule } from './shared/shared.module';
-import { ShieldsComponent } from './shields/shields.component';
+import { AlertShieldsComponent } from './alert-shields/alert-shields.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { SummaryTopComponent } from './summary-top/summary-top.component';
 import { TablesComponent } from './tables/tables.component';
@@ -110,6 +111,7 @@ import { GraphicComponent } from './unauthorised/graphic.component';
 import { MiscComponent } from './misc/misc.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
+import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
 
 @NgModule({
   declarations: [
@@ -132,6 +134,7 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     CarouselComponent,
     CustomCardComponent,
     CustomTooltipComponent,
+    CustomValidationTooltipComponent,
     CheckboxComponent,
     ColoursComponent,
     ContextMenuComponent,
@@ -170,7 +173,7 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     ProgressCircleComponent,
     ReleaseNotesComponentsComponent,
     ReleaseNotesStylesComponent,
-    ShieldsComponent,
+    AlertShieldsComponent,
     SelectComponent,
     StepperComponent,
     SummaryTopComponent,
@@ -209,7 +212,8 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     GraphicComponent,
     MiscComponent,
     ListSelectableComponent,
-    UiBlockComponent
+    UiBlockComponent,
+    StatusIndicatorComponent
   ],
   imports: [
     FormsModule,
@@ -229,7 +233,7 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     WidgetsModule,
     DragDropModule,
     QuillModule.forRoot(),
-    AgGridModule.withComponents([CustomTooltipComponent, CustomCardComponent, AvatarComponent]),
+    AgGridModule.withComponents([CustomTooltipComponent, CustomValidationTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
   bootstrap: [AppComponent],
   entryComponents: [

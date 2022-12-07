@@ -498,7 +498,7 @@ aa-dashboard-favourites {
   }
 }
 
-.blade-navigation, .accordion-trigger, .global-search {
+.blade-navigation, .global-search {
   // for CORE menu-blade ONLY. Here we are mapping our nice icons to the font-awesome "fa-" icons that are coming from the back-end
 
   .icon-curve-manager {
@@ -669,6 +669,11 @@ aa-dashboard-favourites {
 
   .icon-monitoring {
     background-image: url("#{$icon-path}/icon-monitoring.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-report-problem {
+    background-image: url("#{$icon-path}/icon-report-problem.svg");
     @include icon-button-large-svg;
   }
 
@@ -1049,6 +1054,11 @@ aa-dashboard-favourites {
 .fingerprint, .avatar > div {
   @include icon-center-svg;
   background-image: url("#{$icon-path}/fingerprint-24px.svg");
+}
+
+.icon-time {
+  @include icon-center-large-svg;
+  background-image: url("#{$icon-path}/icon-time.svg");
 }
 
 .face-very-dissatisfied-blk {background-image: url("#{$icon-path}/face-very-dissatisfied-blk.svg");}

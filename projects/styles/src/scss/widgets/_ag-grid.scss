@@ -1,3 +1,18 @@
+// SETTING AG-GRID FULL HEIGHT (.ag-grid-full-height class should be added to th epage wrapper, e.g. content-container)
+.ag-grid-full-height {
+  display: flex!important;
+  flex-direction: column;
+
+  .ag-grid-wrapper {
+      flex: 1 1 auto;
+
+      ag-grid-angular {
+          width: 100%;
+          height: 100%;
+      }
+  }
+}
+
 // AG-GRID PARENT COMPONENT STYLING
 .blade {
   .ag-grid {
@@ -21,6 +36,7 @@
     background-color: _colour(bg-primary);
     padding: .5rem;
     border-radius: .5rem;
+    color: _colour(body-text);
 
     p {
       margin: 0 0 .25rem 0;
@@ -134,6 +150,50 @@
       padding-right: calc(#{$cell-horizontal-padding}) !important;
       line-height: 2.25rem!important;
       border: 1px solid transparent;
+
+      &.ag-cell.ag-cell-inline-editing {
+        height: 100%;
+      }
+
+      &.ag-cell-inline-editing {
+        padding: 0!important;
+        border: 1px solid _colour(aa-light-blue-100)!important;
+        background: _colour(bg);
+        .ag-cell-edit-wrapper {
+          .ag-cell-editor {
+            .ag-input-field-input {
+              height: 100%;
+              padding-left: .75rem;
+              background-color: transparent;
+              border: none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+
+      // Validation
+      &.error + .custom-tooltip {
+        color: red!important;
+        background-color: red!important;
+        
+      }
+      &.error {
+        background-color: _colour(aa-red-10);
+        padding-right: 2rem!important;
+        &:after {
+          content: 'error_outline';
+          position: absolute;
+          right: .5rem;
+          top: 0;
+          font-family: _font(material-icons);
+          font-size: _font(size-medium);
+          color: _colour(aa-red-100);
+        }
+        .ag-input-field-input {
+          padding-right: 0;
+        }
+      }
 
       &.cell-marker-red,
       &.cell-marker-orange,

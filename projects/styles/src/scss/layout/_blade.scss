@@ -7,10 +7,25 @@
   background-color: _colour(bg-modal);
 }
 
-.half-column-width {width: 20rem; right: -20rem;}
-.one-column-width {width: 35rem; right: -35rem;}
-.two-column-width {width: 50rem; right: -50rem;}
-.xl-column-width {width: 66rem; right: -66rem;}
+.half-column-width {
+  width: 20rem;
+  right: -20rem;
+}
+
+.one-column-width {
+  width: 35rem;
+  right: -35rem;
+}
+
+.two-column-width {
+  width: 50rem;
+  right: -50rem;
+}
+
+.xl-column-width {
+  width: 66rem;
+  right: -66rem;
+}
 
 .blade.show-blade {
   right: 0 !important;
@@ -46,13 +61,14 @@
     .blade-content {
       top: 5.5rem;
     }
+
     &.custom-header-tabs {
       .tab-navigation {
         top: 3rem;
       }
     }
   }
-  
+
   .blade-footer,
   .blade-header,
   .blade-content {
@@ -75,16 +91,18 @@
       h2 {
         margin: .25rem 0 0 0;
       }
+
       label,
       aa-button label {
         display: none;
       }
+
       .field {
         padding-top: 0;
       }
     }
 
-    .pin, 
+    .pin,
     .header-icon {
       color: _colour(blade-icon);
     }
@@ -95,85 +113,95 @@
       vertical-align: middle;
       transform: rotate(90deg);
       cursor: pointer;
-  
+
       &.pinned {
         transform: rotate(0);
       }
     }
-  
+
   }
+
   .blade-content {
     padding: 0 0 .75rem 0;
     overflow-y: auto;
     overflow-x: hidden;
     top: 3.48rem;
     bottom: 5rem;
-  
+
     h3 {
       margin-bottom: .75rem;
     }
-  
-    h2, h3 {
+
+    h2,
+    h3 {
       &:first-child {
         margin-top: 0;
       }
     }
-    
+
     // start accordions
     aa-accordion {
       &:first-child {
         display: block;
-        margin-top: -1rem;
       }
+
       .accordion-container {
         position: relative;
-        left: -1.5rem;
+        left: -1.25rem;
         width: calc(100% + 2.75rem);
-        margin-bottom: 0;
+        margin-bottom: 1px !important;
+        border-radius: 0;
+        box-shadow: none;
+
         .accordion-trigger {
-          height: 2.75rem;
-          width: 100%;
-          padding: 0 1rem 0 1rem;
+          padding: 0 1rem 0 1.25rem;
           font-family: _font(family-regular);
           background-color: _colour(aa-blue-sky-100);
           border: none;
-          border-bottom: 1px solid _colour(aa-white-100);
           border-radius: 0;
           line-height: initial;
+
           &.disabled {
             background-color: _colour(aa-grey-25);
+
             &:focus,
             &:hover {
               @include button-disabled;
               background-color: _colour(aa-greyimportant-25);
-              border-color: _colour(aa-white-100)!important;
+              border-color: _colour(aa-white-100) !important;
             }
+
             .accordion-heading,
             .accordion-icon {
               color: _colour(aa-grey-100);
               opacity: 1;
             }
+
             .toggle-icons {
               display: none;
             }
           }
-          .nested-icons,
-          .toggle-chevrons {
+
+          .nested-icons {
             display: none;
           }
+
           .accordion-icon {
             font-size: _font(size-medium);
             color: _colour(aa-white-100);
-            width: 2rem;
+            width: 1.75rem;
             margin-right: .5rem;
           }
+
           .accordion-heading {
             color: _colour(aa-white-100);
             font-size: _font(size-default);
           }
+
           .toggle-icons {
             display: block;
             color: _colour(aa-white-100);
+
             .material-icons,
             .material-icons-outlined {
               font-size: _font(size-medium);
@@ -181,60 +209,68 @@
             }
           }
         }
+
         .accordion-panel {
-          padding: 0 1rem 1rem 1.5rem;
           background-color: _colour(aa-white-100);
           border: none;
           border-radius: 0;
-          border-bottom: 1px solid _colour(aa-blue-sky-100);
         }
       }
+
       // start nested accordion
       aa-accordion {
-        &:first-child {
-          margin-top: 0;
-        }
         &:last-child {
           display: block;
           margin-bottom: -1rem;
         }
+
         &:last-child {
           .accordion-container {
             .accordion-trigger:not(.expanded) {
               border-bottom: none;
+
               &:focus {
                 border-bottom: none;
               }
             }
           }
         }
+
         .accordion-container {
           .accordion-panel {
             padding-right: 2rem;
             border-bottom: 1px solid _colour(aa-grey-25);
             background-color: _colour(aa-grey-2);
           }
+
           .accordion-trigger {
             border-bottom: 1px solid _colour(aa-grey-25);
             background-color: _colour(aa-white-100);
+
             &:focus {
               border-bottom: 1px solid _colour(aa-grey-25);
             }
+
             &:hover {
               background-color: _colour(aa-grey-5);
             }
+
             .accordion-heading {
               color: _colour(aa-grey-100);
             }
+
             .accordion-icon {
               display: none;
             }
+
             .toggle-icons {
               display: none;
             }
+
             .nested-icons {
               display: block;
               margin: .4rem .85rem 0 .3rem;
+
               .material-icons,
               .material-icons-outlined {
                 color: _colour(aa-grey-100);
@@ -245,32 +281,35 @@
         }
       }
     }
-  
+
     .ag-grid {
       height: calc(100vh - 14rem);
     }
-    
+
     // menu blade setup
     .blade-navigation {
       .search-results {
-        .search-item 
-          * {
-            background-image: none!important;
-          }
-          span {
-            padding-bottom: .25rem;
-          }
-          i {
-            width: 1rem;
-            max-width: 1rem;
-            height: 1rem;
-            max-height: 1rem;
-          &.chevron, &.search {
+        .search-item * {
+          background-image: none !important;
+        }
+
+        span {
+          padding-bottom: .25rem;
+        }
+
+        i {
+          width: 1rem;
+          max-width: 1rem;
+          height: 1rem;
+          max-height: 1rem;
+
+          &.chevron,
+          &.search {
             font-size: 1rem;
           }
         }
       }
-      
+
       .nav-icon {
         position: relative;
         margin: .5rem .5rem 0;
@@ -279,33 +318,35 @@
         min-height: 6.5rem;
         text-align: center;
         padding: 0;
-        
+
         * {
-            &:before {
-              content: none!important;
+          &:before {
+            content: none !important;
           }
         }
-        
+
         p {
           color: _colour(body-text);
         }
-    
+
         .icon-star-favourites {
-            display: none;
-            position: absolute; 
-            top: -.5rem;
-            right: 0;
-            padding: 0;
+          display: none;
+          position: absolute;
+          top: -.5rem;
+          right: 0;
+          padding: 0;
         }
-    
+
         &:hover .icon-star-favourites,
         .icon-star-favourites.selected {
-            display: block;
+          display: block;
         }
-        
+
         // override bs in core, icons set up in DB
-        a.fas, a.fas:hover, a.fas:active {
-          font-family: none!important;
+        a.fas,
+        a.fas:hover,
+        a.fas:active {
+          font-family: none !important;
           border: none;
           outline: none;
           color: unset;
@@ -315,6 +356,7 @@
       }
     }
   }
+
   .blade-footer {
     border-top: 2px solid _colour(border-secondary);
     background-color: _colour(bg-primary);
@@ -333,21 +375,25 @@
   .blade {
     // iPhone's get confused by the varying slide positions so just setting to display none/block.
     display: none;
+
     &.show-blade {
       display: block;
       width: auto;
       left: 0;
     }
+
     .blade-content {
       width: auto;
       right: 0;
       left: 0;
       bottom: 8rem; // iPhone needed a bit more scroll area
     }
+
     .field {
       max-width: 20rem; // reduced to fit hand-held
     }
-    button + button {
+
+    button+button {
       margin-top: 0.75rem;
     }
   }

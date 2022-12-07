@@ -20,6 +20,11 @@ export class ProgressCircleComponent implements OnInit {
   @Input() xpos: string;
   @Input() ypos: string;
   @Input() tooltipMinWidth: number;
+  @Input() hideChevron: boolean;
+  @Input() headerColor: string;
+  @Input() isError: boolean;
+  @Input() isWarning: boolean;
+  @Input() isInfo: boolean;
 
   constructor() { }
 

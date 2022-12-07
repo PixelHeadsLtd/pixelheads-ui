@@ -1,12 +1,66 @@
-<div *ngIf="!showTooltip" class="alert-shield {{alertShieldStatus}}" [class.small]="alertShieldSmall">{{alertShieldText}}</div>
+<div 
+    *ngIf="!showTooltip && !customShield" 
+    class="alert-shield {{alertShieldStatus}}" 
+    [ngClass]="{
+        'small' : alertShieldSmall, 
+        'nowrap' : noWrap 
+        }"
+    >
+    {{alertShieldText}}
+</div>
 
-<div *ngIf="showTooltip" class="alert-shield-tooltip-wrapper">
+<div *ngIf="showTooltip && !customShield" class="alert-shield-tooltip-wrapper">
     <div 
-        class="alert-shield-tooltip {{alertShieldStatus}}"
+        class="alert-shield-tooltip {{alertShieldStatus}} {{xpos}} {{ypos}}"
         [ngStyle]="{'min-width' : minWidth}"
     >
         <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
         <ng-content select="[tooltip-content]"></ng-content>
     </div>
-    <div class="alert-shield {{alertShieldStatus}}" [class.small]="alertShieldSmall">{{alertShieldText}}</div>
+    <div 
+        class="alert-shield {{alertShieldStatus}}" 
+        [ngClass]="{
+            'small' : alertShieldSmall, 
+            'nowrap' : noWrap 
+            }"
+        >
+            {{alertShieldText}}
+    </div>
+</div>
+
+<div *ngIf="customShield" class="custom-alert-shield">
+    <div 
+        class="flex-group flex-align-center flex-start custom-alert-shield-container"
+        [ngClass]="{
+            'small' : alertShieldSmall,
+            'nowrap' : noWrap,
+            'bg-aa-red-8' : bgRedLight,
+            'bg-aa-red-100' : bgRedDark,
+            'bg-aa-green-5' : bgGreenLight,
+            'bg-aa-green-100' : bgGreenDark,
+            'bg-aa-orange-10' : bgOrangeLight,
+            'bg-aa-orange-100' : bgOrangeDark,
+            'bg-aa-light-blue-15' : bgBlueLight,
+            'bg-aa-light-blue-100' : bgBlueDark,
+            'bg-aa-grey-10' : bgGreyLight,
+            'bg-aa-grey-100' : bgGreyDark
+        }"
+      >
+        <div 
+            *ngIf="showTooltip"
+            class="alert-shield-tooltip {{xpos}} {{ypos}}"
+            [ngStyle]="{'min-width' : minWidth}"
+        >
+            <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
+            <ng-content select="[custom-tooltip-content]"></ng-content>
+        </div>
+        <div 
+            [ngClass]="{
+                'material-icons' : !iconOutlined,
+                'material-icons-outlined' : iconOutlined
+            }">
+            {{iconName}}
+        </div>
+      <span>{{alertShieldText}}</span>
+    </div>
 </div>

@@ -12,11 +12,20 @@ export class SliderComponent implements OnInit {
   fileUploadName: string;
   myRadios: string;
   toggleBlade: boolean;
+  testSlider: boolean;
 
   constructor() { }
 
+  setChecked(checked: boolean) {
+    this.testSlider = checked;
+  }
+
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
+  }
+
+  onSliderCheckedChanged(event: any) {
+    console.log('received ' + event);
   }
 
   ngOnInit() {

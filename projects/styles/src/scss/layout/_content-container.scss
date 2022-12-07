@@ -11,19 +11,3 @@
         }
     }
 }
-
-.content-container {
-    &.ag-grid-full-height {
-        display: flex;
-        flex-direction: column;
-
-        .ag-grid-wrapper {
-            flex: 1 1 auto;
-
-            ag-grid-angular {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-}

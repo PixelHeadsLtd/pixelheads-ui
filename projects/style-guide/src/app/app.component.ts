@@ -81,7 +81,7 @@ export class AppComponent {
     'progress-indicator',
     'progress-indicator-lh',
     'alerts',
-    'shields',
+    'alert-shields',
     'colours',
     'icon-picker',
     'icons',
@@ -117,6 +117,7 @@ export class AppComponent {
     'html-email',
     'elements-alignment',
     'slider',
+    'status-indicator',
     'comments',
     'actions-summary'
   ];
@@ -177,6 +178,7 @@ export class AppComponent {
     {appIconClass: 'icon-receive-discount burgundyred fa-handshake', appIconName: 'Receivable Discounting'},
     {appIconClass: 'icon-reporting apple fa-chart-line', appIconName: 'Reporting'},
     {appIconClass: 'icon-reporting fa-chart-pie ', appIconName: 'Reporting (legacy)'},
+    {appIconClass: 'icon-report-problem', appIconName: 'Report Problem'},
     {appIconClass: 'icon-reporting-portal fa-file-signature ', appIconName: 'Reporting Portal'},
     {appIconClass: 'icon-risk fa-square-root-alt', appIconName: 'Risk'},
     {appIconClass: 'icon-security-amp fa-users-cog ', appIconName: 'Security AMP'},
@@ -245,12 +247,13 @@ export class AppComponent {
     [
       {iconName:'rocket_launch', title:'Actions summary', routerLink:'/actions-summary'},
       {iconName:'add_alert', title:'Alert', routerLink:'/alerts'},
-      {iconName:'remove_moderator', title:'Alert shield', routerLink:'/shields'},
+      {iconName:'remove_moderator', title:'Alert shield', routerLink:'/alert-shields'},
       {iconName:'check_box_outline_blank', title:'Box', routerLink:'/box'},
       {iconName:'palette', title:'Colour', routerLink:'/colours'},
       {iconName:'insert_emoticon', title:'Icons', routerLink:'/icons'},
       {iconName:'history_toggle_off', title:'Progress bar', routerLink:'/progress-bar'},
       {iconName:'forward_10', title:'Progress circle', routerLink:'/progress-circle'},
+      {iconName:'check_circle', title:'Status indicator', routerLink:'/status-indicator'},
       {iconName:'loyalty', title:'Tags', routerLink:'/tags'}
     ]},
     // WIDGETS

@@ -3,6 +3,7 @@
         <span class="tree-group flex-group flex-start flex-align-center">
             <span (click)="toggleChild(node)" class="flex-group flex-start">
                 <span class="chevron" [ngClass]="{'chevron-down': node.showChildren}" *ngIf="node.children != 0"></span>
+                <input class="margin-left-0-25" type="checkbox" />
                 <strong *ngIf="node.children != 0"> {{ node.name }} </strong>
                 <a href="{{node.url}}" target="_blank" *ngIf="node.children == 0"> {{ node.name }} </a>
             </span>

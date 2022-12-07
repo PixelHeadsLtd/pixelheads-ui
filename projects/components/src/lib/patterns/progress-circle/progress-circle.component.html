@@ -1,12 +1,20 @@
 <div *ngIf="!isSmall" class="progress-circle" [ngClass]="{'panel-view' : panelView}">
-  <h3 class="flex-center title" [ngClass]="{'padding-right-1' : enableTooltip}">
-    <span title="{{name}}">{{ (name.length>19)? (name | slice:0:19)+'...':(name) }}</span>
+  <h3 class="flex-center title {{headerColor}}" [ngClass]="{'padding-right-1' : enableTooltip}">
+    <span 
+      title="{{name}}"
+      class="flex-group flex-align-center"
+      >
+      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}
+      <span title="Error" *ngIf="isError" class="material-icons status padding-left-0-25 small aa-red-100">error_outline</span>
+      <span title="Warning" *ngIf="isWarning" class="material-icons status padding-left-0-25 small aa-orange-100">warning_amber</span>
+      <span title="Info" *ngIf="isInfo" class="material-icons-outlined status small padding-left-0-25 aa-light-blue-100">info</span>
+    </span>
     <div *ngIf="enableTooltip" class="aa-tooltip icon-info margin-left-0-25" [ngStyle]="{'position' : 'absolute', 'right' : '.75rem'}">
       <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width' : tooltipMinWidth+'rem'}">
         <p>{{tooltipBody}}</p>
       </div>
     </div>
-    <span *ngIf="panelView" class="material-icons">chevron_right</span>
+    <span *ngIf="panelView && !hideChevron" class="material-icons">chevron_right</span>
   </h3>
   <div class="percent">
     <svg viewBox="20 0 60 100">

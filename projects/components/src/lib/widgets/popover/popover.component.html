@@ -3,8 +3,12 @@
   [ngClass]="{
   'show-popover' : showPopover, 
   'btn-small' : btnSmall
-  }">
-  <div class="aa-popover-header" (click)="showPopover=!showPopover" [ngClass]="{'label-hidden' : hideLabel}">
+  }"
+  [ngStyle]="{
+    'z-index' : showPopover ? zIndex : ''
+  }"
+  >
+  <div class="aa-popover-header" (click)="changeVisibility()" [ngClass]="{'label-hidden' : hideLabel}">
     <ng-content select="[call-to-action]"></ng-content>
     <div
       class="arrow"
@@ -18,9 +22,10 @@
   <div 
     class="aa-popover-content feature-box" 
     [ngStyle]="{
-    'left': leftPos+'rem', 
     'top': topPos+'rem', 
+    'right': rightPos+'rem', 
     'bottom': bottomPos+'rem', 
+    'left': leftPos+'rem', 
     'width': width+'rem' 
   }">
     <ng-content select="[custom-content]"></ng-content>

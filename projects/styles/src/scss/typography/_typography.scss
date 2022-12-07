@@ -1,4 +1,8 @@
-h1, h2, h3, h4, h5 {
+h1, 
+h2, 
+h3, 
+h4:not(.custom-alert-shield h4), 
+h5 {
   color: _colour(heading-1);
   line-height: initial;
 }

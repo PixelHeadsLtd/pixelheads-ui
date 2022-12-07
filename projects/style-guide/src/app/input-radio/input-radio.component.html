@@ -33,6 +33,12 @@
             <span>disabled=&ldquo;true&rdquo;</span>
           </label>
         </div>
+        <div class="field radio">
+          <label [ngClass]="{'checked': true}">
+            <input [(ngModel)]="myRadios" name="myRadios" type="radio" disabled="true">
+            <span>checked=&ldquo;true&rdquo;</span>
+          </label>
+        </div>
       </fieldset>
     </section>
       

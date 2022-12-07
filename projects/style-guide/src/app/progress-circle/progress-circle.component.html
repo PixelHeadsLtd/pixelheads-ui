@@ -140,50 +140,56 @@
             class="margin-bottom-0-75"
             [panelView]="true" 
             [isSmall]="false" 
-            [value]="'200/1000'" 
+            headerColor="bg-aa-light-blue-15"
+            value="200/1000" 
+            name="Total reviews" 
+            percent="20" 
+            tooltipMinWidth="12" 
+            colour="#009fe3">
+          </aa-progress-circle>
+            <aa-progress-circle 
+            class="margin-bottom-0-75"
             [isSmall]="false" 
-            [name]="'Total reviews'" 
-            [percent]="'20'" 
-            [tooltipMinWidth]="'12'" 
-            [colour]="'#009fe3'">
+            [panelView]="true" 
+            headerColor="bg-aa-burgundy-5"
+            value="200/1000" 
+            name="Unchanged" 
+            percent="40" 
+            tooltipMinWidth="12" 
+            colour="#b3025c">
           </aa-progress-circle>
             <aa-progress-circle 
             class="margin-bottom-0-75"
             [panelView]="true" 
             [isSmall]="false" 
-            [value]="'200/1000'" 
-            [isSmall]="false" 
-            [name]="'Unchanged'" 
-            [percent]="'40'" 
-            [tooltipMinWidth]="'12'" 
-            [colour]="'#b3025c'">
+            headerColor="bg-aa-green-5"
+            name="Joiners" 
+            percent="60" 
+            tooltipMinWidth="12" 
+            colour="#008770">
           </aa-progress-circle>
             <aa-progress-circle 
             class="margin-bottom-0-75"
             [panelView]="true" 
             [isSmall]="false" 
-            [name]="'Joiners'" 
-            [percent]="'60'" 
-            [tooltipMinWidth]="'12'" 
-            [colour]="'#aaa516'">
+            headerColor="bg-aa-orange-5"
+            name="Leavers" 
+            percent="80" 
+            tooltipMinWidth="12" 
+            colour="#9c5f0e">
           </aa-progress-circle>
-            <aa-progress-circle 
+          <aa-progress-circle 
             class="margin-bottom-0-75"
             [panelView]="true" 
+            [hideChevron]="true" 
             [isSmall]="false" 
-            [name]="'Leavers'" 
-            [percent]="'80'" 
-            [tooltipMinWidth]="'12'" 
-            [colour]="'#9c5f0e'">
-          </aa-progress-circle>
-            <aa-progress-circle 
-            class="margin-bottom-0-75"
-            [panelView]="true" 
-            [isSmall]="false" 
-            [name]="'Movers'" 
-            [percent]="'100'" 
-            [tooltipMinWidth]="'12'" 
-            [colour]="'#ffa1c4'">
+            [isError]="true"
+            headerColor="bg-aa-red-5"
+            value="200/1000" 
+            name="Hide chevron true" 
+            percent="20" 
+            tooltipMinWidth="12" 
+            colour="#c60c31">
           </aa-progress-circle>
         </div>
       </section>
@@ -217,6 +223,24 @@
               <td datalabel="Attribute">[isSmall]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[hideChevron]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[isError], [isWarning], [isInfo]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">headerColor</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default"><a routerLink="/colours" class="aa-red-100">Choose colour</a></td>
             </tr>
             <tr>
               <td datalabel="Element">aa-progress-circle</td>

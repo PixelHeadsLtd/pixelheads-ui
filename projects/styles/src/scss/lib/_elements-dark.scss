@@ -86,6 +86,7 @@ $colour: (
   search-placeholder:      _palette(aa-grey-50),
   quick-links:             _palette(aa-grey-5),
   readonly:                rgb(14, 14, 14),
+  accordion-toggle:        _palette(aa-white-100),
 
   dt:                      _palette(aa-light-blue-50),
   link:                   rgb(75, 174, 222),
@@ -214,12 +215,6 @@ $colour: (
   
   aa-white-100:            rgb(27, 28, 34),
   bg-aa-white-100:         rgb(27, 28, 34),
-  aa-blue-100:             rgb(0, 59, 179),
-  aa-light-blue-100:       _palette(aa-light-blue-100),
-  aa-light-blue-15:        _palette(aa-grey-100),
-  aa-light-blue-5:         _palette(aa-light-blue-5),
-  bg-aa-blue-100:          rgb(0, 59, 179),
-  aa-orange-5:             rgb(27, 28, 34),
 
   aa-grey-100:             _palette(aa-grey-10),
   aa-grey-50:              _palette(aa-grey-25),
@@ -228,8 +223,60 @@ $colour: (
   aa-grey-5:               _palette(aa-grey-100),
   aa-grey-2:               rgb(38, 39, 47),
 
-  aa-red-100:              _palette(aa-red-100),
+  // TINTS - Blue
+  aa-blue-100:             rgb(0, 63, 189),
+  aa-blue-70:              rgba(0, 39, 118, .7),
+  aa-blue-60:              rgba(0, 39, 118, .6),
+  aa-blue-50:              rgba(0, 39, 118, .5),
+  aa-blue-40:              rgba(0, 39, 118, .4),
+
+  // TINTS - Light blue
+  aa-light-blue-100:       rgba(0, 117, 176, 1),
+  aa-light-blue-80:        rgba(0, 117, 176, .8),
+  aa-light-blue-60:        rgba(0, 117, 176, .6),
+  aa-light-blue-50:        rgba(0, 117, 176, .5),
+  aa-light-blue-40:        rgba(0, 117, 176, .4),
+  aa-light-blue-30:        rgba(0, 117, 176, .3),
+  aa-light-blue-15:        rgba(0, 117, 176, .15),
+  aa-light-blue-5:         rgba(0, 117, 176, .05),
+
+  // TINTS - Red
+  aa-red-100:              rgba(198, 12, 48, 1),
+  aa-red-80:               rgba(198, 12, 48, .8),
+  aa-red-50:               rgba(198, 12, 48, .5),
+  aa-red-25:               rgba(198, 12, 48, .25),
+  aa-red-10:               rgba(198, 12, 48, .1),
+  aa-red-8:                rgba(198, 12, 48, .08),
+  aa-red-5:                rgba(198, 12, 48, .05),
+  aa-red-3:                rgba(198, 12, 48, .03),
+
+  // TINTS - Green
+  aa-green-5:              rgba(0, 135, 112, 0.2),
+  aa-green-15:             rgba(0, 135, 112, 0.5),
+
+  // TINTS - Orange
+  aa-orange-100:           rgba(233, 131, 0, 1),
+  aa-orange-50:            rgba(233, 131, 0, .5),
+  aa-orange-25:            rgba(233, 131, 0, .25),
+  aa-orange-10:            rgba(233, 131, 0, .10),
+  aa-orange-5:             rgba(233, 131, 0, .05),
+
+  // TINTS - Plum
+  aa-plum-100:             rgba(126, 81, 122, 1),
+  aa-plum-50:              rgba(126, 81, 122, .5),
+  aa-plum-25:              rgba(126, 81, 122, .25),
+  aa-plum-15:              rgba(126, 81, 122, .15),
+  aa-plum-5:               rgba(126, 81, 122, .05),
+
+  // TINTS - Burgundy
+  aa-burgundy-100:         rgba(179, 2, 92, 1),
+  aa-burgundy-50:          rgba(179, 2, 92, .5),
+  aa-burgundy-25:          rgba(179, 2, 92, .25),
+  aa-burgundy-15:          rgba(179, 2, 92, .15),
+  aa-burgundy-5:           rgba(179, 2, 92, .05),
+
   aa-blue-sky-100:         _palette(aa-blue-sky-100),
+
   aa-pink-25:             rgb(38, 39, 47),
 
   white-transparency:     rgba(255, 255, 255, 0.26),

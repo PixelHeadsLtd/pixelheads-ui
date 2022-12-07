@@ -15,6 +15,23 @@ export class AlertShieldComponent implements OnInit {
   @Input() tooltipHeading: string;
   @Input() minWidth: any;
   @Input() alertShieldSmall: boolean;
+  @Input() noWrap: boolean;
+  @Input() xpos: string;
+  @Input() ypos: string;
+
+  @Input() customShield: boolean;
+  @Input() iconName: string;
+  @Input() iconOutlined: boolean;
+  @Input() bgRedLight: boolean;
+  @Input() bgRedDark: boolean;
+  @Input() bgGreenLight: boolean;
+  @Input() bgGreenDark: boolean;
+  @Input() bgOrangeLight: boolean;
+  @Input() bgOrangeDark: boolean;
+  @Input() bgBlueLight: boolean;
+  @Input() bgBlueDark: boolean;
+  @Input() bgGreyLight: boolean;
+  @Input() bgGreyDark: boolean;
 
   constructor() { }
 

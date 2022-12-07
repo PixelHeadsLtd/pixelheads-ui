@@ -1,11 +1,12 @@
-.alert-shield-tooltip-wrapper {
-  position: relative;
-  cursor: pointer;
+.alert-shield-tooltip-wrapper,
+.custom-alert-shield {
   &:hover {
     .alert-shield-tooltip {
       display: block;
     }
   }
+  position: relative;
+  cursor: pointer;
   .alert-shield-tooltip {
     display: none;
     position: absolute;
@@ -17,22 +18,48 @@
     border-style: solid;
     font-size: _font(size-default);
     border-width: 2px;
+
     h4 {
       margin-top: 0;
+    }
+
+    &.right.bottom {
+      left: calc(100% + .5rem);
+      top: 0;
+      bottom: auto;
+    }
+  
+    &.left.bottom {
+      right: calc(100% + .5rem);
+      top: 0;
+      bottom: auto;
+    }
+  
+    &.right.top {
+      left: calc(100% + .5rem);
+      bottom: 0;
+    }
+  
+    &.left.top {
+      right: calc(100% + .5rem);
+      bottom: 0;
     }
 
     &.error {
       border-color: _colour(aa-red-100);
       h4 {color: _colour(aa-red-100)}
     }
+
     &.warning {
       border-color: _palette(aa-orange-100);
       h4 {color: _palette(aa-orange-100)}
     }
+
     &.success {
       border-color: _palette(aa-green-100);
       h4 {color: _palette(aa-green-100)}
     }
+
     &.info {
       border-color: _palette(aa-light-blue-100);
       h4 {color: _palette(aa-light-blue-100)}
@@ -235,6 +262,53 @@
     background-color: _colour(alert-error-5);
     color: _colour(alert-error-body);
     padding-left: .75rem;
+  }
+}
+
+.custom-alert-shield {
+  display: inline-block;
+
+  .custom-alert-shield-container {
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0 1rem 0 .25rem;
+
+    span {
+      font-size: _font(size-default);
+    }
+  }
+
+  .bg-aa-red-8 {color: _palette(aa-red-100)}
+  .bg-aa-red-100 {color: _palette(aa-white-100)}
+  .bg-aa-green-5 {color: _palette(aa-green-100)}
+  .bg-aa-green-100 {color: _palette(aa-white-100)}
+  .bg-aa-orange-10 {color: _palette(aa-orange-100)}
+  .bg-aa-orange-100 {color: _palette(aa-white-100)}
+  .bg-aa-light-blue-15 {color: _palette(aa-light-blue-100)}
+  .bg-aa-light-blue-100 {color: _palette(aa-white-100)}
+  .bg-aa-grey-10 {color: _palette(aa-grey-100)}
+  .bg-aa-grey-100 {color: _palette(aa-white-100)}
+
+  .material-icons,
+  .material-icons-outlined {
+    font-size: _font(size-large);
+    margin-right: .35rem;
+  }
+
+  .small {
+    font-size: _font(size-small);
+    height: 1.5rem;
+    padding: 0 .6rem 0 .15rem;
+
+    span {
+      font-size: _font(size-small);
+    }
+
+    .material-icons,
+    .material-icons-outlined {
+      font-size: _font(size-medium);
+      margin-right: .2rem;
+    }
   }
 }
 

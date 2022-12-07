@@ -14,6 +14,10 @@
     font-size: _font(size-medium);
   }
 
+  &.medium {
+    font-size: _font(size-large);
+  }
+
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
   /* Support for Safari and Chrome. */

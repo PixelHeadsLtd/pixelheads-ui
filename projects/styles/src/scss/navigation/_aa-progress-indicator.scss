@@ -189,15 +189,6 @@
           content: 'more_horiz';
         }
       }
-      // &:after {
-      //   background: linear-gradient(
-      //     to right,
-      //     _palette(aa-green-100) 0%,
-      //     _palette(aa-green-100) 50%,
-      //     _colour(aa-grey-10) 50%,
-      //     _colour(aa-grey-10) 100%
-      //   );
-      // }
     }
   
     &.complete {
@@ -226,15 +217,6 @@
           top: .035rem;
         }
       }
-      // &:after {
-      //   background: linear-gradient(
-      //     to right,
-      //     _palette(aa-red-100) 0%,
-      //     _palette(aa-red-100) 50%,
-      //     _colour(aa-grey-10) 50%,
-      //     _colour(aa-grey-10) 100%
-      //   );
-      // }
     }
     .description {
       position: absolute;
