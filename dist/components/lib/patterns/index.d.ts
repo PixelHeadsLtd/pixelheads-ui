@@ -5,4 +5,5 @@ export * from './actions-summary/actions-summary.component';
 export * from './anchor-back/anchor-back.component';
 export * from './progress-bar/progress-bar.component';
 export * from './progress-circle/progress-circle.component';
+export * from './status-indicator/status-indicator.component';
 //# sourceMappingURL=index.d.ts.map

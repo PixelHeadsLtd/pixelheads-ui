@@ -1,7 +1,8 @@
-import { OnInit, EventEmitter } from '@angular/core';
-export declare class AccordionComponent implements OnInit {
+import { EventEmitter, ElementRef } from '@angular/core';
+export declare class AccordionComponent {
     showBody: boolean;
     disabled: boolean;
+    minWidth: number;
     iconsEnabled: boolean;
     dragable: boolean;
     sectionId: string;
@@ -13,11 +14,14 @@ export declare class AccordionComponent implements OnInit {
     fontClassName: string;
     iconBgColor: string;
     customBgColor: string;
+    setHeight: boolean;
+    eleHeight: number;
+    enableAnimation: boolean;
     open: EventEmitter<void>;
+    myIdentifier: ElementRef;
     onOpen(e: {
         stopPropagation: () => void;
     }): void;
     constructor();
-    ngOnInit(): void;
 }
 //# sourceMappingURL=accordion.component.d.ts.map

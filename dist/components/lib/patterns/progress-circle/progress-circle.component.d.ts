@@ -12,6 +12,11 @@ export declare class ProgressCircleComponent implements OnInit {
     xpos: string;
     ypos: string;
     tooltipMinWidth: number;
+    hideChevron: boolean;
+    headerColor: string;
+    isError: boolean;
+    isWarning: boolean;
+    isInfo: boolean;
     constructor();
     ngOnInit(): void;
 }
