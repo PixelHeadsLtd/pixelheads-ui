@@ -41,6 +41,7 @@
               <option value="green">.green</option>
               <option value="red">.red</option>
               <option value="orange">.orange</option>
+              <option value="white">.white</option>
             </select>
           </div>
         </div>
@@ -56,6 +57,19 @@
             <aa-button buttonClass="custom-icons orange" fieldClass="" buttonId="buttonIdC" buttonLabel="Pending"
               buttonText=".orange" [customIcons]="true" buttonIcon="update"
               title="buttonClass='custom-icons orange', buttonIcon='update'"></aa-button>
+            <aa-button 
+              buttonClass="custom-icons white" 
+              fieldClass="" 
+              buttonId="buttonIdC" 
+              buttonLabel="Add a count"
+              buttonText=".white" 
+              [customIcons]="true" 
+              buttonIcon="description"
+              [showCount]="true"
+              count="10"
+              countColor="blue"
+              title="buttonClass='custom-icons light-blue', buttonIcon='description'">
+            </aa-button>
           </div>
 
           <div>
@@ -178,6 +192,24 @@
                 </aa-tooltip>
               </div>
             </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">showCount</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">count</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your number</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">countColor</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">red, blue, light-blue, green, orange, white</td>
           </tr>
         </tbody>
       </table>
@@ -565,8 +597,15 @@
       </div>
 
       <section class="flex-group flex-start margin-bottom-1">
-        <aa-button [buttonSplit]="true" fieldClass="boxed margin-right-2" buttonClass="bg-aa-light-blue-100 chevron-up"
-          buttonLabel="Primary" buttonText="Publish" buttonId="myBtnId">
+        <aa-button 
+          [buttonSplit]="true" 
+          fieldClass="boxed margin-right-2" 
+          buttonClass="bg-aa-light-blue-100 chevron-up"
+          buttonLabel="Primary" 
+          buttonText="Publish" 
+          buttonId="myBtnId"
+          maxHeight="10.75rem"
+        >
           <ng-container bs-buttons>
             <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
               <span class="material-icons">forward_to_inbox</span>
@@ -679,6 +718,17 @@
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">To enable scrolling, set a maxHeight</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">maxHeight</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Example: "20.75rem"</td>
           </tr>
         </tbody>
       </table>

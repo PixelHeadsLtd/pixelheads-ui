@@ -12,6 +12,7 @@ export class StatusIndicatorComponent {
   @Input() iconTitle: string;
   @Input() iconName: string;
   @Input() iconStatus: string;
+  @Input() removeLine: boolean;
   @Input() currentStatus: Array<object>;
 
 }

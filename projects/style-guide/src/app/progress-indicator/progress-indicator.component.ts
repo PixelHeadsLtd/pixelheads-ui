@@ -36,6 +36,8 @@ export class ProgressIndicatorComponent implements OnInit {
   stepFour: boolean;
   stepFive: boolean;
 
+  isLink: boolean = false;
+
   stepOneText: string = 
   `
     By default the 'current' class MUST be added to the first
@@ -45,6 +47,8 @@ export class ProgressIndicatorComponent implements OnInit {
   stepThreeText: string;
   stepFourText: string;
   stepFiveText: string;
+
+  onClick() { console.log('You clicked'); }
 
   checkProgress() {
     if(this.showIncomplete) {

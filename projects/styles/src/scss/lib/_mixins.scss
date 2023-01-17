@@ -112,8 +112,12 @@
 
 @mixin button-all-white {
   background-color: _palette(white);
-  border-color: _palette(white);
-  color: _palette(white);
+  border: 1px solid _palette(aa-blue-100);
+  color: _palette(aa-blue-100);
+}
+
+@mixin button-all-white-hover {
+  background-color: _palette(aa-grey-5);
 }
 
 @mixin button-white-small-hover {

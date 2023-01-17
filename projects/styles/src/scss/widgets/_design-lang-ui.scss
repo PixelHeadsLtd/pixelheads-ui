@@ -1,5 +1,11 @@
 &.design-language {
 
+  .happy-chappy {
+    width: 1.5rem;
+    height: 1.75rem;
+    margin-top: .4rem;
+  }
+
   .minimize-menu + main {
     .unauthorised {
       left: 5rem;
@@ -490,6 +496,11 @@
 }
 
 .blade {
+  iframe {
+    body {
+      margin: 0;
+    }
+  }
   .poem {
     display: none;
   }

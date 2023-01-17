@@ -36,6 +36,12 @@ export class StatusIndicatorComponent {
     },
     {
       iconClass: 'material-icons', 
+      iconStatus: 'stopped', 
+      iconName: 'stop_circle', 
+      iconTitle: 'Stopped'
+    },
+    {
+      iconClass: 'material-icons', 
       iconStatus: 'not-started', 
       iconName: 'expand_circle_down', 
       iconTitle: 'Not started'

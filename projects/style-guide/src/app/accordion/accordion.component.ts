@@ -21,6 +21,7 @@ export class AccordionComponent implements OnInit {
   showBodyCustom: boolean;
   showAccordion: boolean;
   showAccordionAlt: boolean;
+  showAccordionVertical: boolean;
   showJustification: boolean;
   addJustification: boolean;
   toggleBlade: boolean;

@@ -14,6 +14,7 @@ export class PageLayoutExamplesComponent implements OnInit {
   copyFour: boolean;
   copyFive: boolean;
   copySix: boolean;
+  toggleBlade: boolean;
 
   constructor() { }
 
@@ -356,6 +357,10 @@ copySixHTML = `<!-- Every page needs to have a .control-bar -->
     document.addEventListener('copy', listener);
     document.execCommand('copy');
     document.removeEventListener('copy', listener);
+  }
+
+  bladeIsOpen(open: boolean) {
+    this.toggleBlade = open;
   }
 
   ngOnInit(): void {

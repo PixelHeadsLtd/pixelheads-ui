@@ -125,6 +125,7 @@
       (close)="toggleBlade = false"
       >
       <article class="blade-content">
+        <h2 class="margin-bottom-0-25">General</h2>
         <!-- licence -->
         <aa-accordion
           [disabled]="false"
@@ -151,7 +152,7 @@
           iconBgColor=""
           iconName="settings"
         >
-          <h2 class="margin-top-1">Copy and paste the licence code into your 'environment.ts' file</h2>
+          <h2 class="margin-top-0">Copy and paste the licence code into your 'environment.ts' file</h2>
           <div class="flex-group flex-start">
             <button class="secondary" (click)="copyToClipboard(agGridLicence)">Click here to copy the code</button>
             <div *ngIf="codeCopied" class="copied flex-group flex-start flex-align-center">
@@ -189,13 +190,28 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Setting the grid height to use all the available space</h2>
+          <h2 class="margin-top-0">Setting the grid height to use all the available space</h2>
+          <div role="alert" class="error margin-bottom-1">
+            There are a few important rules that you need to follow for 
+            the height setting to work correctly. Please follow the 8 steps below
+          </div>
+          <ol class="margin-bottom-1 aa-red-100">
+            <li class="padding-bottom-0-5">Ensure the <strong class="aa-light-blue-100">ngStyle</strong> height setting is set on the wrapper that encapsulates the entire page. If there's markup outside this wrapper apart from the control-bar, then the page will not be able to calculate the height properly</li>
+            <li class="padding-bottom-0-5">On this wrapper include the class names <strong class="aa-light-blue-100">grid</strong> and <strong class="aa-light-blue-100">ag-grid-full-height</strong></li>
+            <li class="padding-bottom-0-5">Your ag-grid table MUST be the child element of the page wrapper mentioned above (1) and NOT the ancestor</li>
+            <li class="padding-bottom-0-5">You must wrap your <strong class="aa-light-blue-100">ag-grid-angular</strong> inside a wrapper with the class name <strong class="aa-light-blue-100">ag-grid-wrapper</strong></li>
+            <li class="padding-bottom-0-5">Make sure the ONLY class names you have on your <strong class="aa-light-blue-100">ag-grid-angular</strong> are <strong class="aa-light-blue-100">ag-theme-balham</strong> and <strong class="aa-light-blue-100">ag-grid</strong></li>
+            <li class="padding-bottom-0-5">Make sure your <strong class="aa-light-blue-100">ag-grid-angular</strong> with its above wrapper is the last item on your page and below any other content that you might be displaying above the grid</li>
+            <li class="padding-bottom-0-5">Check the ag-grid <strong class="aa-light-blue-100">TypeScript file</strong> to ensure no height is being set. Also, check the project <strong class="aa-light-blue-100">Styles.scss</strong> file to make sure no custom css is being applied that sets the height</li>
+            <li>When your structure is complete, adjust the 9rem value that's set on the aforementioned page wrapper <strong class="aa-light-blue-100">ngStyle</strong>, until the browser scrollbars disappear and teh bottom of your grid meets the bottom of the page nicely</li>
+          </ol>
           <iframe frameborder=0 
           style="width: 100%; height: 53rem;" 
           scrolling="no" 
           seamless="seamless" 
           srcdoc='<html><body><script src="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000.js"></script></body></html>'
           ></iframe>
+          <img src="../../assets/images/ag-grid-height.png" />
         </aa-accordion>
 
         <!-- adding a custom tooltip - part 1 -->
@@ -225,7 +241,7 @@
           iconBgColor="aa-blue-100"
           iconName="sms"
         >
-          <h2 class="margin-top-1">Part 1 of 4</h2>
+          <h2 class="margin-top-0">Part 1 of 4</h2>
           <h3>Install the following packages in packages.json</h3>
           <p>
             <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
@@ -262,7 +278,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/41635eefa1d9656f3f8f9a719d82c7c7" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Part 2 of 4 - Add ag-grid</h2>
+          <h2 class="margin-top-0">Part 2 of 4 - Add ag-grid</h2>
           <iframe frameborder=0 
           style="width: 100%; height: 46rem;" 
           scrolling="no" 
@@ -300,7 +316,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/2e68516ea72b5c8452e08175e501cfe4" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Part 3 of 4 - Create the tooltip component to be imported in part 2</h2>
+          <h2 class="margin-top-0">Part 3 of 4 - Create the tooltip component to be imported in part 2</h2>
           <iframe frameborder=0 
           style="width: 100%; height: 50rem;" 
           scrolling="no" 
@@ -338,7 +354,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/cd4b84883f31fd781b81c14d121379dc" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Part 4 of 4 - Update your app.module</h2>
+          <h2 class="margin-top-0">Part 4 of 4 - Update your app.module</h2>
           <iframe frameborder=0 
           style="width: 100%; height: 25rem;" 
           scrolling="no" 
@@ -374,7 +390,7 @@
           iconBgColor="aa-yellow-100"
           iconName="menu_open"
         >
-          <h2 class="margin-top-1">Part 1 of 5</h2>
+          <h2 class="margin-top-0">Part 1 of 5</h2>
           <h3>Install the following packages in packages.json</h3>
           <p>
             <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
@@ -411,7 +427,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/a202bc532c366edf319b54a01ceac680" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Part 2 of 5 - Create the ellipsis button & context-menu click function
+          <h2 class="margin-top-0">Part 2 of 5 - Create the ellipsis button & context-menu click function
             
           </h2>
           <iframe frameborder=0 
@@ -451,7 +467,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/00f8d5c4dbb106c48372c66dec1fa304" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Part 3 of 5 - Add ag-grid-angular to your template
+          <h2 class="margin-top-0">Part 3 of 5 - Add ag-grid-angular to your template
             
           </h2>
           <iframe frameborder=0 
@@ -491,7 +507,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Import your 'ellipsis-context-menu' from part 2 and update columnDefs          </h2>
+          <h2 class="margin-top-0">Import your 'ellipsis-context-menu' from part 2 and update columnDefs          </h2>
           <iframe frameborder=0 
           style="width: 100%; height: 82rem;" 
           scrolling="no" 
@@ -529,7 +545,7 @@
           <div header-custom>
             <a class="aa-white-100" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
           </div>
-          <h2 class="margin-top-1">Add your EllipsisContextMenuComponent to your app.module
+          <h2 class="margin-top-0">Add your EllipsisContextMenuComponent to your app.module
             
           </h2>
           <iframe frameborder=0 
@@ -570,7 +586,7 @@
         <div header-custom>
           <a class="aa-white-100" href="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0" target="_blank">View Gist on GitHub</a>
         </div>
-        <h2 class="margin-top-1">Adding validation</h2>
+        <h2 class="margin-top-0">Adding validation</h2>
         <p>
           Begin by creating your custom tooltip as described above <strong class="aa-red-100">Creating a custom tooltip</strong> <br/>and inject your error message as required.
         </p>

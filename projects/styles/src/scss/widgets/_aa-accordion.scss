@@ -1,55 +1,97 @@
 .accordion-container {
-   margin-bottom: 2px;
+   margin-bottom: .25rem;
    min-height: 2.75rem;
+   background-color: _colour(bg-primary);
+
+   &.vertical {
+      margin-bottom: .25rem;
+
+      h3 {
+         .accordion-trigger {
+            width: 2.75rem;
+            height: 100%;
+            padding: 1rem 0 .5rem 0;
+
+            .flex-align-center {
+               align-items: flex-start;
+               width: 2.75rem;
+            }
+
+            .material-icons {
+               text-align: center;
+               width: 100%;
+            }
+
+            .accordion-heading {
+               transform: rotate(90deg);
+               transform-origin: left;
+               white-space: nowrap;
+               margin: .5rem 0 0 1.35rem;
+            }
+
+            button,
+            [role=alert],
+            .alert-shield,
+            .custom-alert-shield {
+               transform: rotate(90deg);
+               transform-origin: right;
+               margin-right: 0.625rem;
+            }
+         }
+      }
+   }
 
    // Start nested accordions
    aa-accordion {
       &:last-child {
-        display: block;
-        margin-bottom: -1rem;
+         display: block;
+         .accordion-container {
+            .accordion-trigger {
+               border-bottom: none;
+            }
+         }
       }
+
       .accordion-container {
          position: relative;
-         left: -1rem;
-         width: calc(100% + 2rem);
-         margin-bottom: 1px !important;
+         margin-bottom: 0;
          border-radius: 0;
          box-shadow: none;
-   
+
          .accordion-panel {
             padding: 0 1rem 1rem;
             border-bottom: 1px solid _colour(aa-grey-25);
             background-color: _colour(aa-grey-2);
          }
-   
+
          .accordion-trigger {
             border-bottom: 1px solid _colour(aa-grey-25);
             background-color: _colour(aa-white-100);
-   
+
             &:focus {
                border-bottom: 1px solid _colour(aa-grey-25);
             }
-   
+
             &:hover {
                background-color: _colour(aa-grey-5);
             }
-   
+
             .accordion-heading {
                color: _colour(aa-grey-100);
             }
-   
+
             .accordion-icon {
                display: none;
             }
-   
+
             .toggle-icons {
                display: none;
             }
-   
+
             .nested-icons {
                display: block;
-               margin: .4rem .85rem 0 .3rem;
-   
+               margin: .4rem .85rem 0 0;
+
                .material-icons,
                .material-icons-outlined {
                   color: _colour(aa-grey-100);
@@ -69,7 +111,7 @@
       border-radius: .1rem;
       font-family: _font(family-regular);
       text-align: left;
-      padding: 0 .75rem;
+      padding: 0 .75rem 0 1.25rem;
       width: 100%;
 
       .toggle-icons {
@@ -109,7 +151,7 @@
       }
 
       &.disabled {
-         background-color: _colour(bg-accordion-disabled);
+         background-color: _colour(bg-accordion-disabled)!important;
 
          &:hover {
             @include button-disabled;
@@ -175,7 +217,6 @@
    .accordion-icon:not(.drag-icon) {
       color: _colour(heading-1);
       font-size: _font(size-large);
-      width: 2.25rem;
    }
 
    .drag-icon {
@@ -192,7 +233,6 @@
       color: _colour(heading-1);
       font-size: _font(size-default);
       font-family: _font(family-medium);
-      margin-left: .25rem;
    }
 
    .accordion-panel {
@@ -205,7 +245,7 @@
          transition: all .3s linear;
 
          .accordion-content {
-            padding: 0 1rem 1rem;
+            padding: 1rem;
          }
       }
 

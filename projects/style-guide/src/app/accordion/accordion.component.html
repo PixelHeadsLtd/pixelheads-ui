@@ -19,6 +19,7 @@
         [dragable]="false"
         [showBody]="showBodyOne"
         [enableAnimation]="true"
+        [clearPadding]="false"
         minWidth="26"
         accordionHeading="Accordion default"
         accordionId="accordion01"
@@ -31,15 +32,13 @@
           <strong *ngIf="addJustification" class="alert-shield small info">Justification msg</strong>
         </div>
         <ng-container animate>
-          <div class="padding-top-1">
-            <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
-              <input type="text" /> 
-              <div class="field boxed">
-                <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
-              </div>
+          <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
+            <input type="text" /> 
+            <div class="field boxed">
+              <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
             </div>
-            <p>Add accordion content in here</p>
           </div>
+          <p>Add accordion content in here</p>
         </ng-container>
       </aa-accordion>
 
@@ -59,7 +58,7 @@
           <div class="alert-shield small info">Custom content</div>
         </div>
         <ng-container animate>
-          <p class="padding-top-1">Add accordion content in here</p>
+          <p>Add accordion content in here</p>
         </ng-container>
         
       </aa-accordion>
@@ -78,7 +77,7 @@
         iconName="toys"
       >
         <ng-container animate>
-          <p class="padding-top-1">Add accordion content in here</p>
+          <p>Add accordion content in here</p>
         </ng-container>
       </aa-accordion>
 
@@ -96,46 +95,44 @@
         iconName="surfing"
       >
         <ng-container animate>
-          <section class="padding-top-1">
-            <h3 class="boxed">There are currently 11 available custom colours</h3>
-            <div class="editorial-content">
-              <ol>
-                <li>
-                  <a routerLink="/colours">bg-aa-blue-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-blue-70</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-blue-60</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-red-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-light-blue-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-grey-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-green-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-orange-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-burgundy-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-plum-100</a>
-                </li>
-                <li>
-                  <a routerLink="/colours">bg-aa-blue-sky-100</a>
-                </li>
-              </ol>
-            </div>
-          </section>
+          <h3 class="boxed">There are currently 11 available custom colours</h3>
+          <div class="editorial-content">
+            <ol>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-70</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-60</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-red-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-light-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-grey-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-green-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-orange-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-burgundy-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-plum-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-sky-100</a>
+              </li>
+            </ol>
+          </div>
         </ng-container>
         
       </aa-accordion>
@@ -153,46 +150,44 @@
         iconName="emoji_transportation"
       >
       <ng-container animate>
-        <section class="padding-top-1">
-          <h3 class="boxed">There are currently 11 available custom colours</h3>
-          <div class="editorial-content">
-            <ol>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-70</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-60</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-red-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-light-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-grey-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-green-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-orange-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-burgundy-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-plum-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-sky-100</a>
-              </li>
-            </ol>
-          </div>
-        </section>
+        <h3 class="boxed">There are currently 11 available custom colours</h3>
+        <div class="editorial-content">
+          <ol>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-70</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-60</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-red-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-light-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-grey-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-green-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-orange-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-burgundy-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-plum-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-sky-100</a>
+            </li>
+          </ol>
+        </div>
       </ng-container>
       </aa-accordion>
       <aa-accordion
@@ -209,46 +204,44 @@
         iconName="rocket_launch"
       >
       <ng-container animate>
-        <section class="padding-top-1">
-          <h3 class="boxed">There are currently 11 available custom colours</h3>
-          <div class="editorial-content">
-            <ol>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-70</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-60</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-red-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-light-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-grey-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-green-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-orange-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-burgundy-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-plum-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-sky-100</a>
-              </li>
-            </ol>
-          </div>
-        </section>
+        <h3 class="boxed">There are currently 11 available custom colours</h3>
+        <div class="editorial-content">
+          <ol>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-70</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-60</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-red-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-light-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-grey-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-green-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-orange-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-burgundy-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-plum-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-sky-100</a>
+            </li>
+          </ol>
+        </div>
       </ng-container>
       </aa-accordion>
       <aa-accordion
@@ -265,51 +258,50 @@
         iconName="tips_and_updates"
       >
       <ng-container animate>
-        <section class="padding-top-1">
-          <h3 class="boxed">There are currently 11 available custom colours</h3>
-          <div class="editorial-content">
-            <ol>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-70</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-60</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-red-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-light-blue-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-grey-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-green-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-orange-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-burgundy-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-plum-100</a>
-              </li>
-              <li>
-                <a routerLink="/colours">bg-aa-blue-sky-100</a>
-              </li>
-            </ol>
-          </div>
-        </section>
+        <h3 class="boxed">There are currently 11 available custom colours</h3>
+        <div class="editorial-content">
+          <ol>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-70</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-60</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-red-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-light-blue-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-grey-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-green-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-orange-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-burgundy-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-plum-100</a>
+            </li>
+            <li>
+              <a routerLink="/colours">bg-aa-blue-sky-100</a>
+            </li>
+          </ol>
+        </div>
       </ng-container>
       </aa-accordion>
       <h2 class="margin-top-2">Nested accordions</h2>
       <aa-accordion
       (open)="showBodyOne=true"
+      [clearPadding]="true"
       [dragable]="false"
       [showBody]="showBodyOne"
       [enableAnimation]="false"
@@ -342,7 +334,6 @@
             iconName="account_balance"
           >
             <ng-container>
-              <div class="padding-top-1">
                 <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
                   <input type="text" /> 
                   <div class="field boxed">
@@ -353,7 +344,6 @@
                   If you want nested accordions, you will need to set "enableAnimation" to false,
                   then remove "animate" from your ng-container. Please see Gist for markup
                 </p>
-              </div>
             </ng-container>
           </aa-accordion>
         </div>
@@ -386,6 +376,12 @@
             <td datalabel="Attribute">(open)</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody=true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">clearPadding</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
@@ -467,7 +463,317 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=true; showAccordionAlt=false">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=true; showAccordionAlt=false; showAccordionVertical=false">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+   <!-- start content repeater -->
+   <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Accordion vertical</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          Pass in a custom Material Icon by setting iconsEnabled to true and adding an iconName. You can trigger the
+          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>. To show the drag icon,
+          set <strong>dragable=&quot;true&quot;</strong>
+        </p>
+      </div>
+
+      <div class="flex-group flex-start">
+        <aa-accordion
+          (open)="showBodyOne=true; showBodyTwo=false; showBodyThree=false; showBodyFour=false; showBodyFive=false"
+          [dragable]="false"
+          [showBody]="showBodyOne"
+          [enableAnimation]="false"
+          [clearPadding]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="30vh"
+          class="margin-right-0-25"
+          accordionHeading="Accordion default"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="account_balance"
+        >
+          <div header-custom>
+            <button *ngIf="!showJustification" class="primary small" (click)="justification()">Add business justification</button>
+            <strong *ngIf="addJustification" class="alert-shield small info">Justification msg</strong>
+          </div>
+          <ng-container>
+            <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
+              <input type="text" /> 
+              <div class="field boxed">
+                <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
+              </div>
+            </div>
+            <p>Add accordion content in here</p>
+          </ng-container>
+        </aa-accordion>
+        
+        <aa-accordion
+          (open)="showBodyOne=false; showBodyTwo=true; showBodyThree=false; showBodyFour=false; showBodyFive=false"
+          [dragable]="false"
+          [showBody]="showBodyTwo"
+          [enableAnimation]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="30vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-red-100"
+          accordionHeading="Accordion custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="surfing"
+        >
+          <ng-container>
+            <h3 class="boxed">There are currently 11 available custom colours</h3>
+            <div class="editorial-content">
+              <ol>
+                <li>
+                  <a routerLink="/colours">bg-aa-blue-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-blue-70</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-blue-60</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-red-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-light-blue-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-grey-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-green-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-orange-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-burgundy-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-plum-100</a>
+                </li>
+                <li>
+                  <a routerLink="/colours">bg-aa-blue-sky-100</a>
+                </li>
+              </ol>
+            </div>
+          </ng-container>
+          
+        </aa-accordion>
+        <aa-accordion
+          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=true; showBodyFour=false; showBodyFive=false"
+          [dragable]="false"
+          [showBody]="showBodyThree"
+          [enableAnimation]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="30vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-blue-sky-100"
+          accordionHeading="Accordion custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="emoji_transportation"
+        >
+        <ng-container>
+          <h3 class="boxed">There are currently 11 available custom colours</h3>
+          <div class="editorial-content">
+            <ol>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-70</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-60</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-red-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-light-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-grey-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-green-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-orange-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-burgundy-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-plum-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-sky-100</a>
+              </li>
+            </ol>
+          </div>
+        </ng-container>
+        </aa-accordion>
+        <aa-accordion
+          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=false; showBodyFour=true; showBodyFive=false"
+          [dragable]="false"
+          [showBody]="showBodyFour"
+          [enableAnimation]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="30vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-green-100"
+          accordionHeading="Accordion custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="rocket_launch"
+        >
+        <ng-container>
+          <h3 class="boxed">There are currently 11 available custom colours</h3>
+          <div class="editorial-content">
+            <ol>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-70</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-60</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-red-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-light-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-grey-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-green-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-orange-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-burgundy-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-plum-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-sky-100</a>
+              </li>
+            </ol>
+          </div>
+        </ng-container>
+        </aa-accordion>
+        <aa-accordion
+          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=false; showBodyFour=false; showBodyFive=true"
+          [dragable]="false"
+          [showBody]="showBodyFive"
+          [enableAnimation]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="30vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-orange-100"
+          accordionHeading="Accordion custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="tips_and_updates"
+        >
+        <ng-container>
+          <h3 class="boxed">There are currently 11 available custom colours</h3>
+          <div class="editorial-content">
+            <ol>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-70</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-60</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-red-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-light-blue-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-grey-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-green-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-orange-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-burgundy-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-plum-100</a>
+              </li>
+              <li>
+                <a routerLink="/colours">bg-aa-blue-sky-100</a>
+              </li>
+            </ol>
+          </div>
+        </ng-container>
+        </aa-accordion>
+      </div>
+
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes - <span class="aa-red-100">As above but with additional attributes</span>
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">verticalDisplay</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">verticalMinHeight</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your preferred min-height in rem, % or vh</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=false; showAccordionAlt=false; showAccordionVertical=true">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -502,9 +808,8 @@
           <input type="checkbox" />
         </div>
         <ng-container animate>
-          <p class="padding-top-1">Add your description here...</p>
+          <p>Add your description here...</p>
         </ng-container>
-        
       </aa-accordion>
       <aa-accordion
         [accordionClean]="true"
@@ -524,7 +829,7 @@
           <input type="checkbox" />
         </div>
         <ng-container animate>
-          <p class="padding-top-1">Add your description here...</p>
+          <p>Add your description here...</p>
         </ng-container>
         
       </aa-accordion>
@@ -548,7 +853,7 @@
           <input type="checkbox" />
         </div>
         <ng-container animate>
-          <p class="padding-top-1">Add your description here...</p>
+          <p>Add your description here...</p>
         </ng-container>
         
       </aa-accordion>
@@ -612,6 +917,12 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">clearPadding</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
             <td datalabel="Attribute">(open)</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody=true</td>
@@ -670,7 +981,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=false; showAccordionAlt=true">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showAccordion=false; showAccordionAlt=true; showAccordionVertical=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -691,12 +1002,16 @@
 >
   <article class="blade-content">
     <div *ngIf="showAccordion">
-      <app-gist src="angloux/3eff6d63f90bb98be1d11ae0a5650da1"></app-gist>
       <a href="https://gist.github.com/angloux/3eff6d63f90bb98be1d11ae0a5650da1" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/3eff6d63f90bb98be1d11ae0a5650da1"></app-gist>
+    </div>
+    <div *ngIf="showAccordionVertical">
+      <a href="https://gist.github.com/angloux/4f5141e2fed537c3508b981bad56f9b5" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/4f5141e2fed537c3508b981bad56f9b5"></app-gist>
     </div>
     <div *ngIf="showAccordionAlt">
-      <app-gist src="angloux/2eedd82aed88a87b2fbedfdde8d476fa"></app-gist>
       <a href="https://gist.github.com/angloux/2eedd82aed88a87b2fbedfdde8d476fa" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/2eedd82aed88a87b2fbedfdde8d476fa"></app-gist>
     </div>
   </article>
 </aa-blade>

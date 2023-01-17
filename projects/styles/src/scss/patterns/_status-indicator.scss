@@ -33,12 +33,18 @@ aa-status-indicator {
   
       &:not(:last-child):after {
         position: absolute;
-        left: 1.4rem;
-        top: calc(50% - 1px);
+        left: 1.25rem;
+        top: 50%;
         content: "";
-        width: 100%;
+        width: .5rem;
         height: 2px;
-        background: _palette(aa-grey-10);
+        background-color: _palette(aa-grey-10);
+      }
+
+      &.remove-line {
+        &:after {
+          background-color: transparent;
+        }
       }
   
       div:not(.marker) {
@@ -51,8 +57,6 @@ aa-status-indicator {
         line-height: 1.3rem;
         margin: auto;
         font-size: 1.3rem;
-        color: _palette(aa-white-100);
-        position: relative;
         border: 1px solid transparent;
   
         &.done {
@@ -74,6 +78,10 @@ aa-status-indicator {
   
         &.loading {
           color: _palette(aa-blue-sky-100);
+        }
+
+        &.stopped {
+          color: _palette(aa-red-100);
         }
       }
     }

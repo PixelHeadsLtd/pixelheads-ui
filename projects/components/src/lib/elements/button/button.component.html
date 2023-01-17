@@ -12,8 +12,11 @@
     [disabled]="disabled" 
     (click)="onButtonClick($event)"
   >
-    <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
-    <span>{{buttonText}}</span>
+    <div [ngClass]="{'flex-group flex-start' : customIcons}">
+      <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
+      <span>{{buttonText}}</span>
+      <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>
+    </div>
   </button>
 </div>
 
@@ -48,7 +51,12 @@
      >
       {{buttonText}}
     </button>
-    <nav (click)="showBtnMenu=false" *ngIf="showBtnMenu" class="box-shadow-strong">
+    <nav 
+      (click)="showBtnMenu=false" 
+      *ngIf="showBtnMenu" 
+      class="box-shadow-strong"
+      [ngStyle]="{'max-height' : maxHeight}"
+    >
       <ng-content select="[bs-buttons]"></ng-content>
     </nav>
   </div>

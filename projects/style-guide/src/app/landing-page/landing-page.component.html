@@ -1,7 +1,10 @@
 <section #top class="landing-page" [ngClass]="{'sticky': isSticky}">
   <article class="dl-banner flex-group">
     <div class="margin-bottom-2 search-section flex-1">
-      <h1>Welcome to the Design Language</h1>
+      <div class="flex-group flex-start flex-align-center flex-nowrap">
+        <h1>Welcome to the Design Language</h1>
+        <img class="happy-chappy" src="./assets/images/happy-chappy.gif" />
+      </div>
       <div class="search margin-top-2">
         <input
           class="animate-normal"
@@ -207,13 +210,18 @@
               </ng-container>
             </aa-project-tour>
           </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
-            <a routerLink="/flex" class="anchor-small">Understanding Flex</a>
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <a routerLink="/flex" class="anchor-small">Help using Flex</a>
           </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
-            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" class="anchor-small">Flexbox tips</a>
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
+            <div class="material-icons small aa-brown-100 margin-right-0-25">public</div>
+            <a 
+              (click)="showOverlay=!showOverlay; showReleaseNotes=false; showDesignPrinciples=false; showSupportedBrowsers=true"
+              class="anchor-small cursor-pointer">
+              Which browsers do we support?
+          </a>
           </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-5">
+          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
             <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank" class="anchor-small">Material Icons reference</a>
           </div>
         </nav>
@@ -453,11 +461,11 @@
         </ng-container>
       </aa-project-tour>
       <p>We use Flexbox for all our page layouts. We don't use Bootstrap under any
-        circumstances so avoid insalling this. For managing form data please
+        circumstances so avoid installing this. For managing form data please
         use one of our blades. Your page layout and data will determine the type of
         blade you should use but as a general rule, table data with multiple columns sits
-        best in the Blade bottom components and basic form data, inputs, selects etc sit
-        best inside the regular Blade. Blade top is rarely used.
+        best in the Blade bottom component and basic form data, inputs, selects etc sit
+        best inside the regular blade. Blade top is rarely used.
         </p>
     </div>
     <div class="flex-2 col-right flex-group flex-end margin-top-1">
@@ -581,7 +589,7 @@
           [enableHeading]="true" 
           tourModeHeading="Patterns" 
           tourModeBody="
-            Patterns can be found here. There's a growing collection available. Patterns are things that are use frequently, 
+            Patterns can be found here. There's a growing collection available. Patterns are things that are used frequently, 
             such as alerts and tags.
           "
         >
@@ -602,7 +610,7 @@
         </aa-project-tour>
         <p>Patterns are reusable/recurring components used to solve common 
           problems in user interface design. For example, the breadcrumbs design pattern 
-          lets users retrace their steps. Designers and devlopers can apply them to a 
+          lets users retrace their steps. Designers and developers can apply them to a 
           broad range of cases, but must adapt each to the specific context of use.</p>
           
           <p>If you can't find what you're looking for here, please contact one of the UX Team
@@ -691,7 +699,7 @@
           </ng-container>
         </aa-project-tour>
         <p>We have a growing selection of widgets available for your project. We do not
-          use 3rd party widgets with two expections, they are AG-Grid and NG-Select. 
+          use 3rd party widgets with a few expections such as AG-Grid, NGB Datepicker and NG-Select. 
           If you can't find a widget that you need, please contact the UX Team.
         </p>
       </div>
@@ -1041,6 +1049,17 @@
         <button (click)="showOverlay=false; showDesignPrinciples=false" class="material-icons">close</button>
       </section>
     </div>
+
+    <!-- SUPPORTED BROWSERS -->
+    <div *ngIf="showSupportedBrowsers">
+      <section class="aa-overlay-header flex-group space-between padding-bottom-0-5">
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons aa-brown-100 margin-right-0-5">public</div>
+          <h1>Supported browsers</h1>
+        </div>
+        <button (click)="showOverlay=false; showSupportedBrowsers=false" class="material-icons">close</button>
+      </section>
+    </div>
   </ng-container>
   
   <ng-container overlay-content>
@@ -1066,6 +1085,50 @@
       </section>
     </div>
     
+    <!-- SUPPORTED BROWSERS -->
+    <div class="aa-overlay-content padding-top-0"*ngIf="showSupportedBrowsers">
+      <a href="https://angular.io/guide/browser-support" target="_blank">Our Apps should mirror the Angular supported browsers</a>
+
+      <div class="flex-group margin-top-2 bd-bottom-2 bd-bottom-pink bd-bottom-dashed">
+        <div class="max-width-6 margin-1-25">
+          <img src="{{chrome}}" alt="Chrome" />
+          <p class="margin-top-0-5 text-align-center">Current version</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{firefox}}" alt="Firefox" />
+          <p class="margin-top-0-5 text-align-center">latest and extended support release (ESR)</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{edge}}" alt="Edge" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{safari}}" alt="Safari" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{ios}}" alt="IOS" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{android}}" alt="Android" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+      </div>
+
+      <h2 class="margin-bottom-0-5 margin-top-1">No longer supported</h2>
+      <p>
+        <a href="https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/" target="_blank"> 
+          Internet Explorer 11 was retired and no longer supported as of June 12, 2022. 
+        </a>
+      </p>
+      <p>
+        It is worth noting that there may still be one or two users using IE11 though it's quite unlikely. Nevertheless, 
+        we should still endeavour to fix any broken functionality as a fairly low priority, but design look and feel isn't important.
+      </p>
+
+    </div>
+
     <!-- START DESIGN PRINCIPLES TABS AND TAB CONTENT -->
     <div *ngIf="showDesignPrinciples">
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
@@ -1324,7 +1387,7 @@
                 <div class="scroll-panel-content">
                   <p>
                     <label>Michael King</label>
-                    <a href="maito:michael.king@angloamerican.com">Michael.King@AngloAmercian.com</a>
+                    <a href="maito:michael.king@angloamerican.com">Michael.King@AngloAmerican.com</a>
                   </p>
                   <p>
                     <label>Claire Burns</label>

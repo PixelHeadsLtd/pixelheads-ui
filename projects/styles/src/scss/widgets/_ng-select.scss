@@ -74,6 +74,9 @@
       .ng-placeholder {
         top: 9px!important;
       }
+      .ng-value {
+        color: _colour(body-text);
+      }
     }
     .ng-arrow {
       display: none!important;
@@ -138,6 +141,7 @@
         white-space: normal;
         padding: .25rem 1rem;
         color: _colour(body-text)!important;
+        background-color: _colour(bg-ng-select-selected) !important;
         &.ng-option-selected {
           .ng-option-label {
             opacity: .3;

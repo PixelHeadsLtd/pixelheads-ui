@@ -7,9 +7,9 @@
 
   &.small {
     label {
-      padding: .25rem .5rem  !important; // bootstrap
+      padding: .25rem .5rem .25rem .25rem  !important; // force override bootstrap
       input {
-        margin-top: .11rem;
+        margin-top: 0;
       }
       span {
         padding-left: 1rem;

@@ -27,6 +27,10 @@ export class ButtonComponent implements OnInit {
   @Input() status: string;
   @Input() level: number;
   @Input() desc: any;
+  @Input() showCount: boolean;
+  @Input() count: number;
+  @Input() countColor: any;
+  @Input() maxHeight: any;
 
   @Output() buttonClick = new EventEmitter<Event>();
 

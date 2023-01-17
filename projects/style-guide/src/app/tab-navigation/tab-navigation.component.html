@@ -166,12 +166,13 @@
       
       <aa-tab-navigation [routerOutlet]="true">
         <ng-container list-items>
+            <li class="divider-tab"></li>
             <li 
               *ngFor="let tab of tabs" 
               [ngClass]="{'tab-disabled' : tab.tabDisabled, 'divider-tab' : tab.showRightDivider}"
             >
               <a 
-                *ngIf="!tab.tabDisabled"
+                *ngIf="!tab.tabDisabled && !tab.showRightDivider"
                 [id]="tab.tabId" 
                 routerLinkActive="active"
                 [routerLink]="tab.routerLink"
@@ -180,7 +181,7 @@
                 <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
                 <span *ngIf="tab.enableIcon" class="material-icons {{tab.iconColor}}">{{tab.iconName}}</span>
               </a>
-              <span *ngIf="tab.tabDisabled">
+              <span *ngIf="tab.tabDisabled && !tab.showRightDivider">
                 {{ tab.name }}
                 <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
               </span>

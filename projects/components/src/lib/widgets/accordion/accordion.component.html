@@ -1,27 +1,27 @@
 <article 
   class="accordion-container"
-  [ngStyle]="{'min-width' : minWidth+'rem'}"
-  [ngClass]="{'box-shadow-strong' : showBody}"
+  [ngStyle]="{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }"
+  [ngClass]="{'box-shadow-strong' : showBody, 'vertical flex-group flex-start' : verticalDisplay }"
 >
   <h3 class="margin-0">
     <button 
       class="accordion-trigger flex-group space-between flex-align-center {{customBgColor}}" 
       (click)="onOpen($event)" 
       [attr.aria-expanded.true]="showBody"
-      [ngClass]="{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled}"
+      [ngClass]="{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled, 'flex-column' : verticalDisplay}"
       aria-controls="sectionId" 
       [id]="accordionId" 
       type="button">
-        <span class="flex-align-center">
-            <span *ngIf="dragable" class="accordion-icon material-icons drag-icon">drag_indicator</span>
-            <span *ngIf="iconsEnabled && !fontAwesome" class="accordion-icon material-icons {{iconBgColor}}">{{iconName}}</span>
-            <span *ngIf="iconsEnabled && fontAwesome" class="accordion-icon {{fontClassName}}"></span>
-            <span class="nested-icons">
-              <span class="material-icons" *ngIf="!showBody">add_circle_outline</span>
-              <span class="material-icons" *ngIf="showBody">remove_circle_outline</span>
-            </span>
-            <span class="accordion-heading">{{accordionHeading}}</span>
-        </span>
+        <div class="flex-align-center flex-group flex-start">
+            <div *ngIf="dragable" class="accordion-icon material-icons drag-icon">drag_indicator</div>
+            <div *ngIf="iconsEnabled && !fontAwesome" class="accordion-icon material-icons {{iconBgColor}}">{{iconName}}</div>
+            <div *ngIf="iconsEnabled && fontAwesome" class="accordion-icon {{fontClassName}}"></div>
+            <div class="nested-icons">
+              <div class="material-icons" *ngIf="!showBody">add_circle_outline</div>
+              <div class="material-icons" *ngIf="showBody">remove_circle_outline</div>
+            </div>
+            <div class="accordion-heading">{{accordionHeading}}</div>
+          </div>
         <div class="flex-group flex-end flex-align-center">
           <ng-content select="[header-custom]"></ng-content>
             <div class="toggle-icons flex-align-center">
@@ -36,10 +36,9 @@
     *ngIf="showBody && !enableAnimation" 
     [id]="sectionId" 
     class="accordion-panel"
+    [ngStyle]="{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }"
     >
-      <section class="padding-1 padding-top-0">
-        <ng-content></ng-content>
-      </section>
+      <ng-content></ng-content>
   </div>
 
   <div 
@@ -52,7 +51,7 @@
       class="dynamic-height"
       [ngStyle]="{'height': setHeight ? eleHeight+'px' : '0'}"
     >
-      <div class="accordion-content" #myIdentifier>
+      <div class="accordion-content" [ngStyle]="{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }" #myIdentifier>
         <ng-content select="[animate]"></ng-content>
       </div>
     </section>

@@ -17,6 +17,9 @@ export declare class AccordionComponent {
     setHeight: boolean;
     eleHeight: number;
     enableAnimation: boolean;
+    clearPadding: boolean;
+    verticalDisplay: boolean;
+    verticalMinHeight: any;
     open: EventEmitter<void>;
     myIdentifier: ElementRef;
     onOpen(e: {

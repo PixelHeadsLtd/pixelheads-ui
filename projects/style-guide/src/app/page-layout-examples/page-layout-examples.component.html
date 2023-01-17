@@ -337,5 +337,31 @@
                 </div>
             </section>
         </div>
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+            </button>
+        </nav>
     </section>
 </section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div>
+      <a href="https://gist.github.com/angloux/798ef18d606cae741c31463927b87ba6" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/798ef18d606cae741c31463927b87ba6"></app-gist>
+    </div>
+  </article>
+</aa-blade>

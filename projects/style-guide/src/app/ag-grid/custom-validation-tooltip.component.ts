@@ -7,7 +7,10 @@ import { ITooltipParams } from 'ag-grid-community';
   template: 
     `<div class="custom-tooltip box-shadow-strong bd-2 bd-red bd-solid aa-red-100">
     <p><strong class="boxed">{{ data.athlete }}</strong></p>
-    <p class="aa-red-100">Your validation message...</p>
+    <p class="aa-red-100">
+      <strong>Incorrect date format</strong><br/>
+      Should be <strong>dd Mon yyyy</strong><br/>for example <strong>12 Aug 2008</strong>
+    </p>
   </div>`,
   styles: [
     `

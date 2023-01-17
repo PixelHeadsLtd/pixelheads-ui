@@ -13,7 +13,11 @@
             </p>
           </div>
 
-          <aa-status-indicator [currentStatus]="currentStatus"></aa-status-indicator>
+          <aa-status-indicator 
+            [currentStatus]="currentStatus"
+            [removeLine]="false"
+            >
+          </aa-status-indicator>
 
         </section>
           
@@ -64,6 +68,12 @@
                 <td datalabel="Attribute">iconName</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Material-icons friendly name</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Attribute">removeLine</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">False</td>
               </tr>
             </tbody>
           </table>

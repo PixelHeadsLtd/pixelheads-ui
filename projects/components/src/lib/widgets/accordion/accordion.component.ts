@@ -25,6 +25,9 @@ export class AccordionComponent {
   @Input() setHeight: boolean;
   @Input() eleHeight: number;
   @Input() enableAnimation: boolean;
+  @Input() clearPadding: boolean;
+  @Input() verticalDisplay: boolean;
+  @Input() verticalMinHeight: any;
   @Output() open = new EventEmitter<void>();
   @ViewChild('myIdentifier') myIdentifier: ElementRef;
 

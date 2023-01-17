@@ -6,7 +6,7 @@
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-2 col-left flex-start">
-      <h2>Standard table</h2>
+      <h2>Native table</h2>
       <div class="describe margin-bottom-1">
         <p>The default native table spans the full width of the browser window.</p>
       </div>
@@ -32,6 +32,30 @@
           </tr>
         </tbody>
       </table>
+
+      <h2 class="margin-top-1">Native table pagination</h2>
+      <nav class="aa-pagination flex-group flex-start flex-align-center bg-aa-white-100 padding-0-25 padding-left-1-5 padding-right-1-5">
+        <div>Items per page</div>
+        <div>
+          <select>
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+            <option>40</option>
+            <option>50</option>
+            <option>60</option>
+            <option>70</option>
+            <option>80</option>
+            <option>90</option>
+            <option>100</option>
+          </select>
+        </div>
+        <div class="padding-x-2">Page 1 of 5</div>
+        <button class="material-icons">first_page</button>
+        <button class="material-icons rotate">chevron_left</button>
+        <button class="material-icons">chevron_right</button>
+        <button class="material-icons">last_page</button>
+      </nav>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -79,7 +103,7 @@
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-2 col-left flex-start">
-      <h2>Standard table with fixed header</h2>
+      <h2>Native table with fixed header</h2>
       <div class="describe margin-bottom-1">
         <p>For a scrollable table with a fixed header you will need to nest your table inside 
           two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
@@ -186,7 +210,7 @@
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
-        <h2>Standard table with fixed header and expandable rows</h2>
+        <h2>Native table with fixed header and expandable rows</h2>
         <div class="describe margin-bottom-1">
           <p>For a scrollable table with a fixed header you will need to nest your table inside 
             two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
@@ -298,7 +322,7 @@
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
-        <h2>Standard table with progress status</h2>
+        <h2>Native table with progress status</h2>
         <div class="describe margin-bottom-1">
           <p>For a scrollable table with a fixed header you will need to nest your table inside 
             two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
@@ -640,7 +664,7 @@
      <!-- start content repeater -->
  <section class="content-repeater flex-group">
   <section class="flex-2 col-left flex-start">
-    <h2>Table with status cells</h2>
+    <h2>Native Table with status cells</h2>
     <div class="describe margin-bottom-1">
       <p>For a scrollable table with a fixed header you will need to nest your table inside 
         two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
@@ -650,15 +674,15 @@
     </div>
     <div class="tbl-container">
       <div class="tbl-fixed" style="max-height: 15rem"><!-- You would normally use a calc() max-height here, see Gist -->
-        <table class="table-status padding-top-4">
+        <table class="table-status">
           <thead>
             <tr>
-              <th>CORE Applications</th>
-              <th class="rotate status-cell">Dev</th>
-              <th class="rotate status-cell">Test</th>
-              <th class="rotate status-cell">Staging</th>
-              <th class="rotate status-cell">Pre-prod</th>
-              <th class="rotate status-cell">Prod</th>
+              <th class="padding-top-4">CORE Applications</th>
+              <th class="padding-top-4"><div class="rotate">Dev</div></th>
+              <th class="padding-top-4"><div class="rotate">Test</div></th>
+              <th class="padding-top-4"><div class="rotate">Staging</div></th>
+              <th class="padding-top-4"><div class="rotate">Pre-prod</div></th>
+              <th class="padding-top-4"><div class="rotate">Prod</div></th>
             </tr>
           </thead>
           <tbody>
@@ -822,7 +846,7 @@
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
-        <h2>Table row headings</h2>
+        <h2>Native table row headings</h2>
         <div class="describe margin-bottom-1">
           <p>Specify that the first header cell is a header for a column.</p>
         </div>
@@ -898,7 +922,7 @@
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
-        <h2>Table feature</h2>
+        <h2>Native table feature</h2>
         <div class="describe margin-bottom-1">
           <p>Currently only used for CMaT application.</p>
         </div>
@@ -1010,7 +1034,7 @@
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
-        <h2>Multiple table with horizontal scrolling</h2>
+        <h2>Multiple native table with horizontal scrolling</h2>
         <div class="describe margin-bottom-1">
           <p>In some instances you may need to display multiple tables. 
             Please refer to the side gist for details</p>

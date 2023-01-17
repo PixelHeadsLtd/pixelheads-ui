@@ -28,6 +28,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
   showBlade: boolean;
   showReleaseNotes: boolean;
   showDesignPrinciples: boolean;
+  showSupportedBrowsers: boolean;
   selectedColor = 'aa-light-blue-100';
   
   stepOne = "./assets/images/samples/email-templates/step1.png";
@@ -37,6 +38,13 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
   stepFive = "./assets/images/samples/email-templates/step5.png";
   stepSix = "./assets/images/samples/email-templates/step6.png";
   stepSeven = "./assets/images/samples/email-templates/step7.png";
+
+  chrome="./assets/images/browsers/chrome.png"
+  firefox="./assets/images/browsers/firefox.png"
+  edge="./assets/images/browsers/edge.png"
+  safari="./assets/images/browsers/safari.png"
+  ios="./assets/images/browsers/ios.png"
+  android="./assets/images/browsers/android.png"
 
   public constructor(
     private changeDetector: ChangeDetectorRef,

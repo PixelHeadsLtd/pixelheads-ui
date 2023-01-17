@@ -71,10 +71,10 @@ export class AgGridComponent {
     this.tooltipShowDelay = 0;
   }
 
-  private cellClass(params) {
-    if (params.value === 19 || params.value === '29/08/2004' || params.value === 'Gymnastics' || params.value === 0)
-      return "error"
-  }
+  // private cellClass(params) {
+  //   if (params.value === 19 || params.value === '29/08/2004' || params.value === 'Gymnastics' || params.value === 0)
+  //     return "error"
+  // }
 
   private columnDefs = [
     {
@@ -85,7 +85,7 @@ export class AgGridComponent {
       headerCheckboxSelection: true,
       headerCheckboxSelectionFilteredOnly: true,
       checkboxSelection: true,
-      cellClass: this.cellClass,
+      //cellClass: this.cellClass,
       tooltipField: "age", // tell ag-grid to use this cell as a tooltip
       tooltipComponent: "CustomCardComponent", // pass in our custom-card.component
       cellRenderer: 'AvatarComponent', // display the image avatar in ag-grid cell
@@ -99,16 +99,14 @@ export class AgGridComponent {
     {
       field: "Context menu",
       width: 110,
-      cellRenderer: 'ellipsisContextMenuCell',
-      cellClass: this.cellClass
+      cellRenderer: 'ellipsisContextMenuCell'
     },
     {
       headerName: 'Age',
       field: "age",
       width: 50,
       tooltipField: "age",
-      tooltipComponent: "CustomValidationTooltipComponent",
-      cellClass: this.cellClass
+      tooltipComponent: "CustomValidationTooltipComponent"
     },
     {
       field: "year",
@@ -119,7 +117,7 @@ export class AgGridComponent {
       width: 110,
       tooltipField: "date",
       tooltipComponent: "CustomValidationTooltipComponent",
-      cellClass: this.cellClass
+      cellClass: "error"
     },
     {
       headerName: 'Hover for custom tooltip',
@@ -142,7 +140,7 @@ export class AgGridComponent {
       width: 100,
       tooltipField: "bronze",
       tooltipComponent: "CustomValidationTooltipComponent",
-      cellClass: this.cellClass
+      //cellClass: this.cellClass
     },
     {
       field: "total",
@@ -154,7 +152,16 @@ export class AgGridComponent {
       cellRenderer: () => {
         let elem = document.createElement('div');
         elem.innerHTML = 
-          `<button class="primary next">Next</button>`;
+          `<aa-alert-shield
+          [customShield]="true"
+          [alertShieldSmall]="false"
+          [noWrap]="true"
+          [bgGreenLight]="true"
+          iconName="update"
+          minWidth="12rem"
+          alertShieldText="Running"
+        >
+        </aa-alert-shield>`;
         return elem;
       }
     },

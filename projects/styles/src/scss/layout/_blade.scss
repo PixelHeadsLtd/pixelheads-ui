@@ -139,144 +139,23 @@
       }
     }
 
-    // start accordions
-    aa-accordion {
-      &:first-child {
-        display: block;
+    // Minor accordion adjustments
+    .accordion-container {
+      margin-bottom: 2px;
+      ul, ol {
+        margin-left: 1.25rem;
       }
-
-      .accordion-container {
-        position: relative;
-        left: -1.25rem;
-        width: calc(100% + 2.75rem);
-        margin-bottom: 1px !important;
-        border-radius: 0;
-        box-shadow: none;
-
-        .accordion-trigger {
-          padding: 0 1rem 0 1.25rem;
-          font-family: _font(family-regular);
-          background-color: _colour(aa-blue-sky-100);
-          border: none;
-          border-radius: 0;
-          line-height: initial;
-
-          &.disabled {
-            background-color: _colour(aa-grey-25);
-
-            &:focus,
-            &:hover {
-              @include button-disabled;
-              background-color: _colour(aa-greyimportant-25);
-              border-color: _colour(aa-white-100) !important;
-            }
-
-            .accordion-heading,
-            .accordion-icon {
-              color: _colour(aa-grey-100);
-              opacity: 1;
-            }
-
-            .toggle-icons {
-              display: none;
-            }
-          }
-
-          .nested-icons {
-            display: none;
-          }
-
-          .accordion-icon {
-            font-size: _font(size-medium);
-            color: _colour(aa-white-100);
-            width: 1.75rem;
-            margin-right: .5rem;
-          }
-
-          .accordion-heading {
-            color: _colour(aa-white-100);
-            font-size: _font(size-default);
-          }
-
-          .toggle-icons {
-            display: block;
-            color: _colour(aa-white-100);
-
-            .material-icons,
-            .material-icons-outlined {
-              font-size: _font(size-medium);
-              margin-top: .25rem;
-            }
-          }
-        }
-
-        .accordion-panel {
-          background-color: _colour(aa-white-100);
-          border: none;
-          border-radius: 0;
-        }
+      &:not(.accordion-container .accordion-container) {
+        margin-left: -1.25rem;
+        width: calc(100% + 2.5rem);
       }
-
-      // start nested accordion
-      aa-accordion {
-        &:last-child {
-          display: block;
-          margin-bottom: -1rem;
-        }
-
-        &:last-child {
-          .accordion-container {
-            .accordion-trigger:not(.expanded) {
-              border-bottom: none;
-
-              &:focus {
-                border-bottom: none;
-              }
-            }
-          }
-        }
-
-        .accordion-container {
-          .accordion-panel {
-            padding-right: 2rem;
-            border-bottom: 1px solid _colour(aa-grey-25);
-            background-color: _colour(aa-grey-2);
-          }
-
-          .accordion-trigger {
-            border-bottom: 1px solid _colour(aa-grey-25);
-            background-color: _colour(aa-white-100);
-
-            &:focus {
-              border-bottom: 1px solid _colour(aa-grey-25);
-            }
-
-            &:hover {
-              background-color: _colour(aa-grey-5);
-            }
-
-            .accordion-heading {
-              color: _colour(aa-grey-100);
-            }
-
-            .accordion-icon {
-              display: none;
-            }
-
-            .toggle-icons {
-              display: none;
-            }
-
-            .nested-icons {
-              display: block;
-              margin: .4rem .85rem 0 .3rem;
-
-              .material-icons,
-              .material-icons-outlined {
-                color: _colour(aa-grey-100);
-                font-size: _font(size-medium);
-              }
-            }
+      .accordion-trigger:not(.disabled) {
+        &:not(.accordion-container .accordion-panel .accordion-trigger) {
+          background-color: _palette(aa-blue-sky-100);
+          .accordion-heading,
+          .material-icons,
+          .material-icons-outlined {
+            color: _palette(aa-white-100);
           }
         }
       }
