@@ -13,42 +13,117 @@
       </div>
 
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-        <!-- Tab 1 -->
-        <aa-tab-navigation-item tabName="Tab 1" [enableIcons]="true" iconName="error" iconColour="aa-red-100"> 
+        <aa-tab-navigation-item 
+          *ngFor="let tab of tabsNgTemplate; let i = index"
+          tabName="{{tab.tabName}}" 
+          [enableIcons]="tab.enableIcons" 
+          iconName="{{tab.iconName}}" 
+          iconColour="{{tab.iconColour}}"
+          [showRightDivider]="tab.showRightDivider"
+          [enableCount]="tab.enableCount"
+          tabCount="{{tab.tabCount}}"
+          countColour="{{tab.countColour}}"
+          [tabDisabled]="tab.tabDisabled"
+        > 
           <ng-template aaTabNavigationContent>
-            <h2 class="boxed">Tab one content</h2>
-            <p>This is Tab 1 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
+            <div *ngIf="tab.showTabOneContent">
+              <h2 class="boxed">Tab 1 content</h2>
+              <p>
+                This is Tab 1 content and is passed into (ng-template)
+                which should be nested inside div.content-container.
+                In this example we have 'enableIcons' set to 'true', 'iconColour' 
+                set to 'aa-red-100' and 'iconName' set to 'error'
+              </p>
+              <ul class="margin-top-1">
+                <li>
+                  You can choose an 
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                </li>
+                <li>
+                  You can choose an 
+                  <a routerLink="/colours">iconColour here</a>
+                </li>
+              </ul>
+            </div>
+            <div *ngIf="tab.showTabTwoContent">
+              <h2 class="boxed">Tab 2 content</h2>
+              <p>
+                This is Tab 2 content and is passed into (ng-template)
+                which should be nested inside div.content-container.
+                In this example we have 'enableIcons' set to 'true', 'iconColour' 
+                set to 'aa-red-100' and 'iconName' set to 'error'
+              </p>
+              <ul class="margin-top-1">
+                <li>
+                  You can choose an 
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                </li>
+                <li>
+                  You can choose an 
+                  <a routerLink="/colours">iconColour here</a>
+                </li>
+              </ul>
+            </div>
+            <div *ngIf="tab.showTabThreeContent">
+              <h2 class="boxed">Tab 3 content</h2>
+              <p>
+                This is Tab 3 content and is passed into (ng-template)
+                which should be nested inside div.content-container.
+                In this example we have 'enableCount' set to 'true' and 'countColour' 
+                set to 'bg-aa-red-100'
+              </p>
+              <ul class="margin-top-1">
+                <li>
+                  You can choose an 
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                </li>
+                <li>
+                  You can choose an 
+                  <a routerLink="/colours">iconColour here</a>
+                </li>
+              </ul>
+            </div>
           </ng-template>
         </aa-tab-navigation-item>
-        <!-- Tab 2 -->
-        <aa-tab-navigation-item tabName="Tab 2" [enableIcons]="true" iconName="check_circle" iconColour="aa-green-100">
-          <ng-template aaTabNavigationContent>
-            <h2 class="boxed">Tab two content</h2>
-            <p>This is Tab 2 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <!-- Tab 3 -->
-        <aa-tab-navigation-item tabName="Disabled" [showRightDivider]="true" [tabDisabled]="true" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <h2 class="boxed">Tab three content</h2>
-            <p>This is Tab 3 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <!-- Tab 4 -->
-        <aa-tab-navigation-item tabName="Tab 4" [tabDisabled]="false" [enableIcons]="true" iconName="check_circle" iconColour="aa-red-100" [enableCount]="true" countColour="bg-aa-red-100" tabCount="200">
-          <ng-template aaTabNavigationContent>
-            <h2 class="boxed">Tab four content</h2>
-            <p>This is Tab 4 content and is passed into <strong>ng-template</strong> which should be nested inside div.content-container.</p>
-          </ng-template>
-        </aa-tab-navigation-item>
-
       </aa-tab-navigation>
+      
       <section class="content-container padding-bottom-0" *ngIf="activeTab">
-        <aa-tab-navigation-secondary>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 1'"></aa-tab-navigation-secondary-item>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 2'"></aa-tab-navigation-secondary-item>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 3'"></aa-tab-navigation-secondary-item>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 4'"></aa-tab-navigation-secondary-item>
+        <aa-tab-navigation-secondary [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+          <aa-tab-navigation-secondary-item 
+            *ngFor="let tab of tabsSecondaryNgTemplate; let i = index"
+            tabName="{{tab.tabName}}" 
+            [tabDisabled]="tab.tabDisabled"
+          > 
+            <ng-template aaTabNavigationSecondaryContent>
+              <div *ngIf="tab.showTabSecondaryOneContent">
+                <h2 class="boxed">Tab secondary 1 content</h2>
+                <p>
+                  This is Tab secondary 1 content and is passed into (ng-template)
+                  which should be nested inside div.content-container.
+                  In this example we have 'enableIcons' set to 'true', 'iconColour' 
+                  set to 'aa-red-100' and 'iconName' set to 'error'
+                </p>
+              </div>
+              <div *ngIf="tab.showTabSecondaryTwoContent">
+                <h2 class="boxed">Tab secondary 2 content</h2>
+                <p>
+                  This is Tab secondary 2 content and is passed into (ng-template)
+                  which should be nested inside div.content-container.
+                  In this example we have 'enableIcons' set to 'true', 'iconColour' 
+                  set to 'aa-red-100' and 'iconName' set to 'error'
+                </p>
+              </div>
+              <div *ngIf="tab.showTabSecondaryThreeContent">
+                <h2 class="boxed">Tab secondary 3 content</h2>
+                <p>
+                  This is Tab secondary 3 content and is passed into (ng-template)
+                  which should be nested inside div.content-container.
+                  In this example we have 'enableCount' set to 'true' and 'countColour' 
+                  set to 'bg-aa-red-100'
+                </p>
+              </div>
+            </ng-template>
+          </aa-tab-navigation-secondary-item>
         </aa-tab-navigation-secondary>
         <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
       </section>
@@ -166,9 +241,8 @@
       
       <aa-tab-navigation [routerOutlet]="true">
         <ng-container list-items>
-            <li class="divider-tab"></li>
             <li 
-              *ngFor="let tab of tabs" 
+              *ngFor="let tab of tabsRouterOutlet" 
               [ngClass]="{'tab-disabled' : tab.tabDisabled, 'divider-tab' : tab.showRightDivider}"
             >
               <a 
@@ -190,10 +264,24 @@
       </aa-tab-navigation>
       
       <section class="content-container padding-bottom-0">
-        <aa-tab-navigation-secondary>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 1'"></aa-tab-navigation-secondary-item>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 2'"></aa-tab-navigation-secondary-item>
-          <aa-tab-navigation-secondary-item [secondaryTabName]="'Tab 3'"></aa-tab-navigation-secondary-item>
+        <aa-tab-navigation-secondary [routerOutlet]="true">
+          <ng-container list-items>
+              <li 
+                *ngFor="let tab of tabsSecondaryRouterOutlet" 
+              >
+                <a 
+                  *ngIf="!tab.tabDisabled"
+                  [id]="tab.tabId" 
+                  routerLinkActive="active"
+                  [routerLink]="tab.routerLink"
+                >
+                  {{ tab.tabName }}
+                </a>
+                <span *ngIf="tab.tabDisabled" class="tab-disabled">
+                  {{ tab.tabName }}
+                </span>
+              </li>
+          </ng-container>
         </aa-tab-navigation-secondary>
       </section>
       
@@ -385,6 +473,7 @@
 
 <aa-blade 
   [showModal]="false"
+  [bladeTabs]="true"
   [toggleBlade]="toggleBlade"
   suppressAutoClose="false"
   topPosition="3.5"
@@ -395,22 +484,76 @@
   iconName="table_rows"
   (close)="toggleBlade = false"
   >
-  <article class="blade-content">
     <div *ngIf="tabNgTemplate">
-      <a href="https://gist.github.com/angloux/fc6fe846adfb3b2a34bb516498e12039" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="gistTabChanged($event)">
+        <aa-tab-navigation-item 
+          *ngFor="let tab of gistNgTemplate; let i = index"
+          tabName="{{tab.tabName}}" 
+          [enableIcons]="tab.enableIcons" 
+          iconName="{{tab.iconName}}" 
+          iconColour="{{tab.iconColour}}"
+          [showRightDivider]="tab.showRightDivider"
+          [enableCount]="tab.enableCount"
+          tabCount="{{tab.tabCount}}"
+          countColour="{{tab.countColour}}"
+          [tabDisabled]="tab.tabDisabled"
+        > 
+          <ng-template aaTabNavigationContent>
+            <div *ngIf="tab.showGistNgTemplate">
+              <h2>Tab navigation - using ng-template</h2>
+              <a href="https://gist.github.com/angloux/fc6fe846adfb3b2a34bb516498e12039" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>           
+            </div>
+            <div *ngIf="tab.showGistRouterOutlet">
+              <h2>Tab navigation secondary - using ng-template</h2>
+              <a href="https://gist.github.com/angloux/773b60140d117c56f6faf7578c6b2a22" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/773b60140d117c56f6faf7578c6b2a22"></app-gist>              
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+      
+      <section class="blade-content padding-bottom-0" *ngIf="activeGistTab">
+        <ng-template *ngTemplateOutlet="activeGistTab.templateRef"></ng-template>
+      </section>
     </div>
-    
+
     <div *ngIf="tabRouterOutlet">
-      <a href="https://gist.github.com/angloux/49376fbd40cdc740ac32d68ea19fc150" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/49376fbd40cdc740ac32d68ea19fc150"></app-gist>
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="gistTabChanged($event)">
+        <aa-tab-navigation-item 
+          *ngFor="let tab of gistNgTemplate; let i = index"
+          tabName="{{tab.tabName}}" 
+          [enableIcons]="tab.enableIcons" 
+          iconName="{{tab.iconName}}" 
+          iconColour="{{tab.iconColour}}"
+          [showRightDivider]="tab.showRightDivider"
+          [enableCount]="tab.enableCount"
+          tabCount="{{tab.tabCount}}"
+          countColour="{{tab.countColour}}"
+          [tabDisabled]="tab.tabDisabled"
+        > 
+          <ng-template aaTabNavigationContent>
+            <div *ngIf="tab.showGistNgTemplate">
+              <h2>Tab navigation - using router-outlet</h2>
+              <a href="https://gist.github.com/angloux/49376fbd40cdc740ac32d68ea19fc150" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/49376fbd40cdc740ac32d68ea19fc150"></app-gist>           
+            </div>
+            <div *ngIf="tab.showGistRouterOutlet">
+              <h2>Tab navigation secondary - using router-outlet</h2>
+              <a href="https://gist.github.com/angloux/ec2bbf59f421006a8e62f3113c7266d9" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/ec2bbf59f421006a8e62f3113c7266d9"></app-gist>              
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+      
+      <section class="blade-content padding-bottom-0" *ngIf="activeGistTab">
+        <ng-template *ngTemplateOutlet="activeGistTab.templateRef"></ng-template>
+      </section>
     </div>
-    
-    <div *ngIf="tabInfo">
+
+    <article class="blade-content padding-top-0" *ngIf="tabInfo">
       <a href="https://gist.github.com/angloux/f08af42ced9a4788dca64d6ced828ecf" target="_blank">View Gist on GitHub</a>
       <app-gist src="angloux/f08af42ced9a4788dca64d6ced828ecf"></app-gist>
-    </div>
-    <app-gist [ngStyle]="{'display': 'none'}" src="angloux/fc6fe846adfb3b2a34bb516498e12039"></app-gist>
-  </article>
+    </article>
 </aa-blade>
-

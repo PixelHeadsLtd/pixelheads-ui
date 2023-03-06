@@ -39,6 +39,15 @@
   }
 
   header.page-header {
+    background-image: url("#{$logo-path}anglo-american-logo-white.svg");
+    background-position: center left 54.5%;
+    background-repeat: no-repeat;
+    background-size: 8.5rem;
+    transition: all 0.25s linear;
+    &.shift-aa-logo {
+      background-position: center left 50.9%;
+      transition: all 0.25s linear;
+    }
     .mobile-menu {
       display: none;
       margin-right: 0;
@@ -274,6 +283,108 @@
       }
     }
   }
+
+  .show-search {
+    .change-theme-button {
+      margin-right: 10.75rem;
+    }
+    .aa-search {
+      input[type=text] {
+        width: 12rem;
+        padding-right: 2rem;
+        color: _colour(search-input);
+        &::placeholder {
+          visibility: visible;
+          color:_colour(search-placeholder);
+        }
+      }
+      .material-icons:not(.nav-icon),
+      .material-icons-outlined:not(.nav-icon) {
+        transform: rotate(90deg);
+      }
+  
+      .clear-search { 
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .aa-search {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    input[type=text] {
+      position: absolute;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 1rem;
+      border: none;
+      color: transparent;
+      background-color: _colour(bg-search-input);
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+    .material-icons:not(.nav-icon, .clear-search),
+    .material-icons-outlined:not(.nav-icon, .clear-search) {
+      font-size: _font(size-large);
+      color: _colour(search-input);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2rem;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+    .search-results {
+      background-color: _colour(bg-header);
+      padding: 0 1rem 1rem;
+      margin: 2rem 0 0;
+      position: fixed;
+      z-index: 999;
+      right: 0;
+      top: 1.5rem;
+      bottom: 0;
+      width: 21rem;
+      border-radius: 0 0 0 .5rem;
+      overflow-y: auto;
+
+      ul {
+        margin-top: -1rem;
+        li {
+          list-style: none;
+          text-align: left;
+          margin-top: .5rem;
+          width: auto;
+          height: auto;
+
+          h2 {
+            margin: 1.5rem 0 .75rem 0;
+          }
+        
+          .nav-icon {
+            color: _palette(aa-white-100);
+            font-size: _font(size-regular);
+          }
+    
+          a {
+            color: _colour(header-text);
+            font-size: _font(size-small);
+            &::first-letter {
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+  
+      .highlight {
+        color: _colour(aa-orange-100);
+      }
+    }
+  }
   
   .landing-page {  
     &.sticky {
@@ -290,7 +401,6 @@
 
     .drop-area {
       padding: 10rem;
-      border: 1px solid red
     }
     
     .content-repeater {
@@ -379,8 +489,8 @@
       .search {
         position: relative;
         width: 18rem;
-        .material-icons,
-        .material-icons-outlined {
+        .material-icons.search-icon,
+        .material-icons-outlined.search-icon {
           position: absolute;
           color: _colour(dl-orange);
           right: .5rem;
@@ -407,16 +517,37 @@
           z-index: 1;
           width: 16rem;
           left: 0;
+          margin-top: .5rem;
           border-radius: .5rem;
-          padding: .25rem 1rem 1rem;
+          padding: 0 1rem 1rem;
           overflow-y: auto;
-          max-height: 15rem;
+          overflow-x: hidden;
+          max-height: 20rem;
           background-color: _colour(bg-primary);
           border: 1px solid _colour(border-input);
+
+          h2 {
+            margin: 1.5rem 0 .75rem 0;
+            color: _colour(aa-grey-100);
+          }
           
-          li {
-            list-style: none;
-            margin-top: .5rem;
+          ul {
+            margin-top: -1rem;
+            li {
+              list-style: none;
+              margin-top: .5rem;
+  
+              .material-icons,
+              .material-icons-outlined {
+                background-color: transparent!important;
+                font-size: _font(size-regular)!important;
+              }
+  
+              .material-icons:not(.aa-green-50 .material-icons),
+              .material-icons-outlined:not(.aa-green-50 .material-icons) {
+                color: _palette(aa-white-100)!important;
+              }
+            }
           }
           
           a {
@@ -450,12 +581,12 @@
       .graphic {
         @include dl-graphic;
         background-repeat: no-repeat;
-        background-position: left bottom;
+        background-position: center bottom;
         background-size: 100%;
-        min-width: 37rem;
-        max-width: 38rem;
-        margin-right: 13%;
         min-height: 20rem;
+        margin: 0 -4.5rem 0 -4.5rem;
+        width: 100%;
+        max-width: 53rem;
       }
 
       .features {
@@ -466,7 +597,7 @@
     .blade {
       ol.code {
         margin-bottom: .5rem;
-        padding: .5rem;
+        padding: .5rem 1.5rem .5rem 1.75rem;
         border-radius: .25rem;
         background-color: _colour(bg-describe);
         li {
@@ -769,6 +900,12 @@
   &.design-language {
     main {
       padding-left: 0!important;
+
+      .control-bar {
+        .error {
+          display: none;
+        }
+      }
       
       .landing-page {
         &.sticky {
@@ -779,11 +916,9 @@
         .dl-banner {
             padding: 1rem 1.5rem 0;
           .graphic {
-            min-width: 21rem;
-            max-width: 21rem;
-            margin-right: 0;
+            max-width: 33rem;
+            margin: 0;
             min-height: 12rem;
-            background-position: left bottom;
           }
           .getting-started {
             margin-top: 0;
@@ -817,10 +952,7 @@
     }
     
     header.page-header {
-      .aa-logo {
-        display: none;
-      }
-      
+      background-image: none;
       .mobile-menu {
         display: block;
       }

@@ -1,13 +1,37 @@
 import { EventEmitter, OnInit } from '@angular/core';
-export declare class FavouritesComponent implements OnInit {
+declare class FavouriteItem {
+    favColour: string;
+    favLabel: string;
+    favTitle: string;
+    favTextLineOne: string;
+    favTextLineTwo: string;
+    favTextLineThree?: string;
     isFavourite: boolean;
-    favouritesTitle: string;
-    favouritesText: string;
-    favClick: EventEmitter<any>;
-    anchorClick: EventEmitter<any>;
-    onFavClick(event: Event): void;
-    onAnchorClick(event: Event): void;
+}
+export declare class FavouritesComponent implements OnInit {
+    showLandscapeFavs: boolean;
+    showPortraitFavs: boolean;
+    anchorIsClicked: boolean;
+    disableFavsStar: boolean;
+    toggleFavourite: string;
+    favsHeading: string;
+    clickAnchor: string;
+    favLabel: string;
+    favTitle: string;
+    favTextLineOne: string;
+    favTextLineTwo: string;
+    favTextLineThree: string;
+    favColour: string;
+    favsOrigin: Array<FavouriteItem>;
+    favsTarget: Array<FavouriteItem>;
+    favsPortrait: Array<FavouriteItem>;
+    isFavourite: any;
+    anchorClick: EventEmitter<Event>;
+    favClick: EventEmitter<FavouriteItem>;
+    onAnchorClick(e: Event): void;
+    onFavClick(fav: FavouriteItem): void;
     constructor();
     ngOnInit(): void;
 }
+export {};
 //# sourceMappingURL=favourites.component.d.ts.map

@@ -104,6 +104,214 @@
         <input type="text" value="The above label is replaced by the tooltip" />
       </div>
 
+      <div class="field">
+        <aa-tooltip 
+          [showAsAnchor]="true"
+          tooltipAnchor="Set `showAsAnchor` to true - see Gist"
+          [preventAnchorWrapping]="true"
+          [includeLabel]="true"
+          labelFor="popup-position-top-left"
+          labelName="Popup panel position - top right"
+          class="margin-top-1"
+          [isSuccess]="true" 
+          setMinWidth="18" 
+          ypos="top" 
+          xpos="right"
+          zIndex="1"
+        >
+          <h4>Show as anchor</h4>
+          <ol>
+            <li>Set `showAsAnchor` to true</li>
+            <li>Add your anchor text to `tooltipAnchor'</li>
+            <li>Prevent tooltip anchor wrapping with `preventAnchorWrapping'</li>
+          </ol>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <h3 class="margin-top-2">Buttons with tooltips - display on hover</h3>
+      <div class="flex-group flex-start">
+        <div class="field boxed">
+          <label>Button - left top</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            (buttonClick)="onClick()" 
+            buttonClass="primary" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Primary"
+            buttonText=".primary" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="left"
+            ypos="top" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - left bottom</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            (buttonClick)="onClick()" 
+            buttonClass="secondary" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Secondary"
+            buttonText=".Secondary" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="left"
+            ypos="bottom" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right top</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            (buttonClick)="onClick()" 
+            buttonClass="cancel" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Cancel"
+            buttonText=".Cancel" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="right"
+            ypos="top" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right bottom</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            (buttonClick)="onClick()" 
+            buttonClass="reject" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Reject"
+            buttonText=".Reject" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="right"
+            ypos="bottom" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+      </div>
+      
+      <h3 class="margin-top-2">Buttons with tooltips - display on click event</h3>
+      <div class="flex-group flex-start">
+        <div class="field boxed">
+          <label>Button - left top</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()" 
+            buttonClass="primary" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Primary"
+            buttonText=".primary" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="left"
+            ypos="top" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - left bottom</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()" 
+            buttonClass="secondary" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Secondary"
+            buttonText=".Secondary" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="left"
+            ypos="bottom" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right top</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()" 
+            buttonClass="cancel" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Cancel"
+            buttonText=".Cancel" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="right"
+            ypos="top" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right bottom</label>
+          <aa-tooltip 
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()" 
+            buttonClass="reject" 
+            fieldClass="boxed" 
+            buttonId="buttonId" 
+            buttonLabel="Reject"
+            buttonText=".Reject" 
+            disabled=""
+            setMinWidth="12" 
+            setMinWidth="20" 
+            xpos="right"
+            ypos="bottom" 
+            zIndex="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+      </div>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -201,6 +409,58 @@
             <td datalabel="Attribute">iconName</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Material icon friendly name</a></td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Show as an anchor</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[showAsAnchor]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">tooltipAnchor</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your tooltip anchor text</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[preventAnchorWrapping]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Show as button</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[showAsButton]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">xpos, ypos</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">left top, left bottom, right top, right bottom</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">showTooltipOnClick</td>
+            <td datalabel="Type">Boalean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">tooltipBtnText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">This is the text you want on your button when the tooltip is displayed</td>
           </tr>
         </tbody>
       </table>

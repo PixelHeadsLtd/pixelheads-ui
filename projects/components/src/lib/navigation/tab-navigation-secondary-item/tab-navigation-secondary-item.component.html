@@ -1,1 +1,7 @@
-<li><a (click)="onClick($event)" [class.active]="isActive">{{secondaryTabName}}</a></li>
+<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION -->
+<ng-container *ngIf="!templateRef">
+  <li [ngClass]="{'tab-disabled' : tabDisabled}">
+    <a *ngIf="!tabDisabled" [id]="tabId" [routerLink]="route">{{ tabName }}</a>
+    <span *ngIf="tabDisabled">{{ tabName }}</span>
+  </li>
+</ng-container>

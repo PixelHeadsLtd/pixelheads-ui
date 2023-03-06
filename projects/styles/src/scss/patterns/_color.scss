@@ -29,23 +29,23 @@
 // grey legacy classes
 .grey-100 {color: _colour(aa-grey-100)!important}
 .grey-100 {color: _colour(aa-grey-100)!important}
-.grey-50 {color: _palette(aa-grey-50)!important}
-.grey-25 {color: _palette(aa-grey-25)!important}
-.grey-10 {color: _palette(aa-grey-10)!important}
-.grey-5 {color: _palette(aa-grey-5)!important}
-.grey-2 {color: _palette(aa-grey-2)!important}
+.grey-50 {color: _colour(aa-grey-50)!important}
+.grey-25 {color: _colour(aa-grey-25)!important}
+.grey-10 {color: _colour(aa-grey-10)!important}
+.grey-5 {color: _colour(aa-grey-5)!important}
+.grey-2 {color: _colour(aa-grey-2)!important}
 // grey updated classes
 .aa-grey-100 {color: _colour(aa-grey-100)!important}
 .aa-grey-100 {color: _colour(aa-grey-100)!important}
-.aa-grey-50 {color: _palette(aa-grey-50)!important}
-.aa-grey-25 {color: _palette(aa-grey-25)!important}
-.aa-grey-10 {color: _palette(aa-grey-10)!important}
-.aa-grey-5 {color: _palette(aa-grey-5)!important}
-.aa-grey-2 {color: _palette(aa-grey-2)!important}
+.aa-grey-50 {color: _colour(aa-grey-50)!important}
+.aa-grey-25 {color: _colour(aa-grey-25)!important}
+.aa-grey-10 {color: _colour(aa-grey-10)!important}
+.aa-grey-5 {color: _colour(aa-grey-5)!important}
+.aa-grey-2 {color: _colour(aa-grey-2)!important}
 // green
-.aa-green-100 {color: _palette(aa-green-100)!important}
-.aa-green-50 {color: _palette(aa-green-50)!important}
-.aa-green-25 {color: _palette(aa-green-25)!important}
+.aa-green-100 {color: _colour(aa-green-100)!important}
+.aa-green-50 {color: _colour(aa-green-50)!important}
+.aa-green-25 {color: _colour(aa-green-25)!important}
 .aa-green-15 {color: _colour(aa-green-15)!important}
 .aa-green-5 {color: _colour(aa-green-5)!important}
 // orange
@@ -67,13 +67,14 @@
 .aa-burgundy-15 {color: _colour(aa-burgundy-15)!important}
 .aa-burgundy-5 {color: _colour(aa-burgundy-5)!important}
 
-.aa-brown-100 {color: _palette(aa-brown-100)!important}
-.aa-ochre-100 {color: _palette(aa-ochre-100)!important}
-.aa-yellow-100 {color: _palette(aa-yellow-100)!important}
-.aa-lime-100 {color: _palette(aa-lime-100)!important}
-.aa-blue-sky-100 {color: _palette(aa-blue-sky-100)!important}
-.aa-pink-100 {color: _palette(aa-pink-100)!important}
+.aa-brown-100 {color: _colour(aa-brown-100)!important}
+.aa-ochre-100 {color: _colour(aa-ochre-100)!important}
+.aa-yellow-100 {color: _colour(aa-yellow-100)!important}
+.aa-lime-100 {color: _colour(aa-lime-100)!important}
+.aa-blue-sky-100 {color: _colour(aa-blue-sky-100)!important}
+.aa-pink-100 {color: _colour(aa-pink-100)!important}
 .aa-pink-25 {color: _colour(aa-pink-25)!important}
-.aa-white-100 {color: _palette(aa-white-100)!important}
+.aa-white-100 {color: _colour(aa-white-100)!important}
+.white-100 {color: _palette(aa-white-100)!important}
 
 .aa-transparent {color: transparent!important}

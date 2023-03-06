@@ -7,6 +7,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProgressCircleComponent } from './progress-circle/progress-circle.component';
 import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,9 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     AnchorBackComponent,
     ProgressBarComponent,
     ProgressCircleComponent,
-    AlertShieldComponent,
     ActionsSummaryComponent,
-    StatusIndicatorComponent
+    StatusIndicatorComponent,
+    CounterComponent
   ],
   imports: [
     CommonModule
@@ -29,7 +30,8 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     ProgressBarComponent,
     ProgressCircleComponent,
     ActionsSummaryComponent,
-    StatusIndicatorComponent
+    StatusIndicatorComponent,
+    CounterComponent
   ]
 })
 export class PatternsModule { }

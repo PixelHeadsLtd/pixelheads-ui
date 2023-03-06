@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'aa-tooltip',
   templateUrl: './tooltip.component.html',
@@ -20,6 +20,25 @@ export class TooltipComponent implements OnInit {
   @Input() iconName: string;
   @Input() zIndex: number;
   @Input() labelFor: string;
+  @Input() showAsAnchor: boolean;
+  @Input() tooltipAnchor: any;
+  @Input() preventAnchorWrapping: boolean;
+  @Input() showAsButton: boolean;
+  @Input() buttonText: string;
+  @Input() buttonId: string;
+  @Input() buttonClass: string;
+  @Input() disabled: boolean;
+  @Input() showTooltipOnClick: boolean;
+  @Input() showTooltipOnHover: boolean;
+  @Input() tooltipClicked: boolean;
+  @Input() tooltipBtnText: boolean;
+
+  @Output() buttonClick = new EventEmitter<Event>();
+
+  public onButtonClick(e: Event) {
+    e.stopPropagation();
+    this.buttonClick.emit(e);
+  }
 
   constructor() {}
 

@@ -1,6 +1,20 @@
 aa-button {
   label {
     min-height: 1.4rem; // Ensure consistent height when label has no data
+    visibility: hidden;
+
+    &.show-label {
+      visibility: visible;
+    }
+  }
+
+  .field.boxed {
+    label {
+      display: none;
+      &.show-label {
+        display: block;
+      }
+    }
   }
 
   .field.label-hidden {
@@ -11,6 +25,25 @@ aa-button {
 }
 
 button {
+  &.btn-fav {
+    padding: 0;
+    font-size: _font(size-medium);
+    color: _palette(aa-plum-100);
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: _colour(aa-blue-100);
+      color: _colour(aa-white-100)
+    }
+  }
+}
+
+button:not(.btn-fav, .collapser) { // .collapser in the core left nav
   position: relative;
   border-radius: 1.5rem;
   border-width: 1px;
@@ -21,7 +54,7 @@ button {
   font-size: _font(size-default);
   letter-spacing: 0.0575rem;
   line-height: 1.15rem;
-  padding: .425rem .75rem;
+  padding: .425rem .75rem .425rem .75rem;
 
   &:focus:not(.accordion-trigger) {
     outline: none;
@@ -37,9 +70,9 @@ button {
 
   // Used for creating our own custon icons on a standard button that does have text.
   &.custom-icons {
-    padding: 0.49rem 1rem;
-    border: none;
+    border: 1px solid transparent;
     color: _palette(aa-white-100);
+    padding-left: 1rem;
 
     .count {
       position: absolute;
@@ -103,6 +136,12 @@ button {
   }
   
   // Used for when we want a material-icon to be a button with no text.
+  &.material-icons {
+    font-family: _font(material-icons);
+  }
+  &.material-icons-outlined {
+    font-family: _font(material-icons-outlined);
+  }
   &.material-icons:not(
     .page-header .material-icons, 
     .context-menu .material-icons
@@ -119,42 +158,37 @@ button {
   &.material-icons:not(
     .context-menu .material-icons, 
     .aa-tree .material-icons, 
-    .material-icons.toggle
+    .material-icons.toggle,
+    .clear-search
     ),
   &.material-icons-outlined:not(
     .context-menu .material-icons-outlined, 
     .aa-tree .material-icons, 
-    .material-icons.toggle
+    .material-icons.toggle,
+    .clear-search
     ) {
     font-size: 1.15rem;
-    padding: .25rem;
+    padding: 0;
     border: none;
     border-radius: 50%;
     width: 2rem;
+    min-width: 2rem;
+    max-width: 2rem;
     height: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
     letter-spacing: -.015rem;
     flex: none;
-
-    &:hover:not(
-      .date-picker .material-icons, 
-      .aa-toastr .material-icons,
-      .info-panel .material-icons,
-      .date-picker .material-icons-outlined, 
-      .aa-toastr .material-icons-outlined,
-      .info-panel .material-icons-outlined,
-      .table-comments .material-icons,
-      .table-comments .material-icons-outlined
-      ) {
-      background-color: _colour(primary);
-      color: _palette(aa-white-100);
-    }
+    line-height: 1rem;
 
     &.small {
       width: 1.5rem;
       height: 1.5rem;
-      font-size: _font(size-small);
+      min-width: 1.5rem;
+      min-height: 1.5rem;
+      font-size: _font(size-default);
+      line-height: 1.25rem;
     }
-    
     
     &.approve {
       @include button-green;
@@ -256,6 +290,12 @@ button {
     @include button-all-white;
     &:hover {
       @include button-all-white-hover;
+    }
+  }
+  &.grey {
+    @include button-grey;
+    &:hover {
+      @include button-grey-hover;
     }
   }
   &.transparent {
@@ -516,10 +556,6 @@ button {
 }
 
 .button-large {
-  padding-top: 2rem!important;
-  &.boxed {
-    padding-top: 1rem!important;
-  }
   button {
     padding: 0.75rem 1.5rem;
     font-size: _font(size-medium);
@@ -647,7 +683,7 @@ table:not(.table-feature, .table-feature *) {
       right: 0.75rem;
       bottom: 0;
       border-left: 1px solid _colour(white-transparency);
-      padding: .5rem 0 0 .5rem;
+      padding: .25rem 0 0 .5rem;
     }
   }
   nav {

@@ -15,6 +15,7 @@ export class OverlayComponent implements OnInit {
   @Input() bottomPos: any;
   @Input() leftPos: any;
   @Input() minWidth: any;
+  @Input() maxWidth: any;
 
   constructor() { }
 

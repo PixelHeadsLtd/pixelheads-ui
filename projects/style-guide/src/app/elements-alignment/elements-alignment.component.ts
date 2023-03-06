@@ -1,6 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NgSelectModule, NgOption } from '@ng-select/ng-select';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-elements-alignment',

@@ -1,6 +1,20 @@
 <div class="accordion-favourites-list">
   <div class="flex-group flex-start flex-align-center">
-    <button (click)="onFavClick($event)" class="icon-star-favourites transparent width-3 margin-right-0-5" [class.selected]="isFavourite"></button>
+    <button 
+      *ngIf="!isFavourite" 
+      (click)="onFavClick($event)" 
+      class="btn-fav material-icons-outlined margin-left-0-75 margin-right-1-25"
+      >
+      star_outline
+    </button>
+    <button 
+      *ngIf="isFavourite" 
+      (click)="onFavClick($event)" 
+      class="btn-fav material-icons-outlined margin-left-0-75 margin-right-1-25"
+      >
+      star
+    </button>
+
     <div class="margin-top-1 margin-bottom-0-75 description">
       <a (click)="onAnchorClick($event)" class="anchor-underline" title="{{itemAnchorTitle}}"
          type="button" [attr.href]="itemAnchorURL">{{itemAnchor}}</a><br/>
@@ -8,7 +22,7 @@
     </div>
   </div>
   <div (click)="showTags=!showTags" class="icon-info"></div>
-  <div *ngIf="showTags" class="width-100">
+  <div *ngIf="showTags">
     <div class="more-info">
       <div class="field boxed">
         <label>Tags</label>

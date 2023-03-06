@@ -25,7 +25,7 @@ import { ToastrItemComponent } from './toastr-item/toastr-item.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
-
+import { OrderByPipe } from '../pipes/order-by';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import { ListSelectableComponent } from './list-selectable/list-selectable.compo
     ToastrItemComponent,
     TooltipComponent,
     UserFeedbackComponent,
-    ListSelectableComponent
+    ListSelectableComponent,
+    OrderByPipe
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   providers: [],
@@ -80,7 +81,8 @@ import { ListSelectableComponent } from './list-selectable/list-selectable.compo
     ToastrItemComponent,
     TooltipComponent,
     UserFeedbackComponent,
-    ListSelectableComponent
+    ListSelectableComponent,
+    OrderByPipe
   ],
   entryComponents: []
 })

@@ -1,3 +1,6 @@
-.hr {
-    border-bottom: 2px solid _palette(aa-light-blue-15);
-  }
+hr {
+  border-top: none;
+  border-bottom: 1px dashed _colour(hr);
+  margin: 0;
+  padding: 0;
+}

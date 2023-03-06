@@ -18,21 +18,24 @@ export class DashboardFavouritesComponent implements OnInit {
   @Input() favDescription: string;
   @Input() lastViewed: string;
 
-  @Output() favClick = new EventEmitter();
-  @Output() anchorClick = new EventEmitter();
+  @Output() anchorClick = new EventEmitter<Event>();
+  @Output() favClick = new EventEmitter<boolean>();
 
-  public onFavClick(event: Event) {
-    this.favClick.emit(event);
+  public onAnchorClick(e: Event) {
+    e.stopPropagation();
+    this.anchorClick.emit(e);
   }
 
-  public onAnchorClick(event: Event) {
-    event.preventDefault();
-    this.anchorClick.emit(event);
+  public onFavClick(e) {
+    this.isFavourite = !this.isFavourite;
+    e.stopPropagation();
+    this.favClick.emit(this.isFavourite);
   }
 
   constructor() { }
 
   ngOnInit() {
+    this.favClick.emit(this.isFavourite);
   }
 
 }

@@ -40,7 +40,7 @@ import { CustomCardComponent } from './ag-grid/custom-card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
-import { DashboardFavouritesComponent } from './dashboard-favourites/dashboard-favourites.component';
+import { FavouritesComponent } from './favourites/favourites.component';
 import { DateFormatPipe } from '../pipes/date-pipe';
 import { EditorialComponent } from './editorial/editorial.component';
 import { FieldComponent } from './field/field.component';
@@ -61,9 +61,12 @@ import { MarkupComponent } from './markup/markup.component';
 import { ModalComponent } from './modal/modal.component';
 import { OverlayComponent } from './overlay/overlay.component';
 import { TabNavigationComponent } from './tab-navigation/tab-navigation.component';
-import { TabPageOneComponent } from './tab-page-one/tab-page-one.component';
-import { TabPageTwoComponent } from './tab-page-two/tab-page-two.component';
-import { TabPageThreeComponent } from './tab-page-three/tab-page-three.component'
+import { TabPageOneComponent } from './tab-navigation/tab-page-one/tab-page-one.component';
+import { TabPageTwoComponent } from './tab-navigation/tab-page-two/tab-page-two.component';
+import { TabPageThreeComponent } from './tab-navigation/tab-page-three/tab-page-three.component'
+import { TabSubPageOneComponent } from './tab-navigation/tab-sub-page-one/tab-sub-page-one.component';
+import { TabSubPageTwoComponent } from './tab-navigation/tab-sub-page-two/tab-sub-page-two.component';
+import { TabSubPageThreeComponent } from './tab-navigation/tab-sub-page-three/tab-sub-page-three.component';
 import { TextComponent } from './text/text.component'
 import { PaddingComponent } from './padding/padding.component';
 import { DlPopoverComponent } from './popover/popover.component';
@@ -103,7 +106,6 @@ import { EllipsisContextMenuComponent } from './ag-grid/ellipsis-context-menu/el
 import { ToastrComponent } from './toastr/toastr.component';
 import { TreeComponent } from './tree-menu/tree/tree.component';
 import { CommentsComponent } from './comments/comments.component';
-//import { ModalDialogComponent } from 'projects/components/src/lib/widgets/modal-dialog/modal-dialog.component';
 import { NgxQuillComponent } from './ngx-quill/ngx-quill.component';
 import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-and-answers.component';
 import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
@@ -112,6 +114,9 @@ import { MiscComponent } from './misc/misc.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
+import { CounterComponent } from './counter/counter.component';
+import { OpenLeftNavService } from './landing-page/left-nav-service';
+import { ClickOutsideDirective } from '../directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -138,7 +143,7 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     CheckboxComponent,
     ColoursComponent,
     ContextMenuComponent,
-    DashboardFavouritesComponent,
+    FavouritesComponent,
     DateFormatPipe,
     EditorialComponent,
     FilterComponent,
@@ -164,6 +169,9 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     TabPageOneComponent,
     TabPageTwoComponent,
     TabPageThreeComponent,
+    TabSubPageOneComponent,
+    TabSubPageTwoComponent,
+    TabSubPageThreeComponent,
     PageLayoutExamplesComponent,
     PaddingComponent,
     ProgressIndicatorComponent,
@@ -203,7 +211,6 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     ToastrComponent,
     TreeComponent,
     CommentsComponent,
-    //ModalDialogComponent,
     TextComponent,
     NgxQuillComponent,
     CarouselComponent,
@@ -213,7 +220,9 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     MiscComponent,
     ListSelectableComponent,
     UiBlockComponent,
-    StatusIndicatorComponent
+    StatusIndicatorComponent,
+    CounterComponent,
+    ClickOutsideDirective
   ],
   imports: [
     FormsModule,
@@ -235,6 +244,7 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
     QuillModule.forRoot(),
     AgGridModule.withComponents([CustomTooltipComponent, CustomValidationTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
+  providers: [OpenLeftNavService],
   bootstrap: [AppComponent],
   entryComponents: [
     EllipsisContextMenuComponent, //ModalDialogComponent

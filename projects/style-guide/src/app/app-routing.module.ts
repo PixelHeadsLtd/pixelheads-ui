@@ -40,9 +40,12 @@ import {ProgressIndicatorLhComponent} from './progress-indicator-lh/progress-ind
 import {StepperComponent} from './stepper/stepper.component'; // STEPPER NOT YET RELEASED
 import {TreeMenuComponent} from './tree-menu/tree-menu.component';
 import {TabNavigationComponent} from './tab-navigation/tab-navigation.component';
-import {TabPageOneComponent} from './tab-page-one/tab-page-one.component';
-import {TabPageTwoComponent} from './tab-page-two/tab-page-two.component';
-import {TabPageThreeComponent} from './tab-page-three/tab-page-three.component';
+import {TabPageOneComponent} from './tab-navigation/tab-page-one/tab-page-one.component';
+import {TabPageTwoComponent} from './tab-navigation/tab-page-two/tab-page-two.component';
+import {TabPageThreeComponent} from './tab-navigation/tab-page-three/tab-page-three.component';
+import {TabSubPageOneComponent} from './tab-navigation/tab-sub-page-one/tab-sub-page-one.component';
+import {TabSubPageTwoComponent} from './tab-navigation/tab-sub-page-two/tab-sub-page-two.component';
+import {TabSubPageThreeComponent} from './tab-navigation/tab-sub-page-three/tab-sub-page-three.component';
 
 // Patterns
 import {AlertsComponent} from './alerts/alerts.component';
@@ -50,6 +53,7 @@ import {AlertShieldsComponent} from './alert-shields/alert-shields.component';
 import {ActionsSummaryComponent} from './actions-summary/actions-summary.component';
 import {BoxComponent} from './box/box.component';
 import {ColoursComponent} from './colours/colours.component';
+import {CounterComponent} from './counter/counter.component';
 import {IconsComponent} from './icons/icons.component';
 import {ProgressBarComponent} from './progress-bar/progress-bar.component';
 import {ProgressCircleComponent} from './progress-circle/progress-circle.component';
@@ -61,7 +65,7 @@ import {AccordionComponent} from './accordion/accordion.component';
 import {AccordionFancyComponent} from './accordion-fancy/accordion-fancy.component';
 import {CardComponent} from './card/card.component';
 import {CarouselComponent} from './carousel/carousel.component';
-import {DashboardFavouritesComponent} from './dashboard-favourites/dashboard-favourites.component';
+import {FavouritesComponent} from './favourites/favourites.component';
 import {IconPickerComponent} from './icon-picker/icon-picker.component';
 import {InfoPanelComponent} from './info-panel/info-panel.component';
 import {ListSelectableComponent} from './list-selectable/list-selectable.component';
@@ -115,7 +119,7 @@ const routes: Routes = [
   { path: 'blade', component: BladeComponent, children: [
     { path: 'tab-page-one', component: TabPageOneComponent },
     { path: 'tab-page-two', component: TabPageTwoComponent },
-    { path: 'tab-page-three', component: TabPageThreeComponent },
+    { path: 'tab-page-three', component: TabPageThreeComponent }
   ] },
   { path: 'blade-bottom', component: BladeBottomComponent },
   { path: 'blade-top', component: BladeTopComponent },
@@ -124,12 +128,13 @@ const routes: Routes = [
   { path: 'box', component: BoxComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'comments', component: CommentsComponent },
+  { path: 'counter', component: CounterComponent },
   { path: 'card', component: CardComponent },
   { path: 'carousel', component: CarouselComponent },
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'colours', component: ColoursComponent },
   { path: 'context-menu', component: ContextMenuComponent },
-  { path: 'dashboard-favourites', component: DashboardFavouritesComponent },
+  { path: 'dashboard-favourites', component: FavouritesComponent },
   { path: 'editorial-content', component: EditorialComponent },
   { path: 'field', component: FieldComponent },
   { path: 'validation', component: ValidationComponent },
@@ -160,6 +165,9 @@ const routes: Routes = [
     { path: 'tab-page-one', component: TabPageOneComponent },
     { path: 'tab-page-two', component: TabPageTwoComponent },
     { path: 'tab-page-three', component: TabPageThreeComponent },
+    { path: 'tab-sub-page-one', component: TabSubPageOneComponent },
+    { path: 'tab-sub-page-two', component: TabSubPageTwoComponent },
+    { path: 'tab-sub-page-three', component: TabSubPageThreeComponent }
   ] },
   { path: 'padding', component: PaddingComponent },
   { path: 'page-layout-examples', component: PageLayoutExamplesComponent },

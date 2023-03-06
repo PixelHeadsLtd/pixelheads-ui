@@ -88,6 +88,7 @@ $colour: (
   readonly:                rgb(14, 14, 14),
   accordion-toggle:        _palette(aa-white-100),
 
+  hr:                      _palette(aa-light-blue-80),
   dt:                      _palette(aa-light-blue-50),
   link:                   rgb(75, 174, 222),
   link-light:             rgb(142, 154, 174),
@@ -212,23 +213,25 @@ $colour: (
   box-shadow-strong:      rgb(14, 14, 14),
   
   icons-light:             _palette(aa-grey-40),
-  
-  aa-white-100:            rgb(27, 28, 34),
-  bg-aa-white-100:         rgb(27, 28, 34),
 
-  aa-grey-100:             _palette(aa-grey-10),
-  aa-grey-50:              _palette(aa-grey-25),
-  aa-grey-25:              _palette(aa-grey-50),
-  aa-grey-10:              _palette(aa-grey-80),
-  aa-grey-5:               _palette(aa-grey-100),
-  aa-grey-2:               rgb(38, 39, 47),
+  btn-tertiary:            _palette(aa-white-100),
+  
+  aa-white-100:            rgb(14, 14, 14),
+  bg-aa-white-100:         rgb(14, 14, 14),
+
+  aa-grey-100:             rgba(221, 221, 221, 1),
+  aa-grey-50:              rgba(221, 221, 221, .7),
+  aa-grey-25:              rgba(221, 221, 221, .4),
+  aa-grey-10:              rgba(221, 221, 221, .2),
+  aa-grey-5:               rgba(221, 221, 221, .1),
+  aa-grey-2:               rgba(221, 221, 221, .025),
 
   // TINTS - Blue
-  aa-blue-100:             rgb(0, 63, 189),
-  aa-blue-70:              rgba(0, 39, 118, .7),
-  aa-blue-60:              rgba(0, 39, 118, .6),
-  aa-blue-50:              rgba(0, 39, 118, .5),
-  aa-blue-40:              rgba(0, 39, 118, .4),
+  aa-blue-100:             rgb(98, 125, 180),
+  aa-blue-70:              rgb(0, 39, 160),
+  aa-blue-60:              rgb(0, 39, 140),
+  aa-blue-50:              rgb(0, 39, 120),
+  aa-blue-40:              rgb(0, 39, 100),
 
   // TINTS - Light blue
   aa-light-blue-100:       rgba(0, 117, 176, 1),
@@ -237,29 +240,33 @@ $colour: (
   aa-light-blue-50:        rgba(0, 117, 176, .5),
   aa-light-blue-40:        rgba(0, 117, 176, .4),
   aa-light-blue-30:        rgba(0, 117, 176, .3),
-  aa-light-blue-15:        rgba(0, 117, 176, .15),
-  aa-light-blue-5:         rgba(0, 117, 176, .05),
+  aa-light-blue-15:        rgba(0, 117, 176, .25),
+  aa-light-blue-10:        rgba(0, 117, 176, .15),
+  aa-light-blue-5:         rgba(0, 117, 176, .1),
 
   // TINTS - Red
-  aa-red-100:              rgba(198, 12, 48, 1),
-  aa-red-80:               rgba(198, 12, 48, .8),
-  aa-red-50:               rgba(198, 12, 48, .5),
-  aa-red-25:               rgba(198, 12, 48, .25),
-  aa-red-10:               rgba(198, 12, 48, .1),
-  aa-red-8:                rgba(198, 12, 48, .08),
-  aa-red-5:                rgba(198, 12, 48, .05),
-  aa-red-3:                rgba(198, 12, 48, .03),
+  aa-red-100:              rgba(198, 12, 49, 1),
+  aa-red-80:               rgba(198, 12, 49, .8),
+  aa-red-50:               rgba(198, 12, 49, .65),
+  aa-red-25:               rgba(198, 12, 49, .45),
+  aa-red-10:               rgba(198, 12, 49, .35),
+  aa-red-8:                rgba(198, 12, 49, .25),
+  aa-red-5:                rgba(198, 12, 49, .1),
+  aa-red-3:                rgba(198, 12, 49, .05),
 
   // TINTS - Green
+  aa-green-100:            _palette(aa-green-100),
+  aa-green-50:             rgba(0, 135, 112, 0.75),
+  aa-green-25:             rgba(0, 135, 112, 0.5),
+  aa-green-15:             rgba(0, 135, 112, 0.3),
   aa-green-5:              rgba(0, 135, 112, 0.2),
-  aa-green-15:             rgba(0, 135, 112, 0.5),
 
   // TINTS - Orange
   aa-orange-100:           rgba(233, 131, 0, 1),
-  aa-orange-50:            rgba(233, 131, 0, .5),
-  aa-orange-25:            rgba(233, 131, 0, .25),
-  aa-orange-10:            rgba(233, 131, 0, .10),
-  aa-orange-5:             rgba(233, 131, 0, .05),
+  aa-orange-50:            rgba(233, 131, 0, .6),
+  aa-orange-25:            rgba(233, 131, 0, .4),
+  aa-orange-10:            rgba(233, 131, 0, .2),
+  aa-orange-5:             rgba(233, 131, 0, .1),
 
   // TINTS - Plum
   aa-plum-100:             rgba(126, 81, 122, 1),
@@ -276,7 +283,12 @@ $colour: (
   aa-burgundy-5:           rgba(179, 2, 92, .05),
 
   aa-blue-sky-100:         _palette(aa-blue-sky-100),
+  aa-brown-100:            _palette(aa-brown-100),
+  aa-ochre-100:            _palette(aa-ochre-100),
+  aa-yellow-100:           _palette(aa-yellow-100),
+  aa-lime-100:             _palette(aa-lime-100),
 
+  aa-pink-100:             _palette(aa-red-80),
   aa-pink-25:             rgb(38, 39, 47),
 
   white-transparency:     rgba(255, 255, 255, 0.26),
@@ -321,6 +333,10 @@ $colour: (
 
 @mixin draft-bg-image {
   background-image: url("#{$icon-path}/icon-draft-wht.svg");
+}
+
+@mixin search-icon {
+  background: url("#{$icon-path}/icon-search-orange.svg") no-repeat;
 }
 
 $icon-alert-error: '#{$icon-path}/icon-alert-white.svg';

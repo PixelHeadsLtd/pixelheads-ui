@@ -1,5 +1,18 @@
-<section class="control-bar">
+<section class="control-bar flex-group">
   <h1>Colours</h1>
+  <div class="flex-group flex-end flex-align-center flex-nowrap">
+    <div role="alert" class="error">It is advisable to use lighter tints for ag-grid</div>
+    <aa-button
+      [customIcons]="true"
+      (buttonClick)="toggleTheme()"
+      buttonClass="custom-icons light-blue"
+      fieldClass="boxed"
+      [showLabel]="false"
+      buttonText="Test colours in dark-mode"
+      buttonIcon="contrast"
+      countColor="blue">
+    </aa-button>
+  </div>
 </section>
 
 <section class="content-container padding-0">
@@ -117,6 +130,26 @@
           <dd>.bd-aa-light-blue-15</dd>
         </dl>
       </div>
+      <div class="colour-swatch bg-aa-light-blue-10">
+        <dl>
+          <dt>Foreground</dt>
+          <dd>.aa-light-blue-10</dd>
+          <dt>Background</dt>
+          <dd>.bg-aa-light-blue-10</dd>
+          <dt>Border</dt>
+          <dd>.bd-aa-light-blue-10</dd>
+        </dl>
+      </div>
+      <!-- <div class="colour-swatch bg-aa-light-blue-5">
+        <dl>
+          <dt>Foreground</dt>
+          <dd>.aa-light-blue-5</dd>
+          <dt>Background</dt>
+          <dd>.bg-aa-light-blue-5</dd>
+          <dt>Border</dt>
+          <dd>.bd-aa-light-blue-5</dd>
+        </dl>
+      </div> -->
     </div>
     <div class="flex-group">
       <div class="colour-swatch bg-aa-red-100">

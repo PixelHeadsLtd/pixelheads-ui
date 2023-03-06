@@ -88,6 +88,7 @@ $colour: (
   readonly:                _palette(aa-grey-5),
   accordion-toggle:        _palette(aa-blue-100),
 
+  hr:                      _palette(aa-light-blue-60),
   dt:                      _palette(aa-light-blue-100),
   link:                    _palette(aa-light-blue-100),
   link-light:              _palette(aa-light-blue-100),
@@ -213,6 +214,8 @@ $colour: (
   box-shadow-strong:      rgb(228, 228, 228),
   
   icons-light:             _palette(aa-grey-40),
+
+  btn-tertiary:            _palette(aa-blue-100),
   
   aa-white-100:            _palette(aa-white-100),
   bg-aa-white-100:         _palette(aa-white-100),
@@ -239,6 +242,7 @@ $colour: (
   aa-light-blue-40:        _palette(aa-light-blue-40),
   aa-light-blue-30:        _palette(aa-light-blue-30),
   aa-light-blue-15:        _palette(aa-light-blue-15),
+  aa-light-blue-10:        _palette(aa-light-blue-10),
   aa-light-blue-5:         _palette(aa-light-blue-5),
 
   // TINTS - Red
@@ -252,8 +256,11 @@ $colour: (
   aa-red-3:                _palette(aa-red-3),
 
   // TINTS - Green
-  aa-green-5:              _palette(aa-green-5),
+  aa-green-100:            _palette(aa-green-100),
+  aa-green-50:             _palette(aa-green-50),
+  aa-green-25:             _palette(aa-green-25),
   aa-green-15:             _palette(aa-green-15),
+  aa-green-5:              _palette(aa-green-5),
 
   // TINTS - Orange
   aa-orange-100:           _palette(aa-orange-100),
@@ -277,8 +284,13 @@ $colour: (
   aa-burgundy-5:           _palette(aa-burgundy-5),
 
   aa-blue-sky-100:         _palette(aa-blue-sky-100),
+  aa-brown-100:            _palette(aa-brown-100),
+  aa-ochre-100:            _palette(aa-ochre-100),
+  aa-yellow-100:           _palette(aa-yellow-100),
+  aa-lime-100:             _palette(aa-lime-100),
 
-  aa-pink-25:            rgb(255, 243, 247),
+  aa-pink-100:             _palette(aa-pink-100),
+  aa-pink-25:             rgb(255, 243, 247),
 
   white-transparency:     rgba(255, 255, 255, 0.26),
 
@@ -322,6 +334,10 @@ $colour: (
 
 @mixin draft-bg-image {
   background-image: url("#{$icon-path}/icon-draft.svg");
+}
+
+@mixin search-icon {
+  background: url("#{$icon-path}/icon-search-orange.svg") no-repeat;
 }
 
 //$icon-alert-error: 'icon-alert-red.svg'

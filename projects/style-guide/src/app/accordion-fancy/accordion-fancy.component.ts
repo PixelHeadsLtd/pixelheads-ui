@@ -8,15 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class AccordionFancyComponent implements OnInit {
   
   showMore: boolean;
-  isFavourite = false;
+  isFavourite: boolean = false;
   
   constructor() { }
 
-  public onFavClick(event: Event) {
-    this.isFavourite=!this.isFavourite;
+  onAnchorClick() {
+    console.log("You clicked the anchor")
+  }
+
+  onFavClick(toggleFav: boolean) {
+    this.isFavourite = toggleFav;
+    console.log("Favourite selected " + this.isFavourite)
   }
   
-  toggleBlade: boolean;
+  toggleBlade: boolean; 
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

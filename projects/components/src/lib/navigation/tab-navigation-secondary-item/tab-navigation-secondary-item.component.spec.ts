@@ -1,20 +1,20 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TabNavigationSecondaryItemComponent } from './tab-navigation-secondary-item.component';
+import { TabNavigationItemComponent } from './tab-navigation-item.component';
 
-describe('TabNavigationSecondaryItemComponent', () => {
-  let component: TabNavigationSecondaryItemComponent;
-  let fixture: ComponentFixture<TabNavigationSecondaryItemComponent>;
+describe('TabNavigationItemComponent', () => {
+  let component: TabNavigationItemComponent;
+  let fixture: ComponentFixture<TabNavigationItemComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TabNavigationSecondaryItemComponent ]
+      declarations: [ TabNavigationItemComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TabNavigationSecondaryItemComponent);
+    fixture = TestBed.createComponent(TabNavigationItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

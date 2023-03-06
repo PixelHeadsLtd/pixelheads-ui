@@ -9,6 +9,8 @@ export class TooltipComponent implements OnInit {
 
   toggleBlade: boolean;
 
+  public onClick() { console.log('You clicked the button'); }
+
   constructor() {}
 
   bladeIsOpen(open: boolean) {

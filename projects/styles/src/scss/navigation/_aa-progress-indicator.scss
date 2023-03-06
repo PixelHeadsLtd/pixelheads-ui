@@ -159,8 +159,8 @@
     &:not(:last-child):after,
     &:not(.aa-progress-indicator aa-progress-indicator-advanced:last-child .indicator-item):after {
       content: "";
-      height: 2px;
-      background-color: _colour(aa-grey-10);
+      height: 1px;
+      background-color: _colour(aa-pink-100);
       position: absolute;
       top: 1rem;
       left: 2.5rem;
@@ -220,7 +220,7 @@
     }
     .description {
       position: absolute;
-      bottom: 2.75rem;
+      bottom: 4rem;
       p {
         margin: 0 0 .25rem calc(-50% + 3rem);
         width: 16rem;
@@ -240,6 +240,7 @@
 
   .bus-stop {
     position: relative;
+    flex-wrap: nowrap;
     width: 2rem;
     max-width: 2rem;
     min-width: 2rem;
@@ -248,10 +249,11 @@
     border: none;
 
     label {
-      position: absolute;
-      top: 2.75rem;
-      white-space: nowrap;
+      text-align: center;
       letter-spacing: .025rem;
+      min-width: 12rem;
+      margin-left: .75rem; // compensate for flex-right
+      padding-top: 2.5rem;
     }
 
     a.material-icons {
@@ -263,12 +265,14 @@
     }
 
     .material-icons {
-      position: relative;
+      position: absolute;
+      top: 0;
       border-radius: 50%;
       width: 2rem;
       height: 2rem;
       background-color: _colour(aa-white-100);
       margin-bottom: .75rem;
+      margin-right: 0;
       font-size: _font(size-medium);
       color: _colour(aa-grey-25);
       border: 1px solid _colour(border-primary);
@@ -286,7 +290,29 @@
   }
 }
 
-@media only screen and (min-width: _breakpoint(breakpoint-570)) {
+@media only screen and (max-width: _breakpoint(breakpoint-570)) {
+
+  .aa-progress-indicator {
+    flex-direction: column;
+    align-items: center;
+    
+    .indicator-item {
+      &:after {
+        display: none
+      }
+
+      .description {
+        bottom: 5rem;
+      }
+
+      .bus-stop {
+        label {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
   [role='progressbar'] {
     ol {
       &:before {

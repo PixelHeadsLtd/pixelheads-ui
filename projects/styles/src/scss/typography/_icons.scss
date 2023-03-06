@@ -500,9 +500,13 @@ aa-dashboard-favourites {
 
 .blade-navigation, .global-search {
   // for CORE menu-blade ONLY. Here we are mapping our nice icons to the font-awesome "fa-" icons that are coming from the back-end
-
   .icon-curve-manager {
     background-image: url("#{$icon-path}/icon-curve-manager.svg");
+    @include icon-button-large-svg;
+  }
+
+  .icon-cash-manager {
+    background-image: url("#{$icon-path}/icon-cash-manager.svg");
     @include icon-button-large-svg;
   }
 

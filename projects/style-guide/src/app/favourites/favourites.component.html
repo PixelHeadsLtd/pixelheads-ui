@@ -1,0 +1,284 @@
+<section class="control-bar">
+  <h1>Favourites</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater">
+    <div class="flex-group">
+      <section class="flex-1 col-left flex-start margin-right-4">
+        <h2>Favourites - landscape and portrait</h2>
+        <div class="describe margin-bottom-1">
+          <p>
+            We have customisable landscape and portrait versions on our favourites. You will need to choose a background-colour tint from
+            <strong routerLink="/colours" class="aa-red-100 cursor-pointer">our colour palette</strong>
+          </p> 
+        </div>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table>
+          <caption>Attributes</caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td datalabel="Element">aa-favourites</td>
+                <td datalabel="Attribute">[showLandscapeFavs]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">True</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-favourites</td>
+                <td datalabel="Attribute">[showPortraitFavs]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">True</td>
+              </tr>
+              <ng-container *ngIf="showMore">
+                <tr>
+                  <td datalabel="Element">aa-favourites</td>
+                  <td datalabel="Attribute">[disableFavsStar]</td>
+                  <td datalabel="Type">Boolean</td>
+                  <td datalabel="Default">False</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites</td>
+                  <td datalabel="Attribute">(anchorClick)</td>
+                  <td datalabel="Type">Click event</td>
+                  <td datalabel="Default">See Gist</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites</td>
+                  <td datalabel="Attribute">(favClick)</td>
+                  <td datalabel="Type">Click event</td>
+                  <td datalabel="Default">See Gist</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites</td>
+                  <td datalabel="Attribute">favsHeading</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Your favourites heading</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favColour</td>
+                  <td datalabel="Type">Class</td>
+                  <td datalabel="Default">Use one of our <strong routerLink="/colours" class="aa-red-100 cursor-pointer">background colours</strong></td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favLabel</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Limit to 3 chars, any more will trigger truncation</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favTitle</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Your title</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favTextLineOne</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Your first line text</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favLineTwo</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Your second line text</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-favourites - array item</td>
+                  <td datalabel="Attribute">favTextLineThree</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">Your third line text</td>
+                </tr>
+            </ng-container>
+            </tbody>
+          </table>
+          <nav class="margin-top-1 margin-bottom-1">
+            <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+            <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+          </nav>
+        </section>
+      
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFavourites=true; showDashboardFavourites=false">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+      </div>
+      <div>
+      
+      <aa-favourites
+        [showLandscapeFavs]="true"
+        [disableFavsStar]="false"
+        [favsOrigin]="favsOriginLandscape"
+        (anchorClick)="onAnchorClick()"
+        (favClick)="onFavClick($event)"
+        favsHeading="My Favourites - landscape"
+        
+      >
+      </aa-favourites>
+
+      <aa-favourites
+        [showPortraitFavs]="true"
+        [disableFavsStar]="false"
+        [favsOrigin]="favsOriginPortrait"
+        (anchorClick)="onAnchorClick()"
+        (favClick)="onFavClick($event)"
+        favsHeading="My Favourites - portrait"
+        
+      >
+      </aa-favourites>
+
+    </div>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater">
+    <div class="flex-group">
+    <section class="flex-1 col-left flex-start margin-right-4">
+      <h2>Dashboard favourites</h2>
+      <div class="describe margin-bottom-1"> 
+        <p>The dashboard-favourites are currently used for Performance Reporting app and 
+          in conjuction with the <a routerLink="/accordion-fancy">accordion-fancy</a> component.
+        </p>
+        <p>To use the material icons, set [materialIcons]=&quot;true&quot; then update [iconName] with your chosen icon. 
+          Finally, set the icon colour with iconColour=&quot;aa-mycolour-100&quot;</p>
+      </div>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table>
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">[isFavourite]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <ng-container *ngIf="showMore">
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">[materialIcons]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">favIconClass</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your Font Awesome icon & <a routerLink="/colours">icon colour</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">iconColour (Material icons only)</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default"><a routerLink="/colours">Refer here</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">tagName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your tag names</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">lastViewed</td>
+            <td>Date</td>
+            <td datalabel="Default">Your date</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">favDescription</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your description</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">(favClick)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">Your event</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-dashboard-favourites</td>
+            <td datalabel="Attribute">favouritesTitle</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+      <nav class="margin-top-1 margin-bottom-1">
+        <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+        <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+      </nav>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFavourites=false; showDashboardFavourites=true">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+    </div>
+    <div class="flex-group">
+      <aa-dashboard-favourites 
+        *ngFor="let item of dashBoardFavourites"
+        (anchorClick)="onAnchorClick()"
+        (favClick)="onFavClick($event)"
+        [isFavourite]="item.isFavourite"
+        [materialIcons]="item.materialIcons"
+        favIconClass="{{item.favIconClass}}" 
+        iconColour="{{item.iconColour}}" 
+        tagName="{{item.tagName}}" 
+        favouritesTitle="{{item.favouritesTitle}}" 
+        favDescription="{{item.favDescription}}" 
+        lastViewed="{{item.lastViewed}}" 
+        >
+    </aa-dashboard-favourites>
+    </div>
+  </section>
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <div *ngIf="showFavourites">
+      <a href="https://gist.github.com/angloux/1c5dad507e12564e73a350777d86227e" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/1c5dad507e12564e73a350777d86227e"></app-gist>
+    </div>
+    <div *ngIf="showDashboardFavourites">
+      <a href="https://gist.github.com/angloux/ba526c86b6377e71809e49d6dadf05cd" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/ba526c86b6377e71809e49d6dadf05cd"></app-gist>
+    </div>
+  </article>
+</aa-blade>

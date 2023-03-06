@@ -21,6 +21,7 @@
               [customShield]="true"
               [alertShieldSmall]="false"
               [noWrap]="true"
+              [hideLabel]="false"
               [bgGreenLight]="true"
               [showTooltip]="true"
               xPos="right"
@@ -47,6 +48,7 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="check_circle"
               minWidth="12rem"
               alertShieldText="Completed"
@@ -60,7 +62,8 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
-              iconName="check_circle"
+              [hideLabel]="false"
+              iconName="published_with_changes"
               minWidth="12rem"
               alertShieldText="Completed async"
             >
@@ -73,6 +76,7 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="build_circle"
               minWidth="12rem"
               alertShieldText="Manually completed"
@@ -88,6 +92,7 @@
               [noWrap]="true"
               [bgRedLight]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="do_not_disturb_alt"
               minWidth="12rem"
               alertShieldText="Aborting"
@@ -101,6 +106,7 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="do_not_disturb_alt"
               minWidth="12rem"
               alertShieldText="Aborted"
@@ -114,6 +120,7 @@
               [noWrap]="true"
               [bgRedLight]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="cancel"
               minWidth="12rem"
               alertShieldText="Stopping"
@@ -127,6 +134,7 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="cancel"
               minWidth="12rem"
               alertShieldText="Stopped"
@@ -140,6 +148,7 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="error_outline"
               minWidth="12rem"
               alertShieldText="Error"
@@ -154,6 +163,7 @@
                 [noWrap]="true"
                 [bgOrangeLight]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="rotate_right"
                 minWidth="12rem"
                 alertShieldText="Starting"
@@ -167,6 +177,7 @@
                 [noWrap]="true"
                 [bgOrangeLight]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="pending"
                 minWidth="12rem"
                 alertShieldText="Waiting"
@@ -180,6 +191,7 @@
                 [noWrap]="true"
                 [bgOrangeDark]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="history"
                 minWidth="12rem"
                 alertShieldText="Throttled"
@@ -195,6 +207,7 @@
                 [noWrap]="true"
                 [bgGreyDark]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="motion_photos_pause"
                 minWidth="12rem"
                 alertShieldText="Not run"
@@ -209,6 +222,7 @@
                 [noWrap]="true"
                 [bgBlueDark]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="build_circle"
                 minWidth="12rem"
                 alertShieldText="Manual"
@@ -222,6 +236,7 @@
                 [noWrap]="true"
                 [bgBlueLight]="true"
                 [iconOutlined]="true"
+                [hideLabel]="false"
                 iconName="visibility_off"
                 minWidth="12rem"
                 alertShieldText="Ignore"
@@ -238,6 +253,7 @@
               [alertShieldSmall]="true"
               [noWrap]="true"
               [bgGreenLight]="true"
+              [hideLabel]="false"
               [showTooltip]="true"
               xPos="right"
               yPos="top"
@@ -263,6 +279,7 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="check_circle"
               minWidth="12rem"
               alertShieldText="Completed"
@@ -276,7 +293,8 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
-              iconName="check_circle"
+              [hideLabel]="false"
+              iconName="published_with_changes"
               minWidth="12rem"
               alertShieldText="Completed async"
             >
@@ -289,6 +307,7 @@
               [noWrap]="true"
               [bgGreenDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="build_circle"
               minWidth="12rem"
               alertShieldText="Manually completed"
@@ -304,6 +323,7 @@
               [noWrap]="true"
               [bgRedLight]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="do_not_disturb_alt"
               minWidth="12rem"
               alertShieldText="Aborting"
@@ -317,6 +337,7 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="do_not_disturb_alt"
               minWidth="12rem"
               alertShieldText="Aborted"
@@ -330,6 +351,7 @@
               [noWrap]="true"
               [bgRedLight]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="cancel"
               minWidth="12rem"
               alertShieldText="Stopping"
@@ -343,6 +365,7 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="cancel"
               minWidth="12rem"
               alertShieldText="Stopped"
@@ -356,94 +379,340 @@
               [noWrap]="true"
               [bgRedDark]="true"
               [iconOutlined]="true"
+              [hideLabel]="false"
               iconName="error_outline"
               minWidth="12rem"
               alertShieldText="Error"
             >
             </aa-alert-shield>
           </div>
-          <div class="flex-group flex-start">
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgOrangeLight]="true"
-                [iconOutlined]="true"
-                iconName="rotate_right"
-                minWidth="12rem"
-                alertShieldText="Starting"
-              >
-              </aa-alert-shield>
-            </div>
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgOrangeLight]="true"
-                [iconOutlined]="true"
-                iconName="pending"
-                minWidth="12rem"
-                alertShieldText="Waiting"
-              >
-              </aa-alert-shield>
-            </div>
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgOrangeDark]="true"
-                [iconOutlined]="true"
-                iconName="history"
-                minWidth="12rem"
-                alertShieldText="Throttled"
-              >
-              </aa-alert-shield>
-            </div>
+        </div>
+        <div class="flex-group flex-start">
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="rotate_right"
+              minWidth="12rem"
+              alertShieldText="Starting"
+            >
+            </aa-alert-shield>
           </div>
-          <div class="flex-group flex-start">
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgGreyDark]="true"
-                [iconOutlined]="true"
-                iconName="motion_photos_pause"
-                minWidth="12rem"
-                alertShieldText="Not run"
-              >
-              </aa-alert-shield>
-            </div>
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="pending"
+              minWidth="12rem"
+              alertShieldText="Waiting"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="history"
+              minWidth="12rem"
+              alertShieldText="Throttled"
+            >
+            </aa-alert-shield>
+          </div>
+        </div>
+        <div class="flex-group flex-start">
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreyDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="motion_photos_pause"
+              minWidth="12rem"
+              alertShieldText="Not run"
+            >
+            </aa-alert-shield>
+          </div>
 
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgBlueDark]="true"
-                [iconOutlined]="true"
-                iconName="build_circle"
-                minWidth="12rem"
-                alertShieldText="Manual"
-              >
-              </aa-alert-shield>
-            </div>
-            <div class="field">
-              <aa-alert-shield
-                [customShield]="true"
-                [alertShieldSmall]="true"
-                [noWrap]="true"
-                [bgBlueLight]="true"
-                [iconOutlined]="true"
-                iconName="visibility_off"
-                minWidth="12rem"
-                alertShieldText="Ignore"
-              >
-              </aa-alert-shield>
-            </div>
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgBlueDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="build_circle"
+              minWidth="12rem"
+              alertShieldText="Manual"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgBlueLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="false"
+              iconName="visibility_off"
+              minWidth="12rem"
+              alertShieldText="Ignore"
+            >
+            </aa-alert-shield>
+          </div>
+        </div>
+        <h3 class="margin-bottom-0 margin-top-2">Label hidden (Better for tables and AG-Grid)</h3>
+        <div class="flex-group flex-start">
+          <div class="field">
+            <aa-alert-shield
+              title="Running"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreenLight]="true"
+              [hideLabel]="true"
+              [showTooltip]="true"
+              xPos="right"
+              yPos="top"
+              [showTooltipHeading]="true"
+              tooltipHeading="Custom tooltip"
+              iconName="update"
+              minWidth="12rem"
+              alertShieldText="Running"
+            >
+              <ng-container custom-tooltip-content>
+                <p>
+                  You can choose to use a tooltip on<br/>
+                  the custom alert shield in order to<br/>
+                  give the user more information
+                </p>
+              </ng-container>
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Completed"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreenDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="check_circle"
+              minWidth="12rem"
+              alertShieldText="Completed"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Completed async" 
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreenDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="published_with_changes"
+              minWidth="12rem"
+              alertShieldText="Completed async"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Manually completed"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreenDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="build_circle"
+              minWidth="12rem"
+              alertShieldText="Manually completed"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Aborting"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgRedLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="do_not_disturb_alt"
+              minWidth="12rem"
+              alertShieldText="Aborting"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Aborted"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgRedDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="do_not_disturb_alt"
+              minWidth="12rem"
+              alertShieldText="Aborted"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Stopping"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgRedLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="cancel"
+              minWidth="12rem"
+              alertShieldText="Stopping"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Stopped"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgRedDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="cancel"
+              minWidth="12rem"
+              alertShieldText="Stopped"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Error"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgRedDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="error_outline"
+              minWidth="12rem"
+              alertShieldText="Error"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Starting"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="rotate_right"
+              minWidth="12rem"
+              alertShieldText="Starting"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Waiting"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="pending"
+              minWidth="12rem"
+              alertShieldText="Waiting"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Throttled"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgOrangeDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="history"
+              minWidth="12rem"
+              alertShieldText="Throttled"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Not run"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgGreyDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="motion_photos_pause"
+              minWidth="12rem"
+              alertShieldText="Not run"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Manual"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgBlueDark]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="build_circle"
+              minWidth="12rem"
+              alertShieldText="Manual"
+            >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Ignore"
+              [customShield]="true"
+              [alertShieldSmall]="true"
+              [noWrap]="true"
+              [bgBlueLight]="true"
+              [iconOutlined]="true"
+              [hideLabel]="true"
+              iconName="visibility_off"
+              minWidth="12rem"
+              alertShieldText="Ignore"
+            >
+            </aa-alert-shield>
           </div>
         </div>
       </section>
@@ -551,6 +820,12 @@
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your tooltip heading</td>
             </tr>
+            <tr>
+              <td datalabel="Element">aa-alert-shield</td>
+              <td datalabel="Attribute">hideLabel</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -585,6 +860,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           [noWrap]="true"
           minWidth="12rem"
           alertShieldStatus="info"
@@ -594,6 +870,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           [noWrap]="true"
           minWidth="12rem"
           alertShieldStatus="success"
@@ -603,6 +880,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           [noWrap]="true"
           minWidth="12rem"
           alertShieldStatus="warning"
@@ -612,6 +890,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           [noWrap]="true"
           minWidth="12rem"
           alertShieldStatus="error"
@@ -625,6 +904,7 @@
         <aa-alert-shield
         [alertShieldSmall]="true"
         [showTooltip]="false"
+        [hideLabel]="false"
         [noWrap]="true"
         minWidth="12rem"
         alertShieldStatus="info"
@@ -634,6 +914,7 @@
       <aa-alert-shield
         [alertShieldSmall]="true"
         [showTooltip]="false"
+        [hideLabel]="false"
         [noWrap]="true"
         minWidth="12rem"
         alertShieldStatus="success"
@@ -643,6 +924,7 @@
       <aa-alert-shield
         [alertShieldSmall]="true"
         [showTooltip]="false"
+        [hideLabel]="false"
         [noWrap]="true"
         minWidth="12rem"
         alertShieldStatus="warning"
@@ -652,6 +934,7 @@
       <aa-alert-shield
         [alertShieldSmall]="true"
         [showTooltip]="false"
+        [hideLabel]="false"
         [noWrap]="true"
         minWidth="12rem"
         alertShieldStatus="error"
@@ -666,6 +949,7 @@
             [alertShieldSmall]="false"
             [showTooltip]="true"
             [noWrap]="true"
+            [hideLabel]="false"
             minWidth="12rem"
             alertShieldStatus="info"
             alertShieldText="Info"
@@ -683,6 +967,7 @@
             [alertShieldSmall]="false"
             [showTooltip]="true"
             [noWrap]="true"
+            [hideLabel]="false"
             minWidth="12rem"
             alertShieldStatus="success"
             alertShieldText="Success"
@@ -700,6 +985,7 @@
             [alertShieldSmall]="false"
             [showTooltip]="true"
             [noWrap]="true"
+            [hideLabel]="false"
             minWidth="12rem"
             alertShieldStatus="warning"
             alertShieldText="Warning"
@@ -717,6 +1003,7 @@
             [alertShieldSmall]="false"
             [showTooltip]="true"
             [noWrap]="true"
+            [hideLabel]="false"
             minWidth="12rem"
             alertShieldStatus="error"
             alertShieldText="Error"
@@ -862,6 +1149,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="blue"
           alertShieldText="Blue"
@@ -870,6 +1158,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="green"
           alertShieldText="Green"
@@ -878,6 +1167,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="orange"
           alertShieldText="Orange"
@@ -886,6 +1176,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="red"
           alertShieldText="Red"
@@ -898,6 +1189,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="blue"
           alertShieldText="Blue"
@@ -906,6 +1198,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="green"
           alertShieldText="Green"
@@ -914,6 +1207,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="orange"
           alertShieldText="Orange"
@@ -922,6 +1216,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="red"
           alertShieldText="Red"
@@ -1006,6 +1301,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending"
           alertShieldText="Pending"
@@ -1014,6 +1310,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending-orange"
           alertShieldText="Pending orange"
@@ -1022,6 +1319,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending-red"
           alertShieldText="Pending red"
@@ -1034,6 +1332,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending"
           alertShieldText="Pending"
@@ -1042,6 +1341,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending-orange"
           alertShieldText="Pending orange"
@@ -1050,6 +1350,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="pending-red"
           alertShieldText="Pending red"
@@ -1133,6 +1434,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green"
           alertShieldText="Rick green"
@@ -1141,6 +1443,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-blue"
           alertShieldText="Risk blue"
@@ -1153,6 +1456,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green"
           alertShieldText="Rick green"
@@ -1161,6 +1465,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-blue"
           alertShieldText="Risk blue"
@@ -1173,6 +1478,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-low"
           alertShieldText="Risk low"
@@ -1181,6 +1487,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-medium"
           alertShieldText="Risk medium"
@@ -1189,9 +1496,10 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-high"
-          alertShieldText="Risk hish"
+          alertShieldText="Risk high"
         >
         </aa-alert-shield>
       </div>
@@ -1201,6 +1509,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-low"
           alertShieldText="Risk low"
@@ -1209,6 +1518,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-medium"
           alertShieldText="Risk medium"
@@ -1217,6 +1527,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-high"
           alertShieldText="Risk hish"
@@ -1229,6 +1540,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green-approved"
           alertShieldText="Risk green approved"
@@ -1237,6 +1549,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-low-approved"
           alertShieldText="Risk low approved"
@@ -1247,6 +1560,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-medium-approved"
           alertShieldText="Risk medium approved"
@@ -1255,6 +1569,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-high-approved"
           alertShieldText="Risk high approved"
@@ -1267,6 +1582,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green-approved"
           alertShieldText="Risk green approved"
@@ -1275,6 +1591,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-low-approved"
           alertShieldText="Risk low approved"
@@ -1285,6 +1602,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-medium-approved"
           alertShieldText="Risk medium approved"
@@ -1293,6 +1611,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-high-approved"
           alertShieldText="Risk high approved"
@@ -1401,6 +1720,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="removed"
           alertShieldText="Removed"
@@ -1409,6 +1729,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="withdrawn"
           alertShieldText="Withdrawn"
@@ -1417,6 +1738,7 @@
         <aa-alert-shield
           [alertShieldSmall]="false"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="import"
           alertShieldText="Import"
@@ -1427,6 +1749,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="returned"
           alertShieldText="Returned"
@@ -1435,6 +1758,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="draft"
           alertShieldText="Draft"
@@ -1447,6 +1771,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="removed"
           alertShieldText="Removed"
@@ -1455,6 +1780,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="withdrawn"
           alertShieldText="Withdrawn"
@@ -1463,6 +1789,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="import"
           alertShieldText="Import"
@@ -1473,6 +1800,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="returned"
           alertShieldText="Returned"
@@ -1481,6 +1809,7 @@
         <aa-alert-shield
           [alertShieldSmall]="true"
           [showTooltip]="false"
+          [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="draft"
           alertShieldText="Draft"

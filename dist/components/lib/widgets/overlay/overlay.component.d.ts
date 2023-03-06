@@ -7,6 +7,7 @@ export declare class OverlayComponent implements OnInit {
     bottomPos: any;
     leftPos: any;
     minWidth: any;
+    maxWidth: any;
     constructor();
     ngOnInit(): void;
 }

@@ -3,7 +3,11 @@
   class="field {{fieldClass}}"
   [class.button-large]="buttonLarge"
 >
-  <label *ngIf="!buttonLarge" [for]="buttonId">{{buttonLabel}}</label>
+  <label 
+    [ngClass]="{ 'show-label': showLabel }"
+    [for]="buttonId">
+    {{buttonLabel}}
+  </label>
   <button 
     [type]="buttonType" 
     [name]="buttonId" 
@@ -11,12 +15,14 @@
     [class]="buttonClass" 
     [disabled]="disabled" 
     (click)="onButtonClick($event)"
+    [ngClass]="{'material-icons' : customIconsRound}"
   >
-    <div [ngClass]="{'flex-group flex-start' : customIcons}">
+    <div *ngIf="!customIconsRound" [ngClass]="{'flex-group flex-start' : customIcons}">
       <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
       <span>{{buttonText}}</span>
       <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>
     </div>
+    <span *ngIf="customIconsRound">{{buttonIcon}}</span>
   </button>
 </div>
 

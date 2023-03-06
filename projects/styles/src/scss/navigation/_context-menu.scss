@@ -4,8 +4,8 @@
     button.material-icons-outlined {
         background-color: transparent;
         border-radius: 50%;
-        width: 1.25rem;
-        height: 1.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
         padding: 0;
         font-size: 1rem;
         letter-spacing: unset;
@@ -21,8 +21,10 @@
         border: 1px solid _colour(border-subtle);
         background: _colour(bg-primary);
         position: absolute;
+        z-index: 999;
         left: 1.75rem;
         text-align: left;
+        padding: 0;
 
         li {
             margin: 0;

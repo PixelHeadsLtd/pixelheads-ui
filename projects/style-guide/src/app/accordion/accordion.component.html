@@ -15,10 +15,17 @@
       </div>
 
       <aa-accordion
-        (open)="showBodyOne=true"
+        (open)="
+        showOne=true;
+        showTwo=false;
+        showThree=false;
+        showFour=false;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
         [dragable]="false"
-        [showBody]="showBodyOne"
-        [enableAnimation]="true"
+        [showBody]="showOne"
         [clearPadding]="false"
         minWidth="26"
         accordionHeading="Accordion default"
@@ -31,7 +38,7 @@
           <button *ngIf="!showJustification" class="primary small" (click)="justification()">Add business justification</button>
           <strong *ngIf="addJustification" class="alert-shield small info">Justification msg</strong>
         </div>
-        <ng-container animate>
+        <ng-container>
           <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
             <input type="text" /> 
             <div class="field boxed">
@@ -43,10 +50,17 @@
       </aa-accordion>
 
       <aa-accordion
-        (open)="showBodyTwo=true"
+        (open)="
+        showOne=false;
+        showTwo=true;
+        showThree=false;
+        showFour=false;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
         [dragable]="true"
-        [showBody]="showBodyTwo"
-        [enableAnimation]="true"
+        [showBody]="showTwo"
         minWidth="26"
         accordionHeading="Accordion drag/drop"
         accordionId="accordion01"
@@ -55,9 +69,19 @@
         iconName="extension"
       >
         <div header-custom>
-          <div class="alert-shield small info">Custom content</div>
+          <aa-alert-shield
+            [alertShieldSmall]="true"
+            [showTooltip]="false"
+            [noWrap]="true"
+            [hideLabel]="false"
+            minWidth="12rem"
+            alertShieldStatus="info"
+            alertShieldText="Info"
+            [showTooltipHeading]="true"
+          >
+          </aa-alert-shield>
         </div>
-        <ng-container animate>
+        <ng-container>
           <p>Add accordion content in here</p>
         </ng-container>
         
@@ -65,10 +89,7 @@
 
       <aa-accordion
         [disabled]="true"
-        (open)="showBodyThree=true"
         [dragable]="true"
-        [showBody]="showBodyThree"
-        [enableAnimation]="true"
         minWidth="26"
         accordionHeading="Accordion disabled"
         accordionId="accordion01"
@@ -76,16 +97,23 @@
         [iconsEnabled]="true"
         iconName="toys"
       >
-        <ng-container animate>
+        <ng-container>
           <p>Add accordion content in here</p>
         </ng-container>
       </aa-accordion>
 
       <aa-accordion
-        (open)="showBodyCustom=true"
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=true;
+        showFour=false;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
         [dragable]="false"
-        [showBody]="showBodyFour"
-        [enableAnimation]="true"
+        [showBody]="showThree"
         minWidth="26"
         customBgColor="bg-aa-red-100"
         accordionHeading="Accordion custom colour (see inside)"
@@ -94,7 +122,7 @@
         [iconsEnabled]="true"
         iconName="surfing"
       >
-        <ng-container animate>
+        <ng-container>
           <h3 class="boxed">There are currently 11 available custom colours</h3>
           <div class="editorial-content">
             <ol>
@@ -137,10 +165,17 @@
         
       </aa-accordion>
       <aa-accordion
-        (open)="showBodyCustom=true"
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=true;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
         [dragable]="false"
-        [showBody]="showBodyFive"
-        [enableAnimation]="true"
+        [showBody]="showFour"
         minWidth="26"
         customBgColor="bg-aa-blue-sky-100"
         accordionHeading="Accordion custom colour (see inside)"
@@ -149,7 +184,7 @@
         [iconsEnabled]="true"
         iconName="emoji_transportation"
       >
-      <ng-container animate>
+      <ng-container>
         <h3 class="boxed">There are currently 11 available custom colours</h3>
         <div class="editorial-content">
           <ol>
@@ -191,10 +226,17 @@
       </ng-container>
       </aa-accordion>
       <aa-accordion
-        (open)="showBodyCustom=true"
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=false;
+        showFive=true;
+        showSix=false;
+        showSeven=false;
+        "
         [dragable]="false"
-        [showBody]="showBodySix"
-        [enableAnimation]="true"
+        [showBody]="showFive"
         minWidth="26"
         customBgColor="bg-aa-green-100"
         accordionHeading="Accordion custom colour (see inside)"
@@ -203,7 +245,7 @@
         [iconsEnabled]="true"
         iconName="rocket_launch"
       >
-      <ng-container animate>
+      <ng-container>
         <h3 class="boxed">There are currently 11 available custom colours</h3>
         <div class="editorial-content">
           <ol>
@@ -245,10 +287,17 @@
       </ng-container>
       </aa-accordion>
       <aa-accordion
-        (open)="showBodyCustom=true"
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=false;
+        showFive=false;
+        showSix=true;
+        showSeven=false;
+        "
         [dragable]="false"
-        [showBody]="showBodySeven"
-        [enableAnimation]="true"
+        [showBody]="showSix"
         minWidth="26"
         customBgColor="bg-aa-orange-100"
         accordionHeading="Accordion custom colour (see inside)"
@@ -257,7 +306,7 @@
         [iconsEnabled]="true"
         iconName="tips_and_updates"
       >
-      <ng-container animate>
+      <ng-container>
         <h3 class="boxed">There are currently 11 available custom colours</h3>
         <div class="editorial-content">
           <ol>
@@ -300,13 +349,20 @@
       </aa-accordion>
       <h2 class="margin-top-2">Nested accordions</h2>
       <aa-accordion
-      (open)="showBodyOne=true"
+      (open)="
+      showOne=false;
+      showTwo=false;
+      showThree=false;
+      showFour=false;
+      showFive=false;
+      showSix=false;
+      showSeven=true;
+      "
       [clearPadding]="true"
       [dragable]="false"
-      [showBody]="showBodyOne"
-      [enableAnimation]="false"
+      [showBody]="showSeven"
       minWidth="26"
-      accordionHeading="Note on animated accordions"
+      accordionHeading="Nested accordions"
       accordionId="accordion01"
       sectionId="section01"
       [iconsEnabled]="true"
@@ -322,12 +378,11 @@
           </div>
 
           <aa-accordion
-            (open)="showBodyOneNested=true"
+            (open)="showSevenNested=true"
             [dragable]="false"
-            [showBody]="showBodyOneNested"
-            [enableAnimation]="false"
+            [showBody]="showSevenNested"
             minWidth="26"
-            accordionHeading="Animation will not work with nested accordions"
+            accordionHeading="This is a nested accordion"
             accordionId="accordion01"
             sectionId="section01"
             [iconsEnabled]="true"
@@ -341,8 +396,7 @@
                   </div>
                 </div>
                 <p>
-                  If you want nested accordions, you will need to set "enableAnimation" to false,
-                  then remove "animate" from your ng-container. Please see Gist for markup
+                  This is a nested accordion should you ever require it
                 </p>
             </ng-container>
           </aa-accordion>
@@ -440,18 +494,6 @@
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">enableAnimation</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">True</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">animate (if enableAnimation)</td>
-            <td datalabel="Type">Binding</td>
-            <td datalabel="Default">Add animate string to your ng-container</td>
-          </tr>
-          <tr>
             <td datalabel="Element">header-custom</td>
             <td datalabel="Attribute">header-custom</td>
             <td datalabel="Type">Custom HTML</td>
@@ -483,10 +525,14 @@
 
       <div class="flex-group flex-start">
         <aa-accordion
-          (open)="showBodyOne=true; showBodyTwo=false; showBodyThree=false; showBodyFour=false; showBodyFive=false"
+          (open)="
+          showVertOne=true; 
+          showVertTwo=false; 
+          showVertThree=false; 
+          showVertFour=false; 
+          showVertFive=false"
           [dragable]="false"
-          [showBody]="showBodyOne"
-          [enableAnimation]="false"
+          [showBody]="showVertOne"
           [clearPadding]="false"
           [verticalDisplay]="true"
           verticalMinHeight="30vh"
@@ -513,10 +559,15 @@
         </aa-accordion>
         
         <aa-accordion
-          (open)="showBodyOne=false; showBodyTwo=true; showBodyThree=false; showBodyFour=false; showBodyFive=false"
+          (open)="
+          showVertOne=false; 
+          showVertTwo=true; 
+          showVertThree=false; 
+          showVertFour=false; 
+          showVertFive=false
+          "
           [dragable]="false"
-          [showBody]="showBodyTwo"
-          [enableAnimation]="false"
+          [showBody]="showVertTwo"
           [verticalDisplay]="true"
           verticalMinHeight="30vh"
           class="margin-right-0-25"
@@ -570,10 +621,15 @@
           
         </aa-accordion>
         <aa-accordion
-          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=true; showBodyFour=false; showBodyFive=false"
+          (open)="
+          showVertOne=false; 
+          showVertTwo=false; 
+          showVertThree=true; 
+          showVertFour=false; 
+          showVertFive=false
+          "
           [dragable]="false"
-          [showBody]="showBodyThree"
-          [enableAnimation]="false"
+          [showBody]="showVertThree"
           [verticalDisplay]="true"
           verticalMinHeight="30vh"
           class="margin-right-0-25"
@@ -626,10 +682,15 @@
         </ng-container>
         </aa-accordion>
         <aa-accordion
-          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=false; showBodyFour=true; showBodyFive=false"
+          (open)="
+          showVertOne=false; 
+          showVertTwo=false; 
+          showVertThree=false; 
+          showVertFour=true; 
+          showVertFive=false
+          "
           [dragable]="false"
-          [showBody]="showBodyFour"
-          [enableAnimation]="false"
+          [showBody]="showVertFour"
           [verticalDisplay]="true"
           verticalMinHeight="30vh"
           class="margin-right-0-25"
@@ -682,10 +743,15 @@
         </ng-container>
         </aa-accordion>
         <aa-accordion
-          (open)="showBodyOne=false; showBodyTwo=false; showBodyThree=false; showBodyFour=false; showBodyFive=true"
+          (open)="
+          showVertOne=false; 
+          showVertTwo=false; 
+          showVertThree=false; 
+          showVertFour=false; 
+          showVertFive=true
+          "
           [dragable]="false"
-          [showBody]="showBodyFive"
-          [enableAnimation]="false"
+          [showBody]="showVertFive"
           [verticalDisplay]="true"
           verticalMinHeight="30vh"
           class="margin-right-0-25"
@@ -794,10 +860,9 @@
         [accordionClean]="true"
         [iconsEnabled]="true"
         [fontAwesome]="true"
-        [enableAnimation]="true"
         fontClassName="fas fa-book-open bg-aa-ochre-100"
-        (open)="showBodyEight=true"
-        [showBody]="showBodyEight"
+        (open)="showCleanOne=true; showCleanTwo=false"
+        [showBody]="showCleanOne"
         minWidth="26"
         [accordionHeading]="'Accordion heading 1'"
         [accordionId]="'accordion01'"
@@ -807,7 +872,7 @@
         <div header-custom>
           <input type="checkbox" />
         </div>
-        <ng-container animate>
+        <ng-container>
           <p>Add your description here...</p>
         </ng-container>
       </aa-accordion>
@@ -815,10 +880,9 @@
         [accordionClean]="true"
         [iconsEnabled]="true"
         [fontAwesome]="true"
-        [enableAnimation]="true"
         fontClassName="fas fa-sitemap bg-aa-plum-100"
-        (open)="showBodyNine=true"
-        [showBody]="showBodyNine"
+        (open)="showCleanOne=false; showCleanTwo=true"
+        [showBody]="showCleanTwo"
         minWidth="26"
         [accordionHeading]="'Accordion heading 2'"
         [accordionId]="'accordion01'"
@@ -828,7 +892,7 @@
         <div header-custom>
           <input type="checkbox" />
         </div>
-        <ng-container animate>
+        <ng-container>
           <p>Add your description here...</p>
         </ng-container>
         
@@ -838,11 +902,8 @@
         [accordionClean]="true"
         [iconsEnabled]="true"
         [fontAwesome]="false"
-        [enableAnimation]="true"
         iconName="settings"
         iconBgColor="bg-aa-blue-sky-100"
-        (open)="showBodyTen=true"
-        [showBody]="showBodyTen"
         minWidth="26"
         [accordionHeading]="'Accordion disabled'"
         [accordionId]="'accordion01'"
@@ -852,7 +913,7 @@
         <div header-custom>
           <input type="checkbox" />
         </div>
-        <ng-container animate>
+        <ng-container>
           <p>Add your description here...</p>
         </ng-container>
         

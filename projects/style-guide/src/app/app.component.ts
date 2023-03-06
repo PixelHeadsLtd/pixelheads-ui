@@ -1,15 +1,17 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { AppIconsData } from '../app/class/app-icons-data';
 import { NavData } from '../app/class/nav-data';
+import { OpenLeftNavService } from './landing-page/left-nav-service';
 
 @Component({
   selector: 'body',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showSearch: boolean;
   showSearchResults: boolean;
+  searchCleared: boolean;
   inputValue: string;
   title = 'style-guide';
   searchText = '';
@@ -25,10 +27,10 @@ export class AppComponent {
   toggleAppsBlade: boolean;
   @HostBinding('class.light-mode') lightTheme = true;
   @HostBinding('class.dark-mode') darkTheme = false;
-  //@HostBinding('attr.id') secondaryHeader = 'show-header-secondary';
   theme = 'Light';
+  getComponentId: string;
 
-  constructor() {
+  constructor(private service: OpenLeftNavService) {
     this.currentDate = new Date().getTime();
   }
 
@@ -43,98 +45,659 @@ export class AppComponent {
       this.theme = 'Light';
     }
   }
-  
-  // update when a new components is added...
-  components = [
-    'loading-spinner',
-    'loading-spinner-page',
-    'field',
-    'validation',
-    'checkbox',
-    'fieldset',
-    'file-upload',
-    'radio',
-    'input',
-    'input-textarea',
-    'anchor',
-    'buttons',
-    'select',
-    'tables',
-    'blade',
-    'blade-bottom',
-    'blade-top',
-    'border',
-    'border-radius',
-    'box',
-    'filter',
-    'flex',
-    'footer',
-    'header',
-    'margin',
-    'markup',
-    'padding',
-    'widths',
-    'nav-context',
-    'nav-core',
-    'tab-navigation',
-    'page-layout-examples',
-    'progress-indicator',
-    'progress-indicator-lh',
-    'alerts',
-    'alert-shields',
-    'colours',
-    'icon-picker',
-    'icons',
-    'input-textarea',
-    'list-selectable',
-    'progress-bar',
-    'progress-circle',
-    'editorial-content',
-    'typography',
-    'accordion',
-    'accordion-fancy',
-    'card',
-    'carousel',
-    'context-menu',
-    'dashboard-favourites',
-    'info-panel',
-    'modal',
-    'overlay',
-    'popover',
-    'stepper',
-    'summary-top',
-    'tags',
-    'text',
-    'toastr',
-    'tooltip',
-    'tree-menu',
-    'ui-block',
-    'user-feedback',
-    'ag-grid',
-    'ngb-datepicker',
-    'ng-select',
-    'ngx-quill',
-    'html-email',
-    'elements-alignment',
-    'slider',
-    'status-indicator',
-    'comments',
-    'actions-summary'
-  ];
-  
-  toggleSearchInput() {
-    this.showSearch = ! this.showSearch;
-    if(this.showSearch) {
-      document.getElementById('search-text').focus();
-    } else {
-      this.searchText = '';
-    }
+
+  toggleSearch() {
+    document.getElementById('search-text').focus();
+    this.showSearch = !this.showSearch;
   }
+
+  openAnimationsNav() {
+    this.showSearch = false;
+    this.selectedIndex = 0;
+  }
+
+  openElementsNav() {
+    this.showSearch = false;
+    this.selectedIndex = 1;
+  }
+
+  openLayoutNav() {
+    this.showSearch = false;
+    this.selectedIndex = 2;
+  }
+
+  openNavigationNav() {
+    this.showSearch = false;
+    this.selectedIndex = 3;
+  }
+
+  openPatternsNav() {
+    this.showSearch = false;
+    this.selectedIndex = 4;
+  }
+
+  openWidgetsNav() {
+    this.showSearch = false;
+    this.selectedIndex = 5;
+  }
+
+  openModifiersNav() {
+    this.showSearch = false;
+    this.selectedIndex = 6;
+  }
+
+  openTypographyNav() {
+    this.showSearch = false;
+    this.selectedIndex = 7;
+  }
+
+  openOtherWidgetsNav() {
+    this.showSearch = false;
+    this.selectedIndex = 8;
+  }
+
+  openEmailTemplatesNav() {
+    this.showSearch = false;
+    this.selectedIndex = 9;
+  }
+
+  openQandANav() {
+    this.showSearch = false;
+    this.selectedIndex = 10;
+  }
+
+  openAddendumNav() {
+    this.showSearch = false;
+    this.selectedIndex = 11;
+  }
+
+  searchAnimations = [
+    {
+      id: 'Animations',
+      heading: 'Animations',
+      icon: 'motion_photos_paused',
+      iconColour: 'bg-aa-red-100',
+      link: 'loading-spinner',
+    },
+    {
+      id: 'Animations',
+      heading: 'Animations',
+      icon: 'motion_photos_paused',
+      iconColour: 'bg-aa-red-100',
+      link: 'loading-spinner-page',
+    }
+  ]
+
+  searchElements = [
+    {
+      id: 'ElementAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'anchor',
+    },
+    {
+      id: 'ElementAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'buttons',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'anchor',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'buttons',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'checkbox',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'comments',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'field',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'fieldset',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'file-upload',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input-radio',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'select',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'slider',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'tables',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input-textarea',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'validation',
+    }
+  ]
+
+  searchLayout = [
+   {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade-bottom',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade-top',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'filter',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'flex',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'footer',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'header',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'ui-block',
+    }
+  ]
+
+  searchNavigation = [
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'context-menu',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'nav-context',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'progress-indicator',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'progress-indicator-lh',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'stepper',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'tab-navigation',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'tree-menu',
+    }
+  ]
+
+  searchPatterns = [
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'actions-summary',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'alerts',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'alert-shields',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'box',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'colours',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'counter',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'icons',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'progress-bar',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'progress-circle',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'status-indicator',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'tags',
+    }
+  ]
+
+  searchWidgets = [
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'accordion',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'accordion-fancy',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'card',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'carousel',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'favourites',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'icon-picker',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'info-panel',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'list-selectable',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'modal',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'overlay',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'popover',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'summary-top',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'toastr',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'tooltip',
+    },
+    {
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'user-feedback',
+    }
+  ]
+
+  searchModifiers = [
+    {
+      id: 'Modifiers',
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'border',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'border-radius',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'colours',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'margin',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'markup',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'misc',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'padding',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'text',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'widths',
+    }
+  ]
+
+  searchTypography = [
+    {
+      id: 'Typography',
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'editorial-content',
+    },
+    {
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'typography',
+    }
+  ]
+
+  searchOtherWidgets = [
+    {
+      id: 'OtherWidgets',
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ag-grid',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ngb-datepicker',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ng-select',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ngx-quill',
+    }
+  ]
+
+  searchEmailTemplates = [
+    {
+      id: 'EmailTemplates',
+      heading: 'Email templates',
+      icon: 'attach_email',
+      iconColour: 'aa-green-50',
+      link: 'html-email',
+    }
+  ]
+
+  searchQandAs = [
+    {
+      id: 'QAndA',
+      heading: 'Q&A`s',
+      icon: 'help_outline',
+      iconColour: 'aa-green-50',
+      link: 'questions-and-answers',
+    }
+  ]
+
+  searchAddendum = [
+    {
+      id: 'Addendum',
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'elements-alignment',
+    },
+    {
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'page-layout-examples',
+    },
+    {
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'unauthorised',
+    }
+  ]
   
   favClicked(index: number) {
     this.favIndex = index;
   }
   
+  // Apps Blade
   appIconItems: AppIconsData[] = [
     {appIconClass: 'icon-agreement', appIconName: 'Agreement'},
     {appIconClass: 'icon-aspect', appIconName: 'Aspect'},
@@ -192,8 +755,27 @@ export class AppComponent {
     {appIconClass: 'icon-trader-dashboard darkblue fa-chart-line', appIconName: 'Traders Dashboard'},
     {appIconClass: 'icon-trading-trans', appIconName: 'Trading Transactions'},
     {appIconClass: 'icon-travel-safety fa-route purple', appIconName: 'Travel Safety'},
+    {appIconClass: 'icon-cash-manager', appIconName: 'Treasury Cash Manager'},
     {appIconClass: 'icon-workflow fa-check-circle', appIconName: 'Workflow'}
   ];
+
+  setIndex(index: number) {
+    if (index !== this.selectedIndex) {
+      this.selectedIndex = index;
+    } else {
+      this.selectedIndex = null;
+    }
+  }
+
+  setSelectedItem(nestedMenuItem: NavData) {
+    this.navDataItems.forEach(parent=>{
+      if(parent.nestedItems != null) {
+        parent.nestedItems.forEach(child=>{
+          child.isSelected = (child === nestedMenuItem);
+        });
+      }
+    });
+  }
   
   navDataItems:NavData[] = [
     // AMIMATIONS
@@ -239,6 +821,7 @@ export class AppComponent {
       {iconName:'menu_open', title:'Nav context', routerLink:'/nav-context'},
       {iconName:'linear_scale', title:'Progress indicator', routerLink:'/progress-indicator'},
       {iconName:'format_list_numbered_rtl', title:'Progress indicator LH', routerLink:'/progress-indicator-lh'},
+      {iconName:'start', title:'Stepper', routerLink:'/stepper'},
       {iconName:'pivot_table_chart', title:'Tab navigation', routerLink:'/tab-navigation'},
       {iconName:'account_tree', title:'Tree menu', routerLink:'/tree-menu'}
     ]},
@@ -250,6 +833,7 @@ export class AppComponent {
       {iconName:'remove_moderator', title:'Alert shield', routerLink:'/alert-shields'},
       {iconName:'check_box_outline_blank', title:'Box', routerLink:'/box'},
       {iconName:'palette', title:'Colour', routerLink:'/colours'},
+      {iconName:'looks_4', title:'Counter', routerLink:'/counter'},
       {iconName:'insert_emoticon', title:'Icons', routerLink:'/icons'},
       {iconName:'history_toggle_off', title:'Progress bar', routerLink:'/progress-bar'},
       {iconName:'forward_10', title:'Progress circle', routerLink:'/progress-circle'},
@@ -263,7 +847,7 @@ export class AppComponent {
       {iconName:'view_list', title:'Accordion fancy', routerLink:'/accordion-fancy'},
       {iconName:'account_box', title:'Card', routerLink:'/card'},
       {iconName:'recent_actors', title:'Carousel', routerLink:'/carousel'},
-      {iconName:'star', title:'Faves - dashboard', routerLink:'/dashboard-favourites'},
+      {iconName:'star', title:'Favourites', routerLink:'/dashboard-favourites'},
       {iconName:'face', title:'Icon picker', routerLink:'/icon-picker'},
       {iconName:'fact_check', title:'Info panel', routerLink:'/info-panel'},
       {iconName:'checklist_rtl', title:'List selectable', routerLink:'/list-selectable'},
@@ -321,21 +905,7 @@ export class AppComponent {
     ]},
   ];
 
-  setIndex(index: number) {
-    if (index !== this.selectedIndex) {
-      this.selectedIndex = index;
-    } else {
-      this.selectedIndex = null;
-    }
-  }
-
-  setSelectedItem(nestedMenuItem: NavData) {
-    this.navDataItems.forEach(parent=>{
-      if(parent.nestedItems != null) {
-        parent.nestedItems.forEach(child=>{
-          child.isSelected = (child === nestedMenuItem);
-        });
-      }
-    });
+  ngOnInit() {
+    this.service.updateIndex.subscribe(res=> this.selectedIndex = res)
   }
 }

@@ -1,8 +1,23 @@
-<article class="dashboard-favourite">
-  <div *ngIf="!materialIcons" [class]="favIconClass"></div>
+<article class="dashboard-favourite flex-group flex-align-center">
+  <div *ngIf="!materialIcons" class="font-awesome {{favIconClass}}"></div>
   <div *ngIf="materialIcons" class="material-icons {{iconColour}}">{{favIconClass}}</div>
   <a (click)="onAnchorClick($event)" [attr.href]="favouritesURL">{{(favouritesTitle.length>35)? (favouritesTitle | slice:0:35)+'...':(favouritesTitle)}}</a>
-  <button (click)="onFavClick($event)" [class.selected]="isFavourite" class="icon-star-favourites transparent"></button>
+  <div class="flex-group flex-align-center position-absolute top-0-5 right-0-5 margin-right-0">
+    <button 
+      *ngIf="!isFavourite" 
+      (click)="onFavClick($event)" 
+      class="btn-fav material-icons-outlined margin-0 margin-left-0-25"
+      >
+      star_outline
+    </button>
+    <button 
+      *ngIf="isFavourite" 
+      (click)="onFavClick($event)" 
+      class="btn-fav material-icons-outlined margin-0 margin-left-0-25"
+      >
+      star
+    </button>
+  </div>
   <div class="hover-card animate-all">
     <div class="field boxed">
       <label>Tags</label>

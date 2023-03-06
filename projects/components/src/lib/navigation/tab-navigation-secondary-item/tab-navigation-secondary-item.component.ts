@@ -1,27 +1,29 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterContentChecked, Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
+import { TabNavigationSecondaryContentDirective } from './tab-navigation-secondary-content.directive';
 
 @Component({
   selector: 'aa-tab-navigation-secondary-item',
   templateUrl: './tab-navigation-secondary-item.component.html',
-  styleUrls: ['./tab-navigation-secondary-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./tab-navigation-secondary-item.component.scss']
 })
-export class TabNavigationSecondaryItemComponent implements OnInit {
+export class TabNavigationSecondaryItemComponent implements OnInit, AfterContentChecked {
+  @ContentChild(TabNavigationSecondaryContentDirective) templateRefDirective: TabNavigationSecondaryContentDirective;
+  @Input() tabId: any;
+  @Input() tabName: string;
+  @Input() tabRoute: string;
+  @Input() tabDisabled: boolean;
+  @Input() routerLink: string | any[];
+  @Input() routerLinkActive: boolean;
+  templateRef: TemplateRef<any>;
+  templateRefHeader: TemplateRef<any>;
 
-  @Input() isActive: boolean;
-  @Input() secondaryTabName: string;
-  @Input() text = 'Click me';
+  ngOnInit() {}
 
-  @Output() secondaryTabClick = new EventEmitter();
-
-  public onClick(event: Event) {
-    console.log('secondary tab clicked');
-    this.secondaryTabClick.emit(event);
+  ngAfterContentChecked() {
+    this.templateRef = this.templateRefDirective && this.templateRefDirective.templateRef;
   }
 
-  constructor() { }
-
-  ngOnInit() {
+  get route() {
+    return this.routerLink || this.tabRoute;
   }
-
 }

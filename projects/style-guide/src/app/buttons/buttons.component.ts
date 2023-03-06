@@ -24,6 +24,7 @@ export class ButtonsComponent {
   buttonEnriched: boolean;
   buttonSummary: boolean;
   toggleBlade: boolean;
+  showOverlay: boolean;
   
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

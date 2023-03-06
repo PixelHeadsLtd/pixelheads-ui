@@ -15,6 +15,12 @@
             please refer to the <a routerLink="/page-layout-examples">Page layout examples</a>
           </strong>
         </p>
+        <p>
+          <strong class="aa-red-100">
+            If you need to add a form to the filter. Make sure the filter sits inside the form and not the form inside the filter. 
+            This is so we maintain a responsive layout. Adding a form wrapper inside the filter will break flex
+          </strong>
+        </p>
       </div>
       <aa-button 
         (buttonClick)="toggleFilter=!toggleFilter" 

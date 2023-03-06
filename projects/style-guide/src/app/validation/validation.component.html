@@ -78,14 +78,17 @@
         <div class="flex-group flex-start">
           <aa-button
             buttonClass="primary"
-            fieldClass=""
+            fieldClass="boxed margin-top-1"
+            [showLabel]="false"
             buttonText="Submit"
             (buttonClick)="onSubmit()"
           >
           </aa-button>
           <aa-button
             buttonClass="cancel"
-            fieldClass=""
+            fieldClass="boxed margin-top-1"
+            [showLabel]="false"
+            labelText="test"
             buttonText="Reset"
             (buttonClick)="reset()"
           >

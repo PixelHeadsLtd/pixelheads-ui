@@ -6,22 +6,28 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements OnInit {
+  showVertOne: boolean;
+  showVertTwo: boolean;
+  showVertThree: boolean;
+  showVertFour: boolean;
+  showVertFive: boolean;
 
-  showBodyOne: boolean;
-  showBodyTwo: boolean;
-  showBodyThree: boolean;
-  showBodyFour: boolean;
-  showBodyFive: boolean;
-  showBodySix: boolean;
-  showBodySeven: boolean;
-  showBodyEight: boolean;
-  showBodyNine: boolean;
-  showBodyTen: boolean;
-  showBodyOneNested: boolean;
-  showBodyCustom: boolean;
+  showOne: boolean;
+  showTwo: boolean;
+  showThree: boolean;
+  showFour: boolean;
+  showFive: boolean;
+  showSix: boolean;
+  showSeven: boolean;
+  showSevenNested: boolean;
+
+  showCleanOne: boolean;
+  showCleanTwo: boolean;
+
   showAccordion: boolean;
-  showAccordionAlt: boolean;
   showAccordionVertical: boolean;
+  showAccordionAlt: boolean;
+
   showJustification: boolean;
   addJustification: boolean;
   toggleBlade: boolean;

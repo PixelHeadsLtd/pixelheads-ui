@@ -1,5 +1,20 @@
-<nav class="tab-navigation-secondary">
+
+<!-- ROUTER-OUTLET -->
+<nav *ngIf="routerOutlet" class="tab-navigation-secondary">
   <ul>
+    <ng-content select="[list-items]"></ng-content>
+  </ul>
+</nav>
+
+<!-- NG-TEMPLATE ONLY -->
+<nav *ngIf="ngTemplate" class="tab-navigation-secondary">
+  <ul>
+    <ng-container *ngFor="let tab of contentTabs">
+      <li>
+        <a *ngIf="!tab.tabDisabled" [id]="tab.tabId" [class.active]="isActive(tab)" (click)="onTabClicked(tab)">{{ tab.tabName }}</a>
+        <span *ngIf="tab.tabDisabled" class="tab-disabled">{{ tab.tabName }}</span>
+      </li>
+    </ng-container>
     <ng-content></ng-content>
   </ul>
 </nav>

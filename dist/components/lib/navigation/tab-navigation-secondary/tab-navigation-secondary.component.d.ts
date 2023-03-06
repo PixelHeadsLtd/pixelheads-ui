@@ -1,6 +1,21 @@
-import { OnInit } from '@angular/core';
-export declare class TabNavigationSecondaryComponent implements OnInit {
+import { AfterContentInit, EventEmitter, OnInit, QueryList } from '@angular/core';
+import { TabNavigationSecondaryItemComponent } from '../tab-navigation-secondary-item/tab-navigation-secondary-item.component';
+export declare class TabNavigationSecondaryComponent implements OnInit, AfterContentInit {
+    tabNavigationItems: QueryList<TabNavigationSecondaryItemComponent>;
+    autoChangeTabs: boolean;
+    displayTabContent: boolean;
+    routerOutlet: boolean;
+    ngTemplate: boolean;
+    tabClicked: EventEmitter<TabNavigationSecondaryItemComponent>;
+    tabChanged: EventEmitter<TabNavigationSecondaryItemComponent>;
+    currentTab: TabNavigationSecondaryItemComponent;
+    get contentTabs(): TabNavigationSecondaryItemComponent[];
     constructor();
     ngOnInit(): void;
+    ngAfterContentInit(): void;
+    isActive(tab: TabNavigationSecondaryItemComponent): boolean;
+    onTabClicked(tab: TabNavigationSecondaryItemComponent): void;
+    changeTab(tab: TabNavigationSecondaryItemComponent): void;
+    changeTabById(tabId: string): void;
 }
 //# sourceMappingURL=tab-navigation-secondary.component.d.ts.map

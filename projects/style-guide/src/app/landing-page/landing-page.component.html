@@ -1,7 +1,7 @@
 <section #top class="landing-page" [ngClass]="{'sticky': isSticky}">
-  <article class="dl-banner flex-group">
-    <div class="margin-bottom-2 search-section flex-1">
-      <div class="flex-group flex-start flex-align-center flex-nowrap">
+  <article class="dl-banner flex-group space-between">
+    <div class="margin-bottom-2 search-section">
+      <div class="flex-group flex-start flex-align-center flex-nowrap max-width-25">
         <h1>Welcome to the Design Language</h1>
         <img class="happy-chappy" src="./assets/images/happy-chappy.gif" />
       </div>
@@ -16,18 +16,337 @@
           (click)="rotateIcon=!rotateIcon"
           autofocus
           >
-          <div 
-            (click)="toggleSearchInput(); searchText=''" 
-            class="material-icons flex-1 animate-normal"
+          <div
+            (click)="toggleSearchInput(); searchText=''"
+            class="material-icons search-icon flex-1 animate-normal"
           >
           search
         </div>
-        
+
         <section class="search-results" *ngIf="searchText.length">
-          <ul>
-            <li *ngFor="let c of components | appFilter: searchText" (click)="toggleSearchInput()">
-              <a routerLink="/{{c}}" appHighlight [searchedWord]="searchText" [content]="c.toString().split('-').join('\n')" [classToApply]="'highlight'" [setTitle]="'false'">
-                {{c}}
+          <ul class="padding-left-0">
+            <li 
+              *ngFor="let c of searchAnimations | appFilter: searchText; let i = index" 
+              (click)="openAnimationsNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchAnimations[i-1] || c.heading !== searchAnimations[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchElements | appFilter: searchText; let i = index" 
+              (click)="openElementsNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchElements[i-1] || c.heading !== searchElements[i-1].heading"
+                class="width-100"
+              >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchLayout | appFilter: searchText; let i = index" 
+              (click)="openLayoutNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchLayout[i-1] || c.heading !== searchLayout[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchNavigation | appFilter: searchText; let i = index" 
+              (click)="openNavigationNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchNavigation[i-1] || c.heading !== searchNavigation[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchPatterns | appFilter: searchText; let i = index" 
+              (click)="openPatternsNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchPatterns[i-1] || c.heading !== searchPatterns[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchWidgets | appFilter: searchText; let i = index" 
+              (click)="openWidgetsNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchWidgets[i-1] || c.heading !== searchWidgets[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchModifiers | appFilter: searchText; let i = index" 
+              (click)="openModifiersNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchModifiers[i-1] || c.heading !== searchModifiers[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchTypography | appFilter: searchText; let i = index" 
+              (click)="openTypographyNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchTypography[i-1] || c.heading !== searchTypography[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchOtherWidgets | appFilter: searchText; let i = index" 
+              (click)="openOtherWidgetsNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchOtherWidgets[i-1] || c.heading !== searchOtherWidgets[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index" 
+              (click)="openEmailTemplatesNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchEmailTemplates[i-1] || c.heading !== searchEmailTemplates[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchQandAs | appFilter: searchText; let i = index" 
+              (click)="openQandANav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchQandAs[i-1] || c.heading !== searchQandAs[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
+            <li 
+              *ngFor="let c of searchAddendum | appFilter: searchText; let i = index" 
+              (click)="openAddendumNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchAddendum[i-1] || c.heading !== searchAddendum[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
               </a>
             </li>
           </ul>
@@ -42,26 +361,26 @@
           <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
             <div class="material-icons aa-light-blue-100 margin-right-0-75">east</div>
 
-            <aa-project-tour 
+            <aa-project-tour
               (panelIsClosed)="incrementTourCount()"
-              [tourMode]="tourCount===0" 
-              topPos="-2rem" 
-              rightPos="auto" 
-              leftPos="calc(100% + 1rem)" 
+              [tourMode]="tourCount===0"
+              topPos="-2rem"
+              rightPos="auto"
+              leftPos="calc(100% + 1rem)"
               zIndex="1"
               panelWidth="21rem"
               [arrowLeft]="true"
               arrowPos="2rem"
-              [enableHeading]="true" 
-              tourModeHeading="Setting up Design Language" 
+              [enableHeading]="true"
+              tourModeHeading="Setting up Design Language"
               tourModeBody="
-                Before you can use the Design Language component library, you'll need to install the Styles and Components node packages. 
+                Before you can use the Design Language component library, you'll need to install the Styles and Components node packages.
                 Click this link and it will open installation instructions in the blade to the right of this page
               "
             >
               <ng-container nested-component>
-                <a 
-                  (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'" 
+                <a
+                  (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'"
                   class="anchor-small cursor-pointer">
                   Setting up Design Language in your project
                 </a>
@@ -85,12 +404,12 @@
           </div>
         </div>
       </section>
-    
+
     </div>
-    <div class="graphic flex-1">
+    <div class="graphic">
       <!-- <img src="assets/images/graphic.svg" alt="Design Language" /> -->
-    </div> 
-    <div class="features flex-1">
+    </div>
+    <div class="features">
       <section class="flex-group flex-start margin-bottom-2">
         <nav class="margin-right-4">
           <aa-button
@@ -111,20 +430,20 @@
               Release notes
             </a>
           </div>
-          <aa-project-tour 
+          <aa-project-tour
             (panelIsClosed)="incrementTourCount()"
-            [tourMode]="tourCount===1" 
-            topPos="-1.4rem" 
-            rightPos="calc(100% + 1.5rem)" 
-            leftPos="auto" 
+            [tourMode]="tourCount===1"
+            topPos="-1.4rem"
+            rightPos="calc(100% + 1.5rem)"
+            leftPos="auto"
             zIndex="1"
             panelWidth="20rem"
             [arrowRight]="true"
             arrowPos="2rem"
-            [enableHeading]="true" 
-            tourModeHeading="Latest node packages" 
+            [enableHeading]="true"
+            tourModeHeading="Latest node packages"
             tourModeBody="
-              These links will take you to Azure DevOps Artifacts where you can get the latest versions of the Design Language Styles and Components. 
+              These links will take you to Azure DevOps Artifacts where you can get the latest versions of the Design Language Styles and Components.
               Always get the very latest versions so that you'll always up-to-date
             "
           >
@@ -174,20 +493,20 @@
           <h2 class="margin-bottom-0-5  margin-top-1-5">Useful links</h2>
           <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
             <div class="new bg-aa-red-100 margin-right-0-5 aa-white-100 border-radius-0-25 padding-0-25">NEW!</div>
-            <aa-project-tour 
+            <aa-project-tour
               (panelIsClosed)="incrementTourCount()"
-              [tourMode]="tourCount===2" 
-              topPos="-2.15rem" 
-              rightPos="calc(100% + 4rem)" 
-              leftPos="auto" 
+              [tourMode]="tourCount===2"
+              topPos="-2.15rem"
+              rightPos="calc(100% + 4rem)"
+              leftPos="auto"
               zIndex="1"
               panelWidth="20rem"
               [arrowRight]="true"
               arrowPos="2rem"
-              [enableHeading]="true" 
-              tourModeHeading="Page layout example" 
+              [enableHeading]="true"
+              tourModeHeading="Page layout example"
               tourModeBody="
-                Click here to choose from a collections of sample markup. This is helpful because it 
+                Click here to choose from a collections of sample markup. This is helpful because it
                 provides the correct structure in order for flexbox to work properly, particulary to ensure
                 layout consistency and responsivity
               "
@@ -215,7 +534,7 @@
           </div>
           <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
             <div class="material-icons small aa-brown-100 margin-right-0-25">public</div>
-            <a 
+            <a
               (click)="showOverlay=!showOverlay; showReleaseNotes=false; showDesignPrinciples=false; showSupportedBrowsers=true"
               class="anchor-small cursor-pointer">
               Which browsers do we support?
@@ -243,7 +562,7 @@
     <div>
       <h3><strong class="number">1.</strong> What is the Design Language?</h3>
       <p>
-        The Design Language project was built to provide design styleguides and 
+        The Design Language project was built to provide design styleguides and
         a component library to be used across ALL applications within Marketing IM.
       </p>
       <aa-button
@@ -263,7 +582,7 @@
       <h3><strong class="number">2.</strong> Who should use this resource?</h3>
       <p>
         Anyone interested in our design standards, but it's
-        mainly intended for developers. If there's something you cannot find or you need assistance, please check the 
+        mainly intended for developers. If there's something you cannot find or you need assistance, please check the
         <a href="https://angloamerican.stackenterprise.co/questions" target="_blank">Stack Overflow</a> page or
         post a question in the Slack 'core-ui' channel
       </p>
@@ -271,9 +590,9 @@
 
     <div>
       <h3><strong class="number">3.</strong> Where do I begin?</h3>
-      <p>After you've 
-        <a (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'" 
-        class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use 
+      <p>After you've
+        <a (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'"
+        class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use
         the components listed below. If you need sample markup, please visit the
          <a routerLink="/page-layout-examples">Page layout examples</a>. <strong class="aa-red-100">Do not use Bootstrap</strong>, instead
         we use <a routerLink="/flex">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
@@ -287,24 +606,24 @@
       </p>
     </div>
   </section>
-  
+
   <!-- ANIMATIONS -->
   <section class="content-repeater flex-group">
     <div #animations class="anchor-point"></div>
     <div class="flex-1 col-left flex-start">
       <h1>Animations</h1>
       <p>Animated loading spinners are available here for your project. We currently have
-        two versions, one for in-line loading whereby other elements such as form 
+        two versions, one for in-line loading whereby other elements such as form
         submissions are still accessible and a second "page" version that blocks any
         interactions until the full page has loaded. Be sure to use the correct version.
         </p>
     </div>
     <div class="flex-2 col-right flex-group flex-end margin-top-1">
-      <a class="call-to-action flex-center" routerLink="/loading-spinner">
+      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner">
         <div class="material-icons aa-red-100 small">published_with_changes</div>
         <p>Spinner page</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/loading-spinner-page">
+      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner-page">
         <div class="material-icons aa-red-100">rotate_right</div>
         <p>Spinner inline</p>
       </a>
@@ -315,20 +634,20 @@
   <section class="content-repeater flex-group">
     <div #elements class="anchor-point"></div>
     <div class="flex-1 col-left flex-start">
-      <aa-project-tour 
+      <aa-project-tour
         (panelIsClosed)="incrementTourCount()"
-        [tourMode]="tourCount===3" 
-        topPos="-1.5rem" 
-        rightPos="auto" 
-        leftPos="calc(100% + 2rem)" 
+        [tourMode]="tourCount===3"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
         zIndex="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
-        [enableHeading]="true" 
-        tourModeHeading="Elements and Inputs" 
+        [enableHeading]="true"
+        tourModeHeading="Elements and Inputs"
         tourModeBody="
-          Here is everything you'll need to build your forms including anchors, buttons, selects, checkbox's etc. 
+          Here is everything you'll need to build your forms including anchors, buttons, selects, checkbox's etc.
           If there's something you need not listed here and not under the `Other widgets` section in the left navigation,
           please let the UX team know and we'll create it for you.
         "
@@ -350,7 +669,7 @@
       </aa-project-tour>
       <p>We have a selection of elements and inputs available including Buttons, Selects, Tables,
         Checkbox's etc. These have been styled specifically inline with the Anglo American brand
-        guidelines. We try to avoid third party components but there are two exceptions to the rule, 
+        guidelines. We try to avoid third party components but there are two exceptions to the rule,
         these are NG-Select and AG-Grid. However, please only use these if the project requires
         the features that are available with these particular components. Otherwise, always
         stick to using native elements.
@@ -359,61 +678,61 @@
     <div class="flex-2 col-right flex-end margin-top-1">
       <div>
         <div class="flex-group flex-end">
-          <a class="call-to-action flex-center" routerLink="/anchor">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/anchor">
             <div class="material-icons aa-green-100 small">insert_link</div>
             <p>Anchor</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/buttons">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/buttons">
             <div class="material-icons aa-green-100">gamepad</div>
             <p>Buttons</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/field">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/field">
             <div class="material-icons aa-green-100">view_stream</div>
             <p>Field</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/fieldset">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/fieldset">
             <div class="material-icons aa-green-100">web</div>
             <p>Fieldset</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/select">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/select">
             <div class="material-icons aa-green-100">rule</div>
             <p>Select</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/tables">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
             <div class="material-icons aa-green-100">grid_on</div>
             <p>Table</p>
           </a>
         </div>
         <div class="flex-group flex-end">
-          <a class="call-to-action flex-center" routerLink="/checkbox">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/checkbox">
             <div class="material-icons aa-green-100">check_box</div>
             <p>Checkbox</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/comments">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
             <div class="material-icons aa-green-100">chat</div>
             <p>Comments</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/file-upload">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/file-upload">
             <div class="material-icons aa-green-100">backup</div>
             <p>File upload</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/input-radio">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-radio">
             <div class="material-icons aa-green-100">radio_button_checked</div>
             <p>Radio</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/slider">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/slider">
             <div class="material-icons aa-green-100">toggle_off</div>
             <p>Slider</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/input">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input">
             <div class="material-icons aa-green-100">wysiwyg</div>
             <p>Text input</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/input-textarea">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-textarea">
             <div class="material-icons aa-green-100">subject</div>
             <p>Textarea</p>
           </a>
-          <a class="call-to-action flex-center" routerLink="/validation">
+          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/validation">
             <div class="material-icons aa-green-100">fact_check</div>
             <p>Validation</p>
           </a>
@@ -421,28 +740,28 @@
       </div>
     </div>
   </section>
-  
+
   <!-- LAYOUT -->
   <section class="content-repeater flex-group">
     <div #layout class="anchor-point"></div>
     <div class="flex-1 col-left flex-start">
-      <aa-project-tour 
+      <aa-project-tour
         (panelIsClosed)="incrementTourCount()"
-        [tourMode]="tourCount===4" 
-        topPos="-1.5rem" 
-        rightPos="auto" 
-        leftPos="calc(100% + 2rem)" 
+        [tourMode]="tourCount===4"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
         zIndex="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
-        [enableHeading]="true" 
-        tourModeHeading="Layout" 
+        [enableHeading]="true"
+        tourModeHeading="Layout"
         tourModeBody="
-          When is comes to forms, there are a few options you should stick with for presentatation. The most 
-          commonly used is the blade, but we also have blade-bottom and blade-top for certain situations. Filter 
-          is used often and sits at the top of the page below the control-bar. There's 
-          also a handy section in Layout called Flex, this will provide you with flexbox fundamentals. 
+          When is comes to forms, there are a few options you should stick with for presentatation. The most
+          commonly used is the blade, but we also have blade-bottom and blade-top for certain situations. Filter
+          is used often and sits at the top of the page below the control-bar. There's
+          also a handy section in Layout called Flex, this will provide you with flexbox fundamentals.
         "
       >
         <ng-container nested-component>
@@ -469,59 +788,59 @@
         </p>
     </div>
     <div class="flex-2 col-right flex-group flex-end margin-top-1">
-      <a class="call-to-action flex-center" routerLink="/blade">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade">
         <div class="material-icons aa-blue-100 small">border_right</div>
         <p>Blade</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/blade-bottom">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade-bottom">
         <div class="material-icons aa-blue-100">border_bottom</div>
         <p>Blade bottom</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/blade-top">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade-top">
         <div class="material-icons aa-blue-100">border_top</div>
         <p>Blade top</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/filter">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/filter">
         <div class="material-icons aa-blue-100">filter_alt</div>
         <p>Filter</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/flex">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/flex">
         <div class="material-icons aa-blue-100">view_week</div>
         <p>Flex</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/footer">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/footer">
         <div class="material-icons aa-blue-100">call_to_action</div>
         <p>Footer</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/header">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/header">
         <div class="material-icons aa-blue-100 flip-y">call_to_action</div>
         <p>Header</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/ui-block">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/ui-block">
         <div class="material-icons aa-blue-100">block</div>
         <p>UI block</p>
       </a>
     </div>
   </section>
-  
+
   <!-- NAVIGATION -->
   <section class="content-repeater flex-group">
     <div #navigation class="anchor-point"></div>
     <div class="flex-1 col-left flex-start">
-      <aa-project-tour 
+      <aa-project-tour
         (panelIsClosed)="incrementTourCount()"
-        [tourMode]="tourCount===5" 
-        topPos="-1.5rem" 
-        rightPos="auto" 
-        leftPos="calc(100% + 2rem)" 
+        [tourMode]="tourCount===5"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
         zIndex="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
-        [enableHeading]="true" 
-        tourModeHeading="Navigation" 
+        [enableHeading]="true"
+        tourModeHeading="Navigation"
         tourModeBody="
-          Here you'll find all our navigational conponents. Again, everything you need should be here, if it's not please 
+          Here you'll find all our navigational conponents. Again, everything you need should be here, if it's not please
           contact the UX team.
         "
       >
@@ -545,51 +864,51 @@
         Along with this we also have Tab navigation, Tab info navivation and progress indicators.</p>
     </div>
     <div class="flex-2 col-right flex-group flex-end margin-top-1">
-      <a class="call-to-action flex-center" routerLink="/context-menu">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/context-menu">
         <div class="material-icons aa-orange-100">more_vert</div>
         <p>Context menu</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/nav-context">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/nav-context">
         <div class="material-icons aa-orange-100">menu_open</div>
         <p>Nav context</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/progress-indicator">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator">
         <div class="material-icons aa-orange-100 small">linear_scale</div>
         <p>Progress indicatior</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/progress-indicator-lh">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator-lh">
         <div class="material-icons aa-orange-100">format_list_numbered_rtl</div>
         <p>Progress indicator LH</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/tab-navigation">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/tab-navigation">
         <div class="material-icons aa-orange-100">pivot_table_chart</div>
         <p>Tab navigation</p>
       </a>
-      <a class="call-to-action flex-center" routerLink="/tree-menu">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/tree-menu">
         <div class="material-icons aa-orange-100">account_tree</div>
         <p>Tree menu</p>
       </a>
     </div>
   </section>
-  
+
     <!-- PATTERNS -->
     <section class="content-repeater flex-group">
       <div #patterns class="anchor-point"></div>
       <div class="flex-1 col-left flex-start">
-        <aa-project-tour 
+        <aa-project-tour
           (panelIsClosed)="incrementTourCount()"
-          [tourMode]="tourCount===6" 
-          topPos="-1.5rem" 
-          rightPos="auto" 
-          leftPos="calc(100% + 2rem)" 
+          [tourMode]="tourCount===6"
+          topPos="-1.5rem"
+          rightPos="auto"
+          leftPos="calc(100% + 2rem)"
           zIndex="1"
           panelWidth="21rem"
           [arrowLeft]="true"
           arrowPos="2rem"
-          [enableHeading]="true" 
-          tourModeHeading="Patterns" 
+          [enableHeading]="true"
+          tourModeHeading="Patterns"
           tourModeBody="
-            Patterns can be found here. There's a growing collection available. Patterns are things that are used frequently, 
+            Patterns can be found here. There's a growing collection available. Patterns are things that are used frequently,
             such as alerts and tags.
           "
         >
@@ -608,78 +927,82 @@
             <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
           </ng-container>
         </aa-project-tour>
-        <p>Patterns are reusable/recurring components used to solve common 
-          problems in user interface design. For example, the breadcrumbs design pattern 
-          lets users retrace their steps. Designers and developers can apply them to a 
+        <p>Patterns are reusable/recurring components used to solve common
+          problems in user interface design. For example, the breadcrumbs design pattern
+          lets users retrace their steps. Designers and developers can apply them to a
           broad range of cases, but must adapt each to the specific context of use.</p>
-          
+
           <p>If you can't find what you're looking for here, please contact one of the UX Team
           and we'll look at adding your suggested component.</p>
       </div>
       <div class="flex-2 col-right flex-group flex-end margin-top-1">
-        <a class="call-to-action flex-center" routerLink="/actions-summary">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/actions-summary">
           <div class="material-icons aa-plum-100">rocket_launch</div>
           <p>Actions summary</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/alerts">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/alerts">
           <div class="material-icons aa-plum-100">add_alert</div>
           <p>Alert</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/shields">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/shields">
           <div class="material-icons aa-plum-100">remove_moderator</div>
           <p>Alert shield</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/box">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/box">
           <div class="material-icons aa-plum-100">check_box_outline_blank</div>
           <p>Box</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/colours">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/colours">
           <div class="material-icons aa-plum-100">palette</div>
           <p>Colour</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/counter">
+          <div class="material-icons aa-plum-100">looks_4</div>
+          <p>Counter</p>
         </a>
         <a class="call-to-action flex-center" routerLink="/icons">
           <div class="material-icons aa-plum-100">insert_emoticon</div>
           <p>Icons</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/progress-bar">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/progress-bar">
           <div class="material-icons aa-plum-100">history_toggle_off</div>
           <p>Progress bar</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/progress-circle">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/progress-circle">
           <div class="material-icons aa-plum-100">forward_10</div>
           <p>Progress circle</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/status-indicator">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/status-indicator">
           <div class="material-icons aa-plum-100">check_circle</div>
           <p>Status indicator</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/tags">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/tags">
           <div class="material-icons aa-plum-100">loyalty</div>
           <p>Tags</p>
         </a>
       </div>
     </section>
-    
+
     <!-- WIDGETS -->
     <section class="content-repeater flex-group">
       <div #widgets class="anchor-point"></div>
       <div class="flex-1 col-left flex-start">
-        <aa-project-tour 
+        <aa-project-tour
           (panelIsClosed)="incrementTourCount()"
-          [tourMode]="tourCount===7" 
-          topPos="-18rem" 
-          rightPos="auto" 
-          leftPos="calc(100% + 2rem)" 
+          [tourMode]="tourCount===7"
+          topPos="-18rem"
+          rightPos="auto"
+          leftPos="calc(100% + 2rem)"
           zIndex="1"
           panelWidth="21rem"
           [arrowLeft]="true"
           arrowPos="18.5rem"
           [arrowIsPlum]="true"
-          [enableHeading]="true" 
-          tourModeHeading="Widgets" 
+          [enableHeading]="true"
+          tourModeHeading="Widgets"
           tourModeBody="
-            From accordions to person cards and info-panel's, here you'll find all the Design Language widgets. It's been 
-            mentioned above but we do not use any 3rd party components apart from those listed under the `Other components` section 
+            From accordions to person cards and info-panel's, here you'll find all the Design Language widgets. It's been
+            mentioned above but we do not use any 3rd party components apart from those listed under the `Other components` section
             in the left navigation
           "
         >
@@ -699,75 +1022,75 @@
           </ng-container>
         </aa-project-tour>
         <p>We have a growing selection of widgets available for your project. We do not
-          use 3rd party widgets with a few expections such as AG-Grid, NGB Datepicker and NG-Select. 
+          use 3rd party widgets with a few expections such as AG-Grid, NGB Datepicker and NG-Select.
           If you can't find a widget that you need, please contact the UX Team.
         </p>
       </div>
       <div class="flex-2 col-right flex-group flex-end margin-top-1">
-        <a class="call-to-action flex-center" routerLink="/accordion">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/accordion">
           <div class="material-icons aa-light-blue-100">reorder</div>
           <p>Accordion</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/accordion-fancy">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/accordion-fancy">
           <div class="material-icons aa-light-blue-100">view_list</div>
           <p>Accordion fancy</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/card">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/card">
           <div class="material-icons aa-light-blue-100">account_box</div>
           <p>Card</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/carousel">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/carousel">
           <div class="material-icons aa-light-blue-100">recent_actors</div>
           <p>Carousel</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/dashboard-favourites">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/dashboard-favourites">
           <div class="material-icons aa-light-blue-100">star</div>
           <p>Favourites</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/icon-picker">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/icon-picker">
           <div class="material-icons aa-light-blue-100">face</div>
           <p>Icon picker</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/info-panel">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/info-panel">
           <div class="material-icons aa-light-blue-100">fact_check</div>
           <p>Info panel</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/list-selectable">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/list-selectable">
           <div class="material-icons aa-light-blue-100">checklist_rtl</div>
           <p>List selectable</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/modal">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/modal">
           <div class="material-icons aa-light-blue-100">border_clear</div>
           <p>Modal</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/overlay">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/overlay">
           <div class="material-icons aa-light-blue-100">border_outer</div>
           <p>Overlay</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/popover">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/popover">
           <div class="material-icons aa-light-blue-100">sms</div>
           <p>Popover</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/summary-top">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/summary-top">
           <div class="material-icons aa-light-blue-100">short_text</div>
           <p>Summary top</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/toastr">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/toastr">
           <div class="material-icons aa-light-blue-100">admin_panel_settings</div>
           <p>Toastr</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/tooltip">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip">
           <div class="material-icons aa-light-blue-100">mode_comment</div>
           <p>Tooltip</p>
         </a>
-        <a class="call-to-action flex-center" routerLink="/user-feedback">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/user-feedback">
           <div class="material-icons aa-light-blue-100">sentiment_satisfied_alt</div>
           <p>User feedback</p>
         </a>
       </div>
     </section>
 
-  <aa-blade 
+  <aa-blade
     [showModal]="false"
     [toggleBlade]="toggleBlade"
     suppressAutoClose="false"
@@ -795,21 +1118,21 @@
             <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/9.0.20/versions" target="_blank">Latest Anglo Framework (dark-mode requires 11.2^)</a>
           </p>
         </div>
-        
+
         <h2 class="margin-bottom-0-5">Styles</h2>
         <ol class="code">
           <li>npm install @angloamerican/components@X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
-        
+
         <h2 class="margin-bottom-0-5">Components</h2>
         <ol class="code">
           <li>1. npm install @angloamerican/components@X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
-        
+
         <h2 class="margin-bottom-0-5">Configure your app files</h2>
-        <label>Styles</label>
+        <h3>Add the Design Language Styles</h3>
         <p>In your project <strong class="aa-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
         <ol class="code margin-top-0-5">
           <li>"styles": [</li>
@@ -817,9 +1140,9 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"node_modules/@angloamerican/styles/src/scss/styles.scss"</li>
           <li>&nbsp;],</li>
         </ol>
-        
-        <label class="margin-top-1-5">Components</label>
-        <p>In your project <strong class="aa-red-100">app.module.ts </strong> import the modules</p>
+
+        <h3 class="margin-top-1-5">Add the Design Language Components</h3>
+        <p>In your project <strong class="aa-red-100">app.module.ts </strong> or <strong class="aa-red-100">shared.module.ts </strong> import the modules</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;import &#123;</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
@@ -830,8 +1153,8 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
           <li>&nbsp;&#x007D; from '@angloamerican/components';</li>
         </ol>
-        
-        <p>and declare them as imports</p>
+
+        <p>and declare them under @NgModule > imports</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;imports: [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
@@ -842,8 +1165,8 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
           <li>&nbsp;],</li>
         </ol>
-        
-        <p>In your project <strong class="aa-red-100">tsconfig.json</strong> declare the paths.</p>
+
+        <p>In your project <strong class="aa-red-100">tsconfig.json</strong> declare the Components paths.</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;"paths": &#123;</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components": [ "node_modules/@angloamerican/components" ],</li>
@@ -851,50 +1174,50 @@
           <li>&nbsp;&#x007D;</li>
         </ol>
       </div>
-      
+
       <!-- Setting up HTML email templates for Outlook 365 -->
       <div *ngIf="showEmailTemplates">
         <h2 class="boxed">Getting started</h2>
         <div class="flex-align-center">
           <span class="material-icons aa-orange-100 margin-right-0-5">download_for_offline</span>
           <a target="_blank" href="https://dev.core.angloamerican.com/designlanguage/assets/sample-email-template.zip">Download sample template</a>
-        </div>  
+        </div>
         <h2 class="margin-top-1">Setup</h2>
-        <p>Create a basic html page with your preferred HTML editor. Set your 
+        <p>Create a basic html page with your preferred HTML editor. Set your
           default font family, weight, line-height and size on the body element:
         </p>
         <p class="describe">
           &lt;body style="font-family: Roboto; font-size: 12px; color: #323232; margin:0; padding:20px; line-height: 17px"&gt;&lt;/body&gt;
         </p>
-        <p>For the construction of the template, use a <strong>table</strong> inside the <strong>body</strong> and set 
+        <p>For the construction of the template, use a <strong>table</strong> inside the <strong>body</strong> and set
           the <strong>cellpadding</strong> to at value of at least 10, as this will help with section spacing.
         </p>
         <p class="describe">
           &lt;table align="center" border="0" cellpadding="10" cellspacing="0" width="600"&gt;
         </p>
         <p>
-          <strong>You can’t use stylesheets in the conventional manner</strong>, instead you have to go 
-          back to basics and use <strong>inline css</strong> on the actual element itself. If you were thinking 
+          <strong>You can’t use stylesheets in the conventional manner</strong>, instead you have to go
+          back to basics and use <strong>inline css</strong> on the actual element itself. If you were thinking
           of using the block at the top of you’re page, don’t, as that won’t work either.
         </p>
         <p>
-          Try and use conventional html tags for aesthetics and layout. For example, 
-          use the <strong>strong tag</strong> for bold text rather than setting a style with font-weight: 
-          bold to the element. Likewise, utilise the <strong>heading tags h3, h2, h1 etc</strong> for small, medium and 
-          large headings. For spacing sections in your template, try and use <strong>new table 
-          rows</strong>, that's where the cellpadding you set earlier with come into play, It’s 
-          more effective that using margins and padding as these are also ignored by 
-          most email clients. For large areas of text, use the <strong>paragraph</strong> tag as you would normally. 
+          Try and use conventional html tags for aesthetics and layout. For example,
+          use the <strong>strong tag</strong> for bold text rather than setting a style with font-weight:
+          bold to the element. Likewise, utilise the <strong>heading tags h3, h2, h1 etc</strong> for small, medium and
+          large headings. For spacing sections in your template, try and use <strong>new table
+          rows</strong>, that's where the cellpadding you set earlier with come into play, It’s
+          more effective that using margins and padding as these are also ignored by
+          most email clients. For large areas of text, use the <strong>paragraph</strong> tag as you would normally.
         </p>
-        
+
         <h2>Using images</h2>
         <p>
-          If you want to use images in your template, you will need to either host 
-          them where your recipients have access or embed them in the html template itself. 
-          If you choose to embed them (and this is the easiest option) the <strong>source image 
-          must be a bitmap file</strong> such as a PNG, GIF or JPEG <strong class="aa-red-100">you cannot 
-          embed vector-based images such as SVG</strong>. When your bitmap image is ready, 
-          <a target="_blank" href="https://www.cssportal.com/image-to-data/">use this tool to 
+          If you want to use images in your template, you will need to either host
+          them where your recipients have access or embed them in the html template itself.
+          If you choose to embed them (and this is the easiest option) the <strong>source image
+          must be a bitmap file</strong> such as a PNG, GIF or JPEG <strong class="aa-red-100">you cannot
+          embed vector-based images such as SVG</strong>. When your bitmap image is ready,
+          <a target="_blank" href="https://www.cssportal.com/image-to-data/">use this tool to
           generate a data url</a>.
         </p>
         <p>
@@ -940,8 +1263,8 @@
         </table>
         <h2>Creating grids and charts </h2>
         <p>
-          Use nested tables for grid layouts. If you want unified columns with spacing, 
-          you’ll need to set the width of the first cell. 
+          Use nested tables for grid layouts. If you want unified columns with spacing,
+          you’ll need to set the width of the first cell.
         </p>
         <p class="describe">
           &lt;table&gt;<br/>
@@ -961,7 +1284,7 @@
           &nbsp;&nbsp;&lt;/tbody&gt;<br/>
           &lt;/table&gt;
         </p>
-        
+
         <h2>Will produce something like</h2>
         <dl class="padding-bottom-0-5">
           <dt class="width-8">Name</dt>
@@ -975,7 +1298,7 @@
           <dt class="width-8">Country</dt>
           <dd>United Kingdom</dd>
         </dl>
-        
+
         <h1 class="margin-top-2">Sending your email template via Outlook 365</h1>
         <h2 class="margin-top-1">Step 1 - Click the small quick access cheron in the header</h2>
         <img src="{{stepOne}}" />
@@ -991,18 +1314,18 @@
         <img src="{{stepSix}}" />
         <h2>Step 7 - You now have your template displayed (May need tweeking)</h2>
         <img src="{{stepSeven}}" />
-        
+
         <h2>Tidy things up in Outlook or other client</h2>
         <p>
-          When you have the template open in Outlook, it will most likely look a bit 
-          different than your browser version. For example, your images might not appear 
-          at the correct size, the font you chose will default to Outlooks default 
-          font etc. I would suggest at this point, tidy things up as best you can. 
-          Select all and reset your font family, drag images to scale to the correct 
-          size and modify font sizes until you’re happy, you can also set the email 
+          When you have the template open in Outlook, it will most likely look a bit
+          different than your browser version. For example, your images might not appear
+          at the correct size, the font you chose will default to Outlooks default
+          font etc. I would suggest at this point, tidy things up as best you can.
+          Select all and reset your font family, drag images to scale to the correct
+          size and modify font sizes until you’re happy, you can also set the email
           background to a chosen color if required.
         </p>
-        
+
         <p>
           <a target="_blank" href="https://support.microsoft.com/en-us/office/create-an-email-message-template-43ec7142-4dd0-4351-8727-bd0977b6b2d1">
             Guide to create an Outlook template
@@ -1013,7 +1336,7 @@
             Guide for sending the your newly polished Outlook template
           </a>
         </p>
-        
+
         <h2 class="margin-top-1">You're done!</h2>
 
       </div>
@@ -1022,7 +1345,7 @@
 </section>
 
 
-<aa-overlay 
+<aa-overlay
   [showOverlay]="showOverlay"
   zIndex="999"
   minWidth="55rem"
@@ -1061,12 +1384,12 @@
       </section>
     </div>
   </ng-container>
-  
+
   <ng-container overlay-content>
     <!-- START RELEASE NOTES TABS AND TAB CONTENT -->
     <div *ngIf="showReleaseNotes">
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="" routerLinkActive> 
+        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="" routerLinkActive>
           <ng-template aaTabNavigationContent>
             <h2 class="boxed padding-1-25 padding-bottom-0-5">Styles</h2>
             <app-release-notes-styles [styles]="true"></app-release-notes-styles>
@@ -1079,12 +1402,12 @@
           </ng-template>
         </aa-tab-navigation-item>
       </aa-tab-navigation>
-      
+
       <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
         <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
       </section>
     </div>
-    
+
     <!-- SUPPORTED BROWSERS -->
     <div class="aa-overlay-content padding-top-0"*ngIf="showSupportedBrowsers">
       <a href="https://angular.io/guide/browser-support" target="_blank">Our Apps should mirror the Angular supported browsers</a>
@@ -1118,12 +1441,12 @@
 
       <h2 class="margin-bottom-0-5 margin-top-1">No longer supported</h2>
       <p>
-        <a href="https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/" target="_blank"> 
-          Internet Explorer 11 was retired and no longer supported as of June 12, 2022. 
+        <a href="https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/" target="_blank">
+          Internet Explorer 11 was retired and no longer supported as of June 12, 2022.
         </a>
       </p>
       <p>
-        It is worth noting that there may still be one or two users using IE11 though it's quite unlikely. Nevertheless, 
+        It is worth noting that there may still be one or two users using IE11 though it's quite unlikely. Nevertheless,
         we should still endeavour to fix any broken functionality as a fairly low priority, but design look and feel isn't important.
       </p>
 
@@ -1132,7 +1455,7 @@
     <!-- START DESIGN PRINCIPLES TABS AND TAB CONTENT -->
     <div *ngIf="showDesignPrinciples">
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-        <aa-tab-navigation-item tabName="Introduction" [enableIcons]="false" iconName="" iconColour="" routerLinkActive> 
+        <aa-tab-navigation-item tabName="Introduction" [enableIcons]="false" iconName="" iconColour="" routerLinkActive>
           <ng-template aaTabNavigationContent>
             <div class="content-container">
               <h2 class="margin-top-1 margin-bottom-0">Why should you use them?</h2>
@@ -1192,7 +1515,7 @@
                       Use plain language and avoid confusing content
                     </li>
                     <li class="margin-bottom-0-5">
-                      Ensure there is visible focus style for interactive elements 
+                      Ensure there is visible focus style for interactive elements
                       that are navigated to via keyboard input
                     </li>
                     <li class="margin-bottom-0-5">
@@ -1281,7 +1604,7 @@
                       Make items easy to find
                     </li>
                     <li class="margin-bottom-0-5">
-                      Keep users informed with constant feedback (includes errors, page load and system status)Remove mundane, 
+                      Keep users informed with constant feedback (includes errors, page load and system status)Remove mundane,
                       repetitive tasks (like copy and paste) and have the system support these processes
                     </li>
                     <li class="margin-bottom-0-5">
@@ -1399,16 +1722,16 @@
           </ng-template>
         </aa-tab-navigation-item>
       </aa-tab-navigation>
-      
+
       <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
         <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
       </section>
     </div>
   </ng-container>
-  
+
 </aa-overlay>
 
-<aa-overlay 
+<aa-overlay
   [showOverlay]="openPageBuilder"
   class="template-builder"
   zIndex="999"
@@ -1429,7 +1752,7 @@
       </div>
       <div class="flex-group flex-end">
         <!-- <div class="field boxed min-width-11">
-          <ng-select 
+          <ng-select
             [items]="savedFiles"
             bindLabel="name"
             placeholder="My saved template"
@@ -1444,13 +1767,13 @@
       </div>
     </section>
   </ng-container>
-  
+
   <ng-container overlay-content>
     <section class="aa-overlay-content padding-top-0">
       <div class="flex-group">
-        <nav 
-          class="component-menu" 
-          cdkDropList 
+        <nav
+          class="component-menu"
+          cdkDropList
           id="componentMenu"
           [cdkDropListConnectedTo]="['pageTemplate']"
           (cdkDropListDropped)="onDrop($event)"
@@ -1462,11 +1785,11 @@
             {{ item | titlecase }}
           </div>
         </nav>
-        
-        <section 
-          class="tb-page-template" 
+
+        <section
+          class="tb-page-template"
           [ngClass]="{'show-left-nav' : showLeftNav}"
-          cdkDropList 
+          cdkDropList
           id="pageTemplate"
           [cdkDropListConnectedTo]="['componentMenu']"
           (cdkDropListDropped)="onDrop($event)"
@@ -1474,9 +1797,9 @@
         >
           <header>
             <div class="flex-group flex-start flex-align-center">
-              <aa-icon-picker 
-                [showLabel]="true" 
-                labelName="Icon picker" 
+              <aa-icon-picker
+                [showLabel]="true"
+                labelName="Icon picker"
                 selectedIcon="beach_access"
               >
               </aa-icon-picker>
@@ -1485,13 +1808,13 @@
           </header>
           <div class="left-navigation">
             <ul>
-              <li 
+              <li
                 *ngFor="let item of navItemsInputs; let i = index"
-                class="flex-group flex-start flex-align-center" 
+                class="flex-group flex-start flex-align-center"
               >
-                <aa-icon-picker 
-                  [showLabel]="true" 
-                  labelName="Icon picker" 
+                <aa-icon-picker
+                  [showLabel]="true"
+                  labelName="Icon picker"
                   selectedIcon="beach_access"
                 >
                 </aa-icon-picker>
@@ -1509,9 +1832,9 @@
           <div *ngIf="showBlade" class="blade-instance">
             <div class="blade-header flex-group flex-start">
               <div class="picker flex-group flex-start flex-align-center">
-                <aa-icon-picker 
-                  [showLabel]="true" 
-                  labelName="Icon picker" 
+                <aa-icon-picker
+                  [showLabel]="true"
+                  labelName="Icon picker"
                   selectedIcon="beach_access"
                 >
                 </aa-icon-picker>
@@ -1520,28 +1843,28 @@
             </div>
             <div class="add-inputs-cntrl blade-inputs">
               <div class="flex-group flex-start">
-                <div 
-                  [ngClass]="{'reposition' : 
-                    item.type=='c' || 
-                    item.type=='r' || 
-                    item.type=='btn' || 
+                <div
+                  [ngClass]="{'reposition' :
+                    item.type=='c' ||
+                    item.type=='r' ||
+                    item.type=='btn' ||
                     item.type=='btnC' ||
                     item.type=='rnl' ||
                     item.type=='cnl'
                   }"
-                  class="field boxed" 
+                  class="field boxed"
                   *ngFor="let item of bladeInputs; let i = index"
-                > 
+                >
                   <input
-                    class="label" 
+                    class="label"
                     [ngClass]="{
-                      'hide-label' : 
-                      item.type=='btn' || 
+                      'hide-label' :
+                      item.type=='btn' ||
                       item.type=='btnC' ||
                       item.type=='rnl' ||
                       item.type=='cnl'
                     }"
-                    type="text" 
+                    type="text"
                     placeholder="Your label"
                    >
                   <!-- Start Input types -->
@@ -1549,22 +1872,22 @@
                   <input *ngIf="item.type=='s'" class="select" type="text" placeholder="Name">
                   <div *ngIf="item.type=='c'" class="checkbox boxed">
                     <label for="checkboxIdThree">
-                      <input 
-                        type="checkbox" 
-                        value="disabled" 
+                      <input
+                        type="checkbox"
+                        value="disabled"
                         name="myCheckbox"
-                        id="checkboxIdThree" 
+                        id="checkboxIdThree"
                         checked="checked">
                         <input class="label" type="text" placeholder="Your label">
                     </label>
                   </div>
                   <div *ngIf="item.type=='cnl'" class="checkbox boxed">
                     <label for="checkboxIdFour">
-                      <input 
-                        type="checkbox" 
-                        value="disabled" 
+                      <input
+                        type="checkbox"
+                        value="disabled"
                         name="myCheckbox"
-                        id="checkboxIdFour" 
+                        id="checkboxIdFour"
                         checked="checked">
                         <input class="label" type="text" placeholder="Your label">
                     </label>
@@ -1612,9 +1935,9 @@
           </div>
 
           <!-------------------------------- BELOW IS WHAT'S DISPLAYED IN THE MAIN PAGE ----------------------------------->
-          <div 
-            class="drag-item {{item}}" 
-            cdkDrag 
+          <div
+            class="drag-item {{item}}"
+            cdkDrag
             *ngFor="let item of pageTemplate"
           >
             <div class="tabs">
@@ -1622,11 +1945,11 @@
                 <div class="flex-group flex-start">
                   <div *ngFor="let item of tabNavInputs; let i = index">
                     <div *ngIf="item.type=='reg'" class="field tab">
-                      <input 
+                      <input
                         #myTab
-                        class="label" 
-                        type="text" 
-                        placeholder="Label" 
+                        class="label"
+                        type="text"
+                        placeholder="Label"
                         oninput="this.size = this.value.length"
                       />
                       <strong *ngIf="myTab.value">{{myTab.value}}</strong>
@@ -1634,11 +1957,11 @@
                       <button class="material-icons bg-transparent aa-red-100" (click)="removeTabNavInputs(i)">delete_forever</button>
                     </div>
                     <div *ngIf="item.type=='act'" class="field selected tab">
-                      <input 
+                      <input
                         #myTab
-                        class="label" 
-                        type="text" 
-                        placeholder="Label" 
+                        class="label"
+                        type="text"
+                        placeholder="Label"
                         oninput="this.size = this.value.length"
                       />
                       <strong *ngIf="myTab.value">{{myTab.value}}</strong>
@@ -1667,9 +1990,9 @@
               <input class="select" type="text" placeholder="Name">
             </div>
             <div class="picker flex-group flex-start flex-align-center">
-              <aa-icon-picker 
-                [showLabel]="true" 
-                labelName="Icon picker" 
+              <aa-icon-picker
+                [showLabel]="true"
+                labelName="Icon picker"
                 selectedIcon="beach_access"
               >
               </aa-icon-picker>
@@ -1726,20 +2049,20 @@
                 <button class="material-icons bg-transparent aa-red-100" (click)="showHeading=!showHeading">delete_forever</button>
               </div>
               <div class="flex-group flex-start">
-                <div 
-                  class="field boxed" 
+                <div
+                  class="field boxed"
                   *ngFor="let item of filterInputs; let i = index"
-                > 
+                >
                   <input
-                    class="label" 
+                    class="label"
                     [ngClass]="{
-                      'hide-label' : 
-                      item.type=='btn' || 
+                      'hide-label' :
+                      item.type=='btn' ||
                       item.type=='btnC' ||
                       item.type=='cnl' ||
                       item.type=='rnl'
                     }"
-                    type="text" 
+                    type="text"
                     placeholder="Your label"
                    >
                   <!-- Start Input types -->
@@ -1751,22 +2074,22 @@
                   <input *ngIf="item.type=='s'" class="select" type="text" placeholder="Name">
                   <div *ngIf="item.type=='c'" class="checkbox boxed">
                     <label for="checkboxIdOne">
-                      <input 
-                        type="checkbox" 
-                        value="disabled" 
+                      <input
+                        type="checkbox"
+                        value="disabled"
                         name="myCheckbox"
-                        id="checkboxIdOne" 
+                        id="checkboxIdOne"
                         checked="checked">
                         <input class="label" type="text" placeholder="Your label">
                     </label>
                   </div>
                   <div *ngIf="item.type=='cnl'" class="checkbox boxed">
                     <label for="checkboxIdTwo">
-                      <input 
-                        type="checkbox" 
-                        value="disabled" 
+                      <input
+                        type="checkbox"
+                        value="disabled"
                         name="myCheckbox"
-                        id="checkboxIdTwo" 
+                        id="checkboxIdTwo"
                         checked="checked">
                         <input class="label" type="text" placeholder="Your label">
                     </label>

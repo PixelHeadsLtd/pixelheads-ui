@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'aa-accordion',
@@ -22,27 +22,16 @@ export class AccordionComponent {
   @Input() fontClassName: string;
   @Input() iconBgColor: string;
   @Input() customBgColor: string;
-  @Input() setHeight: boolean;
-  @Input() eleHeight: number;
-  @Input() enableAnimation: boolean;
   @Input() clearPadding: boolean;
   @Input() verticalDisplay: boolean;
   @Input() verticalMinHeight: any;
   @Output() open = new EventEmitter<void>();
-  @ViewChild('myIdentifier') myIdentifier: ElementRef;
 
   onOpen(e: { stopPropagation: () => void; }) {
     if (this.disabled !== true) {
       this.open.emit();
       this.showBody = ! this.showBody;
       e.stopPropagation();
-    }
-    if (this.disabled !== true && this.showBody && this.enableAnimation) {
-        this.setHeight = true;
-        this.eleHeight = this.myIdentifier.nativeElement.offsetHeight;
-        console.log('Height ' + this.eleHeight);
-    } else {
-      this.eleHeight = 0;
     }
   }
 

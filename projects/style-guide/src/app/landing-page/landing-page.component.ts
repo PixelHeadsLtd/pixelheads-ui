@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, ChangeDetectorRef, AfterContentChecked
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { TabData } from '../class/tab-data';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-
+import { OpenLeftNavService } from './left-nav-service';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -48,6 +48,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
 
   public constructor(
     private changeDetector: ChangeDetectorRef,
+    private service: OpenLeftNavService
   ) {}
   
   public activeTab: TabNavigationItemComponent;
@@ -86,91 +87,655 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     this.activeTab = tab;
   }
   
-  // update when a new components is added...
-  components = [
-    'loading-spinner',
-    'loading-spinner-page',
-    'field',
-    'validation',
-    'checkbox',
-    'fieldset',
-    'file-upload',
-    'radio',
-    'input',
-    'input-textarea',
-    'anchor',
-    'buttons',
-    'select',
-    'tables',
-    'blade',
-    'blade-bottom',
-    'blade-top',
-    'border',
-    'border-radius',
-    'box',
-    'filter',
-    'flex',
-    'footer',
-    'margin',
-    'markup',
-    'padding',
-    'widths',
-    'nav-context',
-    'nav-core',
-    'tab-navigation',
-    'progress-indicator',
-    'progress-indicator-lh',
-    'alerts',
-    'alert-shields',
-    'colours',
-    'icon-picker',
-    'icons',
-    'input-textarea',
-    'list-selectable',
-    'page-layout-examples',
-    'progress-bar',
-    'progress-circle',
-    'editorial-content',
-    'typography',
-    'accordion',
-    'accordion-fancy',
-    'card',
-    'carousel',
-    'context-menu',
-    'dashboard-favourites',
-    'header',
-    'info-panel',
-    'modal',
-    'popover',
-    'stepper',
-    'summary-top',
-    'tags',
-    'text',
-    'toastr',
-    'tooltip',
-    'tree-menu',
-    'ui-block',
-    'user-feedback',
-    'ag-grid',
-    'ngb-datepicker',
-    'ng-select',
-    'ngx-quill',
-    'html-email',
-    'elements-alignment',
-    'slider',
-    'status-indicator',
-    'comments',
-    'actions-summary'
-  ];
-  
   toggleSearchInput() {
     this.showSearch = ! this.showSearch;
     if(this.showSearch) {
       document.getElementById('search-text').focus();
-    } else {
-      this.searchText = '';
     }
   }
+
+  openAnimationsNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(0);
+    console.log("Well something happened so....");
+  }
+
+  openElementsNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(1);
+  }
+
+  openLayoutNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(2);
+  }
+
+  openNavigationNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(3);
+  }
+
+  openPatternsNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(4);
+  }
+
+  openWidgetsNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(5);
+  }
+
+  openModifiersNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(6);
+  }
+
+  openTypographyNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(7);
+  }
+
+  openOtherWidgetsNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(8);
+  }
+
+  openEmailTemplatesNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(9);
+  }
+
+  openQandANav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(10);
+  }
+
+  openAddendumNav() {
+    this.showSearch = ! this.showSearch;
+    this.service.updateIndex.next(11);
+  }
+
+  searchAnimations = [
+    {
+      id: 'Animations',
+      heading: 'Animations',
+      icon: 'motion_photos_paused',
+      iconColour: 'bg-aa-red-100',
+      link: 'loading-spinner',
+    },
+    {
+      id: 'Animations',
+      heading: 'Animations',
+      icon: 'motion_photos_paused',
+      iconColour: 'bg-aa-red-100',
+      link: 'loading-spinner-page',
+    }
+  ]
+
+  searchElements = [
+    {
+      id: 'ElementAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'anchor',
+    },
+    {
+      id: 'ElementAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'buttons',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'anchor',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'buttons',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'checkbox',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'comments',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'field',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'fieldset',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'file-upload',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input-radio',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'select',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'slider',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'tables',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'input-textarea',
+    },
+    {
+      id: 'ElementsAndInputs',
+      heading: 'Elements and inputs',
+      icon: 'check_box',
+      iconColour: 'bg-aa-green-100',
+      link: 'validation',
+    }
+  ]
+
+  searchLayout = [
+   {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade-bottom',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'blade-top',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'filter',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'flex',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'footer',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'header',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
+      link: 'ui-block',
+    }
+  ]
+
+  searchNavigation = [
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'context-menu',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'nav-context',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'progress-indicator',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'progress-indicator-lh',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'stepper',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'tab-navigation',
+    },
+    {
+      id: 'Navigation',
+      heading: 'Navigation',
+      icon: 'menu_open',
+      iconColour: 'bg-aa-orange-100',
+      link: 'tree-menu',
+    }
+  ]
+
+  searchPatterns = [
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'actions-summary',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'alerts',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'alert-shields',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'box',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'colours',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'counter',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'icons',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'progress-bar',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'progress-circle',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'status-indicator',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-aa-plum-100',
+      link: 'tags',
+    }
+  ]
+
+  searchWidgets = [
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'accordion',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'accordion-fancy',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'card',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'carousel',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'favourites',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'icon-picker',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'info-panel',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'list-selectable',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'modal',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'overlay',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'popover',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'summary-top',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'toastr',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'tooltip',
+    },
+    {
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'user-feedback',
+    }
+  ]
+
+  searchModifiers = [
+    {
+      id: 'Modifiers',
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'border',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'border-radius',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'colours',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'margin',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'markup',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'misc',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'padding',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'text',
+    },
+    {
+      heading: 'Modifiers',
+      icon: 'auto_fix_off',
+      iconColour: 'aa-green-50',
+      link: 'widths',
+    }
+  ]
+
+  searchTypography = [
+    {
+      id: 'Typography',
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'editorial-content',
+    },
+    {
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'typography',
+    }
+  ]
+
+  searchOtherWidgets = [
+    {
+      id: 'OtherWidgets',
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ag-grid',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ngb-datepicker',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ng-select',
+    },
+    {
+      heading: 'Other widgets',
+      icon: 'widgets',
+      iconColour: 'aa-green-50',
+      link: 'ngx-quill',
+    }
+  ]
+
+  searchEmailTemplates = [
+    {
+      id: 'EmailTemplates',
+      heading: 'Email templates',
+      icon: 'attach_email',
+      iconColour: 'aa-green-50',
+      link: 'html-email',
+    }
+  ]
+
+  searchQandAs = [
+    {
+      id: 'QAndA',
+      heading: 'Q&A`s',
+      icon: 'help_outline',
+      iconColour: 'aa-green-50',
+      link: 'questions-and-answers',
+    }
+  ]
+
+  searchAddendum = [
+    {
+      id: 'Addendum',
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'elements-alignment',
+    },
+    {
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'page-layout-examples',
+    },
+    {
+      heading: 'Addendum',
+      icon: 'subject',
+      iconColour: 'aa-green-50',
+      link: 'unauthorised',
+    }
+  ]
 
   tourCount: number = null;
 
@@ -281,6 +846,8 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     { id: 4, name: 'Mockup' },
     { id: 5, name: 'AMP screen' }
   ];
+
+  selectedIndex: number;
 
   ngOnInit() {
   }

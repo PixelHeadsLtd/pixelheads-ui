@@ -72,16 +72,28 @@
   display: inline-block;
   background-repeat: no-repeat;
   background-size: 1.25rem;
-  background-position: 0.3rem 50%;
+  background-position: .3rem 50%;
   font-size: _font(size-default);
-  padding: .425rem 1.25rem .425rem 2rem;
+  padding: .425rem .75rem .425rem 2rem;
   border: 2px solid transparent;
   flex: none;
+  height: 2rem;
+
+  span {
+    padding-right: 0;
+  }
 
   &.small {
     background-size: 1rem;
     font-size: _font(size-small);
-    padding: 0.275rem 0.75rem 0.275rem 1.75rem;
+    padding: .275rem .5rem .275rem 1.75rem;
+    height: 1.5rem;
+    line-height: .75rem;
+
+    span, div {
+      padding-right: 0;
+    }
+  
   }
   
   &.success {
@@ -225,10 +237,10 @@
     }
 
     &.small {
-      line-height: 1rem;
       padding-left: 2rem;
       &:before {
         left: .4rem;
+        top: 0
       }
     }
   }
@@ -271,10 +283,11 @@
   .custom-alert-shield-container {
     height: 2rem;
     border-radius: 1rem;
-    padding: 0 1rem 0 .25rem;
+    padding: 0 0 0 .25rem;
 
     span {
       font-size: _font(size-default);
+      padding-right: .75rem;
     }
   }
 
@@ -292,22 +305,23 @@
   .material-icons,
   .material-icons-outlined {
     font-size: _font(size-large);
-    margin-right: .35rem;
+    margin-right: .25rem;
   }
 
   .small {
     font-size: _font(size-small);
     height: 1.5rem;
-    padding: 0 .6rem 0 .15rem;
+    padding: 0 0 0 .15rem;
 
     span {
       font-size: _font(size-small);
+      padding-right: .75rem
     }
 
     .material-icons,
     .material-icons-outlined {
       font-size: _font(size-medium);
-      margin-right: .2rem;
+      margin-right: .15rem;
     }
   }
 }

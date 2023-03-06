@@ -6,7 +6,9 @@
         'nowrap' : noWrap 
         }"
     >
-    {{alertShieldText}}
+    <span [ngStyle]="{ 'display': hideLabel ? 'none' : 'inline' }">
+        {{alertShieldText}}
+    </span>
 </div>
 
 <div *ngIf="showTooltip && !customShield" class="alert-shield-tooltip-wrapper">
@@ -24,7 +26,9 @@
             'nowrap' : noWrap 
             }"
         >
-            {{alertShieldText}}
+            <span [ngStyle]="{ 'display': hideLabel ? 'none' : 'inline' }">
+                {{alertShieldText}}
+            </span>
     </div>
 </div>
 
@@ -61,6 +65,8 @@
             }">
             {{iconName}}
         </div>
-      <span>{{alertShieldText}}</span>
+        <span [ngStyle]="{ 'display': hideLabel ? 'none' : 'inline' }">
+            {{alertShieldText}}
+        </span>
     </div>
 </div>

@@ -31,29 +31,12 @@
         </div>
     </button>
   </h3>
-
   <div 
-    *ngIf="showBody && !enableAnimation" 
+    *ngIf="showBody" 
     [id]="sectionId" 
     class="accordion-panel"
     [ngStyle]="{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }"
     >
       <ng-content></ng-content>
-  </div>
-
-  <div 
-    *ngIf="enableAnimation" 
-    [ngClass]="{'show-accordion-panel' : showBody}" 
-    [id]="sectionId" 
-    class="accordion-panel"
-    >
-    <section 
-      class="dynamic-height"
-      [ngStyle]="{'height': setHeight ? eleHeight+'px' : '0'}"
-    >
-      <div class="accordion-content" [ngStyle]="{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }" #myIdentifier>
-        <ng-content select="[animate]"></ng-content>
-      </div>
-    </section>
   </div>
 </article>

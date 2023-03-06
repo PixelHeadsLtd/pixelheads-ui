@@ -10,10 +10,10 @@ export declare class DashboardFavouritesComponent implements OnInit {
     tagName: string;
     favDescription: string;
     lastViewed: string;
-    favClick: EventEmitter<any>;
-    anchorClick: EventEmitter<any>;
-    onFavClick(event: Event): void;
-    onAnchorClick(event: Event): void;
+    anchorClick: EventEmitter<Event>;
+    favClick: EventEmitter<boolean>;
+    onAnchorClick(e: Event): void;
+    onFavClick(e: any): void;
     constructor();
     ngOnInit(): void;
 }

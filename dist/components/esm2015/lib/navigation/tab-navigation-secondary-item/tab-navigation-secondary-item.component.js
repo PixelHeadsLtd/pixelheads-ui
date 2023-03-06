@@ -1,29 +1,28 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChild, Input } from '@angular/core';
+import { TabNavigationSecondaryContentDirective } from './tab-navigation-secondary-content.directive';
 export class TabNavigationSecondaryItemComponent {
-    constructor() {
-        this.text = 'Click me';
-        this.secondaryTabClick = new EventEmitter();
+    ngOnInit() { }
+    ngAfterContentChecked() {
+        this.templateRef = this.templateRefDirective && this.templateRefDirective.templateRef;
     }
-    onClick(event) {
-        console.log('secondary tab clicked');
-        this.secondaryTabClick.emit(event);
-    }
-    ngOnInit() {
+    get route() {
+        return this.routerLink || this.tabRoute;
     }
 }
 TabNavigationSecondaryItemComponent.decorators = [
     { type: Component, args: [{
                 selector: 'aa-tab-navigation-secondary-item',
-                template: "<li><a (click)=\"onClick($event)\" [class.active]=\"isActive\">{{secondaryTabName}}</a></li>",
-                changeDetection: ChangeDetectionStrategy.OnPush,
+                template: "<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION -->\r\n<ng-container *ngIf=\"!templateRef\">\r\n  <li [ngClass]=\"{'tab-disabled' : tabDisabled}\">\r\n    <a *ngIf=\"!tabDisabled\" [id]=\"tabId\" [routerLink]=\"route\">{{ tabName }}</a>\r\n    <span *ngIf=\"tabDisabled\">{{ tabName }}</span>\r\n  </li>\r\n</ng-container>\r\n",
                 styles: [""]
             },] }
 ];
-TabNavigationSecondaryItemComponent.ctorParameters = () => [];
 TabNavigationSecondaryItemComponent.propDecorators = {
-    isActive: [{ type: Input }],
-    secondaryTabName: [{ type: Input }],
-    text: [{ type: Input }],
-    secondaryTabClick: [{ type: Output }]
+    templateRefDirective: [{ type: ContentChild, args: [TabNavigationSecondaryContentDirective,] }],
+    tabId: [{ type: Input }],
+    tabName: [{ type: Input }],
+    tabRoute: [{ type: Input }],
+    tabDisabled: [{ type: Input }],
+    routerLink: [{ type: Input }],
+    routerLinkActive: [{ type: Input }]
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvY29tcG9uZW50cy9zcmMvbGliL25hdmlnYXRpb24vdGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0vdGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0uY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSx1QkFBdUIsRUFBRSxTQUFTLEVBQUUsWUFBWSxFQUFFLEtBQUssRUFBVSxNQUFNLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFReEcsTUFBTSxPQUFPLG1DQUFtQztJQWE5QztRQVRTLFNBQUksR0FBRyxVQUFVLENBQUM7UUFFakIsc0JBQWlCLEdBQUcsSUFBSSxZQUFZLEVBQUUsQ0FBQztJQU9qQyxDQUFDO0lBTFYsT0FBTyxDQUFDLEtBQVk7UUFDekIsT0FBTyxDQUFDLEdBQUcsQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDO1FBQ3JDLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLENBQUM7SUFDckMsQ0FBQztJQUlELFFBQVE7SUFDUixDQUFDOzs7WUF0QkYsU0FBUyxTQUFDO2dCQUNULFFBQVEsRUFBRSxrQ0FBa0M7Z0JBQzVDLHdHQUE2RDtnQkFFN0QsZUFBZSxFQUFFLHVCQUF1QixDQUFDLE1BQU07O2FBQ2hEOzs7O3VCQUdFLEtBQUs7K0JBQ0wsS0FBSzttQkFDTCxLQUFLO2dDQUVMLE1BQU0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDaGFuZ2VEZXRlY3Rpb25TdHJhdGVneSwgQ29tcG9uZW50LCBFdmVudEVtaXR0ZXIsIElucHV0LCBPbkluaXQsIE91dHB1dCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5cclxuQENvbXBvbmVudCh7XHJcbiAgc2VsZWN0b3I6ICdhYS10YWItbmF2aWdhdGlvbi1zZWNvbmRhcnktaXRlbScsXHJcbiAgdGVtcGxhdGVVcmw6ICcuL3RhYi1uYXZpZ2F0aW9uLXNlY29uZGFyeS1pdGVtLmNvbXBvbmVudC5odG1sJyxcclxuICBzdHlsZVVybHM6IFsnLi90YWItbmF2aWdhdGlvbi1zZWNvbmRhcnktaXRlbS5jb21wb25lbnQuc2NzcyddLFxyXG4gIGNoYW5nZURldGVjdGlvbjogQ2hhbmdlRGV0ZWN0aW9uU3RyYXRlZ3kuT25QdXNoXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBUYWJOYXZpZ2F0aW9uU2Vjb25kYXJ5SXRlbUNvbXBvbmVudCBpbXBsZW1lbnRzIE9uSW5pdCB7XHJcblxyXG4gIEBJbnB1dCgpIGlzQWN0aXZlOiBib29sZWFuO1xyXG4gIEBJbnB1dCgpIHNlY29uZGFyeVRhYk5hbWU6IHN0cmluZztcclxuICBASW5wdXQoKSB0ZXh0ID0gJ0NsaWNrIG1lJztcclxuXHJcbiAgQE91dHB1dCgpIHNlY29uZGFyeVRhYkNsaWNrID0gbmV3IEV2ZW50RW1pdHRlcigpO1xyXG5cclxuICBwdWJsaWMgb25DbGljayhldmVudDogRXZlbnQpIHtcclxuICAgIGNvbnNvbGUubG9nKCdzZWNvbmRhcnkgdGFiIGNsaWNrZWQnKTtcclxuICAgIHRoaXMuc2Vjb25kYXJ5VGFiQ2xpY2suZW1pdChldmVudCk7XHJcbiAgfVxyXG5cclxuICBjb25zdHJ1Y3RvcigpIHsgfVxyXG5cclxuICBuZ09uSW5pdCgpIHtcclxuICB9XHJcblxyXG59XHJcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0uY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vLi4vLi4vcHJvamVjdHMvY29tcG9uZW50cy9zcmMvbGliL25hdmlnYXRpb24vdGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0vdGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0uY29tcG9uZW50LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBdUIsU0FBUyxFQUFFLFlBQVksRUFBRSxLQUFLLEVBQXVCLE1BQU0sZUFBZSxDQUFDO0FBQ3pHLE9BQU8sRUFBRSxzQ0FBc0MsRUFBRSxNQUFNLDhDQUE4QyxDQUFDO0FBT3RHLE1BQU0sT0FBTyxtQ0FBbUM7SUFXOUMsUUFBUSxLQUFJLENBQUM7SUFFYixxQkFBcUI7UUFDbkIsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsb0JBQW9CLElBQUksSUFBSSxDQUFDLG9CQUFvQixDQUFDLFdBQVcsQ0FBQztJQUN4RixDQUFDO0lBRUQsSUFBSSxLQUFLO1FBQ1AsT0FBTyxJQUFJLENBQUMsVUFBVSxJQUFJLElBQUksQ0FBQyxRQUFRLENBQUM7SUFDMUMsQ0FBQzs7O1lBeEJGLFNBQVMsU0FBQztnQkFDVCxRQUFRLEVBQUUsa0NBQWtDO2dCQUM1QyxpVkFBNkQ7O2FBRTlEOzs7bUNBRUUsWUFBWSxTQUFDLHNDQUFzQztvQkFDbkQsS0FBSztzQkFDTCxLQUFLO3VCQUNMLEtBQUs7MEJBQ0wsS0FBSzt5QkFDTCxLQUFLOytCQUNMLEtBQUsiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBZnRlckNvbnRlbnRDaGVja2VkLCBDb21wb25lbnQsIENvbnRlbnRDaGlsZCwgSW5wdXQsIE9uSW5pdCwgVGVtcGxhdGVSZWYgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgVGFiTmF2aWdhdGlvblNlY29uZGFyeUNvbnRlbnREaXJlY3RpdmUgfSBmcm9tICcuL3RhYi1uYXZpZ2F0aW9uLXNlY29uZGFyeS1jb250ZW50LmRpcmVjdGl2ZSc7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ2FhLXRhYi1uYXZpZ2F0aW9uLXNlY29uZGFyeS1pdGVtJyxcclxuICB0ZW1wbGF0ZVVybDogJy4vdGFiLW5hdmlnYXRpb24tc2Vjb25kYXJ5LWl0ZW0uY29tcG9uZW50Lmh0bWwnLFxyXG4gIHN0eWxlVXJsczogWycuL3RhYi1uYXZpZ2F0aW9uLXNlY29uZGFyeS1pdGVtLmNvbXBvbmVudC5zY3NzJ11cclxufSlcclxuZXhwb3J0IGNsYXNzIFRhYk5hdmlnYXRpb25TZWNvbmRhcnlJdGVtQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0LCBBZnRlckNvbnRlbnRDaGVja2VkIHtcclxuICBAQ29udGVudENoaWxkKFRhYk5hdmlnYXRpb25TZWNvbmRhcnlDb250ZW50RGlyZWN0aXZlKSB0ZW1wbGF0ZVJlZkRpcmVjdGl2ZTogVGFiTmF2aWdhdGlvblNlY29uZGFyeUNvbnRlbnREaXJlY3RpdmU7XHJcbiAgQElucHV0KCkgdGFiSWQ6IGFueTtcclxuICBASW5wdXQoKSB0YWJOYW1lOiBzdHJpbmc7XHJcbiAgQElucHV0KCkgdGFiUm91dGU6IHN0cmluZztcclxuICBASW5wdXQoKSB0YWJEaXNhYmxlZDogYm9vbGVhbjtcclxuICBASW5wdXQoKSByb3V0ZXJMaW5rOiBzdHJpbmcgfCBhbnlbXTtcclxuICBASW5wdXQoKSByb3V0ZXJMaW5rQWN0aXZlOiBib29sZWFuO1xyXG4gIHRlbXBsYXRlUmVmOiBUZW1wbGF0ZVJlZjxhbnk+O1xyXG4gIHRlbXBsYXRlUmVmSGVhZGVyOiBUZW1wbGF0ZVJlZjxhbnk+O1xyXG5cclxuICBuZ09uSW5pdCgpIHt9XHJcblxyXG4gIG5nQWZ0ZXJDb250ZW50Q2hlY2tlZCgpIHtcclxuICAgIHRoaXMudGVtcGxhdGVSZWYgPSB0aGlzLnRlbXBsYXRlUmVmRGlyZWN0aXZlICYmIHRoaXMudGVtcGxhdGVSZWZEaXJlY3RpdmUudGVtcGxhdGVSZWY7XHJcbiAgfVxyXG5cclxuICBnZXQgcm91dGUoKSB7XHJcbiAgICByZXR1cm4gdGhpcy5yb3V0ZXJMaW5rIHx8IHRoaXMudGFiUm91dGU7XHJcbiAgfVxyXG59XHJcbiJdfQ==

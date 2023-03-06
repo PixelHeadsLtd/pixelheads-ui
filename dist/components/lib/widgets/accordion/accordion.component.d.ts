@@ -1,4 +1,4 @@
-import { EventEmitter, ElementRef } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 export declare class AccordionComponent {
     showBody: boolean;
     disabled: boolean;
@@ -14,14 +14,10 @@ export declare class AccordionComponent {
     fontClassName: string;
     iconBgColor: string;
     customBgColor: string;
-    setHeight: boolean;
-    eleHeight: number;
-    enableAnimation: boolean;
     clearPadding: boolean;
     verticalDisplay: boolean;
     verticalMinHeight: any;
     open: EventEmitter<void>;
-    myIdentifier: ElementRef;
     onOpen(e: {
         stopPropagation: () => void;
     }): void;

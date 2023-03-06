@@ -1,11 +1,17 @@
-import { EventEmitter, OnInit } from '@angular/core';
-export declare class TabNavigationSecondaryItemComponent implements OnInit {
-    isActive: boolean;
-    secondaryTabName: string;
-    text: string;
-    secondaryTabClick: EventEmitter<any>;
-    onClick(event: Event): void;
-    constructor();
+import { AfterContentChecked, OnInit, TemplateRef } from '@angular/core';
+import { TabNavigationSecondaryContentDirective } from './tab-navigation-secondary-content.directive';
+export declare class TabNavigationSecondaryItemComponent implements OnInit, AfterContentChecked {
+    templateRefDirective: TabNavigationSecondaryContentDirective;
+    tabId: any;
+    tabName: string;
+    tabRoute: string;
+    tabDisabled: boolean;
+    routerLink: string | any[];
+    routerLinkActive: boolean;
+    templateRef: TemplateRef<any>;
+    templateRefHeader: TemplateRef<any>;
     ngOnInit(): void;
+    ngAfterContentChecked(): void;
+    get route(): string | any[];
 }
 //# sourceMappingURL=tab-navigation-secondary-item.component.d.ts.map

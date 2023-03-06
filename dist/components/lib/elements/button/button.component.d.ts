@@ -26,6 +26,8 @@ export declare class ButtonComponent implements OnInit {
     count: number;
     countColor: any;
     maxHeight: any;
+    showLabel: boolean;
+    customIconsRound: boolean;
     buttonClick: EventEmitter<Event>;
     onButtonClick(e: Event): void;
     constructor(elementRef: ElementRef);

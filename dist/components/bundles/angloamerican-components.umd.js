@@ -206,7 +206,7 @@
     ButtonComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-button',
-                    template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label *ngIf=\"!buttonLarge\" [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n  >\r\n    <div [ngClass]=\"{'flex-group flex-start' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\">\r\n    <button\r\n      (click)=\"showBtnMenu=!showBtnMenu\" \r\n      [class]=\"buttonClass\"\r\n      [type]=\"buttonType\" \r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\"\r\n     >\r\n      {{buttonText}}\r\n    </button>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow-strong\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n",
+                    template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label \r\n    [ngClass]=\"{ 'show-label': showLabel }\"\r\n    [for]=\"buttonId\">\r\n    {{buttonLabel}}\r\n  </label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    [ngClass]=\"{'material-icons' : customIconsRound}\"\r\n  >\r\n    <div *ngIf=\"!customIconsRound\" [ngClass]=\"{'flex-group flex-start' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n    <span *ngIf=\"customIconsRound\">{{buttonIcon}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\">\r\n    <button\r\n      (click)=\"showBtnMenu=!showBtnMenu\" \r\n      [class]=\"buttonClass\"\r\n      [type]=\"buttonType\" \r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\"\r\n     >\r\n      {{buttonText}}\r\n    </button>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow-strong\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
@@ -239,6 +239,8 @@
         count: [{ type: i0.Input }],
         countColor: [{ type: i0.Input }],
         maxHeight: [{ type: i0.Input }],
+        showLabel: [{ type: i0.Input }],
+        customIconsRound: [{ type: i0.Input }],
         buttonClick: [{ type: i0.Output }],
         onClick: [{ type: i0.HostListener, args: ['document:click', ['$event.target'],] }]
     };
@@ -1217,50 +1219,112 @@
         tabChanged: [{ type: i0.Output }]
     };
 
+    var TabNavigationSecondaryContentDirective = /** @class */ (function () {
+        function TabNavigationSecondaryContentDirective(templateRef) {
+            this.templateRef = templateRef;
+        }
+        return TabNavigationSecondaryContentDirective;
+    }());
+    TabNavigationSecondaryContentDirective.decorators = [
+        { type: i0.Directive, args: [{
+                    selector: 'ng-template[aaTabNavigationSecondaryContent]'
+                },] }
+    ];
+    TabNavigationSecondaryContentDirective.ctorParameters = function () { return [
+        { type: i0.TemplateRef }
+    ]; };
+
+    var TabNavigationSecondaryItemComponent = /** @class */ (function () {
+        function TabNavigationSecondaryItemComponent() {
+        }
+        TabNavigationSecondaryItemComponent.prototype.ngOnInit = function () { };
+        TabNavigationSecondaryItemComponent.prototype.ngAfterContentChecked = function () {
+            this.templateRef = this.templateRefDirective && this.templateRefDirective.templateRef;
+        };
+        Object.defineProperty(TabNavigationSecondaryItemComponent.prototype, "route", {
+            get: function () {
+                return this.routerLink || this.tabRoute;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        return TabNavigationSecondaryItemComponent;
+    }());
+    TabNavigationSecondaryItemComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-tab-navigation-secondary-item',
+                    template: "<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION -->\r\n<ng-container *ngIf=\"!templateRef\">\r\n  <li [ngClass]=\"{'tab-disabled' : tabDisabled}\">\r\n    <a *ngIf=\"!tabDisabled\" [id]=\"tabId\" [routerLink]=\"route\">{{ tabName }}</a>\r\n    <span *ngIf=\"tabDisabled\">{{ tabName }}</span>\r\n  </li>\r\n</ng-container>\r\n",
+                    styles: [""]
+                },] }
+    ];
+    TabNavigationSecondaryItemComponent.propDecorators = {
+        templateRefDirective: [{ type: i0.ContentChild, args: [TabNavigationSecondaryContentDirective,] }],
+        tabId: [{ type: i0.Input }],
+        tabName: [{ type: i0.Input }],
+        tabRoute: [{ type: i0.Input }],
+        tabDisabled: [{ type: i0.Input }],
+        routerLink: [{ type: i0.Input }],
+        routerLinkActive: [{ type: i0.Input }]
+    };
+
     var TabNavigationSecondaryComponent = /** @class */ (function () {
         function TabNavigationSecondaryComponent() {
+            this.autoChangeTabs = true;
+            this.displayTabContent = true;
+            this.tabClicked = new i0.EventEmitter();
+            this.tabChanged = new i0.EventEmitter();
         }
-        TabNavigationSecondaryComponent.prototype.ngOnInit = function () {
+        Object.defineProperty(TabNavigationSecondaryComponent.prototype, "contentTabs", {
+            get: function () {
+                var _a;
+                return (_a = this.tabNavigationItems) === null || _a === void 0 ? void 0 : _a.filter(function (tabNavigationItem) { return !!tabNavigationItem.templateRef; });
+            },
+            enumerable: false,
+            configurable: true
+        });
+        TabNavigationSecondaryComponent.prototype.ngOnInit = function () { };
+        TabNavigationSecondaryComponent.prototype.ngAfterContentInit = function () {
+            if (this.contentTabs && this.contentTabs[0]) {
+                this.changeTab(this.contentTabs[0]);
+            }
+        };
+        TabNavigationSecondaryComponent.prototype.isActive = function (tab) {
+            return this.currentTab.tabName === tab.tabName;
+        };
+        TabNavigationSecondaryComponent.prototype.onTabClicked = function (tab) {
+            this.tabClicked.emit(tab);
+            if (this.autoChangeTabs) {
+                this.changeTab(tab);
+            }
+        };
+        TabNavigationSecondaryComponent.prototype.changeTab = function (tab) {
+            this.currentTab = tab;
+            this.tabChanged.emit(tab);
+        };
+        TabNavigationSecondaryComponent.prototype.changeTabById = function (tabId) {
+            var tab = this.contentTabs.find(function (x) { return x.tabId === tabId; });
+            if (tab) {
+                this.changeTab(tab);
+            }
         };
         return TabNavigationSecondaryComponent;
     }());
     TabNavigationSecondaryComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tab-navigation-secondary',
-                    template: "<nav class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n",
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li>\r\n        <a *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" [class.active]=\"isActive(tab)\" (click)=\"onTabClicked(tab)\">{{ tab.tabName }}</a>\r\n        <span *ngIf=\"tab.tabDisabled\" class=\"tab-disabled\">{{ tab.tabName }}</span>\r\n      </li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>",
                     styles: [""]
                 },] }
     ];
     TabNavigationSecondaryComponent.ctorParameters = function () { return []; };
-
-    var TabNavigationSecondaryItemComponent = /** @class */ (function () {
-        function TabNavigationSecondaryItemComponent() {
-            this.text = 'Click me';
-            this.secondaryTabClick = new i0.EventEmitter();
-        }
-        TabNavigationSecondaryItemComponent.prototype.onClick = function (event) {
-            console.log('secondary tab clicked');
-            this.secondaryTabClick.emit(event);
-        };
-        TabNavigationSecondaryItemComponent.prototype.ngOnInit = function () {
-        };
-        return TabNavigationSecondaryItemComponent;
-    }());
-    TabNavigationSecondaryItemComponent.decorators = [
-        { type: i0.Component, args: [{
-                    selector: 'aa-tab-navigation-secondary-item',
-                    template: "<li><a (click)=\"onClick($event)\" [class.active]=\"isActive\">{{secondaryTabName}}</a></li>",
-                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
-                    styles: [""]
-                },] }
-    ];
-    TabNavigationSecondaryItemComponent.ctorParameters = function () { return []; };
-    TabNavigationSecondaryItemComponent.propDecorators = {
-        isActive: [{ type: i0.Input }],
-        secondaryTabName: [{ type: i0.Input }],
-        text: [{ type: i0.Input }],
-        secondaryTabClick: [{ type: i0.Output }]
+    TabNavigationSecondaryComponent.propDecorators = {
+        tabNavigationItems: [{ type: i0.ContentChildren, args: [TabNavigationSecondaryItemComponent,] }],
+        autoChangeTabs: [{ type: i0.Input }],
+        displayTabContent: [{ type: i0.Input }],
+        routerOutlet: [{ type: i0.Input }],
+        ngTemplate: [{ type: i0.Input }],
+        tabClicked: [{ type: i0.Output }],
+        tabChanged: [{ type: i0.Output }]
     };
 
     var NavigationModule = /** @class */ (function () {
@@ -1282,6 +1346,7 @@
                         TabNavigationSecondaryComponent,
                         TabNavigationSecondaryItemComponent,
                         TabNavigationContentDirective,
+                        TabNavigationSecondaryContentDirective,
                         TabNavigationHeaderContentDirective
                     ],
                     imports: [common.CommonModule, router.RouterModule],
@@ -1297,6 +1362,7 @@
                         TabNavigationSecondaryComponent,
                         TabNavigationSecondaryItemComponent,
                         TabNavigationContentDirective,
+                        TabNavigationSecondaryContentDirective,
                         TabNavigationHeaderContentDirective
                     ]
                 },] }
@@ -1332,7 +1398,7 @@
     AlertShieldComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-alert-shield',
-                    template: "<div \r\n    *ngIf=\"!showTooltip && !customShield\" \r\n    class=\"alert-shield {{alertShieldStatus}}\" \r\n    [ngClass]=\"{\r\n        'small' : alertShieldSmall, \r\n        'nowrap' : noWrap \r\n        }\"\r\n    >\r\n    {{alertShieldText}}\r\n</div>\r\n\r\n<div *ngIf=\"showTooltip && !customShield\" class=\"alert-shield-tooltip-wrapper\">\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}} {{xpos}} {{ypos}}\"\r\n        [ngStyle]=\"{'min-width' : minWidth}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield {{alertShieldStatus}}\" \r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall, \r\n            'nowrap' : noWrap \r\n            }\"\r\n        >\r\n            {{alertShieldText}}\r\n    </div>\r\n</div>\r\n\r\n<div *ngIf=\"customShield\" class=\"custom-alert-shield\">\r\n    <div \r\n        class=\"flex-group flex-align-center flex-start custom-alert-shield-container\"\r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall,\r\n            'nowrap' : noWrap,\r\n            'bg-aa-red-8' : bgRedLight,\r\n            'bg-aa-red-100' : bgRedDark,\r\n            'bg-aa-green-5' : bgGreenLight,\r\n            'bg-aa-green-100' : bgGreenDark,\r\n            'bg-aa-orange-10' : bgOrangeLight,\r\n            'bg-aa-orange-100' : bgOrangeDark,\r\n            'bg-aa-light-blue-15' : bgBlueLight,\r\n            'bg-aa-light-blue-100' : bgBlueDark,\r\n            'bg-aa-grey-10' : bgGreyLight,\r\n            'bg-aa-grey-100' : bgGreyDark\r\n        }\"\r\n      >\r\n        <div \r\n            *ngIf=\"showTooltip\"\r\n            class=\"alert-shield-tooltip {{xpos}} {{ypos}}\"\r\n            [ngStyle]=\"{'min-width' : minWidth}\"\r\n        >\r\n            <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n            <ng-content select=\"[custom-tooltip-content]\"></ng-content>\r\n        </div>\r\n        <div \r\n            [ngClass]=\"{\r\n                'material-icons' : !iconOutlined,\r\n                'material-icons-outlined' : iconOutlined\r\n            }\">\r\n            {{iconName}}\r\n        </div>\r\n      <span>{{alertShieldText}}</span>\r\n    </div>\r\n</div>",
+                    template: "<div \r\n    *ngIf=\"!showTooltip && !customShield\" \r\n    class=\"alert-shield {{alertShieldStatus}}\" \r\n    [ngClass]=\"{\r\n        'small' : alertShieldSmall, \r\n        'nowrap' : noWrap \r\n        }\"\r\n    >\r\n    <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n        {{alertShieldText}}\r\n    </span>\r\n</div>\r\n\r\n<div *ngIf=\"showTooltip && !customShield\" class=\"alert-shield-tooltip-wrapper\">\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}} {{xpos}} {{ypos}}\"\r\n        [ngStyle]=\"{'min-width' : minWidth}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield {{alertShieldStatus}}\" \r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall, \r\n            'nowrap' : noWrap \r\n            }\"\r\n        >\r\n            <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n                {{alertShieldText}}\r\n            </span>\r\n    </div>\r\n</div>\r\n\r\n<div *ngIf=\"customShield\" class=\"custom-alert-shield\">\r\n    <div \r\n        class=\"flex-group flex-align-center flex-start custom-alert-shield-container\"\r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall,\r\n            'nowrap' : noWrap,\r\n            'bg-aa-red-8' : bgRedLight,\r\n            'bg-aa-red-100' : bgRedDark,\r\n            'bg-aa-green-5' : bgGreenLight,\r\n            'bg-aa-green-100' : bgGreenDark,\r\n            'bg-aa-orange-10' : bgOrangeLight,\r\n            'bg-aa-orange-100' : bgOrangeDark,\r\n            'bg-aa-light-blue-15' : bgBlueLight,\r\n            'bg-aa-light-blue-100' : bgBlueDark,\r\n            'bg-aa-grey-10' : bgGreyLight,\r\n            'bg-aa-grey-100' : bgGreyDark\r\n        }\"\r\n      >\r\n        <div \r\n            *ngIf=\"showTooltip\"\r\n            class=\"alert-shield-tooltip {{xpos}} {{ypos}}\"\r\n            [ngStyle]=\"{'min-width' : minWidth}\"\r\n        >\r\n            <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n            <ng-content select=\"[custom-tooltip-content]\"></ng-content>\r\n        </div>\r\n        <div \r\n            [ngClass]=\"{\r\n                'material-icons' : !iconOutlined,\r\n                'material-icons-outlined' : iconOutlined\r\n            }\">\r\n            {{iconName}}\r\n        </div>\r\n        <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n            {{alertShieldText}}\r\n        </span>\r\n    </div>\r\n</div>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1349,6 +1415,7 @@
         noWrap: [{ type: i0.Input }],
         xpos: [{ type: i0.Input }],
         ypos: [{ type: i0.Input }],
+        hideLabel: [{ type: i0.Input }],
         customShield: [{ type: i0.Input }],
         iconName: [{ type: i0.Input }],
         iconOutlined: [{ type: i0.Input }],
@@ -1488,6 +1555,34 @@
         currentStatus: [{ type: i0.Input }]
     };
 
+    var CounterComponent = /** @class */ (function () {
+        function CounterComponent() {
+        }
+        CounterComponent.prototype.ngOnInit = function () {
+        };
+        return CounterComponent;
+    }());
+    CounterComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-counter',
+                    template: "<span \n    class=\"\n    flex-group \n    flex-center \n    border-radius-50\n    width-1-25\n    height-1-25\n    font-size-xsmall\"\n    \n    [ngClass]=\"{\n        'bg-aa-light-blue-100' : countInfo,\n        'bg-aa-red-100' : countError, \n        'bg-aa-orange-100' : countWarning,\n        'bg-aa-green-100' : countSuccess,\n        'bg-aa-light-blue-15' : countInfoLight,\n        'bg-aa-red-10' : countErrorLight, \n        'bg-aa-orange-10' : countWarningLight,\n        'bg-aa-green-15' : countSuccessLight\n    }\"\n    >\n    <strong \n        class=\"flex-group flex-center\"\n        [ngClass]=\"{\n            'aa-white-100' : \n            countInfo || \n            countError || \n            countWarning || \n            countSuccess\n        }\"\n        >\n        {{ count }}\n    </strong>\n</span>",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush,
+                    styles: [""]
+                },] }
+    ];
+    CounterComponent.ctorParameters = function () { return []; };
+    CounterComponent.propDecorators = {
+        count: [{ type: i0.Input }],
+        countError: [{ type: i0.Input }],
+        countWarning: [{ type: i0.Input }],
+        countInfo: [{ type: i0.Input }],
+        countSuccess: [{ type: i0.Input }],
+        countErrorLight: [{ type: i0.Input }],
+        countWarningLight: [{ type: i0.Input }],
+        countInfoLight: [{ type: i0.Input }],
+        countSuccessLight: [{ type: i0.Input }]
+    };
+
     var PatternsModule = /** @class */ (function () {
         function PatternsModule() {
         }
@@ -1501,9 +1596,9 @@
                         AnchorBackComponent,
                         ProgressBarComponent,
                         ProgressCircleComponent,
-                        AlertShieldComponent,
                         ActionsSummaryComponent,
-                        StatusIndicatorComponent
+                        StatusIndicatorComponent,
+                        CounterComponent
                     ],
                     imports: [
                         common.CommonModule
@@ -1515,7 +1610,8 @@
                         ProgressBarComponent,
                         ProgressCircleComponent,
                         ActionsSummaryComponent,
-                        StatusIndicatorComponent
+                        StatusIndicatorComponent,
+                        CounterComponent
                     ]
                 },] }
     ];
@@ -1550,21 +1646,13 @@
                 this.showBody = !this.showBody;
                 e.stopPropagation();
             }
-            if (this.disabled !== true && this.showBody && this.enableAnimation) {
-                this.setHeight = true;
-                this.eleHeight = this.myIdentifier.nativeElement.offsetHeight;
-                console.log('Height ' + this.eleHeight);
-            }
-            else {
-                this.eleHeight = 0;
-            }
         };
         return AccordionComponent;
     }());
     AccordionComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-accordion',
-                    template: "<article \r\n  class=\"accordion-container\"\r\n  [ngStyle]=\"{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }\"\r\n  [ngClass]=\"{'box-shadow-strong' : showBody, 'vertical flex-group flex-start' : verticalDisplay }\"\r\n>\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-align-center {{customBgColor}}\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled, 'flex-column' : verticalDisplay}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <div class=\"flex-align-center flex-group flex-start\">\r\n            <div *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</div>\r\n            <div *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</div>\r\n            <div *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></div>\r\n            <div class=\"nested-icons\">\r\n              <div class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</div>\r\n              <div class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</div>\r\n            </div>\r\n            <div class=\"accordion-heading\">{{accordionHeading}}</div>\r\n          </div>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n\r\n  <div \r\n    *ngIf=\"showBody && !enableAnimation\" \r\n    [id]=\"sectionId\" \r\n    class=\"accordion-panel\"\r\n    [ngStyle]=\"{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }\"\r\n    >\r\n      <ng-content></ng-content>\r\n  </div>\r\n\r\n  <div \r\n    *ngIf=\"enableAnimation\" \r\n    [ngClass]=\"{'show-accordion-panel' : showBody}\" \r\n    [id]=\"sectionId\" \r\n    class=\"accordion-panel\"\r\n    >\r\n    <section \r\n      class=\"dynamic-height\"\r\n      [ngStyle]=\"{'height': setHeight ? eleHeight+'px' : '0'}\"\r\n    >\r\n      <div class=\"accordion-content\" [ngStyle]=\"{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }\" #myIdentifier>\r\n        <ng-content select=\"[animate]\"></ng-content>\r\n      </div>\r\n    </section>\r\n  </div>\r\n</article>\r\n",
+                    template: "<article \r\n  class=\"accordion-container\"\r\n  [ngStyle]=\"{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }\"\r\n  [ngClass]=\"{'box-shadow-strong' : showBody, 'vertical flex-group flex-start' : verticalDisplay }\"\r\n>\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-align-center {{customBgColor}}\" \r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      [ngClass]=\"{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled, 'flex-column' : verticalDisplay}\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <div class=\"flex-align-center flex-group flex-start\">\r\n            <div *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</div>\r\n            <div *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</div>\r\n            <div *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></div>\r\n            <div class=\"nested-icons\">\r\n              <div class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</div>\r\n              <div class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</div>\r\n            </div>\r\n            <div class=\"accordion-heading\">{{accordionHeading}}</div>\r\n          </div>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div \r\n    *ngIf=\"showBody\" \r\n    [id]=\"sectionId\" \r\n    class=\"accordion-panel\"\r\n    [ngStyle]=\"{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }\"\r\n    >\r\n      <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1585,14 +1673,10 @@
         fontClassName: [{ type: i0.Input }],
         iconBgColor: [{ type: i0.Input }],
         customBgColor: [{ type: i0.Input }],
-        setHeight: [{ type: i0.Input }],
-        eleHeight: [{ type: i0.Input }],
-        enableAnimation: [{ type: i0.Input }],
         clearPadding: [{ type: i0.Input }],
         verticalDisplay: [{ type: i0.Input }],
         verticalMinHeight: [{ type: i0.Input }],
-        open: [{ type: i0.Output }],
-        myIdentifier: [{ type: i0.ViewChild, args: ['myIdentifier',] }]
+        open: [{ type: i0.Output }]
     };
 
     var AccordionFancyComponent = /** @class */ (function () {
@@ -1705,24 +1789,27 @@
 
     var DashboardFavouritesComponent = /** @class */ (function () {
         function DashboardFavouritesComponent() {
-            this.favClick = new i0.EventEmitter();
             this.anchorClick = new i0.EventEmitter();
+            this.favClick = new i0.EventEmitter();
         }
-        DashboardFavouritesComponent.prototype.onFavClick = function (event) {
-            this.favClick.emit(event);
+        DashboardFavouritesComponent.prototype.onAnchorClick = function (e) {
+            e.stopPropagation();
+            this.anchorClick.emit(e);
         };
-        DashboardFavouritesComponent.prototype.onAnchorClick = function (event) {
-            event.preventDefault();
-            this.anchorClick.emit(event);
+        DashboardFavouritesComponent.prototype.onFavClick = function (e) {
+            this.isFavourite = !this.isFavourite;
+            e.stopPropagation();
+            this.favClick.emit(this.isFavourite);
         };
         DashboardFavouritesComponent.prototype.ngOnInit = function () {
+            this.favClick.emit(this.isFavourite);
         };
         return DashboardFavouritesComponent;
     }());
     DashboardFavouritesComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-dashboard-favourites',
-                    template: "<article class=\"dashboard-favourite\">\r\n  <div *ngIf=\"!materialIcons\" [class]=\"favIconClass\"></div>\r\n  <div *ngIf=\"materialIcons\" class=\"material-icons {{iconColour}}\">{{favIconClass}}</div>\r\n  <a (click)=\"onAnchorClick($event)\" [attr.href]=\"favouritesURL\">{{(favouritesTitle.length>35)? (favouritesTitle | slice:0:35)+'...':(favouritesTitle)}}</a>\r\n  <button (click)=\"onFavClick($event)\" [class.selected]=\"isFavourite\" class=\"icon-star-favourites transparent\"></button>\r\n  <div class=\"hover-card animate-all\">\r\n    <div class=\"field boxed\">\r\n      <label>Tags</label>\r\n      <p>{{tagName}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Last viewed</label>\r\n      <p>{{lastViewed}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Title</label>\r\n      <p>{{favouritesTitle}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Description</label>\r\n      <p>{{favDescription}}</p>\r\n    </div>\r\n  </div>\r\n</article>\r\n",
+                    template: "<article class=\"dashboard-favourite flex-group flex-align-center\">\r\n  <div *ngIf=\"!materialIcons\" class=\"font-awesome {{favIconClass}}\"></div>\r\n  <div *ngIf=\"materialIcons\" class=\"material-icons {{iconColour}}\">{{favIconClass}}</div>\r\n  <a (click)=\"onAnchorClick($event)\" [attr.href]=\"favouritesURL\">{{(favouritesTitle.length>35)? (favouritesTitle | slice:0:35)+'...':(favouritesTitle)}}</a>\r\n  <div class=\"flex-group flex-align-center position-absolute top-0-5 right-0-5 margin-right-0\">\r\n    <button \r\n      *ngIf=\"!isFavourite\" \r\n      (click)=\"onFavClick($event)\" \r\n      class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n      >\r\n      star_outline\r\n    </button>\r\n    <button \r\n      *ngIf=\"isFavourite\" \r\n      (click)=\"onFavClick($event)\" \r\n      class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n      >\r\n      star\r\n    </button>\r\n  </div>\r\n  <div class=\"hover-card animate-all\">\r\n    <div class=\"field boxed\">\r\n      <label>Tags</label>\r\n      <p>{{tagName}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Last viewed</label>\r\n      <p>{{lastViewed}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Title</label>\r\n      <p>{{favouritesTitle}}</p>\r\n    </div>\r\n    <div class=\"field\">\r\n      <label>Description</label>\r\n      <p>{{favDescription}}</p>\r\n    </div>\r\n  </div>\r\n</article>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1739,31 +1826,33 @@
         tagName: [{ type: i0.Input }],
         favDescription: [{ type: i0.Input }],
         lastViewed: [{ type: i0.Input }],
-        favClick: [{ type: i0.Output }],
-        anchorClick: [{ type: i0.Output }]
+        anchorClick: [{ type: i0.Output }],
+        favClick: [{ type: i0.Output }]
     };
 
     var DashboardFavouritesListComponent = /** @class */ (function () {
         function DashboardFavouritesListComponent() {
-            this.text = 'Click me';
-            this.favClick = new i0.EventEmitter();
             this.anchorClick = new i0.EventEmitter();
+            this.favClick = new i0.EventEmitter();
         }
-        DashboardFavouritesListComponent.prototype.onFavClick = function (event) {
-            this.favClick.emit(event);
+        DashboardFavouritesListComponent.prototype.onAnchorClick = function (e) {
+            e.stopPropagation();
+            this.anchorClick.emit(e);
         };
-        DashboardFavouritesListComponent.prototype.onAnchorClick = function (event) {
-            event.preventDefault();
-            this.anchorClick.emit(event);
+        DashboardFavouritesListComponent.prototype.onFavClick = function (e) {
+            this.isFavourite = !this.isFavourite;
+            e.stopPropagation();
+            this.favClick.emit(this.isFavourite);
         };
         DashboardFavouritesListComponent.prototype.ngOnInit = function () {
+            this.favClick.emit(this.isFavourite);
         };
         return DashboardFavouritesListComponent;
     }());
     DashboardFavouritesListComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-dashboard-favourites-list',
-                    template: "<div class=\"accordion-favourites-list\">\r\n  <div class=\"flex-group flex-start flex-align-center\">\r\n    <button (click)=\"onFavClick($event)\" class=\"icon-star-favourites transparent width-3 margin-right-0-5\" [class.selected]=\"isFavourite\"></button>\r\n    <div class=\"margin-top-1 margin-bottom-0-75 description\">\r\n      <a (click)=\"onAnchorClick($event)\" class=\"anchor-underline\" title=\"{{itemAnchorTitle}}\"\r\n         type=\"button\" [attr.href]=\"itemAnchorURL\">{{itemAnchor}}</a><br/>\r\n      <div class=\"margin-top-0-25\">{{itemDescription}}</div>\r\n    </div>\r\n  </div>\r\n  <div (click)=\"showTags=!showTags\" class=\"icon-info\"></div>\r\n  <div *ngIf=\"showTags\" class=\"width-100\">\r\n    <div class=\"more-info\">\r\n      <div class=\"field boxed\">\r\n        <label>Tags</label>\r\n        <p>{{tagName}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Last viewed</label>\r\n        <p>{{lastViewed}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Title</label>\r\n        <p>{{favouritesTitle}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Description</label>\r\n        <p>{{favDescription}}</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                    template: "<div class=\"accordion-favourites-list\">\r\n  <div class=\"flex-group flex-start flex-align-center\">\r\n    <button \r\n      *ngIf=\"!isFavourite\" \r\n      (click)=\"onFavClick($event)\" \r\n      class=\"btn-fav material-icons-outlined margin-left-0-75 margin-right-1-25\"\r\n      >\r\n      star_outline\r\n    </button>\r\n    <button \r\n      *ngIf=\"isFavourite\" \r\n      (click)=\"onFavClick($event)\" \r\n      class=\"btn-fav material-icons-outlined margin-left-0-75 margin-right-1-25\"\r\n      >\r\n      star\r\n    </button>\r\n\r\n    <div class=\"margin-top-1 margin-bottom-0-75 description\">\r\n      <a (click)=\"onAnchorClick($event)\" class=\"anchor-underline\" title=\"{{itemAnchorTitle}}\"\r\n         type=\"button\" [attr.href]=\"itemAnchorURL\">{{itemAnchor}}</a><br/>\r\n      <div class=\"margin-top-0-25\">{{itemDescription}}</div>\r\n    </div>\r\n  </div>\r\n  <div (click)=\"showTags=!showTags\" class=\"icon-info\"></div>\r\n  <div *ngIf=\"showTags\">\r\n    <div class=\"more-info\">\r\n      <div class=\"field boxed\">\r\n        <label>Tags</label>\r\n        <p>{{tagName}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Last viewed</label>\r\n        <p>{{lastViewed}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Title</label>\r\n        <p>{{favouritesTitle}}</p>\r\n      </div>\r\n      <div class=\"field\">\r\n        <label>Description</label>\r\n        <p>{{favDescription}}</p>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1784,41 +1873,76 @@
         lastViewed: [{ type: i0.Input }],
         favouritesTitle: [{ type: i0.Input }],
         favDescription: [{ type: i0.Input }],
-        text: [{ type: i0.Input }],
-        favClick: [{ type: i0.Output }],
-        anchorClick: [{ type: i0.Output }]
+        anchorClick: [{ type: i0.Output }],
+        favClick: [{ type: i0.Output }]
     };
 
+    var FavouriteItem = /** @class */ (function () {
+        function FavouriteItem() {
+        }
+        return FavouriteItem;
+    }());
     var FavouritesComponent = /** @class */ (function () {
         function FavouritesComponent() {
-            this.favClick = new i0.EventEmitter();
+            this.isFavourite = null;
             this.anchorClick = new i0.EventEmitter();
+            this.favClick = new i0.EventEmitter();
         }
-        FavouritesComponent.prototype.onFavClick = function (event) {
-            this.favClick.emit(event);
+        FavouritesComponent.prototype.onAnchorClick = function (e) {
+            e.stopPropagation();
+            this.anchorClick.emit(e);
         };
-        FavouritesComponent.prototype.onAnchorClick = function (event) {
-            this.anchorClick.emit(event);
+        FavouritesComponent.prototype.onFavClick = function (fav) {
+            fav.isFavourite = !fav.isFavourite;
+            this.favClick.emit(fav);
+            if (this.favsOrigin.indexOf(fav) !== -1) {
+                this.favsOrigin.splice(this.favsOrigin.indexOf(fav), 1);
+                this.favsTarget.push(fav);
+            }
+            else {
+                this.favsTarget.splice(this.favsTarget.indexOf(fav), 1);
+                this.favsOrigin.push(fav);
+            }
         };
         FavouritesComponent.prototype.ngOnInit = function () {
+            if (!this.favsTarget) {
+                this.favsTarget = [];
+            }
+            if (!this.favsOrigin) {
+                this.favsOrigin = [];
+            }
         };
         return FavouritesComponent;
     }());
     FavouritesComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-favourites',
-                    template: "<article class=\"feature-box solid favourite\">\r\n  <a (click)=\"onFavClick($event)\" class=\"margin-left-2\">{{(favouritesTitle.length>40)? (favouritesTitle | slice:0:40)+'...':(favouritesTitle)}}</a>\r\n  <button (click)=\"onAnchorClick($event)\" [class.selected]=\"isFavourite\" class=\"icon-star transparent\"><span>Click to add as favourite</span></button>\r\n  <p>{{(favouritesText.length>120)? (favouritesText | slice:0:120)+'...':(favouritesText)}}</p>\r\n</article>\r\n",
+                    template: "<!-- LANDSCAPE -->\r\n<section class=\"aa-favs aa-favs-landscape\" *ngIf=\"showLandscapeFavs\">\r\n  <h2 *ngIf=\"favsTarget.length\" class=\"width-100 flex-group flex-start flex-align-center\">\r\n    {{favsHeading}}\r\n    <span \r\n      class=\"\r\n      flex-group \r\n      flex-center \r\n      bg-aa-light-blue-15 \r\n      border-radius-50\r\n      width-1-25\r\n      height-1-25\r\n      margin-left-0-5\r\n      font-size-xsmall\"\r\n      >\r\n      <strong class=\"flex-group flex-center\">{{favsTarget.length}}</strong>\r\n    </span>\r\n  </h2>\r\n  <section class=\"flex-group flex-start\">\r\n    <div \r\n      *ngFor=\"let item of favsTarget | orderBy:'favTitle'; let i = index\" \r\n      [class.fav-saved]=\"item.isFavourite\"\r\n      class=\"\r\n        flex-group\r\n        flex-align-center\r\n        space-between\r\n        bg-aa-white-100\r\n        margin-bottom-0-75\r\n        min-width-24\r\n        max-width-24\r\n        padding-0-75\r\n        box-shadow \r\n        bd-solid \r\n        bd-grey-10 \r\n        bd-1\"\r\n      >\r\n      <section class=\"flex-group flex-start flex-align-center\">\r\n        <div \r\n          class=\"\r\n          width-3 \r\n          height-3 \r\n          flex-center \r\n          border-radius-50 \r\n          {{item.favColour}}\"\r\n        >\r\n          <h4 class=\"margin-0\">{{(item.favLabel.length>3)? (item.favLabel | slice:0:3)+'...':(item.favLabel)}}</h4>\r\n        </div>\r\n        <div>\r\n          <a (click)=\"onAnchorClick($event)\" class=\"text-decoration-none cursor-pointer\">\r\n            <h3 class=\"margin-0 aa-light-blue-100\">\r\n              {{(item.favTitle.length>27)? (item.favTitle | slice:0:27)+'...':(item.favTitle)}}\r\n            </h3>\r\n          </a>\r\n          <p class=\"small padding-top-0-25 margin-0\">\r\n            {{(item.favTextLineOne.length>45)? (item.favTextLineOne | slice:0:45)+'...':(item.favTextLineOne)}}\r\n          </p>\r\n          <p class=\"small margin-0\">\r\n            {{(item.favTextLineTwo.length>45)? (item.favTextLineTwo | slice:0:45)+'...':(item.favTextLineTwo)}}\r\n          </p>\r\n        </div>\r\n      </section>\r\n      <section class=\"flex-group flex-align-center fav-controls\">\r\n        <div class=\"flag au width-1 height-1 margin-0\"></div>\r\n        <button \r\n          *ngIf=\"!disableFavsStar\"\r\n          (click)=\"onFavClick(item)\" \r\n          class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n          >\r\n        </button>\r\n      </section>\r\n    </div>\r\n  </section>\r\n\r\n  <hr *ngIf=\"favsTarget.length\" class=\"min-width-100 margin-bottom-0-75\" />\r\n\r\n  <section class=\"flex-group flex-start\">\r\n    <div \r\n      *ngFor=\"let item of favsOrigin | orderBy:'favTitle'; let i = index\" \r\n      [class.fav-saved]=\"item.isFavourite\"\r\n      class=\"\r\n        flex-group\r\n        flex-align-center\r\n        space-between\r\n        bg-aa-white-100\r\n        margin-bottom-0-75\r\n        min-width-24\r\n        max-width-24\r\n        padding-0-75\r\n        box-shadow \r\n        bd-solid \r\n        bd-grey-10 \r\n        bd-1\"\r\n      >\r\n      <section class=\"flex-group flex-start flex-align-center\">\r\n        <div \r\n          class=\"\r\n          width-3 \r\n          height-3 \r\n          flex-center \r\n          border-radius-50 \r\n          {{item.favColour}}\"\r\n        >\r\n          <h4 class=\"margin-0\">{{(item.favLabel.length>3)? (item.favLabel | slice:0:3)+'...':(item.favLabel)}}</h4>\r\n        </div>\r\n        <div>\r\n          <a (click)=\"onAnchorClick($event)\" class=\"text-decoration-none cursor-pointer\">\r\n            <h3 class=\"margin-0 aa-light-blue-100\">\r\n              {{(item.favTitle.length>27)? (item.favTitle | slice:0:27)+'...':(item.favTitle)}}\r\n            </h3>\r\n          </a>\r\n          <p class=\"small padding-top-0-25 margin-0\">\r\n            {{(item.favTextLineOne.length>45)? (item.favTextLineOne | slice:0:45)+'...':(item.favTextLineOne)}}\r\n          </p>\r\n          <p class=\"small margin-0\">\r\n            {{(item.favTextLineTwo.length>45)? (item.favTextLineTwo | slice:0:45)+'...':(item.favTextLineTwo)}}\r\n          </p>\r\n        </div>\r\n      </section>\r\n      <section class=\"flex-group flex-align-center fav-controls\">\r\n        <div class=\"flag au width-1 height-1 margin-0\"></div>\r\n        <button \r\n          *ngIf=\"!disableFavsStar\"\r\n          (click)=\"onFavClick(item)\" \r\n          class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n          >\r\n        </button>\r\n      </section>\r\n    </div>\r\n  </section>\r\n</section>\r\n\r\n<!-- PORTRAIT -->\r\n<section class=\"aa-favs aa-favs-portrait\" *ngIf=\"showPortraitFavs\">\r\n  <h2 *ngIf=\"favsTarget.length\" class=\"width-100 flex-group flex-start flex-align-center\">\r\n    {{favsHeading}}\r\n    <span \r\n      class=\"\r\n      flex-group \r\n      flex-center \r\n      bg-aa-light-blue-15 \r\n      border-radius-50\r\n      width-1-25\r\n      height-1-25\r\n      margin-left-0-5\r\n      font-size-xsmall\"\r\n      >\r\n      <strong class=\"flex-group flex-center\">{{favsTarget.length}}</strong>\r\n    </span>\r\n  </h2>\r\n  <section class=\"flex-group flex-start\">\r\n    <div  \r\n      *ngFor=\"let item of favsTarget | orderBy:'favTitle'; let i = index\" \r\n      [class.fav-saved]=\"item.isFavourite\"\r\n      class=\"\r\n        position-relative\r\n        flex-group\r\n        flex-center\r\n        flex-column\r\n        margin-bottom-0-75\r\n        bg-aa-white-100\r\n        min-width-12\r\n        max-width-12\r\n        min-height-14\r\n        max-height-14\r\n        padding-1\r\n        box-shadow \r\n        bd-solid \r\n        bd-grey-10 \r\n        bd-1\"\r\n      >\r\n      <section \r\n        class=\"\r\n        flex-group \r\n        flex-align-center \r\n        position-absolute \r\n        top-0-5 \r\n        right-0-5 \r\n        margin-right-0\r\n        fav-controls\"\r\n      >\r\n        <div class=\"flag au width-1 height-1 margin-0\"></div>\r\n        <button \r\n          *ngIf=\"!disableFavsStar\"\r\n          (click)=\"onFavClick(item)\" \r\n          class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n          >\r\n        </button>\r\n      </section>\r\n      <div \r\n        class=\"\r\n        flex-none \r\n        width-3 \r\n        height-3 \r\n        flex-center \r\n        border-radius-50 \r\n        margin-right-0\r\n        {{item.favColour}}\"\r\n        >\r\n        <h4 class=\"margin-0\">{{(item.favLabel.length>3)? (item.favLabel | slice:0:3)+'...':(item.favLabel)}}</h4>\r\n      </div>\r\n      <div class=\"margin-right-0 margin-top-0-75\">\r\n        <a (click)=\"onAnchorClick($event)\" class=\"text-decoration-none cursor-pointer\">\r\n          <h2 class=\"margin-0 margin-bottom-0-5 aa-light-blue-100 text-align-center\">\r\n            {{(item.favTitle.length>25)? (item.favTitle | slice:0:25)+'...':(item.favTitle)}}\r\n          </h2>\r\n        </a>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineOne.length>23)? (item.favTextLineOne | slice:0:23)+'...':(item.favTextLineOne)}}\r\n        </p>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineTwo.length>23)? (item.favTextLineTwo | slice:0:23)+'...':(item.favTextLineTwo)}}\r\n        </p>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineThree.length>23)? (item.favTextLineThree | slice:0:23)+'...':(item.favTextLineThree)}}\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </section>\r\n \r\n  <hr *ngIf=\"favsTarget.length\" class=\"min-width-100 margin-bottom-0-75\" />\r\n\r\n  <section class=\"flex-group flex-start\">\r\n    <div  \r\n      *ngFor=\"let item of favsOrigin | orderBy:'favTitle'; let i = index\" \r\n      [class.fav-saved]=\"item.isFavourite\"\r\n      class=\"\r\n        position-relative\r\n        flex-group\r\n        flex-center\r\n        flex-column\r\n        margin-bottom-0-75\r\n        bg-aa-white-100\r\n        min-width-12\r\n        max-width-12\r\n        min-height-14\r\n        max-height-14\r\n        padding-1\r\n        box-shadow \r\n        bd-solid \r\n        bd-grey-10 \r\n        bd-1\"\r\n      >\r\n      <section \r\n        class=\"\r\n        flex-group \r\n        flex-align-center \r\n        position-absolute \r\n        top-0-5 \r\n        right-0-5 \r\n        margin-right-0\r\n        fav-controls\"\r\n      >\r\n        <div class=\"flag au width-1 height-1 margin-0\"></div>\r\n        <button \r\n        *ngIf=\"!disableFavsStar\"\r\n          (click)=\"onFavClick(item)\" \r\n          class=\"btn-fav material-icons-outlined margin-0 margin-left-0-25\"\r\n          >\r\n        </button>\r\n      </section>\r\n      <div \r\n        class=\"\r\n        flex-none \r\n        width-3 \r\n        height-3 \r\n        flex-center \r\n        border-radius-50 \r\n        margin-right-0\r\n        {{item.favColour}}\"\r\n        >\r\n        <h4 class=\"margin-0\">{{(item.favLabel.length>3)? (item.favLabel | slice:0:3)+'...':(item.favLabel)}}</h4>\r\n      </div>\r\n      <div class=\"margin-right-0 margin-top-0-75\">\r\n        <a (click)=\"onAnchorClick($event)\" class=\"text-decoration-none cursor-pointer\">\r\n          <h2 class=\"margin-0 margin-bottom-0-5 aa-light-blue-100 text-align-center\">\r\n            {{(item.favTitle.length>25)? (item.favTitle | slice:0:25)+'...':(item.favTitle)}}\r\n          </h2>\r\n        </a>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineOne.length>23)? (item.favTextLineOne | slice:0:23)+'...':(item.favTextLineOne)}}\r\n        </p>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineTwo.length>23)? (item.favTextLineTwo | slice:0:23)+'...':(item.favTextLineTwo)}}\r\n        </p>\r\n        <p class=\"small margin-0 text-align-center\">\r\n          {{(item.favTextLineThree.length>23)? (item.favTextLineThree | slice:0:23)+'...':(item.favTextLineThree)}}\r\n        </p>\r\n      </div>\r\n    </div>\r\n  </section>\r\n</section>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
     ];
     FavouritesComponent.ctorParameters = function () { return []; };
     FavouritesComponent.propDecorators = {
+        showLandscapeFavs: [{ type: i0.Input }],
+        showPortraitFavs: [{ type: i0.Input }],
+        anchorIsClicked: [{ type: i0.Input }],
+        disableFavsStar: [{ type: i0.Input }],
+        toggleFavourite: [{ type: i0.Input }],
+        favsHeading: [{ type: i0.Input }],
+        clickAnchor: [{ type: i0.Input }],
+        favLabel: [{ type: i0.Input }],
+        favTitle: [{ type: i0.Input }],
+        favTextLineOne: [{ type: i0.Input }],
+        favTextLineTwo: [{ type: i0.Input }],
+        favTextLineThree: [{ type: i0.Input }],
+        favColour: [{ type: i0.Input }],
+        favsOrigin: [{ type: i0.Input }],
+        favsTarget: [{ type: i0.Input }],
+        favsPortrait: [{ type: i0.Input }],
         isFavourite: [{ type: i0.Input }],
-        favouritesTitle: [{ type: i0.Input }],
-        favouritesText: [{ type: i0.Input }],
-        favClick: [{ type: i0.Output }],
-        anchorClick: [{ type: i0.Output }]
+        anchorClick: [{ type: i0.Output }],
+        favClick: [{ type: i0.Output }]
     };
 
     var FavouritesListComponent = /** @class */ (function () {
@@ -2032,7 +2156,7 @@
     OverlayComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-overlay',
-                    template: "<article \r\n  class=\"aa-overlay flex-center\" \r\n  *ngIf=\"showOverlay\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex, \r\n    'top' : topPos,\r\n    'right' : rightPos,\r\n    'bottom' : bottomPos,\r\n    'left' : leftPos\r\n  }\">\r\n  <div class=\"aa-overlay-container\" [ngStyle]=\"{'min-width' : minWidth}\">\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
+                    template: "<article \r\n  class=\"aa-overlay flex-center\" \r\n  *ngIf=\"showOverlay\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex\r\n  }\">\r\n  <div \r\n    class=\"aa-overlay-container\" \r\n    [ngStyle]=\"{\r\n      'min-width' : minWidth,\r\n      'max-width' : maxWidth,\r\n      'top' : topPos,\r\n      'right' : rightPos,\r\n      'bottom' : bottomPos,\r\n      'left' : leftPos\r\n    }\"\r\n    >\r\n    <ng-content select=\"[overlay-header]\"></ng-content>\r\n    <ng-content select=\"[overlay-content]\"></ng-content>\r\n  </div>\r\n</article>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -2045,7 +2169,8 @@
         rightPos: [{ type: i0.Input }],
         bottomPos: [{ type: i0.Input }],
         leftPos: [{ type: i0.Input }],
-        minWidth: [{ type: i0.Input }]
+        minWidth: [{ type: i0.Input }],
+        maxWidth: [{ type: i0.Input }]
     };
 
     var PopoverComponent = /** @class */ (function () {
@@ -2201,14 +2326,19 @@
 
     var TooltipComponent = /** @class */ (function () {
         function TooltipComponent() {
+            this.buttonClick = new i0.EventEmitter();
         }
+        TooltipComponent.prototype.onButtonClick = function (e) {
+            e.stopPropagation();
+            this.buttonClick.emit(e);
+        };
         TooltipComponent.prototype.ngOnInit = function () { };
         return TooltipComponent;
     }());
     TooltipComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tooltip',
-                    template: "<div class=\"flex-group\" [ngClass]=\"{ 'space-between' : includeLabel, 'flex-start' : includeLegend }\">\r\n  <label for=\"{{labelFor}}\" *ngIf=\"includeLabel\">{{labelName}}</label>\r\n  <legend class=\"margin-right-0-5\" *ngIf=\"includeLegend\">{{labelName}}</legend>\r\n  <div \r\n    class=\"aa-tooltip icon-info\" \r\n    [ngClass]=\"{\r\n      'is-success': isSuccess, \r\n      'is-info': isInfo, \r\n      'is-warning': isWarning, \r\n      'is-error': isError,\r\n      'custom-icon': customIcon\r\n    }\"\r\n    [ngStyle]=\"{'z-index' : zIndex}\"\r\n    >\r\n    \r\n    <div \r\n      *ngIf=\"customIcon\" \r\n      class=\"material-icons\"\r\n      [ngClass]=\"{\r\n        'is-success': isSuccess, \r\n        'is-info': isInfo, \r\n        'is-warning': isWarning, \r\n        'is-error': isError\r\n      }\">{{iconName}}</div>\r\n      \r\n    \r\n    <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width': setMinWidth+'rem', 'max-width': setMaxWidth+'rem'}\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                    template: "<div \r\n  class=\"flex-group\" \r\n  [ngStyle]=\"{ 'display': showAsButton ? 'block' : 'flex' }\"\r\n  [ngClass]=\"{ \r\n    'space-between' : includeLabel, \r\n    'flex-start' : includeLegend, \r\n    'show-as-button' : showAsButton,\r\n    'show-tooltip-on-hover' : showTooltipOnHover,\r\n    'show-tooltip-on-click' : showTooltipOnClick,\r\n    'tooltip-clicked' : tooltipClicked\r\n  }\">\r\n  <label for=\"{{labelFor}}\" *ngIf=\"includeLabel && !showAsButton\">{{labelName}}</label>\r\n  <legend class=\"margin-right-0-5\" *ngIf=\"includeLegend && !showAsButton\">{{labelName}}</legend>\r\n  <div \r\n    class=\"aa-tooltip icon-info\" \r\n    [ngClass]=\"{\r\n      'is-success' : isSuccess, \r\n      'is-info' : isInfo, \r\n      'is-warning' : isWarning, \r\n      'is-error' : isError,\r\n      'custom-icon' : customIcon,\r\n      'as-link': showAsAnchor\r\n    }\"\r\n    [ngStyle]=\"{'z-index' : zIndex}\"\r\n    >\r\n    \r\n    <div \r\n      *ngIf=\"customIcon && !showAsAnchor && !showAsButton\" \r\n      class=\"material-icons\"\r\n      [ngClass]=\"{\r\n        'is-success' : isSuccess, \r\n        'is-info' : isInfo, \r\n        'is-warning' : isWarning, \r\n        'is-error' : isError\r\n      }\"\r\n    >\r\n      {{iconName}}\r\n    </div>\r\n\r\n    <button \r\n      *ngIf=\"showAsButton && !showTooltipOnClick\"\r\n      class=\"show-tooltip-on-hover\"\r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\" \r\n      [class]=\"buttonClass\" \r\n      [disabled]=\"disabled\" \r\n      (click)=\"onButtonClick($event)\"\r\n    >\r\n      <span>{{buttonText}}</span>\r\n    </button>\r\n\r\n    <button \r\n      *ngIf=\"showAsButton && showTooltipOnClick\"\r\n      class=\"show-tooltip-on-hover\"\r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\" \r\n      [class]=\"buttonClass\" \r\n      [disabled]=\"disabled\" \r\n      (click)=\"onButtonClick($event); tooltipClicked=!tooltipClicked\"\r\n    >\r\n      <span *ngIf=\"!tooltipClicked\">{{buttonText}}</span>\r\n      <span *ngIf=\"tooltipClicked\">{{tooltipBtnText}}</span>\r\n    </button>\r\n\r\n    <a \r\n      *ngIf=\"showAsAnchor\" \r\n      class=\"cursor-pointer\"\r\n      [ngClass]=\"{'nowrap' : preventAnchorWrapping}\"\r\n      >\r\n      {{tooltipAnchor}}\r\n    </a>\r\n        \r\n    <div \r\n      class=\"feature-box {{xpos}} {{ypos}}\" \r\n      [ngStyle]=\"{\r\n        'min-width': setMinWidth+'rem', \r\n        'max-width': setMaxWidth+'rem'\r\n      }\"\r\n      >\r\n        <ng-content></ng-content>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
@@ -2228,7 +2358,20 @@
         customIcon: [{ type: i0.Input }],
         iconName: [{ type: i0.Input }],
         zIndex: [{ type: i0.Input }],
-        labelFor: [{ type: i0.Input }]
+        labelFor: [{ type: i0.Input }],
+        showAsAnchor: [{ type: i0.Input }],
+        tooltipAnchor: [{ type: i0.Input }],
+        preventAnchorWrapping: [{ type: i0.Input }],
+        showAsButton: [{ type: i0.Input }],
+        buttonText: [{ type: i0.Input }],
+        buttonId: [{ type: i0.Input }],
+        buttonClass: [{ type: i0.Input }],
+        disabled: [{ type: i0.Input }],
+        showTooltipOnClick: [{ type: i0.Input }],
+        showTooltipOnHover: [{ type: i0.Input }],
+        tooltipClicked: [{ type: i0.Input }],
+        tooltipBtnText: [{ type: i0.Input }],
+        buttonClick: [{ type: i0.Output }]
     };
 
     var UserFeedbackComponent = /** @class */ (function () {
@@ -2313,6 +2456,37 @@
         fixedPosition: [{ type: i0.Input }]
     };
 
+    var OrderByPipe = /** @class */ (function () {
+        function OrderByPipe() {
+        }
+        OrderByPipe.prototype.transform = function (array, field) {
+            array.sort(function (a, b) {
+                if (a[field] < b[field]) {
+                    return -1;
+                }
+                else if (a[field] > b[field]) {
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            });
+            return array;
+        };
+        return OrderByPipe;
+    }());
+    OrderByPipe.decorators = [
+        { type: i0.Injectable },
+        { type: i0.Pipe, args: [{
+                    name: 'orderBy'
+                },] }
+    ];
+    // TODO
+    // This pipe is currently used for the favourites component
+    // As it stands, the sorting only works on page refresh
+    // Will need to find a way to fix this so that sorting
+    // occurs when adding items with the onFavClick() method
+
     var WidgetsModule = /** @class */ (function () {
         function WidgetsModule() {
         }
@@ -2344,7 +2518,8 @@
                         ToastrItemComponent,
                         TooltipComponent,
                         UserFeedbackComponent,
-                        ListSelectableComponent
+                        ListSelectableComponent,
+                        OrderByPipe
                     ],
                     imports: [common.CommonModule, forms.FormsModule, forms.ReactiveFormsModule],
                     providers: [],
@@ -2372,7 +2547,8 @@
                         ToastrItemComponent,
                         TooltipComponent,
                         UserFeedbackComponent,
-                        ListSelectableComponent
+                        ListSelectableComponent,
+                        OrderByPipe
                     ],
                     entryComponents: []
                 },] }
@@ -2439,6 +2615,7 @@
     exports.CommentsComponent = CommentsComponent;
     exports.ContextMenuComponent = ContextMenuComponent;
     exports.ContextMenuItemComponent = ContextMenuItemComponent;
+    exports.CounterComponent = CounterComponent;
     exports.CustomSelectComponent = CustomSelectComponent;
     exports.DashboardContainerComponent = DashboardContainerComponent;
     exports.DashboardFavouritesComponent = DashboardFavouritesComponent;
@@ -2481,6 +2658,7 @@
     exports.TabNavigationHeaderContentDirective = TabNavigationHeaderContentDirective;
     exports.TabNavigationItemComponent = TabNavigationItemComponent;
     exports.TabNavigationSecondaryComponent = TabNavigationSecondaryComponent;
+    exports.TabNavigationSecondaryContentDirective = TabNavigationSecondaryContentDirective;
     exports.TabNavigationSecondaryItemComponent = TabNavigationSecondaryItemComponent;
     exports.TextareaAutoresizeDirective = TextareaAutoresizeDirective;
     exports.ToastrComponent = ToastrComponent;
@@ -2492,6 +2670,7 @@
     exports["ɵ0"] = ɵ0;
     exports["ɵa"] = DateFormatPipe;
     exports["ɵb"] = IconFilterPipe;
+    exports["ɵc"] = OrderByPipe;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

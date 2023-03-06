@@ -72,6 +72,15 @@
       </div>
     </fieldset>
 
+    <aa-button 
+      buttonClass="custom-icons orange" 
+      fieldClass="" 
+      buttonLabel="Custom icons"
+      buttonText="Custom icons" 
+      [customIcons]="true" 
+      buttonIcon="alarm" 
+    ></aa-button>
+
     <fieldset>
       <legend>Checkbox</legend>
       <div class="field checkbox">
@@ -81,6 +90,12 @@
         </label>
       </div>
     </fieldset>
+
+    <aa-button
+      [buttonClass]="'primary'"
+      [buttonLabel]="'Primary'"
+      [buttonText]="'Primary'"
+    ></aa-button>
 
     <aa-slider
       [sliderInline]="false"
@@ -163,8 +178,8 @@
       buttonClass="custom-icons red" 
       fieldClass="" 
       buttonId="buttonIdC" 
-      buttonLabel="Custom icons"
-      buttonText="Button large" 
+      buttonLabel="Button large"
+      buttonText="Button large - rarely used!" 
       [customIcons]="true" 
       buttonIcon="settings" 
     ></aa-button>
@@ -246,27 +261,69 @@
         <div></div>
       </div>
     </section>
-    <div>
-      <div class="alert-shield success">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield green">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield pending">Pending</div>
-    </div>
-    <div>
-      <div class="alert-shield risk-high">Risk high</div>
-    </div>
-    <div>
-      <div class="alert-shield risk-low-approved">Risk low approved</div>
-    </div>
-    <div>
-      <div class="alert-shield removed">Removed</div>
-    </div>
-    <div>
-      <div class="alert-shield import">Import from AD</div>
-    </div>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="success"
+      alertShieldText="Success"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="green"
+      alertShieldText="Success"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="pending"
+      alertShieldText="Pending"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="risk-high"
+      alertShieldText="Risk high"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="risk-low-approved"
+      alertShieldText="Risk low approved"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="removed"
+      alertShieldText="Removed"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="false"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="import"
+      alertShieldText="Import"
+    >
+    </aa-alert-shield>
   </div>
 
   <h2>Alert shields small</h2>
@@ -276,30 +333,69 @@
         <div></div>
       </div>
     </section>
-    <div>
-      <div class="alert-shield small success">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield small green">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield small red">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield small orange">Success</div>
-    </div>
-    <div>
-      <div class="alert-shield small pending">Pending</div>
-    </div>
-    <div>
-      <div class="alert-shield small risk-high">Risk high</div>
-    </div>
-    <div>
-      <div class="alert-shield small removed">Removed</div>
-    </div>
-    <div>
-      <div class="alert-shield small import">Import from AD</div>
-    </div>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="success"
+      alertShieldText="Success"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="green"
+      alertShieldText="Success"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="pending"
+      alertShieldText="Pending"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="risk-high"
+      alertShieldText="Risk high"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="risk-low-approved"
+      alertShieldText="Risk low approved"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="removed"
+      alertShieldText="Removed"
+    >
+    </aa-alert-shield>
+    <aa-alert-shield
+      [alertShieldSmall]="true"
+      [showTooltip]="false"
+      [hideLabel]="false"
+      minWidth="12rem"
+      alertShieldStatus="import"
+      alertShieldText="Import"
+    >
+    </aa-alert-shield>
   </div>
 
   <h2>Alerts</h2>

@@ -2,13 +2,19 @@
   class="aa-overlay flex-center" 
   *ngIf="showOverlay" 
   [ngStyle]="{
-    'z-index' : zIndex, 
-    'top' : topPos,
-    'right' : rightPos,
-    'bottom' : bottomPos,
-    'left' : leftPos
+    'z-index' : zIndex
   }">
-  <div class="aa-overlay-container" [ngStyle]="{'min-width' : minWidth}">
+  <div 
+    class="aa-overlay-container" 
+    [ngStyle]="{
+      'min-width' : minWidth,
+      'max-width' : maxWidth,
+      'top' : topPos,
+      'right' : rightPos,
+      'bottom' : bottomPos,
+      'left' : leftPos
+    }"
+    >
     <ng-content select="[overlay-header]"></ng-content>
     <ng-content select="[overlay-content]"></ng-content>
   </div>

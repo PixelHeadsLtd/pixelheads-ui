@@ -1,7 +1,7 @@
 @mixin button-blue {
   background-color: _colour(aa-blue-100);
   border-color: _colour(aa-blue-100);
-  color: _palette(white);
+  color: _colour(aa-white-100);
 }
 
 @mixin button-blue-hover {
@@ -64,6 +64,17 @@
   border-color: _palette(aa-green-100);
 }
 
+@mixin button-grey {
+  background-color: _colour(aa-grey-100);
+  border-color: _colour(aa-grey-100);
+  color: _colour(aa-white-100);
+}
+
+@mixin button-grey-hover {
+  background-color: _colour(aa-grey-50);
+  border-color: _colour(aa-grey-100);
+}
+
 @mixin button-red-outline {
   background-color: _colour(bg-button-white);
   border-color: _colour(aa-red-100);
@@ -78,7 +89,7 @@
 @mixin button-blue-outline {
   background-color: _colour(bg-button-white);
   border-color: _colour(aa-blue-100);
-  color: _colour(aa-blue-100);
+  color: _colour(btn-tertiary);
 }
 
 @mixin button-blue-outline-hover {
@@ -411,7 +422,7 @@
   font-family: _font(font-awesome);
   font-size: .75rem;
   right: 0;
-  top: .6rem;
+  top: .7rem;
   position: absolute;
 }
 

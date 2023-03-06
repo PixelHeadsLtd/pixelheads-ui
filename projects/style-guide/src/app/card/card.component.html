@@ -584,17 +584,17 @@
           <button
             (click)="cardView = true; listView = false; cardViewLarge = false"
             [ngClass]="{ active: cardView }"
-            class="grid-small transparent padding-0"
+            class="grid-small transparent padding-0 border-radius-0"
           ></button>
           <button
             (click)="cardViewLarge = true; listView = false; cardView = false"
             [ngClass]="{ active: cardViewLarge }"
-            class="grid-large transparent padding-0"
+            class="grid-large transparent padding-0 border-radius-0"
           ></button>
           <button
             (click)="cardView = false; listView = true; cardViewLarge = false"
             [ngClass]="{ active: listView }"
-            class="grid-list transparent padding-0"
+            class="grid-list transparent padding-0 border-radius-0"
           ></button>
         </nav>
         <section class="flex-group flex-start" *ngIf="cardView">

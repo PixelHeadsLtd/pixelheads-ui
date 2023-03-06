@@ -4,6 +4,12 @@ fieldset {
   margin: 1rem 0 0 0;
   padding: 0;
 
+  .field {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &.boxed.checkbox {
     margin-top: 0;
     margin-bottom: 0;

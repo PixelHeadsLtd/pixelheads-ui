@@ -12,6 +12,7 @@ import { TabNavigationItemComponent } from './tab-navigation-item/tab-navigation
 import { TabNavigationSecondaryComponent } from './tab-navigation-secondary/tab-navigation-secondary.component';
 import { TabNavigationSecondaryItemComponent } from './tab-navigation-secondary-item/tab-navigation-secondary-item.component';
 import { TabNavigationContentDirective } from './tab-navigation-item/tab-navigation-content.directive';
+import { TabNavigationSecondaryContentDirective } from './tab-navigation-secondary-item/tab-navigation-secondary-content.directive';
 import { TabNavigationHeaderContentDirective } from './tab-navigation-item/tab-navigation-header-content.directive';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TabNavigationHeaderContentDirective } from './tab-navigation-item/tab-n
     TabNavigationSecondaryComponent,
     TabNavigationSecondaryItemComponent,
     TabNavigationContentDirective,
+    TabNavigationSecondaryContentDirective,
     TabNavigationHeaderContentDirective
   ],
   imports: [CommonModule, RouterModule],
@@ -42,6 +44,7 @@ import { TabNavigationHeaderContentDirective } from './tab-navigation-item/tab-n
     TabNavigationSecondaryComponent,
     TabNavigationSecondaryItemComponent,
     TabNavigationContentDirective,
+    TabNavigationSecondaryContentDirective,
     TabNavigationHeaderContentDirective
   ]
 })

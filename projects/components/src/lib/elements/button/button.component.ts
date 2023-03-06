@@ -31,6 +31,8 @@ export class ButtonComponent implements OnInit {
   @Input() count: number;
   @Input() countColor: any;
   @Input() maxHeight: any;
+  @Input() showLabel: boolean;
+  @Input() customIconsRound: boolean;
 
   @Output() buttonClick = new EventEmitter<Event>();
 

@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class AlertShieldComponent implements OnInit {
 
   @Input() alertShieldStatus: boolean;
-  @Input() alertShieldText: boolean;
+  @Input() alertShieldText: string;
   @Input() showTooltip: boolean;
   @Input() showTooltipHeading: boolean;
   @Input() tooltipHeading: string;
@@ -18,6 +18,7 @@ export class AlertShieldComponent implements OnInit {
   @Input() noWrap: boolean;
   @Input() xpos: string;
   @Input() ypos: string;
+  @Input() hideLabel: boolean;
 
   @Input() customShield: boolean;
   @Input() iconName: string;

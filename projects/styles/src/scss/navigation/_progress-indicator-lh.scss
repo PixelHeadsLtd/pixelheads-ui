@@ -1,6 +1,7 @@
 .progress-indicator-lh {
   list-style: none;
   counter-reset: ol-counter;
+  padding: 0;
 
   li {
     font-size: _font(size-default);

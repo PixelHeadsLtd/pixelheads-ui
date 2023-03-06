@@ -29,16 +29,20 @@ header.page-header:not(header .blade) {
   a:not(.blade a),
   .material-icons,
   .material-icons-outlined {
-    &:not(.blade .material-icons, .app-name .material-icons, .aa-search .material-icons, button.material-icons) {
+    &:not(
+      .blade .material-icons, 
+      .app-name .material-icons, 
+      .aa-search .material-icons, 
+      button.material-icons
+      ) {
       color: _colour(header-text);
     }
   }
   
   nav {
-    .material-icons,
-    .material-icons-outlined {
+    .material-icons:not(.nav-icon, .clear-search),
+    .material-icons-outlined:not(.nav-icon, .clear-search) {
       font-size: _font(size-large);
-      display: block;
     }
     > ul {
       display: flex;
@@ -85,8 +89,8 @@ header.page-header:not(header .blade) {
   }
 
   button {
-    &.material-icons,
-    &.material-icons-outlined {
+    &.material-icons:not(.clear-search),
+    &.material-icons-outlined:not(.clear-search) {
       background-color: _colour(bg-search-input);
       color: _colour(search-input);
       width: 2rem;

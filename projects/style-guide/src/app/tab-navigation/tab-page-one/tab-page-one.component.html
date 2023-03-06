@@ -1,0 +1,161 @@
+<div class="content-container padding-top-0 poem">
+  <h2>Tab 1 content</h2>
+    <p>I caught snowflakes
+        on my fingertips
+        but they melted
+        to my dismay
+    </p>
+</div>
+
+<div class="blades-data">
+  <h3 class="boxed">Lets see some accordions - This h3 has class="boxed"</h3>
+  <aa-accordion
+  [disabled]="false"
+  (open)="showBodyOne = true"
+  [dragable]="false"
+  [showBody]="showBodyOne"
+  [clearPadding]="true"
+  accordionHeading="Bank account details"
+  accordionId="accordion01"
+  sectionId="section01"
+  [iconsEnabled]="true"
+  iconName="account_balance"
+  iconBgColor=""
+  customBgColor="bg-aa-blue-sky-100"
+  >
+   <ng-container>
+    <aa-accordion
+      [disabled]="false"
+      (open)="showNestedOne = true"
+      [dragable]="false"
+      [showBody]="showNestedOne"
+      accordionHeading="How should we address you?"
+      accordionId="accordion01"
+      sectionId="section01"
+      [iconsEnabled]="true"
+      iconBgColor=""
+    >
+        <div class="field boxed">
+          <label>First name</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label>Last name</label>
+          <input type="text"/>
+        </div>
+    </aa-accordion>
+    <aa-accordion
+      [disabled]="false"
+      (open)="showNestedTwo = true"
+      [dragable]="false"
+      [showBody]="showNestedTwo"
+      accordionHeading="How should we contact you?"
+      accordionId="accordion01"
+      sectionId="section01"
+      [iconsEnabled]="true"
+      iconBgColor=""
+    >
+        <div class="field boxed">
+          <label>Email</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label>Phone</label>
+          <input type="text"/>
+        </div>
+    </aa-accordion>
+    <aa-accordion
+      [disabled]="false"
+      (open)="showNestedThree = true"
+      [dragable]="false"
+      [showBody]="showNestedThree"
+      accordionHeading="What's your preferred language?"
+      accordionId="accordion01"
+      sectionId="section01"
+      [iconsEnabled]="true"
+      iconBgColor=""
+    >
+        <div class="field boxed">
+          <label>Language</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label>Country</label>
+          <input type="text"/>
+        </div>
+    </aa-accordion>
+   </ng-container>
+  </aa-accordion>
+  <aa-accordion
+  [disabled]="false"
+  (open)="showBodyTwo = true"
+  [dragable]="false"
+  [showBody]="showBodyTwo"
+  accordionHeading="Company management team"
+  accordionId="accordion01"
+  sectionId="section01"
+  [iconsEnabled]="true"
+  iconName="people"
+  iconBgColor=""
+  customBgColor="bg-aa-blue-sky-100"
+  >
+  <div header-custom>
+    <div class="alert-shield small info">Custom content</div>
+  </div>
+    <div class="field boxed">
+      <label>Comments</label>
+      <textarea></textarea>
+    </div>
+  </aa-accordion>
+  <aa-accordion
+  [disabled]="false"
+  (open)="showBodyThree = true"
+  [dragable]="false"
+  [showBody]="showBodyThree"
+  accordionHeading="Instructions for adding accordions"
+  accordionId="accordion01"
+  sectionId="section01"
+  [iconsEnabled]="true"
+  iconName="hearing"
+  iconBgColor=""
+  customBgColor="bg-aa-blue-sky-100"
+  >
+  <div class="field boxed">
+    <p>If you would like to use an accordion in your blade. Just add the 
+      <a class="cursor-pointer" routerLink="/accordion">standard accordion</a> like you would 
+      normally. For nested accordions, you will still need the boolean 
+      [iconsEnabled] but you won't need to add the iconName or iconBgColor
+      as these are modified in css.
+    </p>
+  </div>
+  </aa-accordion>
+  <aa-accordion
+  [disabled]="false"
+  (open)="showBodyFour = true"
+  [dragable]="false"
+  [showBody]="showBodyFour"
+  accordionHeading="Instructions for adding tabs"
+  accordionId="accordion01"
+  sectionId="section01"
+  [iconsEnabled]="true"
+  iconName="password"
+  iconBgColor=""
+  customBgColor="bg-aa-plum-100"
+  >
+  <div class="field boxed">
+    <h3>Standard blade</h3>
+    <p>
+      Please refer to the gist file. You have to make sure that the aa-tab-navigation component 
+      sits just above the blade-content wrapper. Then ensure that your router-outlet sits 
+      inside the blade-content wrapper. 
+    </p>
+    <h3>Custom blade</h3>
+    <p>
+      If adding tabs to the custom-blade, you will need to add an ng-container with the select name 
+      custom-blade-tabs just inside your custom-header and below your content for the custom-header. 
+      Then add your router-outlet inside the custom-content ng-container wrapper. Again please refer 
+      to the custom-blade gist file.
+    </p>
+  </div>
+  </aa-accordion>
+</div>

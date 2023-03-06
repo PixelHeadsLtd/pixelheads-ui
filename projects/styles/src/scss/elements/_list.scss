@@ -1,9 +1,12 @@
+ul:not(nav ul, ul.aa-stepper-header) {padding: 0 0 0 1rem}
+ol:not(nav ul, ul.aa-stepper-header) {padding: 0 0 0 1.25rem}
+
 ul,
 ol {
   margin: 0;
-  padding: 0;
   list-style-position: outside;
   font-size: _font(size-default);
+  line-height: 1.35rem;
 
   &.highlight {
     li:before {
@@ -51,6 +54,7 @@ ol {
 .arrow {
   // use .arrow
   list-style: none;
+  padding-left: 0;
 
   li {
     &:before {

@@ -57,3 +57,11 @@ strong {
 pre { 
   font-family: monospace; 
 }
+
+.font-size-small {
+  font-size: _font(size-small);
+}
+
+.font-size-xsmall {
+  font-size: _font(size-xsmall);
+}

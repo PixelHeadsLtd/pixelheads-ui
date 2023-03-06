@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 export declare class AlertShieldComponent implements OnInit {
     alertShieldStatus: boolean;
-    alertShieldText: boolean;
+    alertShieldText: string;
     showTooltip: boolean;
     showTooltipHeading: boolean;
     tooltipHeading: string;
@@ -10,6 +10,7 @@ export declare class AlertShieldComponent implements OnInit {
     noWrap: boolean;
     xpos: string;
     ypos: string;
+    hideLabel: boolean;
     customShield: boolean;
     iconName: string;
     iconOutlined: boolean;
