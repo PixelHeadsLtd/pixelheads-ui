@@ -25,5 +25,5 @@ export class EllipsisContextMenuComponent implements ICellRendererAngularComp {
   refresh(): boolean {
     return false;
   }
-  
+
 }

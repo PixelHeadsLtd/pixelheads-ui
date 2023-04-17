@@ -31,12 +31,60 @@
 
 // START AG-GRID CUSTOM STYLING
 .ag-theme-balham {
+
+  .ag-popup-child {
+    color: _colour(aa-grey-100)!important;
+  }
+  .ag-select-agg-func-virtual-list-item {
+    &:hover {
+      background-color: _colour(trans-light-blue-10-to-blue-dark)!important;
+    }
+  }
+  .ag-side-bar {
+    background-color: _colour(aa-white-100)!important;
+    .ag-side-buttons {
+      .ag-side-button {
+        button {
+          color: _colour(aa-grey-100)!important;
+        }
+        &.ag-selected {
+          button {
+            background-color: _colour(aa-white-100)!important;
+          }
+        }
+      }
+    }
+  }
+  .ag-tool-panel-wrapper {
+    background-color: _colour(aa-white-100)!important;
+    color: _colour(aa-grey-100)!important;
+    .ag-drag-handle {
+      color: _colour(aa-grey-100)!important;
+    }
+    .ag-select-agg-func-virtual-list-item,
+    .ag-column-select-column-label,
+    .ag-column-drop-vertical-icon,
+    .ag-column-drop-vertical-cell,
+    .ag-column-drop-vertical-title,
+    .ag-group-title-bar,
+    .ag-filter-toolpanel-group-title-bar-icon {
+      background-color: _colour(aa-white-100)!important;
+      color: _colour(aa-grey-100)!important;
+    }
+  }
+
+  .ag-tooltip {
+    background-color: _colour(aa-white-100)!important;
+    color: _colour(aa-grey-100)!important;
+    border-radius: .25rem!important;
+  }
+
   // custom tooltip sits at top level within ag-grid wrapper
   .custom-tooltip {
-    background-color: _colour(bg-primary);
+    background-color: _colour(aa-white-100);
     padding: .5rem;
-    border-radius: .5rem;
-    color: _colour(body-text);
+    border-radius: .25rem;
+    color: _colour(aa-grey-100);
 
     p {
       margin: 0 0 .25rem 0;
@@ -45,7 +93,7 @@
       }
     }
   }
-  // Styling for ag-grid context-menu
+  // Styling for ag-grid context-menuborder
   &.ag-popup {
     .ag-menu {
       .ag-menu-list {
@@ -56,52 +104,55 @@
 
   .ag-popup-child:not(.ag-tooltip-custom) {
     border: none!important;
-    background-color: none!important;
+    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+    border: 1px solid _colour(aa-grey-5);
+    background: _colour(aa-white-100);
+    border-radius: .25rem;
   }
   // wrappers
   .ag-root-wrapper {border: none;}
-  .ag-root {background-color: _colour(bg-ag-grid);}
+  .ag-root {background-color: _colour(aa-white-100);}
   .ag-column-drop-wrapper {
     .ag-column-drop {
-      background-color: _colour(bg-ag-grid);
-      border-bottom-color: _colour(border-ag-grid);
+      background-color: _colour(aa-white-100);
+      border-bottom-color: _colour(aa-light-blue-30);
       .ag-icon {
-        color: _colour(ag-grid-body);
+        color: _colour(aa-grey-100);
       }
       .ag-column-drop-cell {
-        background-color: _colour(bg-ag-grid-drop);
-        color: _colour(ag-grid-body);
+        background-color: _colour(aa-white-100);
+        color: _colour(aa-grey-100);
       }
     }
   }
 
   // ------------------ SHARED ACROSS HEADER & ROWS -------------------
   .link-grid-primary {
-    color: _colour(link);
+    color: _colour(trans-light-blue-to-blue-light);
   }
   .ag-checkbox-input-wrapper,
   .ag-radio-button-input-wrapper {
     &:after {
-      background-color: _colour(bg-primary)!important;
+      background-color: _colour(aa-white-100)!important;
     }
     
     &.ag-checked {
       &:after {
-        color: _colour(link);
+        color: _colour(trans-light-blue-to-blue-light);
       }
     }
   }
   // ---------------------------- HEADER ------------------------------
   .ag-header {
-    color: _colour(body-text);
+    color: _colour(aa-grey-100);
     font-family: _font(family-main);
     font-size: _font(size-default);
     font-weight: _font(weight-regular);
-    background-color: _colour(bg-ag-grid);
-    border-bottom: solid 1px _colour(border-primary);
+    background-color: _colour(aa-white-100);
+    border-bottom: solid 1px _colour(aa-grey-25);
 
     .ag-header-row {
-      color: _colour(body-text);
+      color: _colour(aa-grey-100);
 
       .ag-header-group-cell {
         &:first-child {
@@ -119,10 +170,10 @@
         padding-left:$cell-horizontal-padding-first;
       }
       .ag-header-icon {
-        color: _colour(body-text);
+        color: _colour(aa-grey-100);
       }
       .ag-header-cell-text {
-        color: _colour(body-text);
+        color: _colour(aa-grey-100);
         font-size: _font(size-default);
         font-weight: _font(weight-bold);
       }
@@ -131,28 +182,52 @@
 
   // ------------------------ MAIN CONTENT ROWS -------------------------
   .ag-row {
-    color: _colour(body-text);
+    color: _colour(aa-grey-100);
     font-family: _font(family-main);
     font-size: _font(size-default);
     font-weight: _font(weight-regular);
-    border-color: _colour(border-ag-grid);
-    background-color: _colour(bg-ag-grid);
+    border-color: _colour(aa-light-blue-30);
+    background-color: _colour(aa-white-100);
     border-width: 1px;
     min-height: 2.25rem!important;
 
+    &.ag-row-selected {
+      &:before {
+        background-color: _colour(aa-grey-10)!important;
+      }
+    }
+
     &.ag-row-hover, 
     &.ag-row-focus {
-        background-color: _colour(bg-ag-grid-hover);
+        background-color: _colour(aa-grey-5);
+
+        &.ag-row-selected {
+          &:before {
+            background-color: _colour(aa-grey-10)!important;
+            background-image: none!important
+          }
+        }
     }
 
     .ag-cell {
+      display: flex;
+      align-items: center;
       padding-left: calc(#{$cell-horizontal-padding}) !important;
       padding-right: calc(#{$cell-horizontal-padding}) !important;
-      line-height: 2.25rem!important;
       border: 1px solid transparent;
+      line-height: 2.25rem;
+      > div,
+      > section,
+      > button,
+      > article,
+      > input,
+      > p,
+      > span {
+        line-height: initial;
+      }
 
       button.btn-ellipsis {
-        margin-top: 0.3rem;
+        margin-top: .6rem;
         min-width: 1.5rem !important;
         max-width: 1.5rem !important;
         height: 1.5rem !important;
@@ -171,7 +246,7 @@
       &.ag-cell-inline-editing {
         padding: 0!important;
         border: 1px solid _colour(aa-light-blue-100)!important;
-        background: _colour(bg);
+        background: _colour(aa-grey-2);
         .ag-cell-edit-wrapper {
           .ag-cell-editor {
             .ag-input-field-input {
@@ -265,32 +340,47 @@
 
       .ag-select {
         .ag-picker-field-wrapper {
-          background-color: _colour(bg-ag-grid)!important;
-          color: _colour(body-text)!important;
+          background-color: _colour(aa-white-100)!important;
+          color: _colour(aa-grey-100)!important;
         }
       }
       
       .ag-icon {
-        color: _colour(body-text)!important;
+        color: _colour(aa-grey-100)!important;
       }
-      
+
+      // Force ALL alert-shields small by default
       .alert-shield {
-        line-height: 1rem;
-        float: left;
-        margin-top: .158rem;
+        height: 1.5rem;
         background-size: 1rem;
         font-size: _font(size-small);
         padding: .275rem .75rem .275rem 1.75rem;
+        line-height: initial;
 
-        &.small {
-          line-height: 1rem;
-        }
-        
         &.green,
         &.blue,
         &.orange,
         &.red {
           padding-left: .75rem;
+        }
+      }
+
+      .custom-alert-shield {
+        .custom-alert-shield-container {
+          font-size: _font(size-small);
+          height: 1.5rem;
+          padding: 0 0 0 .15rem;
+      
+          span {
+            font-size: _font(size-small);
+            padding-right: .75rem
+          }
+      
+          .material-icons,
+          .material-icons-outlined {
+            font-size: _font(size-medium);
+            margin-right: .15rem;
+          }
         }
       }
 
@@ -308,7 +398,6 @@
       }
 
       button {
-        float: left;
         margin-top: .158rem;
         padding-top: .4rem;
         padding-bottom: .4rem;
@@ -349,33 +438,33 @@
 
   // header menus - sits outside header at top level
   .ag-list-item {
-    background-color: _colour(bg-ag-grid);
-    color: _colour(body-text)!important;
+    background-color: _colour(aa-white-100);
+    color: _colour(aa-grey-100)!important;
     &.ag-active-item {
-      background-color: _colour(bg-ag-grid-hover)!important;
+      background-color: _colour(aa-grey-5)!important;
     }
   }
 
   .ag-menu, 
   .ag-menu-header, 
   .ag-tab-selected {
-    background-color: _colour(bg-ag-grid);
-    border-color: _colour(border-ag-grid);
-    color: _colour(body-text);
+    background-color: _colour(aa-white-100);
+    border-color: _colour(aa-light-blue-30);
+    color: _colour(aa-grey-100);
   }
 
   .ag-menu-separator {
     height: 3px!important;
     .ag-menu-separator-part {
       &:after {
-        border-color: _colour(border-ag-grid);
+        border-color: _colour(aa-light-blue-30);
       }
     }
   }
 
   .ag-menu-option-active, .ag-compact-menu-option-active {
-    background-color: _colour(bg-ag-grid-hover);
-    color: _colour(body-text);
+    background-color: _colour(aa-grey-5);
+    color: _colour(aa-grey-100);
   }
 
   .ag-menu-list {
@@ -386,9 +475,9 @@
   .ag-paging-panel {
     padding: 1.5rem 0;
     justify-content: left;
-    background-color: _colour(bg-ag-grid);
-    color: _colour(body-text);
-    border-color: _colour(border-ag-grid);
+    background-color: _colour(aa-white-100);
+    color: _colour(aa-grey-100);
+    border-color: _colour(aa-light-blue-30);
     
     .ag-paging-button {
       padding: .25rem .5rem;

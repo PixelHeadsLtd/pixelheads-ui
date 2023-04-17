@@ -1,5 +1,5 @@
 header.page-header:not(header .blade) {
-  background-color: _colour(bg-header);
+  background-color: _colour(trans-blue-to-grey);
   box-sizing: border-box;
   padding: 0 1.5rem;
   position: fixed;
@@ -33,9 +33,10 @@ header.page-header:not(header .blade) {
       .blade .material-icons, 
       .app-name .material-icons, 
       .aa-search .material-icons, 
+      .aa-search-dl .material-icons, 
       button.material-icons
       ) {
-      color: _colour(header-text);
+      color: _palette(aa-white-100);
     }
   }
   
@@ -73,7 +74,7 @@ header.page-header:not(header .blade) {
           width: 2rem;
           height: 2rem;
           > div {
-              border: 1px solid _colour(border-header-avatar);
+              border: 1px solid _colour(aa-light-blue-100);
           }
         }
       }
@@ -84,15 +85,11 @@ header.page-header:not(header .blade) {
     box-sizing: border-box;
   }
 
-  .aa-logo {
-    color: _colour(header-text);
-  }
-
   button {
     &.material-icons:not(.clear-search),
     &.material-icons-outlined:not(.clear-search) {
-      background-color: _colour(bg-search-input);
-      color: _colour(search-input);
+      background-color: _colour(aa-light-blue-100);
+      color: _colour(aa-white-100);
       width: 2rem;
       height: 2rem;
     }
@@ -104,7 +101,7 @@ header.page-header:not(header .blade) {
   max-height: 3.5rem;
   z-index: 0;
   padding: .75rem 1.5rem;
-  background-color: _colour(secondary);
+  background-color: _colour(aa-light-blue-100);
   color: _palette(aa-white-100);
   h1, h2, h3, h4 {
     color: _palette(aa-white-100);
@@ -122,7 +119,7 @@ header.page-header:not(header .blade) {
       width: 7rem;
       height: 7rem;
       > div {
-        border: 1px solid _colour(border-primary);
+        border: 1px solid _colour(aa-grey-25);
       }
     }
   }

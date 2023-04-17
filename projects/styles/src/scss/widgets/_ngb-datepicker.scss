@@ -10,7 +10,7 @@ ngb-datepicker.dropdown-menu,
     color: _palette(aa-grey-100);
     text-align: left;
     list-style: none;
-    background-color: _colour(bg-ngb-datepicker-body);
+    background-color: _colour(aa-grey-2);
     background-clip: padding-box;
     border-radius: .25rem;
     box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
@@ -19,7 +19,7 @@ ngb-datepicker.dropdown-menu,
     
     // START HEADER STYLES
     .ngb-dp-header {
-      background-color: _colour(bg-ngb-datepicker-head);
+      background-color: _colour(aa-grey-5);
       border-bottom: 0;
       border-radius: .25rem .25rem 0 0;
       padding-top: .25rem;
@@ -85,7 +85,7 @@ ngb-datepicker.dropdown-menu,
           }
           
           .custom-select {
-            background-color: _colour(bg);
+            background-color: _colour(aa-grey-2);
             flex: 1 1 auto;
             font-size: .875rem;
             height: 1.85rem;
@@ -102,7 +102,7 @@ ngb-datepicker.dropdown-menu,
             line-height: 1.5;
             color: _colour(aa-grey-50);
             vertical-align: middle;
-            border: 1px solid _colour(bg-ngb-datepicker-head);
+            border: 1px solid _colour(aa-grey-5);
             -webkit-appearance: none;
             min-height: 2.1rem;
           }
@@ -124,11 +124,11 @@ ngb-datepicker.dropdown-menu,
       display: flex;
 
       .text-white {
-        color: _colour(body-text)!important;
+        color: _colour(aa-grey-100)!important;
       }
 
       .btn-light {
-        color: _colour(body-text);
+        color: _colour(aa-grey-100);
       }
       
       // IF MONTHS
@@ -171,14 +171,14 @@ ngb-datepicker.dropdown-menu,
         }
         
         .ngb-dp-weekdays {
-          background-color: _colour(bg-ngb-datepicker-head);
+          background-color: _colour(aa-grey-5);
           border-radius: 0;
         }
         
         .ngb-dp-weekday {
           height: 2rem;
           width: 2rem;
-          color: _colour(body-text)!important;
+          color: _colour(aa-grey-100)!important;
           font-style: italic;
           line-height: 2rem;
           text-align: center;

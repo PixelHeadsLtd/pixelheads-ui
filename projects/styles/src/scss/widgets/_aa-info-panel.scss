@@ -9,8 +9,8 @@ aa-info-panel {
   .info-panel {
       .foreground {
         position: relative;
-        border: 2px solid _colour(border-primary);
-        background-color: _colour(bg-primary);
+        border: 2px solid _colour(aa-grey-25);
+        background-color: _colour(aa-white-100);
         height: 100%;
       }
       
@@ -91,7 +91,7 @@ aa-info-panel {
               &.material-icons,
               &.material-icons-outlined {
                   &:focus, &:hover {
-                    background-color: _colour(info-panel-green);
+                    background-color: _colour(aa-green-15);
                   }
               }
           }
@@ -106,7 +106,7 @@ aa-info-panel {
               &.material-icons,
               &.material-icons-outlined {
                   &:focus, &:hover {
-                    background-color: _colour(info-panel-orange);
+                    background-color: _colour(aa-orange-10);
                   }
               }
           }
@@ -125,7 +125,7 @@ aa-info-panel {
               &.material-icons,
               &.material-icons-outlined {
                   &:focus, &:hover {
-                    background-color: _colour(info-panel-red);
+                    background-color: _colour(aa-red-10);
                   }
               }
           }
@@ -140,7 +140,7 @@ aa-info-panel {
               &.material-icons,
               &.material-icons-outlined {
                   &:focus, &:hover {
-                    background-color: _colour(info-panel-light-blue);
+                    background-color: _colour(aa-light-blue-10);
                   }
               }
           }
@@ -155,7 +155,7 @@ aa-info-panel {
               &.material-icons,
               &.material-icons-outlined {
                   &:focus, &:hover {
-                    background-color: _colour(info-panel-light-blue);
+                    background-color: _colour(aa-light-blue-10);
                   }
               }
           }
@@ -230,7 +230,7 @@ aa-info-panel {
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: _colour(bg-primary);
+      background-color: _colour(aa-white-100);
     }
   }
   

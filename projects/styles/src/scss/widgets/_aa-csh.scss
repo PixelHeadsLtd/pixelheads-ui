@@ -117,7 +117,7 @@
                 display: none;
                 border-left: none;
                 border-right: none;
-                border-color: _colour(border-primary);
+                border-color: _colour(aa-grey-25);
         
                 .ql-formats {
                     margin-right: 0;
@@ -132,16 +132,16 @@
                     .ql-header.ql-picker {
                         &.ql-expanded {
                             .ql-picker-label {
-                                border-color: _colour(border-primary);
+                                border-color: _colour(aa-grey-25);
                             }
                         }
                         .ql-picker-label {
-                            color: _colour(body-text);
+                            color: _colour(aa-grey-100);
                         }
                         .ql-picker-options {
-                            background-color: _colour(bg-primary);
-                            border-color: _colour(border-primary);
-                            color: _colour(body-text);
+                            background-color: _colour(aa-white-100);
+                            border-color: _colour(aa-grey-25);
+                            color: _colour(aa-grey-100);
     
                             .ql-picker-item {
                                 &:hover {
@@ -158,10 +158,10 @@
     
                     svg {
                         .ql-stroke {
-                            stroke: _colour(body-text);
+                            stroke: _colour(aa-grey-100);
                         }
                         .ql-fill {
-                            fill: _colour(body-text);
+                            fill: _colour(aa-grey-100);
                         }
                     }
                 }
@@ -170,7 +170,7 @@
             .ql-container {
                 border-left: none;
                 border-right: none;
-                border-color: _colour(border-primary);
+                border-color: _colour(aa-grey-25);
     
                 .ql-editor {
                     -webkit-user-modify: read-only;
@@ -178,9 +178,9 @@
             }
         
             .ql-tooltip {
-                background-color: _colour(bg-primary);
-                border-color: _colour(border-primary);
-                color: _colour(body-text);
+                background-color: _colour(aa-white-100);
+                border-color: _colour(aa-grey-25);
+                color: _colour(aa-grey-100);
                 left: .75rem!important;
                 input {width: auto}
             }

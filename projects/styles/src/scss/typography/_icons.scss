@@ -1065,11 +1065,11 @@ aa-dashboard-favourites {
   background-image: url("#{$icon-path}/icon-time.svg");
 }
 
-.face-very-dissatisfied-blk {background-image: url("#{$icon-path}/face-very-dissatisfied-blk.svg");}
-.face-dissatisfied-blk {background-image: url("#{$icon-path}/face-dissatisfied-blk.svg")}
-.face-neutral-blk {background-image: url("#{$icon-path}/face-neutral-blk.svg")}
-.face-satisfied-blk {background-image: url("#{$icon-path}/face-satisfied-blk.svg")}
-.face-very-satisfied-blk {background-image: url("#{$icon-path}/face-very-satisfied-blk.svg")}
+.face-very-dissatisfied-blk {@include face-very-dissatisfied-blk}
+.face-dissatisfied-blk {@include face-dissatisfied-blk}
+.face-neutral-blk {@include face-neutral-blk}
+.face-satisfied-blk {@include face-satisfied-blk}
+.face-very-satisfied-blk {@include face-very-satisfied-blk}
 
 .face-very-dissatisfied {background-image: url("#{$icon-path}/face-very-dissatisfied.svg");}
 .face-dissatisfied {background-image: url("#{$icon-path}/face-dissatisfied.svg")}

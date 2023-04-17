@@ -1,21 +1,38 @@
 .actions-summary {
-    padding: .75rem 0 0 0;
+    padding: .75rem 0;
     overflow: hidden;
     width: fit-content;
     border-width: 2px;
     border-style: solid;
-    border-color: _colour(border-feature-box);
+    border-color: _colour(aa-light-blue-15);
     border-radius: .5rem;
-    background-color: _colour(bg-feature-box);
+    background-color: _colour(aa-white-100);
 
-    // hack to hide double right border when wrapping
-    aa-actions-summary {
-        margin-right: -3px;
-        margin-left: 3px;
+    strong {
+        color: _colour(trans-blue-to-white);
     }
 
-    > * {
-        margin-right: 0;
+    &.flex-column {
+        padding: 1rem .75rem .75rem;
+        section {
+            margin: 0 0 .75rem 0;
+            padding: 0 0 .25rem 0;
+            &:last-child {
+                margin: 0;
+                padding: 0;
+            }
+            &:not(:last-child) {
+                border-bottom: 2px solid _colour(aa-light-blue-15);
+            }
+        }
+    }
+
+    section {
+        padding: 0 .75rem;
+        margin: 0;
+        &:not(:last-child, .flex-column section) {
+            border-right: 2px solid _colour(aa-light-blue-15);
+        }
     }
 
     .default {

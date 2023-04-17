@@ -6,22 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordion-fancy.component.scss']
 })
 export class AccordionFancyComponent implements OnInit {
-  
-  showMore: boolean;
-  isFavourite: boolean = false;
-  
+
   constructor() { }
 
+  showMore: boolean;
+  isFavourite = false;
+
+  toggleBlade: boolean;
+
   onAnchorClick() {
-    console.log("You clicked the anchor")
+    console.log('You clicked the anchor');
   }
 
   onFavClick(toggleFav: boolean) {
     this.isFavourite = toggleFav;
-    console.log("Favourite selected " + this.isFavourite)
+    console.log('Favourite selected ' + this.isFavourite);
   }
-  
-  toggleBlade: boolean; 
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

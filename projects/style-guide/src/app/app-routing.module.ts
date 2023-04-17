@@ -26,6 +26,7 @@ import {InputTextareaComponent} from './input-textarea/input-textarea.component'
 import {BladeComponent} from './blade/blade.component';
 import {BladeBottomComponent} from './blade-bottom/blade-bottom.component';
 import {BladeTopComponent} from './blade-top/blade-top.component';
+import {CustomWrapperComponent} from './custom-wrapper/custom-wrapper.component';
 import {FilterComponent} from './filter/filter.component';
 import {FlexComponent} from './flex/flex.component';
 import {FooterComponent} from './footer/footer.component';
@@ -40,12 +41,14 @@ import {ProgressIndicatorLhComponent} from './progress-indicator-lh/progress-ind
 import {StepperComponent} from './stepper/stepper.component'; // STEPPER NOT YET RELEASED
 import {TreeMenuComponent} from './tree-menu/tree-menu.component';
 import {TabNavigationComponent} from './tab-navigation/tab-navigation.component';
-import {TabPageOneComponent} from './tab-navigation/tab-page-one/tab-page-one.component';
-import {TabPageTwoComponent} from './tab-navigation/tab-page-two/tab-page-two.component';
-import {TabPageThreeComponent} from './tab-navigation/tab-page-three/tab-page-three.component';
 import {TabSubPageOneComponent} from './tab-navigation/tab-sub-page-one/tab-sub-page-one.component';
 import {TabSubPageTwoComponent} from './tab-navigation/tab-sub-page-two/tab-sub-page-two.component';
 import {TabSubPageThreeComponent} from './tab-navigation/tab-sub-page-three/tab-sub-page-three.component';
+// Used for Tabs and Blades
+import {TabPageOneComponent} from './tab-navigation/tab-page-one/tab-page-one.component';
+import {TabPageTwoComponent} from './tab-navigation/tab-page-two/tab-page-two.component';
+import {TabPageThreeComponent} from './tab-navigation/tab-page-three/tab-page-three.component';
+import {TabPageFourComponent} from './tab-navigation/tab-page-four/tab-page-four.component';
 
 // Patterns
 import {AlertsComponent} from './alerts/alerts.component';
@@ -119,7 +122,8 @@ const routes: Routes = [
   { path: 'blade', component: BladeComponent, children: [
     { path: 'tab-page-one', component: TabPageOneComponent },
     { path: 'tab-page-two', component: TabPageTwoComponent },
-    { path: 'tab-page-three', component: TabPageThreeComponent }
+    { path: 'tab-page-three', component: TabPageThreeComponent },
+    { path: 'tab-page-four', component: TabPageFourComponent }
   ] },
   { path: 'blade-bottom', component: BladeBottomComponent },
   { path: 'blade-top', component: BladeTopComponent },
@@ -134,6 +138,7 @@ const routes: Routes = [
   { path: 'checkbox', component: CheckboxComponent },
   { path: 'colours', component: ColoursComponent },
   { path: 'context-menu', component: ContextMenuComponent },
+  { path: 'custom-wrapper', component: CustomWrapperComponent },
   { path: 'dashboard-favourites', component: FavouritesComponent },
   { path: 'editorial-content', component: EditorialComponent },
   { path: 'field', component: FieldComponent },

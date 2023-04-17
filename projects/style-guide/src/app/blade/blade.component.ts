@@ -71,6 +71,14 @@ export class BladeComponent implements OnInit {
       enableCount: false,
       tabCount: null
     },
+    {
+      tabId: 'tabFour',
+      name: 'User card',
+      routerLink: ['tab-page-four'],
+      tabDisabled: false,
+      enableCount: false,
+      tabCount: null
+    },
   ];
 
   bladeIsOpen(open: boolean) {

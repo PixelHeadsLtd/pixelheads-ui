@@ -43,7 +43,7 @@ button {
   }
 }
 
-button:not(.btn-fav, .collapser) { // .collapser in the core left nav
+button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button) {
   position: relative;
   border-radius: 1.5rem;
   border-width: 1px;
@@ -56,10 +56,10 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
   line-height: 1.15rem;
   padding: .425rem .75rem .425rem .75rem;
 
-  &:focus:not(.accordion-trigger) {
+  &:focus:not(.accordion-trigger, .grid-large, .grid-list, .grid-small) {
     outline: none;
-    border: 1px solid _colour(highlight-input);
-    box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+    border: 1px solid _colour(aa-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -113,13 +113,14 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
     }
     
     &.small {
-      padding: .25rem .75rem .25rem .25rem;
+      padding: .25rem .75rem .25rem .7rem;
       .material-icons,
       .material-icons-outlined {
-        font-size: _font(size-small);
+        font-size: _font(size-regular);
         line-height: .75rem;
-        width: .75rem;
+        max-width: 1rem;
         left: .5rem;
+        text-align: left;
       }
     }
     .material-icons,
@@ -187,7 +188,7 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
       min-width: 1.5rem;
       min-height: 1.5rem;
       font-size: _font(size-default);
-      line-height: 1.25rem;
+      line-height: 1.55rem;
     }
     
     &.approve {
@@ -214,13 +215,13 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
 
   &.button-small,
   &.small {
-    padding: 0.25rem 0.5rem;
-    font-size: _font(size-xsmall);
+    padding: .25rem .75rem;
+    font-size: _font(size-small);
     min-width: auto;
-    min-height: 1.5rem;
+    min-height: 1.75rem;
     line-height: .75rem;
     &:before {
-      font-size: 1rem!important;
+      font-size: .75rem!important;
     }
   }
 
@@ -301,7 +302,7 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
   &.transparent {
     border-color: transparent;
     background-color: transparent;
-    color: _colour(body-text);
+    color: _colour(aa-grey-100);
   }
   &.cancel {
     @include button-white;
@@ -473,7 +474,7 @@ button:not(.btn-fav, .collapser) { // .collapser in the core left nav
   &.icon-cog {
     // deprecated - use .settings
     color: _colour(white);
-    background-color: _colour(secondary);
+    background-color: _colour(aa-light-blue-100);
     font-size: 1.25rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -576,7 +577,7 @@ button {
     cursor: pointer;
     padding: 1rem .5rem 1rem .75rem;
     border-radius: .25rem;
-    border: 1px solid _colour(border-box);
+    border: 1px solid _colour(aa-grey-10);
 
     .btn-enriched-toolbar {
       position: absolute;
@@ -639,7 +640,7 @@ button {
   button {
     &.material-icons,
     &.material-icons-outlined {
-      color: _colour(body-text);
+      color: _colour(aa-grey-100);
     }
   }
 }
@@ -691,7 +692,7 @@ table:not(.table-feature, .table-feature *) {
     overflow: auto;
     left: calc(100% - 2.1rem);
     bottom: 100%;
-    background-color: _colour(bg);
+    background-color: _colour(aa-grey-2);
     button {
       border: none;
       border-radius: 0;
@@ -708,7 +709,7 @@ table:not(.table-feature, .table-feature *) {
         box-shadow: none;
       }
       &:hover {
-        background-color: _colour(lh-hover-bg);
+        background-color: _colour(aa-light-blue-10);
       }
       .material-icons,
       .material-icons-outlined {

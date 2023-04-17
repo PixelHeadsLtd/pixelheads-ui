@@ -66,7 +66,7 @@ aa-dashboard-favourites {
     top: 5rem;
     right: auto;
     width: 11rem;
-    background-color: _colour(bg);
+    background-color: _colour(aa-grey-2);
     box-shadow: 0 0 12px _colour(box-shadow);
     padding: 0.75rem 0.75rem 0.75rem;
     opacity: 0;
@@ -78,19 +78,18 @@ aa-dashboard-favourites {
     top: 3.75rem;
     opacity: 1;
     visibility: visible;
-    background-color: _colour(bg-favourites);
+    background-color: _colour(aa-white-100);
   }
 
   &:hover {
-    background-color: _colour(bg-favourites);
+    background-color: _colour(aa-white-100);
     box-shadow: 0 0 12px _colour(box-shadow);
   }
 
   a {
     // Important needed to override _reboot.scss
     font-size: _font(size-default);
-    color: _colour(link) !important;
-    text-decoration: underline !important;
+    color: _colour(trans-light-blue-to-blue-light) !important;
     cursor: pointer !important;
     width: 8rem;
     position: absolute;
@@ -117,7 +116,7 @@ aa-dashboard-favourites {
 
     button.icon-star {
       @include button-icon;
-      color: _colour(border-grey-dark);
+      color: _colour(aa-grey-100);
       position: absolute;
       right: .75rem;
       top: .5rem;

@@ -85,6 +85,28 @@
       <aa-alert [alertClass]="'warning'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
       <h3>Error</h3>
       <aa-alert [alertClass]="'error'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <h3>Collapsible</h3>
+      <aa-alert 
+        [collapsible]="true"
+        [alignIconTop]="true"
+        alertClass="success" 
+        alertTitle="Wise saying"
+        alertText="Once upon a time, there was a wise man who used to go to the ocean to do his writing. He had a habit of walking on the beach before he began his work.
+        One day, as he was walking along the shore, he looked down the beach and saw a human figure moving like a dancer. He smiled to himself at the thought of someone who would dance to the day, and so, he walked faster to catch up.
+        As he got closer, he noticed that the figure was that of a young man, and that what he was doing was not dancing at all. The young man was reaching down to the shore, picking up small objects, and throwing them into the ocean.
+        He came closer still and called out `Good morning! May I ask what it is that you are doing?`
+        The young man paused, looked up, and replied `Throwing starfish into the ocean.`
+        
+        `I must ask, then, why are you throwing starfish into the ocean?` asked the somewhat startled wise man.
+        
+        To this, the young man replied, `The sun is up and the tide is going out. If I don't throw them in, they'll die.`
+        
+        Upon hearing this, the wise man commented, `But, young man, do you not realize that there are miles and miles of beach and there are starfish all along every mile? You can't possibly make a difference!`
+        
+        At this, the young man bent down, picked up yet another starfish, and threw it into the ocean. As it met the water, he said,
+        `It made a difference for that one.`"
+        >
+      </aa-alert>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -112,6 +134,29 @@
             <td datalabel="Attribute">alertText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your message</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Collapsible version only</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">[collapsible]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">[alignIconTop]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">alertTitle</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your title</td>
           </tr>
         </tbody>
       </table>

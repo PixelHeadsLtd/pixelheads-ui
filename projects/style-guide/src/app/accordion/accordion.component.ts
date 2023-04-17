@@ -33,11 +33,11 @@ export class AccordionComponent implements OnInit {
   toggleBlade: boolean;
 
   constructor() { }
-  
+
   justification() {
     this.showJustification = true;
   }
-  
+
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }

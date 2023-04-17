@@ -93,7 +93,8 @@
           tableHalfWidth=false; 
           tableRowHeadings=false; 
           tableFeature=false;
-          multiTables=false"
+          multiTables=false;
+          dynamicTable=false"
         >
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
@@ -200,7 +201,8 @@
           tableHalfWidth=false; 
           tableRowHeadings=false; 
           tableFeature=false;
-          multiTables=false"
+          multiTables=false;
+          dynamicTable=false"
         >
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
@@ -312,7 +314,8 @@
             tableHalfWidth=false; 
             tableRowHeadings=false; 
             tableFeature=false;
-            multiTables=false"
+            multiTables=false;
+            dynamicTable=false"
           >
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
@@ -331,7 +334,7 @@
           </p>
         </div>
         <div class="tbl-container">
-          <div class="tbl-fixed" style="max-height: 20rem"><!-- You would normally use a calc() max-height here, see Gist -->
+          <div class="tbl-fixed padding-top-2" style="max-height: 20rem"><!-- You would normally use a calc() max-height here, see Gist -->
             <table class="table-progress expandable-rows">
               <thead>
                 <tr>
@@ -654,7 +657,8 @@
             tableHalfWidth=false; 
             tableRowHeadings=false; 
             tableFeature=false;
-            multiTables=false"
+            multiTables=false;
+            dynamicTable=false"
           >
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
@@ -760,7 +764,8 @@
         tableHalfWidth=false; 
         tableRowHeadings=false; 
         tableFeature=false;
-        multiTables=false"
+        multiTables=false;
+        dynamicTable=false"
       >
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
@@ -836,7 +841,8 @@
           tableProgress=false;
           tableRowHeadings=false; 
           tableFeature=false;
-          multiTables=false"
+          multiTables=false;
+          dynamicTable=false"
         >
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
@@ -912,7 +918,8 @@
             tableProgress=false;
             tableHalfWidth=false; 
             tableFeature=false;
-            multiTables=false"
+            multiTables=false;
+            dynamicTable=false"
           >
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
@@ -958,7 +965,36 @@
                   <tr>
                     <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
                         <h3>Feature 2</h3>
-                        <select class="width-auto"><option>Please select</option></select>
+                        <div class="field boxed">
+                          <select class="width-auto"><option>Please select</option></select>
+                        </div>
+                    </td>
+                  </tr>
+                  <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
+                  <tr><td><input type="text" placeholder="Company BRN" /></td></tr>
+                  <tr><td><input type="text" placeholder="Company type" /></td></tr>
+                  <tr><td><input type="text" placeholder="Current status" /></td></tr>
+                  <tr><td><button class="approve small">Accept</button></td></tr>
+                </table>
+              </td>
+              <td><!-- spacer cell --></td>
+              <!-- end feature -->
+
+              <!-- start feature -->
+              <td class="feature-cell" rowspan="6">
+                <table>
+                  <tr>
+                    <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
+                        <h3>Feature 3</h3>
+                        <aa-alert-shield
+                          [alertShieldSmall]="false"
+                          [showTooltip]="false"
+                          [hideLabel]="false"
+                          minWidth="12rem"
+                          alertShieldStatus="info"
+                          alertShieldText="Optional"
+                        >
+                        </aa-alert-shield>
                     </td>
                   </tr>
                   <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
@@ -1024,7 +1060,8 @@
             tableProgress=false;
             tableStandard=false; 
             tableHalfWidth=false;
-            multiTables=false"
+            multiTables=false;
+            dynamicTable=false"
           >
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
@@ -1083,13 +1120,14 @@
           tableProgress=false;
           tableStandard=false; 
           tableHalfWidth=false;
-          multiTables=true"
+          multiTables=true;
+          dynamicTable=false"
         >
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
     </section>
-    <section class="multi-tables">
+    <section class="multi-tables content-repeater">
       <table>
         <thead>
           <tr>
@@ -1234,6 +1272,121 @@
           </tr>
         </tbody>
       </table>
+    </section>
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-2 col-left flex-start">
+        <h2>Drag, drop and resize</h2>
+        <div class="describe margin-bottom-1">
+          <p>
+            This is a working progress but hoping to replace ag-grid when this 
+            offers most if not all features that currently exist if ag-grid
+          </p>
+        </div>
+        <div class="tbl-container">
+          <div class="tbl-fixed" style="max-height: 15rem">
+            <table class="dynamic-table">
+              <thead>
+                <tr
+                  class="test"
+                  cdkDropList
+                  cdkDropListOrientation="horizontal"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)"
+                  cdkDropListAutoScrollStep="10"
+                >
+                  <th 
+                    *ngFor="let column of columns" 
+                    cdkDrag 
+                    cdkDragLockAxis="x"
+                    (mousedown)="$event.stopPropagation()"
+                    resizable
+                  >
+                    {{column.text}}
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                cdkDropList
+                cdkDropListOrientation="vertical"
+                (cdkDropListDropped)="dropRow($event)"
+                cdkDropListAutoScrollStep="10"
+              >
+                <tr cdkDrag *ngFor="let row of rows" cdkDragLockAxis="y">
+                  <!-- Drag preview -->
+                  <ng-container *cdkDragPreview class="my-custom-cdk-drag">
+                    <div *ngIf="nameColumn">
+                      {{row[nameColumn.key]}}
+                    </div>
+                    <div *ngIf="!nameColumn">
+                      {{row[columns[0].key]}}
+                    </div>
+                  </ng-container>
+                  <td *ngFor="let column of columns">
+                    <div *ngIf="column.key === 'status'" class="alert-shield {{row.statusClass}}">{{row[column.key]}}</div>
+                    <div *ngIf="column.key !== 'status'">{{row[column.key]}}</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Section</td>
+              <td datalabel="Attribute">tbl-container</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Section</td>
+              <td datalabel="Attribute">tbl-fixed</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Table</td>
+              <td datalabel="Attribute">dynamic-table</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+        <button 
+          class="custom-icons bg-aa-light-blue-100" 
+          (click)="
+          bladeIsOpen($event); 
+          tableFeature=false; 
+          tableRowHeadings=false; 
+          tableStandardScrolling=false; 
+          tableStandardExpandable=false; 
+          tableStatus=false;
+          tableProgress=false;
+          tableStandard=false; 
+          tableHalfWidth=false;
+          multiTables=false;
+          dynamicTable=true"
+        >
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
     </section>
 </section>
 
@@ -1286,5 +1439,10 @@
       <a href="https://gist.github.com/angloux/c4054fcf8b6c0fee6fbda1d7a38f0401" target="_blank">View Gist on GitHub</a>
       <app-gist src="angloux/c4054fcf8b6c0fee6fbda1d7a38f0401"></app-gist>
     </div>
+    <div *ngIf="dynamicTable">
+      <a href="https://gist.github.com/angloux/9494cd8eb64ecfe33ef5ea1bebe64834" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/9494cd8eb64ecfe33ef5ea1bebe64834"></app-gist>
+    </div>
   </article>
 </aa-blade>
+

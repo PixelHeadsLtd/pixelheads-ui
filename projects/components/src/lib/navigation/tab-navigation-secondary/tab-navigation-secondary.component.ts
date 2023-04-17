@@ -12,6 +12,8 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   @Input() displayTabContent = true;
   @Input() routerOutlet: boolean;
   @Input() ngTemplate: boolean;
+  @Input() tabColour: any;
+  @Input() tabActiveColour: any;
   @Output() tabClicked = new EventEmitter<TabNavigationSecondaryItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationSecondaryItemComponent>();
 

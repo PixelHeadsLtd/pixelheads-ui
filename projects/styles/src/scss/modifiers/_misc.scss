@@ -29,3 +29,9 @@
 .z-index-100 {z-index: 100!important;}
 .z-index-1000 {z-index: 1000!important;}
 .z-index-10000 {z-index: 10000!important;}
+
+// Pseudo hover class
+.hover-light-blue {&:hover {background-color: _colour(trans-light-blue-10-to-blue-dark)}}
+.hover-light-green {&:hover {background-color: _colour(trans-green-5-to-green-dark)}}
+.hover-light-orange {&:hover {background-color: _colour(trans-orange-10-to-orange-dark)}}
+.hover-light-red {&:hover {background-color: _colour(trans-red-5-to-red-dark)}}

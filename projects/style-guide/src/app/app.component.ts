@@ -274,6 +274,14 @@ export class AppComponent implements OnInit {
       icon: 'dashboard',
       iconColour: 'bg-aa-blue-100',
       borderColour: 'bd-aa-light-blue-100',
+      link: 'custom-wrapper',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
       link: 'filter',
     },
     {
@@ -808,6 +816,7 @@ export class AppComponent implements OnInit {
       {iconName:'border_right', title:'Blade', routerLink:'/blade'},
       {iconName:'border_bottom', title:'Blade bottom', routerLink:'/blade-bottom'},
       {iconName:'border_top', title:'Blade top', routerLink:'/blade-top'},
+      {iconName:'check_box_outline_blank', title:'Custom wrapper', routerLink:'/custom-wrapper'},
       {iconName:'filter_alt', title:'Filter', routerLink:'/filter'},
       {iconName:'view_week', title:'Flex', routerLink:'/flex'},
       {iconName:'call_to_action', title:'Footer', routerLink:'/footer'},

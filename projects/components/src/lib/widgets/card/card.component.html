@@ -1,6 +1,6 @@
 <article 
-  *ngIf="!cardOptional && !cardMini" 
-  class="aa-card flex-group width-control" 
+  *ngIf="!cardOptional && !cardMini && !cardDetailed" 
+  class="aa-card flex-group width-control box-shadow" 
   [ngStyle]="{
     'z-index' : zIndex,
     'top' : topPos+'rem',
@@ -21,8 +21,8 @@
 </article>
 
 <article 
-  *ngIf="cardOptional && !cardMini" 
-  class="aa-card-opt margin-bottom-0-75 box-shadow-light" 
+  *ngIf="cardOptional" 
+  class="aa-card-opt box-shadow" 
   [ngStyle]="{'z-index' : zIndex}"
 >
     <div class="flex-group flex-end flex-align-center">
@@ -35,11 +35,12 @@
       <h3 title="{{cardName}}" [ngStyle]="{'color' : themeColour }">{{ (cardName.length>14)? (cardName | slice:0:14)+'...':(cardName) }}</h3>
       <p title="{{cardRole}}">{{ (cardRole.length>37)? (cardRole | slice:0:37)+'...':(cardRole) }}</p>
     </div>
+    <ng-content select="[card-hover-content]"></ng-content>
 </article>
 
 <button 
-  *ngIf="cardMini && !cardOptional" 
-  class="card-mini flex-align-center flex-start {{borderClass}}"
+  *ngIf="cardMini" 
+  class="card-mini flex-align-center flex-start {{borderClass}} box-shadow"
   (click)="onCardClick($event)"
 >
   <div *ngIf="showAsIcon" class="material-icons">{{iconName}}</div>
@@ -51,3 +52,21 @@
     <ng-content select="[content]"></ng-content>
   </div>
 </button>
+
+<article 
+  *ngIf="cardDetailed" 
+  class="aa-card card-detailed flex-group box-shadow" 
+  [ngStyle]="{
+    'z-index' : zIndex,
+    'top' : topPos,
+    'left' : leftPos,
+    'width' : cardWidth
+  }"
+>
+  <div class="card-image fingerprint border-light">
+    <img alt="{{cardName}}" onerror="this.style.display='none'" [src]="imgPath">
+  </div>
+  <div>
+    <ng-content select="[card-detailed-content]"></ng-content>
+  </div>
+</article>

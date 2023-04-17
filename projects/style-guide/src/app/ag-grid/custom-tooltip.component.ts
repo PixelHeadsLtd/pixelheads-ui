@@ -4,7 +4,7 @@ import { ITooltipParams } from 'ag-grid-community';
 
 @Component({
   selector: 'tooltip-component',
-  template: 
+  template:
     `<div class="custom-tooltip box-shadow-strong bd-2 bd-orange bd-solid">
     <p><strong class="boxed">{{ data.athlete }}</strong></p>
     <p><span>Country: </span>{{ data.country }}</p>
@@ -25,10 +25,10 @@ import { ITooltipParams } from 'ag-grid-community';
   ],
 })
 export class CustomTooltipComponent implements ITooltipAngularComp {
-  params: { 
+  params: {
     } & ITooltipParams;
   data: any;
-  agInit(params: { 
+  agInit(params: {
     } & ITooltipParams): void {
     this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;
   }

@@ -81,25 +81,27 @@ $palette: (
   aa-red-3:                           rgb(253,247,249),
 
   // legacy
-  grey-100:                           rgb(77,77,77),
+  grey-100:                           rgb(60,60,60),
   grey-80:                            rgb(80,80,80),
-  grey-50:                            rgb(59, 59, 59),
+  grey-50:                            rgb(120,120,120),
   grey-40:                            rgb(160,160,160),
-  grey-25:                            rgb(199,199,199),
-  grey-10:                            rgb(221,221,221),
-  grey-5:                             rgb(241,241,241),
+  grey-25:                            rgb(200,200,200),
+  grey-10:                            rgb(220,220,220),
+  grey-5:                             rgb(240,240,240),
   grey-2:                             rgb(250,250,250),
-  grey-1:                             rgb(252,252,252),
+  grey-1:   
+                            rgb(252,252,252),
   // new
-  aa-grey-100:                        rgb(59,59,59),
+  aa-grey-100:                        rgb(60,60,60),
   aa-grey-80:                         rgb(80,80,80),
-  aa-grey-50:                         rgb(100, 100, 100),
+  aa-grey-50:                         rgb(120,120,120),
   aa-grey-40:                         rgb(160,160,160),
-  aa-grey-25:                         rgb(199,199,199),
-  aa-grey-10:                         rgb(221,221,221),
-  aa-grey-5:                          rgb(241,241,241),
+  aa-grey-25:                         rgb(200,200,200),
+  aa-grey-10:                         rgb(220,220,220),
+  aa-grey-5:                          rgb(240,240,240),
   aa-grey-2:                          rgb(250,250,250),
   aa-grey-1:                          rgb(252,252,252),
+
   white:                              rgb(255,255,255),
   white-50:                           rgb(220,215,215),
 
@@ -125,7 +127,7 @@ $palette: (
   aa-ochre-20:                        rgb(247,234,221),
   aa-ochre-8:                         rgb(252,247,242),
 
-  aa-yellow-100:                      rgb(255,255,102),
+  aa-yellow-100:                      rgb(250,220,100),
 
   aa-lime-100:                        rgb(170,165,22),
   aa-lime-15:                         rgb(242,242,220),

@@ -8,6 +8,10 @@ import { BladeTopComponent } from './blade-top/blade-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectTourComponent } from './project-tour/project-tour.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
+import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
+import { GraphicComponent } from './unauthorised/graphic.component';
+import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
+
 @NgModule({
   declarations: [
     BladeComponent,
@@ -16,7 +20,10 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     BladeBottomComponent,
     BladeTopComponent,
     ProjectTourComponent,
-    UiBlockComponent
+    UiBlockComponent,
+    UnauthorisedComponent,
+    GraphicComponent,
+    CustomWrapperComponent
   ],
   imports: [CommonModule, RouterModule],
   exports: [
@@ -26,7 +33,10 @@ import { UiBlockComponent } from './ui-block/ui-block.component';
     BladeBottomComponent,
     BladeTopComponent,
     ProjectTourComponent,
-    UiBlockComponent
+    UiBlockComponent,
+    UnauthorisedComponent,
+    GraphicComponent,
+    CustomWrapperComponent
   ],
 })
 export class LayoutModule {}

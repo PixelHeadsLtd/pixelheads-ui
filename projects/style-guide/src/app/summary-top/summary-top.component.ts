@@ -9,6 +9,7 @@ export class SummaryTopComponent implements OnInit {
 
   hightlight: boolean;
   toggleBlade: boolean;
+  verticalDisplay: boolean;
 
   constructor() { }
 

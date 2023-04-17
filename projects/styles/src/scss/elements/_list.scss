@@ -1,4 +1,4 @@
-ul:not(nav ul, ul.aa-stepper-header) {padding: 0 0 0 1rem}
+ul:not(nav ul, ul.aa-stepper-header, .aa-card-list) {padding: 0 0 0 1rem}
 ol:not(nav ul, ul.aa-stepper-header) {padding: 0 0 0 1.25rem}
 
 ul,
@@ -10,25 +10,25 @@ ol {
 
   &.highlight {
     li:before {
-      color: _colour(list-highlight);
+      color: _colour(aa-light-blue-100);
     }
   }
 
   &.primary {
     li:before {
-      color: _colour(body-text);
+      color: _colour(aa-grey-100);
     }
   }
 
   &.secondary {
     li:before {
-      color: _colour(secondary);
+      color: _colour(aa-light-blue-100);
     }
   }
 
   &.tertiary {
     li:before {
-      color: _colour(tertiary);
+      color: _colour(aa-white-100);
     }
   }
 

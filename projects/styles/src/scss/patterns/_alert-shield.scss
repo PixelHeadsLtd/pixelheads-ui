@@ -6,12 +6,12 @@
     }
   }
   position: relative;
-  cursor: pointer;
+  cursor: default;
   .alert-shield-tooltip {
     display: none;
     position: absolute;
     z-index: 2;
-    background-color: _colour(bg-primary);
+    background-color: _colour(aa-white-100);
     bottom: calc(100% + .5rem);
     border-radius: .5rem;
     padding: .75rem;
@@ -78,6 +78,8 @@
   border: 2px solid transparent;
   flex: none;
   height: 2rem;
+  line-height: 1rem;
+  white-space: nowrap;
 
   span {
     padding-right: 0;
@@ -97,139 +99,139 @@
   }
   
   &.success {
-    background-color: _colour(alert-success-5);
-    color: _colour(alert-success-body);
+    background-color: _colour(trans-green-5-to-green-dark);
+    color: _colour(aa-green-100);
     background-image: url("#{$icon-path}/icon-check-green.svg");
   }
   
   &.info {
-    background-color: _colour(alert-info-10);
-    color: _colour(alert-info-body);
+    background-color: _colour(trans-light-blue-10-to-blue-dark);
+    color: _colour(aa-light-blue-100);
     background-image: url("#{$icon-path}/icon-info-blue.svg");
   }
 
   &.pending {
-    background-color: _colour(alert-info-10);
+    background-color: _colour(trans-light-blue-10-to-blue-dark);
     background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
-    color: _colour(alert-info-body);
+    color: _colour(aa-light-blue-100);
   }
 
   &.pending-orange {
-    background-color: _colour(alert-warning-10);
+    background-color: _colour(trans-orange-10-to-orange-dark);
     background-image: url("#{$icon-path}/timelapse-24px-orange.svg");
-    color: _colour(alert-warning-body);
+    color: _colour(aa-orange-100);
   }
 
   &.pending-red {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/timelapse-24px-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.risk-green {
-    background-color: _colour(alert-success-5);
+    background-color: _colour(trans-green-5-to-green-dark);
     background-image: url("#{$icon-path}/icon-check-green.svg");
-    color: _colour(alert-success-body);
+    color: _colour(aa-green-100);
   }
 
   &.risk-blue {
-    background-color: _colour(alert-info-10);
+    background-color: _colour(trans-light-blue-10-to-blue-dark);
     background-image: url("#{$icon-path}/icon-check-blue.svg");
-    color: _colour(alert-success-body);
+    color: _colour(aa-light-blue-100);
   }
 
   &.risk-low {
-    background-color: _colour(alert-info-10);
+    background-color: _colour(trans-light-blue-10-to-blue-dark);
     background-image: url("#{$icon-path}/icon-risk-24px-blue.svg");
-    color: _colour(alert-info-body);
+    color: _colour(aa-light-blue-100);
   }
 
   &.risk-medium {
-    background-color: _colour(alert-warning-10);
+    background-color: _colour(trans-orange-10-to-orange-dark);
     background-image: url("#{$icon-path}/icon-risk-24px-orange.svg");
-    color: _colour(alert-warning-body);
+    color: _colour(aa-orange-100);
   }
 
   &.risk-high {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/icon-risk-24px-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.risk-green-approved {
-    background-color: _colour(alert-success-5);
+    background-color: _colour(trans-green-5-to-green-dark);
     background-image: url("#{$icon-path}/icon-check-green.svg");
-    color: _colour(alert-success-body);
-    border: 2px dotted _colour(alert-success-body);
+    color: _colour(aa-green-100);
+    border: 2px dotted _colour(aa-green-100);
   }
 
   &.risk-low-approved {
-    background-color: _colour(alert-success-5);
+    background-color: _colour(trans-green-5-to-green-dark);
     background-image: url("#{$icon-path}/check_circle-blue-24px.svg");
-    color: _colour(alert-success-body);
-    border: 2px dotted _colour(alert-info-body);
+    color: _colour(aa-green-100);
+    border: 2px dotted _colour(aa-light-blue-100);
   }
 
   &.risk-medium-approved {
-    background-color: _colour(alert-success-5);
+    background-color: _colour(trans-green-5-to-green-dark);
     background-image: url("#{$icon-path}/check_circle-orange-24px.svg");
-    color: _colour(alert-success-body);
-    border: 2px dotted _colour(alert-warning-body);
+    color: _colour(aa-green-100);
+    border: 2px dotted _colour(aa-orange-100);
   }
 
   &.risk-high-approved {
-    background-color: _colour(alert-success-5);
+    background-color: _colour(trans-green-5-to-green-dark);
     background-image: url("#{$icon-path}/check_circle-red-24px.svg");
-    color: _colour(alert-success-body);
-    border: 2px dotted _colour(alert-error-body);
+    color: _colour(aa-green-100);
+    border: 2px dotted _colour(aa-red-100);
   }
 
   &.warning {
-    background-color: _colour(alert-warning-10);
-    color: _colour(alert-warning-body);
+    background-color: _colour(trans-orange-10-to-orange-dark);
+    color: _colour(aa-orange-100);
     background-image: url("#{$icon-path}/icon-info-orange.svg");
   }
 
   &.void {
-    background-color: _colour(alert-warning-10);
+    background-color: _colour(trans-orange-10-to-orange-dark);
     background-image: url("#{$icon-path}/icon-cross-orange.svg");
-    color: _colour(alert-warning-body);
+    color: _colour(aa-orange-100);
   }
 
   &.error {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/icon-alert-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.removed, &.circle-x-red, &.do-not-use {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/icon-close-24px-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.withdrawn {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/undo-red-24px.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
   
   &.returned {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/icon-returned-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.draft {
-    background-color: _colour(alert-draft-10);
-    color: _colour(alert-draft-body);
+    background-color: _colour(aa-grey-10);
+    color: _colour(aa-grey-100);
     @include draft-bg-image;
   }
 
   &.import {
-    background-color: _colour(alert-warning-10);
+    background-color: _colour(trans-orange-10-to-orange-dark);
     @include icon-left-medium;
-    color: _colour(alert-warning-body);
+    color: _colour(aa-orange-100);
 
     &:before {
       @include icon-button-large-material;
@@ -247,39 +249,38 @@
 
   &.reject,
   &.cancel {
-    background-color: _colour(alert-error-5);
+    background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/cancel-24px-red.svg");
-    color: _colour(alert-error-body);
+    color: _colour(aa-red-100);
   }
 
   &.vanilla, &.blue {
-    background-color: _colour(alert-info-10);
-    color: _colour(alert-info-body);
+    background-color: _colour(trans-light-blue-10-to-blue-dark);
+    color: _colour(aa-light-blue-100);
     padding-left: .75rem;
   }
 
   &.green {
-    background-color: _colour(alert-success-5);
-    color: _colour(alert-success-body);
+    background-color: _colour(trans-green-5-to-green-dark);
+    color: _colour(aa-green-100);
     padding-left: .75rem;
   }
 
   &.orange {
-    background-color: _colour(alert-warning-10);
-    color: _colour(alert-warning-body);
+    background-color: _colour(trans-orange-10-to-orange-dark);
+    color: _colour(aa-orange-100);
     padding-left: .75rem;
   }
 
   &.red {
-    background-color: _colour(alert-error-5);
-    color: _colour(alert-error-body);
+    background-color: _colour(trans-red-5-to-red-dark);
+    color: _colour(aa-red-100);
     padding-left: .75rem;
   }
 }
 
 .custom-alert-shield {
   display: inline-block;
-
   .custom-alert-shield-container {
     height: 2rem;
     border-radius: 1rem;
@@ -289,15 +290,56 @@
       font-size: _font(size-default);
       padding-right: .75rem;
     }
+    &.icon-only {
+      background-color: transparent!important;
+      span {
+        padding-right: 0;
+      }
+      &.small {
+        .material-icons,
+        .material-icons-outlined {
+          font-size: _font(size-medium)!important;
+        }
+      }
+  
+      &.bg-aa-red-5,
+      &.bg-aa-red-8,
+      &.bg-aa-red-25,
+      &.bg-aa-red-50,
+      &.bg-aa-red-80,
+      &.bg-aa-red-100 {color: _palette(aa-red-100)}
+      &.bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100)}
+      &.bg-aa-green-100 {color: _palette(aa-green-100)}
+      &.bg-aa-orange-10 {color: _palette(aa-orange-100)}
+      &.bg-aa-orange-100 {color: _palette(aa-orange-100)}
+      &.bg-aa-light-blue-15 {color: _palette(aa-light-blue-100)}
+      &.bg-aa-light-blue-100 {color: _palette(aa-light-blue-100)}
+      &.bg-aa-grey-10 {color: _palette(aa-grey-100)}
+      &.bg-aa-grey-100 {color: _colour(aa-grey-100)}
+  
+      &.rotate {
+        .material-icons,
+        .material-icons-outlined {
+          animation: m 3s infinite linear;
+        }
+        @keyframes m {
+          100% { transform: rotate(360deg); }
+        }
+      }
+    }
   }
 
-  .bg-aa-red-8 {color: _palette(aa-red-100)}
+  .bg-aa-red-5,
+  .bg-aa-red-8,
+  .bg-aa-red-25,
+  .bg-aa-red-50,
+  .bg-aa-red-80 {color: _palette(aa-red-100); background-color: _colour(trans-red-5-to-red-dark)!important;}
   .bg-aa-red-100 {color: _palette(aa-white-100)}
-  .bg-aa-green-5 {color: _palette(aa-green-100)}
+  .bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100); background-color: _colour(trans-green-5-to-green-dark)!important;}
   .bg-aa-green-100 {color: _palette(aa-white-100)}
-  .bg-aa-orange-10 {color: _palette(aa-orange-100)}
+  .bg-aa-orange-10 {color: _palette(aa-orange-100); background-color: _colour(trans-orange-10-to-orange-dark)!important;}
   .bg-aa-orange-100 {color: _palette(aa-white-100)}
-  .bg-aa-light-blue-15 {color: _palette(aa-light-blue-100)}
+  .bg-aa-light-blue-15 {color: _palette(aa-light-blue-100); background-color: _colour(trans-light-blue-10-to-blue-dark)!important;}
   .bg-aa-light-blue-100 {color: _palette(aa-white-100)}
   .bg-aa-grey-10 {color: _palette(aa-grey-100)}
   .bg-aa-grey-100 {color: _colour(aa-white-100)}
@@ -310,18 +352,16 @@
 
   .small {
     font-size: _font(size-small);
-    height: 1.5rem;
-    padding: 0 0 0 .15rem;
+    height: 1.75rem;
+    padding: 0 0 0 .25rem;
 
     span {
-      font-size: _font(size-small);
       padding-right: .75rem
     }
 
     .material-icons,
     .material-icons-outlined {
       font-size: _font(size-medium);
-      margin-right: .15rem;
     }
   }
 }
@@ -361,26 +401,26 @@
 }
 
 .approved .alert-shield {
-  background-color: _colour(alert-success-5);
+  background-color: _colour(trans-green-5-to-green-dark);
   background-image: url("#{$icon-path}/check_circle-24px-green.svg");
-  color: _colour(alert-success-body);
+  color: _colour(aa-green-100);
 }
 
 .noMineVisitRegistered .alert-shield,
 .void .alert-shield {
-  background-color: _colour(alert-error-5);
+  background-color: _colour(trans-red-5-to-red-dark);
   background-image: url("#{$icon-path}/error_outline-24px-red.svg");
   color: _palette(alert-error-body);
 }
 
 .pending .alert-shield {
-  background-color: _colour(alert-info-10);
+  background-color: _colour(trans-light-blue-10-to-blue-dark);
   background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
-  color: _colour(alert-info-body);
+  color: _colour(aa-light-blue-100);
 }
 
 .rejected .alert-shield {
-  background-color: _colour(alert-error-5);
+  background-color: _colour(trans-red-5-to-red-dark);
   background-image: url("#{$icon-path}/highlight_off-24px-red.svg");
   color: _palette(alert-error-body);
 }

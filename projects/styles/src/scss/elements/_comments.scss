@@ -1,6 +1,17 @@
 .aa-comments {
   position: relative;
   z-index: 10;
+
+  h3 {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .material-icons {
+    font-size: _font(size-medium);
+  }
+
   .comments-trigger {
       &:hover + .comments-panel {
           display: block;
@@ -22,7 +33,7 @@
       }
   }
   .scroll-panel {
-    border: 1px solid _colour(border-box);
+    border: 1px solid _colour(aa-grey-10);
     border-radius: .25rem;
     padding-top: 1.75rem;
     .table-comments {

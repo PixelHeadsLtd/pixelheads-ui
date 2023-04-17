@@ -13,7 +13,7 @@
       position: absolute;
       left: 0;
       top: 0.675rem;
-      background-color: _colour(secondary);
+      background-color: _colour(aa-light-blue-100);
     }
   }
 
@@ -29,7 +29,7 @@
       background-color: _colour(white);
       position: relative;
       border-radius: 50%;
-      color: _colour(primary);
+      color: _colour(aa-blue-100);
       font-size: _font(size-default);
       padding: 0.6875rem 0.93rem 0.6875rem 0.475rem;
       width: 0;
@@ -41,7 +41,7 @@
     .material-icons,
     .material-icons-outlined {
       font-size: 2.25rem;
-      background-color: _colour(bg);
+      background-color: _colour(aa-grey-2);
       position: relative;
       border-radius: 50%;
       width: 2.75rem;
@@ -58,7 +58,7 @@
     a,
     span {
       padding: 0.75rem 0.25rem 0 0.25rem;
-      color: _colour(body-text);
+      color: _colour(aa-grey-100);
       font-family: _font(family-medium);
       text-align: center;
       display: none;
@@ -67,11 +67,11 @@
     &.complete {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(complete);
+        color: _colour(aa-light-blue-100);
       }
       div {
         color: _colour(white);
-        background-color: _colour(complete);
+        background-color: _colour(aa-light-blue-100);
         @include icon-material-center-solid;
         &:before {
           content: '\e5ca';
@@ -83,11 +83,11 @@
     &.current {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(current);
+        color: _colour(aa-blue-100);
       }
       div {
-        background-color: _colour(current);
-        color: _colour(body-text-reverse);
+        background-color: _colour(aa-blue-100);
+        color: _colour(aa-white-100);
       }
       a,
       span {
@@ -98,10 +98,10 @@
     &.error {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(alert-error-100);
+        color: _colour(aa-red-100);
       }
       div {
-        background-color: _colour(alert-error-100);
+        background-color: _colour(aa-red-100);
         color: _colour(white);
       }
     }
@@ -109,21 +109,21 @@
     &.next {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(next);
+        color: _colour(aa-blue-100);
       }
       div {
-        background-color: _colour(next);
-        color: _colour(body-text-reverse);
+        background-color: _colour(aa-blue-100);
+        color: _colour(aa-white-100);
       }
     }
     
     &.visited {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(visited);
+        color: _colour(aa-plum-100);
       }
       div {
-        background-color: _colour(visited);
+        background-color: _colour(aa-plum-100);
         color: _colour(white);
       }
     }
@@ -275,7 +275,7 @@
       margin-right: 0;
       font-size: _font(size-medium);
       color: _colour(aa-grey-25);
-      border: 1px solid _colour(border-primary);
+      border: 1px solid _colour(aa-grey-25);
       
       &:before {
         min-width: 100%;

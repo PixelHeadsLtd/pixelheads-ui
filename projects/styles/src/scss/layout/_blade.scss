@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: _colour(bg-modal);
+  background-color: _colour(aa-blue-100-overlay);
 }
 
 .half-column-width {
@@ -39,8 +39,13 @@
   transition: all 0.25s linear;
   top: 3.438rem;
   bottom: 0;
-  background-color: _colour(bg);
+  background-color: _colour(aa-grey-2);
   height: unset;
+
+  table {
+    margin-left: -1.25rem;
+    width: calc(100% + 3rem);
+  }
 
   &.show-tabs {
     .tab-navigation {
@@ -49,7 +54,7 @@
       left: 0;
       right: 0;
       top: 2.75rem;
-      background-color: _colour(bg-primary);
+      background-color: _colour(aa-white-100);
       padding-left: 1.25rem;
 
       li a {
@@ -78,8 +83,8 @@
   }
 
   .blade-header {
-    border-bottom: 2px solid _colour(border-secondary);
-    background-color: _colour(bg-primary);
+    border-bottom: 2px solid _colour(aa-light-blue-30);
+    background-color: _colour(aa-white-100);
     padding: 0.75rem 1.25rem;
     top: 0;
     height: 2rem;
@@ -104,7 +109,7 @@
 
     .pin,
     .header-icon {
-      color: _colour(blade-icon);
+      color: _colour(aa-blue-100);
     }
 
     .pin {
@@ -122,7 +127,7 @@
   }
 
   .blade-content {
-    padding: 0 0 .75rem 0;
+    padding: 1rem 1.25rem 5rem; 
     overflow-y: auto;
     overflow-x: hidden;
     top: 3.48rem;
@@ -202,7 +207,7 @@
         }
 
         p {
-          color: _colour(body-text);
+          color: _colour(aa-grey-100);
         }
 
         .icon-star-favourites {
@@ -234,8 +239,8 @@
   }
 
   .blade-footer {
-    border-top: 2px solid _colour(border-secondary);
-    background-color: _colour(bg-primary);
+    border-top: 2px solid _colour(aa-light-blue-30);
+    background-color: _colour(aa-white-100);
     padding: 0 1.25rem 1.25rem;
     bottom: 0;
 

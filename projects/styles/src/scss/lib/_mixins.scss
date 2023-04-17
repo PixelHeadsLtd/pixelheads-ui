@@ -76,31 +76,31 @@
 }
 
 @mixin button-red-outline {
-  background-color: _colour(bg-button-white);
+  background-color: _colour(aa-white-100);
   border-color: _colour(aa-red-100);
   color: _palette(aa-red-100);
 }
 
 @mixin button-red-outline-hover {
-  background-color: _colour(bg-button-white-hover);
+  background-color: _colour(aa-grey-5);
   border-color: _colour(aa-red-100);
 }
 
 @mixin button-blue-outline {
-  background-color: _colour(bg-button-white);
+  background-color: _colour(aa-white-100);
   border-color: _colour(aa-blue-100);
-  color: _colour(btn-tertiary);
+  color: _colour(trans-blue-to-white);
 }
 
 @mixin button-blue-outline-hover {
   border-color: _palette(aa-blue-80);
-  background-color: _colour(bg-button-white-hover);
+  background-color: _colour(aa-grey-5);
 }
 
 @mixin button-white {
-  background-color: _colour(bg-button-white);
-  border-color: _colour(border-button-white);
-  color: _colour(body-text);
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
 }
 
 @mixin button-white-bg {
@@ -110,15 +110,15 @@
 }
 
 @mixin button-white-small {
-  background-color: _colour(bg-button-white);
-  border-color: _colour(border-button-white);
-  color: _colour(body-text);
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
 }
 
 @mixin button-white-hover {
-  background-color: _colour(bg-button-white-hover);
-  border-color: _colour(border-button-white);
-  color: _colour(body-text);
+  background-color: _colour(aa-grey-5);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
 }
 
 @mixin button-all-white {
@@ -138,9 +138,9 @@
 }
 
 @mixin button-disabled {
-  background-color: _colour(readonly)!important;
-  border-color: _colour(border-button-white)!important;
-  color: _colour(body-text)!important;
+  background-color: _colour(aa-grey-5)!important;
+  border-color: _colour(aa-grey-25)!important;
+  color: _colour(aa-grey-100)!important;
   cursor: not-allowed!important;
 }
 

@@ -1,10 +1,10 @@
 .header {
-  background-color: _colour(bg-header);
-  border-bottom: 2px solid _colour(primary);
-  color: _colour(header-text);
+  background-color: _colour(trans-blue-to-grey);
+  border-bottom: 2px solid _colour(aa-blue-100);
+  color: _colour(aa-white-100);
   a {
-    color: _colour(header-text);
-    text-decoration: none;
+    color: _colour(force-white)!important;
+    text-decoration: none!important;
   }
   .app-menu-dropdown {
     font-size: 1.5rem;
@@ -23,7 +23,7 @@
   }
   .blade-content {
     a {
-      color: _colour(link)!important;
+      color: _colour(trans-light-blue-to-blue-light)!important;
     }
   }
 }

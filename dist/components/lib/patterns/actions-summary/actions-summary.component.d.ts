@@ -3,7 +3,9 @@ export declare class ActionsSummaryComponent implements OnInit {
     title: string;
     value: number;
     status: string;
-    divider: boolean;
+    verticalDisplay: boolean;
+    noWrap: boolean;
+    actionsSummaryItems: Array<object>;
     constructor();
     ngOnInit(): void;
 }

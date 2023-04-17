@@ -1,24 +1,10 @@
 .content-container, 
 .blade-content {
     display: block;
-
-    &:not(.padding-0):not(.grid) {
-        padding: _size(default) _size(medium); 
-    }
+    padding: 1rem 1.25rem 5rem; 
     &.grid {
         > div.field {
             padding: 0 1rem;
-        }
-    }
-}
-
-// Force any instance of ag-grid nested in a content-container without the 'grid' class, to remove left and right spacing/margin
-.content-container {
-    &:not(.grid):has(ag-grid-angular) {
-        padding-bottom: 0!important;
-        ag-grid-angular {
-            margin-left: -1.25rem;
-            width: calc(100% + 2.5rem);
         }
     }
 }

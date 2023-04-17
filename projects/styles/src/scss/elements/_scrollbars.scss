@@ -3,6 +3,10 @@
     height: 15px!important;
 }
 
+::-webkit-scrollbar-corner {
+    background: rgba(0,0,0,0)!important;
+}
+
 ::-webkit-scrollbar-thumb {
     border: 5px solid rgba(0, 0, 0, 0);
     background-clip: padding-box;

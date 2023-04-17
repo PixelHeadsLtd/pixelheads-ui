@@ -1,8 +1,8 @@
 textarea {
   display: block;
-  background-color: _colour(bg-input);
-  border: 1px solid _colour(border-input);
-  color: _colour(body-text);
+  background-color: _colour(aa-white-100);
+  border: 1px solid _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
   border-radius: .25rem;
   width: 100%;
   padding: 0.5rem 0.5rem 0.5rem 0.75rem;
@@ -17,7 +17,7 @@ textarea {
 
   &:focus {
     outline: 0;
-    border: 1px solid _colour(highlight-input);
+    border: 1px solid _colour(aa-light-blue-100);
     box-shadow: 0 0 3pt 1pt _palette(aa-light-blue-40);
   }
 
@@ -25,7 +25,7 @@ textarea {
   &[readonly],
   &[aria-disabled=true],
   &[disabled] {
-    background-color: _colour(readonly);
+    background-color: _colour(aa-grey-5);
     background-image: none;
     border-style: dashed;
     cursor: not-allowed;
@@ -47,8 +47,8 @@ textarea {
   &:-webkit-autofill, 
   &:-webkit-autofill:hover, 
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: _colour(body-text);
-    -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
+    -webkit-text-fill-color: _colour(aa-grey-100);
+    -webkit-box-shadow: 0 0 0 1000px _colour(aa-white-100) inset;
   }
 }
 

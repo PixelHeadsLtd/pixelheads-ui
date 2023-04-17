@@ -13,197 +13,6 @@
       disabled=""
       >
     </aa-button>
-    <aa-overlay 
-      [showOverlay]="showOverlay"
-      zIndex="10"
-      minWidth=""
-      maxWidth="48rem"
-      topPos=""
-      rightPos=""
-      bottomPos=""
-      leftPos=""
-    >
-      <ng-container overlay-header>
-        <header class="aa-overlay-header flex-group space-between bg-aa-blue-100">
-          <div>
-            <h1 class="boxed white-100">Always try to use the component</h1>
-            <h3 class="boxed white-100">If you can't use the component, <a class="aa-white-100" routerLink="/field">please go here for info on correct form layout</a></h3>
-          </div>
-          <aa-button 
-            (buttonClick)="showOverlay=false" 
-            buttonClass="primary" 
-            fieldClass="boxed label-hidden"
-            [customIconsRound]="true"
-            [showLabel]="false"
-            buttonLabel=".void" 
-            buttonIcon="close">
-          </aa-button>
-        </header>
-      </ng-container>
-      <ng-container overlay-content>
-        <section class="padding-1-25 bd-top-1 bd-top-red bd-top-dashed">
-          <h2 class="margin-top-0">Default</h2>
-          <div class="describe">
-            <p>
-              For the button component the visibility of labels are hidden by default. Your button will align 
-              nicely with other inputs in your form.
-            </p>
-          </div>
-          <div class="flex-group flex-start">
-            <aa-button 
-              buttonClass="custom-icons orange" 
-              fieldClass="" 
-              [showLabel]="false"
-              buttonLabel="showLabel true"
-              buttonText="Default" 
-              [customIcons]="true" 
-              buttonIcon="reply"
-            >
-            </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons primary" 
-              fieldClass="" 
-              [showLabel]="false"
-              buttonLabel="showLabel true"
-              buttonText="Default" 
-              [customIcons]="true" 
-              buttonIcon="edit"
-            >
-            </aa-button>
-
-            <div class="field">
-              <label>Input</label>
-              <input placeholder="Buttons don't need labels" type="text" />
-            </div>
-
-            <aa-button 
-              buttonClass="custom-icons white" 
-              fieldClass="" 
-              [showLabel]="false"
-              buttonLabel="showLabel true"
-              buttonText="Default" 
-              [customIcons]="true" 
-              buttonIcon="description"
-            >
-            </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons red" 
-              fieldClass="" 
-              [showLabel]="false"
-              buttonLabel="showLabel true"
-              buttonText="Default" 
-              [customIcons]="true" 
-              buttonIcon="clear"
-            >
-            </aa-button>
-          </div>
-
-          <h2>Show a label with [showLabel]=`true`</h2>
-          <div class="describe">
-            <p>
-              It's very rare, but there may be occassions where you want to display the button 
-              with an additional label. To do this, simple set <strong class="aa-red-100">[showLabel]=`true`</strong>
-            </p>
-          </div>
-          <div class="flex-group flex-start">
-            <aa-button 
-              buttonClass="custom-icons orange" 
-              fieldClass="" 
-              [showLabel]="true"
-              buttonLabel="With label"
-              buttonText="With label" 
-              [customIcons]="true" 
-              buttonIcon="reply"
-            >
-            </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons primary" 
-              fieldClass="" 
-              [showLabel]="true"
-              buttonLabel="With label"
-              buttonText="With label" 
-              [customIcons]="true" 
-              buttonIcon="edit"
-            >
-            </aa-button>
-
-            <div class="field">
-              <label>Input</label>
-              <input placeholder="The left aligns with me" type="text" />
-            </div>
-
-            <aa-button 
-              buttonClass="custom-icons white" 
-              fieldClass="" 
-              [showLabel]="true"
-              buttonLabel="With label"
-              buttonText="With label" 
-              [customIcons]="true" 
-              buttonIcon="description"
-            >
-            </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons red" 
-              fieldClass="" 
-              [showLabel]="true"
-              buttonLabel="With label"
-              buttonText="With label" 
-              [customIcons]="true" 
-              buttonIcon="clear"
-            >
-            </aa-button>
-          </div>
-
-          <h2>FieldClass boxed</h2>
-          <div class="describe">
-            <p>
-              If you have <strong class="aa-red-100">[showLabel]=`true`</strong> and you add <strong class="aa-red-100">fieldClass=`boxed`</strong>, the button will maintain the label 
-              and shift upwards without losing the alignment with other form elements that display a label and have the class `boxed`
-            </p>
-
-            <p>
-              If you want to hide the label by setting <strong class="aa-red-100">[showLabel]=`false`</strong> and you also want to ensure the 
-              correct alignment, then you will need to remove the label on other field elements.
-            </p>
-          </div>
-          <div class="flex-group flex-start">
-            <aa-button 
-              buttonClass="custom-icons primary" 
-              fieldClass="boxed" 
-              [showLabel]="true"
-              buttonLabel="Boxed"
-              buttonText="showLabel true" 
-              [customIcons]="true" 
-              buttonIcon="edit"
-            >
-            </aa-button>
-
-            <div class="field boxed">
-              <label>Input</label>
-              <input placeholder="Boxed & with label" type="text" />
-            </div>
-
-            <aa-button 
-              buttonClass="custom-icons red" 
-              fieldClass="boxed" 
-              buttonLabel="Boxed"
-              buttonText="showLabel false" 
-              [customIcons]="true" 
-              buttonIcon="clear"
-            >
-            </aa-button>
-
-            <div class="field boxed">
-              <input placeholder="Boxed & no label" type="text" />
-            </div>
-          </div>
-        </section>
-      </ng-container>
-    </aa-overlay>
   </div>
   <aa-alert alertClass="error max-width-unset"
     alertText="If you're not using the component, ensure ALL elements are wrapped in div.field">
@@ -276,7 +85,6 @@
               title="buttonClass='custom-icons orange', buttonIcon='reply'"
               >
             </aa-button>
-
             <aa-button 
               buttonClass="custom-icons primary" 
               fieldClass="" 
@@ -289,36 +97,7 @@
               title="buttonClass='custom-icons primary', buttonIcon='edit'"
               >
             </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons orange" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              [showLabel]="true"
-              buttonLabel="Pending"
-              buttonText=".orange" 
-              [customIcons]="true" 
-              buttonIcon="update"
-              title="buttonClass='custom-icons orange', buttonIcon='update'"
-              >
-            </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons white" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              [showLabel]="true"
-              buttonLabel="Add a count"
-              buttonText=".white" 
-              [customIcons]="true" 
-              buttonIcon="description"
-              [showCount]="true"
-              count="10"
-              countColor="blue"
-              title="buttonClass='custom-icons light-blue', buttonIcon='description'">
-            </aa-button>
           </div>
-
           <div>
             <aa-button 
               buttonClass="custom-icons red" 
@@ -332,20 +111,6 @@
               title="buttonClass='custom-icons red', buttonIcon='clear'"
               >
             </aa-button>
-
-            <aa-button 
-              buttonClass="custom-icons green" 
-              fieldClass="" 
-              buttonId="buttonIdC" 
-              [showLabel]="true"
-              buttonLabel="Approve"
-              buttonText=".green" 
-              [customIcons]="true" 
-              buttonIcon="check"
-              title="buttonClass='custom-icons green', buttonIcon='check'"
-              >
-            </aa-button>
-
             <aa-button 
               buttonClass="custom-icons blue" 
               fieldClass="" 
@@ -356,6 +121,113 @@
               [customIcons]="true" 
               buttonIcon="remove_red_eye"
               title="buttonClass='custom-icons light-blue', buttonIcon='remove_red_eye'"
+              >
+            </aa-button>
+          </div>
+          <div>
+            <aa-button 
+              buttonClass="custom-icons green" 
+              fieldClass="boxed" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Approve"
+              buttonText=".green" 
+              [customIcons]="true" 
+              buttonIcon="check"
+              title="buttonClass='custom-icons green', buttonIcon='check'"
+              >
+            </aa-button>
+            <aa-button 
+              buttonClass="custom-icons orange" 
+              fieldClass="" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Pending"
+              buttonText=".orange" 
+              [customIcons]="true" 
+              buttonIcon="update"
+              title="buttonClass='custom-icons orange', buttonIcon='update'"
+              >
+            </aa-button>
+          </div>
+        </div>
+        <h2 class="margin-top-2">Button class 'small' - better for ag-grid</h2>
+        <div class="flex-group">
+          <div>
+            <aa-button 
+              buttonClass="custom-icons orange small" 
+              fieldClass="boxed" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Return"
+              buttonText=".orange" 
+              [customIcons]="true" 
+              buttonIcon="reply"
+              title="buttonClass='custom-icons orange', buttonIcon='reply'"
+              >
+            </aa-button>
+            <aa-button 
+              buttonClass="custom-icons primary small" 
+              fieldClass="" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Edit"
+              buttonText=".light-blue" 
+              [customIcons]="true" 
+              buttonIcon="edit"
+              title="buttonClass='custom-icons primary', buttonIcon='edit'"
+              >
+            </aa-button>
+          </div>
+          <div>
+            <aa-button 
+              buttonClass="custom-icons red small" 
+              fieldClass="boxed" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Reject"
+              buttonText=".red" 
+              [customIcons]="true" 
+              buttonIcon="clear"
+              title="buttonClass='custom-icons red', buttonIcon='clear'"
+              >
+            </aa-button>
+            <aa-button 
+              buttonClass="custom-icons blue small" 
+              fieldClass="" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Review"
+              buttonText=".blue" 
+              [customIcons]="true" 
+              buttonIcon="remove_red_eye"
+              title="buttonClass='custom-icons light-blue', buttonIcon='remove_red_eye'"
+              >
+            </aa-button>
+          </div>
+          <div>
+            <aa-button 
+              buttonClass="custom-icons green small" 
+              fieldClass="boxed" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Approve"
+              buttonText=".green" 
+              [customIcons]="true" 
+              buttonIcon="check"
+              title="buttonClass='custom-icons green', buttonIcon='check'"
+              >
+            </aa-button>
+            <aa-button 
+              buttonClass="custom-icons orange small" 
+              fieldClass="" 
+              buttonId="buttonIdC" 
+              [showLabel]="true"
+              buttonLabel="Pending"
+              buttonText=".orange" 
+              [customIcons]="true" 
+              buttonIcon="update"
+              title="buttonClass='custom-icons orange', buttonIcon='update'"
               >
             </aa-button>
           </div>
@@ -392,6 +264,18 @@
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">custom-icons</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">boxed (Removes top space)</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonClass</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">small (Can be applied to all buttons)</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-button</td>
@@ -1433,3 +1317,195 @@
     </div>
   </article>
 </aa-blade>
+
+<aa-overlay 
+[showOverlay]="showOverlay"
+zIndex="10"
+minWidth=""
+maxWidth="48rem"
+topPos=""
+rightPos=""
+bottomPos=""
+leftPos=""
+>
+<ng-container overlay-header>
+  <header class="aa-overlay-header flex-group space-between bg-aa-blue-100">
+    <div>
+      <h1 class="boxed white-100">Always try to use the component</h1>
+      <h3 class="boxed white-100">If you can't use the component, <a class="aa-white-100" routerLink="/field">please go here for info on correct form layout</a></h3>
+    </div>
+    <aa-button 
+      (buttonClick)="showOverlay=false" 
+      buttonClass="primary" 
+      fieldClass="boxed label-hidden"
+      [customIconsRound]="true"
+      [showLabel]="false"
+      buttonLabel=".void" 
+      buttonIcon="close">
+    </aa-button>
+  </header>
+</ng-container>
+<ng-container overlay-content>
+  <section class="padding-1-25 bd-top-1 bd-top-red bd-top-dashed">
+    <h2 class="margin-top-0">Default</h2>
+    <div class="describe">
+      <p>
+        For the button component the visibility of labels are hidden by default. Your button will align 
+        nicely with other inputs in your form.
+      </p>
+    </div>
+    <div class="flex-group flex-start">
+      <aa-button 
+        buttonClass="custom-icons orange" 
+        fieldClass="" 
+        [showLabel]="false"
+        buttonLabel="showLabel true"
+        buttonText="Default" 
+        [customIcons]="true" 
+        buttonIcon="reply"
+      >
+      </aa-button>
+
+      <aa-button 
+        buttonClass="custom-icons primary" 
+        fieldClass="" 
+        [showLabel]="false"
+        buttonLabel="showLabel true"
+        buttonText="Default" 
+        [customIcons]="true" 
+        buttonIcon="edit"
+      >
+      </aa-button>
+
+      <div class="field">
+        <label>Input</label>
+        <input placeholder="Buttons don't need labels" type="text" />
+      </div>
+
+      <aa-button 
+        buttonClass="custom-icons white" 
+        fieldClass="" 
+        [showLabel]="false"
+        buttonLabel="showLabel true"
+        buttonText="Default" 
+        [customIcons]="true" 
+        buttonIcon="description"
+      >
+      </aa-button>
+
+      <aa-button 
+        buttonClass="custom-icons red" 
+        fieldClass="" 
+        [showLabel]="false"
+        buttonLabel="showLabel true"
+        buttonText="Default" 
+        [customIcons]="true" 
+        buttonIcon="clear"
+      >
+      </aa-button>
+    </div>
+
+    <h2>Show a label with [showLabel]=`true`</h2>
+    <div class="describe">
+      <p>
+        It's very rare, but there may be occassions where you want to display the button 
+        with an additional label. To do this, simple set <strong class="aa-red-100">[showLabel]=`true`</strong>
+      </p>
+    </div>
+    <div class="flex-group flex-start">
+      <aa-button 
+        buttonClass="custom-icons orange" 
+        fieldClass="" 
+        [showLabel]="true"
+        buttonLabel="With label"
+        buttonText="With label" 
+        [customIcons]="true" 
+        buttonIcon="reply"
+      >
+      </aa-button>
+
+      <aa-button 
+        buttonClass="custom-icons primary" 
+        fieldClass="" 
+        [showLabel]="true"
+        buttonLabel="With label"
+        buttonText="With label" 
+        [customIcons]="true" 
+        buttonIcon="edit"
+      >
+      </aa-button>
+
+      <div class="field">
+        <label>Input</label>
+        <input placeholder="The left aligns with me" type="text" />
+      </div>
+
+      <aa-button 
+        buttonClass="custom-icons white" 
+        fieldClass="" 
+        [showLabel]="true"
+        buttonLabel="With label"
+        buttonText="With label" 
+        [customIcons]="true" 
+        buttonIcon="description"
+      >
+      </aa-button>
+
+      <aa-button 
+        buttonClass="custom-icons red" 
+        fieldClass="" 
+        [showLabel]="true"
+        buttonLabel="With label"
+        buttonText="With label" 
+        [customIcons]="true" 
+        buttonIcon="clear"
+      >
+      </aa-button>
+    </div>
+
+    <h2>FieldClass boxed</h2>
+    <div class="describe">
+      <p>
+        If you have <strong class="aa-red-100">[showLabel]=`true`</strong> and you add <strong class="aa-red-100">fieldClass=`boxed`</strong>, the button will maintain the label 
+        and shift upwards without losing the alignment with other form elements that display a label and have the class `boxed`
+      </p>
+
+      <p>
+        If you want to hide the label by setting <strong class="aa-red-100">[showLabel]=`false`</strong> and you also want to ensure the 
+        correct alignment, then you will need to remove the label on other field elements.
+      </p>
+    </div>
+    <div class="flex-group flex-start">
+      <aa-button 
+        buttonClass="custom-icons primary" 
+        fieldClass="boxed" 
+        [showLabel]="true"
+        buttonLabel="Boxed"
+        buttonText="showLabel true" 
+        [customIcons]="true" 
+        buttonIcon="edit"
+      >
+      </aa-button>
+
+      <div class="field boxed">
+        <label>Input</label>
+        <input placeholder="Boxed & with label" type="text" />
+      </div>
+
+      <aa-button 
+        buttonClass="custom-icons red" 
+        fieldClass="boxed" 
+        buttonLabel="Boxed"
+        buttonText="showLabel false" 
+        [customIcons]="true" 
+        buttonIcon="clear"
+      >
+      </aa-button>
+
+      <div class="field boxed">
+        <input placeholder="Boxed & no label" type="text" />
+      </div>
+    </div>
+  </section>
+</ng-container>
+</aa-overlay>

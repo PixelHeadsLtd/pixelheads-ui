@@ -4,9 +4,9 @@ import { ITooltipParams } from 'ag-grid-community';
 
 @Component({
   selector: 'card-component',
-  template: 
-    `<article 
-          class="aa-card flex-group" 
+  template:
+    `<article
+          class="aa-card flex-group"
           style="
             z-index : 999999;
             top: -2.5rem;
@@ -40,10 +40,10 @@ import { ITooltipParams } from 'ag-grid-community';
   ],
 })
 export class CustomCardComponent implements ITooltipAngularComp {
-  params: { 
+  params: {
     } & ITooltipParams;
   data: any;
-  agInit(params: { 
+  agInit(params: {
     } & ITooltipParams): void {
     this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;
   }

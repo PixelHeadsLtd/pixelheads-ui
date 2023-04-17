@@ -24,6 +24,9 @@ export declare class AlertShieldComponent implements OnInit {
     bgBlueDark: boolean;
     bgGreyLight: boolean;
     bgGreyDark: boolean;
+    shieldColour: any;
+    iconOnly: boolean;
+    enableRotation: boolean;
     constructor();
     ngOnInit(): void;
 }

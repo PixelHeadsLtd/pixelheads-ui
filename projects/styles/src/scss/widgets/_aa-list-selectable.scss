@@ -12,11 +12,11 @@
             cursor: pointer;
 
             &.disabled {
-                color: _colour(body-text);
+                color: _colour(aa-grey-100);
                 cursor: not-allowed!important;
                 opacity: .5;
                 a {
-                    color: _colour(body-text);
+                    color: _colour(aa-grey-100);
                 }
                 &:hover {
                     border-color: transparent;
@@ -37,8 +37,8 @@
             }
 
             &:hover {
-                background-color: _colour(bg-highlight);
-                border: 1px dashed _colour(border-blue);
+                background-color: _colour(aa-light-blue-10);
+                border: 1px dashed _colour(aa-light-blue-100);
                 &:after {
                     opacity: 1;
                     color: _palette(aa-green-100);
@@ -47,8 +47,8 @@
             }
 
             &.selected {
-                background-color: _colour(bg-selected);
-                border: 1px dashed _colour(border-grey);
+                background-color: _colour(aa-grey-5);
+                border: 1px dashed _colour(aa-grey-40);
                 &:after {
                     opacity: 1;
                     color: _palette(aa-orange-100);

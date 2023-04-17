@@ -33,6 +33,9 @@ export class AlertShieldComponent implements OnInit {
   @Input() bgBlueDark: boolean;
   @Input() bgGreyLight: boolean;
   @Input() bgGreyDark: boolean;
+  @Input() shieldColour: any;
+  @Input() iconOnly: boolean;
+  @Input() enableRotation: boolean;
 
   constructor() { }
 

@@ -27,18 +27,78 @@
                 <tbody>
                     <tr>
                         <td datalabel="Element">aa-carousel</td>
-                        <td datalabel="Attribute">alignCenter</td>
-                        <td datalabel="Type">Boolean</td>
-                        <td datalabel="Default">True</td>
+                        <td datalabel="Attribute">customClass</td>
+                        <td datalabel="Type">Class</td>
+                        <td datalabel="Default"><a routerLink="/colours">Choose a background or border colour</a></td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-carousel</td>
-                        <td datalabel="Attribute">maxWidth</td>
-                        <td datalabel="Type">String</td>
-                        <td datalabel="Default">50%</td>
+                        <td datalabel="Attribute">carouselOuterWidth</td>
+                        <td datalabel="Type">Any</td>
+                        <td datalabel="Default">Set the carousel width</td>
                     </tr>
+                    <tr>
+                        <td datalabel="Element">aa-carousel</td>
+                        <td datalabel="Attribute">carouselInnerWidth</td>
+                        <td datalabel="Type">Any</td>
+                        <td datalabel="Default">Set the carousel inner width</td>
+                    </tr>
+                    <ng-container *ngIf="showMore">
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">carouselInnerHeight</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the carousel inner height</td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">carouselItemWidth</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the carousel item width</td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">carouselItemBgColour</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the carousel item <a routerLink="/colours">background or border colour</a></td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">carouselItemPadding</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the carousel padding</td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">nextBtnColour</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the next button <a routerLink="/colours">background or border colour</a></td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">nextBtnIcon</td>
+                            <td datalabel="Type">String</td>
+                            <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Choose your next btn icon</a></td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">prevBtnColour</td>
+                            <td datalabel="Type">Any</td>
+                            <td datalabel="Default">Set the previous button <a routerLink="/colours">background or border colour</a></td>
+                        </tr>
+                        <tr>
+                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Attribute">prevBtnIcon</td>
+                            <td datalabel="Type">String</td>
+                            <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Choose your previous btn icon</a></td>
+                        </tr>
+                    </ng-container>
                 </tbody>
             </table>
+            <nav class="margin-top-1">
+                <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+                <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+              </nav>
         </section>
 
         <!-- mini menu -->
@@ -50,46 +110,27 @@
     </section>
 
     <aa-carousel 
-        [alignCenter]="true" 
-        maxWidth="50%"
+        customClass="bg-aa-light-blue-5 bd-bottom-1 bd-bottom-solid bd-bottom-blue-15"
+        carouselOuterWidth="100%"
+        carouselInnerWidth="25rem" 
+        carouselInnerHeight="auto" 
+        carouselItemWidth="100%"
+        carouselItemPadding="2rem"
+        carouselItemBgColour="bg-aa-burgundy-5"
+        nextBtnColour="bg-aa-light-blue-100"
+        nextBtnIcon="chevron_right"
+        prevBtnColour="bg-aa-light-blue-100"
+        prevBtnIcon="chevron_left"
     >
-        <ng-container carousel-content>
-            <section 
-                *ngFor="let item of carouselContent; let i = index"
-                class="aa-carousel-items flex-group flex-center" 
-                [class.selected]="currentIndex === i"
-            >
-                <div 
-                    class="padding-1" 
-                    [ngStyle]="{
-                    'max-width' : '20rem'}"
-                    >
-                    <h2>{{item.carouselHeading}}</h2>
-                    <div class="margin-bottom-0-5">
-                        <p class="max-width-90">
-                            {{item.carouselBody}}
-                        </p>
-                    </div>
-                    <img width="360" src="{{item.carouselImage}}" />
-                </div>
-            </section>
-        </ng-container>
-        <ng-container carousel-footer>
-            <section class="flex-group flex-center">
-                <div>
-                    <a (click)="prevStep()" class="material-icons">chevron_left</a>
-                </div>
-                <div *ngFor="let item of carouselFooter; let i = index">
-                    <a (click)="currentIndex = i" [class.current-item]="currentIndex === i">
-                        {{item.carouselNumber}}
-                    </a>
-                </div>
-                <div>
-                    <a (click)="nextStep()" class="material-icons">chevron_right</a>
-                </div>
-            </section>
+        <ng-container *ngFor="let item of items;">
+            <ng-container *aaCarouselItem>
+                <h2>{{item.carouselTitle}}</h2>
+                <p class="margin-bottom-1">{{item.carouselDesc}}</p>
+                <img src="{{item.carouselImage}}" />
+            </ng-container>
         </ng-container>
     </aa-carousel>
+    
     <aa-blade [showModal]="false" [toggleBlade]="toggleBlade" suppressAutoClose="false" topPosition="3.5" zIndex="2"
         bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
         (close)="toggleBlade = false">

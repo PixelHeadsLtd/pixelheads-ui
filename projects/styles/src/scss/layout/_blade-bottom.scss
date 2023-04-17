@@ -33,7 +33,7 @@
 
           span.mask {
             position: absolute;
-            background-color: _colour(bg-ag-grid);
+            background-color: _colour(aa-white-100);
             border-bottom: solid 1px #002776;
             width: 100%;
             top: -2.5rem;
@@ -85,7 +85,7 @@
 .blade-bottom {
   position: fixed;
   bottom: 0;
-  background-color: _colour(bg);
+  background-color: _colour(aa-grey-2);
   transition: all 0.25s linear;
   
   table {

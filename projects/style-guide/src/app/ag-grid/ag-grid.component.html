@@ -2,9 +2,9 @@
   <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
   <h1>AG Grid - We only use the "ag-theme-balham"</h1>
 </section>
-<section class="content-container ag-grid-full-height padding-bottom-0 position-relative" [ngStyle]="{'height' : 'calc(100vh - 10rem)'}">
+<section class="content-container grid ag-grid-full-height padding-bottom-0 position-relative" [ngStyle]="{'height' : 'calc(100vh - 9rem)'}">
   <section class="content-repeater flex-group border-bottom-none padding-0 padding-bottom-2 position-static">  
-      <section class="flex-1 col-left flex-start">
+      <section class="content-container flex-1 col-left flex-start">
         <h2>Anchor</h2>
         <div 
           role="alert"
@@ -15,8 +15,8 @@
         </div>
         <div class="describe">
           <p>
-            Use ag-grid version <strong class="aa-red-100">v24.1.0</strong>. We have the licence for 26.2.0
-            but this introduces a bug on the click event of the context-menu and only right-click works.
+            Use ag-grid version <strong class="aa-red-100">v24.1.0</strong>. If you want to upgrade to a version above 28 
+            then you'll need to let us know because ag-grid have changed the sass paths, which means you version won't work with Design Language.
           </p>
           <p>
             For details around setting ag-grid height, custom-tooltips and context-menus, please<br/>
@@ -154,7 +154,7 @@
         >
           <h2 class="margin-top-0">Copy and paste the licence code into your 'environment.ts' file</h2>
           <div class="flex-group flex-start">
-            <button class="secondary" (click)="copyToClipboard(agGridLicence)">Click here to copy the code</button>
+            <button class="secondary" (click)="copyToClipboard(copyLicence)">Click here to copy the code</button>
             <div *ngIf="codeCopied" class="copied flex-group flex-start flex-align-center">
               <div class="material-icons aa-orange-100 margin-right-0-25">thumb_up_alt</div>
               <p class="padding-top-0-25 italic">Licence copied!</p>

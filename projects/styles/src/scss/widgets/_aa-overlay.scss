@@ -1,6 +1,6 @@
 .aa-overlay {
-  background-color:_colour(bg-modal);
-  color: _colour(body-text);
+  background-color:_colour(aa-blue-100-overlay);
+  color: _colour(aa-grey-100);
   left: 0;
   top: 3.5rem;
   position: fixed;
@@ -13,13 +13,13 @@
     bottom: 2rem;
     width: 100%;
     max-width: 52rem;
-    background-color: _colour(bg);
+    background-color: _colour(aa-grey-2);
     box-shadow: 0 0 12px _colour(box-shadow);
     
     .contact {
       .material-icons,
       .material-icons-outlined {
-        color: _colour(icons-light);
+        color: _colour(aa-grey-40);
       }
     }
     
@@ -42,17 +42,17 @@
         right: 1rem;
         width: 2rem;
         height: 2rem;
-        border: 2px solid _colour(border-white);
+        border: 2px solid _palette(aa-white-100);
       }
       
       .card-image {
         border-radius: 50%;
-        border: 1px solid _colour(border-subtle);
+        border: 1px solid _colour(aa-grey-5);
         margin-right: 1rem;
         overflow: hidden;
         width: 8rem;
         height: 8rem;
-        background-color: _colour(primary);
+        background-color: _colour(aa-blue-100);
         
         &.fingerprint {
           background-size: 4rem;

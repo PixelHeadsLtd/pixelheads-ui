@@ -5,7 +5,8 @@ import { IconFilterPipe } from '../pipes/icon-filter';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionFancyComponent } from './accordion-fancy/accordion-fancy.component';
 import { CardComponent } from './card/card.component';
-import { CarouselComponent } from './carousel/carousel.component';
+import { CarouselComponent, CarouselItemElementDirective } from './carousel/carousel.component';
+import { CarouselItemDirective } from '../directives/carousel/carousel-item.directive';
 import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
 import { DashboardFavouritesComponent } from './dashboard-favourites/dashboard-favourites.component';
 import { DashboardFavouritesListComponent } from './dashboard-favourites-list/dashboard-favourites-list.component';
@@ -34,6 +35,8 @@ import { OrderByPipe } from '../pipes/order-by';
     AccordionFancyComponent,
     CardComponent,
     CarouselComponent,
+    CarouselItemDirective,
+    CarouselItemElementDirective,
     DashboardContainerComponent,
     DashboardFavouritesComponent,
     DashboardFavouritesListComponent,
@@ -63,6 +66,8 @@ import { OrderByPipe } from '../pipes/order-by';
     AccordionFancyComponent,
     CardComponent,
     CarouselComponent,
+    CarouselItemDirective,
+    CarouselItemElementDirective,
     DashboardContainerComponent,
     DashboardFavouritesComponent,
     DashboardFavouritesListComponent,

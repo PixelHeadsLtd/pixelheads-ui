@@ -49,8 +49,8 @@ body {
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
     @import 'style-imports';
-    background-color: _colour(bg);
-    color: _colour(body-text);
+    background-color: _colour(trans-grey-2-to-grey-dark);
+    color: _colour(aa-grey-100);
     min-width: _breakpoint(breakpoint-320);
   }
 
@@ -63,8 +63,8 @@ body {
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
     @import 'style-imports';
-    background-color: _colour(bg);
-    color: _colour(body-text);
+    background-color: _colour(aa-grey-2);
+    color: _colour(aa-grey-100);
     min-width: _breakpoint(breakpoint-320);
   }    
 }

@@ -14,6 +14,63 @@
           more prominence. Use <strong>[highlight]=&quot;true&quot;</strong> to achieve this.
         </p>
       </div>
+
+      <aa-button 
+        *ngIf="!verticalDisplay"
+        (buttonClick)="verticalDisplay= !verticalDisplay" 
+        fieldClass="boxed margin-bottom-1" 
+        buttonClass="primary" 
+        buttonId="'uttonId"
+        [showLabel]="false"
+        buttonLabel="Primary" 
+        buttonText="Show vertical display" 
+        disabled="">
+      </aa-button>
+
+      <aa-button 
+        *ngIf="verticalDisplay"
+        (buttonClick)="verticalDisplay= !verticalDisplay" 
+        fieldClass="boxed margin-bottom-1" 
+        buttonClass="primary" 
+        buttonId="'uttonId"
+        [showLabel]="false"
+        buttonLabel="Primary" 
+        buttonText="Show default display" 
+        disabled="">
+      </aa-button>
+
+      <div *ngIf="verticalDisplay">
+        <aa-summary-top [displayBlock]="false" [verticalDisplay]="true">
+          <aa-summary-top-list 
+            highlight="true" 
+            class="component" 
+            itemTitle="Employee name" 
+            itemDescription="Paul Smith">
+          </aa-summary-top-list>
+          <aa-summary-top-list 
+            class="component" 
+            itemTitle="Role" 
+            itemDescription="Project Manager">
+          </aa-summary-top-list>
+          <aa-summary-top-list 
+            class="component" 
+            itemTitle="Department" 
+            itemDescription="Security">
+          </aa-summary-top-list>
+          <aa-summary-top-list 
+            class="component" 
+            itemTitle="Country" 
+            itemDescription="United Kingdom">
+          </aa-summary-top-list>
+          <aa-summary-top-list 
+            class="component" 
+            [truncate]="true"
+            maxWidth="10"
+            itemTitle="Enabling truncation" 
+            itemDescription="Set 'truncate' to true then add a 'maxWidth' number">
+          </aa-summary-top-list>
+        </aa-summary-top>
+      </div>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -37,6 +94,12 @@
           <tr>
             <td datalabel="Element">aa-summary-top</td>
             <td datalabel="Attribute">displayBlock</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-summary-top</td>
+            <td datalabel="Attribute">verticalDisplay</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
@@ -76,13 +139,13 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
-          <span class="material-icons">visibility</span><span>View gist</span>
-        </button>
-      </nav>
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
     </div>
-    <div class="margin-top-2">
-      <aa-summary-top [displayBlock]="false">
+    <div class="margin-top-2" *ngIf="!verticalDisplay">
+      <aa-summary-top [displayBlock]="false" [verticalDisplay]="false">
         <aa-summary-top-list 
           highlight="true" 
           class="component" 

@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnauthorisedComponent implements OnInit {
 
-  constructor() { }
+  toggleBlade: boolean;
+
+  constructor() {}
+
+  bladeIsOpen(open: boolean) {
+    this.toggleBlade = open;
+  }
 
   ngOnInit(): void {
   }

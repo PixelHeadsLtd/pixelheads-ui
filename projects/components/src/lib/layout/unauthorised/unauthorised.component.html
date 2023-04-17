@@ -1,0 +1,18 @@
+<section class="unauthorised flex-group flex-column space-between flex-nowrap">
+    <div class="unauthorised-content flex-group flex-center flex-column">
+        <h1>{{title}}</h1>
+        <p 
+            class="align-center margin-bottom-0-25"
+            [ngStyle]="{'max-width' : straplineWidth}"
+        >
+            {{strapline}}
+        </p>      
+        <a class="flex-center" href="https://core.angloamerican.com/security-amp/amp">
+            <span class="material-icons padding-right-0-25 aa-blue-100">rocket_launch</span>
+            Discover other applications
+        </a>
+    </div>
+    <div class="unauthorised-image">
+        <aa-graphic class="app-graphic"></aa-graphic>
+    </div>
+</section>

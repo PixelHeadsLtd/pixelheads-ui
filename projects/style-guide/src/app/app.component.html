@@ -53,12 +53,12 @@
           [customIconsRound]="true"
           [showLabel]="false"
           buttonLabel="" 
-          buttonIcon="flare"
+          buttonIcon="dark_mode"
           disabled="">
         </aa-button>
       </li>
       <li class="cursor-pointer" (click)="toggleAppsBlade=false; toggleLoginBlade=false">
-        <div class="aa-search">
+        <div class="aa-search-dl">
           <input
             class="animate-normal"
             type="text"
@@ -424,7 +424,7 @@
 </header>
 
 <nav
-  class="nav-core box-shadow-light nav-container"
+  class="nav-core nav-container"
   [ngClass]="{ 'minimize-menu' : minimizeMenu, 'show-mobile-menu' : mobileMenu }"
   >
   <ul>

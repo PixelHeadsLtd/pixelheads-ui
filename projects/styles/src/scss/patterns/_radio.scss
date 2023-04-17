@@ -24,15 +24,15 @@
 
   label {
     display: flex;
-    background-color: _colour(bg-tertiary);
-    border: 1px solid _colour(border-secondary);
+    background-color: _colour(aa-light-blue-5);
+    border: 1px solid _colour(aa-light-blue-30);
     border-radius: 1.5rem;
     cursor: pointer;
     font-family: _font(family-regular);
     padding: .5rem .75rem  !important; // bootstrap
 
     &.checked {
-      background-color: _colour(secondary);
+      background-color: _colour(aa-light-blue-100);
       color: _colour(white);
     }
 

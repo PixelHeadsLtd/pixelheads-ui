@@ -4,6 +4,8 @@ export declare class CardComponent implements OnInit {
     cardRole: string;
     cardOptional: boolean;
     cardMini: boolean;
+    cardDetailed: boolean;
+    cardWidth: any;
     themeColour: boolean;
     zIndex: number;
     imgPath: any;
@@ -12,9 +14,9 @@ export declare class CardComponent implements OnInit {
     showAsProfile: boolean;
     iconName: string;
     borderClass: string;
-    topPos: number;
-    rightPos: number;
-    leftPos: number;
+    topPos: any;
+    rightPos: any;
+    leftPos: any;
     cardClick: EventEmitter<Event>;
     onCardClick(e: Event): void;
     constructor();

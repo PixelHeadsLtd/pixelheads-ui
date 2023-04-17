@@ -1,12 +1,12 @@
-.text-white {color: white!important;}
-
 // COLOURS
+
 // blue
 .aa-blue-100 {color: _colour(aa-blue-100)!important}
 .aa-blue-70 {color: _colour(aa-blue-70)!important}
 .aa-blue-60 {color: _colour(aa-blue-60)!important}
 .aa-blue-50 {color: _colour(aa-blue-50)!important}
 .aa-blue-40 {color: _colour(aa-blue-40)!important}
+
 // light blue
 .aa-light-blue-100 {color: _colour(aa-light-blue-100)!important}
 .aa-light-blue-80 {color: _colour(aa-light-blue-80)!important}
@@ -17,6 +17,7 @@
 .aa-light-blue-15 {color: _colour(aa-light-blue-15)!important}
 .aa-light-blue-10 {color: _colour(aa-light-blue-10)!important}
 .aa-light-blue-5 {color: _colour(aa-light-blue-5)!important}
+
 // red
 .aa-red-100 {color: _colour(aa-red-100)!important}
 .aa-red-80 {color: _colour(aa-red-80)!important}
@@ -26,6 +27,7 @@
 .aa-red-8 {color: _colour(aa-red-8)!important}
 .aa-red-5 {color: _colour(aa-red-5)!important}
 .aa-red-3 {color: _colour(aa-red-3)!important}
+
 // grey legacy classes
 .grey-100 {color: _colour(aa-grey-100)!important}
 .grey-100 {color: _colour(aa-grey-100)!important}
@@ -34,6 +36,7 @@
 .grey-10 {color: _colour(aa-grey-10)!important}
 .grey-5 {color: _colour(aa-grey-5)!important}
 .grey-2 {color: _colour(aa-grey-2)!important}
+
 // grey updated classes
 .aa-grey-100 {color: _colour(aa-grey-100)!important}
 .aa-grey-100 {color: _colour(aa-grey-100)!important}
@@ -42,18 +45,21 @@
 .aa-grey-10 {color: _colour(aa-grey-10)!important}
 .aa-grey-5 {color: _colour(aa-grey-5)!important}
 .aa-grey-2 {color: _colour(aa-grey-2)!important}
+
 // green
 .aa-green-100 {color: _colour(aa-green-100)!important}
 .aa-green-50 {color: _colour(aa-green-50)!important}
 .aa-green-25 {color: _colour(aa-green-25)!important}
 .aa-green-15 {color: _colour(aa-green-15)!important}
 .aa-green-5 {color: _colour(aa-green-5)!important}
+
 // orange
 .aa-orange-100 {color: _colour(aa-orange-100)!important}
 .aa-orange-50 {color: _colour(aa-orange-50)!important}
 .aa-orange-25 {color: _colour(aa-orange-25)!important}
 .aa-orange-10 {color: _colour(aa-orange-10)!important}
 .aa-orange-5 {color: _colour(aa-orange-5)!important}
+
 // tertiary
 .aa-plum-100 {color: _colour(aa-plum-100)!important}
 .aa-plum-50 {color: _colour(aa-plum-50)!important}
@@ -61,12 +67,14 @@
 .aa-plum-15 {color: _colour(aa-plum-15)!important}
 .aa-plum-5 {color: _colour(aa-plum-5)!important}
 
+// burgundy
 .aa-burgundy-100 {color: _colour(aa-burgundy-100)!important}
 .aa-burgundy-50 {color: _colour(aa-burgundy-50)!important}
 .aa-burgundy-25 {color: _colour(aa-burgundy-25)!important}
 .aa-burgundy-15 {color: _colour(aa-burgundy-15)!important}
 .aa-burgundy-5 {color: _colour(aa-burgundy-5)!important}
 
+// mixed
 .aa-brown-100 {color: _colour(aa-brown-100)!important}
 .aa-ochre-100 {color: _colour(aa-ochre-100)!important}
 .aa-yellow-100 {color: _colour(aa-yellow-100)!important}
@@ -76,5 +84,28 @@
 .aa-pink-25 {color: _colour(aa-pink-25)!important}
 .aa-white-100 {color: _colour(aa-white-100)!important}
 .white-100 {color: _palette(aa-white-100)!important}
-
 .aa-transparent {color: transparent!important}
+
+// Custom transitional colours
+.trans-blue-to-white {color: _colour(trans-blue-to-white)!important}
+.trans-blue-to-grey {color: _colour(trans-blue-to-grey)!important} 
+.trans-blue-to-orange {color: _colour(trans-blue-to-orange)!important}
+.trans-light-blue-to-white {color: _colour(trans-light-blue-to-white)!important}
+.trans-light-blue-10-to-blue-dark {color: _colour(trans-light-blue-10-blue-dark)!important}
+.trans-light-blue-to-orange {color: _colour(trans-light-blue-to-orange)!important}
+.trans-light-blue-to-blue-light {color: _colour(trans-light-blue-to-blue-light)!important}
+.trans-green-5-to-green-dark {color: _colour(trans-green-5-to-green-dark)!important}
+.trans-orange-10-to-orange-dark {color: _colour(trans-orange-10-to-orange-dark)!important}
+.trans-red-5-to-red-dark {color: _colour(trans-red-5-to-red-dark)!important}
+.trans-grey-2-to-grey-dark {color: _colour(trans-grey-2-to-grey-dark)!important}
+.trans-grey-5-to-plum-dark {color: _colour(trans-grey-5-to-plum-dark)!important}
+.trans-white-to-grey-dark {color: _colour(trans-white-to-grey-dark)!important}
+.trans-white-to-blue {color: _colour(trans-white-to-blue)!important}
+.trans-pink-to-plum {color: _colour(trans-pink-to-plum)!important}
+
+// Forced colours
+.force-white {color: _colour(force-white)!important}
+.force-blue {color: _colour(force-blue)!important}
+.force-red {color: _colour(force-red)!important}
+.force-orange {color: _colour(force-orange)!important}
+.force-green {color: _colour(force-green)!important}

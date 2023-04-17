@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  Version.MajorMinor: 11.2
+  Version.MajorMinor: 12.2
   Version.Revision: $[counter(variables['Version.MajorMinor'], 0)]
 
 steps:

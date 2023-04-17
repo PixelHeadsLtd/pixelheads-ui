@@ -11,7 +11,9 @@ export class ActionsSummaryComponent implements OnInit {
   @Input() title: string;
   @Input() value: number;
   @Input() status: string;
-  @Input() divider: boolean;
+  @Input() verticalDisplay: boolean;
+  @Input() noWrap: boolean;
+  @Input() actionsSummaryItems: Array<object>;
 
   constructor() { }
 

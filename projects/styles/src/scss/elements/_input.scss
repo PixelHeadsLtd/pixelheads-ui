@@ -1,11 +1,11 @@
 input:not(.ag-filter-filter) {
   display: inline-block;
-  border: 1px solid _colour(border-input);
+  border: 1px solid _colour(aa-grey-25);
   border-radius: 0.25rem;
   font-family: _font(family-regular);
   font-size: _font(size-default);
-  color: _colour(body-text);
-  background-color: _colour(bg-input);
+  color: _colour(aa-grey-100);
+  background-color: _colour(aa-white-100);
   -webkit-appearance: none;
   
   &[type=text], 
@@ -19,8 +19,8 @@ input:not(.ag-filter-filter) {
 
   &:focus:not([type=checkbox], [type=radio], .ng-select input) {
     outline: 0;
-    border: 1px solid _colour(highlight-input);
-    box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
+    border: 1px solid _colour(aa-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
   }
 
   &[type=checkbox],
@@ -43,12 +43,12 @@ input:not(.ag-filter-filter) {
   &[readonly],
   &[aria-disabled=true],
   &[disabled] {
-    background-color: _colour(readonly);
+    background-color: _colour(aa-grey-5);
     border-style: dashed;
     cursor: not-allowed;
 
     &:focus {
-      border-color: _colour(border-input)!important;
+      border-color: _colour(aa-grey-25)!important;
       box-shadow: none!important;
     }
   }
@@ -72,8 +72,8 @@ input:not(.ag-filter-filter) {
   &:-webkit-autofill, 
   &:-webkit-autofill:hover, 
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: _colour(bg-input);
-    -webkit-box-shadow: 0 0 0 1000px _colour(bg-input) inset;
+    -webkit-text-fill-color: _colour(aa-grey-100)!important;
+    -webkit-box-shadow: 0 0 0 1000px _colour(aa-white-100) inset!important;
   }
 
   &.search {
@@ -102,7 +102,7 @@ input:not(.ag-filter-filter) {
       &:hover, &:focus {
         border: none;
         background-color: transparent!important;
-        color: _colour(date-picker-hover);
+        color: _colour(aa-blue-100);
       }
       &:disabled {
         background-color: transparent !important;
@@ -111,7 +111,7 @@ input:not(.ag-filter-filter) {
     &[readonly] {
       + button {
         opacity: .5;
-        color: _colour(readonly);
+        color: _colour(aa-grey-5);
         cursor: not-allowed;
       }
     }

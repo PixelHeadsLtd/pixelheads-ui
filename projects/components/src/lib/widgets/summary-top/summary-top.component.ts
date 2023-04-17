@@ -9,6 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 export class SummaryTopComponent implements OnInit {
 
   @Input() displayBlock: boolean;
+  @Input() verticalDisplay: boolean;
 
   constructor() { }
 

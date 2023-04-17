@@ -13,18 +13,19 @@
         &:hover,
         &:active,
         &:focus {
-            border-color: _colour(border-secondary);
+            border-color: _colour(aa-light-blue-30);
         }
     }
     ul {
-        box-shadow: 0 0 3pt 1pt _colour(highlight-glow);
-        border: 1px solid _colour(border-subtle);
-        background: _colour(bg-primary);
+        box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+        border: 1px solid _colour(aa-grey-5);
+        background: _colour(aa-white-100);
         position: absolute;
         z-index: 999;
         left: 1.75rem;
         text-align: left;
         padding: 0;
+        border-radius: .25rem;
 
         li {
             margin: 0;
@@ -37,12 +38,16 @@
         }
         a {
             font-size: _font(size-default);
+            color: _colour(aa-light-blue-100);
             width: 100%;
             text-decoration: none;
             padding: .35rem 1rem;
             display: inline-block;
             &:hover {
-                background-color: _colour(lh-hover-bg);
+                background-color: _colour(aa-light-blue-5);
+            }
+            &:active {
+                color: _colour(aa-blue-100);
             }
         }
     }

@@ -1,7 +1,7 @@
 .accordion-container {
    margin-bottom: .25rem;
    min-height: 2.75rem;
-   background-color: _colour(bg-primary);
+   background-color: _colour(aa-white-100);
 
    &.vertical {
       margin-bottom: .25rem;
@@ -17,7 +17,8 @@
                width: 2.75rem;
             }
 
-            .material-icons {
+            .material-icons,
+            .material-icons-outlined {
                text-align: center;
                width: 100%;
             }
@@ -106,7 +107,7 @@
 
    .accordion-trigger {
       height: 2.75rem;
-      background-color: _colour(bg-accordion);
+      background-color: _colour(aa-light-blue-30);
       border: none;
       border-radius: .1rem;
       font-family: _font(family-regular);
@@ -116,7 +117,7 @@
 
       .toggle-icons {
          display: block;
-         color: _colour(accordion-toggle);
+         color: _colour(aa-blue-100);
 
          .material-icons,
          .material-icons-outlined {
@@ -151,17 +152,17 @@
       }
 
       &.disabled {
-         background-color: _colour(bg-accordion-disabled)!important;
+         background-color: _colour(aa-grey-5)!important;
 
          &:hover {
             @include button-disabled;
-            background-color: _colour(bg-accordion-disabled) !important;
+            background-color: _colour(aa-grey-5) !important;
          }
 
          .material-icons,
          .material-icons-outlined,
          .accordion-heading {
-            color: _colour(body-text);
+            color: _colour(aa-grey-100);
             opacity: .5;
          }
 
@@ -186,8 +187,8 @@
       }
 
       &.clean {
-         background-color: _colour(bg-accordion-clean);
-         border: 1px solid _colour(border-subtle);
+         background-color: _colour(aa-white-100);
+         border: 1px solid _colour(aa-grey-5);
          padding-left: 0;
 
          .accordion-icon {
@@ -215,8 +216,11 @@
    }
 
    .accordion-icon:not(.drag-icon) {
-      color: _colour(heading-1);
+      color: _colour(aa-blue-100);
       font-size: _font(size-large);
+      &.aa-blue-100 {
+         color: _palette(aa-blue-100)!important;
+      }
    }
 
    .drag-icon {
@@ -230,13 +234,13 @@
    }
 
    .accordion-heading {
-      color: _colour(heading-1);
+      color: _colour(aa-blue-100);
       font-size: _font(size-default);
       font-family: _font(family-medium);
    }
 
    .accordion-panel {
-      background-color: _colour(bg-accordion-body);
+      background-color: _colour(aa-white-100);
       border-radius: 0 0 .1rem .1rem;
       font-size: _font(size-default);
 
@@ -256,7 +260,7 @@
       }
 
       &.clean {
-         background-color: _colour(bg);
+         background-color: _colour(aa-grey-2);
          border: none;
       }
    }

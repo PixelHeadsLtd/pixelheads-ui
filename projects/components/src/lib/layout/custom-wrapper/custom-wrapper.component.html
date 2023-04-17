@@ -1,0 +1,21 @@
+<section
+    class="{{borderColour}} {{backgroundColour}} position-relative"
+    [ngClass]="{
+        'box-shadow-strong' : boxShadow
+    }"
+    [ngStyle]="{
+        'border-radius' : borderRadius,
+        'padding' : paddingSize,
+        'min-width' : minWidth,
+        'max-width' : maxWidth,
+        'min-height' : minHeight,
+        'max-height' : maxHeight,
+        'z-index' : zIndex,
+        'border-width' : borderWidth,
+        'border-style' : borderStyle,
+        'margin-bottom' : marginBottom,
+        'overflow': enableScrolling ? 'auto' : 'initial'
+    }"
+>
+    <ng-content></ng-content>
+</section>

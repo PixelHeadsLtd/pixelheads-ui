@@ -88,7 +88,13 @@
       </aa-tab-navigation>
       
       <section class="content-container padding-bottom-0" *ngIf="activeTab">
-        <aa-tab-navigation-secondary [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <aa-tab-navigation-secondary 
+          [ngTemplate]="true" 
+          [displayTabContent]="false" 
+          (tabChanged)="tabChanged($event)"
+          tabColour="bg-aa-white-100"
+          tabActiveColour="bg-aa-light-blue-5"
+          >
           <aa-tab-navigation-secondary-item 
             *ngFor="let tab of tabsSecondaryNgTemplate; let i = index"
             tabName="{{tab.tabName}}" 
@@ -195,32 +201,85 @@
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
-          <tr>
-            <td datalabel="Element">aa-tab-navigation-item</td>
-            <td datalabel="Attribute">countColour</td>
-            <td datalabel="Type">String</td>
-            <td datalabel="Default"><a routerLink="/colours">Your colour</a></td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-tab-navigation-item</td>
-            <td datalabel="Attribute">tabCount</td>
-            <td datalabel="Type">Number</td>
-            <td datalabel="Default">Your value</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-tab-navigation-item</td>
-            <td datalabel="Attribute">[tabDisabled]</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">false</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-tab-navigation-item</td>
-            <td datalabel="Attribute">[showRightDivider]</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">false</td>
-          </tr>
+          <ng-container *ngIf="showMore">
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-item</td>
+              <td datalabel="Attribute">countColour</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default"><a routerLink="/colours">Your colour</a></td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-item</td>
+              <td datalabel="Attribute">tabCount</td>
+              <td datalabel="Type">Number</td>
+              <td datalabel="Default">Your value</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-item</td>
+              <td datalabel="Attribute">[tabDisabled]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-item</td>
+              <td datalabel="Attribute">[showRightDivider]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">false</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <h3 class="margin-bottom-0">tab-navigation-secondary</h3>
+              </td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary</td>
+              <td datalabel="Attribute">[ngTemplate]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary</td>
+              <td datalabel="Attribute">[displayTabContent]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary</td>
+              <td datalabel="Attribute">(tabChanged)</td>
+              <td datalabel="Type">Method</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary</td>
+              <td datalabel="Attribute">tabColour</td>
+              <td datalabel="Type">Any</td>
+              <td datalabel="Default"><a routerLink="/colours">Your chosen colour</a></td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary</td>
+              <td datalabel="Attribute">tabActiveColour</td>
+              <td datalabel="Type">Any</td>
+              <td datalabel="Default"><a routerLink="/colours">Your chosen colour</a></td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary-item</td>
+              <td datalabel="Attribute">tabName</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">Your tab name</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-secondary-item</td>
+              <td datalabel="Attribute">[tabDisabled]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+          </ng-container>
         </tbody>
       </table>
+      <nav class="margin-top-1">
+        <a class="cursor-pointer" *ngIf="!showMore" (click)="showMore=!showMore">show more</a>
+        <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
+      </nav>
     </section>
     
     <!-- mini menu -->
@@ -264,7 +323,10 @@
       </aa-tab-navigation>
       
       <section class="content-container padding-bottom-0">
-        <aa-tab-navigation-secondary [routerOutlet]="true">
+        <aa-tab-navigation-secondary 
+         [routerOutlet]="true"
+         tabColour="bg-aa-pink-100"
+        >
           <ng-container list-items>
               <li 
                 *ngFor="let tab of tabsSecondaryRouterOutlet" 

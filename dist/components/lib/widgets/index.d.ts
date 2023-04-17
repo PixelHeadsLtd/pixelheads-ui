@@ -23,4 +23,5 @@ export * from './toastr/toastr.component';
 export * from './toastr-item/toastr-item.component';
 export * from './tooltip/tooltip.component';
 export * from './user-feedback/user-feedback.component';
+export * from '../directives/carousel/carousel-item.directive';
 //# sourceMappingURL=index.d.ts.map

@@ -1,0 +1,12 @@
+<div class="wrapper">
+	<div class="content">
+		<ng-content></ng-content>
+	</div>
+	<div 
+        class="bar" 
+        (resizable)="onResize($event)"
+        (mousedown)="$event.stopPropagation()"
+    >
+        <div class="bar-inner"></div>
+    </div>
+</div>

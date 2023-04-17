@@ -11,7 +11,7 @@
 }
 
 .tab-navigation {
-  border-bottom: 1px solid _colour(secondary);
+  border-bottom: 1px solid _colour(aa-light-blue-100);
   padding-left: 1.25rem;
 
   .divider-tab {
@@ -23,7 +23,7 @@
 
   .tab-count {
     background-color: _colour(aa-light-blue-100);
-    color: _colour(body-text-reverse);
+    color: _colour(aa-white-100);
     border-radius: .25rem;
     font-size: _font(size-xsmall);
     padding: .18rem;
@@ -55,7 +55,7 @@
         text-decoration: none;
         display: flex;
         align-items: center;
-        color: _colour(body-text);
+        color: _colour(aa-grey-100);
         font-family: _font(family-medium);
         font-size: _font(size-default);
         border-bottom: 3px solid transparent;
@@ -64,8 +64,8 @@
         &:hover,
         &.active,
         &.selected {
-          border-bottom: 3px solid _colour(link);
-          color: _colour(link);
+          border-bottom: 3px solid _colour(trans-light-blue-to-blue-light);
+          color: _colour(trans-light-blue-to-blue-light);
         }
       }
       .material-icons,
@@ -79,10 +79,10 @@
       span {
         display: flex;
         align-items: center;
-        color: _colour(disabled-light);
+        color: _colour(aa-grey-25);
         cursor: not-allowed;
         &.tab-count {
-          background-color: _colour(bg);
+          background-color: _colour(aa-grey-2);
         }
       }
       span:not(.material-icons, .material-icons-outlined, .tab-count) {
@@ -100,15 +100,15 @@
     cursor: pointer; 
     text-decoration: none;
   }
-  background-color: _colour(bg-feature-box-solid);
+  background-color: _colour(aa-light-blue-15);
   margin-left: 0;
   padding: 1rem 1rem 0;
 
   button {
     &.material-icons,
     &.material-icons-outlined {
-      background-color: _colour(bg-secondary);
-      color: _colour(primary);
+      background-color: _colour(aa-light-blue-30);
+      color: _colour(aa-blue-100);
     }
   }
   li {
@@ -117,8 +117,8 @@
     flex: inherit;
     &.tab-disabled {
       h3.title, svg circle, .value {
-        stroke: _colour(body-text);
-        color: _colour(body-text);
+        stroke: _colour(aa-grey-100);
+        color: _colour(aa-grey-100);
       }
     }
   }
@@ -126,13 +126,13 @@
   .toggle-fullscreen {
     .material-icons,
     .material-icons-outlined {
-      color: _colour(heading-1);
+      color: _colour(aa-blue-100);
     }
   }
   
   .aa-tooltip {
     h3, p {
-      color: _colour(body-text);
+      color: _colour(aa-grey-100);
     }
   }
 
@@ -163,9 +163,9 @@
       &.active { h3.title { border-bottom: .25rem solid _palette(aa-green-100);} }
     }
     &.blue {
-      svg circle {stroke: _colour(blue-primary);}
-      .progress-circle, h3.title {color: _colour(blue-primary);}
-      &.active { h3.title { border-bottom: .25rem solid _colour(blue-primary);} }
+      svg circle {stroke: _colour(aa-blue-100);}
+      .progress-circle, h3.title {color: _colour(aa-blue-100);}
+      &.active { h3.title { border-bottom: .25rem solid _colour(aa-blue-100);} }
     }
     &.red {
       svg circle {stroke: _palette(aa-red-100);}
@@ -203,7 +203,7 @@
         &.active {
           .progress-circle, h3.title {
             color: _palette(aa-white-100);
-            background-color: _colour(blue-primary);
+            background-color: _colour(aa-blue-100);
           }
         }
       }
@@ -265,7 +265,7 @@
         circle {
           stroke-width: 7;
           &:first-child {
-            fill: _colour(bg-feature-box);
+            fill: _colour(aa-white-100);
           }
         }
       }
@@ -285,7 +285,7 @@
   .tab-disabled,
   .tab-disabled:hover {
     cursor: not-allowed;
-    border: 1px solid _colour(border-subtle);
+    border: 1px solid _colour(aa-grey-5);
     color: _colour(aa-grey-25);
     text-decoration: none;
     border-radius: 0.75rem;
@@ -302,9 +302,9 @@
       padding: 0 1rem 0 0;
 
       a {
-        background-color: _colour(bg-primary);
-        border-radius: 0.75rem;
-        border: 1px solid _colour(border-subtle);
+        background-color: _colour(aa-white-100);
+        border-radius: 0.5rem;
+        border: 1px solid _colour(aa-grey-5);
         color: _colour(aa-light-blue-100);
         padding: 0.5rem 1rem;
         font-size: _font(size-small);
@@ -314,8 +314,10 @@
         &:hover,
         &.active,
         &.selected {
-          border-color: _colour(secondary);
-          color: _colour(link);
+          border-color: _colour(aa-light-blue-100);
+          background-color: _colour(aa-light-blue-5);
+          box-shadow: 0 0 .15rem .15rem _colour(box-shadow);
+          color: _colour(trans-light-blue-to-blue-light);
           text-decoration: none;
         }
       }

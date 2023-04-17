@@ -1,5 +1,5 @@
 .aa-modal {
-  background-color:_colour(bg-modal);
+  background-color:_colour(aa-blue-100-overlay);
   top: 0;
   left: 0;
   position: fixed;
@@ -14,8 +14,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: _colour(bg);
-  border: 1px solid _colour(border-primary);
+  background-color: _colour(aa-grey-2);
+  border: 1px solid _colour(aa-grey-25);
   max-height: 80%;
   min-width: 15rem;
   border-radius: 0.5rem;

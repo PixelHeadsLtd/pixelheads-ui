@@ -7,7 +7,11 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 })
 export class AlertComponent implements OnInit {
   @Input() alertClass: string;
+  @Input() alertTitle: string;
   @Input() alertText: string;
+  @Input() collapsible: boolean;
+  @Input() alignIconTop: boolean;
+  @Input() expandPanel: boolean;
 
   constructor() { }
 

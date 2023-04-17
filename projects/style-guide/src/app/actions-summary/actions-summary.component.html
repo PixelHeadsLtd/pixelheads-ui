@@ -5,60 +5,42 @@
   <section class="content-container padding-0">
       <!-- start content repeater -->
       <section class="content-repeater flex-group">
-          <section class="flex-2 col-left flex-start">
+          <section class="flex-1 col-left flex-start">
             <h2>Actions summary</h2>
             <div class="describe margin-bottom-1">
               <p>These are the Actions summaries that are wrapped inside .feature-box</p>
             </div>
 
-            <article class="
-              actions-summary
-              margin-top-1 
-              flex-group"
+            <aa-button 
+              *ngIf="!verticalDisplay"
+              (buttonClick)="verticalDisplay= !verticalDisplay" 
+              fieldClass="boxed margin-bottom-1" 
+              buttonClass="primary" 
+              buttonId="'uttonId"
+              [showLabel]="false"
+              buttonLabel="Primary" 
+              buttonText="Show vertical display" 
+              disabled="">
+            </aa-button>
+
+            <aa-button 
+              *ngIf="verticalDisplay"
+              (buttonClick)="verticalDisplay= !verticalDisplay" 
+              fieldClass="boxed margin-bottom-1" 
+              buttonClass="primary" 
+              buttonId="'uttonId"
+              [showLabel]="false"
+              buttonLabel="Primary" 
+              buttonText="Show default display" 
+              disabled="">
+            </aa-button>
+            
+            <aa-actions-summary
+              [actionsSummaryItems]="actionsSummaryItems"
+              [verticalDisplay]="verticalDisplay"
+              [noWrap]="true"
             >
-              <aa-actions-summary
-                title="Total actions"
-                value="1"
-                status="default"
-                [divider]="true"
-              >
-              </aa-actions-summary>
-              <aa-actions-summary
-                title="Accepted"
-                value="0"
-                status="approved"
-                [divider]="true"
-              >
-              </aa-actions-summary>
-              <aa-actions-summary
-                title="Not started"
-                value="0"
-                status="not-started"
-                [divider]="true"
-              >
-              </aa-actions-summary>
-              <aa-actions-summary
-                title="In progress"
-                value="1"
-                status="pending"
-                [divider]="true"
-              >
-              </aa-actions-summary>
-              <aa-actions-summary
-                title="Completed"
-                value="0"
-                status="approved"
-                [divider]="true"
-              >
-              </aa-actions-summary>
-              <aa-actions-summary
-                title="Abandoned"
-                value="1"
-                status="rejected"
-                [divider]="false"
-              >
-              </aa-actions-summary>
-            </article>
+            </aa-actions-summary>
 
           </section>
       
@@ -77,10 +59,22 @@
               </thead>
               <tbody>
                 <tr>
-                  <td datalabel="Element">Article</td>
-                  <td datalabel="Attribute">Class</td>
-                  <td datalabel="Type">Class</td>
-                  <td datalabel="Default">.feature-box</td>
+                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Attribute">verticalDisplay</td>
+                  <td datalabel="Type">Boolean</td>
+                  <td datalabel="Default">False</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Attribute">noWrap</td>
+                  <td datalabel="Type">Boolean</td>
+                  <td datalabel="Default">False</td>
+                </tr>
+                <tr>
+                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Attribute">actionsSummaryItems</td>
+                  <td datalabel="Type">Array</td>
+                  <td datalabel="Default">Your array</td>
                 </tr>
                 <tr>
                   <td datalabel="Element">aa-actions-summary</td>
@@ -97,14 +91,8 @@
                 <tr>
                   <td datalabel="Element">aa-actions-summary</td>
                   <td datalabel="Attribute">status</td>
-                  <td datalabel="Type">Class</td>
-                  <td datalabel="Default">.default, approved, pending, rejected, not-started</td>
-                </tr>
-                <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
-                  <td datalabel="Attribute">divider</td>
-                  <td datalabel="Type">Boolean</td>
-                  <td datalabel="Default" class="aa-red-100">Set to "false" on the last actions summary component</td>
+                  <td datalabel="Type">String</td>
+                  <td datalabel="Default">'default', 'approved', 'pending', 'rejected', 'not-started'</td>
                 </tr>
               </tbody>
             </table>

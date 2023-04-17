@@ -1,18 +1,37 @@
-<section class="unauthorised flex-group flex-column space-between flex-nowrap">
-    <div class="unauthorised-content">
-        <h1>Unauthorised</h1>
-        <p class="align-center margin-bottom-0-25">
-            You are not authorised to perform the requested action. <br/>
-            Your session may have timed out? <br/>
-            Please retry the link from the main menu
-        </p>      
-        <a class="flex-center" href="https://core.angloamerican.com/security-amp/amp">
-            <span class="material-icons padding-right-0-25 aa-blue-100">rocket_launch</span>
-            Discover other applications
-        </a>
-    </div>
-    <div class="unauthorised-image">
-        <!-- <img src="./assets/images/unauthorised.svg" /> -->
-        <app-graphic class="app-graphic"></app-graphic>
-    </div>
+<!-- start content repeater -->
+<section class="content-repeater flex-group">
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+    </nav>
+    <aa-unauthorised
+        title="Unauthorised"
+        strapline="You are not authorised to perform the 
+        requested action. Your session may have timed out?
+        Please retry the link from the main menu"
+        straplineWidth="22rem"
+    >
+    </aa-unauthorised>
 </section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+>
+<article class="blade-content">
+    <a href="https://gist.github.com/angloux/47fe0ee950902d394b914f90ac1248ab" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/47fe0ee950902d394b914f90ac1248ab"></app-gist>
+</article>
+</aa-blade>
+    
+

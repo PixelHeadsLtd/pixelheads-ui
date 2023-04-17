@@ -16,6 +16,7 @@ export class TabNavigationComponent implements AfterContentChecked {
   tabRouterOutlet: boolean;
   tabInfo: boolean;
   toggleBlade: boolean;
+  showMore: boolean;
 
   public constructor(private changeDetector: ChangeDetectorRef) {}
 

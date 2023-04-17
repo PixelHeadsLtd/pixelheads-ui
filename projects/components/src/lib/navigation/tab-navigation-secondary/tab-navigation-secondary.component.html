@@ -11,7 +11,22 @@
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li>
-        <a *ngIf="!tab.tabDisabled" [id]="tab.tabId" [class.active]="isActive(tab)" (click)="onTabClicked(tab)">{{ tab.tabName }}</a>
+        <a 
+          class="{{tabColour}}" 
+          *ngIf="!isActive(tab) && !tab.tabDisabled" 
+          [id]="tab.tabId" 
+          [class.active]="isActive(tab)" 
+          (click)="onTabClicked(tab)">
+          {{ tab.tabName }}
+        </a>
+        <a 
+          class="{{tabActiveColour}}" 
+          *ngIf="isActive(tab) && !tab.tabDisabled" 
+          [id]="tab.tabId" 
+          [class.active]="isActive(tab)" 
+          (click)="onTabClicked(tab)">
+          {{ tab.tabName }}
+        </a>
         <span *ngIf="tab.tabDisabled" class="tab-disabled">{{ tab.tabName }}</span>
       </li>
     </ng-container>

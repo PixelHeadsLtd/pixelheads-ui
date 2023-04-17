@@ -56,6 +56,7 @@
   margin: 0;
   opacity: 1 !important; //override bs
   font-size: _font(size-default);
+  z-index: unset!important; // should be set on the popup hover state
 
   &.as-link {
     width: auto;
@@ -86,7 +87,7 @@
   }
 
   &:hover div:not(.show-tooltip-on-click:hover div) {
-    display: block;
+    display: inline-block;
   }
 
   .right.bottom {
@@ -114,34 +115,34 @@
   }
 
   &.is-warning {
-    color: _colour(alert-warning-header);
+    color: _colour(aa-orange-100);
     .feature-box {
-      color: _colour(alert-warning-body);
-      border-color: _colour(alert-warning-100);
+      color: _colour(aa-orange-100);
+      border-color: _colour(aa-orange-100);
     }
   }
 
   &.is-error {
-    color: _colour(alert-error-header);
+    color: _colour(aa-red-100);
     .feature-box {
-      color: _colour(alert-error-body);
-      border-color: _colour(alert-error-100);
+      color: _colour(aa-red-100);
+      border-color: _colour(aa-red-100);
     }
   }
 
   &.is-info {
-    color: _colour(alert-info-header);
+    color: _colour(aa-light-blue-100);
     .feature-box {
-      color: _colour(alert-info-body) !important;
+      color: _colour(aa-light-blue-100) !important;
       border-color: _colour(alert-info-100);
     }
   }
 
   &.is-success {
-    color: _colour(alert-success-header);
+    color: _colour(aa-green-100);
     .feature-box {
-      color: _colour(alert-success-body);
-      border-color: _colour(alert-success-100);
+      color: _colour(aa-green-100);
+      border-color: _colour(aa-green-100);
     }
   }
   &.custom-icon {
@@ -150,10 +151,10 @@
       font-size: 1.15rem;
       cursor: default;
       display: inline-flex;
-      &.is-warning {color: _colour(alert-warning-header);}   
-      &.is-error {color: _colour(alert-error-header);}
-      &.is-info {color: _colour(alert-info-header);}
-      &.is-success {color: _colour(alert-success-header);}
+      &.is-warning {color: _colour(aa-orange-100);}   
+      &.is-error {color: _colour(aa-red-100);}
+      &.is-info {color: _colour(aa-light-blue-100);}
+      &.is-success {color: _colour(aa-green-100);}
     }
     &:before {
       content: "";

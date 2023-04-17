@@ -2,11 +2,23 @@
   <label for="{{fileUploadId}}">{{fileUploadLabel}}</label>
   <div class="flex-group flex-start">
     <div class="file-upload">
-      <input name="file-upload" type="file" id="{{fileUploadId}}" accept="{{fileUploadExtentions}}" value="{{fileUploadValue}}">
+      <input 
+        name="file-upload" 
+        type="file" 
+        id="{{fileUploadId}}" 
+        accept="{{fileUploadExtentions}}" 
+        value="{{fileUploadValue}}"
+        title="{{fileUploadName}}"
+      >
       <div class="file-upload-graphic">
         <div>{{fileUploadText}}</div>
       </div>
     </div>
-    <div *ngIf="fileUploadName" class="file-upload-name margin-top-0-5 italic">{{ fileUploadName }}</div>
+    <div 
+      *ngIf="fileUploadName" 
+      class="file-upload-name margin-top-0-5 italic"
+      >
+      {{ fileUploadName }}
+    </div>
   </div>
 </div>

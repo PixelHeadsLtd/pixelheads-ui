@@ -318,6 +318,14 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
       icon: 'dashboard',
       iconColour: 'bg-aa-blue-100',
       borderColour: 'bd-aa-light-blue-100',
+      link: 'custom-wrapper',
+    },
+    {
+      id: 'Layout',
+      heading: 'Layout',
+      icon: 'dashboard',
+      iconColour: 'bg-aa-blue-100',
+      borderColour: 'bd-aa-light-blue-100',
       link: 'filter',
     },
     {

@@ -1,7 +1,7 @@
 .progress-bar {
     font-size: _font(size-xsmall);
     .progress {
-        background-color: _colour(bg-secondary);
+        background-color: _colour(aa-light-blue-30);
         margin: .15rem 0;
         overflow: hidden;
         border-radius: .5rem;
@@ -9,7 +9,7 @@
         width: 100%;
         
         div {
-            background-color: _colour(progress-bar);
+            background-color: _colour(trans-blue-to-orange);
             height: .2rem;
         }
     }

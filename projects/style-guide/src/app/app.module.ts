@@ -15,11 +15,12 @@ import { NgModule } from '@angular/core';
 import { AppIconsPipe } from '../pipes/app-icons.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { AgGridModule } from 'ag-grid-angular';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionFancyComponent } from './accordion-fancy/accordion-fancy.component';
 import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
+import { AgGridModule } from 'ag-grid-angular';
 import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AnchorComponent } from './anchor/anchor.component';
@@ -64,6 +65,7 @@ import { TabNavigationComponent } from './tab-navigation/tab-navigation.componen
 import { TabPageOneComponent } from './tab-navigation/tab-page-one/tab-page-one.component';
 import { TabPageTwoComponent } from './tab-navigation/tab-page-two/tab-page-two.component';
 import { TabPageThreeComponent } from './tab-navigation/tab-page-three/tab-page-three.component'
+import { TabPageFourComponent } from './tab-navigation/tab-page-four/tab-page-four.component'
 import { TabSubPageOneComponent } from './tab-navigation/tab-sub-page-one/tab-sub-page-one.component';
 import { TabSubPageTwoComponent } from './tab-navigation/tab-sub-page-two/tab-sub-page-two.component';
 import { TabSubPageThreeComponent } from './tab-navigation/tab-sub-page-three/tab-sub-page-three.component';
@@ -109,7 +111,6 @@ import { CommentsComponent } from './comments/comments.component';
 import { NgxQuillComponent } from './ngx-quill/ngx-quill.component';
 import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-and-answers.component';
 import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
-import { GraphicComponent } from './unauthorised/graphic.component';
 import { MiscComponent } from './misc/misc.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
@@ -117,6 +118,9 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
 import { CounterComponent } from './counter/counter.component';
 import { OpenLeftNavService } from './landing-page/left-nav-service';
 import { ClickOutsideDirective } from '../directives/click-outside.directive';
+import { ResizableComponent } from '../directives/resizable/resizable.component';
+import { ResizableDirective } from '../directives/resizable/resizable.directive';
+import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
 
 @NgModule({
   declarations: [
@@ -169,6 +173,7 @@ import { ClickOutsideDirective } from '../directives/click-outside.directive';
     TabPageOneComponent,
     TabPageTwoComponent,
     TabPageThreeComponent,
+    TabPageFourComponent,
     TabSubPageOneComponent,
     TabSubPageTwoComponent,
     TabSubPageThreeComponent,
@@ -216,19 +221,23 @@ import { ClickOutsideDirective } from '../directives/click-outside.directive';
     CarouselComponent,
     QuestionsAndAnswersComponent,
     UnauthorisedComponent,
-    GraphicComponent,
     MiscComponent,
     ListSelectableComponent,
     UiBlockComponent,
     StatusIndicatorComponent,
     CounterComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    ResizableComponent,
+    ResizableDirective,
+    CustomWrapperComponent,
+    CustomWrapperComponent
   ],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
     SharedModule,
@@ -244,6 +253,7 @@ import { ClickOutsideDirective } from '../directives/click-outside.directive';
     QuillModule.forRoot(),
     AgGridModule.withComponents([CustomTooltipComponent, CustomValidationTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
+  exports: [ResizableComponent],
   providers: [OpenLeftNavService],
   bootstrap: [AppComponent],
   entryComponents: [

@@ -1,72 +1,75 @@
 .nav-vertical {
-  background-color: _colour(bg-tertiary)!important;
-  border-right: 1px solid _colour(border-secondary)!important;
+  background-color: _colour(aa-white-100)!important;
+  border-right: 1px solid _colour(aa-light-blue-30)!important;
 }
-ul.nav-tabs {
-  // DEFAULTS
+ul {
   padding-left: 0;
-  a {
-    border-left: none!important;
-    text-decoration: none!important;
-    position: relative;
-    line-height: 1.5rem;
-  }
-  span {
-    color:unset!important;
-    background-color: transparent!important;
-  }
-  // tweak chevron position
-  [data-toggle=collapse] {
-    &:after {
-      top: 5px!important;
-      right: 10px!important;
+  &.nav-tabs {
+    // DEFAULTS
+    padding-left: 0;
+    a {
+      border-left: none!important;
+      text-decoration: none!important;
+      position: relative;
+      line-height: 1.5rem;
     }
-  }
-  // PARENT LIST
-  > li {
-    a.nav-link {
-      font-size: .8rem!important;
-      background-color: _colour(lh-nav-bg-primary)!important;
-      color: _colour(lh-nav-text-primary)!important;
-      &.active {
-        background-color: _colour(lh-nav-bg-hover)!important;
-        color: _colour(lh-nav-text-active)!important;
-        i {
-          color: _colour(lh-nav-icon-active)!important;
-        }
+    span {
+      color:unset!important;
+      background-color: transparent!important;
+    }
+    // tweak chevron position
+    [data-toggle=collapse] {
+      &:after {
+        top: 5px!important;
+        right: 10px!important;
       }
-      i {
-        color: _colour(lh-nav-icon-primary)!important;
-      }
-      &:hover {
-        color: _colour(lh-nav-text-hover)!important;
-        background-color: _colour(lh-nav-bg-hover)!important;
-        i {
-          color: _colour(lh-nav-icon-active)!important;
-        }
-      }
-      // expanded active sections
-      &[data-toggle="collapse"] {
-        &[aria-expanded="true"] {
-          background-color: _colour(lh-nav-bg-active) !important;
-          color: _colour(lh-nav-text-active)!important;
+    }
+    // PARENT LIST
+    > li {
+      a.nav-link {
+        font-size: .8rem!important;
+        background-color: _colour(aa-white-100)!important;
+        color: _colour(trans-blue-to-white)!important;
+        &.active {
+          background-color: _palette(aa-blue-100)!important;
+          color: _palette(aa-white-100)!important;
           i {
-            color: _colour(lh-nav-icon-active)!important;
-          }  
-          // little chevron when active
-          &:after {
-            color: _colour(lh-nav-icon-active)!important;
+            color: _palette(aa-white-100)!important;
           }
         }
-      }
-      // little chevron
-      &.collapsed {
-        &:after {
-          color: _colour(lh-nav-icon-primary)!important;
+        i {
+          color: _colour(trans-blue-to-white)!important;
         }
         &:hover {
+          color: _palette(aa-white-100)!important;
+          background-color: _palette(aa-blue-100)!important;
+          i {
+            color: _palette(aa-white-100)!important;
+          }
+        }
+        // expanded active sections
+        &[data-toggle="collapse"] {
+          &[aria-expanded="true"] {
+            background-color: _palette(aa-plum-100) !important;
+            color: _palette(aa-white-100)!important;
+            i {
+              color: _palette(aa-white-100)!important;
+            }  
+            // little chevron when active
+            &:after {
+              color: _palette(aa-white-100)!important;
+            }
+          }
+        }
+        // little chevron
+        &.collapsed {
           &:after {
-            color: _colour(lh-nav-icon-hover)!important;
+            color: _colour(trans-blue-to-white)!important;
+          }
+          &:hover {
+            &:after {
+              color: _palette(aa-white-100)!important;
+            }
           }
         }
       }

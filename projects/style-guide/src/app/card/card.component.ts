@@ -19,6 +19,7 @@ export class CardComponent implements OnInit {
   showCardMini: boolean;
   showAvatar: boolean;
   showCardList: boolean;
+  showCardDetailed: boolean;
   toggleBlade: boolean;
   cardDescription: string = 'This is the card description, it must not exceed two lines, therefore we are truncating large descriptions';
   

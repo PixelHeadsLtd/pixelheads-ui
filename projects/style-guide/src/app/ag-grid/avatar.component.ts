@@ -33,7 +33,7 @@ export class AvatarComponent implements ICellRendererAngularComp {
           event: $event,
           rowData: this.params.node.data,
           // ...something
-        }
+        };
         this.params.onClick(this.params);
       }
     }

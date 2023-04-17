@@ -34,20 +34,18 @@
 
 <div *ngIf="customShield" class="custom-alert-shield">
     <div 
-        class="flex-group flex-align-center flex-start custom-alert-shield-container"
+        class="
+            flex-group 
+            flex-align-center 
+            flex-start 
+            custom-alert-shield-container
+            {{shieldColour}}
+        "
         [ngClass]="{
             'small' : alertShieldSmall,
             'nowrap' : noWrap,
-            'bg-aa-red-8' : bgRedLight,
-            'bg-aa-red-100' : bgRedDark,
-            'bg-aa-green-5' : bgGreenLight,
-            'bg-aa-green-100' : bgGreenDark,
-            'bg-aa-orange-10' : bgOrangeLight,
-            'bg-aa-orange-100' : bgOrangeDark,
-            'bg-aa-light-blue-15' : bgBlueLight,
-            'bg-aa-light-blue-100' : bgBlueDark,
-            'bg-aa-grey-10' : bgGreyLight,
-            'bg-aa-grey-100' : bgGreyDark
+            'icon-only' : iconOnly,
+            'rotate' : enableRotation
         }"
       >
         <div 

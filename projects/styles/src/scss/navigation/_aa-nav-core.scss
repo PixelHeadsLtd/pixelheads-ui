@@ -6,10 +6,10 @@
   bottom: 0;
   left: 0;
   padding-bottom: 4rem;
-  background-color: _colour(lh-nav-bg-primary);
-  border-right: 1px solid _colour(lh-nav-border-secondary);
+  background-color: _colour(aa-white-100);
+  border-right: 1px solid _colour(aa-light-blue-15);
   transition: all .25s linear;
-  box-shadow: 0 4px 8px _colour(lh-nav-shadow);
+  box-shadow: 0 4px 8px _colour(box-shadow);
   ::-webkit-scrollbar {
     display: none;
   }
@@ -42,7 +42,7 @@
     text-decoration: none;
     cursor: pointer;
     padding: .325rem .5rem .325rem 1.5rem;
-    color: _colour(lh-nav-text-primary);
+    color: _colour(trans-blue-to-white);
     span {
       &.material-icons,
       &.material-icons-outlined {
@@ -76,7 +76,7 @@
         min-height: 2.75rem;
         width: 100%;
         font-family: _font(family-medium);
-        border-bottom: 1px solid _colour(lh-nav-border-primary);
+        border-bottom: 1px solid _colour(aa-light-blue-30);
         box-shadow: 0 8px 20px rgba(0, 39, 118, 15%);
         span:not(.material-icons, .material-icons-outlined) {
           margin-left: 2.75rem;
@@ -163,7 +163,7 @@
           }
         }
         &:hover {
-          background-color: _colour(bg-feature-box-solid);
+          background-color: _colour(aa-light-blue-15);
         }
         &.hide-chevron {
           &::after {
@@ -195,10 +195,10 @@
         }
       }
       // PARENT ANCHOR - (DESIGN LANGUAGE ONLY - SETTING WHITE BG COLOUR ON MENU ITEMS)
-      > a,
-      > a .menu-item {
-        background-color: _colour(lh-nav-bg-secondary);
-      }
+      // > a,
+      // > a .menu-item {
+      //   background-color: _colour(aa-grey-2);
+      // }
       // ---------------------------- CHILD UL ----------------------------
       ul {
         transition: all .25s linear;
@@ -209,7 +209,7 @@
           a {
             position: relative;
             padding: .5rem .5rem .5rem 1.25rem;
-            border-bottom: 1px solid _colour(lh-nav-border-secondary);
+            border-bottom: 1px solid _colour(aa-light-blue-15);
             &:hover,
             &.selected {
               .material-icons,
@@ -258,12 +258,12 @@
     button {
       &.material-icons,
       &.material-icons-outlined {
-        color: _colour(body-text);
+        color: _colour(aa-grey-100);
         background-color: transparent;
       }
       &:hover {
         background-color: transparent!important;
-        color: _colour(body-text)!important;
+        color: _colour(aa-grey-100)!important;
       }
     }
   }

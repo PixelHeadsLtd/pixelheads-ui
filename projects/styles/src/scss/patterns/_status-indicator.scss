@@ -20,13 +20,13 @@ aa-status-indicator {
         right: .1rem;
         top: -.1rem;
         font-size: _font(size-tiny);
-        color: _colour(bg);
+        color: _colour(aa-grey-2);
         border-radius: 50%;
         text-align: center;
         width: 0.65rem;
         height: 0.65rem;
         line-height: .65rem;
-        background: _colour(body-text);
+        background: _colour(aa-grey-100);
         box-shadow: 0 0 2px _palette(aa-white-100);
         padding-left: .05rem;
       }

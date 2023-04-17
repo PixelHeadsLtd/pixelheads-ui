@@ -2,7 +2,9 @@
 .loading-spinner-page,
 .aa-modal,
 .user-feedback,
-.aa-ip-results {z-index: 999999}
+.aa-ip-results,
+.ng-tooltip,
+.aa-tooltip:hover div {z-index: 999999}
 
 footer,
 .toast-container,
@@ -16,9 +18,6 @@ footer,
 .blade.show-blade {z-index: 20}
 
 .aa-blade-modal {z-index: 19}
-
-.ng-tooltip,
-.aa-tooltip:hover div {z-index: 5}
 
 .hover-card,
 .file-upload input[type="file"],

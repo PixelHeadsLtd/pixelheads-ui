@@ -1,4 +1,15 @@
 .dl-container {
+  dl {
+    &.vertical-display {
+      display: block;
+
+      .dl-repeater {
+        &.highlight {
+          margin-right: .25rem;
+        }
+      }
+    }
+  }
   &.display-block {
     dt {
       margin-bottom: .25rem;
@@ -25,7 +36,7 @@ dl {
     padding: .5rem .75rem;
 
     &.highlight {
-      background-color: _colour(highlight-tertiary);
+      background-color: _colour(aa-light-blue-15);
       border-radius: .25rem;
       margin-right: 1.75rem;
 
@@ -56,7 +67,7 @@ dl {
 
   dt {
     font-family: _font(family-medium);
-    color: _colour(dt);
+    color: _colour(aa-light-blue-100);
     display: inline-block;
     padding-right: 0.5rem;
   }
@@ -72,8 +83,8 @@ dl {
   .dl-container {
     padding: 0;
     border-radius: .5rem;
-    border: 2px solid _colour(border-feature-box);
-    background-color: _colour(bg-feature-box);
+    border: 2px solid _colour(aa-light-blue-15);
+    background-color: _colour(aa-white-100);
 
     >dl {
       display: flex;

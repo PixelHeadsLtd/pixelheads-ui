@@ -32,7 +32,7 @@ export class AgGridComponent {
   validation: boolean;
   getLicence: boolean;
   codeCopied: boolean;
-  
+
   awarded: string = 'Gold';
   awardDate: string = '19-Apr-2021';
   awardVenue: string = 'Internation Swimming Awards';
@@ -41,14 +41,15 @@ export class AgGridComponent {
     $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
-  agGridLicence = `export const environment = {
+  // For copy and paste
+  copyLicence = `export const environment = {
     production: false,
     agGridLicense:
-      'CompanyName=SparkDynamic GmbH_on_behalf_of_ANGLO AMERICAN SERVICES (UK) LTD.,LicensedGroup=Expertly Managed Computers,LicenseType=MultipleApplications,LicensedConcurrentDeveloperCount=50,LicensedProductionInstancesCount=0,AssetReference=AG-022882,ExpiryDate=19_February_2023_[v2]_MTY3Njc2NDgwMDAwMA==946d390650835fc8398c4575b3c1c97a'
+      'CompanyName=SparkDynamic GmbH_on_behalf_of_ANGLO AMERICAN SERVICES (UK) LTD.,LicensedGroup=Expertly Managed Computers,LicenseType=MultipleApplications,LicensedConcurrentDeveloperCount=50,LicensedProductionInstancesCount=0,AssetReference=AG-035826,SupportServicesEnd=19_February_2024_[v2]_MTcwODMwMDgwMDAwMA==348d784120945d6e05b1457447bb271b'
   };`;
 
   copyToClipboard(item): void {
-    let listener = (e: ClipboardEvent) => {
+    const listener = (e: ClipboardEvent) => {
         e.clipboardData.setData('text/plain', (item));
         e.preventDefault();
     };
@@ -57,15 +58,15 @@ export class AgGridComponent {
     document.execCommand('copy');
     document.removeEventListener('copy', listener);
     this.codeCopied = true;
-    setTimeout(()=>{                         
+    setTimeout(()=>{
       this.codeCopied = false;
     }, 3000);
   }
 
   constructor(public http: HttpClient) {
-    this.defaultColDef = { 
-      resizable: true, 
-      sortable: true, 
+    this.defaultColDef = {
+      resizable: true,
+      sortable: true,
       editable: true,
     };
     this.tooltipShowDelay = 0;
@@ -85,7 +86,7 @@ export class AgGridComponent {
       headerCheckboxSelection: true,
       headerCheckboxSelectionFilteredOnly: true,
       checkboxSelection: true,
-      //cellClass: this.cellClass,
+      // cellClass: this.cellClass,
       tooltipField: "age", // tell ag-grid to use this cell as a tooltip
       tooltipComponent: "CustomCardComponent", // pass in our custom-card.component
       cellRenderer: 'AvatarComponent', // display the image avatar in ag-grid cell
@@ -140,7 +141,7 @@ export class AgGridComponent {
       width: 100,
       tooltipField: "bronze",
       tooltipComponent: "CustomValidationTooltipComponent",
-      //cellClass: this.cellClass
+      // cellClass: this.cellClass
     },
     {
       field: "total",
@@ -150,18 +151,11 @@ export class AgGridComponent {
       field: "next",
       width: 100,
       cellRenderer: () => {
-        let elem = document.createElement('div');
-        elem.innerHTML = 
-          `<aa-alert-shield
-          [customShield]="true"
-          [alertShieldSmall]="false"
-          [noWrap]="true"
-          [bgGreenLight]="true"
-          iconName="update"
-          minWidth="12rem"
-          alertShieldText="Running"
-        >
-        </aa-alert-shield>`;
+        const elem = document.createElement('div');
+        elem.innerHTML =
+          `<div class="alert-shield info">
+            Information
+          </div>`;
         return elem;
       }
     },
@@ -174,10 +168,10 @@ export class AgGridComponent {
       resizable: true
     },
     frameworkComponents: {
-      CustomTooltipComponent: CustomTooltipComponent, 
-      CustomValidationTooltipComponent: CustomValidationTooltipComponent, 
-      CustomCardComponent: CustomCardComponent, 
-      AvatarComponent: AvatarComponent,
+      CustomTooltipComponent,
+      CustomValidationTooltipComponent,
+      CustomCardComponent,
+      AvatarComponent,
       ellipsisContextMenuCell: EllipsisContextMenuComponent
     },
     onFirstDataRendered: (event) => event.columnApi.autoSizeAllColumns(),

@@ -9,8 +9,8 @@
 .nav-context {
     position: absolute;
     bottom: 0;     
-    background-color: _colour(bg-primary);
-    border-right: 1px solid _colour(border-primary);
+    background-color: _colour(aa-white-100);
+    border-right: 1px solid _colour(aa-grey-25);
     padding: 0.5rem 0;
     
     button.menu {
@@ -46,7 +46,7 @@
             }
             &:hover,
             &.selected {
-                background-color: _colour(bg-selected);
+                background-color: _colour(aa-grey-5);
             }
         }
     }

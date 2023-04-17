@@ -12,6 +12,8 @@ export class CardComponent implements OnInit {
   @Input() cardRole: string;
   @Input() cardOptional: boolean;
   @Input() cardMini: boolean;
+  @Input() cardDetailed: boolean;
+  @Input() cardWidth: any;
   @Input() themeColour: boolean;
   @Input() zIndex: number;
   @Input() imgPath: any;
@@ -20,9 +22,9 @@ export class CardComponent implements OnInit {
   @Input() showAsProfile: boolean;
   @Input() iconName: string;
   @Input() borderClass: string;
-  @Input() topPos: number;
-  @Input() rightPos: number;
-  @Input() leftPos: number;
+  @Input() topPos: any;
+  @Input() rightPos: any;
+  @Input() leftPos: any;
 
   @Output() cardClick = new EventEmitter<Event>();
 

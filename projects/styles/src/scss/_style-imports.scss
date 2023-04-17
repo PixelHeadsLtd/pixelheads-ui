@@ -95,7 +95,7 @@
 
 @import './widgets/core-overrides';
 @import './widgets/design-lang-ui';
-@import './widgets/template-builder';
+@import './widgets/cdk-drag-and-drop';
 
 @import './widgets/aa-accordion';
 @import './widgets/dl-alignment-markers';
@@ -109,6 +109,7 @@
 @import './widgets/aa-modal';
 @import './widgets/aa-overlay';
 @import './widgets/aa-popover';
+@import './widgets/aa-search';
 @import './widgets/aa-toastr';
 @import './widgets/aa-tooltip';
 @import './widgets/aa-user-feedback';

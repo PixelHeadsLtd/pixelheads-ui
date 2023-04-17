@@ -177,10 +177,10 @@ input.list:not([role="combobox"]) {
   // stolen tooltip styling
 
   .ng-tooltip {
-    background: white;
-    border: 1px solid_colour(secondary);
+    background: _colour(aa-white-100);
+    border: 1px solid_colour(aa-light-blue-100);
     border-radius: 0.5rem;
-    _colour(primary);
+    color: _colour(aa-blue-100);
     font-size: _font(size-default);
     max-width: 19rem;
     text-align: center;
@@ -202,7 +202,7 @@ input.list:not([role="combobox"]) {
     right: 100%;
     margin-top: -5px;
     border-width: 5px;
-    border-color: transparent _colour(secondary); transparent transparent;
+    border-color: transparent _colour(aa-light-blue-100); transparent transparent;
   }
   .ng-tooltip-show {
     opacity: 1;

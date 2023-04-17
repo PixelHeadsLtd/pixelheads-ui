@@ -6,6 +6,8 @@ export declare class TabNavigationSecondaryComponent implements OnInit, AfterCon
     displayTabContent: boolean;
     routerOutlet: boolean;
     ngTemplate: boolean;
+    tabColour: any;
+    tabActiveColour: any;
     tabClicked: EventEmitter<TabNavigationSecondaryItemComponent>;
     tabChanged: EventEmitter<TabNavigationSecondaryItemComponent>;
     currentTab: TabNavigationSecondaryItemComponent;

@@ -1,8 +1,9 @@
+.aa-filter,
 .filter-container {
-  background-color: _colour(bg-filter);
+  background-color: _colour(aa-light-blue-15);
   padding: 0 1.25rem 1.25rem !important;
-  border-top: 1px solid _colour(border-secondary);
-  border-bottom: 1px solid _colour(border-secondary);
+  border-top: 1px solid _colour(aa-light-blue-30);
+  border-bottom: 1px solid _colour(aa-light-blue-30);
 }
 
 .filter-gradient {

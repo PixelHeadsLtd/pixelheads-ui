@@ -11,7 +11,7 @@
 
     .NgxEditor__Popup {
         top: unset;
-        background-color: _colour(bg-primary);
+        background-color: _colour(aa-white-100);
         width: 208px;
 
 // ------------- MAP TO DESIGN LANGUAGE COLOR PALETTE -----------------
@@ -81,7 +81,7 @@
     }
 
     .NgxEditor {
-        background-color: _colour(bg-primary);
+        background-color: _colour(aa-white-100);
         border-radius: .5rem;
         // hide
         span[style*='color:#fbca04'],
@@ -208,19 +208,19 @@
         align-items: flex-start;
 
         .NgxEditor__Dropdown--DropdownMenu {
-            background-color: _colour(bg-primary);
+            background-color: _colour(aa-white-100);
             .NgxEditor__Dropdown--Item {
                 &:nth-child(n+4) {
                     display: none;
                 }
                 &:hover {
-                    background-color: _colour(bg);
+                    background-color: _colour(aa-grey-2);
                 }
             }
         }
 
         &:hover {
-            background-color: _colour(bg-primary);
+            background-color: _colour(aa-white-100);
         }
 
         .NgxEditor__Dropdown--Text {
@@ -232,7 +232,7 @@
 
         &.NgxEditor__Dropdown--Open, 
         &.NgxEditor__Dropdown--Selected {
-            background-color: _colour(bg-primary);
+            background-color: _colour(aa-white-100);
 
             .NgxEditor__Dropdown--Text {
                 color: _palette(aa-green-100);
@@ -248,11 +248,11 @@
         position: relative;
         z-index: 999!important;
         padding: .25rem .5rem;
-        background-color: _colour(bg-primary);
+        background-color: _colour(aa-white-100);
     }
     
     svg {
-        fill: _colour(body-text);
+        fill: _colour(aa-grey-100);
     }
 
     ol, ul {

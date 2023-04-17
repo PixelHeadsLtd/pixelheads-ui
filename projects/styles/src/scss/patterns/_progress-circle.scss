@@ -6,8 +6,8 @@
   flex-direction: column;
 
   &.panel-view {
-    background-color: _colour(bg-primary);
-    border: 1px solid _colour(border-box);
+    background-color: _colour(aa-white-100);
+    border: 1px solid _colour(aa-grey-10);
     margin-bottom: .75rem;
     width: 13rem;
     height: 13rem;
@@ -17,7 +17,7 @@
       margin: 0 0 1.25rem 0;
       width: 100%;
       padding: 1rem 0;
-      border-bottom: 1px solid _colour(border-box);
+      border-bottom: 1px solid _colour(aa-grey-10);
 
       .material-icons:not(.status),
       .material-icons-outlined:not(.status) {
@@ -40,7 +40,7 @@
   }
 
   .value {
-    //color: _colour(secondary);
+    //color: _colour(aa-light-blue-100);
     position: absolute;
     top: 0;
     left: 0;
@@ -118,12 +118,12 @@
 
     &.blue {
       svg circle {
-        stroke: _colour(blue-primary);
+        stroke: _colour(aa-blue-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _colour(blue-primary);
+        color: _colour(aa-blue-100);
       }
     }
 
@@ -186,7 +186,7 @@
         .progress-circle,
         h3.title {
           color: _palette(aa-white-100);
-          background-color: _colour(blue-primary);
+          background-color: _colour(aa-blue-100);
         }
       }
     }

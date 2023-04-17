@@ -1,20 +1,23 @@
-a, a.icon-info {
-  color: _colour(link); // don't make this important or it breaks the header
+a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
+  color: _colour(trans-light-blue-to-blue-light); // don't make this important or it breaks the header
   font-size: _font(size-default);
-  text-decoration: underline;
+
+  &:-webkit-any-link {
+    text-decoration: none;
+  }
 
   &:hover {
-    color: _colour(link-hover);
+    color: _colour(trans-light-blue-to-blue-light);
     text-decoration: underline;
   }
 
-  &.text-decoration-none {
-    text-decoration: none;
+  h1, h2, h3, h4, h5 {
+    color: _colour(trans-light-blue-to-blue-light);
   }
 }
 
 .anchor-back {
-  color: _colour(link) !important;
+  color: _colour(trans-light-blue-to-blue-light) !important;
   font-family: _font(family-medium);
   display: inline-block;
   padding-left: .85rem;
@@ -23,11 +26,11 @@ a, a.icon-info {
   margin-left: -.5rem;
   position: relative;
   font-size: 0.8125rem;
-  text-decoration: underline;
   cursor: pointer;
 
   &:hover {
-    color: _colour(link-hover);
+    color: _colour(aa-light-blue-100);
+    text-decoration: underline;
   }
 
   &:before {
@@ -41,15 +44,15 @@ a, a.icon-info {
 }
 
 .anchor-close {
-  color: _colour(link);
+  color: _colour(trans-light-blue-to-blue-light);
   cursor: pointer;
   display: inline-block;
   font-size: _font(size-default);
   padding-right: 1rem;
   position: relative;
-  text-decoration: underline;
 
   &:hover {
+    text-decoration: underline;
     &:after {
       transform: rotate(180deg);
       transition-duration: 0.3s;
@@ -68,7 +71,7 @@ a, a.icon-info {
 
 .feature-box.solid {
   a {
-    color: _colour(link-secondary);
+    color: _colour(aa-light-blue-100);
   }
 }
 

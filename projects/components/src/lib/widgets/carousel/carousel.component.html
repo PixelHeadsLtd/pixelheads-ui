@@ -1,12 +1,43 @@
-<div 
-class="aa-carousel" 
-[ngStyle]="{ 'max-width' : maxWidth }"
-[ngClass]="{ 'margin-auto' : alignCenter }"
+<section 
+    class="flex-group flex-center {{customClass}}"
+    [ngStyle]="{'width' : carouselOuterWidth}"
 >
-    <section class="aa-carousel-content">
-        <ng-content select="[carousel-content]"></ng-content>
-    </section>
-    <nav class="aa-carousel-footer">
-        <ng-content select="[carousel-footer]"></ng-content>
-    </nav>
-</div>
+    <div 
+        class="aa-carousel" 
+        [ngStyle]="{
+            'width' : carouselInnerWidth,
+            'height' : carouselInnerHeight
+        }"
+    >
+        <div class="aa-carousel-content flex-group flex-nowrap" #carousel>
+            <div 
+                aaCarouselSlide
+                *ngFor="let item of items;" 
+                class="carousel-item {{carouselItemBgColour}}" 
+                [ngStyle]="{
+                    'min-width' : carouselItemWidth,
+                    'padding' : carouselItemPadding
+                }"
+            >
+                <ng-container [ngTemplateOutlet]="item.tpl"></ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="aa-carousel-footer flex-group flex-center">
+    <button 
+        (click)="prev()"
+        class="{{prevBtnColour}} material-icons" 
+        type="button" 
+        >
+        <span>{{prevBtnIcon}}</span>
+    </button>
+    <button 
+        (click)="next()"
+        class="{{nextBtnColour}} material-icons" 
+        type="button" 
+        >
+        <span>{{nextBtnIcon}}</span>
+    </button>
+</footer>
+
