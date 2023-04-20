@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { GridOptions, MenuItemDef } from 'ag-grid-community';
+import { GridOptions, MenuItemDef, ColDef } from 'ag-grid-community';
 import { CustomTooltipComponent } from './custom-tooltip.component';
 import { CustomValidationTooltipComponent } from './custom-validation-tooltip.component';
 import { CustomCardComponent } from './custom-card.component';
@@ -32,6 +32,9 @@ export class AgGridComponent {
   validation: boolean;
   getLicence: boolean;
   codeCopied: boolean;
+  autoGroupColumnDef: ColDef = {
+    minWidth: 200,
+  };
 
   awarded: string = 'Gold';
   awardDate: string = '19-Apr-2021';

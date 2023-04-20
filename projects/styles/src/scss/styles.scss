@@ -49,7 +49,7 @@ body {
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
     @import 'style-imports';
-    background-color: _colour(trans-grey-2-to-grey-dark);
+    background-color: _colour(trans-grey-2-to-black);
     color: _colour(aa-grey-100);
     min-width: _breakpoint(breakpoint-320);
   }

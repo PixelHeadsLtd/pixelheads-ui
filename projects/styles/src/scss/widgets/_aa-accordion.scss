@@ -115,6 +115,18 @@
       padding: 0 .75rem 0 1.25rem;
       width: 100%;
 
+      .field,
+      .checkbox {
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+
+      .checkbox {
+         label {
+            padding: .25rem .75rem!important; // Bootstrap
+         }
+      }
+
       .toggle-icons {
          display: block;
          color: _colour(aa-blue-100);

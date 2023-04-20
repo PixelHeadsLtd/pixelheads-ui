@@ -1,5 +1,6 @@
 import { OnInit } from '@angular/core';
 export declare class ActionsSummaryComponent implements OnInit {
+    heading: string;
     title: string;
     value: number;
     status: string;

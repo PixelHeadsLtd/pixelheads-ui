@@ -1,10 +1,10 @@
 .feature {
   padding: 1rem;
   background-color: _colour(aa-blue-100);
-  color: _colour(trans-white-to-grey-dark);
+  color: _colour(trans-white-to-black);
   border-radius: .25rem;
   p, h1, h2, h3, h4, a {
-    color: _colour(trans-white-to-grey-dark);
+    color: _colour(trans-white-to-black);
   }
 }
 

@@ -3,6 +3,7 @@
     display: block;
     padding: 1rem 1.25rem 5rem; 
     &.grid {
+        padding: 0;
         > div.field {
             padding: 0 1rem;
         }

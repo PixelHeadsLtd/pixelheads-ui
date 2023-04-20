@@ -147,7 +147,7 @@
       margin-top: 0;
     }
     &:nth-child(odd) {
-      background-color: _colour(trans-grey-2-to-grey-dark);
+      background-color: _colour(trans-grey-2-to-black);
     }
     &:nth-child(even) {
       background-color: _colour(aa-white-100);
@@ -161,7 +161,7 @@
       right: 0;
       button {
         margin: 0;
-        padding: 0.25rem 1rem;
+        padding: .25rem 1rem .25rem 2.25rem;
         border-radius: 0;
         border-right: 1px solid _colour(aa-grey-25);
         font-size: .7rem;
@@ -433,7 +433,7 @@
         background-color: _colour(aa-white-100);
       }
       &:nth-child(even) {
-        background-color: _colour(trans-grey-2-to-grey-dark);
+        background-color: _colour(trans-grey-2-to-black);
       }
       
       .anchor-point {

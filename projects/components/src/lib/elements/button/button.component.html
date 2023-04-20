@@ -17,7 +17,7 @@
     (click)="onButtonClick($event)"
     [ngClass]="{'material-icons' : customIconsRound}"
   >
-    <div *ngIf="!customIconsRound" [ngClass]="{'flex-group flex-start' : customIcons}">
+    <div *ngIf="!customIconsRound" [ngClass]="{'display-inline-block' : customIcons}">
       <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
       <span>{{buttonText}}</span>
       <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>

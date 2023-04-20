@@ -72,7 +72,7 @@ button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button) {
   &.custom-icons {
     border: 1px solid transparent;
     color: _palette(aa-white-100);
-    padding-left: 1rem;
+    padding-left: 2.25rem;
 
     .count {
       position: absolute;
@@ -113,7 +113,7 @@ button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button) {
     }
     
     &.small {
-      padding: .25rem .75rem .25rem .7rem;
+      padding: .25rem .75rem .25rem 1.75rem;
       .material-icons,
       .material-icons-outlined {
         font-size: _font(size-regular);
@@ -130,9 +130,6 @@ button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button) {
       position: absolute;
       left: .25rem;
       width: 2rem;
-      + span {
-        padding-left: 1.25rem
-      }
     }
   }
   

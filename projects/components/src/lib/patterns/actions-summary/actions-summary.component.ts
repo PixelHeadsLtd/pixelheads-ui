@@ -8,6 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class ActionsSummaryComponent implements OnInit {
 
+  @Input() heading: string;
   @Input() title: string;
   @Input() value: number;
   @Input() status: string;

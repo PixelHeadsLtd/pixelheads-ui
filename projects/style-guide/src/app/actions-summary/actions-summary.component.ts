@@ -18,32 +18,32 @@ export class ActionsSummaryComponent implements OnInit {
 
   actionsSummaryItems = [
     {
-      title: 'Total actions',
+      heading: 'Total actions',
       status: 'default',
       value: '1'
     },
     {
-      title: 'Accepted',
+      heading: 'Accepted',
       status: 'approved',
-      value: '0'
+      value: '1783421'
     },
     {
-      title: 'Not started',
+      heading: 'Not started',
       status: 'not-started',
       value: '0'
     },
     {
-      title: 'In progress',
+      heading: 'In progress',
       status: 'pending',
       value: '1'
     },
     {
-      title: 'Completed',
+      heading: 'Completed',
       status: 'approved',
       value: '0'
     },
     {
-      title: 'Abandoned',
+      heading: 'Abandoned',
       status: 'rejected',
       value: '1'
     }

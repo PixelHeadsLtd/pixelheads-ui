@@ -31,7 +31,16 @@
 
 // START AG-GRID CUSTOM STYLING
 .ag-theme-balham {
-
+  input {
+    color: _colour(aa-grey-100)!important;
+    background-color: _colour(aa-white-100)!important;
+  }
+  .ag-ltr {
+    input[class^=ag-][type=text] {
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+    }
+   }
   .ag-popup-child {
     color: _colour(aa-grey-100)!important;
   }
@@ -43,13 +52,17 @@
   .ag-side-bar {
     background-color: _colour(aa-white-100)!important;
     .ag-side-buttons {
+      padding-top: 0;
       .ag-side-button {
         button {
           color: _colour(aa-grey-100)!important;
+          border-left: 3px solid transparent;
+          border-top: none;
         }
         &.ag-selected {
           button {
             background-color: _colour(aa-white-100)!important;
+            border-left: 3px solid _colour(trans-light-blue-to-white);
           }
         }
       }
@@ -64,12 +77,16 @@
     .ag-select-agg-func-virtual-list-item,
     .ag-column-select-column-label,
     .ag-column-drop-vertical-icon,
-    .ag-column-drop-vertical-cell,
+    
     .ag-column-drop-vertical-title,
     .ag-group-title-bar,
     .ag-filter-toolpanel-group-title-bar-icon {
       background-color: _colour(aa-white-100)!important;
       color: _colour(aa-grey-100)!important;
+    }
+
+    .ag-column-drop-vertical-cell {
+      background-color: _colour(trans-grey-5-to-grey-dark)!important;
     }
   }
 
@@ -215,16 +232,6 @@
       padding-left: calc(#{$cell-horizontal-padding}) !important;
       padding-right: calc(#{$cell-horizontal-padding}) !important;
       border: 1px solid transparent;
-      line-height: 2.25rem;
-      > div,
-      > section,
-      > button,
-      > article,
-      > input,
-      > p,
-      > span {
-        line-height: initial;
-      }
 
       button.btn-ellipsis {
         margin-top: .6rem;
