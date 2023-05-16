@@ -631,28 +631,28 @@ export class AppComponent implements OnInit {
     }
   ]
 
-  searchOtherWidgets = [
+  searchThirdPartyComponents = [
     {
       id: 'OtherWidgets',
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ag-grid',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngb-datepicker',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ng-select',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngx-quill',
@@ -856,7 +856,7 @@ export class AppComponent implements OnInit {
       {iconName:'view_list', title:'Accordion fancy', routerLink:'/accordion-fancy'},
       {iconName:'account_box', title:'Card', routerLink:'/card'},
       {iconName:'recent_actors', title:'Carousel', routerLink:'/carousel'},
-      {iconName:'star', title:'Favourites', routerLink:'/dashboard-favourites'},
+      {iconName:'star', title:'Favourites', routerLink:'/favourites'},
       {iconName:'face', title:'Icon picker', routerLink:'/icon-picker'},
       {iconName:'fact_check', title:'Info panel', routerLink:'/info-panel'},
       {iconName:'checklist_rtl', title:'List selectable', routerLink:'/list-selectable'},
@@ -887,10 +887,11 @@ export class AppComponent implements OnInit {
       {iconName:'edit_note', title:'Editorial content', routerLink:'/editorial-content'},
       {iconName:'text_format', title:'Typography', routerLink:'/typography'}
     ]},
-    // OTHER WIDGETS
-    {color:'green reversed', iconName:'widgets', title:'Other widgets', nestedItems:
+    // THIRD PARTY COMPONENTS
+    {color:'green reversed', iconName:'widgets', title:'Third party components', nestedItems:
     [
       {iconName:'table_rows', title:'Ag grid', routerLink:'/ag-grid'},
+      {iconName:'insights', title:'High charts', routerLink:'/high-charts'},
       {iconName:'edit_calendar', title:'Ngb datepicker', routerLink:'/ngb-datepicker'},
       {iconName:'checklist', title:'Ng select', routerLink:'/ng-select'},
       {iconName:'edit_note', title:'Ngx quill', routerLink:'/ngx-quill'}

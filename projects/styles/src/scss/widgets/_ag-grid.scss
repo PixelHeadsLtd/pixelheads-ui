@@ -31,7 +31,12 @@
 
 // START AG-GRID CUSTOM STYLING
 .ag-theme-balham {
-  input {
+
+  .ag-details-row {
+    background-color: _colour(aa-white-100)!important;
+  }
+
+  input:not(.ng-select input) {
     color: _colour(aa-grey-100)!important;
     background-color: _colour(aa-white-100)!important;
   }
@@ -233,6 +238,10 @@
       padding-right: calc(#{$cell-horizontal-padding}) !important;
       border: 1px solid transparent;
 
+      &.flex-column {
+        margin-top: .1rem;
+      }
+
       button.btn-ellipsis {
         margin-top: .6rem;
         min-width: 1.5rem !important;
@@ -405,7 +414,7 @@
       }
 
       button {
-        margin-top: .158rem;
+        margin-top: 0;
         padding-top: .4rem;
         padding-bottom: .4rem;
         letter-spacing: 0rem;

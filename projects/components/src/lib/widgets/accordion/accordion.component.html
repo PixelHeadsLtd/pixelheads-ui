@@ -5,10 +5,16 @@
 >
   <h3 class="margin-0">
     <button 
-      class="accordion-trigger flex-group space-between flex-align-center {{customBgColor}}" 
+      class="accordion-trigger flex-group space-between flex-nowrap {{customBgColor}}" 
+      [ngClass]="{
+        'expanded' : showBody, 
+        'clean' : accordionClean, 
+        'disabled' : disabled, 
+        'flex-column' : verticalDisplay,
+        'flex-align-center' : !verticalDisplay
+      }"
       (click)="onOpen($event)" 
       [attr.aria-expanded.true]="showBody"
-      [ngClass]="{'expanded' : showBody, 'clean' : accordionClean, 'disabled' : disabled, 'flex-column' : verticalDisplay}"
       aria-controls="sectionId" 
       [id]="accordionId" 
       type="button">

@@ -12,6 +12,7 @@ export class TabNavigationSecondaryItemComponent implements OnInit, AfterContent
   @Input() tabName: string;
   @Input() tabRoute: string;
   @Input() tabDisabled: boolean;
+  @Input() enableCloseSecondary: boolean;
   @Input() routerLink: string | any[];
   @Input() routerLinkActive: boolean;
   templateRef: TemplateRef<any>;

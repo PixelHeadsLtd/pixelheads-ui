@@ -43,7 +43,7 @@ button {
   }
 }
 
-button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button) {
+button:not(.btn-fav, .collapser, .card-mini, .ag-side-button-button, .ql-toolbar button, .btn-enriched) {
   position: relative;
   border-radius: 1.5rem;
   border-width: 1px;
@@ -576,6 +576,14 @@ button {
     border-radius: .25rem;
     border: 1px solid _colour(aa-grey-10);
 
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        _colour(aa-white-100),
+        _colour(aa-light-blue-10)
+      );
+    }
+
     .btn-enriched-toolbar {
       position: absolute;
       top: .5rem;
@@ -671,14 +679,34 @@ table:not(.table-feature, .table-feature *) {
 .button-split {
   position: relative;
   float: left;
+  &.nav-left-side {
+    button {
+      &.chevron-up {
+        padding: 0 .75rem 0 2.75rem;
+        &:after {
+          left: 0;
+          right: auto;
+          border-left: none;
+          border-right: 1px solid _colour(white-transparency);
+          padding-right: .5rem;
+        }
+      }
+    }
+    nav {
+      left: auto;
+      right: calc(100% - 2.25rem);
+    }
+  }
   button:not(nav button) {
-    padding: 0 2.5rem 0 .75rem;
     border: none;
     height: 2.25rem;
     color: _colour(white);
+    &.chevron-up {
+      padding: 0 2.5rem 0 .75rem;
+    }
     &:after {
       top: 0;
-      right: 0.75rem;
+      right: .75rem;
       bottom: 0;
       border-left: 1px solid _colour(white-transparency);
       padding: .25rem 0 0 .5rem;
@@ -690,6 +718,7 @@ table:not(.table-feature, .table-feature *) {
     left: calc(100% - 2.1rem);
     bottom: 100%;
     background-color: _colour(aa-grey-2);
+
     button {
       border: none;
       border-radius: 0;

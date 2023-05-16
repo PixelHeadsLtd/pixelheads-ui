@@ -293,14 +293,14 @@
                 </a>
               </li>
               <li 
-                *ngFor="let c of searchOtherWidgets | appFilter: searchText; let i = index" 
+                *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index" 
                 (click)="openOtherWidgetsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
                 <h2 
-                  *ngIf="!searchOtherWidgets[i-1] || c.heading !== searchOtherWidgets[i-1].heading"
+                  *ngIf="!searchThirdPartyComponents[i-1] || c.heading !== searchThirdPartyComponents[i-1].heading"
                   class="white-100 width-100"
                   >
                   {{c.heading}}

@@ -42,7 +42,7 @@
   background-color: _colour(aa-grey-2);
   height: unset;
 
-  table {
+  table:not(.gist table) {
     margin-left: -1.25rem;
     width: calc(100% + 3rem);
   }

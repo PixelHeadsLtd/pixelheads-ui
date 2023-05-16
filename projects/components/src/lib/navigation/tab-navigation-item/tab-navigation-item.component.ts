@@ -17,6 +17,7 @@ export class TabNavigationItemComponent implements OnInit, AfterContentChecked {
   @Input() iconName: string;
   @Input() iconColour: string;
   @Input() enableCount: boolean;
+  @Input() enableClose: boolean;
   @Input() tabCount: number;
   @Input() countColour: string;
   @Input() tabRoute: string;

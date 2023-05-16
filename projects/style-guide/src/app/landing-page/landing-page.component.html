@@ -242,14 +242,14 @@
               </a>
             </li>
             <li 
-              *ngFor="let c of searchOtherWidgets | appFilter: searchText; let i = index" 
+              *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index" 
               (click)="openOtherWidgetsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
               <h2 
-                *ngIf="!searchOtherWidgets[i-1] || c.heading !== searchOtherWidgets[i-1].heading"
+                *ngIf="!searchThirdPartyComponents[i-1] || c.heading !== searchThirdPartyComponents[i-1].heading"
                 class="width-100"
                 >
                 {{c.heading}}
@@ -584,7 +584,37 @@
         <a (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'"
         class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use
         the components listed below. If you need sample markup, please visit the
-         <a routerLink="/page-layout-examples">Page layout examples</a>. <strong class="aa-red-100">Do not use Bootstrap</strong>, instead
+         <a routerLink="/page-layout-examples">Page layout examples</a>. 
+         <strong class="aa-red-100 position-relative padding-right-1-5">
+          Do not use Bootstrap
+          <aa-tooltip 
+            class="position-absolute"
+            [includeLabel]="false"
+            [includeLegend]="false"
+            [isError]="true" 
+            [customIcon]="true" 
+            iconName="error"
+            setMinWidth="12" 
+            setMinWidth="20" 
+            ypos="top" 
+            xpos="left"
+            zIndex="1"
+          >
+            <h4>Bootstrap</h4>
+            <p>
+              Some 3rd party components such as NGB Datepicker rely on Bootstrap. 
+              For this please only install <span class="aa-red-100">ng-bootstrap</span> and not the full Bootstrap Library.
+            </p>
+            <h4 class="margin-top-1 margin-bottom-0">You can install ng-bootstrap with</h4>
+            <p>
+              npm i @ng-bootstrap/ng-bootstrap
+            </p>
+            <p>
+              If you see regular bootstrap in your package.json, for example something like <span class="aa-red-100">"bootstrap": "^5.2.3",</span> 
+              please uninstall this as it will cause layout issues.
+            </p>
+          </aa-tooltip> 
+        </strong> instead
         we use <a routerLink="/flex">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
       </p>
     </div>
@@ -638,7 +668,7 @@
         tourModeHeading="Elements and Inputs"
         tourModeBody="
           Here is everything you'll need to build your forms including anchors, buttons, selects, checkbox's etc.
-          If there's something you need not listed here and not under the `Other widgets` section in the left navigation,
+          If there's something you need not listed here and not under the `Third party components` section in the left navigation,
           please let the UX team know and we'll create it for you.
         "
       >
@@ -1115,13 +1145,19 @@
 
         <h2 class="margin-bottom-0-5">Styles</h2>
         <ol class="code">
-          <li>npm install @angloamerican/components@X.X.X</li>
+          <li>npm install @angloamerican/styles@X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
 
         <h2 class="margin-bottom-0-5">Components</h2>
         <ol class="code">
           <li>1. npm install @angloamerican/components@X.X.X</li>
+        </ol>
+        <p>Replacing X with the required version</p>
+
+        <h2 class="margin-bottom-0-5">Anglo Angular Framework</h2>
+        <ol class="code">
+          <li>1. npm install @angloamerican/anglo-angular-framework@X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
 

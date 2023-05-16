@@ -675,28 +675,28 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     }
   ]
 
-  searchOtherWidgets = [
+  searchThirdPartyComponents = [
     {
       id: 'OtherWidgets',
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ag-grid',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngb-datepicker',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ng-select',
     },
     {
-      heading: 'Other widgets',
+      heading: 'Third party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngx-quill',

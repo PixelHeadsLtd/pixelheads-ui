@@ -1,13 +1,14 @@
-<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION -->
-<ng-container *ngIf="!templateRef">
+<!-- BELOW ONLY USED FOR ROUTER-OUTLET VERSION - NOT USED -->
+<!-- <ng-container *ngIf="!templateRef">
   <li [ngClass]="{'tab-disabled' : tabDisabled}">
     <a *ngIf="!tabDisabled" [id]="tabId" [routerLink]="route">
       {{ tabName }}
       <span *ngIf="enableIcons" class="material-icons {{iconColour}}">{{iconName}}</span>
+      <a *ngIf="enableClose" (click)="onCloseTab($event)" class="anchor-close"></a>
     </a>
     <span *ngIf="tabDisabled">
       {{ tabName }}
       <span *ngIf="enableIcons" class="material-icons {{iconColour}}">{{iconName}}</span>
     </span>
   </li>
-</ng-container>
+</ng-container> -->

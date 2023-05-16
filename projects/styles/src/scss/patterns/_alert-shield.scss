@@ -95,7 +95,12 @@
     span, div {
       padding-right: 0;
     }
-  
+
+    &.error {
+      &:before {
+        font-size: _font(size-medium);
+      }
+    }
   }
   
   &.success {
@@ -200,8 +205,16 @@
 
   &.error {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/icon-alert-red.svg");
+    //background-image: url("#{$icon-path}/icon-alert-red.svg");
+    position: relative;
     color: _colour(aa-red-100);
+    &:before {
+      font-family: _font(material-icons);
+      font-size: _font(size-large);
+      content: "\e001";
+      position: absolute;
+      left: .25rem;
+    }
   }
 
   &.removed, &.circle-x-red, &.do-not-use {

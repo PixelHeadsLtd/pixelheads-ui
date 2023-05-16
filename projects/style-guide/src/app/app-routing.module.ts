@@ -94,11 +94,12 @@ import {WidthsComponent} from './widths/widths.component';
 import {EditorialComponent} from './editorial/editorial.component';
 import {TypographyComponent} from './typography/typography.component';
 
-// Other Widgets
+// Third party components
 import {AgGridComponent} from './ag-grid/ag-grid.component';
 import {NgbDatepickerComponent} from './ngb-datepicker/ngb-datepicker.component';
 import {NgSelectComponent} from './ng-select/ng-select.component';
 import {NgxQuillComponent} from './ngx-quill/ngx-quill.component';
+import {HighChartsComponent} from './high-charts/high-charts.component';
 
 // Email Templates
 import {HtmlEmailComponent} from './html-email/html-email.component';
@@ -139,7 +140,7 @@ const routes: Routes = [
   { path: 'colours', component: ColoursComponent },
   { path: 'context-menu', component: ContextMenuComponent },
   { path: 'custom-wrapper', component: CustomWrapperComponent },
-  { path: 'dashboard-favourites', component: FavouritesComponent },
+  { path: 'favourites', component: FavouritesComponent },
   { path: 'editorial-content', component: EditorialComponent },
   { path: 'field', component: FieldComponent },
   { path: 'validation', component: ValidationComponent },
@@ -201,7 +202,8 @@ const routes: Routes = [
   { path: 'questions-and-answers', component: QuestionsAndAnswersComponent },
   { path: 'html-email', component: HtmlEmailComponent },
   { path: 'elements-alignment', component: ElementsAlignmentComponent },
-  { path: 'unauthorised', component: UnauthorisedComponent }
+  { path: 'unauthorised', component: UnauthorisedComponent },
+  { path: 'high-charts', component: HighChartsComponent }
 ];
 
 @NgModule({

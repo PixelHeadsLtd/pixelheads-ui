@@ -45,9 +45,10 @@
   </button>
 </div>
 
-<div *ngIf="buttonSplit" class="field {{fieldClass}}">
+<div *ngIf="buttonSplit" class="field {{fieldClass}}" 
+>
   <label [for]="buttonId">{{buttonLabel}}</label>
-  <div class="button-split">
+  <div class="button-split" [ngClass]="{'nav-left-side' : navLeftside}">
     <button
       (click)="showBtnMenu=!showBtnMenu" 
       [class]="buttonClass"

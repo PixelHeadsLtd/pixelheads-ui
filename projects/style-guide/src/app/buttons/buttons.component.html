@@ -985,82 +985,185 @@
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
-      <h2>Button split</h2>
+      <h2>
+        Button split
+        <span class="margin-top-2 italic">
+          <span *ngIf="showPub" class="aa-green-100">( Publish now...)</span>
+          <span *ngIf="showPubLater" class="aa-orange-100">( Publish later...)</span>
+          <span *ngIf="showCancelPub" class="aa-red-100">( Cancel scheduled publish...)</span>
+        </span>
+      </h2>
       <div class="describe margin-bottom-1">
         <p>To reduce clutter in the UI, you might want to use the Button Split component.</p>
       </div>
 
-      <section class="flex-group flex-start margin-bottom-1">
-        <aa-button 
-          [buttonSplit]="true" 
-          fieldClass="boxed margin-right-2" 
-          buttonClass="bg-aa-light-blue-100 chevron-up"
-          buttonLabel="Primary" 
-          buttonText="Publish" 
-          buttonId="myBtnId"
-          maxHeight="10.75rem"
-        >
-          <ng-container bs-buttons>
-            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
-              <span class="material-icons">forward_to_inbox</span>
-              Publish now
-            </button>
-            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
-              <span class="material-icons">schedule_send</span>
-              Publish later
-            </button>
-            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
-              <span class="material-icons">unsubscribe</span>
-              Cancel scheduled publish
-            </button>
-          </ng-container>
-        </aa-button>
-
-        <div class="margin-top-2 italic">
-          <p *ngIf="showPub">Publish now...</p>
-          <p *ngIf="showPubLater">Publish later...</p>
-          <p *ngIf="showCancelPub">Cancel scheduled publish...</p>
+      <section class="flex-group space-between">
+        <div>
+          <section class="flex-group flex-start margin-bottom-1">
+            <aa-button 
+              [buttonSplit]="true" 
+              [navLeftside]="false" 
+              fieldClass="boxed margin-right-2" 
+              buttonClass="bg-aa-light-blue-100 chevron-up"
+              buttonLabel="Primary" 
+              buttonText="Default" 
+              buttonId="myBtnId"
+              maxHeight="10.75rem"
+            >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
+    
+          <section class="flex-group flex-start margin-bottom-1">
+            <aa-button 
+                [buttonSplit]="true" 
+                fieldClass="boxed" 
+                buttonClass="bg-aa-blue-100 chevron-up"
+                buttonLabel="Secondary" 
+                buttonText="Default" 
+                buttonId="myBtnId"
+              >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
+    
+          <section class="flex-group flex-start">
+            <aa-button 
+                [buttonSplit]="true" 
+                fieldClass="boxed" 
+                buttonClass="bg-aa-red-100 chevron-up" 
+                buttonLabel="Error"
+                buttonText="Default" 
+                buttonId="myBtnId"
+              >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
         </div>
-      </section>
-
-      <section class="flex-group flex-start margin-bottom-1">
-        <aa-button [buttonSplit]="true" fieldClass="boxed" buttonClass="bg-aa-blue-100 chevron-up"
-          buttonLabel="Secondary" buttonText="Publish" buttonId="myBtnId">
-          <ng-container bs-buttons>
-            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
-              <span class="material-icons">forward_to_inbox</span>
-              Publish now
-            </button>
-            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
-              <span class="material-icons">schedule_send</span>
-              Publish later
-            </button>
-            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
-              <span class="material-icons">unsubscribe</span>
-              Cancel scheduled publish
-            </button>
-          </ng-container>
-        </aa-button>
-      </section>
-
-      <section class="flex-group flex-start">
-        <aa-button [buttonSplit]="true" fieldClass="boxed" buttonClass="bg-aa-red-100 chevron-up" buttonLabel="Error"
-          buttonText="Publish" buttonId="myBtnId">
-          <ng-container bs-buttons>
-            <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
-              <span class="material-icons">forward_to_inbox</span>
-              Publish now
-            </button>
-            <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
-              <span class="material-icons">schedule_send</span>
-              Publish later
-            </button>
-            <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
-              <span class="material-icons">unsubscribe</span>
-              Cancel scheduled publish
-            </button>
-          </ng-container>
-        </aa-button>
+        
+        <div>
+          <section class="flex-group flex-end margin-bottom-1">
+            <aa-button 
+              class="margin-right-0"
+              [buttonSplit]="true" 
+              [navLeftside]="true" 
+              fieldClass="boxed margin-right-0" 
+              buttonClass="bg-aa-light-blue-100 chevron-up"
+              buttonLabel="Primary" 
+              buttonText="navLeftside true" 
+              buttonId="myBtnId"
+              maxHeight="10.75rem"
+            >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
+    
+          <section class="flex-group flex-end margin-bottom-1">
+            <aa-button 
+              [buttonSplit]="true"
+              [navLeftside]="true"
+              fieldClass="boxed" 
+              buttonClass="bg-aa-blue-100 chevron-up"
+              buttonLabel="Secondary" 
+              buttonText="navLeftside true" 
+              buttonId="myBtnId"
+            >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
+    
+          <section class="flex-group flex-end">
+            <aa-button 
+              [buttonSplit]="true" 
+              [navLeftside]="true" 
+              fieldClass="boxed" 
+              buttonClass="bg-aa-red-100 chevron-up" 
+              buttonLabel="Error"
+              buttonText="navLeftside true" 
+              buttonId="myBtnId"
+            >
+              <ng-container bs-buttons>
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
+                  <span class="material-icons">forward_to_inbox</span>
+                  Publish now
+                </button>
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
+                  <span class="material-icons">schedule_send</span>
+                  Publish later
+                </button>
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
+                  <span class="material-icons">unsubscribe</span>
+                  Cancel scheduled publish
+                </button>
+              </ng-container>
+            </aa-button>
+          </section>
+        </div>
       </section>
 
     </section>
@@ -1082,6 +1185,12 @@
             <td datalabel="Attribute">[buttonSplit]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[navLeftside]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-button</td>

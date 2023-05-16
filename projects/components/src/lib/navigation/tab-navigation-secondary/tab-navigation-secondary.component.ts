@@ -16,7 +16,7 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   @Input() tabActiveColour: any;
   @Output() tabClicked = new EventEmitter<TabNavigationSecondaryItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationSecondaryItemComponent>();
-
+  @Output() closeTabSecondary = new EventEmitter<Event>();
   currentTab: TabNavigationSecondaryItemComponent;
 
   get contentTabs() {
@@ -24,6 +24,11 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   }
 
   constructor() {}
+
+  public onCloseTabSecondary(e: Event) {
+    e.stopPropagation();
+    this.closeTabSecondary.emit(e);
+  }
 
   ngOnInit(): void {}
 

@@ -10,6 +10,17 @@
   }
 }
 
+.tab-navigation,
+.tab-navigation-secondary {
+  a.anchor-close  {
+    width: 1.25rem;
+    height: 1.25rem;
+    &:after {
+     top: 0;
+    }
+  }
+}
+
 .tab-navigation {
   border-bottom: 1px solid _colour(aa-light-blue-100);
   padding-left: 1.25rem;
@@ -48,7 +59,7 @@
     padding: 0;
     li {
       display: inline-block;
-      a {
+      a:not(.anchor-close) {
         margin: 0 2rem 0 0;
         padding: .5rem 0 0 0;
         min-height: 2.6rem;
@@ -68,8 +79,8 @@
           color: _colour(trans-light-blue-to-blue-light);
         }
       }
-      .material-icons,
-      .material-icons-outlined {
+      .material-icons:not(button.material-icons),
+      .material-icons-outlined:not(button.material-icons) {
         font-size: _font(size-medium);
         margin-left: .25rem;
       }
@@ -80,6 +91,8 @@
         display: flex;
         align-items: center;
         color: _colour(aa-grey-25);
+        min-height: 2.6rem;
+        padding: .5rem 0 0 0;
         cursor: not-allowed;
         &.tab-count {
           background-color: _colour(aa-grey-2);
@@ -285,11 +298,11 @@
   .tab-disabled,
   .tab-disabled:hover {
     cursor: not-allowed;
-    border: 1px solid _colour(aa-grey-5);
+    border: 1px solid _colour(aa-grey-10);
     color: _colour(aa-grey-25);
     text-decoration: none;
-    border-radius: 0.75rem;
-    padding: 0.5rem 1rem;
+    border-radius: .25rem;
+    padding: .5rem 1rem;
     font-size: _font(size-small);
   }
   
@@ -300,13 +313,15 @@
     li {
       display: inline-block;
       padding: 0 1rem 0 0;
+      min-height: 2rem;
+      margin-bottom: .5rem;
 
-      a {
+      > a {
         background-color: _colour(aa-white-100);
-        border-radius: 0.5rem;
-        border: 1px solid _colour(aa-grey-5);
+        border-radius: .25rem;
+        border: 1px solid _colour(aa-grey-25);
         color: _colour(aa-light-blue-100);
-        padding: 0.5rem 1rem;
+        padding: .5rem 1rem;
         font-size: _font(size-small);
         text-decoration: none;
         cursor: pointer;
@@ -319,6 +334,10 @@
           box-shadow: 0 0 .15rem .15rem _colour(box-shadow);
           color: _colour(trans-light-blue-to-blue-light);
           text-decoration: none;
+        }
+
+        .anchor-close  {
+          top: .345rem;
         }
       }
     }

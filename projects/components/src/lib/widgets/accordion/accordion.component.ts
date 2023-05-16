@@ -28,6 +28,7 @@ export class AccordionComponent {
   @Output() open = new EventEmitter<void>();
 
   onOpen(e: { stopPropagation: () => void; }) {
+    e.stopPropagation();
     if (this.disabled !== true) {
       this.open.emit();
       this.showBody = ! this.showBody;

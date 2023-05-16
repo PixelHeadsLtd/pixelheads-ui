@@ -27,8 +27,8 @@
         [dragable]="false"
         [showBody]="showOne"
         [clearPadding]="false"
-        minWidth="26"
-        accordionHeading="Accordion default"
+        minWidth="35"
+        accordionHeading="Custom header version"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
@@ -61,25 +61,38 @@
         "
         [dragable]="true"
         [showBody]="showTwo"
-        minWidth="26"
-        accordionHeading="Accordion drag/drop"
+        minWidth="35"
+        accordionHeading="Custom header version with 'dragable' true"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
         iconName="extension"
       >
         <div header-custom>
-          <aa-alert-shield
-            [alertShieldSmall]="true"
-            [showTooltip]="false"
-            [noWrap]="true"
-            [hideLabel]="false"
-            minWidth="12rem"
-            alertShieldStatus="info"
-            alertShieldText="Info"
-            [showTooltipHeading]="true"
-          >
-          </aa-alert-shield>
+          <div class="flex-group flex-end">
+            <aa-alert-shield
+              [alertShieldSmall]="true"
+              [showTooltip]="false"
+              [noWrap]="true"
+              [hideLabel]="false"
+              minWidth="12rem"
+              alertShieldStatus="info"
+              alertShieldText="Info"
+              [showTooltipHeading]="true"
+            >
+            </aa-alert-shield>
+            <aa-slider
+              [sliderInline]="false"
+              sliderChecked=""
+              labelText="apples"
+              fieldClass="boxed label-hidden"
+              sliderId=""
+              sliderName=""
+              sliderValue=""
+              disabled=""
+            >
+            </aa-slider>
+          </div>
         </div>
         <ng-container>
           <p>Add accordion content in here</p>
@@ -90,8 +103,8 @@
       <aa-accordion
         [disabled]="true"
         [dragable]="true"
-        minWidth="26"
-        accordionHeading="Accordion disabled"
+        minWidth="35"
+        accordionHeading="Disabled version"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
@@ -114,9 +127,9 @@
         "
         [dragable]="false"
         [showBody]="showThree"
-        minWidth="26"
+        minWidth="35"
         customBgColor="bg-aa-red-100"
-        accordionHeading="Accordion custom colour (see inside)"
+        accordionHeading="Default accordion with custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
@@ -176,9 +189,9 @@
         "
         [dragable]="false"
         [showBody]="showFour"
-        minWidth="26"
+        minWidth="35"
         customBgColor="bg-aa-blue-sky-100"
-        accordionHeading="Accordion custom colour (see inside)"
+        accordionHeading="Default accordion with custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
@@ -237,9 +250,9 @@
         "
         [dragable]="false"
         [showBody]="showFive"
-        minWidth="26"
+        minWidth="35"
         customBgColor="bg-aa-green-100"
-        accordionHeading="Accordion custom colour (see inside)"
+        accordionHeading="Default accordion with custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
         [iconsEnabled]="true"
@@ -298,7 +311,7 @@
         "
         [dragable]="false"
         [showBody]="showSix"
-        minWidth="26"
+        minWidth="35"
         customBgColor="bg-aa-orange-100"
         accordionHeading="Accordion custom colour (see inside)"
         accordionId="accordion01"
@@ -361,7 +374,7 @@
       [clearPadding]="true"
       [dragable]="false"
       [showBody]="showSeven"
-      minWidth="26"
+      minWidth="35"
       accordionHeading="Nested accordions"
       accordionId="accordion01"
       sectionId="section01"
@@ -371,13 +384,6 @@
     >
       <ng-container>
         <div>
-          <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
-            <input type="text" /> 
-            <div class="field boxed">
-              <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
-            </div>
-          </div>
-
           <aa-accordion
             (open)="showSevenNested=true"
             [dragable]="false"
@@ -440,7 +446,31 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Attribute">
+              <div class="flex-group flex-start flex-align-center">
+                minWidth
+                <aa-tooltip 
+                  class="margin-left-0-25"
+                  [isInfo]="true" 
+                  [customIcon]="true" 
+                  iconName="help"
+                  setMinWidth="20" 
+                  ypos="bottom" 
+                  xpos="right"
+                  zIndex="1"
+                >
+                  <h4>Make sure you set a minWidth</h4>
+                  <p>
+                    If you do not set the correct <strong class="aa-red-100">minWidth</strong>, then the text and any other elements nested in the header 
+                    will wrap.
+                  </p>
+                  <p>
+                    To get the correct <strong class="aa-red-100">minWidth</strong> minimize the screen for mobile and then you'll see 
+                    how the header content behaves. If it's wrapping, keep increasing the width until corrected.
+                  </p>
+                </aa-tooltip>
+              </div>
+            </td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">Your number - returns a rem value</td>
           </tr>
@@ -536,9 +566,9 @@
           [showBody]="showVertOne"
           [clearPadding]="false"
           [verticalDisplay]="true"
-          verticalMinHeight="30vh"
+          verticalMinHeight="35vh"
           class="margin-right-0-25"
-          accordionHeading="Accordion default"
+          accordionHeading="Custom header version"
           accordionId="accordion01"
           sectionId="section01"
           [iconsEnabled]="true"
@@ -570,10 +600,10 @@
           [dragable]="false"
           [showBody]="showVertTwo"
           [verticalDisplay]="true"
-          verticalMinHeight="30vh"
+          verticalMinHeight="35vh"
           class="margin-right-0-25"
           customBgColor="bg-aa-red-100"
-          accordionHeading="Accordion custom colour (see inside)"
+          accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
           [iconsEnabled]="true"
@@ -632,10 +662,10 @@
           [dragable]="false"
           [showBody]="showVertThree"
           [verticalDisplay]="true"
-          verticalMinHeight="30vh"
+          verticalMinHeight="35vh"
           class="margin-right-0-25"
           customBgColor="bg-aa-blue-sky-100"
-          accordionHeading="Accordion custom colour (see inside)"
+          accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
           [iconsEnabled]="true"
@@ -693,10 +723,10 @@
           [dragable]="false"
           [showBody]="showVertFour"
           [verticalDisplay]="true"
-          verticalMinHeight="30vh"
+          verticalMinHeight="35vh"
           class="margin-right-0-25"
           customBgColor="bg-aa-green-100"
-          accordionHeading="Accordion custom colour (see inside)"
+          accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
           [iconsEnabled]="true"
@@ -754,14 +784,14 @@
           [dragable]="false"
           [showBody]="showVertFive"
           [verticalDisplay]="true"
-          verticalMinHeight="30vh"
+          verticalMinHeight="35vh"
           class="margin-right-0-25"
           customBgColor="bg-aa-orange-100"
-          accordionHeading="Accordion custom colour (see inside)"
+          accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
           [iconsEnabled]="true"
-          iconName="tips_and_updates"
+          iconName="flight"
         >
         <ng-container>
           <h3 class="boxed">There are currently 11 available custom colours</h3>
@@ -830,7 +860,30 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">verticalMinHeight</td>
+            <td datalabel="Attribute">
+              <div class="flex-group flex-start flex-align-center">
+                verticalMinHeight
+                <aa-tooltip 
+                  class="margin-left-0-25"
+                  [isInfo]="true" 
+                  [customIcon]="true" 
+                  iconName="help"
+                  setMinWidth="20" 
+                  ypos="bottom" 
+                  xpos="right"
+                  zIndex="1"
+                >
+                  <h4>Make sure you set a verticalMinHeight</h4>
+                  <p>
+                    If you do not set the correct <strong class="aa-red-100">verticalMinHeight</strong>, then the text and any other elements nested in the header 
+                    will wrap.
+                  </p>
+                  <p>
+                    Keep increasing the <strong class="aa-red-100">verticalMinHeight</strong> until all the elements nested in the header are corrected.
+                  </p>
+                </aa-tooltip>
+              </div>
+            </td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your preferred min-height in rem, % or vh</td>
           </tr>

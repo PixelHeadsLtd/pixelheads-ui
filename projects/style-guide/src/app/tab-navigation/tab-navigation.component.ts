@@ -17,18 +17,85 @@ export class TabNavigationComponent implements AfterContentChecked {
   tabInfo: boolean;
   toggleBlade: boolean;
   showMore: boolean;
+  enableClose: boolean;
+  enableCloseSecondary: boolean;
+  toggleModal: boolean;
+  ngTemplate: boolean;
+  ngTemplateSecondary: boolean;
+  routerOutlet: boolean;
+  routerOutletSecondary: boolean;
+  routerOutletSecondaryRO: boolean;
 
-  public constructor(private changeDetector: ChangeDetectorRef) {}
+  constructor(private changeDetector: ChangeDetectorRef) {}
+
+  onCloseTab() { 
+    if(this.enableClose = true) {
+      this.toggleModal = true;
+      this.ngTemplate = true;
+      this.ngTemplateSecondary = false;
+      this.routerOutlet = false;
+      this.routerOutletSecondary = false;
+    }
+  }
+
+  onCloseTabSecondary() { 
+    if(this.enableCloseSecondary = true) {
+      this.toggleModal = true;
+      this.ngTemplate = false;
+      this.ngTemplateSecondary = true;
+      this.routerOutlet = false;
+      this.routerOutletSecondary = false;
+    }
+  }
+
+  onCloseTabRO() { 
+    if(this.enableClose = true) {
+      this.toggleModal = true;
+      this.ngTemplate = false;
+      this.routerOutlet = true;
+      this.routerOutletSecondary = false;
+    }
+  }
+
+  onCloseTabSecondaryRO() { 
+    if(this.enableClose = true) {
+      this.toggleModal = true;
+      this.ngTemplate = false;
+      this.routerOutletSecondary = true;
+    }
+  }
+
+  removeTab(index: number) {
+    if(this.tabsNgTemplate) {
+      this.tabsNgTemplate.splice(index, 1)
+      this.toggleModal = false;
+    }
+  }
+
+  removeTabSecondary(index: number) {
+    if(this.tabsSecondaryRouterOutlet) {
+      this.tabsSecondaryRouterOutlet.splice(index, 1)
+      this.toggleModal = false;
+    }
+  }
+
+  removeTabRO(index: number) {
+    if(this.tabsRouterOutlet) {
+      this.tabsRouterOutlet.splice(index, 1)
+      this.toggleModal = false;
+    }
+  }
 
   tabsNgTemplate = [
     {
       tabName: 'Tab 1',
-      enableIcons: true,
+      enableIcons: false,
       iconName: 'error',
       iconColour: 'aa-red-100',
       tabDisabled: false,
       showRightDivider: false,
       enableCount: false,
+      enableClose: true,
       tabCount: '',
       countColour: '',
       showTabOneContent: true
@@ -75,7 +142,8 @@ export class TabNavigationComponent implements AfterContentChecked {
   tabsSecondaryNgTemplate = [
     {
       tabName: 'Tab sec 1',
-      showTabSecondaryOneContent: true
+      showTabSecondaryOneContent: true,
+      enableCloseSecondary: true,
     },
     {
       tabName: 'Tab sec 2',
@@ -98,6 +166,7 @@ export class TabNavigationComponent implements AfterContentChecked {
       routerLink: ['tab-page-one'],
       tabDisabled: false,
       enableCount: true,
+      enableClose: true,
       tabCount: 200,
       showRightDivider: false,
       enableIcons: false,
@@ -157,7 +226,8 @@ export class TabNavigationComponent implements AfterContentChecked {
   tabsSecondaryRouterOutlet = [
     {
       tabName: 'Tab sec 1',
-      routerLink: ['tab-sub-page-one']
+      routerLink: ['tab-sub-page-one'],
+      enableCloseSecondaryRO: true
     },
     {
       tabName: 'Tab sec 2',

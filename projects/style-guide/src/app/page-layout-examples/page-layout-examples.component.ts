@@ -254,21 +254,30 @@ copyFourHTML = `<!-- Every page needs to have a .control-bar -->
   </div>
 </article>
 
-<!-- This is where you put your html that sits between the filter and ag-grid -->
-<section class="content-container">
-  <h2 class="boxed">Your section heading</h2>
-  Your html...
-</section>
+<section class="content-container grid ag-grid-full-height" [ngStyle]="{'height' : 'calc(100vh - 9rem)'}">
 
-<!-- Put ag-grid inside a .content-container with the additional class .grid -->
-<section class="content-container grid">
-  <ag-grid-angular 
-    #agGrid id="myGrid"
-    class="ag-theme-balham ag-grid"
-    [ngStyle]="{'height' : 'calc(100vh - 26rem)'}"
-    [gridOptions]="gridOptions"
-    [rowData]="rowData">
-  </ag-grid-angular>
+  <div class="content-container">
+    <h2 class="boxed">Your section heading</h2>
+    Your other page data...
+  </div>
+
+  <!-- 
+    1. You must wrap ag-grid in the 'ag-grid-wrapper'
+    2. You must ensure that 'ag-grid-wrapper' is the child element of 
+       your overarching page 'content-container' wrapper and NOT the ancestor. 
+       If 'ag-grid-container' has another wrapping element such as a div or 
+       section etc, ag-grid will not display. If you really do need to add 
+       another wrapper, use an <ng-container></ng-container> element
+  -->
+
+  <div class="ag-grid-wrapper">
+    <ag-grid-angular 
+      #agGrid id="myGrid"
+      class="ag-theme-balham ag-grid"
+      [gridOptions]="gridOptions"
+      [rowData]="rowData">
+    </ag-grid-angular>
+  </div>
 </section>`;
 
 copySixHTML = `<!-- Every page needs to have a .control-bar -->

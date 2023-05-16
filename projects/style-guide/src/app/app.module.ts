@@ -9,6 +9,7 @@ import {
 } from '@angloamerican/components';
 import { QuillModule } from 'ngx-quill'
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
@@ -121,6 +122,7 @@ import { ClickOutsideDirective } from '../directives/click-outside.directive';
 import { ResizableComponent } from '../directives/resizable/resizable.component';
 import { ResizableDirective } from '../directives/resizable/resizable.directive';
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
+import { HighChartsComponent } from './high-charts/high-charts.component';
 
 @NgModule({
   declarations: [
@@ -230,7 +232,8 @@ import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.componen
     ResizableComponent,
     ResizableDirective,
     CustomWrapperComponent,
-    CustomWrapperComponent
+    CustomWrapperComponent,
+    HighChartsComponent
   ],
   imports: [
     FormsModule,
@@ -250,6 +253,7 @@ import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.componen
     PatternsModule,
     WidgetsModule,
     DragDropModule,
+    HighchartsChartModule,
     QuillModule.forRoot(),
     AgGridModule.withComponents([CustomTooltipComponent, CustomValidationTooltipComponent, CustomCardComponent, AvatarComponent]),
   ],
