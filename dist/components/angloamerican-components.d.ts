@@ -6,5 +6,4 @@ export { GraphicComponent as ɵb } from './lib/layout/unauthorised/graphic.compo
 export { DateFormatPipe as ɵa } from './lib/pipes/date-pipe';
 export { IconFilterPipe as ɵc } from './lib/pipes/icon-filter';
 export { OrderByPipe as ɵd } from './lib/pipes/order-by';
-
 //# sourceMappingURL=angloamerican-components.d.ts.map

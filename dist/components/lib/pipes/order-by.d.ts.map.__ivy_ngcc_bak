@@ -1,1 +1,0 @@
-{"version":3,"file":"order-by.d.ts","sourceRoot":"","sources":["../../../../projects/components/src/lib/pipes/order-by.ts"],"names":[],"mappings":"AAAA,OAAO,EAAoB,aAAa,EAAE,MAAM,eAAe,CAAC;AAChE,qBAIa,WAAY,YAAW,aAAa;IAC/C,SAAS,CAAC,KAAK,EAAE,GAAG,EAAE,KAAK,EAAE,MAAM,GAAG,GAAG,EAAE;CAY5C"}

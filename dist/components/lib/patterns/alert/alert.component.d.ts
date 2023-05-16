@@ -1,5 +1,4 @@
 import { OnInit } from '@angular/core';
-import * as ɵngcc0 from '@angular/core';
 export declare class AlertComponent implements OnInit {
     alertClass: string;
     alertTitle: string;
@@ -9,8 +8,5 @@ export declare class AlertComponent implements OnInit {
     expandPanel: boolean;
     constructor();
     ngOnInit(): void;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<AlertComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<AlertComponent, "aa-alert", never, { "alertClass": "alertClass"; "alertTitle": "alertTitle"; "alertText": "alertText"; "collapsible": "collapsible"; "alignIconTop": "alignIconTop"; "expandPanel": "expandPanel"; }, {}, never, never>;
 }
-
 //# sourceMappingURL=alert.component.d.ts.map
