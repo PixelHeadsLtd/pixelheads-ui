@@ -1,0 +1,1 @@
+{"version":3,"file":"carousel-item.directive.d.ts","sourceRoot":"","sources":["../../../../../projects/components/src/lib/directives/carousel/carousel-item.directive.ts"],"names":[],"mappings":"AAAA,OAAO,EAAa,WAAW,EAAE,MAAM,eAAe,CAAC;AAEvD,qBAGa,qBAAqB;IAEZ,GAAG,EAAE,WAAW,CAAC,GAAG,CAAC;gBAArB,GAAG,EAAE,WAAW,CAAC,GAAG,CAAC;CAE1C"}
