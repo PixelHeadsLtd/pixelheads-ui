@@ -1,6 +1,6 @@
 // 28/9/2020 Upgraded to v24.0.0 - see https://www.ag-grid.com/javascript-grid-themes-v23-migration/
-@import "~ag-grid-community/src/styles/ag-theme-balham/sass/legacy/_ag-theme-balham-v22-compat.scss";
-@import "~ag-grid-community/src/styles/ag-grid.scss";
+@import '~ag-grid-community/dist/styles/ag-grid.css';
+@import '~ag-grid-community/dist/styles/ag-theme-balham.css';
 @import './typography/fonts';
 @import './elements/scrollbars';
 
@@ -8,7 +8,7 @@ body {
   font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif;
   line-height: initial;
   letter-spacing: .015rem;
-  font-size: 14px;
+  font-size: 13px;
   margin: 0;
   
   // for showing header-secondary

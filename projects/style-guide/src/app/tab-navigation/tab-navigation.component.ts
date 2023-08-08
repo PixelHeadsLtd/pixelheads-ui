@@ -28,7 +28,8 @@ export class TabNavigationComponent implements AfterContentChecked {
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
-  onCloseTab() { 
+  onCloseTab(tabId: any) { 
+    console.log(`Tab closed id:${tabId}`);
     if(this.enableClose = true) {
       this.toggleModal = true;
       this.ngTemplate = true;
@@ -38,7 +39,7 @@ export class TabNavigationComponent implements AfterContentChecked {
     }
   }
 
-  onCloseTabSecondary() { 
+  onCloseTabSecondary(tabId: any) { 
     if(this.enableCloseSecondary = true) {
       this.toggleModal = true;
       this.ngTemplate = false;
@@ -61,10 +62,12 @@ export class TabNavigationComponent implements AfterContentChecked {
     if(this.enableClose = true) {
       this.toggleModal = true;
       this.ngTemplate = false;
+      this.routerOutlet = false;
       this.routerOutletSecondary = true;
     }
   }
 
+  // Ng Template
   removeTab(index: number) {
     if(this.tabsNgTemplate) {
       this.tabsNgTemplate.splice(index, 1)
@@ -73,15 +76,23 @@ export class TabNavigationComponent implements AfterContentChecked {
   }
 
   removeTabSecondary(index: number) {
-    if(this.tabsSecondaryRouterOutlet) {
-      this.tabsSecondaryRouterOutlet.splice(index, 1)
+    if(this.tabsSecondaryNgTemplate) {
+      this.tabsSecondaryNgTemplate.splice(index, 1)
       this.toggleModal = false;
     }
   }
 
+  // Router Outlet 
   removeTabRO(index: number) {
     if(this.tabsRouterOutlet) {
       this.tabsRouterOutlet.splice(index, 1)
+      this.toggleModal = false;
+    }
+  }
+
+  removeTabSecondaryRO(index: number) {
+    if(this.tabsSecondaryRouterOutlet) {
+      this.tabsSecondaryRouterOutlet.splice(index, 1)
       this.toggleModal = false;
     }
   }

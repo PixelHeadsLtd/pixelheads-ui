@@ -1,0 +1,42 @@
+<section 
+    *ngIf="!isShaped" 
+    class="aa-tag"
+    [ngClass]="{
+        'bg-aa-red-100' : isRed,
+        'bg-aa-orange-100' : isOrange,
+        'bg-aa-green-100' : isGreen,
+        'bg-aa-blue-100' : isBlue,
+        'bg-aa-light-blue-100' : isLightBlue,
+        'bg-aa-plum-100' : isPlum,
+        'bg-aa-ochre-100' : isOchre,
+        'bg-aa-white-100' : isWhite,
+        'bg-aa-grey-100' : isBlack,
+        'bg-aa-pink-100' : isPink
+    }"
+>
+    <div *ngIf="!isWhite" class="material-icons aa-white-100">loyalty</div>
+    <div *ngIf="isWhite" class="material-icons aa-blue-100">loyalty</div>
+    <span *ngIf="!isWhite" class="aa-white-100">{{tagText}}</span>
+    <span *ngIf="isWhite" class="aa-blue-100">{{tagText}}</span>
+    <a *ngIf="!isWhite" class="anchor-close aa-white-100" (click)="onRemove($event)"></a>
+    <a *ngIf="isWhite" class="anchor-close aa-blue-100" (click)="onRemove($event)"></a>
+</section>
+
+<section 
+    *ngIf="isShaped"
+    class="aa-tag-shaped"
+    [ngClass]="{
+        'bg-aa-red-100' : isRed,
+        'bg-aa-orange-100' : isOrange,
+        'bg-aa-green-100' : isGreen,
+        'bg-aa-blue-100' : isBlue,
+        'bg-aa-light-blue-100' : isLightBlue,
+        'bg-aa-plum-100' : isPlum,
+        'bg-aa-ochre-100' : isOchre,
+        'bg-aa-white-100' : isWhite,
+        'bg-aa-grey-100' : isBlack,
+        'bg-aa-pink-100' : isPink
+    }"
+>
+    <span>{{tagText}}</span>
+</section>

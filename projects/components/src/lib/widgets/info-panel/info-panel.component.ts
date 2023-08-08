@@ -12,6 +12,8 @@ export class InfoPanelComponent implements OnInit {
   @Input() panelHeight: number;
   @Input() panelStatus: string;
   @Input() preventOpacity: string;
+  @Input() removeHeaderBorder: boolean;
+  @Input() roundedCorners: boolean;
 
   constructor() { }
 

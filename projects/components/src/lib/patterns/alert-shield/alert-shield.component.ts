@@ -16,9 +16,11 @@ export class AlertShieldComponent implements OnInit {
   @Input() minWidth: any;
   @Input() alertShieldSmall: boolean;
   @Input() noWrap: boolean;
-  @Input() xpos: string;
-  @Input() ypos: string;
   @Input() hideLabel: boolean;
+  @Input() tooltipTopLeft: boolean;
+  @Input() tooltipTopRight: boolean;
+  @Input() tooltipBottomLeft: boolean;
+  @Input() tooltipBottomRight: boolean;
 
   @Input() customShield: boolean;
   @Input() iconName: string;

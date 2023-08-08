@@ -45,6 +45,11 @@
       padding-top: .25rem;
       padding-bottom: .25rem;
     }
+    .ag-has-focus {
+      .ag-cell-focus:not(.ag-cell-range-selected) {
+        border: none!important;
+      }
+    }
    }
   .ag-popup-child {
     color: _colour(aa-grey-100)!important;
@@ -127,7 +132,7 @@
   .ag-popup-child:not(.ag-tooltip-custom) {
     border: none!important;
     box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
-    border: 1px solid _colour(aa-grey-5);
+    border: .0875rem solid _colour(aa-grey-5);
     background: _colour(aa-white-100);
     border-radius: .25rem;
   }
@@ -171,7 +176,7 @@
     font-size: _font(size-default);
     font-weight: _font(weight-regular);
     background-color: _colour(aa-white-100);
-    border-bottom: solid 1px _colour(aa-grey-25);
+    border-bottom: solid .0875rem _colour(aa-grey-25);
 
     .ag-header-row {
       color: _colour(aa-grey-100);
@@ -210,7 +215,7 @@
     font-weight: _font(weight-regular);
     border-color: _colour(aa-light-blue-30);
     background-color: _colour(aa-white-100);
-    border-width: 1px;
+    border-width: .0875rem;
     min-height: 2.25rem!important;
 
     &.ag-row-selected {
@@ -232,14 +237,16 @@
     }
 
     .ag-cell {
-      display: flex;
-      align-items: center;
       padding-left: calc(#{$cell-horizontal-padding}) !important;
       padding-right: calc(#{$cell-horizontal-padding}) !important;
-      border: 1px solid transparent;
+      line-height: 2.25rem;
 
-      &.flex-column {
-        margin-top: .1rem;
+      &.ag-cell-focus {
+        background-color: _colour(aa-light-blue-15);
+      }
+
+      .avatar {
+        margin-top: -.2rem;
       }
 
       button.btn-ellipsis {
@@ -261,7 +268,7 @@
 
       &.ag-cell-inline-editing {
         padding: 0!important;
-        border: 1px solid _colour(aa-light-blue-100)!important;
+        border: .0875rem solid _colour(aa-light-blue-100)!important;
         background: _colour(aa-grey-2);
         .ag-cell-edit-wrapper {
           .ag-cell-editor {

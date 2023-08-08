@@ -1,23 +1,53 @@
 .alert-shield-tooltip-wrapper,
 .custom-alert-shield {
+  position: relative;
+
   &:hover {
     .alert-shield-tooltip {
       display: block;
+      z-index: 2;
     }
   }
-  position: relative;
+
+  &.tooltip-top-left {
+    .alert-shield-tooltip {
+      bottom: calc(100% + .5rem);
+      right: 0;
+    }
+  }
+
+  &.tooltip-top-right {
+    .alert-shield-tooltip {
+      bottom: calc(100% + .5rem);
+      left: 0;
+    }
+  }
+
+  &.tooltip-bottom-left {
+    .alert-shield-tooltip {
+      top: calc(100% + 0.5rem);
+      right: 0;
+    }
+  }
+
+  &.tooltip-bottom-right {
+    .alert-shield-tooltip {
+      top: calc(100% + 0.5rem);
+      left: 0;
+    }
+  }
+
   cursor: default;
   .alert-shield-tooltip {
     display: none;
     position: absolute;
-    z-index: 2;
     background-color: _colour(aa-white-100);
-    bottom: calc(100% + .5rem);
     border-radius: .5rem;
     padding: .75rem;
     border-style: solid;
     font-size: _font(size-default);
     border-width: 2px;
+    color: _colour(aa-grey-100);
 
     h4 {
       margin-top: 0;
@@ -205,16 +235,9 @@
 
   &.error {
     background-color: _colour(trans-red-5-to-red-dark);
-    //background-image: url("#{$icon-path}/icon-alert-red.svg");
+    background-image: url("#{$icon-path}/icon-alert-red.svg");
     position: relative;
     color: _colour(aa-red-100);
-    &:before {
-      font-family: _font(material-icons);
-      font-size: _font(size-large);
-      content: "\e001";
-      position: absolute;
-      left: .25rem;
-    }
   }
 
   &.removed, &.circle-x-red, &.do-not-use {
@@ -413,26 +436,26 @@
   padding: 0 0.5rem 0 1.75rem;
 }
 
-.approved .alert-shield {
+.approved:not(.feature-box) .alert-shield {
   background-color: _colour(trans-green-5-to-green-dark);
   background-image: url("#{$icon-path}/check_circle-24px-green.svg");
   color: _colour(aa-green-100);
 }
 
 .noMineVisitRegistered .alert-shield,
-.void .alert-shield {
+.void:not(.feature-box) .alert-shield {
   background-color: _colour(trans-red-5-to-red-dark);
   background-image: url("#{$icon-path}/error_outline-24px-red.svg");
   color: _palette(alert-error-body);
 }
 
-.pending .alert-shield {
+.pending:not(.feature-box) .alert-shield {
   background-color: _colour(trans-light-blue-10-to-blue-dark);
   background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
   color: _colour(aa-light-blue-100);
 }
 
-.rejected .alert-shield {
+.rejected:not(.feature-box) .alert-shield {
   background-color: _colour(trans-red-5-to-red-dark);
   background-image: url("#{$icon-path}/highlight_off-24px-red.svg");
   color: _palette(alert-error-body);

@@ -89,6 +89,8 @@
       <aa-alert 
         [collapsible]="true"
         [alignIconTop]="true"
+        minWidth="100%"
+        collapsedHeight="3.25rem"
         alertClass="success" 
         alertTitle="Wise saying"
         alertText="Once upon a time, there was a wise man who used to go to the ocean to do his writing. He had a habit of walking on the beach before he began his work.
@@ -157,6 +159,18 @@
             <td datalabel="Attribute">alertTitle</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your title</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">collapsedHeight</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your height in rem or %</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Attribute">minWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your min-width in rem or %</td>
           </tr>
         </tbody>
       </table>

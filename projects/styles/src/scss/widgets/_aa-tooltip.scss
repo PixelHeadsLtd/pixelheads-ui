@@ -95,10 +95,6 @@
     top: .25rem;
   }
 
-  .right.top {
-    left: 1.75rem
-  }
-
   .left.bottom {
     right: 1.5rem;
     top: .25rem;
@@ -150,7 +146,7 @@
     .material-icons-outlined {
       font-size: 1.15rem;
       cursor: default;
-      display: inline-flex;
+      display: inline-block;
       &.is-warning {color: _colour(aa-orange-100);}   
       &.is-error {color: _colour(aa-red-100);}
       &.is-info {color: _colour(aa-light-blue-100);}

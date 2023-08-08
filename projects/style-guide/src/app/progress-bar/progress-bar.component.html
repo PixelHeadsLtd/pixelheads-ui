@@ -8,18 +8,52 @@
     <section class="flex-1 col-left flex-start">
       <h2>Progress bar</h2>
       <div class="describe margin-bottom-1">
-        <p>Will have a nice little progress-bar for you to use in your project.</p>
+        <p>
+          Will have a nice little progress-bar for you to use in your project.<br/>
+          To use the header version, set [displayOverHeader]="true"
+        </p>
       </div>
 
-      <aa-progress-bar
-        maxWidth="10"
-        titleBold="Step"
-        titleRegular="Aspect extract"
-        complete="50"
-        leftSideText="3 of 4 complete"
-        rightSideText="35 rem"
-      >
-      </aa-progress-bar>
+      <div>
+        <div class="flex-group flex-start margin-bottom-1-5">
+          <aa-button 
+            (buttonClick)="moveProgressBar()" 
+            fieldClass="boxed" 
+            buttonClass="primary" 
+            buttonId="'uttonId"
+            [showLabel]="false"
+            buttonText="Test standard progress-bar"
+            >
+          </aa-button>
+          <aa-button 
+            (buttonClick)="moveHeaderProgressBar()" 
+            fieldClass="boxed" 
+            buttonClass="secondary" 
+            [showLabel]="false"
+            buttonText="Test header version" 
+            >
+          </aa-button>
+        </div>
+        <aa-progress-bar
+          progressId="headerProgressBar"
+          [displayOverHeader]="true"
+          progressColour="bg-aa-yellow-100"
+          complete="0"
+        >
+        </aa-progress-bar>
+  
+        <aa-progress-bar
+          progressId="progressBar"
+          maxWidth="25rem"
+          titleBold="Step"
+          titleRegular="Aspect extract"
+          complete="0"
+          leftSideText="3 of 4 complete"
+          rightSideText="35 rem"
+        >
+        </aa-progress-bar>
+      </div>
+
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -58,7 +92,7 @@
             <td datalabel="Element">aa-progress-bar</td>
             <td datalabel="Attribute">complete</td>
             <td datalabel="Type">Number</td>
-            <td datalabel="Default">Your value 0-100%</td>
+            <td datalabel="Default">0</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-progress-bar</td>
@@ -71,6 +105,23 @@
             <td datalabel="Attribute">rightSideText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your right text</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Attribute">progressId</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your progress Id</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Using the full-page header version</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Attribute">[displayOverHeader]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
           </tr>
         </tbody>
       </table>

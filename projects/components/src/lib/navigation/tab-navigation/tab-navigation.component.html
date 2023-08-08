@@ -15,7 +15,7 @@
           {{ tab.tabName }}
           <span *ngIf="tab.enableIcons" class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
           <span *ngIf="tab.enableCount" class="tab-count {{tab.countColour}}">{{tab.tabCount}}</span>
-          <a *ngIf="tab.enableClose" (click)="onCloseTab($event)" class="anchor-close"></a>
+          <a *ngIf="tab.enableClose" (click)="onCloseTab($event, tab.tabId)"  class="anchor-close"></a>
         </a>
         <span *ngIf="tab.tabDisabled">
           {{ tab.tabName }}

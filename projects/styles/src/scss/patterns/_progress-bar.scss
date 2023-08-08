@@ -1,5 +1,28 @@
 .progress-bar {
     font-size: _font(size-xsmall);
+    &.display-over-header {
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        .progress {
+            background-color: transparent;
+            border-radius: 0;
+            margin: 0;
+            height: .15rem;
+            
+            div {
+                height: .15rem;
+            }
+        }
+
+        span,
+        .flex-group.space-between {
+            display: none;
+        }
+    }
     .progress {
         background-color: _colour(aa-light-blue-30);
         margin: .15rem 0;

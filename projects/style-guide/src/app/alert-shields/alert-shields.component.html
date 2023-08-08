@@ -24,10 +24,9 @@
               [hideLabel]="false"
               shieldColour="bg-aa-green-5"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
-              tooltipHeading="Custom tooltip"
               iconName="update"
               minWidth="12rem"
               alertShieldText="Running"
@@ -255,8 +254,8 @@
               shieldColour="bg-aa-green-5"
               [hideLabel]="false"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
               tooltipHeading="Custom tooltip"
               iconName="update"
@@ -487,8 +486,8 @@
               shieldColour="bg-aa-green-5"
               [hideLabel]="true"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
               tooltipHeading="Custom tooltip"
               iconName="update"
@@ -726,8 +725,8 @@
               shieldColour="bg-aa-green-5"
               [hideLabel]="true"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
               tooltipHeading="Custom tooltip"
               iconName="update"
@@ -966,8 +965,8 @@
               [iconOnly]="true"
               [hideLabel]="false"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
               tooltipHeading="Custom tooltip"
               iconName="update"
@@ -1221,8 +1220,8 @@
               [iconOnly]="true"
               [hideLabel]="false"
               [showTooltip]="true"
-              xPos="right"
-              yPos="top"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
               [showTooltipHeading]="true"
               tooltipHeading="Custom tooltip"
               iconName="update"
@@ -1570,15 +1569,27 @@
             </tr>
             <tr>
               <td datalabel="Element">aa-alert-shield</td>
-              <td datalabel="Attribute">xPos</td>
-              <td datalabel="Type">String</td>
-              <td datalabel="Default">left or right</td>
+              <td datalabel="Attribute">[tooltipTopLeft]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
             </tr>
             <tr>
               <td datalabel="Element">aa-alert-shield</td>
-              <td datalabel="Attribute">yPos</td>
-              <td datalabel="Type">String</td>
-              <td datalabel="Default">top or bottom</td>
+              <td datalabel="Attribute">[tooltipTopRight]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-alert-shield</td>
+              <td datalabel="Attribute">[tooltipBottomLeft]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-alert-shield</td>
+              <td datalabel="Attribute">[tooltipBottomRight]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
             </tr>
             <tr>
               <td datalabel="Element">aa-alert-shield</td>
@@ -1726,9 +1737,8 @@
             alertShieldStatus="info"
             alertShieldText="Info"
             [showTooltipHeading]="true"
-            tooltipHeading="Heading"
-            xpos=""
-            ypos=""
+            tooltipHeading="tooltipBottomRight = true"
+            [tooltipBottomRight]="true"
           >
             <ng-container tooltip-content>
               <p>This is my tooltip message</p>
@@ -1744,9 +1754,8 @@
             alertShieldStatus="success"
             alertShieldText="Success"
             [showTooltipHeading]="true"
-            tooltipHeading="Heading"
-            xpos=""
-            ypos=""
+            tooltipHeading="tooltipTopRight = true"
+            [tooltipTopRight]="true"
           >
             <ng-container tooltip-content>
               <p>This is my tooltip message</p>
@@ -1762,9 +1771,8 @@
             alertShieldStatus="warning"
             alertShieldText="Warning"
             [showTooltipHeading]="true"
-            tooltipHeading="Heading"
-            xpos=""
-            ypos=""
+            tooltipHeading="tooltipBottomLeft = true"
+            [tooltipBottomLeft]="true"
           >
             <ng-container tooltip-content>
               <p>This is my tooltip message</p>
@@ -1780,9 +1788,8 @@
             alertShieldStatus="error"
             alertShieldText="Error"
             [showTooltipHeading]="true"
-            tooltipHeading="Heading"
-            xpos=""
-            ypos=""
+            tooltipHeading="tooltipTopLeft = true"
+            [tooltipTopLeft]="true"
           >
             <ng-container tooltip-content>
               <p>This is my tooltip message</p>
@@ -1855,15 +1862,27 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-alert-shield</td>
-            <td datalabel="Attribute">xPos</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">left or right. Remove for default</td>
+            <td datalabel="Attribute">[tooltipTopLeft]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-alert-shield</td>
-            <td datalabel="Attribute">yPos</td>
-            <td datalabel="Type">Class</td>
-            <td datalabel="Default">top or bottom. Remove for default</td>
+            <td datalabel="Attribute">[tooltipTopRight]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">[tooltipBottomLeft]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-alert-shield</td>
+            <td datalabel="Attribute">[tooltipBottomRight]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-alert-shield</td>
@@ -2209,7 +2228,7 @@
           [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green"
-          alertShieldText="Rick green"
+          alertShieldText="Risk green"
         >
         </aa-alert-shield>
         <aa-alert-shield
@@ -2231,7 +2250,7 @@
           [hideLabel]="false"
           minWidth="12rem"
           alertShieldStatus="risk-green"
-          alertShieldText="Rick green"
+          alertShieldText="Risk green"
         >
         </aa-alert-shield>
         <aa-alert-shield

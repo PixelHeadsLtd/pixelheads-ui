@@ -1,0 +1,129 @@
+// legacy
+.feature {
+  padding: 1rem;
+  background-color: _colour(aa-blue-100);
+  color: _colour(trans-white-to-black);
+  border-radius: .25rem;
+  p, h1, h2, h3, h4, a {
+    color: _colour(trans-white-to-black);
+  }
+}
+
+.feature-box {
+  padding: .75rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: _colour(aa-light-blue-15);
+  border-radius: .5rem;
+  background-color: _colour(aa-white-100);
+
+  header {
+    .material-icons,
+    .material-icons-outlined {
+      color: _colour(aa-blue-100); //default colour
+    }
+  }
+
+  .alert-shield, .custom-alert-shield {
+    margin-bottom: .5rem;
+  }
+
+  h4 {
+    line-height: 1.8rem;
+  }
+
+  &.padding-large {
+    padding: 1rem;
+  }
+
+  &.solid {
+    background-color: _colour(aa-light-blue-15);
+  }
+
+  &.small {
+    width: 10rem;
+  }
+
+  &.secondary {
+    background-color: _palette(aa-light-blue-5);
+    display: inline;
+  }
+
+  &.tertiary {
+    border: 1px solid _palette(grey-50);
+  }
+
+  .default {
+    border-color: _colour(aa-blue-100);
+  }
+
+  .not-started {
+    &:not(.feature-box *) {
+      border-color: _colour(aa-grey-25);
+    }
+    header {
+      .material-icons,
+      .material-icons-outlined {
+        color: _palette(aa-grey-25);
+      }
+    }
+  }
+  
+  &.approved,
+  &.complete,
+  &.done,
+  &.success,
+  .approved,
+  .complete,
+  .done,
+  .success,
+  .approved {
+    &:not(.feature-box *) {
+      border-color: _palette(aa-green-100);
+    }
+    header {
+      .material-icons,
+      .material-icons-outlined {
+        color: _palette(aa-green-100);
+      }
+    }
+  }
+  
+  &.rejected,
+  &.failed,
+  &.error,
+  &.incomplete,
+  .rejected,
+  .failed,
+  .error,
+  .incomplete {
+    &:not(.feature-box *) {
+      border-color: _palette(aa-red-100);
+    }
+    header {
+      .material-icons,
+      .material-icons-outlined {
+        color: _palette(aa-red-100);
+      }
+    }
+  }
+  
+  &.returned,
+  &.pending,
+  &.waiting,
+  &.in-progress,
+  .returned,
+  .pending,
+  .waiting,
+  .in-progress {
+    &:not(.feature-box *) {
+      border-color: _palette(aa-orange-100);
+    }
+    header {
+      .material-icons,
+      .material-icons-outlined {
+        color: _palette(aa-orange-100);
+      }
+    }
+  }
+}

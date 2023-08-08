@@ -144,18 +144,33 @@
           you would use classes "flag bg"
         </p>
       </div>
-      <div class="margin-bottom-1">
+      <div class="margin-bottom-1 flex-group flex-start flex-nowrap">
         <input
-          class="search bd-orange"
+          class="search bd-orange width-16"
           type="text"
           id="search-text"
           aria-describedby="search-text"
           [(ngModel)]="searchText"
           placeholder="Filter..."
           autofocus
-          >
+          />
+          <button *ngIf="searchText" (click)="searchText=null" class="cancel">clear</button>
       </div>
-      <section class="scroll-panel max-height-15 bd-orange bd-dashed bd-1 bd-solid border-radius-0-25 padding-0-75 padding-bottom-0 padding-right-0 box-shadow-strong">
+      <section 
+        *ngIf="searchText"
+        class="
+          scroll-panel 
+          max-height-15 
+          bd-orange 
+          bd-dashed 
+          bd-1 
+          bd-solid 
+          border-radius-0-25 
+          padding-0-75 
+          padding-bottom-0 
+          padding-right-0 
+          box-shadow-strong
+        ">
         <div class="flex-group flex-start scroll-panel-content">
           <div 
             *ngFor="let flag of flags | appFilter: searchText"  
@@ -198,7 +213,7 @@
             <td datalabel="Element">Any</td>
             <td datalabel="Attribute">Class</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">Your flag class, for example Great Britain is .gb</td>
+            <td datalabel="Default">Your flag class, for example France is .fr</td>
           </tr>
         </tbody>
       </table>

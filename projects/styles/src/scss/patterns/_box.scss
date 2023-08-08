@@ -23,6 +23,15 @@
   border-radius: .5rem;
   border: 2px solid _palette(aa-light-blue-15);
 
+  .feature-box-content {
+    overflow-y: auto;
+  }
+
+  .alert-shield, 
+  .custom-alert-shield {
+    margin-bottom: .5rem
+  }
+
   tr:last-child {
     td {
       border-bottom: none;

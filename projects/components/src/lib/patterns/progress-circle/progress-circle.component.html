@@ -23,7 +23,43 @@
     </svg>
     <span class="value margin-0">{{percent}} <span>%</span></span>
   </div>
-  <span class="align-center number" *ngIf="panelView">{{value}}</span>
+
+  <span 
+    class="align-center number" 
+    *ngIf="panelView && !enableAlertShield && !enableAlertShieldTooltip">
+    {{value}}
+  </span>
+
+  <div 
+    *ngIf="enableAlertShield" 
+    class="alert-shield small {{alertShieldStatus}}" 
+    >
+      {{alertShieldText}}
+  </div>
+
+  <div 
+    *ngIf="enableAlertShieldTooltip" 
+    class="alert-shield-tooltip-wrapper"
+    [ngClass]="{
+        'tooltip-top-left' : tooltipTopLeft,
+        'tooltip-top-right' : tooltipTopRight,
+        'tooltip-bottom-left' : tooltipBottomLeft,
+        'tooltip-bottom-right' : tooltipBottomRight
+    }"
+  >
+    <div 
+        class="alert-shield-tooltip {{alertShieldStatus}}"
+        [ngStyle]="{'min-width' : tooltipMinWidth+'rem'}"
+    >
+        <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
+        <ng-content select="[tooltip-content]"></ng-content>
+    </div>
+    <div 
+        class="alert-shield small {{alertShieldStatus}}" 
+        >
+          {{alertShieldText}}
+    </div>
+  </div>
 </div>
 
 <li *ngIf="isSmall" class="flex-group flex-start">

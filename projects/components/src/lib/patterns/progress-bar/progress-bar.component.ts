@@ -14,6 +14,10 @@ export class ProgressBarComponent implements OnInit {
   @Input() rightSideText: any;
   @Input() complete: number;
   @Input() maxWidth: number;
+  @Input() displayOverHeader: boolean;
+  @Input() progressBgColour: any;
+  @Input() progressColour: any;
+  @Input() progressId: any;
 
   constructor() { }
 

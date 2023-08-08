@@ -12,6 +12,9 @@ export class AlertComponent implements OnInit {
   @Input() collapsible: boolean;
   @Input() alignIconTop: boolean;
   @Input() expandPanel: boolean;
+  @Input() minWidth: any;
+  @Input() collapsedHeight: any;
+  @Input() removePanel: any;
 
   constructor() { }
 

@@ -1,5 +1,4 @@
 <section class="control-bar">
-  <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
   <h1>AG Grid - We only use the "ag-theme-balham"</h1>
 </section>
 <section class="content-container grid ag-grid-full-height padding-bottom-0 position-relative" [ngStyle]="{'height' : 'calc(100vh - 9rem)'}">
@@ -15,8 +14,8 @@
         </div>
         <div class="describe">
           <p>
-            Use ag-grid version <strong class="aa-red-100">v24.1.0</strong>. If you want to upgrade to a version above 28 
-            then you'll need to let us know because ag-grid have changed the sass paths, which means you version won't work with Design Language.
+            We are currently on Ag-Grid <strong class="aa-red-100">v27.3.0</strong>. 
+            Please refer to the <a href="https://www.ag-grid.com/angular-data-grid/angular-compatibility/" target="_blank">version compatibility chart here</a>.
           </p>
           <p>
             For details around setting ag-grid height, custom-tooltips and context-menus, please<br/>
@@ -26,10 +25,31 @@
         </div>
         <div class="flex-group flex-start">
           <div class="field">
-            <button (click)="autoSizeAll()" class="primary small">Autosize all</button>
+            <button (click)="autoSizeAll()" class="primary">Autosize all</button>
           </div>
           <div class="field">
-            <button (click)="sizeToFit()" class="primary small">Size to fit</button>
+            <button (click)="sizeToFit()" class="primary">Size to fit</button>
+          </div>
+          <div class="flex-group flex-start flex-align-center">
+            <aa-button
+              [customIcons]="true"
+              (buttonClick)="copyToClipboard(copyLicence)"
+              buttonId="buttonId"
+              buttonClass="custom-icons orange"
+              fieldClass="label-hidden"
+              [showLabel]="false"
+              buttonLabel="Custom icons"
+              buttonText="Copy licence to clipboard"
+              buttonIcon="content_copy"
+              [showCount]="false"
+              count="10"
+              countColor="blue"
+              disabled="">
+            </aa-button>
+            <div *ngIf="codeCopied" class="copied padding-top-1 flex-group flex-start flex-align-center">
+              <div class="material-icons aa-orange-100 margin-right-0-25">thumb_up_alt</div>
+              <p class="italic">Licence copied!</p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,7 +120,7 @@
         #agGrid id="myGrid"
         class="ag-theme-balham ag-grid"
         [tooltipShowDelay]="tooltipShowDelay"
-        [enableRangeSelection]="false"
+        [enableRangeSelection]="true"
         [rowSelection]="'multiple'"
         [gridOptions]="gridOptions"
         [defaultColDef]="defaultColDef"
@@ -109,7 +129,7 @@
         (gridReady)="onGridReady($event)"
         [preventDefaultOnContextMenu]="true"
         [suppressClickEdit]="true"
-        [sideBar]="true"
+        [sideBar]="false"
         [autoGroupColumnDef]="autoGroupColumnDef">
     </ag-grid-angular>
     </div>
@@ -128,41 +148,6 @@
       >
       <article class="blade-content">
         <h2 class="margin-bottom-0-25">General</h2>
-        <!-- licence -->
-        <aa-accordion
-          [disabled]="false"
-          (open)="
-            getLicence = true;
-            settingHeight=false;
-            customTooltipOne=false; 
-            customTooltipTwo=false; 
-            customTooltipThree=false; 
-            customTooltipFour=false; 
-            contextMenuOne=false; 
-            contextMenuTwo=false; 
-            contextMenuThree=false; 
-            contextMenuFour=false; 
-            contextMenuFive=false;
-            validation=false
-          "
-          [dragable]="false"
-          [showBody]="getLicence"
-          accordionHeading="Get the latest Ag-grid licence"
-          accordionId="accordion01"
-          sectionId="section01"
-          [iconsEnabled]="true"
-          iconBgColor=""
-          iconName="settings"
-        >
-          <h2 class="margin-top-0">Copy and paste the licence code into your 'environment.ts' file</h2>
-          <div class="flex-group flex-start">
-            <button class="secondary" (click)="copyToClipboard(copyLicence)">Click here to copy the code</button>
-            <div *ngIf="codeCopied" class="copied flex-group flex-start flex-align-center">
-              <div class="material-icons aa-orange-100 margin-right-0-25">thumb_up_alt</div>
-              <p class="padding-top-0-25 italic">Licence copied!</p>
-            </div>
-          </div>
-        </aa-accordion>
         <!-- setting height -->
         <aa-accordion
           [disabled]="false"
@@ -178,7 +163,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarOne=false;
+            avatarOne=false
           "
           [dragable]="false"
           [showBody]="settingHeight"
@@ -208,7 +196,7 @@
             <li>When your structure is complete, adjust the 9rem value that's set on the aforementioned page wrapper <strong class="aa-light-blue-100">ngStyle</strong>, until the browser scrollbars disappear and teh bottom of your grid meets the bottom of the page nicely</li>
           </ol>
           <iframe frameborder=0 
-          style="width: 100%; height: 53rem;" 
+          style="width: 100%; height: 55rem;" 
           scrolling="no" 
           seamless="seamless" 
           srcdoc='<html><body><script src="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000.js"></script></body></html>'
@@ -232,7 +220,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="customTooltipOne"
@@ -246,8 +237,9 @@
           <h2 class="margin-top-0">Part 1 of 4</h2>
           <h3>Install the following packages in packages.json</h3>
           <p>
-            <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
-            <strong class="aa-red-100">"ag-grid-community": "^26.2.0"</strong>
+            <strong class="aa-red-100">"ag-grid-angular": "^27.3.0" or later</strong><br/>
+            <strong class="aa-red-100">"ag-grid-community": "^27.3.0" or later</strong><br/>
+            <strong class="aa-red-100">"ag-grid-enterprise": "^27.3.0" or later</strong>
           </p>
         </aa-accordion>
 
@@ -266,7 +258,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="customTooltipTwo"
@@ -304,7 +299,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="customTooltipThree"
@@ -342,7 +340,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="customTooltipFour"
@@ -381,7 +382,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="contextMenuOne"
@@ -395,8 +399,9 @@
           <h2 class="margin-top-0">Part 1 of 5</h2>
           <h3>Install the following packages in packages.json</h3>
           <p>
-            <strong class="aa-red-100">"ag-grid-angular": "^26.2.0"</strong><br/>
-            <strong class="aa-red-100">"ag-grid-community": "^26.2.0"</strong>
+            <strong class="aa-red-100">"ag-grid-angular": "^27.3.0" or later</strong><br/>
+            <strong class="aa-red-100">"ag-grid-community": "^27.3.0" or later</strong><br/>
+            <strong class="aa-red-100">"ag-grid-enterprise": "^27.3.0" or later</strong>
           </p>
         </aa-accordion>
 
@@ -415,7 +420,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="contextMenuTwo"
@@ -455,7 +463,10 @@
             contextMenuThree=true; 
             contextMenuFour=false; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="contextMenuThree"
@@ -495,7 +506,10 @@
             contextMenuThree=false; 
             contextMenuFour=true; 
             contextMenuFive=false;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="contextMenuFour"
@@ -511,7 +525,7 @@
           </div>
           <h2 class="margin-top-0">Import your 'ellipsis-context-menu' from part 2 and update columnDefs          </h2>
           <iframe frameborder=0 
-          style="width: 100%; height: 82rem;" 
+          style="width: 100%; height: 104rem;" 
           scrolling="no" 
           seamless="seamless" 
           srcdoc='<html><body><script src="https://gist.github.com/angloux/43675ada24abcaa6a719cf48204f1ce2.js"></script></body></html>'
@@ -533,7 +547,10 @@
             contextMenuThree=false; 
             contextMenuFour=false; 
             contextMenuFive=true;
-            validation=false
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=false
           "
           [dragable]="false"
           [showBody]="contextMenuFive"
@@ -557,6 +574,136 @@
           srcdoc='<html><body><script src="https://gist.github.com/angloux/0e113052792f52d886239294d063b2a0.js"></script></body></html>'
           ></iframe>
         </aa-accordion>   
+        
+        <!-- adding the User card part 1 -->
+        <h2 class="margin-bottom-0-25 margin-top-1">Adding the user Avatar card</h2>
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence=false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false;
+            avatarOne=true;
+            avatarTwo=false;
+            avatarThree=false
+          "
+          [dragable]="false"
+          [showBody]="avatarOne"
+          accordionHeading="Part 1 of 3"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-burgundy-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/f16c02599eda33a6c99e5680568d9ce8" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-0">Create an Avatar component
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 80rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/f16c02599eda33a6c99e5680568d9ce8.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion> 
+
+        <!-- adding the User card part 2 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence=false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false;
+            avatarOne=false;
+            avatarTwo=true;
+            avatarThree=false
+          "
+          [dragable]="false"
+          [showBody]="avatarTwo"
+          accordionHeading="Part 2 of 3"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-burgundy-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/b5810d6e5078f0a7aad1c55d754d8dd3" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-0">Create your custom card component
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 72rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/b5810d6e5078f0a7aad1c55d754d8dd3.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>   
+
+        <!-- adding the User card part 3 -->
+        <aa-accordion
+          [disabled]="false"
+          (open)="
+            getLicence=false;
+            settingHeight=false;
+            customTooltipOne=false; 
+            customTooltipTwo=false; 
+            customTooltipThree=false; 
+            customTooltipFour=false; 
+            contextMenuOne=false; 
+            contextMenuTwo=false; 
+            contextMenuThree=false; 
+            contextMenuFour=false; 
+            contextMenuFive=false;
+            validation=false;
+            avatarOne=false;
+            avatarTwo=false;
+            avatarThree=true
+          "
+          [dragable]="false"
+          [showBody]="avatarThree"
+          accordionHeading="Part 3 of 3"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconBgColor="aa-burgundy-100"
+          iconName="menu_open"
+        >
+          <div header-custom>
+            <a class="aa-white-100" href="https://gist.github.com/angloux/ee6b1ec83f04d333ef279b40eb41d49f" target="_blank">View Gist on GitHub</a>
+          </div>
+          <h2 class="margin-top-0">Update your columnDefs
+            
+          </h2>
+          <iframe frameborder=0 
+          style="width: 100%; height: 35rem;" 
+          scrolling="no" 
+          seamless="seamless" 
+          srcdoc='<html><body><script src="https://gist.github.com/angloux/ee6b1ec83f04d333ef279b40eb41d49f.js"></script></body></html>'
+          ></iframe>
+        </aa-accordion>   
 
         <!-- validation -->
         <h2 class="margin-top-1 margin-bottom-0-25">Validation</h2>
@@ -574,7 +721,10 @@
           contextMenuThree=false; 
           contextMenuFour=false; 
           contextMenuFive=false;
-          validation=true
+          validation=true;
+          avatarOne=false;
+          avatarTwo=false;
+          avatarThree=false
         "
         [dragable]="false"
         [showBody]="validation"
@@ -597,7 +747,7 @@
         </p>
         <a href="https://gist.github.com/angloux/4d619eaff00d00449b7c871d59cd4d65" target="_blank">Further notes here in the Gist</a>
         <iframe frameborder=0 
-        style="width: 100%; height: 24rem;" 
+        style="width: 100%; height: 22rem;" 
         scrolling="no" 
         seamless="seamless" 
         srcdoc='<html><body><script src="https://gist.github.com/angloux/4d619eaff00d00449b7c871d59cd4d65.js"></script></body></html>'

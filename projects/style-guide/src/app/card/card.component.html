@@ -1072,22 +1072,26 @@
         <h2>Obi-Wan Kenobi</h2>
         <article class="flex-group flex-start">
           <section>
-            <h5>Job title</h5>
-            <span>Jedi Master</span>
-            <h5>Skills</h5>
-            <span>Force powers</span>
+            <h4>Job title</h4>
+            <div>Jedi Master</div>
+            <h4>Skills</h4>
+            <div>Force powers</div>
           </section>
       
           <section>
-            <h5>Species</h5>
-            <span>Human</span>
-            <h5>Affiliation</h5>
-            <span>Rebel Alliance</span>
+            <h4>Species</h4>
+            <div>Human</div>
+            <h4>Affiliation</h4>
+            <div>Rebel Alliance</div>
           </section>
       
           <section>
-            <h5>Apprentices</h5>
-            <span>Luke & Anakin Skywalker</span>
+            <h4>Apprentices</h4>
+            <div 
+              title="Luke & Anakin Skywalker" 
+              class="max-width-8">
+              Luke & Anakin Skywalker
+            </div>
           </section>
         </article>
       </ng-container>
@@ -1137,6 +1141,23 @@
             <td datalabel="Attribute">[imgPath]</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Pass your image to imgPath</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="nowrap margin-bottom-0">Truncating your text (try to limit your text to 3 columns)</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-card</td>
+            <td datalabel="Attribute">max-width</td>
+            <td datalabel="Type">Class assigned to your text wrapper</td>
+            <td datalabel="Default">To enable truncation, <a class="underline" routerLink="/widths">add a max-width</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-card</td>
+            <td datalabel="Attribute">Title</td>
+            <td datalabel="Type">Element title</td>
+            <td datalabel="Default">Pass your text string to the title tag</td>
           </tr>
         </tbody>
       </table>

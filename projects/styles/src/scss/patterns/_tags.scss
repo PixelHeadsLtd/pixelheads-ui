@@ -41,6 +41,10 @@
       }
     }
   }
+
+  &.bg-aa-white-100 {
+    border: 1px solid _colour(aa-blue-100)
+  }
 }
 
 table {
@@ -49,3 +53,115 @@ table {
   }
 }
 
+.aa-tag-shaped {
+  font-size: _font(size-default);
+  line-height: 1.25rem;
+  white-space: nowrap;
+  min-width: 5rem;
+  height: 1.5rem;
+  max-height: 1.5rem;
+  position: relative;
+  margin-left: .65rem;
+  margin-bottom: .5rem;
+  border-radius: .35rem;
+  padding: .25rem .5rem 0 .75rem;
+  color: _colour(aa-white-100);
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: .25rem;
+    left: -.5rem;
+    bottom: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    rotate: 45deg;
+    border-radius: .2rem;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: .7rem;
+    left: -.15rem;
+    bottom: 0;
+    width: .35rem;
+    height: .35rem;
+    background-color: _colour(aa-white-100);
+    border-radius: 50%;
+  }
+
+  // Colour scheme
+  &.bg-aa-red-100 {
+    border: 1px solid _colour(aa-red-100);
+    &:before {
+      background-color: _colour(aa-red-100)
+    }
+  }
+  &.bg-aa-orange-100 {
+    border: 1px solid _colour(aa-orange-100);
+    &:before {
+      background-color: _colour(aa-orange-100)
+    }
+  }
+  &.bg-aa-green-100 {
+    border: 1px solid _colour(aa-green-100);
+    &:before {
+      background-color: _colour(aa-green-100)
+    }
+  }
+  &.bg-aa-blue-100 {
+    border: 1px solid _colour(aa-blue-100);
+    &:before {
+      background-color: _colour(aa-blue-100) 
+    }
+  }
+  &.bg-aa-light-blue-100 {
+    border: 1px solid _colour(aa-light-blue-100);
+    &:before {
+      background-color: _colour(aa-light-blue-100) 
+    }
+  }
+  &.bg-aa-plum-100 {
+    border: 1px solid _colour(aa-plum-100);
+    &:before {
+      background-color: _colour(aa-plum-100) 
+    }
+  }
+  &.bg-aa-ochre-100 {
+    border: 1px solid _colour(aa-ochre-100);
+    &:before {
+      background-color: _colour(aa-ochre-100) 
+    }
+  }
+  &.bg-aa-pink-100 {
+    border: 1px solid _colour(aa-pink-100);
+    &:before {
+      background-color: _colour(aa-pink-100) 
+    }
+  }
+  &.bg-aa-white-100 {
+    color: _colour(aa-blue-100);
+    border: 1px solid _colour(aa-light-blue-40);
+    &:before {
+      background-color: _colour(aa-white-100);
+      border-left: 1px solid _colour(aa-light-blue-40);
+      border-bottom: 1px solid _colour(aa-light-blue-40);
+    }
+    &:after {
+      background-color: _colour(aa-white-100);
+      border: 1px solid _colour(aa-light-blue-80);
+    }
+  }
+  &.bg-aa-grey-100 {
+    border: 1px solid _colour(aa-grey-100);
+    &:before {
+      background-color: _colour(aa-grey-100)
+    }
+  }
+}

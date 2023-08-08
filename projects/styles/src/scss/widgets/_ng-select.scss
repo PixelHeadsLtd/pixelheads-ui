@@ -1,4 +1,40 @@
 // ng-select overrides
+
+.allow-text-wrapping {
+  // regular dropdowns
+  .ng-option {
+    white-space: normal!important;
+    display: flex;
+  }
+  
+  // multi-select
+  &.ng-select-multiple {
+    .ng-select-container {
+      background-color: _colour(aa-white-100) !important; // aa override
+      border: 1px solid _colour(aa-grey-25);
+      border-radius: .25rem !important;
+
+      .ng-value {
+        white-space: normal!important;
+        display: flex;
+
+        .ng-value-icon {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+// When nested in ag-grid - this is because the dropdown part of ng-select is apended to the page body
+.ng-dropdown-panel:not(.ng-select .ng-option .ng-option-label) {
+  .ng-option {
+    white-space: normal!important;
+    display: flex;
+  }
+}
+
 .ng-select {
   font-size: _font(size-default);
 
@@ -67,6 +103,7 @@
 
   .ng-select-container {
     min-height: 2.1rem;
+    line-height: initial;
     @include chevron-down;
 
     .ng-value-container {
@@ -94,14 +131,6 @@
           top: .35rem;
         }
       }
-    }
-  }
-
-  &.ng-select-multiple {
-    .ng-select-container {
-      background-color: _colour(aa-white-100) !important; // aa override
-      border: 1px solid _colour(aa-grey-25);
-      border-radius: .25rem !important;
     }
   }
 
@@ -138,10 +167,20 @@
         background-color: transparent!important;
       }
       .ng-option {
-        white-space: normal;
         padding: .25rem 1rem;
         color: _colour(aa-grey-100)!important;
         background-color: _colour(aa-light-blue-10) !important;
+
+        .ng-tag-label {
+          color: _colour(aa-white-100);
+          background-color: _colour(aa-light-blue-100);
+          border-radius: .25rem;
+          padding: .25rem .5rem;
+          margin: .25rem .5rem .25rem -.5rem;
+          display: inline-block;
+          font-size: _font(size-small);
+        }
+
         &.ng-option-selected {
           .ng-option-label {
             opacity: .3;

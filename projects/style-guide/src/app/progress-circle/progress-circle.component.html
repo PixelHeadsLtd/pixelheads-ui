@@ -304,14 +304,23 @@
                 [panelView]="true" 
                 [hideChevron]="true" 
                 [enableTooltip]="item.tooltipEnabled" 
+                [enableAlertShieldTooltip]="item.enableAlertShieldTooltip"
+                [tooltipTopRight]="item.isTopRight"
+                [tooltipMinWidth]="item.tooltipMinWidth"
+                [showTooltipHeading]="item.showTooltipHeading"
+                [tooltipHeading]="item.myTooltipHeading"
+                [alertShieldStatus]="item.alertShieldStatus"
+                [alertShieldText]="item.alertShieldText"
                 name="{{item.progressName}}"
                 percent="{{item.percentage}}"
                 value="{{item.valueSplit}}"
-                tooltipMinWidth="12" 
                 tooltipBody="{{item.tooltipText}}" 
                 xpos="bottom" 
                 ypos="right"
                 >
+                <ng-container tooltip-content>
+                  This is my tooltip message
+                </ng-container>
               </aa-progress-circle>
             </a>
           </div>
@@ -360,6 +369,88 @@
               <td datalabel="Attribute">progressColor</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">orange, green, blue, light-blue, red</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <h3 class="margin-top-1">Enabling alert-shield</h3>
+              </td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[enableAlertShield]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">alertShieldStatus</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">.info, .error, .warning, .success</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">alertShieldText</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">Your text (Keep it short)</td>
+            </tr>
+            <tr>
+              <td colspan="4">
+                <h3 class="margin-top-1">Enabling alert-shield (with tooltips)</h3>
+              </td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[enableAlertShieldTooltip]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[tooltipTopLeft]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true or false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[tooltipTopRight]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true or false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[tooltipBottomLeft]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true or false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[tooltipBottomRight]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true or false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">tooltipMinWidth</td>
+              <td datalabel="Type">Number</td>
+              <td datalabel="Default">Your min-width</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[showTooltipHeading]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">true of false</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">tooltipHeading</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">Your tooltip heading</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Attribute">[tooltip-content]</td>
+              <td datalabel="Type">String</td>
+              <td datalabel="Default">Your tooltip message text</td>
             </tr>
           </tbody>
         </table>

@@ -1,9 +1,15 @@
-<div class="progress-bar" [ngStyle]="{'width' : maxWidth+'rem'}">
+<div 
+    class="progress-bar" 
+    [ngStyle]="{'width' : maxWidth}"
+    [ngClass]="{'display-over-header' : displayOverHeader}"
+>
     <span>
         <strong>{{titleBold}} </strong>
         <span>{{titleRegular}}</span>
     </span>
-    <div class="progress"><div [ngStyle]="{'width' : complete+'%'}"></div></div>
+    <div class="progress {{progressBgColour}}">
+        <div [id]="progressId" class="{{progressColour}}" [ngStyle]="{'width' : complete+'%'}"></div>
+    </div>
     <div class="flex-group space-between">
         <div>{{leftSideText}}</div>
         <div>{{rightSideText}}</div>

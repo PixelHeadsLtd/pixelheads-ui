@@ -1,5 +1,5 @@
 <div 
-  *ngIf="!buttonEnriched && !buttonSplit &&!buttonSummary" 
+  *ngIf="!buttonEnriched && !buttonSplit &&!buttonSummary &&!buttonDayPicker" 
   class="field {{fieldClass}}"
   [class.button-large]="buttonLarge"
 >
@@ -45,19 +45,40 @@
   </button>
 </div>
 
-<div *ngIf="buttonSplit" class="field {{fieldClass}}" 
->
+<div *ngIf="buttonSplit" class="field {{fieldClass}}">
   <label [for]="buttonId">{{buttonLabel}}</label>
   <div class="button-split" [ngClass]="{'nav-left-side' : navLeftside}">
-    <button
-      (click)="showBtnMenu=!showBtnMenu" 
-      [class]="buttonClass"
-      [type]="buttonType" 
-      [name]="buttonId" 
-      [id]="buttonId"
-     >
-      {{buttonText}}
-    </button>
+    <div class="flex-group flex-start flex-align-center flex-nowrap">
+      <button
+        *ngIf="navLeftside"
+        class="chevron-up"
+        [class]="buttonClass"
+        (click)="showBtnMenu=!showBtnMenu" 
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+      </button>
+      <button
+        (click)="onButtonClick($event)"
+        [class]="buttonClass"
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+        {{buttonText}}
+      </button>
+      <button
+        *ngIf="!navLeftside"
+        class="chevron-up"
+        [class]="buttonClass"
+        (click)="showBtnMenu=!showBtnMenu" 
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+      </button>
+    </div>
     <nav 
       (click)="showBtnMenu=false" 
       *ngIf="showBtnMenu" 
@@ -82,3 +103,17 @@
     </p>
   </button>
 </div>
+
+<button
+  *ngIf="buttonDayPicker"
+  class="button-day-picker box-shadow-strong"
+  (click)="onButtonClick($event)"
+  [type]="buttonType" 
+  [name]="buttonId" 
+  [id]="buttonId" 
+  [disabled]="disabled" 
+>
+  <strong>{{buttonText}}</strong>
+  <div></div>
+</button>
+

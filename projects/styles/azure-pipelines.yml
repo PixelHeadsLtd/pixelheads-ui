@@ -5,6 +5,8 @@ trigger:
   paths:
     include:
       - workspace/projects/styles/*
+    exclude:
+      - workspace/projects/styles/src/scss/widgets/_design-lang-ui.scss
 
 pool:
   vmImage: 'ubuntu-latest'

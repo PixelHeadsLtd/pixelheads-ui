@@ -12,73 +12,15 @@
         <p>Use this version when there are state changes, for example validation messages from a modal or blade</p>
       </div>
 
-      <aa-modal 
-        *ngIf="toggleModal"
-        [red]="true"
-        [orange]=""
-        [blue]=""
-        [green]=""
-        topPos=""
-        rightPos=""
-        leftPos=""
-        minWidth=""
-        maxWidth="28rem"
-        zIndex="999"
-        [heading]="'Are you sure you want to delete this tab?'"
-      >
-        <div content-custom>
-          You'll need to add your logic for removing the tab
-        </div>
-        <aa-button 
-          *ngIf="ngTemplate"
-          (buttonClick)="removeTab()" 
-          buttonClass="primary" 
-          fieldClass="boxed label-hidden" 
-          buttonId="buttonId" 
-          buttonText="Yes">
-        </aa-button>
-        <aa-button 
-          *ngIf="ngTemplateSecondary"
-          (buttonClick)="removeTabSecondary()" 
-          buttonClass="primary" 
-          fieldClass="boxed label-hidden" 
-          buttonId="buttonId" 
-          buttonText="Yes">
-        </aa-button>
-        <aa-button 
-          *ngIf="routerOutlet"
-          (buttonClick)="removeTabRO()" 
-          buttonClass="primary" 
-          fieldClass="boxed label-hidden" 
-          buttonId="buttonId" 
-          buttonText="Yes">
-        </aa-button>
-        <aa-button 
-          *ngIf="routerOutletSecondary"
-          (buttonClick)="removeTabSecondary()" 
-          buttonClass="primary" 
-          fieldClass="boxed label-hidden" 
-          buttonId="buttonId" 
-          buttonText="Yes RO">
-        </aa-button>
-
-        <aa-button 
-            (buttonClick)="toggleModal=false" 
-            buttonClass="cancel" 
-            fieldClass="boxed label-hidden" 
-            buttonId="buttonId" 
-            buttonText="No">
-        </aa-button>
-      </aa-modal>
-
       <aa-tab-navigation 
         [ngTemplate]="true" 
         [displayTabContent]="false" 
         (tabChanged)="tabChanged($event)"
-        (closeTab)="onCloseTab()"
+        (closeTab)="onCloseTab($event)"
       >
         <aa-tab-navigation-item 
           *ngFor="let tab of tabsNgTemplate; let i = index"
+          [tabId]="i"
           tabName="{{tab.tabName}}" 
           [enableIcons]="tab.enableIcons" 
           iconName="{{tab.iconName}}" 
@@ -163,6 +105,7 @@
           >
           <aa-tab-navigation-secondary-item 
             *ngFor="let tab of tabsSecondaryNgTemplate; let i = index"
+            [tabId]="i"
             tabName="{{tab.tabName}}" 
             [tabDisabled]="tab.tabDisabled"
             [enableCloseSecondary]="tab.enableCloseSecondary"
@@ -214,6 +157,12 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td datalabel="Element">aa-tab-navigation</td>
+            <td datalabel="Attribute">[tabId]</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your tab Id</td>
+          </tr>
           <tr>
             <td datalabel="Element">aa-tab-navigation</td>
             <td datalabel="Attribute">[ngTemplate]</td>
@@ -283,6 +232,12 @@
           <ng-container *ngIf="showMore">
             <tr>
               <td datalabel="Element">aa-tab-navigation-item</td>
+              <td datalabel="Attribute">[tabId]</td>
+              <td datalabel="Type">Any</td>
+              <td datalabel="Default">Your tab Id</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-tab-navigation-item</td>
               <td datalabel="Attribute">countColour</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default"><a routerLink="/colours">Your colour</a></td>
@@ -332,13 +287,13 @@
               <td datalabel="Element">aa-tab-navigation-secondary</td>
               <td datalabel="Attribute">tabColour</td>
               <td datalabel="Type">Any</td>
-              <td datalabel="Default"><a routerLink="/colours">Your chosen colour</a></td>
+              <td datalabel="Default"><a routerLink="/colours">Your chosen colours</a></td>
             </tr>
             <tr>
               <td datalabel="Element">aa-tab-navigation-secondary</td>
               <td datalabel="Attribute">tabActiveColour</td>
               <td datalabel="Type">Any</td>
-              <td datalabel="Default"><a routerLink="/colours">Your chosen colour</a></td>
+              <td datalabel="Default"><a routerLink="/colours">Your chosen colours</a></td>
             </tr>
             <tr>
               <td datalabel="Element">aa-tab-navigation-secondary</td>
@@ -424,12 +379,11 @@
       
       <section class="content-container padding-bottom-0">
         <aa-tab-navigation-secondary 
-         [routerOutlet]="true"
-         tabColour="bg-aa-pink-100"
+         [routerOutletSecondary]="true"
         >
           <ng-container list-items>
               <li 
-                *ngFor="let tab of tabsSecondaryRouterOutlet; let i = index" 
+                *ngFor="let tab of tabsSecondaryRouterOutlet; let i = index"
               >
                 <a 
                   *ngIf="!tab.tabDisabled"
@@ -726,3 +680,64 @@
       <app-gist src="angloux/f08af42ced9a4788dca64d6ced828ecf"></app-gist>
     </article>
 </aa-blade>
+
+<aa-modal 
+  *ngIf="toggleModal"
+  [red]="true"
+  [orange]=""
+  [blue]=""
+  [green]=""
+  topPos=""
+  rightPos=""
+  leftPos=""
+  minWidth=""
+  maxWidth="28rem"
+  zIndex="999"
+  [heading]="'Are you sure you want to delete this tab?'"
+  >
+  <div content-custom>
+    You'll need to add your logic for removing the tab
+  </div>
+  <!-- ng-template -->
+  <aa-button 
+    *ngIf="ngTemplate"
+    (buttonClick)="removeTab()" 
+    buttonClass="primary" 
+    fieldClass="boxed label-hidden" 
+    buttonId="buttonId" 
+    buttonText="Yes">
+  </aa-button>
+  <aa-button 
+    *ngIf="ngTemplateSecondary"
+    (buttonClick)="removeTabSecondary()" 
+    buttonClass="primary" 
+    fieldClass="boxed label-hidden" 
+    buttonId="buttonId" 
+    buttonText="Yes">
+  </aa-button>
+  <!-- router outlet -->
+  <aa-button 
+    *ngIf="routerOutlet"
+    (buttonClick)="removeTabRO()" 
+    buttonClass="primary" 
+    fieldClass="boxed label-hidden" 
+    buttonId="buttonId" 
+    buttonText="Yes">
+  </aa-button>
+  <aa-button 
+    *ngIf="routerOutletSecondary"
+    (buttonClick)="removeTabSecondaryRO()" 
+    buttonClass="primary" 
+    fieldClass="boxed label-hidden" 
+    buttonId="buttonId" 
+    buttonText="Yes">
+  </aa-button>
+  <!-- cancel -->
+  <aa-button 
+      (buttonClick)="toggleModal=false" 
+      buttonClass="cancel" 
+      fieldClass="boxed label-hidden" 
+      buttonId="buttonId" 
+      buttonText="No">
+  </aa-button>
+</aa-modal>

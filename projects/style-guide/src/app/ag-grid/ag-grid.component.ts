@@ -29,6 +29,9 @@ export class AgGridComponent {
   contextMenuThree: boolean;
   contextMenuFour: boolean;
   contextMenuFive: boolean;
+  avatarOne: boolean;
+  avatarTwo: boolean;
+  avatarThree: boolean;
   validation: boolean;
   getLicence: boolean;
   codeCopied: boolean;
@@ -89,8 +92,7 @@ export class AgGridComponent {
       headerCheckboxSelection: true,
       headerCheckboxSelectionFilteredOnly: true,
       checkboxSelection: true,
-      // cellClass: this.cellClass,
-      tooltipField: "age", // tell ag-grid to use this cell as a tooltip
+      tooltipField: "athlete", // tell ag-grid to use this cell as a tooltip
       tooltipComponent: "CustomCardComponent", // pass in our custom-card.component
       cellRenderer: 'AvatarComponent', // display the image avatar in ag-grid cell
       cellRendererParams: params => { // pass in the athlete and click event
@@ -156,9 +158,9 @@ export class AgGridComponent {
       cellRenderer: () => {
         const elem = document.createElement('div');
         elem.innerHTML =
-          `<div class="alert-shield info">
-            Information
-          </div>`;
+        `<div class="alert-shield info">
+          Information
+        </div>`;
         return elem;
       }
     },

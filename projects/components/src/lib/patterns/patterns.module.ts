@@ -8,6 +8,8 @@ import { ProgressCircleComponent } from './progress-circle/progress-circle.compo
 import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
 import { CounterComponent } from './counter/counter.component';
+import { TagComponent } from './tag/tag.component';
+import { FeatureBoxComponent } from './feature-box/feature-box.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CounterComponent } from './counter/counter.component';
     ProgressCircleComponent,
     ActionsSummaryComponent,
     StatusIndicatorComponent,
-    CounterComponent
+    CounterComponent,
+    TagComponent,
+    FeatureBoxComponent
   ],
   imports: [
     CommonModule
@@ -31,7 +35,9 @@ import { CounterComponent } from './counter/counter.component';
     ProgressCircleComponent,
     ActionsSummaryComponent,
     StatusIndicatorComponent,
-    CounterComponent
+    CounterComponent,
+    TagComponent,
+    FeatureBoxComponent
   ]
 })
 export class PatternsModule { }

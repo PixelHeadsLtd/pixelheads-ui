@@ -8,6 +8,15 @@
         margin-top: 1.75rem;
       }
     }
+
+    &.list-display {
+      label {
+        margin-top: .75rem;
+        &:last-child {
+          margin-top: .5rem;
+        }
+      }
+    }
   }
   label {
     &:last-child {

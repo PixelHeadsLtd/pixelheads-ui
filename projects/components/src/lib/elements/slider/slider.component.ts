@@ -14,6 +14,7 @@ export class SliderComponent implements OnInit {
   @Input() sliderId: any;
   @Input() sliderName: any;
   @Input() disabled: any;
+  @Input() labelMinWidth: any;
   sliderCheckedValue: any;
   @Input() set sliderChecked(value: any) {
     this.sliderCheckedValue = value;

@@ -10,13 +10,13 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   @ContentChildren(TabNavigationSecondaryItemComponent) tabNavigationItems: QueryList<TabNavigationSecondaryItemComponent>;
   @Input() autoChangeTabs = true;
   @Input() displayTabContent = true;
-  @Input() routerOutlet: boolean;
+  @Input() routerOutletSecondary: boolean;
   @Input() ngTemplate: boolean;
   @Input() tabColour: any;
   @Input() tabActiveColour: any;
   @Output() tabClicked = new EventEmitter<TabNavigationSecondaryItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationSecondaryItemComponent>();
-  @Output() closeTabSecondary = new EventEmitter<Event>();
+  @Output() closeTabSecondary = new EventEmitter<any>();
   currentTab: TabNavigationSecondaryItemComponent;
 
   get contentTabs() {
@@ -24,11 +24,6 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   }
 
   constructor() {}
-
-  public onCloseTabSecondary(e: Event) {
-    e.stopPropagation();
-    this.closeTabSecondary.emit(e);
-  }
 
   ngOnInit(): void {}
 
@@ -60,5 +55,10 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
     if (tab) {
       this.changeTab(tab);
     }
+  }
+
+  onCloseTabSecondary(e: Event, tabId: any) {
+    e.stopPropagation();
+    this.closeTabSecondary.emit(tabId);
   }
 }

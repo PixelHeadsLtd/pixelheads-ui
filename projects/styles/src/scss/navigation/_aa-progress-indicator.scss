@@ -160,7 +160,7 @@
     &:not(.aa-progress-indicator aa-progress-indicator-advanced:last-child .indicator-item):after {
       content: "";
       height: 1px;
-      background-color: _colour(aa-pink-100);
+      background-color: _colour(aa-grey-10);
       position: absolute;
       top: 1rem;
       left: 2.5rem;

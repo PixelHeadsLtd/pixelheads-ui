@@ -7,9 +7,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 
 export class ButtonsComponent {
-
-  public onClick() { console.log('You clicked the main button'); }
-
   selectedIcon: string = 'visibility';
   selectedColor: string = 'bg-aa-light-blue-100';
   settingsClicked: boolean;
@@ -17,6 +14,7 @@ export class ButtonsComponent {
   showPub: boolean;
   showPubLater: boolean;
   showCancelPub: boolean;
+  showButtonClick: boolean;
   buttonSplit: boolean;
   customButton: boolean;
   iconButtons: boolean;
@@ -25,7 +23,23 @@ export class ButtonsComponent {
   buttonSummary: boolean;
   toggleBlade: boolean;
   showOverlay: boolean;
-  
+  buttonDayPick: boolean;
+  monActive: boolean;
+  tueActive: boolean;
+  wedActive: boolean;
+  thuActive: boolean;
+  friActive: boolean;
+  satActive: boolean;
+  sunActive: boolean;
+
+  onClick() { 
+    console.log('You clicked the main button'); 
+    this.showButtonClick = true;
+    this.showPub = false;
+    this.showCancelPub = false;
+    this.showPubLater = false;
+  }
+
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }

@@ -12,6 +12,7 @@
 .size-small, .font-size-small {font-size: _font(size-small) !important}
 .font-size-xsmall {font-size: _font(size-xsmall) !important}
 .font-size-tiny {font-size: _font(tiny) !important}
+.underline, .anchor-underline {text-decoration: underline!important}
 
 // will need to set a max-width in conjunction with .ellipsis
 .ellipsis {

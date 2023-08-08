@@ -84,6 +84,45 @@
         >
       </aa-slider>
       </div>
+      <h3 class="margin-top-2">Inline version. Horizontally aligned with labelMinWidth</h3>
+      <div class="">
+        <aa-slider
+          [sliderInline]="true"
+          sliderChecked=""
+          labelText="Apples"
+          labelMinWidth="5rem"
+          fieldClass="boxed"
+          sliderId=""
+          sliderName=""
+          sliderValue=""
+          disabled=""
+        >
+        </aa-slider>
+        <aa-slider
+          [sliderInline]="true"
+          sliderChecked=""
+          labelText="Oranges"
+          labelMinWidth="5rem"
+          fieldClass="boxed"
+          sliderId=""
+          sliderName=""
+          sliderValue=""
+          disabled=""
+        >
+        </aa-slider>
+        <aa-slider
+          [sliderInline]="true"
+          sliderChecked=""
+          labelText="Tomatoes"
+          labelMinWidth="5rem"
+          fieldClass="boxed"
+          sliderId=""
+          sliderName=""
+          sliderValue=""
+          disabled=""
+        >
+      </aa-slider>
+      </div>
     </section>
       
     <section class="flex-2 col-right flex-start">
@@ -121,6 +160,12 @@
             <td datalabel="Attribute">labelText</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your label text</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Attribute">labelMinWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your min width in rem or %</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-slider</td>

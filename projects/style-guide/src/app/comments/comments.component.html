@@ -19,6 +19,7 @@
           <aa-comments 
             [comments]="commentsArray"
             [canDelete]="true"
+            iconColour="aa-light-blue-100"
             person="{{userName}}"
             >
           </aa-comments>
@@ -48,6 +49,12 @@
                 <td datalabel="Attribute">[canDelete]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">False</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Attribute">iconColour</td>
+                <td datalabel="Type">Class</td>
+                <td datalabel="Default">Please use a <a routerLink="/colours">custom class colour</a></td>
               </tr>
               <tr>
                 <td datalabel="Element">aa-comments</td>

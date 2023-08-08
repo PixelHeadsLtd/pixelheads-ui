@@ -32,6 +32,7 @@ export class CommentsComponent implements ControlValueAccessor {
   makeComments: boolean;
   @Input() canDelete: boolean;
   showConfirmation: boolean;
+  @Input() iconColour: any;
 
   constructor() {
     this.currentDate = new Date().getTime();

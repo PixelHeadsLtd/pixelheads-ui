@@ -50,25 +50,25 @@ setExpandedIndexTwo(index: number) {
 
 approvals = [
   {
-    createdBy: 'Michael',
+    createdBy: 'Rebecca',
     modifiedBy: 'Anusha', 
     statusClass: 'success', 
     status: 'Approved', 
-    approver: 'Michael', 
+    approver: 'Rebecca', 
     created: '19 Oct 2019', 
     modified: '21 Oct 2019'
   },
   {
-    createdBy: 'Michael', 
+    createdBy: 'Simon', 
     modifiedBy: 'Anusha', 
     statusClass: 'pending', 
     status: 'Pending', 
-    approver: 'Martin', 
+    approver: 'Simon', 
     created: '27 Nov 2019', 
     modified: '7 Dec 2019'
   },
   {
-    createdBy: 'Martin', 
+    createdBy: 'David', 
     modifiedBy: 'Anusha', 
     statusClass: 'error', 
     status: 'Void', 
@@ -77,11 +77,11 @@ approvals = [
     modified: '08 Dec 2019'
   },
   {
-    createdBy: 'Michael', 
+    createdBy: 'James', 
     modifiedBy: 'Anusha', 
     statusClass: 'success', 
     status: 'Approved', 
-    approver: 'Martin', 
+    approver: 'James', 
     created: '28 Dec 2019', 
     modified: '08 Jan 2020'
   },
@@ -95,16 +95,16 @@ approvals = [
     modified: '21 Oct 2019'
   },
   {
-    createdBy: 'Michael', 
+    createdBy: 'Helen', 
     modifiedBy: 'Anusha', 
     statusClass: 'pending', 
     status: 'Pending', 
-    approver: 'Martin', 
+    approver: 'Helen', 
     created: '27 Nov 2019', 
     modified: '7 Dec 2019'
   },
   {
-    createdBy: 'Martin', 
+    createdBy: 'HR', 
     modifiedBy: 'Anusha', 
     statusClass: 'error', 
     status: 'Void', 
@@ -113,11 +113,11 @@ approvals = [
     modified: '08 Dec 2019'
   },
   {
-    createdBy: 'Michael', 
+    createdBy: 'Jayne', 
     modifiedBy: 'Anusha', 
     statusClass: 'success', 
     status: 'Approved', 
-    approver: 'Martin', 
+    approver: 'Jayne', 
     created: '28 Dec 2019', 
     modified: '08 Jan 2020'
   }

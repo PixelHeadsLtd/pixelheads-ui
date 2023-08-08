@@ -1,7 +1,14 @@
 <div 
     role="alert" 
-    class={{alertClass}}
-    [ngClass]="{'align-icon-top' : alignIconTop}"
+    class="overflow-hidden {{alertClass}}"
+    [ngClass]="{
+        'align-icon-top' : alignIconTop,
+        'max-height-initial' : expandPanel
+    }"
+    [ngStyle]="{
+        'min-width' : minWidth,
+        'max-height': [collapsedHeight]
+    }"
 >
     <div 
         *ngIf="collapsible" 
@@ -25,11 +32,8 @@
     </div> 
     <div 
         *ngIf="collapsible"
-        class="overflow-hidden"
-        [ngStyle]="{ 'height': !expandPanel ? '3rem' : 'auto' }"
         [ngClass]="{
-            'margin-top-0-75' : collapsible,
-            'expanded' : expandPanel
+            'margin-top-1' : collapsible
         }"
     >
         {{ alertText }}

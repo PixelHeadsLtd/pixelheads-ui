@@ -54,7 +54,7 @@ import {TabPageFourComponent} from './tab-navigation/tab-page-four/tab-page-four
 import {AlertsComponent} from './alerts/alerts.component';
 import {AlertShieldsComponent} from './alert-shields/alert-shields.component';
 import {ActionsSummaryComponent} from './actions-summary/actions-summary.component';
-import {BoxComponent} from './box/box.component';
+import {FeatureboxComponent} from './feature-box/feature-box.component';
 import {ColoursComponent} from './colours/colours.component';
 import {CounterComponent} from './counter/counter.component';
 import {IconsComponent} from './icons/icons.component';
@@ -130,7 +130,7 @@ const routes: Routes = [
   { path: 'blade-top', component: BladeTopComponent },
   { path: 'border', component: BorderComponent },
   { path: 'border-radius', component: BorderRadiusComponent },
-  { path: 'box', component: BoxComponent },
+  { path: 'feature-box', component: FeatureboxComponent },
   { path: 'buttons', component: ButtonsComponent },
   { path: 'comments', component: CommentsComponent },
   { path: 'counter', component: CounterComponent },

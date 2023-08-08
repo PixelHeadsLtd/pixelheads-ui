@@ -356,7 +356,16 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); customButton=true; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        (click)="
+          bladeIsOpen($event); 
+          customButton=true; 
+          iconButtons=false; 
+          standardButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=false; 
+          buttonSummary=false;
+          buttonDayPick=false
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -377,7 +386,7 @@
       <div class="flex-group">
         <div class="col-left">
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="light-blue" 
             [customIconsRound]="true"
             [customIcons]="true"
@@ -388,7 +397,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="orange" 
             fieldClass=""
             [customIconsRound]="true"
@@ -399,7 +408,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="green" 
             fieldClass=""
             [customIconsRound]="true"
@@ -410,7 +419,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="red" 
             fieldClass=""
             [customIconsRound]="true"
@@ -423,7 +432,7 @@
 
         <div class="col-right">
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="blue" 
             fieldClass=""
             [customIconsRound]="true"
@@ -434,7 +443,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="red" 
             fieldClass=""
             [customIconsRound]="true"
@@ -445,7 +454,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="blue" 
             fieldClass=""
             [customIconsRound]="true"
@@ -456,7 +465,7 @@
           </aa-button>
 
           <aa-button 
-            (click)="onClick()" 
+            (buttonClick)="onClick()" 
             buttonClass="green" 
             fieldClass=""
             [customIconsRound]="true"
@@ -506,7 +515,16 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); iconButtons=true; customButton=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        (click)="
+          bladeIsOpen($event); 
+          iconButtons=true; 
+          customButton=false; 
+          standardButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=false; 
+          buttonSummary=false;
+          buttonDayPick=false
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -855,7 +873,16 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); standardButtons=true; customButton=false; iconButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=false">
+        (click)="
+          bladeIsOpen($event); 
+          standardButtons=true; 
+          customButton=false; 
+          iconButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=false; 
+          buttonSummary=false;
+          buttonDayPick=false
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -976,7 +1003,16 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=true; buttonSplit=false; buttonSummary=false">
+        (click)="
+        bladeIsOpen($event); 
+        customButton=false; 
+        iconButtons=false; 
+        standardButtons=false; 
+        buttonEnriched=true; 
+        buttonSplit=false; 
+        buttonSummary=false;
+        buttonDayPick=false
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -988,9 +1024,10 @@
       <h2>
         Button split
         <span class="margin-top-2 italic">
-          <span *ngIf="showPub" class="aa-green-100">( Publish now...)</span>
-          <span *ngIf="showPubLater" class="aa-orange-100">( Publish later...)</span>
-          <span *ngIf="showCancelPub" class="aa-red-100">( Cancel scheduled publish...)</span>
+          <span *ngIf="showPub">( Publish now...)</span>
+          <span *ngIf="showPubLater">( Publish later...)</span>
+          <span *ngIf="showCancelPub">( Cancel scheduled publish...)</span>
+          <span *ngIf="showButtonClick">( You clicked the main button )</span>
         </span>
       </h2>
       <div class="describe margin-bottom-1">
@@ -998,28 +1035,29 @@
       </div>
 
       <section class="flex-group space-between">
-        <div>
+        <div class="margin-bottom-1">
           <section class="flex-group flex-start margin-bottom-1">
             <aa-button 
               [buttonSplit]="true" 
+              (buttonClick)="onClick()"
               [navLeftside]="false" 
               fieldClass="boxed margin-right-2" 
-              buttonClass="bg-aa-light-blue-100 chevron-up"
+              buttonClass="bg-aa-light-blue-100"
               buttonLabel="Primary" 
               buttonText="Default" 
               buttonId="myBtnId"
               maxHeight="10.75rem"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1030,22 +1068,23 @@
           <section class="flex-group flex-start margin-bottom-1">
             <aa-button 
                 [buttonSplit]="true" 
+                (buttonClick)="onClick()"
                 fieldClass="boxed" 
-                buttonClass="bg-aa-blue-100 chevron-up"
+                buttonClass="bg-aa-blue-100"
                 buttonLabel="Secondary" 
                 buttonText="Default" 
                 buttonId="myBtnId"
               >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1056,22 +1095,23 @@
           <section class="flex-group flex-start">
             <aa-button 
                 [buttonSplit]="true" 
+                (buttonClick)="onClick()"
                 fieldClass="boxed" 
-                buttonClass="bg-aa-red-100 chevron-up" 
+                buttonClass="bg-aa-red-100" 
                 buttonLabel="Error"
                 buttonText="Default" 
                 buttonId="myBtnId"
               >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1085,24 +1125,25 @@
             <aa-button 
               class="margin-right-0"
               [buttonSplit]="true" 
+              (buttonClick)="onClick()"
               [navLeftside]="true" 
               fieldClass="boxed margin-right-0" 
-              buttonClass="bg-aa-light-blue-100 chevron-up"
+              buttonClass="bg-aa-light-blue-100"
               buttonLabel="Primary" 
               buttonText="navLeftside true" 
               buttonId="myBtnId"
               maxHeight="10.75rem"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-light-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-light-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1113,23 +1154,24 @@
           <section class="flex-group flex-end margin-bottom-1">
             <aa-button 
               [buttonSplit]="true"
+              (buttonClick)="onClick()"
               [navLeftside]="true"
               fieldClass="boxed" 
-              buttonClass="bg-aa-blue-100 chevron-up"
+              buttonClass="bg-aa-blue-100"
               buttonLabel="Secondary" 
               buttonText="navLeftside true" 
               buttonId="myBtnId"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1140,23 +1182,24 @@
           <section class="flex-group flex-end">
             <aa-button 
               [buttonSplit]="true" 
+              (buttonClick)="onClick()"
               [navLeftside]="true" 
               fieldClass="boxed" 
-              buttonClass="bg-aa-red-100 chevron-up" 
+              buttonClass="bg-aa-red-100" 
               buttonLabel="Error"
               buttonText="navLeftside true" 
               buttonId="myBtnId"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false" class="aa-red-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-red-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
@@ -1191,6 +1234,12 @@
             <td datalabel="Attribute">[navLeftside]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">(buttonClick)</td>
+            <td datalabel="Type">Function</td>
+            <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-button</td>
@@ -1246,7 +1295,16 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=true; buttonSummary=false">
+        (click)="
+          bladeIsOpen($event); 
+          customButton=false; 
+          iconButtons=false; 
+          standardButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=true; 
+          buttonSummary=false;
+          buttonDayPick=false
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -1389,7 +1447,135 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button class="custom-icons bg-aa-light-blue-100"
-        (click)="bladeIsOpen($event); customButton=false; iconButtons=false; standardButtons=false; buttonEnriched=false; buttonSplit=false; buttonSummary=true">
+        (click)="
+          bladeIsOpen($event); 
+          customButton=false; 
+          iconButtons=false; 
+          standardButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=false; 
+          buttonSummary=true;
+          buttonDayPick=false
+        ">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Button day picker</h2>
+      <div class="describe margin-bottom-1">
+        <p>A handy button widget for selecting days of the week</p>
+      </div>
+
+      <section class="flex-group flex-start">
+        <aa-button
+          (buttonClick)="monActive=!monActive"
+          [class.active]="monActive"
+          [buttonDayPicker]="true"
+          buttonText="Mon"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="tueActive=!tueActive"
+          [class.active]="tueActive"
+          [buttonDayPicker]="true"
+          buttonText="Tue"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="wedActive=!wedActive"
+          [class.active]="wedActive"
+          [buttonDayPicker]="true"
+          buttonText="Wed"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="thuActive=!thuActive"
+          [class.active]="thuActive"
+          [buttonDayPicker]="true"
+          buttonText="Thu"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="friActive=!friActive"
+          [class.active]="friActive"
+          [buttonDayPicker]="true"
+          buttonText="Fri"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="satActive=!satActive"
+          [class.active]="satActive"
+          [buttonDayPicker]="true"
+          buttonText="Sat"
+        >
+        </aa-button>
+        <aa-button
+          (buttonClick)="sunActive=!sunActive"
+          [class.active]="sunActive"
+          [buttonDayPicker]="true"
+          buttonText="Sun"
+        >
+        </aa-button>
+      </section>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[buttonDayPicker]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[class.active]</td>
+            <td datalabel="Type">Active class based on index</td>
+            <td datalabel="Default">active</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">(buttonClick)</td>
+            <td datalabel="Type">Method to set active index</td>
+            <td datalabel="Default">index</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">buttonText</td>
+            <td datalabel="Type">string</td>
+            <td datalabel="Default">Mon to Sun</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100"
+        (click)="
+          bladeIsOpen($event); 
+          customButton=false; 
+          iconButtons=false; 
+          standardButtons=false; 
+          buttonEnriched=false; 
+          buttonSplit=false; 
+          buttonSummary=false;
+          buttonDayPick=true
+        ">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -1423,6 +1609,10 @@
     <div *ngIf="buttonSummary">
       <a href="https://gist.github.com/angloux/42bc778ad5f8ff285309173d52135dc8" target="_blank">View Gist on GitHub</a>
       <app-gist src="angloux/42bc778ad5f8ff285309173d52135dc8"></app-gist>
+    </div>
+    <div *ngIf="buttonDayPick">
+      <a href="https://gist.github.com/angloux/53ec55cf348ebb07ce56bd57b8affa59" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/53ec55cf348ebb07ce56bd57b8affa59"></app-gist>
     </div>
   </article>
 </aa-blade>

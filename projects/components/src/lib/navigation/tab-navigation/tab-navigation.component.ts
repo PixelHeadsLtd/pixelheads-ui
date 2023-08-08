@@ -18,7 +18,7 @@ export class TabNavigationComponent implements OnInit, AfterContentInit {
   @Input() standardTabs: boolean;
   @Output() tabClicked = new EventEmitter<TabNavigationItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationItemComponent>();
-  @Output() closeTab = new EventEmitter<Event>();
+  @Output() closeTab = new EventEmitter<any>();
 
   currentTab: TabNavigationItemComponent;
 
@@ -64,8 +64,8 @@ export class TabNavigationComponent implements OnInit, AfterContentInit {
     }
   }
 
-  public onCloseTab(e: Event) {
+  onCloseTab(e: Event, tabId: any) {
     e.stopPropagation();
-    this.closeTab.emit(e);
+    this.closeTab.emit(tabId);
   }
 }

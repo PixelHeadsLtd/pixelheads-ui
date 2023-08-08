@@ -37,14 +37,14 @@ aa-info-panel {
       }
       
       .info-panel-header {
-          border-bottom: 1px solid _palette(aa-light-blue-50);
+          border-width: 1px!important;
           // maintain the section icon colour
           .material-icons,
           .material-icons-outlined {
             color: _palette(aa-light-blue-100);
           }
           h3 {
-              margin: .25rem 0 0;
+              margin: 0;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;

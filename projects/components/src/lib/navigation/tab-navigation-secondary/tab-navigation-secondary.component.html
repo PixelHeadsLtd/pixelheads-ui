@@ -1,6 +1,6 @@
 
 <!-- ROUTER-OUTLET -->
-<nav *ngIf="routerOutlet" class="tab-navigation-secondary">
+<nav *ngIf="routerOutletSecondary" class="tab-navigation-secondary">
   <ul>
     <ng-content select="[list-items]"></ng-content>
   </ul>
@@ -18,7 +18,7 @@
           [class.active]="isActive(tab)" 
           (click)="onTabClicked(tab)">
           {{ tab.tabName }}
-          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event)" class="anchor-close"></a>
+          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>
         </a>
         <a 
           class="{{tabActiveColour}}" 
@@ -27,7 +27,7 @@
           [class.active]="isActive(tab)" 
           (click)="onTabClicked(tab)">
           {{ tab.tabName }}
-          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event)" class="anchor-close"></a>
+          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>
         </a>
         <span *ngIf="tab.tabDisabled" class="tab-disabled">{{ tab.tabName }}</span>
       </li>

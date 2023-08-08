@@ -28,6 +28,10 @@
     button:not(.cancel) {
       background-color: _palette(aa-red-100);
       border: 1px solid _palette(aa-red-100);
+      &:hover {
+        background-color: _palette(aa-red-50);
+        border: 1px solid _palette(aa-red-50);
+      }
     }
   }
   &.aa-orange {
@@ -38,6 +42,10 @@
     button:not(.cancel) {
       background-color: _palette(aa-orange-100);
       border: 1px solid _palette(aa-orange-100);
+      &:hover {
+        background-color: _palette(aa-orange-50);
+        border: 1px solid _palette(aa-orange-50);
+      }
     }
   }
   &.aa-green {
@@ -48,6 +56,10 @@
     button:not(.cancel) {
       background-color: _palette(aa-green-100);
       border: 1px solid _palette(aa-green-100);
+      &:hover {
+        background-color: _palette(aa-green-50);
+        border: 1px solid _palette(aa-green-50);
+      }
     }
   }
   &.aa-blue {
@@ -58,6 +70,10 @@
     button:not(.cancel) {
       background-color: _palette(aa-light-blue-100);
       border: 1px solid _palette(aa-light-blue-100);
+      &:hover {
+        background-color: _palette(aa-light-blue-50);
+        border: 1px solid _palette(aa-light-blue-50);
+      }
     }
   }
 }

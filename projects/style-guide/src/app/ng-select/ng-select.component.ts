@@ -16,7 +16,7 @@ export class NgSelectComponent implements OnInit {
   constructor() {this.create10kCities();}
 
   cities = [
-    { id: 1, name: 'Vilnius' },
+    { id: 1, name: 'If you would like your text to wrap over multiple lines, please add the class "allow-text-wrapping" to your ng-select component.' },
     { id: 2, name: 'Kaunas' },
     { id: 3, name: 'Pavilnys', disabled: true },
     { id: 4, name: 'Pabradė' },
@@ -28,7 +28,7 @@ export class NgSelectComponent implements OnInit {
     { id: 2, name: 'Kaunas' },
     { id: 3, name: 'Pavilnys', disabled: true },
     { id: 4, name: 'Pabradė' },
-    { id: 5, name: 'Klaipėda' }
+    { id: 5, name: 'If you would like your text to wrap over multiple lines, please add the class "allow-text-wrapping" to your ng-select component.' }
   ];
 
   cities3 = [

@@ -11,9 +11,18 @@
     </span>
 </div>
 
-<div *ngIf="showTooltip && !customShield" class="alert-shield-tooltip-wrapper">
+<div 
+    *ngIf="showTooltip && !customShield" 
+    class="alert-shield-tooltip-wrapper"
+    [ngClass]="{
+        'tooltip-top-left' : tooltipTopLeft,
+        'tooltip-top-right' : tooltipTopRight,
+        'tooltip-bottom-left' : tooltipBottomLeft,
+        'tooltip-bottom-right' : tooltipBottomRight
+    }"
+>
     <div 
-        class="alert-shield-tooltip {{alertShieldStatus}} {{xpos}} {{ypos}}"
+        class="alert-shield-tooltip {{alertShieldStatus}}"
         [ngStyle]="{'min-width' : minWidth}"
     >
         <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
@@ -32,7 +41,16 @@
     </div>
 </div>
 
-<div *ngIf="customShield" class="custom-alert-shield">
+<div 
+    *ngIf="customShield" 
+    class="custom-alert-shield"
+    [ngClass]="{
+        'tooltip-top-left' : tooltipTopLeft,
+        'tooltip-top-right' : tooltipTopRight,
+        'tooltip-bottom-left' : tooltipBottomLeft,
+        'tooltip-bottom-right' : tooltipBottomRight
+    }"
+>
     <div 
         class="
             flex-group 
@@ -50,7 +68,7 @@
       >
         <div 
             *ngIf="showTooltip"
-            class="alert-shield-tooltip {{xpos}} {{ypos}}"
+            class="alert-shield-tooltip"
             [ngStyle]="{'min-width' : minWidth}"
         >
             <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>

@@ -410,21 +410,18 @@
       <!-- <img src="assets/images/graphic.svg" alt="Design Language" /> -->
     </div>
     <div class="features margin-top-4 margin-bottom-2">
-      <div>
-        <aa-button
-          (buttonClick)="setTourCount(0)"
-          [customIcons]="true"
-          buttonId="buttonId"
-          buttonClass="custom-icons bg-aa-plum-100"
-          fieldClass="boxed label-hidden margin-bottom-1"
-          buttonLabel="Custom icons"
-          buttonText="Quick tour"
-          buttonIcon="school"
-          disabled="">
-        </aa-button>
-      </div>
       <section class="flex-group flex-start">
         <nav class="margin-right-4">
+          <button 
+            class="custom-icons bg-aa-green-100 margin-bottom-1" 
+            routerLink="/icons"
+            >
+            <div class="display-inline-block">
+              <span class="material-icons">flag</span>
+              <span>Country flag finder</span>
+            </div>
+            
+          </button>
           <h2 class="margin-bottom-0-5 margin-top-0">Latest packages</h2>
           <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
             <div class="material-icons small aa-orange-100 margin-right-0-5">event_note</div>
@@ -480,6 +477,17 @@
           </aa-project-tour>
         </nav>
         <nav>
+          <aa-button
+            (buttonClick)="setTourCount(0)"
+            [customIcons]="true"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-plum-100"
+            fieldClass="boxed label-hidden margin-bottom-1"
+            buttonLabel="Custom icons"
+            buttonText="Quick tour"
+            buttonIcon="school"
+            disabled="">
+          </aa-button>
           <h2 class="margin-bottom-0-5 margin-top-0">Useful links</h2>
           <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
             <div class="new bg-aa-red-100 margin-right-0-5 force-white border-radius-0-25 padding-0-25">NEW!</div>
@@ -640,12 +648,12 @@
     </div>
     <div class="flex-2 col-right flex-group flex-end margin-top-1">
       <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner">
-        <div class="material-icons aa-red-100 small">published_with_changes</div>
-        <p>Spinner page</p>
-      </a>
-      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner-page">
         <div class="material-icons aa-red-100">rotate_right</div>
         <p>Spinner inline</p>
+      </a>
+      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner-page">
+        <div class="material-icons aa-red-100 small">published_with_changes</div>
+        <p>Spinner page</p>
       </a>
     </div>
   </section>

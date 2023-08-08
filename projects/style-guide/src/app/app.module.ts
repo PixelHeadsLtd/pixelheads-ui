@@ -32,7 +32,7 @@ import { BladeBottomComponent } from './blade-bottom/blade-bottom.component';
 import { BladeTopComponent } from './blade-top/blade-top.component';
 import { BorderComponent } from './border/border.component';
 import { BorderRadiusComponent } from './border-radius/border-radius.component';
-import { BoxComponent } from './box/box.component';
+import { FeatureboxComponent } from './feature-box/feature-box.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -140,7 +140,7 @@ import { HighChartsComponent } from './high-charts/high-charts.component';
     BorderComponent,
     BorderRadiusComponent,
     ButtonsComponent,
-    BoxComponent,
+    FeatureboxComponent,
     CardComponent,
     CarouselComponent,
     CustomCardComponent,

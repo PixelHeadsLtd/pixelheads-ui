@@ -26,7 +26,14 @@ export class ProgressCircleComponent implements OnInit {
       percentage: '60', 
       valueSplit: '6/10', 
       tooltipEnabled: true,
-      tooltipText: 'Some other text'
+      tooltipText: 'Some other text',
+      enableAlertShieldTooltip: true,
+      isTopRight: true,
+      tooltipMinWidth: '10',
+      showTooltipHeading: true,
+      myTooltipHeading: 'My tooltip heading',
+      alertShieldStatus: 'warning',
+      alertShieldText: 'Warning'
     },
     {
       progressColor: 'green', 

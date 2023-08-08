@@ -2,6 +2,7 @@
     position: relative;
     button {
         @include chevron-down;
+        font-family: _font(family-medium);
         width: 100%;
         background-color: _colour(aa-white-100);
         color: _colour(aa-grey-100);

@@ -13,6 +13,14 @@ table {
     table-layout: fixed;
   }
 
+  &.vertical-align-top {
+    tbody {
+      td {
+        vertical-align: top;
+      }
+    }
+  }
+
   &.expandable-rows {
     tr {
       .toggle {
@@ -27,10 +35,19 @@ table {
           transform: rotate(90deg);
         }
       }
+      th {
+        &:nth-child(2) {
+          padding-left: 0;
+        }
+      }
       td {
         &:first-child {
           padding-left: .75rem;
-          padding-right: .5rem!important
+          padding-right: .5rem!important;
+          width: 2.75rem;
+        }
+        &:nth-child(2) {
+          padding-left: 0;
         }
         table {
           background-color: transparent;
@@ -65,7 +82,6 @@ table {
 
 table:not(.table-feature) {
   th {
-    vertical-align: baseline;
     white-space: nowrap;
   }
   td {
@@ -266,6 +282,13 @@ table:not(
     tr {
       &.row-selected {
         background-color: _palette(aa-light-blue-5);
+      }
+
+      // when we've using a heading tag in a tbody row
+      th {
+        padding-left: 1.5rem;
+        color: _colour(aa-blue-100);
+        font-size: _font(size-default)
       }
 
       td {

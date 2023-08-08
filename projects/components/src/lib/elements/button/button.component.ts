@@ -34,12 +34,14 @@ export class ButtonComponent implements OnInit {
   @Input() showLabel: boolean;
   @Input() customIconsRound: boolean;
   @Input() navLeftside: boolean;
+  @Input() buttonDayPicker: boolean;
 
   @Output() buttonClick = new EventEmitter<Event>();
 
   public onButtonClick(e: Event) {
     e.stopPropagation();
     this.buttonClick.emit(e);
+    this.showBtnMenu = false;
   }
 
   constructor(private elementRef: ElementRef) { }

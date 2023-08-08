@@ -1,8 +1,11 @@
 <div 
     class="{{fieldClass}} field slider"
-    [ngClass]="{'slider-inline flex-group flex-start nowrap' : sliderInline}"
+    [ngClass]="{
+        'slider-inline flex-group flex-start nowrap' : sliderInline,
+        'list-display' : labelMinWidth
+    }"
 >
-    <label>{{labelText}}</label>
+    <label [ngStyle]="{ 'min-width': labelMinWidth }">{{labelText}}</label>
     <label>
         <input 
             type="checkbox"

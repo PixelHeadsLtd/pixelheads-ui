@@ -16,10 +16,27 @@
         max-width: unset;
         max-height: unset;
         height: unset;
-        font-size: _font(size-small);
+        font-size: _font(size-default);
+
+        article {
+            flex-wrap: nowrap;
+        }
+
+        section {
+            span {display: inline-block}
+            h4, h5, span, div {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
 
         h2 {
             margin-bottom: 0;
+        }
+
+        h4 {
+            margin: .5rem 0 .15rem 0;
         }
 
         h5 {

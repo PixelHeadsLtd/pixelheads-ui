@@ -70,6 +70,18 @@
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">false</td>
             </tr>
+            <tr>
+              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Attribute">[roundedCorners]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Attribute">[removeHeaderBorder]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">True</td>
+            </tr>
           </ng-container>
         </tbody>
       </table>
@@ -172,6 +184,36 @@
             2 Shenton Way, #02-02<br/>
             SGX Centre 1<br/>
             Singapore 068804
+          </p>
+        </ng-container>
+        <ng-container custom-footer>
+          <div class="flex-group space-between">
+            <div class="material-icons">thumb_up</div>
+            <button class="material-icons aa-light-blue-100">create</button>
+          </div>
+        </ng-container>
+      </aa-info-panel>
+    </div>
+    <div class="flex-group flex-start">
+      <aa-info-panel 
+        panelWidth="30" 
+        panelHeight="20" 
+        panelStatus="info"
+        [roundedCorners]="true"
+        [removeHeaderBorder]="true"
+      >
+        <ng-container custom-header>
+          <section class="flex-group space-between">
+            <div class="flex-group flex-start flex-align-center">
+              <div class="material-icons">settings</div>
+              <h3 class="max-width-12">Any size</h3>
+            </div>
+            <div class="material-icons">done</div>
+          </section>
+        </ng-container>
+        <ng-container custom-content>
+          <p>
+            Info panels can be any size you choose. You can also remove the header border and add rounded corners.
           </p>
         </ng-container>
         <ng-container custom-footer>
