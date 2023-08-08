@@ -30,6 +30,7 @@ export declare class ButtonComponent implements OnInit {
     showLabel: boolean;
     customIconsRound: boolean;
     navLeftside: boolean;
+    buttonDayPicker: boolean;
     buttonClick: EventEmitter<Event>;
     onButtonClick(e: Event): void;
     constructor(elementRef: ElementRef);
@@ -38,7 +39,7 @@ export declare class ButtonComponent implements OnInit {
     close(): void;
     ngOnInit(): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<ButtonComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<ButtonComponent, "aa-button", never, { "buttonType": "buttonType"; "showBtnMenu": "showBtnMenu"; "buttonLabel": "buttonLabel"; "buttonText": "buttonText"; "buttonId": "buttonId"; "buttonClass": "buttonClass"; "disabled": "disabled"; "fieldClass": "fieldClass"; "buttonIcon": "buttonIcon"; "customIcons": "customIcons"; "buttonEnriched": "buttonEnriched"; "buttonSplit": "buttonSplit"; "iconName": "iconName"; "title": "title"; "iconColour": "iconColour"; "buttonLarge": "buttonLarge"; "buttonSummary": "buttonSummary"; "showDescription": "showDescription"; "status": "status"; "level": "level"; "desc": "desc"; "showCount": "showCount"; "count": "count"; "countColor": "countColor"; "maxHeight": "maxHeight"; "showLabel": "showLabel"; "customIconsRound": "customIconsRound"; "navLeftside": "navLeftside"; }, { "buttonClick": "buttonClick"; }, never, ["[toolbar]", "[bs-buttons]"]>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<ButtonComponent, "aa-button", never, { "buttonType": "buttonType"; "showBtnMenu": "showBtnMenu"; "buttonLabel": "buttonLabel"; "buttonText": "buttonText"; "buttonId": "buttonId"; "buttonClass": "buttonClass"; "disabled": "disabled"; "fieldClass": "fieldClass"; "buttonIcon": "buttonIcon"; "customIcons": "customIcons"; "buttonEnriched": "buttonEnriched"; "buttonSplit": "buttonSplit"; "iconName": "iconName"; "title": "title"; "iconColour": "iconColour"; "buttonLarge": "buttonLarge"; "buttonSummary": "buttonSummary"; "showDescription": "showDescription"; "status": "status"; "level": "level"; "desc": "desc"; "showCount": "showCount"; "count": "count"; "countColor": "countColor"; "maxHeight": "maxHeight"; "showLabel": "showLabel"; "customIconsRound": "customIconsRound"; "navLeftside": "navLeftside"; "buttonDayPicker": "buttonDayPicker"; }, { "buttonClick": "buttonClick"; }, never, ["[toolbar]", "[bs-buttons]"]>;
 }
 
 //# sourceMappingURL=button.component.d.ts.map

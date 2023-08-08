@@ -9,9 +9,11 @@ export declare class AlertShieldComponent implements OnInit {
     minWidth: any;
     alertShieldSmall: boolean;
     noWrap: boolean;
-    xpos: string;
-    ypos: string;
     hideLabel: boolean;
+    tooltipTopLeft: boolean;
+    tooltipTopRight: boolean;
+    tooltipBottomLeft: boolean;
+    tooltipBottomRight: boolean;
     customShield: boolean;
     iconName: string;
     iconOutlined: boolean;
@@ -31,7 +33,7 @@ export declare class AlertShieldComponent implements OnInit {
     constructor();
     ngOnInit(): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<AlertShieldComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<AlertShieldComponent, "aa-alert-shield", never, { "alertShieldStatus": "alertShieldStatus"; "alertShieldText": "alertShieldText"; "showTooltip": "showTooltip"; "showTooltipHeading": "showTooltipHeading"; "tooltipHeading": "tooltipHeading"; "minWidth": "minWidth"; "alertShieldSmall": "alertShieldSmall"; "noWrap": "noWrap"; "xpos": "xpos"; "ypos": "ypos"; "hideLabel": "hideLabel"; "customShield": "customShield"; "iconName": "iconName"; "iconOutlined": "iconOutlined"; "bgRedLight": "bgRedLight"; "bgRedDark": "bgRedDark"; "bgGreenLight": "bgGreenLight"; "bgGreenDark": "bgGreenDark"; "bgOrangeLight": "bgOrangeLight"; "bgOrangeDark": "bgOrangeDark"; "bgBlueLight": "bgBlueLight"; "bgBlueDark": "bgBlueDark"; "bgGreyLight": "bgGreyLight"; "bgGreyDark": "bgGreyDark"; "shieldColour": "shieldColour"; "iconOnly": "iconOnly"; "enableRotation": "enableRotation"; }, {}, never, ["[tooltip-content]", "[custom-tooltip-content]"]>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<AlertShieldComponent, "aa-alert-shield", never, { "alertShieldStatus": "alertShieldStatus"; "alertShieldText": "alertShieldText"; "showTooltip": "showTooltip"; "showTooltipHeading": "showTooltipHeading"; "tooltipHeading": "tooltipHeading"; "minWidth": "minWidth"; "alertShieldSmall": "alertShieldSmall"; "noWrap": "noWrap"; "hideLabel": "hideLabel"; "tooltipTopLeft": "tooltipTopLeft"; "tooltipTopRight": "tooltipTopRight"; "tooltipBottomLeft": "tooltipBottomLeft"; "tooltipBottomRight": "tooltipBottomRight"; "customShield": "customShield"; "iconName": "iconName"; "iconOutlined": "iconOutlined"; "bgRedLight": "bgRedLight"; "bgRedDark": "bgRedDark"; "bgGreenLight": "bgGreenLight"; "bgGreenDark": "bgGreenDark"; "bgOrangeLight": "bgOrangeLight"; "bgOrangeDark": "bgOrangeDark"; "bgBlueLight": "bgBlueLight"; "bgBlueDark": "bgBlueDark"; "bgGreyLight": "bgGreyLight"; "bgGreyDark": "bgGreyDark"; "shieldColour": "shieldColour"; "iconOnly": "iconOnly"; "enableRotation": "enableRotation"; }, {}, never, ["[tooltip-content]", "[custom-tooltip-content]"]>;
 }
 
 //# sourceMappingURL=alert-shield.component.d.ts.map

@@ -13,7 +13,7 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     standardTabs: boolean;
     tabClicked: EventEmitter<TabNavigationItemComponent>;
     tabChanged: EventEmitter<TabNavigationItemComponent>;
-    closeTab: EventEmitter<Event>;
+    closeTab: EventEmitter<any>;
     currentTab: TabNavigationItemComponent;
     get contentTabs(): TabNavigationItemComponent[];
     constructor();
@@ -24,7 +24,7 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     onTabClicked(tab: TabNavigationItemComponent): void;
     changeTab(tab: TabNavigationItemComponent): void;
     changeTabById(tabId: string): void;
-    onCloseTab(e: Event): void;
+    onCloseTab(e: Event, tabId: any): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<TabNavigationComponent, never>;
     static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<TabNavigationComponent, "aa-tab-navigation", never, { "autoChangeTabs": "autoChangeTabs"; "displayTabContent": "displayTabContent"; "tabInfo": "tabInfo"; "routerOutlet": "routerOutlet"; "ngTemplate": "ngTemplate"; "tabInfoRouterOutlet": "tabInfoRouterOutlet"; "toggleFullscreen": "toggleFullscreen"; "standardTabs": "standardTabs"; }, { "tabClicked": "tabClicked"; "tabChanged": "tabChanged"; "closeTab": "closeTab"; }, ["tabNavigationItems"], ["[list-items]", "*", "[tabs]"]>;
 }

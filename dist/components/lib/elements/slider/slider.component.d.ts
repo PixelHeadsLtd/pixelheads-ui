@@ -7,6 +7,7 @@ export declare class SliderComponent implements OnInit {
     sliderId: any;
     sliderName: any;
     disabled: any;
+    labelMinWidth: any;
     sliderCheckedValue: any;
     set sliderChecked(value: any);
     sliderCheckedChanged: EventEmitter<boolean>;
@@ -14,7 +15,7 @@ export declare class SliderComponent implements OnInit {
     ngOnInit(): void;
     onChange(event: any): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<SliderComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<SliderComponent, "aa-slider", never, { "sliderChecked": "sliderChecked"; "fieldClass": "fieldClass"; "labelText": "labelText"; "sliderInline": "sliderInline"; "sliderId": "sliderId"; "sliderName": "sliderName"; "disabled": "disabled"; }, { "sliderCheckedChanged": "sliderCheckedChanged"; }, never, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<SliderComponent, "aa-slider", never, { "sliderChecked": "sliderChecked"; "fieldClass": "fieldClass"; "labelText": "labelText"; "sliderInline": "sliderInline"; "sliderId": "sliderId"; "sliderName": "sliderName"; "disabled": "disabled"; "labelMinWidth": "labelMinWidth"; }, { "sliderCheckedChanged": "sliderCheckedChanged"; }, never, never>;
 }
 
 //# sourceMappingURL=slider.component.d.ts.map

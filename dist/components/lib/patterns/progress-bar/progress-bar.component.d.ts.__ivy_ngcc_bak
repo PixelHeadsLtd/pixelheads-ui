@@ -6,6 +6,10 @@ export declare class ProgressBarComponent implements OnInit {
     rightSideText: any;
     complete: number;
     maxWidth: number;
+    displayOverHeader: boolean;
+    progressBgColour: any;
+    progressColour: any;
+    progressId: any;
     constructor();
     ngOnInit(): void;
 }

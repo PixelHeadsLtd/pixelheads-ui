@@ -12,7 +12,7 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     standardTabs: boolean;
     tabClicked: EventEmitter<TabNavigationItemComponent>;
     tabChanged: EventEmitter<TabNavigationItemComponent>;
-    closeTab: EventEmitter<Event>;
+    closeTab: EventEmitter<any>;
     currentTab: TabNavigationItemComponent;
     get contentTabs(): TabNavigationItemComponent[];
     constructor();
@@ -23,6 +23,6 @@ export declare class TabNavigationComponent implements OnInit, AfterContentInit 
     onTabClicked(tab: TabNavigationItemComponent): void;
     changeTab(tab: TabNavigationItemComponent): void;
     changeTabById(tabId: string): void;
-    onCloseTab(e: Event): void;
+    onCloseTab(e: Event, tabId: any): void;
 }
 //# sourceMappingURL=tab-navigation.component.d.ts.map

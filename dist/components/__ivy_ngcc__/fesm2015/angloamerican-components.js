@@ -14,64 +14,64 @@ import * as ɵngcc4 from '@angular/animations';
 
 const _c0 = function (a0) { return { "z-index": a0 }; };
 function ButtonComponent_div_0_div_4_span_1_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 8);
+    ɵngcc0.ɵɵelementStart(0, "span", 9);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r6 = ɵngcc0.ɵɵnextContext(3);
+    const ctx_r7 = ɵngcc0.ɵɵnextContext(3);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r6.buttonIcon);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r7.buttonIcon);
 } }
 function ButtonComponent_div_0_div_4_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div");
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r7 = ɵngcc0.ɵɵnextContext(3);
-    ɵngcc0.ɵɵclassMapInterpolate1("count ", ctx_r7.countColor, "");
+    const ctx_r8 = ɵngcc0.ɵɵnextContext(3);
+    ɵngcc0.ɵɵclassMapInterpolate1("count ", ctx_r8.countColor, "");
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r7.count);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r8.count);
 } }
 const _c1 = function (a0) { return { "display-inline-block": a0 }; };
 function ButtonComponent_div_0_div_4_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 6);
-    ɵngcc0.ɵɵtemplate(1, ButtonComponent_div_0_div_4_span_1_Template, 2, 1, "span", 7);
+    ɵngcc0.ɵɵelementStart(0, "div", 7);
+    ɵngcc0.ɵɵtemplate(1, ButtonComponent_div_0_div_4_span_1_Template, 2, 1, "span", 8);
     ɵngcc0.ɵɵelementStart(2, "span");
     ɵngcc0.ɵɵtext(3);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵtemplate(4, ButtonComponent_div_0_div_4_div_4_Template, 2, 4, "div", 1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r4 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c1, ctx_r4.customIcons));
+    const ctx_r5 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c1, ctx_r5.customIcons));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngIf", ctx_r4.customIcons);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r5.customIcons);
     ɵngcc0.ɵɵadvance(2);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r4.buttonText);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r5.buttonText);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngIf", ctx_r4.showCount);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r5.showCount);
 } }
 function ButtonComponent_div_0_span_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "span");
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r5 = ɵngcc0.ɵɵnextContext(2);
+    const ctx_r6 = ɵngcc0.ɵɵnextContext(2);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r5.buttonIcon);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r6.buttonIcon);
 } }
 const _c2 = function (a0) { return { "show-label": a0 }; };
 const _c3 = function (a0) { return { "material-icons": a0 }; };
 function ButtonComponent_div_0_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = ɵngcc0.ɵɵgetCurrentView();
+    const _r10 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "div");
-    ɵngcc0.ɵɵelementStart(1, "label", 2);
+    ɵngcc0.ɵɵelementStart(1, "label", 3);
     ɵngcc0.ɵɵtext(2);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(3, "button", 3);
-    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_0_Template_button_click_3_listener($event) { ɵngcc0.ɵɵrestoreView(_r9); const ctx_r8 = ɵngcc0.ɵɵnextContext(); return ctx_r8.onButtonClick($event); });
-    ɵngcc0.ɵɵtemplate(4, ButtonComponent_div_0_div_4_Template, 5, 6, "div", 4);
-    ɵngcc0.ɵɵtemplate(5, ButtonComponent_div_0_span_5_Template, 2, 1, "span", 5);
+    ɵngcc0.ɵɵelementStart(3, "button", 4);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_0_Template_button_click_3_listener($event) { ɵngcc0.ɵɵrestoreView(_r10); const ctx_r9 = ɵngcc0.ɵɵnextContext(); return ctx_r9.onButtonClick($event); });
+    ɵngcc0.ɵɵtemplate(4, ButtonComponent_div_0_div_4_Template, 5, 6, "div", 5);
+    ɵngcc0.ɵɵtemplate(5, ButtonComponent_div_0_span_5_Template, 2, 1, "span", 6);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -91,18 +91,18 @@ function ButtonComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵproperty("ngIf", ctx_r0.customIconsRound);
 } }
 function ButtonComponent_div_1_Template(rf, ctx) { if (rf & 1) {
-    const _r11 = ɵngcc0.ɵɵgetCurrentView();
+    const _r12 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "div");
-    ɵngcc0.ɵɵelementStart(1, "button", 9);
-    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_1_Template_button_click_1_listener($event) { ɵngcc0.ɵɵrestoreView(_r11); const ctx_r10 = ɵngcc0.ɵɵnextContext(); return ctx_r10.onButtonClick($event); });
-    ɵngcc0.ɵɵelementStart(2, "div", 10);
+    ɵngcc0.ɵɵelementStart(1, "button", 10);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_1_Template_button_click_1_listener($event) { ɵngcc0.ɵɵrestoreView(_r12); const ctx_r11 = ɵngcc0.ɵɵnextContext(); return ctx_r11.onButtonClick($event); });
+    ɵngcc0.ɵɵelementStart(2, "div", 11);
     ɵngcc0.ɵɵprojection(3);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(4, "div", 11);
+    ɵngcc0.ɵɵelementStart(4, "div", 12);
     ɵngcc0.ɵɵelementStart(5, "div");
     ɵngcc0.ɵɵtext(6);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(7, "h2", 12);
+    ɵngcc0.ɵɵelementStart(7, "h2", 13);
     ɵngcc0.ɵɵtext(8);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
@@ -120,30 +120,54 @@ function ButtonComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate(ctx_r1.title);
 } }
+function ButtonComponent_div_2_button_5_Template(rf, ctx) { if (rf & 1) {
+    const _r17 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "button", 20);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_button_5_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r17); const ctx_r16 = ɵngcc0.ɵɵnextContext(2); return ctx_r16.showBtnMenu = !ctx_r16.showBtnMenu; });
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r13 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵclassMap(ctx_r13.buttonClass);
+    ɵngcc0.ɵɵproperty("type", ctx_r13.buttonType)("name", ctx_r13.buttonId)("id", ctx_r13.buttonId);
+} }
+function ButtonComponent_div_2_button_8_Template(rf, ctx) { if (rf & 1) {
+    const _r19 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "button", 20);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_button_8_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r19); const ctx_r18 = ɵngcc0.ɵɵnextContext(2); return ctx_r18.showBtnMenu = !ctx_r18.showBtnMenu; });
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r14 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵclassMap(ctx_r14.buttonClass);
+    ɵngcc0.ɵɵproperty("type", ctx_r14.buttonType)("name", ctx_r14.buttonId)("id", ctx_r14.buttonId);
+} }
 const _c4 = function (a0) { return { "max-height": a0 }; };
-function ButtonComponent_div_2_nav_6_Template(rf, ctx) { if (rf & 1) {
-    const _r14 = ɵngcc0.ɵɵgetCurrentView();
-    ɵngcc0.ɵɵelementStart(0, "nav", 17);
-    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_nav_6_Template_nav_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r14); const ctx_r13 = ɵngcc0.ɵɵnextContext(2); return ctx_r13.showBtnMenu = false; });
+function ButtonComponent_div_2_nav_9_Template(rf, ctx) { if (rf & 1) {
+    const _r21 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "nav", 21);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_nav_9_Template_nav_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r21); const ctx_r20 = ɵngcc0.ɵɵnextContext(2); return ctx_r20.showBtnMenu = false; });
     ɵngcc0.ɵɵprojection(1, 1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r12 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(1, _c4, ctx_r12.maxHeight));
+    const ctx_r15 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(1, _c4, ctx_r15.maxHeight));
 } }
 const _c5 = function (a0) { return { "nav-left-side": a0 }; };
 function ButtonComponent_div_2_Template(rf, ctx) { if (rf & 1) {
-    const _r16 = ɵngcc0.ɵɵgetCurrentView();
+    const _r23 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "div");
-    ɵngcc0.ɵɵelementStart(1, "label", 13);
+    ɵngcc0.ɵɵelementStart(1, "label", 14);
     ɵngcc0.ɵɵtext(2);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(3, "div", 14);
-    ɵngcc0.ɵɵelementStart(4, "button", 15);
-    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_Template_button_click_4_listener() { ɵngcc0.ɵɵrestoreView(_r16); const ctx_r15 = ɵngcc0.ɵɵnextContext(); return ctx_r15.showBtnMenu = !ctx_r15.showBtnMenu; });
-    ɵngcc0.ɵɵtext(5);
+    ɵngcc0.ɵɵelementStart(3, "div", 15);
+    ɵngcc0.ɵɵelementStart(4, "div", 16);
+    ɵngcc0.ɵɵtemplate(5, ButtonComponent_div_2_button_5_Template, 1, 5, "button", 17);
+    ɵngcc0.ɵɵelementStart(6, "button", 18);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_div_2_Template_button_click_6_listener($event) { ɵngcc0.ɵɵrestoreView(_r23); const ctx_r22 = ɵngcc0.ɵɵnextContext(); return ctx_r22.onButtonClick($event); });
+    ɵngcc0.ɵɵtext(7);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵtemplate(6, ButtonComponent_div_2_nav_6_Template, 2, 3, "nav", 16);
+    ɵngcc0.ɵɵtemplate(8, ButtonComponent_div_2_button_8_Template, 1, 5, "button", 17);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵtemplate(9, ButtonComponent_div_2_nav_9_Template, 2, 3, "nav", 19);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -154,36 +178,40 @@ function ButtonComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r2.buttonLabel);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(13, _c5, ctx_r2.navLeftside));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(15, _c5, ctx_r2.navLeftside));
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r2.navLeftside);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMap(ctx_r2.buttonClass);
     ɵngcc0.ɵɵproperty("type", ctx_r2.buttonType)("name", ctx_r2.buttonId)("id", ctx_r2.buttonId);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r2.buttonText, " ");
     ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", !ctx_r2.navLeftside);
+    ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r2.showBtnMenu);
 } }
 function ButtonComponent_div_3_p_7_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "p", 21);
+    ɵngcc0.ɵɵelementStart(0, "p", 25);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r17 = ɵngcc0.ɵɵnextContext(2);
+    const ctx_r24 = ɵngcc0.ɵɵnextContext(2);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r17.desc, " ");
+    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r24.desc, " ");
 } }
 function ButtonComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div");
     ɵngcc0.ɵɵelementStart(1, "button");
-    ɵngcc0.ɵɵelementStart(2, "div", 18);
-    ɵngcc0.ɵɵelementStart(3, "h1", 19);
+    ɵngcc0.ɵɵelementStart(2, "div", 22);
+    ɵngcc0.ɵɵelementStart(3, "h1", 23);
     ɵngcc0.ɵɵtext(4);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(5, "h2", 12);
+    ɵngcc0.ɵɵelementStart(5, "h2", 13);
     ɵngcc0.ɵɵtext(6);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵtemplate(7, ButtonComponent_div_3_p_7_Template, 2, 1, "p", 20);
+    ɵngcc0.ɵɵtemplate(7, ButtonComponent_div_3_p_7_Template, 2, 1, "p", 24);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
@@ -197,6 +225,21 @@ function ButtonComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtextInterpolate(ctx_r3.title);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r3.showDescription);
+} }
+function ButtonComponent_button_4_Template(rf, ctx) { if (rf & 1) {
+    const _r26 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "button", 26);
+    ɵngcc0.ɵɵlistener("click", function ButtonComponent_button_4_Template_button_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r26); const ctx_r25 = ɵngcc0.ɵɵnextContext(); return ctx_r25.onButtonClick($event); });
+    ɵngcc0.ɵɵelementStart(1, "strong");
+    ɵngcc0.ɵɵtext(2);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelement(3, "div");
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("type", ctx_r4.buttonType)("name", ctx_r4.buttonId)("id", ctx_r4.buttonId)("disabled", ctx_r4.disabled);
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r4.buttonText);
 } }
 const _c6 = [[["", "toolbar", ""]], [["", "bs-buttons", ""]]];
 const _c7 = ["[toolbar]", "[bs-buttons]"];
@@ -224,35 +267,35 @@ function CommentsComponent_span_7_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtextInterpolate1("There are (", ctx_r2.comments.length, ") comments");
 } }
 function CommentsComponent_p_9_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "p", 8);
+    ɵngcc0.ɵɵelementStart(0, "p", 7);
     ɵngcc0.ɵɵtext(1, "There are currently no comments ");
     ɵngcc0.ɵɵelementEnd();
 } }
 function CommentsComponent_div_10_div_10_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 15);
+    ɵngcc0.ɵɵelementStart(0, "div", 14);
     ɵngcc0.ɵɵtext(1, "You need to add a comment ");
     ɵngcc0.ɵɵelementEnd();
 } }
 function CommentsComponent_div_10_Template(rf, ctx) { if (rf & 1) {
     const _r8 = ɵngcc0.ɵɵgetCurrentView();
-    ɵngcc0.ɵɵelementStart(0, "div", 9);
+    ɵngcc0.ɵɵelementStart(0, "div", 8);
     ɵngcc0.ɵɵelementStart(1, "label");
     ɵngcc0.ɵɵtext(2, "Comment");
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(3, "textarea", 10);
+    ɵngcc0.ɵɵelementStart(3, "textarea", 9);
     ɵngcc0.ɵɵlistener("ngModelChange", function CommentsComponent_div_10_Template_textarea_ngModelChange_3_listener($event) { ɵngcc0.ɵɵrestoreView(_r8); const ctx_r7 = ɵngcc0.ɵɵnextContext(); return ctx_r7.txtComment = $event; })("change", function CommentsComponent_div_10_Template_textarea_change_3_listener() { ɵngcc0.ɵɵrestoreView(_r8); const ctx_r9 = ɵngcc0.ɵɵnextContext(); return ctx_r9.clicked = false; });
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(4, "div", 11);
-    ɵngcc0.ɵɵelementStart(5, "button", 12);
+    ɵngcc0.ɵɵelementStart(4, "div", 10);
+    ɵngcc0.ɵɵelementStart(5, "button", 11);
     ɵngcc0.ɵɵlistener("click", function CommentsComponent_div_10_Template_button_click_5_listener($event) { ɵngcc0.ɵɵrestoreView(_r8); const ctx_r10 = ɵngcc0.ɵɵnextContext(); return ctx_r10.addComment($event, ctx_r10.cmt); });
     ɵngcc0.ɵɵtext(6, "Add comment");
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(7, "button", 13);
+    ɵngcc0.ɵɵelementStart(7, "button", 12);
     ɵngcc0.ɵɵlistener("click", function CommentsComponent_div_10_Template_button_click_7_listener() { ɵngcc0.ɵɵrestoreView(_r8); const ctx_r11 = ɵngcc0.ɵɵnextContext(); ctx_r11.makeComments = false; return ctx_r11.toggleComments = false; });
     ɵngcc0.ɵɵtext(8, "Close ");
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementStart(9, "div");
-    ɵngcc0.ɵɵtemplate(10, CommentsComponent_div_10_div_10_Template, 2, 0, "div", 14);
+    ɵngcc0.ɵɵtemplate(10, CommentsComponent_div_10_div_10_Template, 2, 0, "div", 13);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
@@ -273,7 +316,7 @@ function CommentsComponent_div_11_h3_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtextInterpolate1("Comments (", ctx_r12.comments.length, ")");
 } }
 function CommentsComponent_div_11_div_2_th_17_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "th", 25);
+    ɵngcc0.ɵɵelementStart(0, "th", 24);
     ɵngcc0.ɵɵelementStart(1, "div");
     ɵngcc0.ɵɵelementStart(2, "span");
     ɵngcc0.ɵɵtext(3, "\u00A0");
@@ -284,7 +327,7 @@ function CommentsComponent_div_11_div_2_th_17_Template(rf, ctx) { if (rf & 1) {
 function CommentsComponent_div_11_div_2_tr_19_td_9_Template(rf, ctx) { if (rf & 1) {
     const _r21 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "td");
-    ɵngcc0.ɵɵelementStart(1, "button", 27);
+    ɵngcc0.ɵɵelementStart(1, "button", 26);
     ɵngcc0.ɵɵlistener("click", function CommentsComponent_div_11_div_2_tr_19_td_9_Template_button_click_1_listener() { ɵngcc0.ɵɵrestoreView(_r21); const i_r17 = ɵngcc0.ɵɵnextContext().index; const ctx_r19 = ɵngcc0.ɵɵnextContext(3); return ctx_r19.removeComment(i_r17); });
     ɵngcc0.ɵɵtext(2, "delete_forever");
     ɵngcc0.ɵɵelementEnd();
@@ -292,18 +335,18 @@ function CommentsComponent_div_11_div_2_tr_19_td_9_Template(rf, ctx) { if (rf & 
 } }
 function CommentsComponent_div_11_div_2_tr_19_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "tr");
-    ɵngcc0.ɵɵelementStart(1, "td", 26);
+    ɵngcc0.ɵɵelementStart(1, "td", 25);
     ɵngcc0.ɵɵtext(2);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(3, "td", 26);
+    ɵngcc0.ɵɵelementStart(3, "td", 25);
     ɵngcc0.ɵɵtext(4);
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(5, "td", 26);
+    ɵngcc0.ɵɵelementStart(5, "td", 25);
     ɵngcc0.ɵɵpipe(6, "DateFormatPipe");
     ɵngcc0.ɵɵtext(7);
     ɵngcc0.ɵɵpipe(8, "DateFormatPipe");
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵtemplate(9, CommentsComponent_div_11_div_2_tr_19_td_9_Template, 3, 0, "td", 4);
+    ɵngcc0.ɵɵtemplate(9, CommentsComponent_div_11_div_2_tr_19_td_9_Template, 3, 0, "td", 3);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const cmt_r16 = ctx.$implicit;
@@ -325,37 +368,37 @@ function CommentsComponent_div_11_div_2_tr_19_Template(rf, ctx) { if (rf & 1) {
 } }
 const _c8 = function () { return { "max-height": "8rem" }; };
 function CommentsComponent_div_11_div_2_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 17);
-    ɵngcc0.ɵɵelementStart(1, "div", 18);
-    ɵngcc0.ɵɵelementStart(2, "table", 19);
+    ɵngcc0.ɵɵelementStart(0, "div", 16);
+    ɵngcc0.ɵɵelementStart(1, "div", 17);
+    ɵngcc0.ɵɵelementStart(2, "table", 18);
     ɵngcc0.ɵɵelementStart(3, "thead");
     ɵngcc0.ɵɵelementStart(4, "tr");
-    ɵngcc0.ɵɵelementStart(5, "th", 20);
+    ɵngcc0.ɵɵelementStart(5, "th", 19);
     ɵngcc0.ɵɵelementStart(6, "div");
     ɵngcc0.ɵɵelementStart(7, "span");
     ɵngcc0.ɵɵtext(8, "Comment");
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(9, "th", 21);
+    ɵngcc0.ɵɵelementStart(9, "th", 20);
     ɵngcc0.ɵɵelementStart(10, "div");
     ɵngcc0.ɵɵelementStart(11, "span");
     ɵngcc0.ɵɵtext(12, "Added by");
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(13, "th", 22);
+    ɵngcc0.ɵɵelementStart(13, "th", 21);
     ɵngcc0.ɵɵelementStart(14, "div");
     ɵngcc0.ɵɵelementStart(15, "span");
     ɵngcc0.ɵɵtext(16, "Date added");
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵtemplate(17, CommentsComponent_div_11_div_2_th_17_Template, 4, 0, "th", 23);
+    ɵngcc0.ɵɵtemplate(17, CommentsComponent_div_11_div_2_th_17_Template, 4, 0, "th", 22);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementStart(18, "tbody");
-    ɵngcc0.ɵɵtemplate(19, CommentsComponent_div_11_div_2_tr_19_Template, 10, 11, "tr", 24);
+    ɵngcc0.ɵɵtemplate(19, CommentsComponent_div_11_div_2_tr_19_Template, 10, 11, "tr", 23);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
@@ -370,9 +413,9 @@ function CommentsComponent_div_11_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵproperty("ngForOf", ctx_r13.comments);
 } }
 function CommentsComponent_div_11_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 9);
-    ɵngcc0.ɵɵtemplate(1, CommentsComponent_div_11_h3_1_Template, 2, 1, "h3", 4);
-    ɵngcc0.ɵɵtemplate(2, CommentsComponent_div_11_div_2_Template, 20, 4, "div", 16);
+    ɵngcc0.ɵɵelementStart(0, "div", 8);
+    ɵngcc0.ɵɵtemplate(1, CommentsComponent_div_11_h3_1_Template, 2, 1, "h3", 3);
+    ɵngcc0.ɵɵtemplate(2, CommentsComponent_div_11_div_2_Template, 20, 4, "div", 15);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r5 = ɵngcc0.ɵɵnextContext();
@@ -444,14 +487,15 @@ function FileUploadComponent_div_9_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r0.fileUploadName, " ");
 } }
-const _c10 = function (a0) { return { "slider-inline flex-group flex-start nowrap": a0 }; };
+const _c10 = function (a0, a1) { return { "slider-inline flex-group flex-start nowrap": a0, "list-display": a1 }; };
+const _c11 = function (a0) { return { "min-width": a0 }; };
 function BladeComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div", 2);
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(1, _c0, ctx_r0.zIndex));
 } }
-const _c11 = function (a0) { return { "pinned": a0 }; };
+const _c12 = function (a0) { return { "pinned": a0 }; };
 function BladeComponent_aside_1_div_3_Template(rf, ctx) { if (rf & 1) {
     const _r7 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "div", 11);
@@ -460,7 +504,7 @@ function BladeComponent_aside_1_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r3 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(1, _c11, ctx_r3.isPinned));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(1, _c12, ctx_r3.isPinned));
 } }
 function BladeComponent_aside_1_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 12);
@@ -474,9 +518,9 @@ function BladeComponent_aside_1_div_4_Template(rf, ctx) { if (rf & 1) {
 function BladeComponent_aside_1_ng_content_9_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵprojection(0, 1, ["*ngIf", "bladeTabs"]);
 } }
-const _c12 = function (a0, a1) { return { "show-blade": a0, "show-tabs": a1 }; };
-const _c13 = function (a0, a1) { return { "top": a0, "z-index": a1 }; };
-const _c14 = function (a0) { return { "max-width": a0 }; };
+const _c13 = function (a0, a1) { return { "show-blade": a0, "show-tabs": a1 }; };
+const _c14 = function (a0, a1) { return { "top": a0, "z-index": a1 }; };
+const _c15 = function (a0) { return { "max-width": a0 }; };
 function BladeComponent_aside_1_Template(rf, ctx) { if (rf & 1) {
     const _r9 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "aside", 3);
@@ -499,13 +543,13 @@ function BladeComponent_aside_1_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r1 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵclassMapInterpolate1("blade animate-all ", ctx_r1.bladeSize, "");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(10, _c12, ctx_r1.toggleBlade, ctx_r1.bladeTabs))("ngStyle", ɵngcc0.ɵɵpureFunction2(13, _c13, ctx_r1.topPosition + "rem", ctx_r1.zIndex + 10));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(10, _c13, ctx_r1.toggleBlade, ctx_r1.bladeTabs))("ngStyle", ɵngcc0.ɵɵpureFunction2(13, _c14, ctx_r1.topPosition + "rem", ctx_r1.zIndex + 10));
     ɵngcc0.ɵɵadvance(3);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r1.enablePinning);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r1.enableIcon);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(16, _c14, ctx_r1.headingMaxWidth + "rem"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(16, _c15, ctx_r1.headingMaxWidth + "rem"));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r1.bladeHeading, " ");
     ɵngcc0.ɵɵadvance(3);
@@ -514,7 +558,7 @@ function BladeComponent_aside_1_Template(rf, ctx) { if (rf & 1) {
 function BladeComponent_aside_2_ng_content_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵprojection(0, 5, ["*ngIf", "customBladeTabs"]);
 } }
-const _c15 = function (a0, a1) { return { "show-blade": a0, "show-tabs custom-header-tabs": a1 }; };
+const _c16 = function (a0, a1) { return { "show-blade": a0, "show-tabs custom-header-tabs": a1 }; };
 function BladeComponent_aside_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "aside", 3);
     ɵngcc0.ɵɵelementStart(1, "article", 13);
@@ -531,13 +575,13 @@ function BladeComponent_aside_2_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r2 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵclassMapInterpolate1("blade animate-all ", ctx_r2.bladeSize, "");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(6, _c15, ctx_r2.toggleBlade, ctx_r2.customBladeTabs))("ngStyle", ɵngcc0.ɵɵpureFunction2(9, _c13, ctx_r2.topPosition + "rem", ctx_r2.zIndex));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(6, _c16, ctx_r2.toggleBlade, ctx_r2.customBladeTabs))("ngStyle", ɵngcc0.ɵɵpureFunction2(9, _c14, ctx_r2.topPosition + "rem", ctx_r2.zIndex));
     ɵngcc0.ɵɵadvance(3);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r2.customBladeTabs);
 } }
-const _c16 = ["*", [["", "blade-tabs", ""]], [["", "custom-header", ""]], [["", "custom-content", ""]], [["", "custom-footer", ""]], [["", "custom-blade-tabs", ""]]];
-const _c17 = ["*", "[blade-tabs]", "[custom-header]", "[custom-content]", "[custom-footer]", "[custom-blade-tabs]"];
-const _c18 = ["*"];
+const _c17 = ["*", [["", "blade-tabs", ""]], [["", "custom-header", ""]], [["", "custom-content", ""]], [["", "custom-footer", ""]], [["", "custom-blade-tabs", ""]]];
+const _c18 = ["*", "[blade-tabs]", "[custom-header]", "[custom-content]", "[custom-footer]", "[custom-blade-tabs]"];
+const _c19 = ["*"];
 function BladeBottomComponent_div_5_Template(rf, ctx) { if (rf & 1) {
     const _r4 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "div", 7);
@@ -555,10 +599,10 @@ function BladeBottomComponent_span_8_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtext(1, "close_fullscreen");
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c19 = [[["", "custom-header", ""]], [["", "custom-content", ""]]];
-const _c20 = function (a0, a1, a2) { return { "show": a0, "pinned": a1, "fullscreen": a2 }; };
-const _c21 = ["[custom-header]", "[custom-content]"];
-const _c22 = function (a0, a2, a3) { return { "border": a0, "border-style": "solid", "width": a2, "height": a3 }; };
+const _c20 = [[["", "custom-header", ""]], [["", "custom-content", ""]]];
+const _c21 = function (a0, a1, a2) { return { "show": a0, "pinned": a1, "fullscreen": a2 }; };
+const _c22 = ["[custom-header]", "[custom-content]"];
+const _c23 = function (a0, a2, a3) { return { "border": a0, "border-style": "solid", "width": a2, "height": a3 }; };
 function BladeTopComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 6);
     ɵngcc0.ɵɵelement(1, "div");
@@ -571,40 +615,40 @@ function BladeTopComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMapInterpolate1("flag ", ctx_r0.countryFlag, "");
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction3(4, _c22, ctx_r0.borderThickness + "rem" + " solid " + ctx_r0.borderColour, ctx_r0.profileSize + "rem", ctx_r0.profileSize + "rem"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction3(4, _c23, ctx_r0.borderThickness + "rem" + " solid " + ctx_r0.borderColour, ctx_r0.profileSize + "rem", ctx_r0.profileSize + "rem"));
 } }
-const _c23 = [[["", "custom-content", ""]], [["", "user-profile", ""]]];
-const _c24 = function (a0) { return { "show-top-blade box-shadow-light": a0 }; };
-const _c25 = function (a0, a1, a2, a3, a4) { return { "left": a0, "right": a1, "margin-top": a2, "z-index": a3, "max-height": a4 }; };
-const _c26 = function (a0) { return { "transform": a0 }; };
-const _c27 = ["[custom-content]", "[user-profile]"];
-const _c28 = function (a0, a1) { return { "left": a0, "z-index": a1 }; };
-const _c29 = function (a0) { return { "left": a0 }; };
-const _c30 = function (a0) { return { "arrow-plum": a0 }; };
+const _c24 = [[["", "custom-content", ""]], [["", "user-profile", ""]]];
+const _c25 = function (a0) { return { "show-top-blade box-shadow-light": a0 }; };
+const _c26 = function (a0, a1, a2, a3, a4) { return { "left": a0, "right": a1, "margin-top": a2, "z-index": a3, "max-height": a4 }; };
+const _c27 = function (a0) { return { "transform": a0 }; };
+const _c28 = ["[custom-content]", "[user-profile]"];
+const _c29 = function (a0, a1) { return { "left": a0, "z-index": a1 }; };
+const _c30 = function (a0) { return { "left": a0 }; };
+const _c31 = function (a0) { return { "arrow-plum": a0 }; };
 function ProjectTourComponent_div_3_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div", 11);
 } if (rf & 2) {
     const ctx_r1 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c29, ctx_r1.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c30, ctx_r1.arrowIsPlum));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c30, ctx_r1.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c31, ctx_r1.arrowIsPlum));
 } }
-const _c31 = function (a0) { return { "top": a0 }; };
+const _c32 = function (a0) { return { "top": a0 }; };
 function ProjectTourComponent_div_3_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div", 12);
 } if (rf & 2) {
     const ctx_r2 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c31, ctx_r2.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c30, ctx_r2.arrowIsPlum));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c32, ctx_r2.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c31, ctx_r2.arrowIsPlum));
 } }
 function ProjectTourComponent_div_3_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div", 13);
 } if (rf & 2) {
     const ctx_r3 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c29, ctx_r3.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c30, ctx_r3.arrowIsPlum));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c30, ctx_r3.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c31, ctx_r3.arrowIsPlum));
 } }
 function ProjectTourComponent_div_3_div_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div", 14);
 } if (rf & 2) {
     const ctx_r4 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c31, ctx_r4.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c30, ctx_r4.arrowIsPlum));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c32, ctx_r4.arrowPos))("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c31, ctx_r4.arrowIsPlum));
 } }
 function ProjectTourComponent_div_3_h3_7_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "h3");
@@ -615,7 +659,7 @@ function ProjectTourComponent_div_3_h3_7_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r5.tourModeHeading);
 } }
-const _c32 = function (a0, a1, a2, a3, a4, a5) { return { "width": a0, "top": a1, "right": a2, "bottom": a3, "left": a4, "z-index": a5 }; };
+const _c33 = function (a0, a1, a2, a3, a4, a5) { return { "width": a0, "top": a1, "right": a2, "bottom": a3, "left": a4, "z-index": a5 }; };
 function ProjectTourComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div");
     ɵngcc0.ɵɵelementStart(1, "div", 3);
@@ -638,7 +682,7 @@ function ProjectTourComponent_div_3_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction6(8, _c32, ctx_r0.panelWidth, ctx_r0.topPos, ctx_r0.rightPos, ctx_r0.bottomPos, ctx_r0.leftPos, ctx_r0.zIndex + 1));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction6(8, _c33, ctx_r0.panelWidth, ctx_r0.topPos, ctx_r0.rightPos, ctx_r0.bottomPos, ctx_r0.leftPos, ctx_r0.zIndex + 1));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r0.arrowTop);
     ɵngcc0.ɵɵadvance(1);
@@ -654,12 +698,12 @@ function ProjectTourComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(3);
     ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(15, _c0, ctx_r0.zIndex));
 } }
-const _c33 = [[["", "nested-component", ""]], [["", "tour-navigation", ""]]];
-const _c34 = function (a0) { return { "tour-active": a0 }; };
-const _c35 = function (a1) { return { "position": "relative", "z-index": a1 }; };
-const _c36 = ["[nested-component]", "[tour-navigation]"];
-const _c37 = function (a0, a1) { return { "top": a0, "bottom": a1 }; };
-const _c38 = function (a0, a1) { return { "font-size": a0, "text-transform": a1 }; };
+const _c34 = [[["", "nested-component", ""]], [["", "tour-navigation", ""]]];
+const _c35 = function (a0) { return { "tour-active": a0 }; };
+const _c36 = function (a1) { return { "position": "relative", "z-index": a1 }; };
+const _c37 = ["[nested-component]", "[tour-navigation]"];
+const _c38 = function (a0, a1) { return { "top": a0, "bottom": a1 }; };
+const _c39 = function (a0, a1) { return { "font-size": a0, "text-transform": a1 }; };
 function UiBlockComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "article", 1);
     ɵngcc0.ɵɵelementStart(1, "h1", 2);
@@ -669,23 +713,22 @@ function UiBlockComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(3, _c37, ctx_r0.topPos + "rem", ctx_r0.bottomPos + "rem"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(3, _c38, ctx_r0.topPos + "rem", ctx_r0.bottomPos + "rem"));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(6, _c38, ctx_r0.fontSize + "rem", ctx_r0.allCaps && "uppercase"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(6, _c39, ctx_r0.fontSize + "rem", ctx_r0.allCaps && "uppercase"));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r0.message, " ");
 } }
-const _c39 = function (a0) { return { "box-shadow-strong": a0 }; };
-const _c40 = function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) { return { "border-radius": a0, "padding": a1, "min-width": a2, "max-width": a3, "min-height": a4, "max-height": a5, "z-index": a6, "border-width": a7, "border-style": a8, "margin-bottom": a9, "overflow": a10 }; };
-const _c41 = function (a0) { return { "show-on-left": a0 }; };
-const _c42 = function (a0) { return { "min-width": a0 }; };
+const _c40 = function (a0) { return { "box-shadow-strong": a0 }; };
+const _c41 = function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) { return { "border-radius": a0, "padding": a1, "min-width": a2, "max-width": a3, "min-height": a4, "max-height": a5, "z-index": a6, "border-width": a7, "border-style": a8, "margin-bottom": a9, "overflow": a10 }; };
+const _c42 = function (a0) { return { "show-on-left": a0 }; };
 function ContextMenuComponent_ul_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "ul", 4);
     ɵngcc0.ɵɵprojection(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c41, ctx_r0.showOnLeft))("ngStyle", ɵngcc0.ɵɵpureFunction1(4, _c42, ctx_r0.minWidth + "rem"));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c42, ctx_r0.showOnLeft))("ngStyle", ɵngcc0.ɵɵpureFunction1(4, _c11, ctx_r0.minWidth + "rem"));
 } }
 const _c43 = function (a0, a1, a2) { return { "top": a0, "left": a1, "right": a2 }; };
 const _c44 = function (a0) { return { "position-absolute": a0 }; };
@@ -813,15 +856,15 @@ function TabNavigationComponent_nav_1_ng_container_2_a_2_span_3_Template(rf, ctx
     ɵngcc0.ɵɵtextInterpolate(tab_r5.tabCount);
 } }
 function TabNavigationComponent_nav_1_ng_container_2_a_2_a_4_Template(rf, ctx) { if (rf & 1) {
-    const _r15 = ɵngcc0.ɵɵgetCurrentView();
+    const _r16 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 11);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_1_ng_container_2_a_2_a_4_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r15); const ctx_r14 = ɵngcc0.ɵɵnextContext(4); return ctx_r14.onCloseTab($event); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_1_ng_container_2_a_2_a_4_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r16); const tab_r5 = ɵngcc0.ɵɵnextContext(2).$implicit; const ctx_r14 = ɵngcc0.ɵɵnextContext(2); return ctx_r14.onCloseTab($event, tab_r5.tabId); });
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationComponent_nav_1_ng_container_2_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r18 = ɵngcc0.ɵɵgetCurrentView();
+    const _r19 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 8);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_1_ng_container_2_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r18); const tab_r5 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r16 = ɵngcc0.ɵɵnextContext(2); return ctx_r16.onTabClicked(tab_r5); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_1_ng_container_2_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r19); const tab_r5 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r17 = ɵngcc0.ɵɵnextContext(2); return ctx_r17.onTabClicked(tab_r5); });
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵtemplate(2, TabNavigationComponent_nav_1_ng_container_2_a_2_span_2_Template, 2, 4, "span", 9);
     ɵngcc0.ɵɵtemplate(3, TabNavigationComponent_nav_1_ng_container_2_a_2_span_3_Template, 2, 4, "span", 9);
@@ -912,16 +955,16 @@ function TabNavigationComponent_nav_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵproperty("ngForOf", ctx_r1.contentTabs);
 } }
 function TabNavigationComponent_div_2_button_4_Template(rf, ctx) { if (rf & 1) {
-    const _r30 = ɵngcc0.ɵɵgetCurrentView();
+    const _r31 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "button", 18);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_button_4_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r30); const ctx_r29 = ɵngcc0.ɵɵnextContext(2); return ctx_r29.toggleFullscreen = !ctx_r29.toggleFullscreen; });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_button_4_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r31); const ctx_r30 = ɵngcc0.ɵɵnextContext(2); return ctx_r30.toggleFullscreen = !ctx_r30.toggleFullscreen; });
     ɵngcc0.ɵɵtext(1, "close_fullscreen");
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationComponent_div_2_button_5_Template(rf, ctx) { if (rf & 1) {
-    const _r32 = ɵngcc0.ɵɵgetCurrentView();
+    const _r33 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "button", 18);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_button_5_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r32); const ctx_r31 = ɵngcc0.ɵɵnextContext(2); return ctx_r31.toggleFullscreen = !ctx_r31.toggleFullscreen; });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_button_5_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r33); const ctx_r32 = ɵngcc0.ɵɵnextContext(2); return ctx_r32.toggleFullscreen = !ctx_r32.toggleFullscreen; });
     ɵngcc0.ɵɵtext(1, "open_in_full");
     ɵngcc0.ɵɵelementEnd();
 } }
@@ -931,19 +974,19 @@ function TabNavigationComponent_div_2_ng_container_7_a_2_1_Template(rf, ctx) { i
 } }
 const _c52 = function (a0) { return { "active": a0 }; };
 function TabNavigationComponent_div_2_ng_container_7_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r40 = ɵngcc0.ɵɵgetCurrentView();
+    const _r41 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 21);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_ng_container_7_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r40); const tab_r33 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r38 = ɵngcc0.ɵɵnextContext(2); return ctx_r38.onTabClicked(tab_r33); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_div_2_ng_container_7_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r41); const tab_r34 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r39 = ɵngcc0.ɵɵnextContext(2); return ctx_r39.onTabClicked(tab_r34); });
     ɵngcc0.ɵɵtemplate(1, TabNavigationComponent_div_2_ng_container_7_a_2_1_Template, 1, 0, undefined, 22);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const tab_r33 = ɵngcc0.ɵɵnextContext().$implicit;
-    const ctx_r34 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵclassMap(tab_r33.activeColor);
-    ɵngcc0.ɵɵpropertyInterpolate("title", tab_r33.tabName);
-    ɵngcc0.ɵɵproperty("id", tab_r33.tabId)("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c52, ctx_r34.isActive(tab_r33)));
+    const tab_r34 = ɵngcc0.ɵɵnextContext().$implicit;
+    const ctx_r35 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵclassMap(tab_r34.activeColor);
+    ɵngcc0.ɵɵpropertyInterpolate("title", tab_r34.tabName);
+    ɵngcc0.ɵɵproperty("id", tab_r34.tabId)("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c52, ctx_r35.isActive(tab_r34)));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngTemplateOutlet", tab_r33.templateRefHeader);
+    ɵngcc0.ɵɵproperty("ngTemplateOutlet", tab_r34.templateRefHeader);
 } }
 function TabNavigationComponent_div_2_ng_container_7_span_3_1_ng_template_0_Template(rf, ctx) { }
 function TabNavigationComponent_div_2_ng_container_7_span_3_1_Template(rf, ctx) { if (rf & 1) {
@@ -954,10 +997,10 @@ function TabNavigationComponent_div_2_ng_container_7_span_3_Template(rf, ctx) { 
     ɵngcc0.ɵɵtemplate(1, TabNavigationComponent_div_2_ng_container_7_span_3_1_Template, 1, 0, undefined, 22);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
-    const tab_r33 = ɵngcc0.ɵɵnextContext().$implicit;
-    ɵngcc0.ɵɵpropertyInterpolate("title", tab_r33.tabName);
+    const tab_r34 = ɵngcc0.ɵɵnextContext().$implicit;
+    ɵngcc0.ɵɵpropertyInterpolate("title", tab_r34.tabName);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngTemplateOutlet", tab_r33.templateRefHeader);
+    ɵngcc0.ɵɵproperty("ngTemplateOutlet", tab_r34.templateRefHeader);
 } }
 function TabNavigationComponent_div_2_ng_container_7_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementContainerStart(0);
@@ -967,13 +1010,13 @@ function TabNavigationComponent_div_2_ng_container_7_Template(rf, ctx) { if (rf 
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const tab_r33 = ctx.$implicit;
+    const tab_r34 = ctx.$implicit;
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(3, _c51, tab_r33.tabDisabled));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(3, _c51, tab_r34.tabDisabled));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngIf", !tab_r33.tabDisabled);
+    ɵngcc0.ɵɵproperty("ngIf", !tab_r34.tabDisabled);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngIf", tab_r33.tabDisabled);
+    ɵngcc0.ɵɵproperty("ngIf", tab_r34.tabDisabled);
 } }
 function TabNavigationComponent_div_2_ng_container_8_1_ng_template_0_Template(rf, ctx) { }
 function TabNavigationComponent_div_2_ng_container_8_1_Template(rf, ctx) { if (rf & 1) {
@@ -984,9 +1027,9 @@ function TabNavigationComponent_div_2_ng_container_8_Template(rf, ctx) { if (rf 
     ɵngcc0.ɵɵtemplate(1, TabNavigationComponent_div_2_ng_container_8_1_Template, 1, 0, undefined, 22);
     ɵngcc0.ɵɵelementContainerEnd();
 } if (rf & 2) {
-    const ctx_r28 = ɵngcc0.ɵɵnextContext(2);
+    const ctx_r29 = ɵngcc0.ɵɵnextContext(2);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngTemplateOutlet", ctx_r28.currentTab.templateRef);
+    ɵngcc0.ɵɵproperty("ngTemplateOutlet", ctx_r29.currentTab.templateRef);
 } }
 const _c53 = function (a0) { return { "minimize": a0 }; };
 function TabNavigationComponent_div_2_Template(rf, ctx) { if (rf & 1) {
@@ -1018,16 +1061,16 @@ function TabNavigationComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵproperty("ngIf", ctx_r2.displayTabContent && ctx_r2.currentTab);
 } }
 function TabNavigationComponent_nav_3_button_3_Template(rf, ctx) { if (rf & 1) {
-    const _r50 = ɵngcc0.ɵɵgetCurrentView();
+    const _r51 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "button", 25);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_3_button_3_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r50); const ctx_r49 = ɵngcc0.ɵɵnextContext(2); return ctx_r49.toggleFullscreen = !ctx_r49.toggleFullscreen; });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_3_button_3_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r51); const ctx_r50 = ɵngcc0.ɵɵnextContext(2); return ctx_r50.toggleFullscreen = !ctx_r50.toggleFullscreen; });
     ɵngcc0.ɵɵtext(1, "close_fullscreen");
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationComponent_nav_3_button_4_Template(rf, ctx) { if (rf & 1) {
-    const _r52 = ɵngcc0.ɵɵgetCurrentView();
+    const _r53 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "button", 25);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_3_button_4_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r52); const ctx_r51 = ɵngcc0.ɵɵnextContext(2); return ctx_r51.toggleFullscreen = !ctx_r51.toggleFullscreen; });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationComponent_nav_3_button_4_Template_button_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r53); const ctx_r52 = ɵngcc0.ɵɵnextContext(2); return ctx_r52.toggleFullscreen = !ctx_r52.toggleFullscreen; });
     ɵngcc0.ɵɵtext(1, "open_in_full");
     ɵngcc0.ɵɵelementEnd();
 } }
@@ -1061,15 +1104,15 @@ function TabNavigationSecondaryComponent_nav_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r9 = ɵngcc0.ɵɵgetCurrentView();
+    const _r10 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 7);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r9); const ctx_r8 = ɵngcc0.ɵɵnextContext(4); return ctx_r8.onCloseTabSecondary($event); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r10); const tab_r3 = ɵngcc0.ɵɵnextContext(2).$implicit; const ctx_r8 = ɵngcc0.ɵɵnextContext(2); return ctx_r8.onCloseTabSecondary($event, tab_r3.tabId); });
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r12 = ɵngcc0.ɵɵgetCurrentView();
+    const _r13 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 5);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r12); const tab_r3 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r10 = ɵngcc0.ɵɵnextContext(2); return ctx_r10.onTabClicked(tab_r3); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r13); const tab_r3 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r11 = ɵngcc0.ɵɵnextContext(2); return ctx_r11.onTabClicked(tab_r3); });
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵtemplate(2, TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_a_2_Template, 1, 0, "a", 6);
     ɵngcc0.ɵɵelementEnd();
@@ -1085,15 +1128,15 @@ function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_2_Template(rf, c
     ɵngcc0.ɵɵproperty("ngIf", tab_r3.enableCloseSecondary);
 } }
 function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_a_2_Template(rf, ctx) { if (rf & 1) {
-    const _r16 = ɵngcc0.ɵɵgetCurrentView();
+    const _r18 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 7);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r16); const ctx_r15 = ɵngcc0.ɵɵnextContext(4); return ctx_r15.onCloseTabSecondary($event); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_a_2_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r18); const tab_r3 = ɵngcc0.ɵɵnextContext(2).$implicit; const ctx_r16 = ɵngcc0.ɵɵnextContext(2); return ctx_r16.onCloseTabSecondary($event, tab_r3.tabId); });
     ɵngcc0.ɵɵelementEnd();
 } }
 function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_Template(rf, ctx) { if (rf & 1) {
-    const _r19 = ɵngcc0.ɵɵgetCurrentView();
+    const _r21 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "a", 5);
-    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r19); const tab_r3 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r17 = ɵngcc0.ɵɵnextContext(2); return ctx_r17.onTabClicked(tab_r3); });
+    ɵngcc0.ɵɵlistener("click", function TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_Template_a_click_0_listener() { ɵngcc0.ɵɵrestoreView(_r21); const tab_r3 = ɵngcc0.ɵɵnextContext().$implicit; const ctx_r19 = ɵngcc0.ɵɵnextContext(2); return ctx_r19.onTabClicked(tab_r3); });
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵtemplate(2, TabNavigationSecondaryComponent_nav_1_ng_container_2_a_3_a_2_Template, 1, 0, "a", 6);
     ɵngcc0.ɵɵelementEnd();
@@ -1189,21 +1232,22 @@ function AlertComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r1.alertText, " ");
 } }
-const _c58 = function (a0) { return { "height": a0 }; };
-const _c59 = function (a0, a1) { return { "margin-top-0-75": a0, "expanded": a1 }; };
+const _c58 = function (a0) { return { "margin-top-1": a0 }; };
 function AlertComponent_div_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 9);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(3, _c58, !ctx_r2.expandPanel ? "3rem" : "auto"))("ngClass", ɵngcc0.ɵɵpureFunction2(5, _c59, ctx_r2.collapsible, ctx_r2.expandPanel));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c58, ctx_r2.collapsible));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r2.alertText, " ");
 } }
-const _c60 = function (a0) { return { "align-icon-top": a0 }; };
-const _c61 = function (a0, a1) { return { "small": a0, "nowrap": a1 }; };
-const _c62 = function (a0) { return { "display": a0 }; };
+const _c59 = function (a0, a1) { return { "align-icon-top": a0, "max-height-initial": a1 }; };
+const _c60 = function (a0) { return [a0]; };
+const _c61 = function (a0, a1) { return { "min-width": a0, "max-height": a1 }; };
+const _c62 = function (a0, a1) { return { "small": a0, "nowrap": a1 }; };
+const _c63 = function (a0) { return { "display": a0 }; };
 function AlertShieldComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 3);
     ɵngcc0.ɵɵelementStart(1, "span", 4);
@@ -1213,9 +1257,9 @@ function AlertShieldComponent_div_0_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵclassMapInterpolate1("alert-shield ", ctx_r0.alertShieldStatus, "");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(6, _c61, ctx_r0.alertShieldSmall, ctx_r0.noWrap));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(6, _c62, ctx_r0.alertShieldSmall, ctx_r0.noWrap));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(9, _c62, ctx_r0.hideLabel ? "none" : "inline"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(9, _c63, ctx_r0.hideLabel ? "none" : "inline"));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r0.alertShieldText, " ");
 } }
@@ -1228,6 +1272,7 @@ function AlertShieldComponent_div_1_h4_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r3.tooltipHeading);
 } }
+const _c64 = function (a0, a1, a2, a3) { return { "tooltip-top-left": a0, "tooltip-top-right": a1, "tooltip-bottom-left": a2, "tooltip-bottom-right": a3 }; };
 function AlertShieldComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 5);
     ɵngcc0.ɵɵelementStart(1, "div", 4);
@@ -1242,16 +1287,17 @@ function AlertShieldComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r1 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(12, _c64, ctx_r1.tooltipTopLeft, ctx_r1.tooltipTopRight, ctx_r1.tooltipBottomLeft, ctx_r1.tooltipBottomRight));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵclassMapInterpolate3("alert-shield-tooltip ", ctx_r1.alertShieldStatus, " ", ctx_r1.xpos, " ", ctx_r1.ypos, "");
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(13, _c42, ctx_r1.minWidth));
+    ɵngcc0.ɵɵclassMapInterpolate1("alert-shield-tooltip ", ctx_r1.alertShieldStatus, "");
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(17, _c11, ctx_r1.minWidth));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r1.showTooltipHeading);
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵclassMapInterpolate1("alert-shield ", ctx_r1.alertShieldStatus, "");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(15, _c61, ctx_r1.alertShieldSmall, ctx_r1.noWrap));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(19, _c62, ctx_r1.alertShieldSmall, ctx_r1.noWrap));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(18, _c62, ctx_r1.hideLabel ? "none" : "inline"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(22, _c63, ctx_r1.hideLabel ? "none" : "inline"));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r1.alertShieldText, " ");
 } }
@@ -1265,23 +1311,22 @@ function AlertShieldComponent_div_2_div_2_h4_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtextInterpolate(ctx_r5.tooltipHeading);
 } }
 function AlertShieldComponent_div_2_div_2_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 4);
+    ɵngcc0.ɵɵelementStart(0, "div", 9);
     ɵngcc0.ɵɵtemplate(1, AlertShieldComponent_div_2_div_2_h4_1_Template, 2, 1, "h4", 6);
     ɵngcc0.ɵɵprojection(2, 1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r4 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵclassMapInterpolate2("alert-shield-tooltip ", ctx_r4.xpos, " ", ctx_r4.ypos, "");
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(6, _c42, ctx_r4.minWidth));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c11, ctx_r4.minWidth));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r4.showTooltipHeading);
 } }
-const _c63 = function (a0, a1, a2, a3) { return { "small": a0, "nowrap": a1, "icon-only": a2, "rotate": a3 }; };
-const _c64 = function (a0, a1) { return { "material-icons": a0, "material-icons-outlined": a1 }; };
+const _c65 = function (a0, a1, a2, a3) { return { "small": a0, "nowrap": a1, "icon-only": a2, "rotate": a3 }; };
+const _c66 = function (a0, a1) { return { "material-icons": a0, "material-icons-outlined": a1 }; };
 function AlertShieldComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 7);
     ɵngcc0.ɵɵelementStart(1, "div", 3);
-    ɵngcc0.ɵɵtemplate(2, AlertShieldComponent_div_2_div_2_Template, 3, 8, "div", 8);
+    ɵngcc0.ɵɵtemplate(2, AlertShieldComponent_div_2_div_2_Template, 3, 4, "div", 8);
     ɵngcc0.ɵɵelementStart(3, "div", 3);
     ɵngcc0.ɵɵtext(4);
     ɵngcc0.ɵɵelementEnd();
@@ -1292,41 +1337,43 @@ function AlertShieldComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(10, _c64, ctx_r2.tooltipTopLeft, ctx_r2.tooltipTopRight, ctx_r2.tooltipBottomLeft, ctx_r2.tooltipBottomRight));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMapInterpolate1("\n            flex-group \n            flex-align-center \n            flex-start \n            custom-alert-shield-container\n            ", ctx_r2.shieldColour, "\n        ");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(9, _c63, ctx_r2.alertShieldSmall, ctx_r2.noWrap, ctx_r2.iconOnly, ctx_r2.enableRotation));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(15, _c65, ctx_r2.alertShieldSmall, ctx_r2.noWrap, ctx_r2.iconOnly, ctx_r2.enableRotation));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r2.showTooltip);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(14, _c64, !ctx_r2.iconOutlined, ctx_r2.iconOutlined));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(20, _c66, !ctx_r2.iconOutlined, ctx_r2.iconOutlined));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r2.iconName, " ");
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(17, _c62, ctx_r2.hideLabel ? "none" : "inline"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(23, _c63, ctx_r2.hideLabel ? "none" : "inline"));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r2.alertShieldText, " ");
 } }
-const _c65 = [[["", "tooltip-content", ""]], [["", "custom-tooltip-content", ""]]];
-const _c66 = ["[tooltip-content]", "[custom-tooltip-content]"];
+const _c67 = [[["", "tooltip-content", ""]], [["", "custom-tooltip-content", ""]]];
+const _c68 = ["[tooltip-content]", "[custom-tooltip-content]"];
+const _c69 = function (a0) { return { "display-over-header": a0 }; };
 function ProgressCircleComponent_div_0_span_5_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 15);
+    ɵngcc0.ɵɵelementStart(0, "span", 17);
     ɵngcc0.ɵɵtext(1, "error_outline");
     ɵngcc0.ɵɵelementEnd();
 } }
 function ProgressCircleComponent_div_0_span_6_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 16);
+    ɵngcc0.ɵɵelementStart(0, "span", 18);
     ɵngcc0.ɵɵtext(1, "warning_amber");
     ɵngcc0.ɵɵelementEnd();
 } }
 function ProgressCircleComponent_div_0_span_7_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 17);
+    ɵngcc0.ɵɵelementStart(0, "span", 19);
     ɵngcc0.ɵɵtext(1, "info");
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c67 = function () { return { "position": "absolute", "right": ".75rem" }; };
+const _c70 = function () { return { "position": "absolute", "right": ".75rem" }; };
 function ProgressCircleComponent_div_0_div_8_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "div", 18);
-    ɵngcc0.ɵɵelementStart(1, "div", 19);
+    ɵngcc0.ɵɵelementStart(0, "div", 20);
+    ɵngcc0.ɵɵelementStart(1, "div", 21);
     ɵngcc0.ɵɵelementStart(2, "p");
     ɵngcc0.ɵɵtext(3);
     ɵngcc0.ɵɵelementEnd();
@@ -1334,31 +1381,73 @@ function ProgressCircleComponent_div_0_div_8_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r5 = ɵngcc0.ɵɵnextContext(2);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction0(7, _c67));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction0(7, _c70));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMapInterpolate2("feature-box ", ctx_r5.xpos, " ", ctx_r5.ypos, "");
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(8, _c42, ctx_r5.tooltipMinWidth + "rem"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(8, _c11, ctx_r5.tooltipMinWidth + "rem"));
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate(ctx_r5.tooltipBody);
 } }
 function ProgressCircleComponent_div_0_span_9_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 20);
+    ɵngcc0.ɵɵelementStart(0, "span", 22);
     ɵngcc0.ɵɵtext(1, "chevron_right");
     ɵngcc0.ɵɵelementEnd();
 } }
 function ProgressCircleComponent_div_0_span_18_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "span", 21);
+    ɵngcc0.ɵɵelementStart(0, "span", 23);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r7 = ɵngcc0.ɵɵnextContext(2);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate(ctx_r7.value);
+    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r7.value, " ");
 } }
-const _c68 = function (a0) { return { "panel-view": a0 }; };
-const _c69 = function (a0) { return { "padding-right-1": a0 }; };
-const _c70 = function (a2) { return { "stroke-dashoffset": 0, "opacity": ".3", "stroke": a2 }; };
-const _c71 = function (a0, a1) { return { "stroke-dashoffset": a0, "stroke": a1 }; };
+function ProgressCircleComponent_div_0_div_19_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div");
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r8 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵclassMapInterpolate1("alert-shield small ", ctx_r8.alertShieldStatus, "");
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r8.alertShieldText, " ");
+} }
+function ProgressCircleComponent_div_0_div_20_h4_2_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "h4");
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r10 = ɵngcc0.ɵɵnextContext(3);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r10.tooltipHeading);
+} }
+function ProgressCircleComponent_div_0_div_20_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div", 24);
+    ɵngcc0.ɵɵelementStart(1, "div", 21);
+    ɵngcc0.ɵɵtemplate(2, ProgressCircleComponent_div_0_div_20_h4_2_Template, 2, 1, "h4", 25);
+    ɵngcc0.ɵɵprojection(3);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(4, "div");
+    ɵngcc0.ɵɵtext(5);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r9 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(10, _c64, ctx_r9.tooltipTopLeft, ctx_r9.tooltipTopRight, ctx_r9.tooltipBottomLeft, ctx_r9.tooltipBottomRight));
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵclassMapInterpolate1("alert-shield-tooltip ", ctx_r9.alertShieldStatus, "");
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(15, _c11, ctx_r9.tooltipMinWidth + "rem"));
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r9.showTooltipHeading);
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵclassMapInterpolate1("alert-shield small ", ctx_r9.alertShieldStatus, "");
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r9.alertShieldText, " ");
+} }
+const _c71 = function (a0) { return { "panel-view": a0 }; };
+const _c72 = function (a0) { return { "padding-right-1": a0 }; };
+const _c73 = function (a2) { return { "stroke-dashoffset": 0, "opacity": ".3", "stroke": a2 }; };
+const _c74 = function (a0, a1) { return { "stroke-dashoffset": a0, "stroke": a1 }; };
 function ProgressCircleComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 2);
     ɵngcc0.ɵɵelementStart(1, "h3", 3);
@@ -1387,17 +1476,19 @@ function ProgressCircleComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵtemplate(18, ProgressCircleComponent_div_0_span_18_Template, 2, 1, "span", 14);
+    ɵngcc0.ɵɵtemplate(19, ProgressCircleComponent_div_0_div_19_Template, 2, 4, "div", 15);
+    ɵngcc0.ɵɵtemplate(20, ProgressCircleComponent_div_0_div_20_Template, 6, 17, "div", 16);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(20, _c68, ctx_r0.panelView));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(22, _c71, ctx_r0.panelView));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMapInterpolate1("flex-center title ", ctx_r0.headerColor, "");
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(22, _c69, ctx_r0.enableTooltip));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(24, _c72, ctx_r0.enableTooltip));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵpropertyInterpolate("title", ctx_r0.name);
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r0.name.length > 19 ? ɵngcc0.ɵɵpipeBind3(4, 16, ctx_r0.name, 0, 19) + "..." : ctx_r0.name, " ");
+    ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r0.name.length > 19 ? ɵngcc0.ɵɵpipeBind3(4, 18, ctx_r0.name, 0, 19) + "..." : ctx_r0.name, " ");
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r0.isError);
     ɵngcc0.ɵɵadvance(1);
@@ -1409,23 +1500,27 @@ function ProgressCircleComponent_div_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r0.panelView && !ctx_r0.hideChevron);
     ɵngcc0.ɵɵadvance(3);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(24, _c70, ctx_r0.colour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(26, _c73, ctx_r0.colour));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(26, _c71, "calc(250 - (250 * " + ctx_r0.percent + ") / 100)", ctx_r0.colour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(28, _c74, "calc(250 - (250 * " + ctx_r0.percent + ") / 100)", ctx_r0.colour));
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate1("", ctx_r0.percent, " ");
     ɵngcc0.ɵɵadvance(3);
-    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.panelView);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.panelView && !ctx_r0.enableAlertShield && !ctx_r0.enableAlertShieldTooltip);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.enableAlertShield);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.enableAlertShieldTooltip);
 } }
-const _c72 = function (a2) { return { "stroke-dashoffset": 0, "opacity": ".2", "stroke": a2 }; };
+const _c75 = function (a2) { return { "stroke-dashoffset": 0, "opacity": ".2", "stroke": a2 }; };
 function ProgressCircleComponent_li_1_Template(rf, ctx) { if (rf & 1) {
-    ɵngcc0.ɵɵelementStart(0, "li", 22);
-    ɵngcc0.ɵɵelementStart(1, "div", 23);
+    ɵngcc0.ɵɵelementStart(0, "li", 26);
+    ɵngcc0.ɵɵelementStart(1, "div", 27);
     ɵngcc0.ɵɵelementStart(2, "div", 10);
     ɵngcc0.ɵɵnamespaceSVG();
     ɵngcc0.ɵɵelementStart(3, "svg");
-    ɵngcc0.ɵɵelement(4, "circle", 24);
-    ɵngcc0.ɵɵelement(5, "circle", 24);
+    ɵngcc0.ɵɵelement(4, "circle", 28);
+    ɵngcc0.ɵɵelement(5, "circle", 28);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵnamespaceHTML();
     ɵngcc0.ɵɵelementStart(6, "span", 13);
@@ -1436,21 +1531,23 @@ function ProgressCircleComponent_li_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
-    ɵngcc0.ɵɵelementStart(10, "div", 25);
+    ɵngcc0.ɵɵelementStart(10, "div", 29);
     ɵngcc0.ɵɵtext(11);
     ɵngcc0.ɵɵelementEnd();
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r1 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵadvance(4);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(4, _c72, ctx_r1.colour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(4, _c75, ctx_r1.colour));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(6, _c71, "calc(250 - (92 * " + ctx_r1.percent + ") / 100)", ctx_r1.colour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(6, _c74, "calc(250 - (92 * " + ctx_r1.percent + ") / 100)", ctx_r1.colour));
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate1("", ctx_r1.percent, " ");
     ɵngcc0.ɵɵadvance(4);
     ɵngcc0.ɵɵtextInterpolate(ctx_r1.name);
 } }
+const _c76 = [[["", "tooltip-content", ""]]];
+const _c77 = ["[tooltip-content]"];
 function ActionsSummaryComponent_section_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "section", 2);
     ɵngcc0.ɵɵelementStart(1, "strong", 3);
@@ -1471,8 +1568,8 @@ function ActionsSummaryComponent_section_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", item_r1.value.length > 7 ? ɵngcc0.ɵɵpipeBind3(5, 6, item_r1.value, 0, 7) + "..." : item_r1.value, " ");
 } }
-const _c73 = function (a0, a1) { return { "flex-column": a0, "flex-nowrap": a1 }; };
-const _c74 = function (a0) { return { "remove-line": a0 }; };
+const _c78 = function (a0, a1) { return { "flex-column": a0, "flex-nowrap": a1 }; };
+const _c79 = function (a0) { return { "remove-line": a0 }; };
 function StatusIndicatorComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 2);
     ɵngcc0.ɵɵelementStart(1, "div", 3);
@@ -1482,15 +1579,120 @@ function StatusIndicatorComponent_div_1_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const item_r1 = ctx.$implicit;
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c74, ctx_r0.removeLine));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c79, ctx_r0.removeLine));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵclassMapInterpolate2("", item_r1.iconClass, " ", item_r1.iconStatus, "");
     ɵngcc0.ɵɵpropertyInterpolate("title", item_r1.iconTitle);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", item_r1.iconName, " ");
 } }
-const _c75 = function (a0, a1, a2, a3, a4, a5, a6, a7) { return { "bg-aa-light-blue-100": a0, "bg-aa-red-100": a1, "bg-aa-orange-100": a2, "bg-aa-green-100": a3, "bg-aa-light-blue-15": a4, "bg-aa-red-10": a5, "bg-aa-orange-10": a6, "bg-aa-green-15": a7 }; };
-const _c76 = function (a0) { return { "aa-white-100": a0 }; };
+const _c80 = function (a0, a1, a2, a3, a4, a5, a6, a7) { return { "bg-aa-light-blue-100": a0, "bg-aa-red-100": a1, "bg-aa-orange-100": a2, "bg-aa-green-100": a3, "bg-aa-light-blue-15": a4, "bg-aa-red-10": a5, "bg-aa-orange-10": a6, "bg-aa-green-15": a7 }; };
+const _c81 = function (a0) { return { "aa-white-100": a0 }; };
+function TagComponent_section_0_div_1_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div", 9);
+    ɵngcc0.ɵɵtext(1, "loyalty");
+    ɵngcc0.ɵɵelementEnd();
+} }
+function TagComponent_section_0_div_2_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div", 10);
+    ɵngcc0.ɵɵtext(1, "loyalty");
+    ɵngcc0.ɵɵelementEnd();
+} }
+function TagComponent_section_0_span_3_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "span", 11);
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r4 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r4.tagText);
+} }
+function TagComponent_section_0_span_4_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "span", 12);
+    ɵngcc0.ɵɵtext(1);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r5 = ɵngcc0.ɵɵnextContext(2);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r5.tagText);
+} }
+function TagComponent_section_0_a_5_Template(rf, ctx) { if (rf & 1) {
+    const _r9 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 13);
+    ɵngcc0.ɵɵlistener("click", function TagComponent_section_0_a_5_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r9); const ctx_r8 = ɵngcc0.ɵɵnextContext(2); return ctx_r8.onRemove($event); });
+    ɵngcc0.ɵɵelementEnd();
+} }
+function TagComponent_section_0_a_6_Template(rf, ctx) { if (rf & 1) {
+    const _r11 = ɵngcc0.ɵɵgetCurrentView();
+    ɵngcc0.ɵɵelementStart(0, "a", 14);
+    ɵngcc0.ɵɵlistener("click", function TagComponent_section_0_a_6_Template_a_click_0_listener($event) { ɵngcc0.ɵɵrestoreView(_r11); const ctx_r10 = ɵngcc0.ɵɵnextContext(2); return ctx_r10.onRemove($event); });
+    ɵngcc0.ɵɵelementEnd();
+} }
+const _c82 = function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return { "bg-aa-red-100": a0, "bg-aa-orange-100": a1, "bg-aa-green-100": a2, "bg-aa-blue-100": a3, "bg-aa-light-blue-100": a4, "bg-aa-plum-100": a5, "bg-aa-ochre-100": a6, "bg-aa-white-100": a7, "bg-aa-grey-100": a8, "bg-aa-pink-100": a9 }; };
+function TagComponent_section_0_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "section", 2);
+    ɵngcc0.ɵɵtemplate(1, TagComponent_section_0_div_1_Template, 2, 0, "div", 3);
+    ɵngcc0.ɵɵtemplate(2, TagComponent_section_0_div_2_Template, 2, 0, "div", 4);
+    ɵngcc0.ɵɵtemplate(3, TagComponent_section_0_span_3_Template, 2, 1, "span", 5);
+    ɵngcc0.ɵɵtemplate(4, TagComponent_section_0_span_4_Template, 2, 1, "span", 6);
+    ɵngcc0.ɵɵtemplate(5, TagComponent_section_0_a_5_Template, 1, 0, "a", 7);
+    ɵngcc0.ɵɵtemplate(6, TagComponent_section_0_a_6_Template, 1, 0, "a", 8);
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunctionV(7, _c82, [ctx_r0.isRed, ctx_r0.isOrange, ctx_r0.isGreen, ctx_r0.isBlue, ctx_r0.isLightBlue, ctx_r0.isPlum, ctx_r0.isOchre, ctx_r0.isWhite, ctx_r0.isBlack, ctx_r0.isPink]));
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", !ctx_r0.isWhite);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.isWhite);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", !ctx_r0.isWhite);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.isWhite);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", !ctx_r0.isWhite);
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngIf", ctx_r0.isWhite);
+} }
+function TagComponent_section_1_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "section", 15);
+    ɵngcc0.ɵɵelementStart(1, "span");
+    ɵngcc0.ɵɵtext(2);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r1 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunctionV(2, _c82, [ctx_r1.isRed, ctx_r1.isOrange, ctx_r1.isGreen, ctx_r1.isBlue, ctx_r1.isLightBlue, ctx_r1.isPlum, ctx_r1.isOchre, ctx_r1.isWhite, ctx_r1.isBlack, ctx_r1.isPink]));
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵtextInterpolate(ctx_r1.tagText);
+} }
+const _c83 = function (a0) { return { "padding-right-0-75": a0 }; };
+const _c84 = function (a0, a1) { return { "height": a0, "overflow": a1 }; };
+function FeatureBoxComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div");
+    ɵngcc0.ɵɵelementStart(1, "div", 2);
+    ɵngcc0.ɵɵprojection(2);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementStart(3, "div", 3);
+    ɵngcc0.ɵɵprojection(4, 1);
+    ɵngcc0.ɵɵelementEnd();
+    ɵngcc0.ɵɵelementEnd();
+} if (rf & 2) {
+    const ctx_r0 = ɵngcc0.ɵɵnextContext();
+    ɵngcc0.ɵɵadvance(1);
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c83, ctx_r0.enableScrolling));
+    ɵngcc0.ɵɵadvance(2);
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(4, _c84, ctx_r0.fbHeight, ctx_r0.enableScrolling ? "auto" : ""));
+} }
+function FeatureBoxComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    ɵngcc0.ɵɵelementStart(0, "div");
+    ɵngcc0.ɵɵprojection(1, 2);
+    ɵngcc0.ɵɵelementEnd();
+} }
+const _c85 = [[["", "custom-header", ""]], [["", "custom-content", ""]], "*"];
+const _c86 = function (a0, a1, a2) { return { "width": a0, "margin-top": a1, "margin-bottom": a2 }; };
+const _c87 = function (a0, a1) { return { "solid": a0, "padding-right-0": a1 }; };
+const _c88 = ["[custom-header]", "[custom-content]", "*"];
 function AccordionComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 12);
     ɵngcc0.ɵɵtext(1, "drag_indicator");
@@ -1532,20 +1734,20 @@ function AccordionComponent_div_16_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtext(1, "remove");
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c77 = function (a0) { return { "padding": a0 }; };
+const _c89 = function (a0) { return { "padding": a0 }; };
 function AccordionComponent_div_17_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 14);
     ɵngcc0.ɵɵprojection(1, 1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r7 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("id", ctx_r7.sectionId)("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c77, ctx_r7.clearPadding ? "0" : "1rem 1.25rem"));
+    ɵngcc0.ɵɵproperty("id", ctx_r7.sectionId)("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c89, ctx_r7.clearPadding ? "0" : "1rem 1.25rem"));
 } }
-const _c78 = [[["", "header-custom", ""]], "*"];
-const _c79 = function (a0, a1) { return { "min-width": a0, "min-height": a1 }; };
-const _c80 = function (a0, a1) { return { "box-shadow-strong": a0, "vertical flex-group flex-start": a1 }; };
-const _c81 = function (a0, a1, a2, a3, a4) { return { "expanded": a0, "clean": a1, "disabled": a2, "flex-column": a3, "flex-align-center": a4 }; };
-const _c82 = ["[header-custom]", "*"];
+const _c90 = [[["", "header-custom", ""]], "*"];
+const _c91 = function (a0, a1) { return { "min-width": a0, "min-height": a1 }; };
+const _c92 = function (a0, a1) { return { "box-shadow-strong": a0, "vertical flex-group flex-start": a1 }; };
+const _c93 = function (a0, a1, a2, a3, a4) { return { "expanded": a0, "clean": a1, "disabled": a2, "flex-column": a3, "flex-align-center": a4 }; };
+const _c94 = ["[header-custom]", "*"];
 function AccordionFancyComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div");
     ɵngcc0.ɵɵtext(1);
@@ -1577,7 +1779,7 @@ function AccordionFancyComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵprojection(1);
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c83 = function (a0, a1, a2, a3) { return { "z-index": a0, "top": a1, "left": a2, "right": a3 }; };
+const _c95 = function (a0, a1, a2, a3) { return { "z-index": a0, "top": a1, "left": a2, "right": a3 }; };
 function CardComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "article", 4);
     ɵngcc0.ɵɵelementStart(1, "div", 5);
@@ -1597,7 +1799,7 @@ function CardComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction4(7, _c83, ctx_r0.zIndex, ctx_r0.topPos + "rem", ctx_r0.leftPos + "rem", ctx_r0.rightPos + "rem"));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction4(7, _c95, ctx_r0.zIndex, ctx_r0.topPos + "rem", ctx_r0.leftPos + "rem", ctx_r0.rightPos + "rem"));
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵpropertyInterpolate("alt", ctx_r0.cardName);
     ɵngcc0.ɵɵproperty("src", ctx_r0.imgPath, ɵngcc0.ɵɵsanitizeUrl);
@@ -1610,8 +1812,8 @@ function CardComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r0.cardRole);
 } }
-const _c84 = function (a0, a1) { return { "border": a0, "background-color": a1 }; };
-const _c85 = function (a0) { return { "color": a0 }; };
+const _c96 = function (a0, a1) { return { "border": a0, "background-color": a1 }; };
+const _c97 = function (a0) { return { "color": a0 }; };
 function CardComponent_article_1_Template(rf, ctx) { if (rf & 1) {
     const _r5 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "article", 9);
@@ -1638,13 +1840,13 @@ function CardComponent_article_1_Template(rf, ctx) { if (rf & 1) {
     const ctx_r1 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(17, _c0, ctx_r1.zIndex));
     ɵngcc0.ɵɵadvance(4);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(19, _c84, ".35rem solid " + ctx_r1.themeColour, ctx_r1.themeColour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(19, _c96, ".35rem solid " + ctx_r1.themeColour, ctx_r1.themeColour));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵpropertyInterpolate("alt", ctx_r1.cardName);
     ɵngcc0.ɵɵproperty("src", ctx_r1.imgPath, ɵngcc0.ɵɵsanitizeUrl);
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵpropertyInterpolate("title", ctx_r1.cardName);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(22, _c85, ctx_r1.themeColour));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(22, _c97, ctx_r1.themeColour));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r1.cardName.length > 14 ? ɵngcc0.ɵɵpipeBind3(8, 9, ctx_r1.cardName, 0, 14) + "..." : ctx_r1.cardName);
     ɵngcc0.ɵɵadvance(2);
@@ -1689,7 +1891,7 @@ function CardComponent_button_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(3);
     ɵngcc0.ɵɵtextInterpolate(ctx_r2.title);
 } }
-const _c86 = function (a0, a1, a2, a3) { return { "z-index": a0, "top": a1, "left": a2, "width": a3 }; };
+const _c98 = function (a0, a1, a2, a3) { return { "z-index": a0, "top": a1, "left": a2, "width": a3 }; };
 function CardComponent_article_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "article", 19);
     ɵngcc0.ɵɵelementStart(1, "div", 5);
@@ -1701,15 +1903,15 @@ function CardComponent_article_3_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r3 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction4(3, _c86, ctx_r3.zIndex, ctx_r3.topPos, ctx_r3.leftPos, ctx_r3.cardWidth));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction4(3, _c98, ctx_r3.zIndex, ctx_r3.topPos, ctx_r3.leftPos, ctx_r3.cardWidth));
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵpropertyInterpolate("alt", ctx_r3.cardName);
     ɵngcc0.ɵɵproperty("src", ctx_r3.imgPath, ɵngcc0.ɵɵsanitizeUrl);
 } }
-const _c87 = [[["", "card-menu", ""]], [["", "card-menu-opt", ""]], [["", "card-hover-content", ""]], [["", "content", ""]], [["", "profile-image", ""]], [["", "card-detailed-content", ""]]];
-const _c88 = ["[card-menu]", "[card-menu-opt]", "[card-hover-content]", "[content]", "[profile-image]", "[card-detailed-content]"];
-const _c89 = ["carousel"];
-const _c90 = function (a0, a1) { return { "min-width": a0, "padding": a1 }; };
+const _c99 = [[["", "card-menu", ""]], [["", "card-menu-opt", ""]], [["", "card-hover-content", ""]], [["", "content", ""]], [["", "profile-image", ""]], [["", "card-detailed-content", ""]]];
+const _c100 = ["[card-menu]", "[card-menu-opt]", "[card-hover-content]", "[content]", "[profile-image]", "[card-detailed-content]"];
+const _c101 = ["carousel"];
+const _c102 = function (a0, a1) { return { "min-width": a0, "padding": a1 }; };
 function CarouselComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 7);
     ɵngcc0.ɵɵelementContainer(1, 8);
@@ -1718,11 +1920,11 @@ function CarouselComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     const item_r2 = ctx.$implicit;
     const ctx_r1 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵclassMapInterpolate1("carousel-item ", ctx_r1.carouselItemBgColour, "");
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(5, _c90, ctx_r1.carouselItemWidth, ctx_r1.carouselItemPadding));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(5, _c102, ctx_r1.carouselItemWidth, ctx_r1.carouselItemPadding));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngTemplateOutlet", item_r2.tpl);
 } }
-const _c91 = function (a0, a1) { return { "width": a0, "height": a1 }; };
+const _c103 = function (a0, a1) { return { "width": a0, "height": a1 }; };
 function DashboardFavouritesComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelement(0, "div");
 } if (rf & 2) {
@@ -2164,10 +2366,12 @@ function IconPickerComponent_article_41_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngForOf", ɵngcc0.ɵɵpipeBind2(2, 1, ctx_r1.icons, ctx_r1.searchIcon));
 } }
-const _c92 = [[["", "custom-header", ""]], [["", "custom-content", ""]], [["", "custom-footer", ""]]];
-const _c93 = function () { return { "opacity": "1" }; };
-const _c94 = ["[custom-header]", "[custom-content]", "[custom-footer]"];
-const _c95 = function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return { "approved-forward": a0, "pending-forward": a1, "rejected-forward": a2, "withdrawn-forward": a3, "returned-forward": a4, "abandoned-forward": a5, "draft-forward": a6, "withdrawn-pending-forward": a7, "reset-all": a8, "full-width": a9 }; };
+const _c104 = [[["", "custom-header", ""]], [["", "custom-content", ""]], [["", "custom-footer", ""]]];
+const _c105 = function () { return { "opacity": "1" }; };
+const _c106 = function (a0) { return { "border-radius-0-5": a0 }; };
+const _c107 = function (a0) { return { "border-bottom": a0 }; };
+const _c108 = ["[custom-header]", "[custom-content]", "[custom-footer]"];
+const _c109 = function (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) { return { "approved-forward": a0, "pending-forward": a1, "rejected-forward": a2, "withdrawn-forward": a3, "returned-forward": a4, "abandoned-forward": a5, "draft-forward": a6, "withdrawn-pending-forward": a7, "reset-all": a8, "full-width": a9 }; };
 function ModalComponent_section_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "section", 5);
     ɵngcc0.ɵɵelementStart(1, "h2", 6);
@@ -2179,12 +2383,12 @@ function ModalComponent_section_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate(ctx_r0.heading);
 } }
-const _c96 = [[["", "content-custom", ""]], "*"];
-const _c97 = function (a0, a1, a2, a3) { return { "aa-green": a0, "aa-orange": a1, "aa-red": a2, "aa-blue": a3 }; };
-const _c98 = function (a0, a1, a2, a3, a4, a5) { return { "top": a0, "right": a1, "left": a2, "min-width": a3, "max-width": a4, "z-index": a5 }; };
-const _c99 = ["[content-custom]", "*"];
-const _c100 = function (a0, a1, a2, a3) { return { "green": a0, "orange": a1, "red": a2, "blue": a3 }; };
-const _c101 = function (a0, a1, a2, a3, a4, a5) { return { "min-width": a0, "max-width": a1, "top": a2, "right": a3, "bottom": a4, "left": a5 }; };
+const _c110 = [[["", "content-custom", ""]], "*"];
+const _c111 = function (a0, a1, a2, a3) { return { "aa-green": a0, "aa-orange": a1, "aa-red": a2, "aa-blue": a3 }; };
+const _c112 = function (a0, a1, a2, a3, a4, a5) { return { "top": a0, "right": a1, "left": a2, "min-width": a3, "max-width": a4, "z-index": a5 }; };
+const _c113 = ["[content-custom]", "*"];
+const _c114 = function (a0, a1, a2, a3) { return { "green": a0, "orange": a1, "red": a2, "blue": a3 }; };
+const _c115 = function (a0, a1, a2, a3, a4, a5) { return { "min-width": a0, "max-width": a1, "top": a2, "right": a3, "bottom": a4, "left": a5 }; };
 function OverlayComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "article", 1);
     ɵngcc0.ɵɵelementStart(1, "div", 2);
@@ -2196,19 +2400,19 @@ function OverlayComponent_article_0_Template(rf, ctx) { if (rf & 1) {
     const ctx_r0 = ɵngcc0.ɵɵnextContext();
     ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(2, _c0, ctx_r0.zIndex));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction6(4, _c101, ctx_r0.minWidth, ctx_r0.maxWidth, ctx_r0.topPos, ctx_r0.rightPos, ctx_r0.bottomPos, ctx_r0.leftPos));
+    ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction6(4, _c115, ctx_r0.minWidth, ctx_r0.maxWidth, ctx_r0.topPos, ctx_r0.rightPos, ctx_r0.bottomPos, ctx_r0.leftPos));
 } }
-const _c102 = [[["", "overlay-header", ""]], [["", "overlay-content", ""]]];
-const _c103 = ["[overlay-header]", "[overlay-content]"];
-const _c104 = [[["", "call-to-action", ""]], [["", "custom-content", ""]]];
-const _c105 = function (a0, a1) { return { "show-popover": a0, "btn-small": a1 }; };
-const _c106 = function (a0) { return { "label-hidden": a0 }; };
-const _c107 = function (a0) { return { "top": a0, "bottom": "unset", "transform": "rotate(180deg)" }; };
-const _c108 = function (a0, a1, a2, a3, a4) { return { "top": a0, "right": a1, "bottom": a2, "left": a3, "width": a4 }; };
-const _c109 = ["[call-to-action]", "[custom-content]"];
-const _c110 = function (a0) { return { "display-block": a0 }; };
-const _c111 = function (a0) { return { "vertical-display": a0 }; };
-const _c112 = function (a0, a1) { return { "highlight": a0, "truncate-text": a1 }; };
+const _c116 = [[["", "overlay-header", ""]], [["", "overlay-content", ""]]];
+const _c117 = ["[overlay-header]", "[overlay-content]"];
+const _c118 = [[["", "call-to-action", ""]], [["", "custom-content", ""]]];
+const _c119 = function (a0, a1) { return { "show-popover": a0, "btn-small": a1 }; };
+const _c120 = function (a0) { return { "label-hidden": a0 }; };
+const _c121 = function (a0) { return { "top": a0, "bottom": "unset", "transform": "rotate(180deg)" }; };
+const _c122 = function (a0, a1, a2, a3, a4) { return { "top": a0, "right": a1, "bottom": a2, "left": a3, "width": a4 }; };
+const _c123 = ["[call-to-action]", "[custom-content]"];
+const _c124 = function (a0) { return { "display-block": a0 }; };
+const _c125 = function (a0) { return { "vertical-display": a0 }; };
+const _c126 = function (a0, a1) { return { "highlight": a0, "truncate-text": a1 }; };
 function ToastrItemComponent_div_5_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 7);
     ɵngcc0.ɵɵtext(1, "local_police");
@@ -2229,7 +2433,7 @@ function ToastrItemComponent_div_8_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵtext(1, "security");
     ɵngcc0.ɵɵelementEnd();
 } }
-const _c113 = function (a0, a1, a2, a3, a4) { return { "show-toastr": a0, "bg-aa-red-100": a1, "bg-aa-orange-100": a2, "bg-aa-green-100": a3, "bg-aa-light-blue-100": a4 }; };
+const _c127 = function (a0, a1, a2, a3, a4) { return { "show-toastr": a0, "bg-aa-red-100": a1, "bg-aa-orange-100": a2, "bg-aa-green-100": a3, "bg-aa-light-blue-100": a4 }; };
 function TooltipComponent_label_1_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "label", 8);
     ɵngcc0.ɵɵtext(1);
@@ -2249,14 +2453,14 @@ function TooltipComponent_legend_2_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate(ctx_r1.labelName);
 } }
-const _c114 = function (a0, a1, a2, a3) { return { "is-success": a0, "is-info": a1, "is-warning": a2, "is-error": a3 }; };
+const _c128 = function (a0, a1, a2, a3) { return { "is-success": a0, "is-info": a1, "is-warning": a2, "is-error": a3 }; };
 function TooltipComponent_div_4_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "div", 10);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r2 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(2, _c114, ctx_r2.isSuccess, ctx_r2.isInfo, ctx_r2.isWarning, ctx_r2.isError));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(2, _c128, ctx_r2.isSuccess, ctx_r2.isInfo, ctx_r2.isWarning, ctx_r2.isError));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r2.iconName, " ");
 } }
@@ -2309,25 +2513,25 @@ function TooltipComponent_button_6_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r4.tooltipClicked);
 } }
-const _c115 = function (a0) { return { "nowrap": a0 }; };
+const _c129 = function (a0) { return { "nowrap": a0 }; };
 function TooltipComponent_a_7_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵelementStart(0, "a", 13);
     ɵngcc0.ɵɵtext(1);
     ɵngcc0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r5 = ɵngcc0.ɵɵnextContext();
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c115, ctx_r5.preventAnchorWrapping));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c129, ctx_r5.preventAnchorWrapping));
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵtextInterpolate1(" ", ctx_r5.tooltipAnchor, " ");
 } }
-const _c116 = function (a0, a1, a2, a3, a4, a5) { return { "space-between": a0, "flex-start": a1, "show-as-button": a2, "show-tooltip-on-hover": a3, "show-tooltip-on-click": a4, "tooltip-clicked": a5 }; };
-const _c117 = function (a0, a1, a2, a3, a4, a5) { return { "is-success": a0, "is-info": a1, "is-warning": a2, "is-error": a3, "custom-icon": a4, "as-link": a5 }; };
-const _c118 = function (a0, a1) { return { "min-width": a0, "max-width": a1 }; };
-const _c119 = function (a0) { return { "face-very-satisfied": a0 }; };
-const _c120 = function (a0) { return { "face-satisfied": a0 }; };
-const _c121 = function (a0) { return { "face-neutral": a0 }; };
-const _c122 = function (a0) { return { "face-dissatisfied": a0 }; };
-const _c123 = function (a0) { return { "face-very-dissatisfied": a0 }; };
+const _c130 = function (a0, a1, a2, a3, a4, a5) { return { "space-between": a0, "flex-start": a1, "show-as-button": a2, "show-tooltip-on-hover": a3, "show-tooltip-on-click": a4, "tooltip-clicked": a5 }; };
+const _c131 = function (a0, a1, a2, a3, a4, a5) { return { "is-success": a0, "is-info": a1, "is-warning": a2, "is-error": a3, "custom-icon": a4, "as-link": a5 }; };
+const _c132 = function (a0, a1) { return { "min-width": a0, "max-width": a1 }; };
+const _c133 = function (a0) { return { "face-very-satisfied": a0 }; };
+const _c134 = function (a0) { return { "face-satisfied": a0 }; };
+const _c135 = function (a0) { return { "face-neutral": a0 }; };
+const _c136 = function (a0) { return { "face-dissatisfied": a0 }; };
+const _c137 = function (a0) { return { "face-very-dissatisfied": a0 }; };
 function UserFeedbackComponent_section_0_article_2_Template(rf, ctx) { if (rf & 1) {
     const _r5 = ɵngcc0.ɵɵgetCurrentView();
     ɵngcc0.ɵɵelementStart(0, "article", 5);
@@ -2370,15 +2574,15 @@ function UserFeedbackComponent_section_0_article_2_Template(rf, ctx) { if (rf & 
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate(ctx_r1.appName);
     ɵngcc0.ɵɵadvance(4);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c119, ctx_r1.rating === 5));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c133, ctx_r1.rating === 5));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(9, _c120, ctx_r1.rating === 4));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(9, _c134, ctx_r1.rating === 4));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(11, _c121, ctx_r1.rating === 3));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(11, _c135, ctx_r1.rating === 3));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(13, _c122, ctx_r1.rating === 2));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(13, _c136, ctx_r1.rating === 2));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(15, _c123, ctx_r1.rating === 1));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(15, _c137, ctx_r1.rating === 1));
 } }
 function UserFeedbackComponent_section_0_article_3_Template(rf, ctx) { if (rf & 1) {
     const _r11 = ɵngcc0.ɵɵgetCurrentView();
@@ -2485,15 +2689,15 @@ function UserFeedbackComponent_section_0_article_4_Template(rf, ctx) { if (rf & 
     ɵngcc0.ɵɵadvance(2);
     ɵngcc0.ɵɵtextInterpolate(ctx_r3.appName);
     ɵngcc0.ɵɵadvance(5);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(13, _c119, ctx_r3.rating === 5));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(13, _c133, ctx_r3.rating === 5));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(15, _c120, ctx_r3.rating === 4));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(15, _c134, ctx_r3.rating === 4));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(17, _c121, ctx_r3.rating === 3));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(17, _c135, ctx_r3.rating === 3));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(19, _c122, ctx_r3.rating === 2));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(19, _c136, ctx_r3.rating === 2));
     ɵngcc0.ɵɵadvance(1);
-    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(21, _c123, ctx_r3.rating === 1));
+    ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(21, _c137, ctx_r3.rating === 1));
     ɵngcc0.ɵɵadvance(5);
     ɵngcc0.ɵɵtextInterpolate(ctx_r3.closingMessage);
     ɵngcc0.ɵɵadvance(2);
@@ -2525,8 +2729,8 @@ function UserFeedbackComponent_section_0_Template(rf, ctx) { if (rf & 1) {
     ɵngcc0.ɵɵadvance(1);
     ɵngcc0.ɵɵproperty("ngIf", ctx_r0.userClosedPanel);
 } }
-const _c124 = function (a1, a2, a3, a4) { return { "position": "fixed", "left": a1, "top": a2, "bottom": a3, "z-index": a4 }; };
-const _c125 = function (a0) { return { "flex-start": a0 }; };
+const _c138 = function (a1, a2, a3, a4) { return { "position": "fixed", "left": a1, "top": a2, "bottom": a3, "z-index": a4 }; };
+const _c139 = function (a0) { return { "flex-start": a0 }; };
 class ClickOutsideDirective {
     constructor(elementRef) {
         this.elementRef = elementRef;
@@ -2745,6 +2949,7 @@ class ButtonComponent {
     onButtonClick(e) {
         e.stopPropagation();
         this.buttonClick.emit(e);
+        this.showBtnMenu = false;
     }
     onClick(targetElement) {
         const clickedInside = this.elementRef.nativeElement.contains(targetElement);
@@ -2764,20 +2969,23 @@ class ButtonComponent {
 ButtonComponent.ɵfac = function ButtonComponent_Factory(t) { return new (t || ButtonComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ElementRef)); };
 ButtonComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ButtonComponent, selectors: [["aa-button"]], hostBindings: function ButtonComponent_HostBindings(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵlistener("click", function ButtonComponent_click_HostBindingHandler($event) { return ctx.onClick($event.target); }, false, ɵngcc0.ɵɵresolveDocument);
-    } }, inputs: { buttonType: "buttonType", showBtnMenu: "showBtnMenu", buttonLabel: "buttonLabel", buttonText: "buttonText", buttonId: "buttonId", buttonClass: "buttonClass", disabled: "disabled", fieldClass: "fieldClass", buttonIcon: "buttonIcon", customIcons: "customIcons", buttonEnriched: "buttonEnriched", buttonSplit: "buttonSplit", iconName: "iconName", title: "title", iconColour: "iconColour", buttonLarge: "buttonLarge", buttonSummary: "buttonSummary", showDescription: "showDescription", status: "status", level: "level", desc: "desc", showCount: "showCount", count: "count", countColor: "countColor", maxHeight: "maxHeight", showLabel: "showLabel", customIconsRound: "customIconsRound", navLeftside: "navLeftside" }, outputs: { buttonClick: "buttonClick" }, ngContentSelectors: _c7, decls: 4, vars: 4, consts: [[3, "class", "button-large", 4, "ngIf"], [3, "class", 4, "ngIf"], [3, "ngClass", "for"], [3, "type", "name", "id", "disabled", "ngClass", "click"], [3, "ngClass", 4, "ngIf"], [4, "ngIf"], [3, "ngClass"], ["class", "material-icons", 4, "ngIf"], [1, "material-icons"], [1, "btn-enriched", "box-shadow", "gradient-v-grey", 3, "type", "name", "id", "disabled", "click"], [1, "flex-group", "flex-end", "btn-enriched-toolbar"], [1, "btn-enriched-content", "flex-group", "flex-start", "flex-align-center"], [1, "margin-0"], [3, "for"], [1, "button-split", 3, "ngClass"], [3, "type", "name", "id", "click"], ["class", "box-shadow-strong", 3, "ngStyle", "click", 4, "ngIf"], [1, "box-shadow-strong", 3, "ngStyle", "click"], [1, "flex-group", "flex-start", "flex-align-center"], [1, "priority", "bg-aa-white-100", "border-radius-50", "width-3", "height-3", "flex-center", "bd-solid"], ["class", "margin-top-1", 4, "ngIf"], [1, "margin-top-1"]], template: function ButtonComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { buttonType: "buttonType", showBtnMenu: "showBtnMenu", buttonLabel: "buttonLabel", buttonText: "buttonText", buttonId: "buttonId", buttonClass: "buttonClass", disabled: "disabled", fieldClass: "fieldClass", buttonIcon: "buttonIcon", customIcons: "customIcons", buttonEnriched: "buttonEnriched", buttonSplit: "buttonSplit", iconName: "iconName", title: "title", iconColour: "iconColour", buttonLarge: "buttonLarge", buttonSummary: "buttonSummary", showDescription: "showDescription", status: "status", level: "level", desc: "desc", showCount: "showCount", count: "count", countColor: "countColor", maxHeight: "maxHeight", showLabel: "showLabel", customIconsRound: "customIconsRound", navLeftside: "navLeftside", buttonDayPicker: "buttonDayPicker" }, outputs: { buttonClick: "buttonClick" }, ngContentSelectors: _c7, decls: 5, vars: 5, consts: [[3, "class", "button-large", 4, "ngIf"], [3, "class", 4, "ngIf"], ["class", "button-day-picker box-shadow-strong", 3, "type", "name", "id", "disabled", "click", 4, "ngIf"], [3, "ngClass", "for"], [3, "type", "name", "id", "disabled", "ngClass", "click"], [3, "ngClass", 4, "ngIf"], [4, "ngIf"], [3, "ngClass"], ["class", "material-icons", 4, "ngIf"], [1, "material-icons"], [1, "btn-enriched", "box-shadow", "gradient-v-grey", 3, "type", "name", "id", "disabled", "click"], [1, "flex-group", "flex-end", "btn-enriched-toolbar"], [1, "btn-enriched-content", "flex-group", "flex-start", "flex-align-center"], [1, "margin-0"], [3, "for"], [1, "button-split", 3, "ngClass"], [1, "flex-group", "flex-start", "flex-align-center", "flex-nowrap"], ["class", "chevron-up", 3, "class", "type", "name", "id", "click", 4, "ngIf"], [3, "type", "name", "id", "click"], ["class", "box-shadow-strong", 3, "ngStyle", "click", 4, "ngIf"], [1, "chevron-up", 3, "type", "name", "id", "click"], [1, "box-shadow-strong", 3, "ngStyle", "click"], [1, "flex-group", "flex-start", "flex-align-center"], [1, "priority", "bg-aa-white-100", "border-radius-50", "width-3", "height-3", "flex-center", "bd-solid"], ["class", "margin-top-1", 4, "ngIf"], [1, "margin-top-1"], [1, "button-day-picker", "box-shadow-strong", 3, "type", "name", "id", "disabled", "click"]], template: function ButtonComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef(_c6);
         ɵngcc0.ɵɵtemplate(0, ButtonComponent_div_0_Template, 6, 21, "div", 0);
         ɵngcc0.ɵɵtemplate(1, ButtonComponent_div_1_Template, 9, 12, "div", 1);
-        ɵngcc0.ɵɵtemplate(2, ButtonComponent_div_2_Template, 7, 15, "div", 1);
+        ɵngcc0.ɵɵtemplate(2, ButtonComponent_div_2_Template, 10, 17, "div", 1);
         ɵngcc0.ɵɵtemplate(3, ButtonComponent_div_3_Template, 8, 9, "div", 1);
+        ɵngcc0.ɵɵtemplate(4, ButtonComponent_button_4_Template, 4, 5, "button", 2);
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngIf", !ctx.buttonEnriched && !ctx.buttonSplit && !ctx.buttonSummary);
+        ɵngcc0.ɵɵproperty("ngIf", !ctx.buttonEnriched && !ctx.buttonSplit && !ctx.buttonSummary && !ctx.buttonDayPicker);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.buttonEnriched);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.buttonSplit);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.buttonSummary);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.buttonDayPicker);
     } }, directives: [ɵngcc1.NgIf, ɵngcc1.NgClass, ɵngcc1.NgStyle], encapsulation: 2, changeDetection: 0 });
 ButtonComponent.ctorParameters = () => [
     { type: ElementRef }
@@ -2811,6 +3019,7 @@ ButtonComponent.propDecorators = {
     showLabel: [{ type: Input }],
     customIconsRound: [{ type: Input }],
     navLeftside: [{ type: Input }],
+    buttonDayPicker: [{ type: Input }],
     buttonClick: [{ type: Output }],
     onClick: [{ type: HostListener, args: ['document:click', ['$event.target'],] }]
 };
@@ -2818,18 +3027,18 @@ ButtonComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-button',
-                template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label \r\n    [ngClass]=\"{ 'show-label': showLabel }\"\r\n    [for]=\"buttonId\">\r\n    {{buttonLabel}}\r\n  </label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    [ngClass]=\"{'material-icons' : customIconsRound}\"\r\n  >\r\n    <div *ngIf=\"!customIconsRound\" [ngClass]=\"{'display-inline-block' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n    <span *ngIf=\"customIconsRound\">{{buttonIcon}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\" \r\n>\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\" [ngClass]=\"{'nav-left-side' : navLeftside}\">\r\n    <button\r\n      (click)=\"showBtnMenu=!showBtnMenu\" \r\n      [class]=\"buttonClass\"\r\n      [type]=\"buttonType\" \r\n      [name]=\"buttonId\" \r\n      [id]=\"buttonId\"\r\n     >\r\n      {{buttonText}}\r\n    </button>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow-strong\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n",
+                template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary &&!buttonDayPicker\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label \r\n    [ngClass]=\"{ 'show-label': showLabel }\"\r\n    [for]=\"buttonId\">\r\n    {{buttonLabel}}\r\n  </label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    [ngClass]=\"{'material-icons' : customIconsRound}\"\r\n  >\r\n    <div *ngIf=\"!customIconsRound\" [ngClass]=\"{'display-inline-block' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n    <span *ngIf=\"customIconsRound\">{{buttonIcon}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\" [ngClass]=\"{'nav-left-side' : navLeftside}\">\r\n    <div class=\"flex-group flex-start flex-align-center flex-nowrap\">\r\n      <button\r\n        *ngIf=\"navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n      <button\r\n        (click)=\"onButtonClick($event)\"\r\n        [class]=\"buttonClass\"\r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n        {{buttonText}}\r\n      </button>\r\n      <button\r\n        *ngIf=\"!navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n    </div>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow-strong\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n\r\n<button\r\n  *ngIf=\"buttonDayPicker\"\r\n  class=\"button-day-picker box-shadow-strong\"\r\n  (click)=\"onButtonClick($event)\"\r\n  [type]=\"buttonType\" \r\n  [name]=\"buttonId\" \r\n  [id]=\"buttonId\" \r\n  [disabled]=\"disabled\" \r\n>\r\n  <strong>{{buttonText}}</strong>\r\n  <div></div>\r\n</button>\r\n\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush
             }]
     }], function () { return [{ type: ɵngcc0.ElementRef }]; }, { buttonType: [{
             type: Input
         }], buttonClick: [{
             type: Output
+        }], showBtnMenu: [{
+            type: Input
         }], onClick: [{
             type: HostListener,
             args: ['document:click', ['$event.target']]
-        }], showBtnMenu: [{
-            type: Input
         }], buttonLabel: [{
             type: Input
         }], buttonText: [{
@@ -2881,6 +3090,8 @@ ButtonComponent.propDecorators = {
         }], customIconsRound: [{
             type: Input
         }], navLeftside: [{
+            type: Input
+        }], buttonDayPicker: [{
             type: Input
         }] }); })();
 
@@ -3014,27 +3225,29 @@ class CommentsComponent {
     }
 }
 CommentsComponent.ɵfac = function CommentsComponent_Factory(t) { return new (t || CommentsComponent)(); };
-CommentsComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CommentsComponent, selectors: [["aa-comments"]], inputs: { comments: "comments", person: "person", canDelete: "canDelete" }, outputs: { commentsMade: "commentsMade" }, features: [ɵngcc0.ɵɵProvidersFeature([CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR])], decls: 12, vars: 8, consts: [[1, "aa-comments"], [1, "comments-trigger", "cursor-pointer", "flex-group", "flex-start", "margin-bottom-0-5", 3, "click"], [1, "material-icons", "aa-orange-100", "margin-top-0-25", "margin-right-0-5"], [1, "margin-top-0-25"], [4, "ngIf"], [1, "comments-panel", "box-shadow-strong", "border-radius-0-25", "bg-aa-white-100", "padding-1"], ["class", "margin-top-0 italic aa-blue-100", 4, "ngIf"], ["class", "field boxed", 4, "ngIf"], [1, "margin-top-0", "italic", "aa-blue-100"], [1, "field", "boxed"], ["placeholder", "Your Comment", 3, "ngModel", "ngModelChange", "change"], [1, "flex-group", "flex-start"], [1, "secondary", "margin-top-1", 3, "click"], [1, "cancel", "margin-top-1", 3, "click"], ["role", "alert", "class", "error margin-top-1", 4, "ngIf"], ["role", "alert", 1, "error", "margin-top-1"], ["class", "scroll-panel", 4, "ngIf"], [1, "scroll-panel"], [1, "scroll-panel-content", 3, "ngStyle"], [1, "table-comments"], ["width", "62%"], ["width", "20%"], ["width", "16%"], ["width", "2", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["width", "2"], [3, "title"], [1, "material-icons", "aa-red-100", "transparent", 3, "click"]], template: function CommentsComponent_Template(rf, ctx) { if (rf & 1) {
+CommentsComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CommentsComponent, selectors: [["aa-comments"]], inputs: { comments: "comments", person: "person", canDelete: "canDelete", iconColour: "iconColour" }, outputs: { commentsMade: "commentsMade" }, features: [ɵngcc0.ɵɵProvidersFeature([CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR])], decls: 12, vars: 11, consts: [[1, "aa-comments"], [1, "comments-trigger", "cursor-pointer", "flex-group", "flex-start", "margin-bottom-0-5", 3, "click"], [1, "margin-top-0-25", "flex-align-center"], [4, "ngIf"], [1, "comments-panel", "box-shadow-strong", "border-radius-0-25", "bg-aa-white-100", "padding-1"], ["class", "margin-top-0 italic aa-blue-100", 4, "ngIf"], ["class", "field boxed", 4, "ngIf"], [1, "margin-top-0", "italic", "aa-blue-100"], [1, "field", "boxed"], ["placeholder", "Your Comment", 3, "ngModel", "ngModelChange", "change"], [1, "flex-group", "flex-start"], [1, "secondary", "margin-top-1", 3, "click"], [1, "cancel", "margin-top-1", 3, "click"], ["role", "alert", "class", "error margin-top-1", 4, "ngIf"], ["role", "alert", 1, "error", "margin-top-1"], ["class", "scroll-panel", 4, "ngIf"], [1, "scroll-panel"], [1, "scroll-panel-content", 3, "ngStyle"], [1, "table-comments"], ["width", "62%"], ["width", "20%"], ["width", "16%"], ["width", "2", 4, "ngIf"], [4, "ngFor", "ngForOf"], ["width", "2"], [3, "title"], [1, "material-icons", "aa-red-100", "transparent", 3, "click"]], template: function CommentsComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵlistener("click", function CommentsComponent_Template_div_click_1_listener() { ctx.makeComments = !ctx.makeComments; ctx.toggleComments = false; return ctx.clicked = false; });
-        ɵngcc0.ɵɵelementStart(2, "div", 2);
+        ɵngcc0.ɵɵelementStart(2, "div");
         ɵngcc0.ɵɵtext(3, "comment");
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(4, "h3", 3);
-        ɵngcc0.ɵɵtemplate(5, CommentsComponent_span_5_Template, 2, 0, "span", 4);
-        ɵngcc0.ɵɵtemplate(6, CommentsComponent_span_6_Template, 2, 1, "span", 4);
-        ɵngcc0.ɵɵtemplate(7, CommentsComponent_span_7_Template, 2, 1, "span", 4);
+        ɵngcc0.ɵɵelementStart(4, "a", 2);
+        ɵngcc0.ɵɵtemplate(5, CommentsComponent_span_5_Template, 2, 0, "span", 3);
+        ɵngcc0.ɵɵtemplate(6, CommentsComponent_span_6_Template, 2, 1, "span", 3);
+        ɵngcc0.ɵɵtemplate(7, CommentsComponent_span_7_Template, 2, 1, "span", 3);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(8, "div", 5);
-        ɵngcc0.ɵɵtemplate(9, CommentsComponent_p_9_Template, 2, 0, "p", 6);
-        ɵngcc0.ɵɵtemplate(10, CommentsComponent_div_10_Template, 11, 2, "div", 7);
-        ɵngcc0.ɵɵtemplate(11, CommentsComponent_div_11_Template, 3, 2, "div", 7);
+        ɵngcc0.ɵɵelementStart(8, "div", 4);
+        ɵngcc0.ɵɵtemplate(9, CommentsComponent_p_9_Template, 2, 0, "p", 5);
+        ɵngcc0.ɵɵtemplate(10, CommentsComponent_div_10_Template, 11, 2, "div", 6);
+        ɵngcc0.ɵɵtemplate(11, CommentsComponent_div_11_Template, 3, 2, "div", 6);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵadvance(5);
+        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵclassMapInterpolate1("material-icons ", ctx.iconColour, " margin-top-0-25 margin-right-0-5");
+        ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵproperty("ngIf", ctx.comments.length === 0);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.comments.length === 1);
@@ -3054,13 +3267,14 @@ CommentsComponent.propDecorators = {
     comments: [{ type: Input }],
     commentsMade: [{ type: Output }],
     person: [{ type: Input }],
-    canDelete: [{ type: Input }]
+    canDelete: [{ type: Input }],
+    iconColour: [{ type: Input }]
 };
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(CommentsComponent, [{
         type: Component,
         args: [{
                 selector: 'aa-comments',
-                template: "<div class=\"aa-comments\">\r\n  <div \r\n    (click)=\"\r\n    makeComments=!makeComments; \r\n    toggleComments=false; \r\n    clicked=false\" \r\n    class=\"\r\n    comments-trigger \r\n    cursor-pointer \r\n    flex-group \r\n    flex-start \r\n    margin-bottom-0-5\"\r\n  >\r\n    <div class=\"material-icons aa-orange-100 margin-top-0-25 margin-right-0-5\">comment</div>\r\n    <h3 class=\"margin-top-0-25\">\r\n      <span *ngIf=\"comments.length===0\">Click to add a comment</span>\r\n      <span *ngIf=\"comments.length===1\">There is ({{comments.length}}) comment</span>\r\n      <span *ngIf=\"comments.length>1\">There are ({{comments.length}}) comments</span>\r\n    </h3>\r\n  </div>\r\n  <div \r\n    class=\"\r\n    comments-panel \r\n    box-shadow-strong\r\n    border-radius-0-25 \r\n    bg-aa-white-100 \r\n    padding-1\" \r\n    [class.show-comments]=\"makeComments\"\r\n  >\r\n    <p \r\n      class=\"margin-top-0 italic aa-blue-100\" \r\n      *ngIf=\"!comments.length && !makeComments\"\r\n    >There are currently no comments\r\n    </p>\r\n    <div *ngIf=\"makeComments\" class=\"field boxed\">\r\n      <label>Comment</label>\r\n      <textarea [(ngModel)]=\"txtComment\" placeholder=\"Your Comment\" (change)=\"clicked=false\"></textarea>\r\n      <div class=\"flex-group flex-start\">\r\n        <button class=\"secondary margin-top-1\" (click)=\"addComment($event, cmt)\">Add comment</button>\r\n        <button \r\n          class=\"cancel margin-top-1\" \r\n          (click)=\"makeComments=false; toggleComments=false\"\r\n          >Close\r\n        </button>\r\n        <div>\r\n          <div \r\n            *ngIf=\"clicked && !txtComment\" \r\n            role=\"alert\"\r\n            class=\"error margin-top-1\" \r\n            >You need to add a comment\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  \r\n    <div class=\"field boxed\" *ngIf=\"comments.length\">\r\n      <h3 *ngIf=\"makeComments\">Comments ({{comments.length}})</h3>\r\n      <div *ngIf=\"!toggleComments\" class=\"scroll-panel\">\r\n          <div class=\"scroll-panel-content\" [ngStyle]=\"{'max-height':'8rem'}\">\r\n            <table class=\"table-comments\">\r\n              <thead>\r\n                <tr>\r\n                  <th width=\"62%\"><div><span>Comment</span></div></th>\r\n                  <th width=\"20%\"><div><span>Added by</span></div></th>\r\n                  <th width=\"16%\"><div><span>Date added</span></div></th>\r\n                  <th width=\"2\" *ngIf=\"canDelete\"><div><span>&nbsp;</span></div></th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let cmt of comments; let i = index\"> \r\n                      <td title=\"{{ cmt.comment }}\">{{ cmt.comment }}</td>\r\n                      <td title=\"{{ person }}\">{{ person }}</td>\r\n                      <td title=\"{{ currentDate | DateFormatPipe }}\">{{ currentDate | DateFormatPipe }}</td>\r\n                      <td *ngIf=\"canDelete\">\r\n                        <button \r\n                          class=\"material-icons aa-red-100 transparent\" \r\n                          (click)=\"removeComment(i)\"\r\n                          >delete_forever</button>\r\n                      </td>\r\n                  </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>",
+                template: "<div class=\"aa-comments\">\r\n  <div \r\n    (click)=\"\r\n    makeComments=!makeComments; \r\n    toggleComments=false; \r\n    clicked=false\" \r\n    class=\"\r\n    comments-trigger \r\n    cursor-pointer \r\n    flex-group \r\n    flex-start \r\n    margin-bottom-0-5\"\r\n  >\r\n    <div class=\"material-icons {{iconColour}} margin-top-0-25 margin-right-0-5\">comment</div>\r\n    <a class=\"margin-top-0-25 flex-align-center\">\r\n      <span *ngIf=\"comments.length===0\">Click to add a comment</span>\r\n      <span *ngIf=\"comments.length===1\">There is ({{comments.length}}) comment</span>\r\n      <span *ngIf=\"comments.length>1\">There are ({{comments.length}}) comments</span>\r\n    </a>\r\n  </div>\r\n  <div \r\n    class=\"\r\n    comments-panel \r\n    box-shadow-strong\r\n    border-radius-0-25 \r\n    bg-aa-white-100 \r\n    padding-1\" \r\n    [class.show-comments]=\"makeComments\"\r\n  >\r\n    <p \r\n      class=\"margin-top-0 italic aa-blue-100\" \r\n      *ngIf=\"!comments.length && !makeComments\"\r\n    >There are currently no comments\r\n    </p>\r\n    <div *ngIf=\"makeComments\" class=\"field boxed\">\r\n      <label>Comment</label>\r\n      <textarea [(ngModel)]=\"txtComment\" placeholder=\"Your Comment\" (change)=\"clicked=false\"></textarea>\r\n      <div class=\"flex-group flex-start\">\r\n        <button class=\"secondary margin-top-1\" (click)=\"addComment($event, cmt)\">Add comment</button>\r\n        <button \r\n          class=\"cancel margin-top-1\" \r\n          (click)=\"makeComments=false; toggleComments=false\"\r\n          >Close\r\n        </button>\r\n        <div>\r\n          <div \r\n            *ngIf=\"clicked && !txtComment\" \r\n            role=\"alert\"\r\n            class=\"error margin-top-1\" \r\n            >You need to add a comment\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  \r\n    <div class=\"field boxed\" *ngIf=\"comments.length\">\r\n      <h3 *ngIf=\"makeComments\">Comments ({{comments.length}})</h3>\r\n      <div *ngIf=\"!toggleComments\" class=\"scroll-panel\">\r\n          <div class=\"scroll-panel-content\" [ngStyle]=\"{'max-height':'8rem'}\">\r\n            <table class=\"table-comments\">\r\n              <thead>\r\n                <tr>\r\n                  <th width=\"62%\"><div><span>Comment</span></div></th>\r\n                  <th width=\"20%\"><div><span>Added by</span></div></th>\r\n                  <th width=\"16%\"><div><span>Date added</span></div></th>\r\n                  <th width=\"2\" *ngIf=\"canDelete\"><div><span>&nbsp;</span></div></th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let cmt of comments; let i = index\"> \r\n                      <td title=\"{{ cmt.comment }}\">{{ cmt.comment }}</td>\r\n                      <td title=\"{{ person }}\">{{ person }}</td>\r\n                      <td title=\"{{ currentDate | DateFormatPipe }}\">{{ currentDate | DateFormatPipe }}</td>\r\n                      <td *ngIf=\"canDelete\">\r\n                        <button \r\n                          class=\"material-icons aa-red-100 transparent\" \r\n                          (click)=\"removeComment(i)\"\r\n                          >delete_forever</button>\r\n                      </td>\r\n                  </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>",
                 providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
                 styles: [""]
             }]
@@ -3071,6 +3285,8 @@ CommentsComponent.propDecorators = {
         }], person: [{
             type: Input
         }], canDelete: [{
+            type: Input
+        }], iconColour: [{
             type: Input
         }] }); })();
 
@@ -3420,26 +3636,28 @@ class SliderComponent {
     }
 }
 SliderComponent.ɵfac = function SliderComponent_Factory(t) { return new (t || SliderComponent)(); };
-SliderComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: SliderComponent, selectors: [["aa-slider"]], inputs: { sliderChecked: "sliderChecked", fieldClass: "fieldClass", labelText: "labelText", sliderInline: "sliderInline", sliderId: "sliderId", sliderName: "sliderName", disabled: "disabled" }, outputs: { sliderCheckedChanged: "sliderCheckedChanged" }, decls: 6, vars: 11, consts: [[3, "ngClass"], ["type", "checkbox", 3, "name", "id", "checked", "disabled", "change"], [1, "slider-btn"]], template: function SliderComponent_Template(rf, ctx) { if (rf & 1) {
+SliderComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: SliderComponent, selectors: [["aa-slider"]], inputs: { sliderChecked: "sliderChecked", fieldClass: "fieldClass", labelText: "labelText", sliderInline: "sliderInline", sliderId: "sliderId", sliderName: "sliderName", disabled: "disabled", labelMinWidth: "labelMinWidth" }, outputs: { sliderCheckedChanged: "sliderCheckedChanged" }, decls: 6, vars: 15, consts: [[3, "ngClass"], [3, "ngStyle"], ["type", "checkbox", 3, "name", "id", "checked", "disabled", "change"], [1, "slider-btn"]], template: function SliderComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
-        ɵngcc0.ɵɵelementStart(1, "label");
+        ɵngcc0.ɵɵelementStart(1, "label", 1);
         ɵngcc0.ɵɵtext(2);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementStart(3, "label");
-        ɵngcc0.ɵɵelementStart(4, "input", 1);
+        ɵngcc0.ɵɵelementStart(4, "input", 2);
         ɵngcc0.ɵɵlistener("change", function SliderComponent_Template_input_change_4_listener($event) { return ctx.onChange($event); });
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelement(5, "span", 2);
+        ɵngcc0.ɵɵelement(5, "span", 3);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵclassMapInterpolate1("", ctx.fieldClass, " field slider");
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(9, _c10, ctx.sliderInline));
-        ɵngcc0.ɵɵadvance(2);
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(10, _c10, ctx.sliderInline, ctx.labelMinWidth));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(13, _c11, ctx.labelMinWidth));
+        ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate(ctx.labelText);
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵproperty("name", ctx.sliderName)("id", ctx.sliderId)("checked", ctx.sliderCheckedValue)("disabled", ctx.disabled);
-    } }, directives: [ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
+    } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
 SliderComponent.ctorParameters = () => [];
 SliderComponent.propDecorators = {
     fieldClass: [{ type: Input }],
@@ -3448,6 +3666,7 @@ SliderComponent.propDecorators = {
     sliderId: [{ type: Input }],
     sliderName: [{ type: Input }],
     disabled: [{ type: Input }],
+    labelMinWidth: [{ type: Input }],
     sliderChecked: [{ type: Input }],
     sliderCheckedChanged: [{ type: Output }]
 };
@@ -3455,7 +3674,7 @@ SliderComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-slider',
-                template: "<div \r\n    class=\"{{fieldClass}} field slider\"\r\n    [ngClass]=\"{'slider-inline flex-group flex-start nowrap' : sliderInline}\"\r\n>\r\n    <label>{{labelText}}</label>\r\n    <label>\r\n        <input \r\n            type=\"checkbox\"\r\n            [name]=\"sliderName\"\r\n            [id]=\"sliderId\"\r\n            [checked]=\"sliderCheckedValue\"\r\n            [disabled]=\"disabled\"\r\n            (change)=\"onChange($event)\"\r\n         />\r\n        <span class=\"slider-btn\"></span>\r\n    </label>\r\n</div>",
+                template: "<div \r\n    class=\"{{fieldClass}} field slider\"\r\n    [ngClass]=\"{\r\n        'slider-inline flex-group flex-start nowrap' : sliderInline,\r\n        'list-display' : labelMinWidth\r\n    }\"\r\n>\r\n    <label [ngStyle]=\"{ 'min-width': labelMinWidth }\">{{labelText}}</label>\r\n    <label>\r\n        <input \r\n            type=\"checkbox\"\r\n            [name]=\"sliderName\"\r\n            [id]=\"sliderId\"\r\n            [checked]=\"sliderCheckedValue\"\r\n            [disabled]=\"disabled\"\r\n            (change)=\"onChange($event)\"\r\n         />\r\n        <span class=\"slider-btn\"></span>\r\n    </label>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -3474,6 +3693,8 @@ SliderComponent.propDecorators = {
         }], sliderName: [{
             type: Input
         }], disabled: [{
+            type: Input
+        }], labelMinWidth: [{
             type: Input
         }] }); })();
 
@@ -3543,8 +3764,8 @@ class BladeComponent {
     }
 }
 BladeComponent.ɵfac = function BladeComponent_Factory(t) { return new (t || BladeComponent)(); };
-BladeComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeComponent, selectors: [["aa-blade"]], inputs: { toggleBlade: "toggleBlade", isPinned: "isPinned", pinBlade: "pinBlade", topPosition: "topPosition", zIndex: "zIndex", suppressAutoClose: "suppressAutoClose", customBlade: "customBlade", enableIcon: "enableIcon", iconName: "iconName", bladeTabs: "bladeTabs", customBladeTabs: "customBladeTabs", headingMaxWidth: "headingMaxWidth", showModal: "showModal", oneColWidth: "oneColWidth", bladeSize: "bladeSize", bladeHeading: "bladeHeading", enablePinning: "enablePinning" }, outputs: { bladeOpen: "bladeOpen", bladePinned: "bladePinned" }, ngContentSelectors: _c17, decls: 3, vars: 3, consts: [["class", "aa-blade-modal", 3, "ngStyle", 4, "ngIf"], [3, "class", "ngClass", "ngStyle", 4, "ngIf"], [1, "aa-blade-modal", 3, "ngStyle"], [3, "ngClass", "ngStyle"], [1, "blade-header", "flex-group", "space-between"], [1, "flex-group", "flex-start", "flex-align-center"], ["class", "material-icons pin flex-end", 3, "ngClass", "click", 4, "ngIf"], ["class", "material-icons header-icon margin-right-0-5", 4, "ngIf"], [1, "margin-top-0-25", "margin-0", "ellipsis", 3, "ngStyle"], [1, "anchor-close", "flex-align-center", 3, "click"], [4, "ngIf"], [1, "material-icons", "pin", "flex-end", 3, "ngClass", "click"], [1, "material-icons", "header-icon", "margin-right-0-5"], [1, "blade-header", "custom-header"], [1, "blade-content"], [1, "blade-footer"]], template: function BladeComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c16);
+BladeComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeComponent, selectors: [["aa-blade"]], inputs: { toggleBlade: "toggleBlade", isPinned: "isPinned", pinBlade: "pinBlade", topPosition: "topPosition", zIndex: "zIndex", suppressAutoClose: "suppressAutoClose", customBlade: "customBlade", enableIcon: "enableIcon", iconName: "iconName", bladeTabs: "bladeTabs", customBladeTabs: "customBladeTabs", headingMaxWidth: "headingMaxWidth", showModal: "showModal", oneColWidth: "oneColWidth", bladeSize: "bladeSize", bladeHeading: "bladeHeading", enablePinning: "enablePinning" }, outputs: { bladeOpen: "bladeOpen", bladePinned: "bladePinned" }, ngContentSelectors: _c18, decls: 3, vars: 3, consts: [["class", "aa-blade-modal", 3, "ngStyle", 4, "ngIf"], [3, "class", "ngClass", "ngStyle", 4, "ngIf"], [1, "aa-blade-modal", 3, "ngStyle"], [3, "ngClass", "ngStyle"], [1, "blade-header", "flex-group", "space-between"], [1, "flex-group", "flex-start", "flex-align-center"], ["class", "material-icons pin flex-end", 3, "ngClass", "click", 4, "ngIf"], ["class", "material-icons header-icon margin-right-0-5", 4, "ngIf"], [1, "margin-top-0-25", "margin-0", "ellipsis", 3, "ngStyle"], [1, "anchor-close", "flex-align-center", 3, "click"], [4, "ngIf"], [1, "material-icons", "pin", "flex-end", 3, "ngClass", "click"], [1, "material-icons", "header-icon", "margin-right-0-5"], [1, "blade-header", "custom-header"], [1, "blade-content"], [1, "blade-footer"]], template: function BladeComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c17);
         ɵngcc0.ɵɵtemplate(0, BladeComponent_div_0_Template, 1, 3, "div", 0);
         ɵngcc0.ɵɵtemplate(1, BladeComponent_aside_1_Template, 11, 18, "aside", 1);
         ɵngcc0.ɵɵtemplate(2, BladeComponent_aside_2_Template, 8, 12, "aside", 1);
@@ -3630,7 +3851,7 @@ class BladeFooterComponent {
     }
 }
 BladeFooterComponent.ɵfac = function BladeFooterComponent_Factory(t) { return new (t || BladeFooterComponent)(); };
-BladeFooterComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeFooterComponent, selectors: [["aa-blade-footer"]], ngContentSelectors: _c18, decls: 2, vars: 0, consts: [[1, "blade-footer", "flex-group", "flex-start"]], template: function BladeFooterComponent_Template(rf, ctx) { if (rf & 1) {
+BladeFooterComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeFooterComponent, selectors: [["aa-blade-footer"]], ngContentSelectors: _c19, decls: 2, vars: 0, consts: [[1, "blade-footer", "flex-group", "flex-start"]], template: function BladeFooterComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵprojection(1);
@@ -3697,8 +3918,8 @@ class BladeBottomComponent {
     }
 }
 BladeBottomComponent.ɵfac = function BladeBottomComponent_Factory(t) { return new (t || BladeBottomComponent)(); };
-BladeBottomComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeBottomComponent, selectors: [["aa-blade-bottom"]], inputs: { isOpen: "isOpen", isPinned: "isPinned", isFullScreen: "isFullScreen", fullScreenPos: "fullScreenPos", splitScreenPos: "splitScreenPos", closedPos: "closedPos", disablePinning: "disablePinning", innitiallyPinned: "innitiallyPinned", controlsColor: "controlsColor", headerBgColor: "headerBgColor", zIndex: "zIndex" }, outputs: { bladePinned: "bladePinned", bladeOpen: "bladeOpen", bladeFullScreen: "bladeFullScreen" }, ngContentSelectors: _c21, decls: 11, vars: 18, consts: [[1, "blade-bottom", 3, "ngClass", "ngStyle"], [3, "click"], [1, "flex-group", "flex-start", "flex-align-center"], ["class", "material-icons pin flex-end", 3, "click", 4, "ngIf"], [1, "material-icons", "flex-end", 3, "click"], [4, "ngIf"], [1, "blade-bottom-content"], [1, "material-icons", "pin", "flex-end", 3, "click"]], template: function BladeBottomComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c19);
+BladeBottomComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeBottomComponent, selectors: [["aa-blade-bottom"]], inputs: { isOpen: "isOpen", isPinned: "isPinned", isFullScreen: "isFullScreen", fullScreenPos: "fullScreenPos", splitScreenPos: "splitScreenPos", closedPos: "closedPos", disablePinning: "disablePinning", innitiallyPinned: "innitiallyPinned", controlsColor: "controlsColor", headerBgColor: "headerBgColor", zIndex: "zIndex" }, outputs: { bladePinned: "bladePinned", bladeOpen: "bladeOpen", bladeFullScreen: "bladeFullScreen" }, ngContentSelectors: _c22, decls: 11, vars: 18, consts: [[1, "blade-bottom", 3, "ngClass", "ngStyle"], [3, "click"], [1, "flex-group", "flex-start", "flex-align-center"], ["class", "material-icons pin flex-end", 3, "click", 4, "ngIf"], [1, "material-icons", "flex-end", 3, "click"], [4, "ngIf"], [1, "blade-bottom-content"], [1, "material-icons", "pin", "flex-end", 3, "click"]], template: function BladeBottomComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c20);
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "section", 1);
         ɵngcc0.ɵɵlistener("click", function BladeBottomComponent_Template_section_click_1_listener() { return ctx.toggle(); });
@@ -3719,7 +3940,7 @@ BladeBottomComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: B
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction3(11, _c20, ctx.isOpen, ctx.isPinned, ctx.isFullScreen))("ngStyle", ɵngcc0.ɵɵpureFunction2(15, _c13, ctx.expandedPosition(), ctx.zIndex));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction3(11, _c21, ctx.isOpen, ctx.isPinned, ctx.isFullScreen))("ngStyle", ɵngcc0.ɵɵpureFunction2(15, _c14, ctx.expandedPosition(), ctx.zIndex));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵclassMapInterpolate1("blade-bottom-header flex-group cursor-pointer ", ctx.headerBgColor, "");
         ɵngcc0.ɵɵadvance(3);
@@ -3806,8 +4027,8 @@ class BladeTopComponent {
     }
 }
 BladeTopComponent.ɵfac = function BladeTopComponent_Factory(t) { return new (t || BladeTopComponent)(); };
-BladeTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeTopComponent, selectors: [["aa-blade-top"]], inputs: { isOpen: "isOpen", isPinned: "isPinned", rightPos: "rightPos", leftPos: "leftPos", topPos: "topPos", zIndex: "zIndex", maxHeight: "maxHeight", countryFlag: "countryFlag", paddingTop: "paddingTop", paddingRight: "paddingRight", paddingBottom: "paddingBottom", paddingLeft: "paddingLeft", userProfile: "userProfile", borderColour: "borderColour", profileSize: "profileSize", borderThickness: "borderThickness" }, outputs: { bladeOpen: "bladeOpen", bladePinned: "bladePinned" }, ngContentSelectors: _c27, decls: 9, vars: 14, consts: [[1, "blade-top", "gradient-h-blue", "width-control", "flex-group", 3, "ngClass", "ngStyle"], [1, "flex-group", "flex-start"], ["class", "position-relative margin-top-1-5", 4, "ngIf"], [1, "blade-top-controls", "flex-group"], [1, "material-icons", "pin", "flex-end", "margin-right-0-5", 3, "ngStyle", "click"], [1, "material-icons", 3, "click"], [1, "position-relative", "margin-top-1-5"], [1, "user-profile", "fingerprint", 3, "ngStyle"]], template: function BladeTopComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c23);
+BladeTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: BladeTopComponent, selectors: [["aa-blade-top"]], inputs: { isOpen: "isOpen", isPinned: "isPinned", rightPos: "rightPos", leftPos: "leftPos", topPos: "topPos", zIndex: "zIndex", maxHeight: "maxHeight", countryFlag: "countryFlag", paddingTop: "paddingTop", paddingRight: "paddingRight", paddingBottom: "paddingBottom", paddingLeft: "paddingLeft", userProfile: "userProfile", borderColour: "borderColour", profileSize: "profileSize", borderThickness: "borderThickness" }, outputs: { bladeOpen: "bladeOpen", bladePinned: "bladePinned" }, ngContentSelectors: _c28, decls: 9, vars: 14, consts: [[1, "blade-top", "gradient-h-blue", "width-control", "flex-group", 3, "ngClass", "ngStyle"], [1, "flex-group", "flex-start"], ["class", "position-relative margin-top-1-5", 4, "ngIf"], [1, "blade-top-controls", "flex-group"], [1, "material-icons", "pin", "flex-end", "margin-right-0-5", 3, "ngStyle", "click"], [1, "material-icons", 3, "click"], [1, "position-relative", "margin-top-1-5"], [1, "user-profile", "fingerprint", 3, "ngStyle"]], template: function BladeTopComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c24);
         ɵngcc0.ɵɵelementStart(0, "section", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵtemplate(2, BladeTopComponent_div_2_Template, 4, 8, "div", 2);
@@ -3825,11 +4046,11 @@ BladeTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Blad
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c24, ctx.isOpen))("ngStyle", ɵngcc0.ɵɵpureFunction5(6, _c25, ctx.leftPos + "rem", ctx.rightPos + "rem", ctx.topPos + "rem", ctx.zIndex, ctx.maxHeight + "rem"));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c25, ctx.isOpen))("ngStyle", ɵngcc0.ɵɵpureFunction5(6, _c26, ctx.leftPos + "rem", ctx.rightPos + "rem", ctx.topPos + "rem", ctx.zIndex, ctx.maxHeight + "rem"));
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵproperty("ngIf", ctx.userProfile);
         ɵngcc0.ɵɵadvance(3);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(12, _c26, ctx.isPinned ? "rotate(0deg)" : "rotate(90deg)"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(12, _c27, ctx.isPinned ? "rotate(0deg)" : "rotate(90deg)"));
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle, ɵngcc1.NgIf], styles: [""], changeDetection: 0 });
 BladeTopComponent.ctorParameters = () => [];
 BladeTopComponent.propDecorators = {
@@ -3904,14 +4125,14 @@ class FooterComponent {
     }
 }
 FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-FooterComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: FooterComponent, selectors: [["aa-footer"]], inputs: { leftPos: "leftPos", zIndex: "zIndex", colorClass: "colorClass" }, ngContentSelectors: _c18, decls: 2, vars: 7, consts: [[3, "ngStyle"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+FooterComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: FooterComponent, selectors: [["aa-footer"]], inputs: { leftPos: "leftPos", zIndex: "zIndex", colorClass: "colorClass" }, ngContentSelectors: _c19, decls: 2, vars: 7, consts: [[3, "ngStyle"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "footer", 0);
         ɵngcc0.ɵɵprojection(1);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵclassMap(ctx.colorClass);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(4, _c28, ctx.leftPos + "rem", ctx.zIndex));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(4, _c29, ctx.leftPos + "rem", ctx.zIndex));
     } }, directives: [ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
 FooterComponent.ctorParameters = () => [];
 FooterComponent.propDecorators = {
@@ -3941,8 +4162,8 @@ class ProjectTourComponent {
     }
 }
 ProjectTourComponent.ɵfac = function ProjectTourComponent_Factory(t) { return new (t || ProjectTourComponent)(); };
-ProjectTourComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProjectTourComponent, selectors: [["aa-project-tour"]], inputs: { tourMode: "tourMode", enableHeading: "enableHeading", tourModeHeading: "tourModeHeading", tourModeBody: "tourModeBody", topPos: "topPos", rightPos: "rightPos", bottomPos: "bottomPos", leftPos: "leftPos", panelWidth: "panelWidth", arrowPos: "arrowPos", arrowTop: "arrowTop", arrowRight: "arrowRight", arrowBottom: "arrowBottom", arrowLeft: "arrowLeft", arrowIsPlum: "arrowIsPlum", zIndex: "zIndex" }, ngContentSelectors: _c36, decls: 4, vars: 7, consts: [[1, "position-relative"], [3, "ngClass", "ngStyle"], [4, "ngIf"], [1, "tour-mode-info", 3, "ngStyle"], ["class", "arrow-top", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-right", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-bottom", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-left", 3, "ngStyle", "ngClass", 4, "ngIf"], [1, "tour-content"], [1, "tour-navigation", "flex-group", "flex-column"], [1, "tour-mode-overlay", 3, "ngStyle"], [1, "arrow-top", 3, "ngStyle", "ngClass"], [1, "arrow-right", 3, "ngStyle", "ngClass"], [1, "arrow-bottom", 3, "ngStyle", "ngClass"], [1, "arrow-left", 3, "ngStyle", "ngClass"]], template: function ProjectTourComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c33);
+ProjectTourComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProjectTourComponent, selectors: [["aa-project-tour"]], inputs: { tourMode: "tourMode", enableHeading: "enableHeading", tourModeHeading: "tourModeHeading", tourModeBody: "tourModeBody", topPos: "topPos", rightPos: "rightPos", bottomPos: "bottomPos", leftPos: "leftPos", panelWidth: "panelWidth", arrowPos: "arrowPos", arrowTop: "arrowTop", arrowRight: "arrowRight", arrowBottom: "arrowBottom", arrowLeft: "arrowLeft", arrowIsPlum: "arrowIsPlum", zIndex: "zIndex" }, ngContentSelectors: _c37, decls: 4, vars: 7, consts: [[1, "position-relative"], [3, "ngClass", "ngStyle"], [4, "ngIf"], [1, "tour-mode-info", 3, "ngStyle"], ["class", "arrow-top", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-right", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-bottom", 3, "ngStyle", "ngClass", 4, "ngIf"], ["class", "arrow-left", 3, "ngStyle", "ngClass", 4, "ngIf"], [1, "tour-content"], [1, "tour-navigation", "flex-group", "flex-column"], [1, "tour-mode-overlay", 3, "ngStyle"], [1, "arrow-top", 3, "ngStyle", "ngClass"], [1, "arrow-right", 3, "ngStyle", "ngClass"], [1, "arrow-bottom", 3, "ngStyle", "ngClass"], [1, "arrow-left", 3, "ngStyle", "ngClass"]], template: function ProjectTourComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c34);
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵprojection(2);
@@ -3951,7 +4172,7 @@ ProjectTourComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: P
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(3, _c34, ctx.tourMode))("ngStyle", ctx.tourMode && ɵngcc0.ɵɵpureFunction1(5, _c35, ctx.zIndex + 1));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(3, _c35, ctx.tourMode))("ngStyle", ctx.tourMode && ɵngcc0.ɵɵpureFunction1(5, _c36, ctx.zIndex + 1));
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵproperty("ngIf", ctx.tourMode);
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle, ɵngcc1.NgIf], styles: [""], changeDetection: 0 });
@@ -4089,7 +4310,7 @@ UnauthorisedComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: 
         ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵtextInterpolate(ctx.title);
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(3, _c14, ctx.straplineWidth));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(3, _c15, ctx.straplineWidth));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate1(" ", ctx.strapline, " ");
     } }, directives: function () { return [ɵngcc1.NgStyle, GraphicComponent]; }, styles: [""], changeDetection: 0 });
@@ -4417,14 +4638,14 @@ class CustomWrapperComponent {
     }
 }
 CustomWrapperComponent.ɵfac = function CustomWrapperComponent_Factory(t) { return new (t || CustomWrapperComponent)(); };
-CustomWrapperComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CustomWrapperComponent, selectors: [["aa-custom-wrapper"]], inputs: { boxShadow: "boxShadow", paddingSize: "paddingSize", borderRadius: "borderRadius", minWidth: "minWidth", maxWidth: "maxWidth", minHeight: "minHeight", maxHeight: "maxHeight", zIndex: "zIndex", borderWidth: "borderWidth", borderStyle: "borderStyle", borderColour: "borderColour", backgroundColour: "backgroundColour", marginBottom: "marginBottom", enableScrolling: "enableScrolling" }, ngContentSelectors: _c18, decls: 2, vars: 20, consts: [[3, "ngClass", "ngStyle"]], template: function CustomWrapperComponent_Template(rf, ctx) { if (rf & 1) {
+CustomWrapperComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CustomWrapperComponent, selectors: [["aa-custom-wrapper"]], inputs: { boxShadow: "boxShadow", paddingSize: "paddingSize", borderRadius: "borderRadius", minWidth: "minWidth", maxWidth: "maxWidth", minHeight: "minHeight", maxHeight: "maxHeight", zIndex: "zIndex", borderWidth: "borderWidth", borderStyle: "borderStyle", borderColour: "borderColour", backgroundColour: "backgroundColour", marginBottom: "marginBottom", enableScrolling: "enableScrolling" }, ngContentSelectors: _c19, decls: 2, vars: 20, consts: [[3, "ngClass", "ngStyle"]], template: function CustomWrapperComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "section", 0);
         ɵngcc0.ɵɵprojection(1);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵclassMapInterpolate2("", ctx.borderColour, " ", ctx.backgroundColour, " position-relative");
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(6, _c39, ctx.boxShadow))("ngStyle", ɵngcc0.ɵɵpureFunctionV(8, _c40, [ctx.borderRadius, ctx.paddingSize, ctx.minWidth, ctx.maxWidth, ctx.minHeight, ctx.maxHeight, ctx.zIndex, ctx.borderWidth, ctx.borderStyle, ctx.marginBottom, ctx.enableScrolling ? "auto" : "initial"]));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(6, _c40, ctx.boxShadow))("ngStyle", ɵngcc0.ɵɵpureFunctionV(8, _c41, [ctx.borderRadius, ctx.paddingSize, ctx.minWidth, ctx.maxWidth, ctx.minHeight, ctx.maxHeight, ctx.zIndex, ctx.borderWidth, ctx.borderStyle, ctx.marginBottom, ctx.enableScrolling ? "auto" : "initial"]));
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
 CustomWrapperComponent.ctorParameters = () => [];
 CustomWrapperComponent.propDecorators = {
@@ -4540,7 +4761,7 @@ class ContextMenuComponent {
 ContextMenuComponent.ɵfac = function ContextMenuComponent_Factory(t) { return new (t || ContextMenuComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ElementRef)); };
 ContextMenuComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ContextMenuComponent, selectors: [["aa-context-menu"]], hostBindings: function ContextMenuComponent_HostBindings(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵlistener("click", function ContextMenuComponent_click_HostBindingHandler($event) { return ctx.onClick($event.target); }, false, ɵngcc0.ɵɵresolveDocument);
-    } }, inputs: { absolutePosition: "absolutePosition", leftPos: "leftPos", topPos: "topPos", rightPos: "rightPos", zIndex: "zIndex", minWidth: "minWidth", showOnLeft: "showOnLeft" }, ngContentSelectors: _c18, decls: 5, vars: 9, consts: [[1, "context-menu", "flex-group", "width-control", 3, "ngStyle", "ngClass"], [1, "margin-right-0"], [1, "material-icons", 3, "click"], ["class", "strip-bullets", 3, "ngClass", "ngStyle", 4, "ngIf"], [1, "strip-bullets", 3, "ngClass", "ngStyle"]], template: function ContextMenuComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { absolutePosition: "absolutePosition", leftPos: "leftPos", topPos: "topPos", rightPos: "rightPos", zIndex: "zIndex", minWidth: "minWidth", showOnLeft: "showOnLeft" }, ngContentSelectors: _c19, decls: 5, vars: 9, consts: [[1, "context-menu", "flex-group", "width-control", 3, "ngStyle", "ngClass"], [1, "margin-right-0"], [1, "material-icons", 3, "click"], ["class", "strip-bullets", 3, "ngClass", "ngStyle", 4, "ngIf"], [1, "strip-bullets", 3, "ngClass", "ngStyle"]], template: function ContextMenuComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "nav", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
@@ -4655,7 +4876,7 @@ class NavContextComponent {
     }
 }
 NavContextComponent.ɵfac = function NavContextComponent_Factory(t) { return new (t || NavContextComponent)(); };
-NavContextComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: NavContextComponent, selectors: [["aa-nav-context"]], inputs: { showMenu: "showMenu", navWidth: "navWidth", topPos: "topPos", leftPos: "leftPos", rightPos: "rightPos", bottomPos: "bottomPos", zIndex: "zIndex" }, ngContentSelectors: _c18, decls: 6, vars: 10, consts: [[1, "nav-context", 3, "ngStyle"], [1, "nav-context-content"], [1, "material-icons", "menu", 3, "click"], [3, "ngClass"]], template: function NavContextComponent_Template(rf, ctx) { if (rf & 1) {
+NavContextComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: NavContextComponent, selectors: [["aa-nav-context"]], inputs: { showMenu: "showMenu", navWidth: "navWidth", topPos: "topPos", leftPos: "leftPos", rightPos: "rightPos", bottomPos: "bottomPos", zIndex: "zIndex" }, ngContentSelectors: _c19, decls: 6, vars: 10, consts: [[1, "nav-context", 3, "ngStyle"], [1, "nav-context-content"], [1, "material-icons", "menu", 3, "click"], [3, "ngClass"]], template: function NavContextComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "nav", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
@@ -4766,7 +4987,7 @@ class ProgressIndicatorAdvancedComponent {
     }
 }
 ProgressIndicatorAdvancedComponent.ɵfac = function ProgressIndicatorAdvancedComponent_Factory(t) { return new (t || ProgressIndicatorAdvancedComponent)(); };
-ProgressIndicatorAdvancedComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressIndicatorAdvancedComponent, selectors: [["aa-progress-indicator-advanced"]], inputs: { progressClass: "progressClass", progressLabel: "progressLabel", iconClass: "iconClass", showDescription: "showDescription", description: "description", asLink: "asLink", progressLink: "progressLink" }, outputs: { progressClick: "progressClick" }, ngContentSelectors: _c18, decls: 4, vars: 4, consts: [["class", "description", 4, "ngIf"], [1, "bus-stop", "flex-group", "flex-column", "flex-center"], [1, "description"], [1, "box-shadow"]], template: function ProgressIndicatorAdvancedComponent_Template(rf, ctx) { if (rf & 1) {
+ProgressIndicatorAdvancedComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressIndicatorAdvancedComponent, selectors: [["aa-progress-indicator-advanced"]], inputs: { progressClass: "progressClass", progressLabel: "progressLabel", iconClass: "iconClass", showDescription: "showDescription", description: "description", asLink: "asLink", progressLink: "progressLink" }, outputs: { progressClick: "progressClick" }, ngContentSelectors: _c19, decls: 4, vars: 4, consts: [["class", "description", 4, "ngIf"], [1, "bus-stop", "flex-group", "flex-column", "flex-center"], [1, "description"], [1, "box-shadow"]], template: function ProgressIndicatorAdvancedComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "section");
         ɵngcc0.ɵɵtemplate(1, ProgressIndicatorAdvancedComponent_div_1_Template, 5, 4, "div", 0);
@@ -5010,9 +5231,9 @@ class TabNavigationComponent {
             this.changeTab(tab);
         }
     }
-    onCloseTab(e) {
+    onCloseTab(e, tabId) {
         e.stopPropagation();
-        this.closeTab.emit(e);
+        this.closeTab.emit(tabId);
     }
 }
 TabNavigationComponent.ɵfac = function TabNavigationComponent_Factory(t) { return new (t || TabNavigationComponent)(); };
@@ -5055,7 +5276,7 @@ TabNavigationComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-tab-navigation',
-                template: "\r\n<!-- ROUTER-OUTLET ONLY -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n        <a *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" [class.active]=\"isActive(tab)\" (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n          <a *ngIf=\"tab.enableClose\" (click)=\"onCloseTab($event)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n        </span>\r\n      </li>\r\n      <li *ngIf=\"tab.showRightDivider\" class=\"divider-tab\"></li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- INFO-PANEL NG-TEMPLATE -->\r\n<div *ngIf=\"tabInfo\">\r\n  <nav class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n    <div class=\"float-right flex-group\">\r\n      <div class=\"flex-align-center\">\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">close_fullscreen</button>\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">open_in_full</button>\r\n      </div>\r\n    </div>\r\n    <ul class=\"flex-group flex-center\">\r\n      <ng-container *ngFor=\"let tab of contentTabs\">\r\n        <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n          <a class=\"{{tab.activeColor}}\" title=\"{{ tab.tabName }}\" *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" (click)=\"onTabClicked(tab)\" [ngClass]=\"{'active': isActive(tab)}\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </a>\r\n          <span title=\"{{ tab.tabName }}\" *ngIf=\"tab.tabDisabled\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </span>\r\n        </li>\r\n      </ng-container>\r\n    </ul>\r\n  </nav>\r\n  \r\n  <ng-container *ngIf=\"displayTabContent && currentTab\">\r\n    <ng-template *ngTemplateOutlet=\"currentTab.templateRef\"></ng-template>\r\n  </ng-container>\r\n</div>\r\n\r\n<!-- INFO PANEL ROUTER-OUTLET -->\r\n<nav *ngIf=\"tabInfoRouterOutlet\" class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n  <div class=\"float-right flex-group\">\r\n    <div class=\"flex-align-center\">\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"material-icons\">close_fullscreen</button>\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"material-icons\">open_in_full</button>\r\n    </div>\r\n  </div>\r\n  <ul class=\"flex-group flex-center\">\r\n    <ng-content select=\"[tabs]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n",
+                template: "\r\n<!-- ROUTER-OUTLET ONLY -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n        <a *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" [class.active]=\"isActive(tab)\" (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n          <a *ngIf=\"tab.enableClose\" (click)=\"onCloseTab($event, tab.tabId)\"  class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\">\r\n          {{ tab.tabName }}\r\n          <span *ngIf=\"tab.enableIcons\" class=\"material-icons {{tab.iconColour}}\">{{tab.iconName}}</span>\r\n          <span *ngIf=\"tab.enableCount\" class=\"tab-count {{tab.countColour}}\">{{tab.tabCount}}</span>\r\n        </span>\r\n      </li>\r\n      <li *ngIf=\"tab.showRightDivider\" class=\"divider-tab\"></li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- INFO-PANEL NG-TEMPLATE -->\r\n<div *ngIf=\"tabInfo\">\r\n  <nav class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n    <div class=\"float-right flex-group\">\r\n      <div class=\"flex-align-center\">\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">close_fullscreen</button>\r\n        <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0\">open_in_full</button>\r\n      </div>\r\n    </div>\r\n    <ul class=\"flex-group flex-center\">\r\n      <ng-container *ngFor=\"let tab of contentTabs\">\r\n        <li [ngClass]=\"{ 'tab-disabled' : tab.tabDisabled }\">\r\n          <a class=\"{{tab.activeColor}}\" title=\"{{ tab.tabName }}\" *ngIf=\"!tab.tabDisabled\" [id]=\"tab.tabId\" (click)=\"onTabClicked(tab)\" [ngClass]=\"{'active': isActive(tab)}\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </a>\r\n          <span title=\"{{ tab.tabName }}\" *ngIf=\"tab.tabDisabled\">\r\n            <ng-template *ngTemplateOutlet=\"tab.templateRefHeader\"></ng-template>\r\n          </span>\r\n        </li>\r\n      </ng-container>\r\n    </ul>\r\n  </nav>\r\n  \r\n  <ng-container *ngIf=\"displayTabContent && currentTab\">\r\n    <ng-template *ngTemplateOutlet=\"currentTab.templateRef\"></ng-template>\r\n  </ng-container>\r\n</div>\r\n\r\n<!-- INFO PANEL ROUTER-OUTLET -->\r\n<nav *ngIf=\"tabInfoRouterOutlet\" class=\"tab-navigation-info\" [ngClass]=\"{'minimize': toggleFullscreen}\">\r\n  <div class=\"float-right flex-group\">\r\n    <div class=\"flex-align-center\">\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"!toggleFullscreen\" class=\"material-icons\">close_fullscreen</button>\r\n      <button (click)=\"toggleFullscreen=!toggleFullscreen\" *ngIf=\"toggleFullscreen\" class=\"material-icons\">open_in_full</button>\r\n    </div>\r\n  </div>\r\n  <ul class=\"flex-group flex-center\">\r\n    <ng-content select=\"[tabs]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n",
                 styles: [""]
             }]
     }], function () { return []; }, { autoChangeTabs: [{
@@ -5166,10 +5387,6 @@ class TabNavigationSecondaryComponent {
         var _a;
         return (_a = this.tabNavigationItems) === null || _a === void 0 ? void 0 : _a.filter((tabNavigationItem) => !!tabNavigationItem.templateRef);
     }
-    onCloseTabSecondary(e) {
-        e.stopPropagation();
-        this.closeTabSecondary.emit(e);
-    }
     ngOnInit() { }
     ngAfterContentInit() {
         if (this.contentTabs && this.contentTabs[0]) {
@@ -5195,6 +5412,10 @@ class TabNavigationSecondaryComponent {
             this.changeTab(tab);
         }
     }
+    onCloseTabSecondary(e, tabId) {
+        e.stopPropagation();
+        this.closeTabSecondary.emit(tabId);
+    }
 }
 TabNavigationSecondaryComponent.ɵfac = function TabNavigationSecondaryComponent_Factory(t) { return new (t || TabNavigationSecondaryComponent)(); };
 TabNavigationSecondaryComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: TabNavigationSecondaryComponent, selectors: [["aa-tab-navigation-secondary"]], contentQueries: function TabNavigationSecondaryComponent_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
@@ -5202,12 +5423,12 @@ TabNavigationSecondaryComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponen
     } if (rf & 2) {
         let _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.tabNavigationItems = _t);
-    } }, inputs: { autoChangeTabs: "autoChangeTabs", displayTabContent: "displayTabContent", routerOutlet: "routerOutlet", ngTemplate: "ngTemplate", tabColour: "tabColour", tabActiveColour: "tabActiveColour" }, outputs: { tabClicked: "tabClicked", tabChanged: "tabChanged", closeTabSecondary: "closeTabSecondary" }, ngContentSelectors: _c57, decls: 2, vars: 2, consts: [["class", "tab-navigation-secondary", 4, "ngIf"], [1, "tab-navigation-secondary"], [4, "ngFor", "ngForOf"], [3, "class", "id", "active", "click", 4, "ngIf"], ["class", "tab-disabled", 4, "ngIf"], [3, "id", "click"], ["class", "anchor-close", 3, "click", 4, "ngIf"], [1, "anchor-close", 3, "click"], [1, "tab-disabled"]], template: function TabNavigationSecondaryComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { autoChangeTabs: "autoChangeTabs", displayTabContent: "displayTabContent", routerOutletSecondary: "routerOutletSecondary", ngTemplate: "ngTemplate", tabColour: "tabColour", tabActiveColour: "tabActiveColour" }, outputs: { tabClicked: "tabClicked", tabChanged: "tabChanged", closeTabSecondary: "closeTabSecondary" }, ngContentSelectors: _c57, decls: 2, vars: 2, consts: [["class", "tab-navigation-secondary", 4, "ngIf"], [1, "tab-navigation-secondary"], [4, "ngFor", "ngForOf"], [3, "class", "id", "active", "click", 4, "ngIf"], ["class", "tab-disabled", 4, "ngIf"], [3, "id", "click"], ["class", "anchor-close", 3, "click", 4, "ngIf"], [1, "anchor-close", 3, "click"], [1, "tab-disabled"]], template: function TabNavigationSecondaryComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef(_c56);
         ɵngcc0.ɵɵtemplate(0, TabNavigationSecondaryComponent_nav_0_Template, 3, 0, "nav", 0);
         ɵngcc0.ɵɵtemplate(1, TabNavigationSecondaryComponent_nav_1_Template, 4, 1, "nav", 0);
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngIf", ctx.routerOutlet);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.routerOutletSecondary);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.ngTemplate);
     } }, directives: [ɵngcc1.NgIf, ɵngcc1.NgForOf], styles: [""] });
@@ -5216,7 +5437,7 @@ TabNavigationSecondaryComponent.propDecorators = {
     tabNavigationItems: [{ type: ContentChildren, args: [TabNavigationSecondaryItemComponent,] }],
     autoChangeTabs: [{ type: Input }],
     displayTabContent: [{ type: Input }],
-    routerOutlet: [{ type: Input }],
+    routerOutletSecondary: [{ type: Input }],
     ngTemplate: [{ type: Input }],
     tabColour: [{ type: Input }],
     tabActiveColour: [{ type: Input }],
@@ -5228,7 +5449,7 @@ TabNavigationSecondaryComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-tab-navigation-secondary',
-                template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutlet\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li>\r\n        <a \r\n          class=\"{{tabColour}}\" \r\n          *ngIf=\"!isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <a \r\n          class=\"{{tabActiveColour}}\" \r\n          *ngIf=\"isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\" class=\"tab-disabled\">{{ tab.tabName }}</span>\r\n      </li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>",
+                template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutletSecondary\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li>\r\n        <a \r\n          class=\"{{tabColour}}\" \r\n          *ngIf=\"!isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <a \r\n          class=\"{{tabActiveColour}}\" \r\n          *ngIf=\"isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\" class=\"tab-disabled\">{{ tab.tabName }}</span>\r\n      </li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n",
                 styles: [""]
             }]
     }], function () { return []; }, { autoChangeTabs: [{
@@ -5244,7 +5465,7 @@ TabNavigationSecondaryComponent.propDecorators = {
         }], tabNavigationItems: [{
             type: ContentChildren,
             args: [TabNavigationSecondaryItemComponent]
-        }], routerOutlet: [{
+        }], routerOutletSecondary: [{
             type: Input
         }], ngTemplate: [{
             type: Input
@@ -5303,22 +5524,22 @@ class AlertComponent {
     }
 }
 AlertComponent.ɵfac = function AlertComponent_Factory(t) { return new (t || AlertComponent)(); };
-AlertComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AlertComponent, selectors: [["aa-alert"]], inputs: { alertClass: "alertClass", alertTitle: "alertTitle", alertText: "alertText", collapsible: "collapsible", alignIconTop: "alignIconTop", expandPanel: "expandPanel" }, decls: 4, vars: 9, consts: [["role", "alert", 3, "ngClass"], ["class", "\n        flex-group \n        space-between \n        flex-align-center \n        margin-top-0-5", 4, "ngIf"], [4, "ngIf"], ["class", "overflow-hidden", 3, "ngStyle", "ngClass", 4, "ngIf"], [1, "flex-group", "space-between", "flex-align-center", "margin-top-0-5"], [1, "margin-0"], [1, "flex-align-center", "cursor-pointer", 3, "click"], ["class", "material-icons padding-left-1", 4, "ngIf"], [1, "material-icons", "padding-left-1"], [1, "overflow-hidden", 3, "ngStyle", "ngClass"]], template: function AlertComponent_Template(rf, ctx) { if (rf & 1) {
+AlertComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AlertComponent, selectors: [["aa-alert"]], inputs: { alertClass: "alertClass", alertTitle: "alertTitle", alertText: "alertText", collapsible: "collapsible", alignIconTop: "alignIconTop", expandPanel: "expandPanel", minWidth: "minWidth", collapsedHeight: "collapsedHeight", removePanel: "removePanel" }, decls: 4, vars: 16, consts: [["role", "alert", 3, "ngClass", "ngStyle"], ["class", "\n        flex-group \n        space-between \n        flex-align-center \n        margin-top-0-5", 4, "ngIf"], [4, "ngIf"], [3, "ngClass", 4, "ngIf"], [1, "flex-group", "space-between", "flex-align-center", "margin-top-0-5"], [1, "margin-0"], [1, "flex-align-center", "cursor-pointer", 3, "click"], ["class", "material-icons padding-left-1", 4, "ngIf"], [1, "material-icons", "padding-left-1"], [3, "ngClass"]], template: function AlertComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵtemplate(1, AlertComponent_div_1_Template, 6, 3, "div", 1);
         ɵngcc0.ɵɵtemplate(2, AlertComponent_div_2_Template, 2, 1, "div", 2);
-        ɵngcc0.ɵɵtemplate(3, AlertComponent_div_3_Template, 2, 8, "div", 3);
+        ɵngcc0.ɵɵtemplate(3, AlertComponent_div_3_Template, 2, 4, "div", 3);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵclassMap(ctx.alertClass);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c60, ctx.alignIconTop));
+        ɵngcc0.ɵɵclassMapInterpolate1("overflow-hidden ", ctx.alertClass, "");
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(8, _c59, ctx.alignIconTop, ctx.expandPanel))("ngStyle", ɵngcc0.ɵɵpureFunction2(13, _c61, ctx.minWidth, ɵngcc0.ɵɵpureFunction1(11, _c60, ctx.collapsedHeight)));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.collapsible);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", !ctx.collapsible);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.collapsible);
-    } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgIf, ɵngcc1.NgStyle], encapsulation: 2, changeDetection: 0 });
+    } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle, ɵngcc1.NgIf], encapsulation: 2, changeDetection: 0 });
 AlertComponent.ctorParameters = () => [];
 AlertComponent.propDecorators = {
     alertClass: [{ type: Input }],
@@ -5326,13 +5547,16 @@ AlertComponent.propDecorators = {
     alertText: [{ type: Input }],
     collapsible: [{ type: Input }],
     alignIconTop: [{ type: Input }],
-    expandPanel: [{ type: Input }]
+    expandPanel: [{ type: Input }],
+    minWidth: [{ type: Input }],
+    collapsedHeight: [{ type: Input }],
+    removePanel: [{ type: Input }]
 };
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(AlertComponent, [{
         type: Component,
         args: [{
                 selector: 'aa-alert',
-                template: "<div \r\n    role=\"alert\" \r\n    class={{alertClass}}\r\n    [ngClass]=\"{'align-icon-top' : alignIconTop}\"\r\n>\r\n    <div \r\n        *ngIf=\"collapsible\" \r\n        class=\"\r\n        flex-group \r\n        space-between \r\n        flex-align-center \r\n        margin-top-0-5\"\r\n    >\r\n        <h3 class=\"margin-0\">{{ alertTitle }}</h3>\r\n        <div \r\n            class=\"flex-align-center cursor-pointer\"\r\n            (click)=\"expandPanel=!expandPanel\"\r\n        >\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"!expandPanel\">open_in_full</span>\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"expandPanel\">close_fullscreen</span>\r\n        </div>\r\n    </div>\r\n    <div *ngIf=\"!collapsible\">\r\n        {{ alertText }}\r\n    </div> \r\n    <div \r\n        *ngIf=\"collapsible\"\r\n        class=\"overflow-hidden\"\r\n        [ngStyle]=\"{ 'height': !expandPanel ? '3rem' : 'auto' }\"\r\n        [ngClass]=\"{\r\n            'margin-top-0-75' : collapsible,\r\n            'expanded' : expandPanel\r\n        }\"\r\n    >\r\n        {{ alertText }}\r\n    </div>\r\n</div>",
+                template: "<div \r\n    role=\"alert\" \r\n    class=\"overflow-hidden {{alertClass}}\"\r\n    [ngClass]=\"{\r\n        'align-icon-top' : alignIconTop,\r\n        'max-height-initial' : expandPanel\r\n    }\"\r\n    [ngStyle]=\"{\r\n        'min-width' : minWidth,\r\n        'max-height': [collapsedHeight]\r\n    }\"\r\n>\r\n    <div \r\n        *ngIf=\"collapsible\" \r\n        class=\"\r\n        flex-group \r\n        space-between \r\n        flex-align-center \r\n        margin-top-0-5\"\r\n    >\r\n        <h3 class=\"margin-0\">{{ alertTitle }}</h3>\r\n        <div \r\n            class=\"flex-align-center cursor-pointer\"\r\n            (click)=\"expandPanel=!expandPanel\"\r\n        >\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"!expandPanel\">open_in_full</span>\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"expandPanel\">close_fullscreen</span>\r\n        </div>\r\n    </div>\r\n    <div *ngIf=\"!collapsible\">\r\n        {{ alertText }}\r\n    </div> \r\n    <div \r\n        *ngIf=\"collapsible\"\r\n        [ngClass]=\"{\r\n            'margin-top-1' : collapsible\r\n        }\"\r\n    >\r\n        {{ alertText }}\r\n    </div>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush
             }]
     }], function () { return []; }, { alertClass: [{
@@ -5347,6 +5571,12 @@ AlertComponent.propDecorators = {
             type: Input
         }], expandPanel: [{
             type: Input
+        }], minWidth: [{
+            type: Input
+        }], collapsedHeight: [{
+            type: Input
+        }], removePanel: [{
+            type: Input
         }] }); })();
 
 class AlertShieldComponent {
@@ -5355,11 +5585,11 @@ class AlertShieldComponent {
     }
 }
 AlertShieldComponent.ɵfac = function AlertShieldComponent_Factory(t) { return new (t || AlertShieldComponent)(); };
-AlertShieldComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AlertShieldComponent, selectors: [["aa-alert-shield"]], inputs: { alertShieldStatus: "alertShieldStatus", alertShieldText: "alertShieldText", showTooltip: "showTooltip", showTooltipHeading: "showTooltipHeading", tooltipHeading: "tooltipHeading", minWidth: "minWidth", alertShieldSmall: "alertShieldSmall", noWrap: "noWrap", xpos: "xpos", ypos: "ypos", hideLabel: "hideLabel", customShield: "customShield", iconName: "iconName", iconOutlined: "iconOutlined", bgRedLight: "bgRedLight", bgRedDark: "bgRedDark", bgGreenLight: "bgGreenLight", bgGreenDark: "bgGreenDark", bgOrangeLight: "bgOrangeLight", bgOrangeDark: "bgOrangeDark", bgBlueLight: "bgBlueLight", bgBlueDark: "bgBlueDark", bgGreyLight: "bgGreyLight", bgGreyDark: "bgGreyDark", shieldColour: "shieldColour", iconOnly: "iconOnly", enableRotation: "enableRotation" }, ngContentSelectors: _c66, decls: 3, vars: 3, consts: [[3, "class", "ngClass", 4, "ngIf"], ["class", "alert-shield-tooltip-wrapper", 4, "ngIf"], ["class", "custom-alert-shield", 4, "ngIf"], [3, "ngClass"], [3, "ngStyle"], [1, "alert-shield-tooltip-wrapper"], [4, "ngIf"], [1, "custom-alert-shield"], [3, "class", "ngStyle", 4, "ngIf"]], template: function AlertShieldComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c65);
+AlertShieldComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AlertShieldComponent, selectors: [["aa-alert-shield"]], inputs: { alertShieldStatus: "alertShieldStatus", alertShieldText: "alertShieldText", showTooltip: "showTooltip", showTooltipHeading: "showTooltipHeading", tooltipHeading: "tooltipHeading", minWidth: "minWidth", alertShieldSmall: "alertShieldSmall", noWrap: "noWrap", hideLabel: "hideLabel", tooltipTopLeft: "tooltipTopLeft", tooltipTopRight: "tooltipTopRight", tooltipBottomLeft: "tooltipBottomLeft", tooltipBottomRight: "tooltipBottomRight", customShield: "customShield", iconName: "iconName", iconOutlined: "iconOutlined", bgRedLight: "bgRedLight", bgRedDark: "bgRedDark", bgGreenLight: "bgGreenLight", bgGreenDark: "bgGreenDark", bgOrangeLight: "bgOrangeLight", bgOrangeDark: "bgOrangeDark", bgBlueLight: "bgBlueLight", bgBlueDark: "bgBlueDark", bgGreyLight: "bgGreyLight", bgGreyDark: "bgGreyDark", shieldColour: "shieldColour", iconOnly: "iconOnly", enableRotation: "enableRotation" }, ngContentSelectors: _c68, decls: 3, vars: 3, consts: [[3, "class", "ngClass", 4, "ngIf"], ["class", "alert-shield-tooltip-wrapper", 3, "ngClass", 4, "ngIf"], ["class", "custom-alert-shield", 3, "ngClass", 4, "ngIf"], [3, "ngClass"], [3, "ngStyle"], [1, "alert-shield-tooltip-wrapper", 3, "ngClass"], [4, "ngIf"], [1, "custom-alert-shield", 3, "ngClass"], ["class", "alert-shield-tooltip", 3, "ngStyle", 4, "ngIf"], [1, "alert-shield-tooltip", 3, "ngStyle"]], template: function AlertShieldComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c67);
         ɵngcc0.ɵɵtemplate(0, AlertShieldComponent_div_0_Template, 3, 11, "div", 0);
-        ɵngcc0.ɵɵtemplate(1, AlertShieldComponent_div_1_Template, 7, 20, "div", 1);
-        ɵngcc0.ɵɵtemplate(2, AlertShieldComponent_div_2_Template, 7, 19, "div", 2);
+        ɵngcc0.ɵɵtemplate(1, AlertShieldComponent_div_1_Template, 7, 24, "div", 1);
+        ɵngcc0.ɵɵtemplate(2, AlertShieldComponent_div_2_Template, 7, 25, "div", 2);
     } if (rf & 2) {
         ɵngcc0.ɵɵproperty("ngIf", !ctx.showTooltip && !ctx.customShield);
         ɵngcc0.ɵɵadvance(1);
@@ -5377,9 +5607,11 @@ AlertShieldComponent.propDecorators = {
     minWidth: [{ type: Input }],
     alertShieldSmall: [{ type: Input }],
     noWrap: [{ type: Input }],
-    xpos: [{ type: Input }],
-    ypos: [{ type: Input }],
     hideLabel: [{ type: Input }],
+    tooltipTopLeft: [{ type: Input }],
+    tooltipTopRight: [{ type: Input }],
+    tooltipBottomLeft: [{ type: Input }],
+    tooltipBottomRight: [{ type: Input }],
     customShield: [{ type: Input }],
     iconName: [{ type: Input }],
     iconOutlined: [{ type: Input }],
@@ -5401,7 +5633,7 @@ AlertShieldComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-alert-shield',
-                template: "<div \r\n    *ngIf=\"!showTooltip && !customShield\" \r\n    class=\"alert-shield {{alertShieldStatus}}\" \r\n    [ngClass]=\"{\r\n        'small' : alertShieldSmall, \r\n        'nowrap' : noWrap \r\n        }\"\r\n    >\r\n    <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n        {{alertShieldText}}\r\n    </span>\r\n</div>\r\n\r\n<div *ngIf=\"showTooltip && !customShield\" class=\"alert-shield-tooltip-wrapper\">\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}} {{xpos}} {{ypos}}\"\r\n        [ngStyle]=\"{'min-width' : minWidth}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield {{alertShieldStatus}}\" \r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall, \r\n            'nowrap' : noWrap \r\n            }\"\r\n        >\r\n            <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n                {{alertShieldText}}\r\n            </span>\r\n    </div>\r\n</div>\r\n\r\n<div *ngIf=\"customShield\" class=\"custom-alert-shield\">\r\n    <div \r\n        class=\"\r\n            flex-group \r\n            flex-align-center \r\n            flex-start \r\n            custom-alert-shield-container\r\n            {{shieldColour}}\r\n        \"\r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall,\r\n            'nowrap' : noWrap,\r\n            'icon-only' : iconOnly,\r\n            'rotate' : enableRotation\r\n        }\"\r\n      >\r\n        <div \r\n            *ngIf=\"showTooltip\"\r\n            class=\"alert-shield-tooltip {{xpos}} {{ypos}}\"\r\n            [ngStyle]=\"{'min-width' : minWidth}\"\r\n        >\r\n            <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n            <ng-content select=\"[custom-tooltip-content]\"></ng-content>\r\n        </div>\r\n        <div \r\n            [ngClass]=\"{\r\n                'material-icons' : !iconOutlined,\r\n                'material-icons-outlined' : iconOutlined\r\n            }\">\r\n            {{iconName}}\r\n        </div>\r\n        <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n            {{alertShieldText}}\r\n        </span>\r\n    </div>\r\n</div>",
+                template: "<div \r\n    *ngIf=\"!showTooltip && !customShield\" \r\n    class=\"alert-shield {{alertShieldStatus}}\" \r\n    [ngClass]=\"{\r\n        'small' : alertShieldSmall, \r\n        'nowrap' : noWrap \r\n        }\"\r\n    >\r\n    <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n        {{alertShieldText}}\r\n    </span>\r\n</div>\r\n\r\n<div \r\n    *ngIf=\"showTooltip && !customShield\" \r\n    class=\"alert-shield-tooltip-wrapper\"\r\n    [ngClass]=\"{\r\n        'tooltip-top-left' : tooltipTopLeft,\r\n        'tooltip-top-right' : tooltipTopRight,\r\n        'tooltip-bottom-left' : tooltipBottomLeft,\r\n        'tooltip-bottom-right' : tooltipBottomRight\r\n    }\"\r\n>\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}}\"\r\n        [ngStyle]=\"{'min-width' : minWidth}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield {{alertShieldStatus}}\" \r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall, \r\n            'nowrap' : noWrap \r\n            }\"\r\n        >\r\n            <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n                {{alertShieldText}}\r\n            </span>\r\n    </div>\r\n</div>\r\n\r\n<div \r\n    *ngIf=\"customShield\" \r\n    class=\"custom-alert-shield\"\r\n    [ngClass]=\"{\r\n        'tooltip-top-left' : tooltipTopLeft,\r\n        'tooltip-top-right' : tooltipTopRight,\r\n        'tooltip-bottom-left' : tooltipBottomLeft,\r\n        'tooltip-bottom-right' : tooltipBottomRight\r\n    }\"\r\n>\r\n    <div \r\n        class=\"\r\n            flex-group \r\n            flex-align-center \r\n            flex-start \r\n            custom-alert-shield-container\r\n            {{shieldColour}}\r\n        \"\r\n        [ngClass]=\"{\r\n            'small' : alertShieldSmall,\r\n            'nowrap' : noWrap,\r\n            'icon-only' : iconOnly,\r\n            'rotate' : enableRotation\r\n        }\"\r\n      >\r\n        <div \r\n            *ngIf=\"showTooltip\"\r\n            class=\"alert-shield-tooltip\"\r\n            [ngStyle]=\"{'min-width' : minWidth}\"\r\n        >\r\n            <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n            <ng-content select=\"[custom-tooltip-content]\"></ng-content>\r\n        </div>\r\n        <div \r\n            [ngClass]=\"{\r\n                'material-icons' : !iconOutlined,\r\n                'material-icons-outlined' : iconOutlined\r\n            }\">\r\n            {{iconName}}\r\n        </div>\r\n        <span [ngStyle]=\"{ 'display': hideLabel ? 'none' : 'inline' }\">\r\n            {{alertShieldText}}\r\n        </span>\r\n    </div>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -5421,11 +5653,15 @@ AlertShieldComponent.propDecorators = {
             type: Input
         }], noWrap: [{
             type: Input
-        }], xpos: [{
-            type: Input
-        }], ypos: [{
-            type: Input
         }], hideLabel: [{
+            type: Input
+        }], tooltipTopLeft: [{
+            type: Input
+        }], tooltipTopRight: [{
+            type: Input
+        }], tooltipBottomLeft: [{
+            type: Input
+        }], tooltipBottomRight: [{
             type: Input
         }], customShield: [{
             type: Input
@@ -5497,7 +5733,7 @@ class ProgressBarComponent {
     }
 }
 ProgressBarComponent.ɵfac = function ProgressBarComponent_Factory(t) { return new (t || ProgressBarComponent)(); };
-ProgressBarComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressBarComponent, selectors: [["aa-progress-bar"]], inputs: { titleBold: "titleBold", titleRegular: "titleRegular", leftSideText: "leftSideText", rightSideText: "rightSideText", complete: "complete", maxWidth: "maxWidth" }, decls: 13, vars: 10, consts: [[1, "progress-bar", 3, "ngStyle"], [1, "progress"], [3, "ngStyle"], [1, "flex-group", "space-between"]], template: function ProgressBarComponent_Template(rf, ctx) { if (rf & 1) {
+ProgressBarComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressBarComponent, selectors: [["aa-progress-bar"]], inputs: { titleBold: "titleBold", titleRegular: "titleRegular", leftSideText: "leftSideText", rightSideText: "rightSideText", complete: "complete", maxWidth: "maxWidth", displayOverHeader: "displayOverHeader", progressBgColour: "progressBgColour", progressColour: "progressColour", progressId: "progressId" }, decls: 13, vars: 20, consts: [[1, "progress-bar", 3, "ngStyle", "ngClass"], [3, "id", "ngStyle"], [1, "flex-group", "space-between"]], template: function ProgressBarComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "span");
         ɵngcc0.ɵɵelementStart(2, "strong");
@@ -5507,10 +5743,10 @@ ProgressBarComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: P
         ɵngcc0.ɵɵtext(5);
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(6, "div", 1);
-        ɵngcc0.ɵɵelement(7, "div", 2);
+        ɵngcc0.ɵɵelementStart(6, "div");
+        ɵngcc0.ɵɵelement(7, "div", 1);
         ɵngcc0.ɵɵelementEnd();
-        ɵngcc0.ɵɵelementStart(8, "div", 3);
+        ɵngcc0.ɵɵelementStart(8, "div", 2);
         ɵngcc0.ɵɵelementStart(9, "div");
         ɵngcc0.ɵɵtext(10);
         ɵngcc0.ɵɵelementEnd();
@@ -5520,18 +5756,21 @@ ProgressBarComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: P
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(6, _c9, ctx.maxWidth + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(14, _c9, ctx.maxWidth))("ngClass", ɵngcc0.ɵɵpureFunction1(16, _c69, ctx.displayOverHeader));
         ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵtextInterpolate1("", ctx.titleBold, " ");
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵtextInterpolate(ctx.titleRegular);
-        ɵngcc0.ɵɵadvance(2);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(8, _c9, ctx.complete + "%"));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMapInterpolate1("progress ", ctx.progressBgColour, "");
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵclassMap(ctx.progressColour);
+        ɵngcc0.ɵɵproperty("id", ctx.progressId)("ngStyle", ɵngcc0.ɵɵpureFunction1(18, _c9, ctx.complete + "%"));
         ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵtextInterpolate(ctx.leftSideText);
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵtextInterpolate(ctx.rightSideText);
-    } }, directives: [ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
+    } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
 ProgressBarComponent.ctorParameters = () => [];
 ProgressBarComponent.propDecorators = {
     titleBold: [{ type: Input }],
@@ -5539,13 +5778,17 @@ ProgressBarComponent.propDecorators = {
     leftSideText: [{ type: Input }],
     rightSideText: [{ type: Input }],
     complete: [{ type: Input }],
-    maxWidth: [{ type: Input }]
+    maxWidth: [{ type: Input }],
+    displayOverHeader: [{ type: Input }],
+    progressBgColour: [{ type: Input }],
+    progressColour: [{ type: Input }],
+    progressId: [{ type: Input }]
 };
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(ProgressBarComponent, [{
         type: Component,
         args: [{
                 selector: 'aa-progress-bar',
-                template: "<div class=\"progress-bar\" [ngStyle]=\"{'width' : maxWidth+'rem'}\">\r\n    <span>\r\n        <strong>{{titleBold}} </strong>\r\n        <span>{{titleRegular}}</span>\r\n    </span>\r\n    <div class=\"progress\"><div [ngStyle]=\"{'width' : complete+'%'}\"></div></div>\r\n    <div class=\"flex-group space-between\">\r\n        <div>{{leftSideText}}</div>\r\n        <div>{{rightSideText}}</div>\r\n    </div>\r\n</div>",
+                template: "<div \r\n    class=\"progress-bar\" \r\n    [ngStyle]=\"{'width' : maxWidth}\"\r\n    [ngClass]=\"{'display-over-header' : displayOverHeader}\"\r\n>\r\n    <span>\r\n        <strong>{{titleBold}} </strong>\r\n        <span>{{titleRegular}}</span>\r\n    </span>\r\n    <div class=\"progress {{progressBgColour}}\">\r\n        <div [id]=\"progressId\" class=\"{{progressColour}}\" [ngStyle]=\"{'width' : complete+'%'}\"></div>\r\n    </div>\r\n    <div class=\"flex-group space-between\">\r\n        <div>{{leftSideText}}</div>\r\n        <div>{{rightSideText}}</div>\r\n    </div>\r\n</div>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -5561,6 +5804,14 @@ ProgressBarComponent.propDecorators = {
             type: Input
         }], maxWidth: [{
             type: Input
+        }], displayOverHeader: [{
+            type: Input
+        }], progressBgColour: [{
+            type: Input
+        }], progressColour: [{
+            type: Input
+        }], progressId: [{
+            type: Input
         }] }); })();
 
 class ProgressCircleComponent {
@@ -5569,8 +5820,9 @@ class ProgressCircleComponent {
     }
 }
 ProgressCircleComponent.ɵfac = function ProgressCircleComponent_Factory(t) { return new (t || ProgressCircleComponent)(); };
-ProgressCircleComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressCircleComponent, selectors: [["aa-progress-circle"]], inputs: { name: "name", percent: "percent", value: "value", colour: "colour", isSmall: "isSmall", panelView: "panelView", enableTooltip: "enableTooltip", tooltipTitle: "tooltipTitle", tooltipBody: "tooltipBody", xpos: "xpos", ypos: "ypos", tooltipMinWidth: "tooltipMinWidth", hideChevron: "hideChevron", headerColor: "headerColor", isError: "isError", isWarning: "isWarning", isInfo: "isInfo" }, decls: 2, vars: 2, consts: [["class", "progress-circle", 3, "ngClass", 4, "ngIf"], ["class", "flex-group flex-start", 4, "ngIf"], [1, "progress-circle", 3, "ngClass"], [3, "ngClass"], [1, "flex-group", "flex-align-center", 3, "title"], ["title", "Error", "class", "material-icons status padding-left-0-25 small aa-red-100", 4, "ngIf"], ["title", "Warning", "class", "material-icons status padding-left-0-25 small aa-orange-100", 4, "ngIf"], ["title", "Info", "class", "material-icons-outlined status small padding-left-0-25 aa-light-blue-100", 4, "ngIf"], ["class", "aa-tooltip icon-info margin-left-0-25", 3, "ngStyle", 4, "ngIf"], ["class", "material-icons", 4, "ngIf"], [1, "percent"], ["viewBox", "20 0 60 100"], ["cx", "40", "cy", "40", "r", "40", 3, "ngStyle"], [1, "value", "margin-0"], ["class", "align-center number", 4, "ngIf"], ["title", "Error", 1, "material-icons", "status", "padding-left-0-25", "small", "aa-red-100"], ["title", "Warning", 1, "material-icons", "status", "padding-left-0-25", "small", "aa-orange-100"], ["title", "Info", 1, "material-icons-outlined", "status", "small", "padding-left-0-25", "aa-light-blue-100"], [1, "aa-tooltip", "icon-info", "margin-left-0-25", 3, "ngStyle"], [3, "ngStyle"], [1, "material-icons"], [1, "align-center", "number"], [1, "flex-group", "flex-start"], [1, "progress-circle", "small", "margin-right-0-5"], ["cx", "15", "cy", "15", "r", "15", 3, "ngStyle"], [1, "margin-top-0-75"]], template: function ProgressCircleComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵtemplate(0, ProgressCircleComponent_div_0_Template, 19, 29, "div", 0);
+ProgressCircleComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ProgressCircleComponent, selectors: [["aa-progress-circle"]], inputs: { name: "name", percent: "percent", value: "value", colour: "colour", isSmall: "isSmall", panelView: "panelView", enableTooltip: "enableTooltip", tooltipTitle: "tooltipTitle", tooltipBody: "tooltipBody", xpos: "xpos", ypos: "ypos", tooltipMinWidth: "tooltipMinWidth", hideChevron: "hideChevron", headerColor: "headerColor", isError: "isError", isWarning: "isWarning", isInfo: "isInfo", enableAlertShield: "enableAlertShield", enableAlertShieldTooltip: "enableAlertShieldTooltip", alertShieldStatus: "alertShieldStatus", alertShieldSmall: "alertShieldSmall", tooltipTopLeft: "tooltipTopLeft", tooltipTopRight: "tooltipTopRight", tooltipBottomLeft: "tooltipBottomLeft", tooltipBottomRight: "tooltipBottomRight", showTooltipHeading: "showTooltipHeading", tooltipHeading: "tooltipHeading", alertShieldText: "alertShieldText" }, ngContentSelectors: _c77, decls: 2, vars: 2, consts: [["class", "progress-circle", 3, "ngClass", 4, "ngIf"], ["class", "flex-group flex-start", 4, "ngIf"], [1, "progress-circle", 3, "ngClass"], [3, "ngClass"], [1, "flex-group", "flex-align-center", 3, "title"], ["title", "Error", "class", "material-icons status padding-left-0-25 small aa-red-100", 4, "ngIf"], ["title", "Warning", "class", "material-icons status padding-left-0-25 small aa-orange-100", 4, "ngIf"], ["title", "Info", "class", "material-icons-outlined status small padding-left-0-25 aa-light-blue-100", 4, "ngIf"], ["class", "aa-tooltip icon-info margin-left-0-25", 3, "ngStyle", 4, "ngIf"], ["class", "material-icons", 4, "ngIf"], [1, "percent"], ["viewBox", "20 0 60 100"], ["cx", "40", "cy", "40", "r", "40", 3, "ngStyle"], [1, "value", "margin-0"], ["class", "align-center number", 4, "ngIf"], [3, "class", 4, "ngIf"], ["class", "alert-shield-tooltip-wrapper", 3, "ngClass", 4, "ngIf"], ["title", "Error", 1, "material-icons", "status", "padding-left-0-25", "small", "aa-red-100"], ["title", "Warning", 1, "material-icons", "status", "padding-left-0-25", "small", "aa-orange-100"], ["title", "Info", 1, "material-icons-outlined", "status", "small", "padding-left-0-25", "aa-light-blue-100"], [1, "aa-tooltip", "icon-info", "margin-left-0-25", 3, "ngStyle"], [3, "ngStyle"], [1, "material-icons"], [1, "align-center", "number"], [1, "alert-shield-tooltip-wrapper", 3, "ngClass"], [4, "ngIf"], [1, "flex-group", "flex-start"], [1, "progress-circle", "small", "margin-right-0-5"], ["cx", "15", "cy", "15", "r", "15", 3, "ngStyle"], [1, "margin-top-0-75"]], template: function ProgressCircleComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c76);
+        ɵngcc0.ɵɵtemplate(0, ProgressCircleComponent_div_0_Template, 21, 31, "div", 0);
         ɵngcc0.ɵɵtemplate(1, ProgressCircleComponent_li_1_Template, 12, 9, "li", 1);
     } if (rf & 2) {
         ɵngcc0.ɵɵproperty("ngIf", !ctx.isSmall);
@@ -5595,13 +5847,24 @@ ProgressCircleComponent.propDecorators = {
     headerColor: [{ type: Input }],
     isError: [{ type: Input }],
     isWarning: [{ type: Input }],
-    isInfo: [{ type: Input }]
+    isInfo: [{ type: Input }],
+    enableAlertShield: [{ type: Input }],
+    enableAlertShieldTooltip: [{ type: Input }],
+    alertShieldStatus: [{ type: Input }],
+    alertShieldSmall: [{ type: Input }],
+    tooltipTopLeft: [{ type: Input }],
+    tooltipTopRight: [{ type: Input }],
+    tooltipBottomLeft: [{ type: Input }],
+    tooltipBottomRight: [{ type: Input }],
+    showTooltipHeading: [{ type: Input }],
+    tooltipHeading: [{ type: Input }],
+    alertShieldText: [{ type: Input }]
 };
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(ProgressCircleComponent, [{
         type: Component,
         args: [{
                 selector: 'aa-progress-circle',
-                template: "<div *ngIf=\"!isSmall\" class=\"progress-circle\" [ngClass]=\"{'panel-view' : panelView}\">\r\n  <h3 class=\"flex-center title {{headerColor}}\" [ngClass]=\"{'padding-right-1' : enableTooltip}\">\r\n    <span \r\n      title=\"{{name}}\"\r\n      class=\"flex-group flex-align-center\"\r\n      >\r\n      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}\r\n      <span title=\"Error\" *ngIf=\"isError\" class=\"material-icons status padding-left-0-25 small aa-red-100\">error_outline</span>\r\n      <span title=\"Warning\" *ngIf=\"isWarning\" class=\"material-icons status padding-left-0-25 small aa-orange-100\">warning_amber</span>\r\n      <span title=\"Info\" *ngIf=\"isInfo\" class=\"material-icons-outlined status small padding-left-0-25 aa-light-blue-100\">info</span>\r\n    </span>\r\n    <div *ngIf=\"enableTooltip\" class=\"aa-tooltip icon-info margin-left-0-25\" [ngStyle]=\"{'position' : 'absolute', 'right' : '.75rem'}\">\r\n      <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\">\r\n        <p>{{tooltipBody}}</p>\r\n      </div>\r\n    </div>\r\n    <span *ngIf=\"panelView && !hideChevron\" class=\"material-icons\">chevron_right</span>\r\n  </h3>\r\n  <div class=\"percent\">\r\n    <svg viewBox=\"20 0 60 100\">\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n    </svg>\r\n    <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n  </div>\r\n  <span class=\"align-center number\" *ngIf=\"panelView\">{{value}}</span>\r\n</div>\r\n\r\n<li *ngIf=\"isSmall\" class=\"flex-group flex-start\">\r\n  <div class=\"progress-circle small margin-right-0-5\">\r\n    <div class=\"percent\">\r\n      <svg>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n      </svg>\r\n      <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n    </div>\r\n  </div>\r\n  <div class=\"margin-top-0-75\">{{name}}</div>\r\n</li>\r\n",
+                template: "<div *ngIf=\"!isSmall\" class=\"progress-circle\" [ngClass]=\"{'panel-view' : panelView}\">\r\n  <h3 class=\"flex-center title {{headerColor}}\" [ngClass]=\"{'padding-right-1' : enableTooltip}\">\r\n    <span \r\n      title=\"{{name}}\"\r\n      class=\"flex-group flex-align-center\"\r\n      >\r\n      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}\r\n      <span title=\"Error\" *ngIf=\"isError\" class=\"material-icons status padding-left-0-25 small aa-red-100\">error_outline</span>\r\n      <span title=\"Warning\" *ngIf=\"isWarning\" class=\"material-icons status padding-left-0-25 small aa-orange-100\">warning_amber</span>\r\n      <span title=\"Info\" *ngIf=\"isInfo\" class=\"material-icons-outlined status small padding-left-0-25 aa-light-blue-100\">info</span>\r\n    </span>\r\n    <div *ngIf=\"enableTooltip\" class=\"aa-tooltip icon-info margin-left-0-25\" [ngStyle]=\"{'position' : 'absolute', 'right' : '.75rem'}\">\r\n      <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\">\r\n        <p>{{tooltipBody}}</p>\r\n      </div>\r\n    </div>\r\n    <span *ngIf=\"panelView && !hideChevron\" class=\"material-icons\">chevron_right</span>\r\n  </h3>\r\n  <div class=\"percent\">\r\n    <svg viewBox=\"20 0 60 100\">\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n    </svg>\r\n    <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n  </div>\r\n\r\n  <span \r\n    class=\"align-center number\" \r\n    *ngIf=\"panelView && !enableAlertShield && !enableAlertShieldTooltip\">\r\n    {{value}}\r\n  </span>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShield\" \r\n    class=\"alert-shield small {{alertShieldStatus}}\" \r\n    >\r\n      {{alertShieldText}}\r\n  </div>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShieldTooltip\" \r\n    class=\"alert-shield-tooltip-wrapper\"\r\n    [ngClass]=\"{\r\n        'tooltip-top-left' : tooltipTopLeft,\r\n        'tooltip-top-right' : tooltipTopRight,\r\n        'tooltip-bottom-left' : tooltipBottomLeft,\r\n        'tooltip-bottom-right' : tooltipBottomRight\r\n    }\"\r\n  >\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}}\"\r\n        [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield small {{alertShieldStatus}}\" \r\n        >\r\n          {{alertShieldText}}\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<li *ngIf=\"isSmall\" class=\"flex-group flex-start\">\r\n  <div class=\"progress-circle small margin-right-0-5\">\r\n    <div class=\"percent\">\r\n      <svg>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n      </svg>\r\n      <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n    </div>\r\n  </div>\r\n  <div class=\"margin-top-0-75\">{{name}}</div>\r\n</li>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -5639,6 +5902,28 @@ ProgressCircleComponent.propDecorators = {
             type: Input
         }], isInfo: [{
             type: Input
+        }], enableAlertShield: [{
+            type: Input
+        }], enableAlertShieldTooltip: [{
+            type: Input
+        }], alertShieldStatus: [{
+            type: Input
+        }], alertShieldSmall: [{
+            type: Input
+        }], tooltipTopLeft: [{
+            type: Input
+        }], tooltipTopRight: [{
+            type: Input
+        }], tooltipBottomLeft: [{
+            type: Input
+        }], tooltipBottomRight: [{
+            type: Input
+        }], showTooltipHeading: [{
+            type: Input
+        }], tooltipHeading: [{
+            type: Input
+        }], alertShieldText: [{
+            type: Input
         }] }); })();
 
 class ActionsSummaryComponent {
@@ -5652,7 +5937,7 @@ ActionsSummaryComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type
         ɵngcc0.ɵɵtemplate(1, ActionsSummaryComponent_section_1_Template, 6, 10, "section", 1);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(2, _c73, ctx.verticalDisplay, ctx.noWrap));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(2, _c78, ctx.verticalDisplay, ctx.noWrap));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngForOf", ctx.actionsSummaryItems);
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgForOf], pipes: [ɵngcc1.SlicePipe], styles: [""], changeDetection: 0 });
@@ -5744,9 +6029,9 @@ CounterComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Count
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction8(3, _c75, ctx.countInfo, ctx.countError, ctx.countWarning, ctx.countSuccess, ctx.countInfoLight, ctx.countErrorLight, ctx.countWarningLight, ctx.countSuccessLight));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction8(3, _c80, ctx.countInfo, ctx.countError, ctx.countWarning, ctx.countSuccess, ctx.countInfoLight, ctx.countErrorLight, ctx.countWarningLight, ctx.countSuccessLight));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(12, _c76, ctx.countInfo || ctx.countError || ctx.countWarning || ctx.countSuccess));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(12, _c81, ctx.countInfo || ctx.countError || ctx.countWarning || ctx.countSuccess));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate1(" ", ctx.count, " ");
     } }, directives: [ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
@@ -5790,6 +6075,135 @@ CounterComponent.propDecorators = {
             type: Input
         }] }); })();
 
+class TagComponent {
+    constructor() {
+        this.removeTag = new EventEmitter();
+    }
+    onRemove(e) {
+        e.stopPropagation();
+        this.removeTag.emit(e);
+    }
+    ngOnInit() {
+    }
+}
+TagComponent.ɵfac = function TagComponent_Factory(t) { return new (t || TagComponent)(); };
+TagComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: TagComponent, selectors: [["aa-tag"]], inputs: { isShaped: "isShaped", tagText: "tagText", isRed: "isRed", isOrange: "isOrange", isGreen: "isGreen", isPlum: "isPlum", isBlue: "isBlue", isLightBlue: "isLightBlue", isWhite: "isWhite", isOchre: "isOchre", isBlack: "isBlack", isPink: "isPink" }, outputs: { removeTag: "removeTag" }, decls: 2, vars: 2, consts: [["class", "aa-tag", 3, "ngClass", 4, "ngIf"], ["class", "aa-tag-shaped", 3, "ngClass", 4, "ngIf"], [1, "aa-tag", 3, "ngClass"], ["class", "material-icons aa-white-100", 4, "ngIf"], ["class", "material-icons aa-blue-100", 4, "ngIf"], ["class", "aa-white-100", 4, "ngIf"], ["class", "aa-blue-100", 4, "ngIf"], ["class", "anchor-close aa-white-100", 3, "click", 4, "ngIf"], ["class", "anchor-close aa-blue-100", 3, "click", 4, "ngIf"], [1, "material-icons", "aa-white-100"], [1, "material-icons", "aa-blue-100"], [1, "aa-white-100"], [1, "aa-blue-100"], [1, "anchor-close", "aa-white-100", 3, "click"], [1, "anchor-close", "aa-blue-100", 3, "click"], [1, "aa-tag-shaped", 3, "ngClass"]], template: function TagComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵtemplate(0, TagComponent_section_0_Template, 7, 18, "section", 0);
+        ɵngcc0.ɵɵtemplate(1, TagComponent_section_1_Template, 3, 13, "section", 1);
+    } if (rf & 2) {
+        ɵngcc0.ɵɵproperty("ngIf", !ctx.isShaped);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.isShaped);
+    } }, directives: [ɵngcc1.NgIf, ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
+TagComponent.ctorParameters = () => [];
+TagComponent.propDecorators = {
+    isShaped: [{ type: Input }],
+    tagText: [{ type: Input }],
+    isRed: [{ type: Input }],
+    isOrange: [{ type: Input }],
+    isGreen: [{ type: Input }],
+    isPlum: [{ type: Input }],
+    isBlue: [{ type: Input }],
+    isLightBlue: [{ type: Input }],
+    isWhite: [{ type: Input }],
+    isOchre: [{ type: Input }],
+    isBlack: [{ type: Input }],
+    isPink: [{ type: Input }],
+    removeTag: [{ type: Output }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(TagComponent, [{
+        type: Component,
+        args: [{
+                selector: 'aa-tag',
+                template: "<section \n    *ngIf=\"!isShaped\" \n    class=\"aa-tag\"\n    [ngClass]=\"{\n        'bg-aa-red-100' : isRed,\n        'bg-aa-orange-100' : isOrange,\n        'bg-aa-green-100' : isGreen,\n        'bg-aa-blue-100' : isBlue,\n        'bg-aa-light-blue-100' : isLightBlue,\n        'bg-aa-plum-100' : isPlum,\n        'bg-aa-ochre-100' : isOchre,\n        'bg-aa-white-100' : isWhite,\n        'bg-aa-grey-100' : isBlack,\n        'bg-aa-pink-100' : isPink\n    }\"\n>\n    <div *ngIf=\"!isWhite\" class=\"material-icons aa-white-100\">loyalty</div>\n    <div *ngIf=\"isWhite\" class=\"material-icons aa-blue-100\">loyalty</div>\n    <span *ngIf=\"!isWhite\" class=\"aa-white-100\">{{tagText}}</span>\n    <span *ngIf=\"isWhite\" class=\"aa-blue-100\">{{tagText}}</span>\n    <a *ngIf=\"!isWhite\" class=\"anchor-close aa-white-100\" (click)=\"onRemove($event)\"></a>\n    <a *ngIf=\"isWhite\" class=\"anchor-close aa-blue-100\" (click)=\"onRemove($event)\"></a>\n</section>\n\n<section \n    *ngIf=\"isShaped\"\n    class=\"aa-tag-shaped\"\n    [ngClass]=\"{\n        'bg-aa-red-100' : isRed,\n        'bg-aa-orange-100' : isOrange,\n        'bg-aa-green-100' : isGreen,\n        'bg-aa-blue-100' : isBlue,\n        'bg-aa-light-blue-100' : isLightBlue,\n        'bg-aa-plum-100' : isPlum,\n        'bg-aa-ochre-100' : isOchre,\n        'bg-aa-white-100' : isWhite,\n        'bg-aa-grey-100' : isBlack,\n        'bg-aa-pink-100' : isPink\n    }\"\n>\n    <span>{{tagText}}</span>\n</section>",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+                styles: [""]
+            }]
+    }], function () { return []; }, { removeTag: [{
+            type: Output
+        }], isShaped: [{
+            type: Input
+        }], tagText: [{
+            type: Input
+        }], isRed: [{
+            type: Input
+        }], isOrange: [{
+            type: Input
+        }], isGreen: [{
+            type: Input
+        }], isPlum: [{
+            type: Input
+        }], isBlue: [{
+            type: Input
+        }], isLightBlue: [{
+            type: Input
+        }], isWhite: [{
+            type: Input
+        }], isOchre: [{
+            type: Input
+        }], isBlack: [{
+            type: Input
+        }], isPink: [{
+            type: Input
+        }] }); })();
+
+class FeatureBoxComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+FeatureBoxComponent.ɵfac = function FeatureBoxComponent_Factory(t) { return new (t || FeatureBoxComponent)(); };
+FeatureBoxComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: FeatureBoxComponent, selectors: [["aa-feature-box"]], inputs: { marginTop: "marginTop", marginBottom: "marginBottom", fbWidth: "fbWidth", fbHeight: "fbHeight", isSolid: "isSolid", fbStatus: "fbStatus", includeHeader: "includeHeader", enableScrolling: "enableScrolling" }, ngContentSelectors: _c88, decls: 3, vars: 14, consts: [[3, "ngStyle", "ngClass"], [4, "ngIf"], [3, "ngClass"], [1, "fb-contnet", 3, "ngStyle"]], template: function FeatureBoxComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c85);
+        ɵngcc0.ɵɵelementStart(0, "section", 0);
+        ɵngcc0.ɵɵtemplate(1, FeatureBoxComponent_div_1_Template, 5, 7, "div", 1);
+        ɵngcc0.ɵɵtemplate(2, FeatureBoxComponent_div_2_Template, 2, 0, "div", 1);
+        ɵngcc0.ɵɵelementEnd();
+    } if (rf & 2) {
+        ɵngcc0.ɵɵclassMapInterpolate1("feature-box ", ctx.fbStatus, "");
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction3(7, _c86, ctx.fbWidth, ctx.marginTop, ctx.marginBottom))("ngClass", ɵngcc0.ɵɵpureFunction2(11, _c87, ctx.isSolid, ctx.enableScrolling));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", ctx.includeHeader);
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngIf", !ctx.includeHeader);
+    } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass, ɵngcc1.NgIf], styles: [""], changeDetection: 0 });
+FeatureBoxComponent.ctorParameters = () => [];
+FeatureBoxComponent.propDecorators = {
+    marginTop: [{ type: Input }],
+    marginBottom: [{ type: Input }],
+    fbWidth: [{ type: Input }],
+    fbHeight: [{ type: Input }],
+    isSolid: [{ type: Input }],
+    fbStatus: [{ type: Input }],
+    includeHeader: [{ type: Input }],
+    enableScrolling: [{ type: Input }]
+};
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(FeatureBoxComponent, [{
+        type: Component,
+        args: [{
+                selector: 'aa-feature-box',
+                template: "<section \n  class=\"feature-box {{fbStatus}}\"\n  [ngStyle]=\"{\n      'width' : fbWidth,\n      'margin-top' : marginTop,\n      'margin-bottom' : marginBottom\n  }\"\n  [ngClass]=\"{\n      'solid' : isSolid,\n      'padding-right-0' : enableScrolling\n  }\"\n>\n  <div *ngIf=\"includeHeader\">\n    <div [ngClass]=\"{'padding-right-0-75' : enableScrolling}\">\n      <ng-content select=\"[custom-header]\"></ng-content>\n    </div>\n    <div \n      [ngStyle]=\"{\n        'height' : fbHeight,\n        'overflow': enableScrolling ? 'auto' : ''\n      }\" \n      class=\"fb-contnet\"\n    >\n      <ng-content select=\"[custom-content]\"></ng-content>\n    </div>\n  </div>\n  <div *ngIf=\"!includeHeader\">\n    <ng-content></ng-content>\n  </div>\n</section>\n",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+                styles: [""]
+            }]
+    }], function () { return []; }, { marginTop: [{
+            type: Input
+        }], marginBottom: [{
+            type: Input
+        }], fbWidth: [{
+            type: Input
+        }], fbHeight: [{
+            type: Input
+        }], isSolid: [{
+            type: Input
+        }], fbStatus: [{
+            type: Input
+        }], includeHeader: [{
+            type: Input
+        }], enableScrolling: [{
+            type: Input
+        }] }); })();
+
 class PatternsModule {
 }
 PatternsModule.ɵfac = function PatternsModule_Factory(t) { return new (t || PatternsModule)(); };
@@ -5808,7 +6222,9 @@ PatternsModule.ɵinj = /*@__PURE__*/ ɵngcc0.ɵɵdefineInjector({ imports: [[
                     ProgressCircleComponent,
                     ActionsSummaryComponent,
                     StatusIndicatorComponent,
-                    CounterComponent
+                    CounterComponent,
+                    TagComponent,
+                    FeatureBoxComponent
                 ],
                 imports: [
                     CommonModule
@@ -5821,11 +6237,13 @@ PatternsModule.ɵinj = /*@__PURE__*/ ɵngcc0.ɵɵdefineInjector({ imports: [[
                     ProgressCircleComponent,
                     ActionsSummaryComponent,
                     StatusIndicatorComponent,
-                    CounterComponent
+                    CounterComponent,
+                    TagComponent,
+                    FeatureBoxComponent
                 ]
             }]
     }], null, null); })();
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(PatternsModule, { declarations: function () { return [AlertComponent, AlertShieldComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent, ActionsSummaryComponent, StatusIndicatorComponent, CounterComponent]; }, imports: function () { return [CommonModule]; }, exports: function () { return [AlertComponent, AlertShieldComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent, ActionsSummaryComponent, StatusIndicatorComponent, CounterComponent]; } }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(PatternsModule, { declarations: function () { return [AlertComponent, AlertShieldComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent, ActionsSummaryComponent, StatusIndicatorComponent, CounterComponent, TagComponent, FeatureBoxComponent]; }, imports: function () { return [CommonModule]; }, exports: function () { return [AlertComponent, AlertShieldComponent, AnchorBackComponent, ProgressBarComponent, ProgressCircleComponent, ActionsSummaryComponent, StatusIndicatorComponent, CounterComponent, TagComponent, FeatureBoxComponent]; } }); })();
 
 class IconFilterPipe {
     transform(items, searchIcon) {
@@ -5861,8 +6279,8 @@ class AccordionComponent {
     }
 }
 AccordionComponent.ɵfac = function AccordionComponent_Factory(t) { return new (t || AccordionComponent)(); };
-AccordionComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AccordionComponent, selectors: [["aa-accordion"]], inputs: { showBody: "showBody", disabled: "disabled", minWidth: "minWidth", iconsEnabled: "iconsEnabled", dragable: "dragable", sectionId: "sectionId", accordionHeading: "accordionHeading", accordionId: "accordionId", iconName: "iconName", accordionClean: "accordionClean", fontAwesome: "fontAwesome", fontClassName: "fontClassName", iconBgColor: "iconBgColor", customBgColor: "customBgColor", clearPadding: "clearPadding", verticalDisplay: "verticalDisplay", verticalMinHeight: "verticalMinHeight" }, outputs: { open: "open" }, ngContentSelectors: _c82, decls: 18, vars: 29, consts: [[1, "accordion-container", 3, "ngStyle", "ngClass"], [1, "margin-0"], ["aria-controls", "sectionId", "type", "button", 3, "ngClass", "id", "click"], [1, "flex-align-center", "flex-group", "flex-start"], ["class", "accordion-icon material-icons drag-icon", 4, "ngIf"], [3, "class", 4, "ngIf"], [1, "nested-icons"], ["class", "material-icons", 4, "ngIf"], [1, "accordion-heading"], [1, "flex-group", "flex-end", "flex-align-center"], [1, "toggle-icons", "flex-align-center"], ["class", "accordion-panel", 3, "id", "ngStyle", 4, "ngIf"], [1, "accordion-icon", "material-icons", "drag-icon"], [1, "material-icons"], [1, "accordion-panel", 3, "id", "ngStyle"]], template: function AccordionComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c78);
+AccordionComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AccordionComponent, selectors: [["aa-accordion"]], inputs: { showBody: "showBody", disabled: "disabled", minWidth: "minWidth", iconsEnabled: "iconsEnabled", dragable: "dragable", sectionId: "sectionId", accordionHeading: "accordionHeading", accordionId: "accordionId", iconName: "iconName", accordionClean: "accordionClean", fontAwesome: "fontAwesome", fontClassName: "fontClassName", iconBgColor: "iconBgColor", customBgColor: "customBgColor", clearPadding: "clearPadding", verticalDisplay: "verticalDisplay", verticalMinHeight: "verticalMinHeight" }, outputs: { open: "open" }, ngContentSelectors: _c94, decls: 18, vars: 29, consts: [[1, "accordion-container", 3, "ngStyle", "ngClass"], [1, "margin-0"], ["aria-controls", "sectionId", "type", "button", 3, "ngClass", "id", "click"], [1, "flex-align-center", "flex-group", "flex-start"], ["class", "accordion-icon material-icons drag-icon", 4, "ngIf"], [3, "class", 4, "ngIf"], [1, "nested-icons"], ["class", "material-icons", 4, "ngIf"], [1, "accordion-heading"], [1, "flex-group", "flex-end", "flex-align-center"], [1, "toggle-icons", "flex-align-center"], ["class", "accordion-panel", 3, "id", "ngStyle", 4, "ngIf"], [1, "accordion-icon", "material-icons", "drag-icon"], [1, "material-icons"], [1, "accordion-panel", 3, "id", "ngStyle"]], template: function AccordionComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c90);
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵelementStart(1, "h3", 1);
         ɵngcc0.ɵɵelementStart(2, "button", 2);
@@ -5891,10 +6309,10 @@ AccordionComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Acc
         ɵngcc0.ɵɵtemplate(17, AccordionComponent_div_17_Template, 2, 4, "div", 11);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(17, _c79, ctx.minWidth + "rem", ctx.verticalDisplay ? ctx.verticalMinHeight : "auto"))("ngClass", ɵngcc0.ɵɵpureFunction2(20, _c80, ctx.showBody, ctx.verticalDisplay));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(17, _c91, ctx.minWidth + "rem", ctx.verticalDisplay ? ctx.verticalMinHeight : "auto"))("ngClass", ɵngcc0.ɵɵpureFunction2(20, _c92, ctx.showBody, ctx.verticalDisplay));
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵclassMapInterpolate1("accordion-trigger flex-group space-between flex-nowrap ", ctx.customBgColor, "");
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction5(23, _c81, ctx.showBody, ctx.accordionClean, ctx.disabled, ctx.verticalDisplay, !ctx.verticalDisplay))("id", ctx.accordionId);
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction5(23, _c93, ctx.showBody, ctx.accordionClean, ctx.disabled, ctx.verticalDisplay, !ctx.verticalDisplay))("id", ctx.accordionId);
         ɵngcc0.ɵɵattribute("aria-expanded.true", ctx.showBody);
         ɵngcc0.ɵɵadvance(2);
         ɵngcc0.ɵɵproperty("ngIf", ctx.dragable);
@@ -5988,7 +6406,7 @@ class AccordionFancyComponent {
     }
 }
 AccordionFancyComponent.ɵfac = function AccordionFancyComponent_Factory(t) { return new (t || AccordionFancyComponent)(); };
-AccordionFancyComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AccordionFancyComponent, selectors: [["aa-accordion-fancy"]], inputs: { showBody: "showBody", materialIcons: "materialIcons", itemTitle: "itemTitle", accordionId: "accordionId", iconName: "iconName", iconColour: "iconColour" }, ngContentSelectors: _c18, decls: 12, vars: 8, consts: [[3, "id"], [1, "margin-0"], ["aria-controls", "accordionId", "type", "button", 1, "accordion-fancy-trigger", "box", "flex-group", "flex-align-center", "space-between", 3, "click"], [1, "flex-align-center"], [3, "class", 4, "ngIf"], [1, "aa-toggle", "flex-align-center"], ["class", "material-icons", 4, "ngIf"], ["class", "accordion-fancy-panel", 4, "ngIf"], [1, "material-icons"], [1, "accordion-fancy-panel"]], template: function AccordionFancyComponent_Template(rf, ctx) { if (rf & 1) {
+AccordionFancyComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: AccordionFancyComponent, selectors: [["aa-accordion-fancy"]], inputs: { showBody: "showBody", materialIcons: "materialIcons", itemTitle: "itemTitle", accordionId: "accordionId", iconName: "iconName", iconColour: "iconColour" }, ngContentSelectors: _c19, decls: 12, vars: 8, consts: [[3, "id"], [1, "margin-0"], ["aria-controls", "accordionId", "type", "button", 1, "accordion-fancy-trigger", "box", "flex-group", "flex-align-center", "space-between", 3, "click"], [1, "flex-align-center"], [3, "class", 4, "ngIf"], [1, "aa-toggle", "flex-align-center"], ["class", "material-icons", 4, "ngIf"], ["class", "accordion-fancy-panel", 4, "ngIf"], [1, "material-icons"], [1, "accordion-fancy-panel"]], template: function AccordionFancyComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "section", 0);
         ɵngcc0.ɵɵelementStart(1, "h3", 1);
@@ -6069,8 +6487,8 @@ class CardComponent {
     }
 }
 CardComponent.ɵfac = function CardComponent_Factory(t) { return new (t || CardComponent)(); };
-CardComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CardComponent, selectors: [["aa-card"]], inputs: { cardName: "cardName", cardRole: "cardRole", cardOptional: "cardOptional", cardMini: "cardMini", cardDetailed: "cardDetailed", cardWidth: "cardWidth", themeColour: "themeColour", zIndex: "zIndex", imgPath: "imgPath", title: "title", showAsIcon: "showAsIcon", showAsProfile: "showAsProfile", iconName: "iconName", borderClass: "borderClass", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos" }, outputs: { cardClick: "cardClick" }, ngContentSelectors: _c88, decls: 4, vars: 4, consts: [["class", "aa-card flex-group width-control box-shadow", 3, "ngStyle", 4, "ngIf"], ["class", "aa-card-opt box-shadow", 3, "ngStyle", 4, "ngIf"], [3, "class", "click", 4, "ngIf"], ["class", "aa-card card-detailed flex-group box-shadow", 3, "ngStyle", 4, "ngIf"], [1, "aa-card", "flex-group", "width-control", "box-shadow", 3, "ngStyle"], [1, "card-image", "fingerprint", "border-light"], ["onerror", "this.style.display='none'", 3, "alt", "src"], [3, "title"], [1, "aa-toolbar"], [1, "aa-card-opt", "box-shadow", 3, "ngStyle"], [1, "flex-group", "flex-end", "flex-align-center"], [1, "cursor-pointer", 3, "click"], [1, "card-image", "fingerprint", 3, "ngStyle"], [3, "title", "ngStyle"], [3, "click"], ["class", "material-icons", 4, "ngIf"], ["class", "card-image fingerprint", 4, "ngIf"], [1, "material-icons"], [1, "card-image", "fingerprint"], [1, "aa-card", "card-detailed", "flex-group", "box-shadow", 3, "ngStyle"], [3, "alt", "src"]], template: function CardComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c87);
+CardComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: CardComponent, selectors: [["aa-card"]], inputs: { cardName: "cardName", cardRole: "cardRole", cardOptional: "cardOptional", cardMini: "cardMini", cardDetailed: "cardDetailed", cardWidth: "cardWidth", themeColour: "themeColour", zIndex: "zIndex", imgPath: "imgPath", title: "title", showAsIcon: "showAsIcon", showAsProfile: "showAsProfile", iconName: "iconName", borderClass: "borderClass", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos" }, outputs: { cardClick: "cardClick" }, ngContentSelectors: _c100, decls: 4, vars: 4, consts: [["class", "aa-card flex-group width-control box-shadow", 3, "ngStyle", 4, "ngIf"], ["class", "aa-card-opt box-shadow", 3, "ngStyle", 4, "ngIf"], [3, "class", "click", 4, "ngIf"], ["class", "aa-card card-detailed flex-group flex-nowrap box-shadow", 3, "ngStyle", 4, "ngIf"], [1, "aa-card", "flex-group", "width-control", "box-shadow", 3, "ngStyle"], [1, "card-image", "fingerprint", "border-light"], ["onerror", "this.style.display='none'", 3, "alt", "src"], [3, "title"], [1, "aa-toolbar"], [1, "aa-card-opt", "box-shadow", 3, "ngStyle"], [1, "flex-group", "flex-end", "flex-align-center"], [1, "cursor-pointer", 3, "click"], [1, "card-image", "fingerprint", 3, "ngStyle"], [3, "title", "ngStyle"], [3, "click"], ["class", "material-icons", 4, "ngIf"], ["class", "card-image fingerprint", 4, "ngIf"], [1, "material-icons"], [1, "card-image", "fingerprint"], [1, "aa-card", "card-detailed", "flex-group", "flex-nowrap", "box-shadow", 3, "ngStyle"], [3, "alt", "src"]], template: function CardComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c99);
         ɵngcc0.ɵɵtemplate(0, CardComponent_article_0_Template, 10, 12, "article", 0);
         ɵngcc0.ɵɵtemplate(1, CardComponent_article_1_Template, 13, 24, "article", 1);
         ɵngcc0.ɵɵtemplate(2, CardComponent_button_2_Template, 7, 6, "button", 2);
@@ -6109,7 +6527,7 @@ CardComponent.propDecorators = {
         type: Component,
         args: [{
                 selector: 'aa-card',
-                template: "<article \r\n  *ngIf=\"!cardOptional && !cardMini && !cardDetailed\" \r\n  class=\"aa-card flex-group width-control box-shadow\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos+'rem',\r\n    'left' : leftPos+'rem',\r\n    'right' : rightPos+'rem'\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img onerror=\"this.style.display='none'\" alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <h3 title=\"{{cardName}}\">{{cardName}}</h3>\r\n    <p title=\"{{cardRole}}\">{{cardRole}}</p>\r\n    <div class=\"aa-toolbar\">\r\n      <ng-content select=\"[card-menu]\"></ng-content>\r\n    </div>\r\n  </div>\r\n</article>\r\n\r\n<article \r\n  *ngIf=\"cardOptional\" \r\n  class=\"aa-card-opt box-shadow\" \r\n  [ngStyle]=\"{'z-index' : zIndex}\"\r\n>\r\n    <div class=\"flex-group flex-end flex-align-center\">\r\n      <ng-content select=\"[card-menu-opt]\"></ng-content>\r\n    </div>\r\n    <div class=\"cursor-pointer\" (click)=\"onCardClick($event)\">\r\n      <div class=\"card-image fingerprint\" [ngStyle]=\"{'border' : '.35rem solid ' +themeColour, 'background-color' : themeColour}\">\r\n        <img onerror=\"this.style.display='none'\" alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n      </div>\r\n      <h3 title=\"{{cardName}}\" [ngStyle]=\"{'color' : themeColour }\">{{ (cardName.length>14)? (cardName | slice:0:14)+'...':(cardName) }}</h3>\r\n      <p title=\"{{cardRole}}\">{{ (cardRole.length>37)? (cardRole | slice:0:37)+'...':(cardRole) }}</p>\r\n    </div>\r\n    <ng-content select=\"[card-hover-content]\"></ng-content>\r\n</article>\r\n\r\n<button \r\n  *ngIf=\"cardMini\" \r\n  class=\"card-mini flex-align-center flex-start {{borderClass}} box-shadow\"\r\n  (click)=\"onCardClick($event)\"\r\n>\r\n  <div *ngIf=\"showAsIcon\" class=\"material-icons\">{{iconName}}</div>\r\n  <div *ngIf=\"showAsProfile\" class=\"card-image fingerprint\">\r\n    <ng-content select=\"[profile-image]\"></ng-content>\r\n  </div>\r\n  <div>\r\n    <h5>{{title}}</h5>\r\n    <ng-content select=\"[content]\"></ng-content>\r\n  </div>\r\n</button>\r\n\r\n<article \r\n  *ngIf=\"cardDetailed\" \r\n  class=\"aa-card card-detailed flex-group box-shadow\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos,\r\n    'left' : leftPos,\r\n    'width' : cardWidth\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <ng-content select=\"[card-detailed-content]\"></ng-content>\r\n  </div>\r\n</article>\r\n",
+                template: "<article \r\n  *ngIf=\"!cardOptional && !cardMini && !cardDetailed\" \r\n  class=\"aa-card flex-group width-control box-shadow\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos+'rem',\r\n    'left' : leftPos+'rem',\r\n    'right' : rightPos+'rem'\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img onerror=\"this.style.display='none'\" alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <h3 title=\"{{cardName}}\">{{cardName}}</h3>\r\n    <p title=\"{{cardRole}}\">{{cardRole}}</p>\r\n    <div class=\"aa-toolbar\">\r\n      <ng-content select=\"[card-menu]\"></ng-content>\r\n    </div>\r\n  </div>\r\n</article>\r\n\r\n<article \r\n  *ngIf=\"cardOptional\" \r\n  class=\"aa-card-opt box-shadow\" \r\n  [ngStyle]=\"{'z-index' : zIndex}\"\r\n>\r\n    <div class=\"flex-group flex-end flex-align-center\">\r\n      <ng-content select=\"[card-menu-opt]\"></ng-content>\r\n    </div>\r\n    <div class=\"cursor-pointer\" (click)=\"onCardClick($event)\">\r\n      <div class=\"card-image fingerprint\" [ngStyle]=\"{'border' : '.35rem solid ' +themeColour, 'background-color' : themeColour}\">\r\n        <img onerror=\"this.style.display='none'\" alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n      </div>\r\n      <h3 title=\"{{cardName}}\" [ngStyle]=\"{'color' : themeColour }\">{{ (cardName.length>14)? (cardName | slice:0:14)+'...':(cardName) }}</h3>\r\n      <p title=\"{{cardRole}}\">{{ (cardRole.length>37)? (cardRole | slice:0:37)+'...':(cardRole) }}</p>\r\n    </div>\r\n    <ng-content select=\"[card-hover-content]\"></ng-content>\r\n</article>\r\n\r\n<button \r\n  *ngIf=\"cardMini\" \r\n  class=\"card-mini flex-align-center flex-start {{borderClass}} box-shadow\"\r\n  (click)=\"onCardClick($event)\"\r\n>\r\n  <div *ngIf=\"showAsIcon\" class=\"material-icons\">{{iconName}}</div>\r\n  <div *ngIf=\"showAsProfile\" class=\"card-image fingerprint\">\r\n    <ng-content select=\"[profile-image]\"></ng-content>\r\n  </div>\r\n  <div>\r\n    <h5>{{title}}</h5>\r\n    <ng-content select=\"[content]\"></ng-content>\r\n  </div>\r\n</button>\r\n\r\n<article \r\n  *ngIf=\"cardDetailed\" \r\n  class=\"aa-card card-detailed flex-group flex-nowrap box-shadow\" \r\n  [ngStyle]=\"{\r\n    'z-index' : zIndex,\r\n    'top' : topPos,\r\n    'left' : leftPos,\r\n    'width' : cardWidth\r\n  }\"\r\n>\r\n  <div class=\"card-image fingerprint border-light\">\r\n    <img alt=\"{{cardName}}\" [src]=\"imgPath\">\r\n  </div>\r\n  <div>\r\n    <ng-content select=\"[card-detailed-content]\"></ng-content>\r\n  </div>\r\n</article>\r\n",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -6223,7 +6641,7 @@ CarouselComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Caro
         let _t;
         ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.items = _t);
     } }, viewQuery: function CarouselComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵviewQuery(_c89, 5);
+        ɵngcc0.ɵɵviewQuery(_c101, 5);
         ɵngcc0.ɵɵviewQuery(CarouselItemElementDirective, 5, ElementRef);
     } if (rf & 2) {
         let _t;
@@ -6255,7 +6673,7 @@ CarouselComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Caro
         ɵngcc0.ɵɵclassMapInterpolate1("flex-group flex-center ", ctx.customClass, "");
         ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(14, _c9, ctx.carouselOuterWidth));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(16, _c91, ctx.carouselInnerWidth, ctx.carouselInnerHeight));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(16, _c103, ctx.carouselInnerWidth, ctx.carouselInnerHeight));
         ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵproperty("ngForOf", ctx.items);
         ɵngcc0.ɵɵadvance(2);
@@ -6342,7 +6760,7 @@ class DashboardContainerComponent {
     }
 }
 DashboardContainerComponent.ɵfac = function DashboardContainerComponent_Factory(t) { return new (t || DashboardContainerComponent)(); };
-DashboardContainerComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: DashboardContainerComponent, selectors: [["aa-dashboard-container"]], inputs: { dashboardId: "dashboardId", dashboardHeading: "dashboardHeading", headerColor: "headerColor" }, ngContentSelectors: _c18, decls: 5, vars: 4, consts: [[1, "dashboard-container", 3, "id"]], template: function DashboardContainerComponent_Template(rf, ctx) { if (rf & 1) {
+DashboardContainerComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: DashboardContainerComponent, selectors: [["aa-dashboard-container"]], inputs: { dashboardId: "dashboardId", dashboardHeading: "dashboardHeading", headerColor: "headerColor" }, ngContentSelectors: _c19, decls: 5, vars: 4, consts: [[1, "dashboard-container", 3, "id"]], template: function DashboardContainerComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵelementStart(1, "h3");
@@ -6958,8 +7376,8 @@ class InfoPanelComponent {
     }
 }
 InfoPanelComponent.ɵfac = function InfoPanelComponent_Factory(t) { return new (t || InfoPanelComponent)(); };
-InfoPanelComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: InfoPanelComponent, selectors: [["aa-info-panel"]], inputs: { panelWidth: "panelWidth", panelHeight: "panelHeight", panelStatus: "panelStatus", preventOpacity: "preventOpacity" }, ngContentSelectors: _c94, decls: 9, vars: 9, consts: [[3, "ngStyle"], [1, "foreground", 3, "ngStyle"], [1, "info-panel-header", "padding-1"], [1, "info-panel-content", "padding-1"], [1, "info-panel-footer"], [1, "background"]], template: function InfoPanelComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c92);
+InfoPanelComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: InfoPanelComponent, selectors: [["aa-info-panel"]], inputs: { panelWidth: "panelWidth", panelHeight: "panelHeight", panelStatus: "panelStatus", preventOpacity: "preventOpacity", removeHeaderBorder: "removeHeaderBorder", roundedCorners: "roundedCorners" }, ngContentSelectors: _c108, decls: 9, vars: 15, consts: [[3, "ngStyle"], [1, "foreground", 3, "ngStyle", "ngClass"], [1, "info-panel-header", "padding-1", 3, "ngStyle"], [1, "info-panel-content", "padding-1"], [1, "info-panel-footer"], [1, "background"]], template: function InfoPanelComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c104);
         ɵngcc0.ɵɵelementStart(0, "section", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵelementStart(2, "div", 2);
@@ -6976,22 +7394,26 @@ InfoPanelComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Inf
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵclassMapInterpolate1("info-panel ", ctx.panelStatus, "");
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(5, _c91, ctx.panelWidth + "rem", ctx.panelHeight + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(7, _c103, ctx.panelWidth + "rem", ctx.panelHeight + "rem"));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngStyle", ctx.preventOpacity && ɵngcc0.ɵɵpureFunction0(8, _c93));
-    } }, directives: [ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
+        ɵngcc0.ɵɵproperty("ngStyle", ctx.preventOpacity && ɵngcc0.ɵɵpureFunction0(10, _c105))("ngClass", ɵngcc0.ɵɵpureFunction1(11, _c106, ctx.roundedCorners));
+        ɵngcc0.ɵɵadvance(1);
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(13, _c107, ctx.removeHeaderBorder ? "none" : "inherit"));
+    } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
 InfoPanelComponent.ctorParameters = () => [];
 InfoPanelComponent.propDecorators = {
     panelWidth: [{ type: Input }],
     panelHeight: [{ type: Input }],
     panelStatus: [{ type: Input }],
-    preventOpacity: [{ type: Input }]
+    preventOpacity: [{ type: Input }],
+    removeHeaderBorder: [{ type: Input }],
+    roundedCorners: [{ type: Input }]
 };
 (function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵngcc0.ɵsetClassMetadata(InfoPanelComponent, [{
         type: Component,
         args: [{
                 selector: 'aa-info-panel',
-                template: "<section \r\n  class=\"info-panel {{panelStatus}}\" \r\n  [ngStyle]=\"{\r\n    'width' : panelWidth+'rem', \r\n    'height' : panelHeight+'rem'\r\n  }\"\r\n>\r\n  <div class=\"foreground\" [ngStyle]=\"preventOpacity && {'opacity':'1'}\">\r\n    <div class=\"info-panel-header padding-1\">\r\n      <ng-content select=\"[custom-header]\"></ng-content>\r\n    </div>\r\n    <div class=\"info-panel-content padding-1\">\r\n      <ng-content select=\"[custom-content]\"></ng-content>\r\n    </div>\r\n    <div class=\"info-panel-footer\">\r\n      <ng-content select=\"[custom-footer]\"></ng-content>\r\n    </div>\r\n  </div>\r\n  <div class=\"background\"></div>\r\n</section>",
+                template: "<section \r\n  class=\"info-panel {{panelStatus}}\" \r\n  [ngStyle]=\"{\r\n    'width' : panelWidth+'rem', \r\n    'height' : panelHeight+'rem'\r\n  }\"\r\n>\r\n  <div \r\n    class=\"foreground\" \r\n    [ngStyle]=\"preventOpacity && {'opacity':'1'}\"\r\n    [ngClass]=\"{'border-radius-0-5' : roundedCorners}\"\r\n  >\r\n    <div \r\n      class=\"info-panel-header padding-1\" \r\n      [ngStyle]=\"{ 'border-bottom': removeHeaderBorder ? 'none' : 'inherit' }\"\r\n    >\r\n      <ng-content select=\"[custom-header]\"></ng-content>\r\n    </div>\r\n    <div class=\"info-panel-content padding-1\">\r\n      <ng-content select=\"[custom-content]\"></ng-content>\r\n    </div>\r\n    <div class=\"info-panel-footer\">\r\n      <ng-content select=\"[custom-footer]\"></ng-content>\r\n    </div>\r\n  </div>\r\n  <div class=\"background\"></div>\r\n</section>",
                 changeDetection: ChangeDetectionStrategy.OnPush,
                 styles: [""]
             }]
@@ -7003,6 +7425,10 @@ InfoPanelComponent.propDecorators = {
             type: Input
         }], preventOpacity: [{
             type: Input
+        }], removeHeaderBorder: [{
+            type: Input
+        }], roundedCorners: [{
+            type: Input
         }] }); })();
 
 class InfoPanelStackedComponent {
@@ -7011,13 +7437,13 @@ class InfoPanelStackedComponent {
     }
 }
 InfoPanelStackedComponent.ɵfac = function InfoPanelStackedComponent_Factory(t) { return new (t || InfoPanelStackedComponent)(); };
-InfoPanelStackedComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: InfoPanelStackedComponent, selectors: [["aa-info-panel-stacked"]], inputs: { approvedForward: "approvedForward", pendingForward: "pendingForward", rejectedForward: "rejectedForward", withdrawnForward: "withdrawnForward", returnedForward: "returnedForward", abandonedForward: "abandonedForward", draftForward: "draftForward", withdrawalPendingForward: "withdrawalPendingForward", resetAll: "resetAll", wrapperWidth: "wrapperWidth", wrapperHeight: "wrapperHeight", fullWidth: "fullWidth" }, ngContentSelectors: _c18, decls: 2, vars: 16, consts: [[1, "info-panel-stacked", 3, "ngStyle", "ngClass"]], template: function InfoPanelStackedComponent_Template(rf, ctx) { if (rf & 1) {
+InfoPanelStackedComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: InfoPanelStackedComponent, selectors: [["aa-info-panel-stacked"]], inputs: { approvedForward: "approvedForward", pendingForward: "pendingForward", rejectedForward: "rejectedForward", withdrawnForward: "withdrawnForward", returnedForward: "returnedForward", abandonedForward: "abandonedForward", draftForward: "draftForward", withdrawalPendingForward: "withdrawalPendingForward", resetAll: "resetAll", wrapperWidth: "wrapperWidth", wrapperHeight: "wrapperHeight", fullWidth: "fullWidth" }, ngContentSelectors: _c19, decls: 2, vars: 16, consts: [[1, "info-panel-stacked", 3, "ngStyle", "ngClass"]], template: function InfoPanelStackedComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "section", 0);
         ɵngcc0.ɵɵprojection(1);
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(2, _c91, ctx.wrapperWidth + "rem", ctx.wrapperHeight + "rem"))("ngClass", ɵngcc0.ɵɵpureFunctionV(5, _c95, [ctx.approvedForward, ctx.pendingForward, ctx.rejectedForward, ctx.withdrawnForward, ctx.returnedForward, ctx.abandonedForward, ctx.draftForward, ctx.withdrawalPendingForward, ctx.resetAll, ctx.fullWidth]));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(2, _c103, ctx.wrapperWidth + "rem", ctx.wrapperHeight + "rem"))("ngClass", ɵngcc0.ɵɵpureFunctionV(5, _c109, [ctx.approvedForward, ctx.pendingForward, ctx.rejectedForward, ctx.withdrawnForward, ctx.returnedForward, ctx.abandonedForward, ctx.draftForward, ctx.withdrawalPendingForward, ctx.resetAll, ctx.fullWidth]));
     } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
 InfoPanelStackedComponent.ctorParameters = () => [];
 InfoPanelStackedComponent.propDecorators = {
@@ -7074,8 +7500,8 @@ class ModalComponent {
     }
 }
 ModalComponent.ɵfac = function ModalComponent_Factory(t) { return new (t || ModalComponent)(); };
-ModalComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ModalComponent, selectors: [["aa-modal"]], inputs: { heading: "heading", message: "message", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth", green: "green", orange: "orange", red: "red", blue: "blue", zIndex: "zIndex", hideHeader: "hideHeader" }, ngContentSelectors: _c99, decls: 8, vars: 16, consts: [[1, "aa-modal"], [1, "aa-modal-container", 3, "ngClass", "ngStyle"], ["class", "aa-modal-header", 4, "ngIf"], [1, "aa-modal-content"], [1, "aa-modal-footer", "flex-group", "flex-center"], [1, "aa-modal-header"], [1, "boxed", "align-center"]], template: function ModalComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c96);
+ModalComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ModalComponent, selectors: [["aa-modal"]], inputs: { heading: "heading", message: "message", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth", green: "green", orange: "orange", red: "red", blue: "blue", zIndex: "zIndex", hideHeader: "hideHeader" }, ngContentSelectors: _c113, decls: 8, vars: 16, consts: [[1, "aa-modal"], [1, "aa-modal-container", 3, "ngClass", "ngStyle"], ["class", "aa-modal-header", 4, "ngIf"], [1, "aa-modal-content"], [1, "aa-modal-footer", "flex-group", "flex-center"], [1, "aa-modal-header"], [1, "boxed", "align-center"]], template: function ModalComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c110);
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵtemplate(2, ModalComponent_section_2_Template, 3, 1, "section", 2);
@@ -7090,7 +7516,7 @@ ModalComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ModalCo
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(4, _c97, ctx.green, ctx.orange, ctx.red, ctx.blue))("ngStyle", ɵngcc0.ɵɵpureFunction6(9, _c98, ctx.topPos, ctx.rightPos, ctx.leftPos, ctx.minWidth, ctx.maxWidth, ctx.zIndex));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(4, _c111, ctx.green, ctx.orange, ctx.red, ctx.blue))("ngStyle", ɵngcc0.ɵɵpureFunction6(9, _c112, ctx.topPos, ctx.rightPos, ctx.leftPos, ctx.minWidth, ctx.maxWidth, ctx.zIndex));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", !ctx.hideHeader);
         ɵngcc0.ɵɵadvance(2);
@@ -7167,7 +7593,7 @@ class ModalDialogComponent {
     }
 }
 ModalDialogComponent.ɵfac = function ModalDialogComponent_Factory(t) { return new (t || ModalDialogComponent)(); };
-ModalDialogComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ModalDialogComponent, selectors: [["aa-modal-dialog"]], inputs: { heading: "heading", message: "message", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth", green: "green", orange: "orange", red: "red", blue: "blue", zIndex: "zIndex" }, outputs: { closeMeEvent: "closeMeEvent", confirmEvent: "confirmEvent" }, ngContentSelectors: _c18, decls: 13, vars: 16, consts: [[1, "aa-modal"], [1, "aa-modal-container", 3, "ngClass", "ngStyle"], [1, "aa-modal-header"], [1, "boxed", "align-center"], [1, "aa-modal-content"], [1, "aa-modal-footer", "flex-group", "flex-center"], [1, "cancel", 3, "click"], [1, "primary", 3, "click"]], template: function ModalDialogComponent_Template(rf, ctx) { if (rf & 1) {
+ModalDialogComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ModalDialogComponent, selectors: [["aa-modal-dialog"]], inputs: { heading: "heading", message: "message", topPos: "topPos", rightPos: "rightPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth", green: "green", orange: "orange", red: "red", blue: "blue", zIndex: "zIndex" }, outputs: { closeMeEvent: "closeMeEvent", confirmEvent: "confirmEvent" }, ngContentSelectors: _c19, decls: 13, vars: 16, consts: [[1, "aa-modal"], [1, "aa-modal-container", 3, "ngClass", "ngStyle"], [1, "aa-modal-header"], [1, "boxed", "align-center"], [1, "aa-modal-content"], [1, "aa-modal-footer", "flex-group", "flex-center"], [1, "cancel", 3, "click"], [1, "primary", 3, "click"]], template: function ModalDialogComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
@@ -7194,7 +7620,7 @@ ModalDialogComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: M
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(4, _c100, ctx.green, ctx.orange, ctx.red, ctx.blue))("ngStyle", ɵngcc0.ɵɵpureFunction6(9, _c98, ctx.topPos, ctx.rightPos, ctx.leftPos, ctx.minWidth, ctx.maxWidth, ctx.zIndex));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction4(4, _c114, ctx.green, ctx.orange, ctx.red, ctx.blue))("ngStyle", ɵngcc0.ɵɵpureFunction6(9, _c112, ctx.topPos, ctx.rightPos, ctx.leftPos, ctx.minWidth, ctx.maxWidth, ctx.zIndex));
         ɵngcc0.ɵɵadvance(3);
         ɵngcc0.ɵɵtextInterpolate(ctx.heading);
         ɵngcc0.ɵɵadvance(2);
@@ -7261,8 +7687,8 @@ class OverlayComponent {
     }
 }
 OverlayComponent.ɵfac = function OverlayComponent_Factory(t) { return new (t || OverlayComponent)(); };
-OverlayComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: OverlayComponent, selectors: [["aa-overlay"]], inputs: { zIndex: "zIndex", showOverlay: "showOverlay", topPos: "topPos", rightPos: "rightPos", bottomPos: "bottomPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth" }, ngContentSelectors: _c103, decls: 1, vars: 1, consts: [["class", "aa-overlay flex-center", 3, "ngStyle", 4, "ngIf"], [1, "aa-overlay", "flex-center", 3, "ngStyle"], [1, "aa-overlay-container", 3, "ngStyle"]], template: function OverlayComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c102);
+OverlayComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: OverlayComponent, selectors: [["aa-overlay"]], inputs: { zIndex: "zIndex", showOverlay: "showOverlay", topPos: "topPos", rightPos: "rightPos", bottomPos: "bottomPos", leftPos: "leftPos", minWidth: "minWidth", maxWidth: "maxWidth" }, ngContentSelectors: _c117, decls: 1, vars: 1, consts: [["class", "aa-overlay flex-center", 3, "ngStyle", 4, "ngIf"], [1, "aa-overlay", "flex-center", 3, "ngStyle"], [1, "aa-overlay-container", 3, "ngStyle"]], template: function OverlayComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c116);
         ɵngcc0.ɵɵtemplate(0, OverlayComponent_article_0_Template, 4, 11, "article", 0);
     } if (rf & 2) {
         ɵngcc0.ɵɵproperty("ngIf", ctx.showOverlay);
@@ -7335,8 +7761,8 @@ class PopoverComponent {
 PopoverComponent.ɵfac = function PopoverComponent_Factory(t) { return new (t || PopoverComponent)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ElementRef)); };
 PopoverComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: PopoverComponent, selectors: [["aa-popover"]], hostBindings: function PopoverComponent_HostBindings(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵlistener("click", function PopoverComponent_click_HostBindingHandler($event) { return ctx.onClick($event.target); }, false, ɵngcc0.ɵɵresolveDocument);
-    } }, inputs: { buttonClass: "buttonClass", leftPos: "leftPos", topPos: "topPos", bottomPos: "bottomPos", rightPos: "rightPos", width: "width", hideLabel: "hideLabel", btnSmall: "btnSmall", popoverTop: "popoverTop", arrowPos: "arrowPos", zIndex: "zIndex" }, outputs: { popoverVisibilityChanged: "popoverVisibilityChanged" }, ngContentSelectors: _c109, decls: 6, vars: 20, consts: [[1, "aa-popover", 3, "ngClass", "ngStyle"], [1, "aa-popover-header", 3, "ngClass", "click"], [1, "arrow", 3, "ngStyle"], [1, "aa-popover-content", "feature-box", 3, "ngStyle"]], template: function PopoverComponent_Template(rf, ctx) { if (rf & 1) {
-        ɵngcc0.ɵɵprojectionDef(_c104);
+    } }, inputs: { buttonClass: "buttonClass", leftPos: "leftPos", topPos: "topPos", bottomPos: "bottomPos", rightPos: "rightPos", width: "width", hideLabel: "hideLabel", btnSmall: "btnSmall", popoverTop: "popoverTop", arrowPos: "arrowPos", zIndex: "zIndex" }, outputs: { popoverVisibilityChanged: "popoverVisibilityChanged" }, ngContentSelectors: _c123, decls: 6, vars: 20, consts: [[1, "aa-popover", 3, "ngClass", "ngStyle"], [1, "aa-popover-header", 3, "ngClass", "click"], [1, "arrow", 3, "ngStyle"], [1, "aa-popover-content", "feature-box", 3, "ngStyle"]], template: function PopoverComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c118);
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵelementStart(1, "div", 1);
         ɵngcc0.ɵɵlistener("click", function PopoverComponent_Template_div_click_1_listener() { return ctx.changeVisibility(); });
@@ -7348,13 +7774,13 @@ PopoverComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Popov
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(5, _c105, ctx.showPopover, ctx.btnSmall))("ngStyle", ɵngcc0.ɵɵpureFunction1(8, _c0, ctx.showPopover ? ctx.zIndex : ""));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(5, _c119, ctx.showPopover, ctx.btnSmall))("ngStyle", ɵngcc0.ɵɵpureFunction1(8, _c0, ctx.showPopover ? ctx.zIndex : ""));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(10, _c106, ctx.hideLabel));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(10, _c120, ctx.hideLabel));
         ɵngcc0.ɵɵadvance(2);
-        ɵngcc0.ɵɵproperty("ngStyle", ctx.popoverTop && ɵngcc0.ɵɵpureFunction1(12, _c107, ctx.arrowPos + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ctx.popoverTop && ɵngcc0.ɵɵpureFunction1(12, _c121, ctx.arrowPos + "rem"));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction5(14, _c108, ctx.topPos + "rem", ctx.rightPos + "rem", ctx.bottomPos + "rem", ctx.leftPos + "rem", ctx.width + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction5(14, _c122, ctx.topPos + "rem", ctx.rightPos + "rem", ctx.bottomPos + "rem", ctx.leftPos + "rem", ctx.width + "rem"));
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle], styles: [""] });
 PopoverComponent.ctorParameters = () => [
     { type: ElementRef }
@@ -7416,7 +7842,7 @@ class SummaryTopComponent {
     }
 }
 SummaryTopComponent.ɵfac = function SummaryTopComponent_Factory(t) { return new (t || SummaryTopComponent)(); };
-SummaryTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: SummaryTopComponent, selectors: [["aa-summary-top"]], inputs: { displayBlock: "displayBlock", verticalDisplay: "verticalDisplay" }, ngContentSelectors: _c18, decls: 3, vars: 6, consts: [[1, "dl-container", 3, "ngClass"], [1, "flex-align-center", 3, "ngClass"]], template: function SummaryTopComponent_Template(rf, ctx) { if (rf & 1) {
+SummaryTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: SummaryTopComponent, selectors: [["aa-summary-top"]], inputs: { displayBlock: "displayBlock", verticalDisplay: "verticalDisplay" }, ngContentSelectors: _c19, decls: 3, vars: 6, consts: [[1, "dl-container", 3, "ngClass"], [1, "flex-align-center", 3, "ngClass"]], template: function SummaryTopComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "article", 0);
         ɵngcc0.ɵɵelementStart(1, "dl", 1);
@@ -7424,9 +7850,9 @@ SummaryTopComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Su
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c110, ctx.displayBlock));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(2, _c124, ctx.displayBlock));
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c111, ctx.verticalDisplay));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction1(4, _c125, ctx.verticalDisplay));
     } }, directives: [ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
 SummaryTopComponent.ctorParameters = () => [];
 SummaryTopComponent.propDecorators = {
@@ -7463,15 +7889,15 @@ SummaryTopListComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(7, _c112, ctx.highlight, ctx.truncate));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction2(7, _c126, ctx.highlight, ctx.truncate));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵpropertyInterpolate("title", ctx.itemTitle);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(10, _c14, ctx.maxWidth + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(10, _c15, ctx.maxWidth + "rem"));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate(ctx.itemTitle);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵpropertyInterpolate("title", ctx.itemDescription);
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(12, _c14, ctx.maxWidth + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(12, _c15, ctx.maxWidth + "rem"));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵtextInterpolate(ctx.itemDescription);
     } }, directives: [ɵngcc1.NgClass, ɵngcc1.NgStyle], styles: [""], changeDetection: 0 });
@@ -7509,7 +7935,7 @@ class ToastrComponent {
     }
 }
 ToastrComponent.ɵfac = function ToastrComponent_Factory(t) { return new (t || ToastrComponent)(); };
-ToastrComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ToastrComponent, selectors: [["aa-toastr"]], inputs: { zIndex: "zIndex" }, ngContentSelectors: _c18, decls: 2, vars: 3, consts: [[1, "aa-toastr", 3, "ngStyle"]], template: function ToastrComponent_Template(rf, ctx) { if (rf & 1) {
+ToastrComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ToastrComponent, selectors: [["aa-toastr"]], inputs: { zIndex: "zIndex" }, ngContentSelectors: _c19, decls: 2, vars: 3, consts: [[1, "aa-toastr", 3, "ngStyle"]], template: function ToastrComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵprojection(1);
@@ -7569,7 +7995,7 @@ ToastrItemComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: To
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction5(7, _c113, ctx.showToastr, ctx.isError, ctx.isWarning, ctx.isSuccess, ctx.isInfo));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction5(7, _c127, ctx.showToastr, ctx.isError, ctx.isWarning, ctx.isSuccess, ctx.isInfo));
         ɵngcc0.ɵɵadvance(5);
         ɵngcc0.ɵɵproperty("ngIf", ctx.isError);
         ɵngcc0.ɵɵadvance(1);
@@ -7631,7 +8057,7 @@ class TooltipComponent {
     ngOnInit() { }
 }
 TooltipComponent.ɵfac = function TooltipComponent_Factory(t) { return new (t || TooltipComponent)(); };
-TooltipComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: TooltipComponent, selectors: [["aa-tooltip"]], inputs: { setMinWidth: "setMinWidth", setMaxWidth: "setMaxWidth", isSuccess: "isSuccess", isInfo: "isInfo", isWarning: "isWarning", includeLabel: "includeLabel", includeLegend: "includeLegend", labelName: "labelName", isError: "isError", xpos: "xpos", ypos: "ypos", customIcon: "customIcon", iconName: "iconName", zIndex: "zIndex", labelFor: "labelFor", showAsAnchor: "showAsAnchor", tooltipAnchor: "tooltipAnchor", preventAnchorWrapping: "preventAnchorWrapping", showAsButton: "showAsButton", buttonText: "buttonText", buttonId: "buttonId", buttonClass: "buttonClass", disabled: "disabled", showTooltipOnClick: "showTooltipOnClick", showTooltipOnHover: "showTooltipOnHover", tooltipClicked: "tooltipClicked", tooltipBtnText: "tooltipBtnText" }, outputs: { buttonClick: "buttonClick" }, ngContentSelectors: _c18, decls: 10, vars: 36, consts: [[1, "flex-group", 3, "ngStyle", "ngClass"], [3, "for", 4, "ngIf"], ["class", "margin-right-0-5", 4, "ngIf"], [1, "aa-tooltip", "icon-info", 3, "ngClass", "ngStyle"], ["class", "material-icons", 3, "ngClass", 4, "ngIf"], ["class", "show-tooltip-on-hover", 3, "name", "id", "class", "disabled", "click", 4, "ngIf"], ["class", "cursor-pointer", 3, "ngClass", 4, "ngIf"], [3, "ngStyle"], [3, "for"], [1, "margin-right-0-5"], [1, "material-icons", 3, "ngClass"], [1, "show-tooltip-on-hover", 3, "name", "id", "disabled", "click"], [4, "ngIf"], [1, "cursor-pointer", 3, "ngClass"]], template: function TooltipComponent_Template(rf, ctx) { if (rf & 1) {
+TooltipComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: TooltipComponent, selectors: [["aa-tooltip"]], inputs: { setMinWidth: "setMinWidth", setMaxWidth: "setMaxWidth", isSuccess: "isSuccess", isInfo: "isInfo", isWarning: "isWarning", includeLabel: "includeLabel", includeLegend: "includeLegend", labelName: "labelName", isError: "isError", xpos: "xpos", ypos: "ypos", customIcon: "customIcon", iconName: "iconName", zIndex: "zIndex", labelFor: "labelFor", showAsAnchor: "showAsAnchor", tooltipAnchor: "tooltipAnchor", preventAnchorWrapping: "preventAnchorWrapping", showAsButton: "showAsButton", buttonText: "buttonText", buttonId: "buttonId", buttonClass: "buttonClass", disabled: "disabled", showTooltipOnClick: "showTooltipOnClick", showTooltipOnHover: "showTooltipOnHover", tooltipClicked: "tooltipClicked", tooltipBtnText: "tooltipBtnText" }, outputs: { buttonClick: "buttonClick" }, ngContentSelectors: _c19, decls: 10, vars: 36, consts: [[1, "flex-group", 3, "ngStyle", "ngClass"], [3, "for", 4, "ngIf"], ["class", "margin-right-0-5", 4, "ngIf"], [1, "aa-tooltip", "icon-info", 3, "ngClass", "ngStyle"], ["class", "material-icons", 3, "ngClass", 4, "ngIf"], ["class", "show-tooltip-on-hover", 3, "name", "id", "class", "disabled", "click", 4, "ngIf"], ["class", "cursor-pointer", 3, "ngClass", 4, "ngIf"], [3, "ngStyle"], [3, "for"], [1, "margin-right-0-5"], [1, "material-icons", 3, "ngClass"], [1, "show-tooltip-on-hover", 3, "name", "id", "disabled", "click"], [4, "ngIf"], [1, "cursor-pointer", 3, "ngClass"]], template: function TooltipComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "div", 0);
         ɵngcc0.ɵɵtemplate(1, TooltipComponent_label_1_Template, 2, 2, "label", 1);
@@ -7647,13 +8073,13 @@ TooltipComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Toolt
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(15, _c62, ctx.showAsButton ? "block" : "flex"))("ngClass", ɵngcc0.ɵɵpureFunction6(17, _c116, ctx.includeLabel, ctx.includeLegend, ctx.showAsButton, ctx.showTooltipOnHover, ctx.showTooltipOnClick, ctx.tooltipClicked));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction1(15, _c63, ctx.showAsButton ? "block" : "flex"))("ngClass", ɵngcc0.ɵɵpureFunction6(17, _c130, ctx.includeLabel, ctx.includeLegend, ctx.showAsButton, ctx.showTooltipOnHover, ctx.showTooltipOnClick, ctx.tooltipClicked));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.includeLabel && !ctx.showAsButton);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.includeLegend && !ctx.showAsButton);
         ɵngcc0.ɵɵadvance(1);
-        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction6(24, _c117, ctx.isSuccess, ctx.isInfo, ctx.isWarning, ctx.isError, ctx.customIcon, ctx.showAsAnchor))("ngStyle", ɵngcc0.ɵɵpureFunction1(31, _c0, ctx.zIndex));
+        ɵngcc0.ɵɵproperty("ngClass", ɵngcc0.ɵɵpureFunction6(24, _c131, ctx.isSuccess, ctx.isInfo, ctx.isWarning, ctx.isError, ctx.customIcon, ctx.showAsAnchor))("ngStyle", ɵngcc0.ɵɵpureFunction1(31, _c0, ctx.zIndex));
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵproperty("ngIf", ctx.customIcon && !ctx.showAsAnchor && !ctx.showAsButton);
         ɵngcc0.ɵɵadvance(1);
@@ -7664,7 +8090,7 @@ TooltipComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: Toolt
         ɵngcc0.ɵɵproperty("ngIf", ctx.showAsAnchor);
         ɵngcc0.ɵɵadvance(1);
         ɵngcc0.ɵɵclassMapInterpolate2("feature-box ", ctx.xpos, " ", ctx.ypos, "");
-        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(33, _c118, ctx.setMinWidth + "rem", ctx.setMaxWidth + "rem"));
+        ɵngcc0.ɵɵproperty("ngStyle", ɵngcc0.ɵɵpureFunction2(33, _c132, ctx.setMinWidth + "rem", ctx.setMaxWidth + "rem"));
     } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass, ɵngcc1.NgIf], encapsulation: 2, changeDetection: 0 });
 TooltipComponent.ctorParameters = () => [];
 TooltipComponent.propDecorators = {
@@ -7849,7 +8275,7 @@ class ListSelectableComponent {
     }
 }
 ListSelectableComponent.ɵfac = function ListSelectableComponent_Factory(t) { return new (t || ListSelectableComponent)(); };
-ListSelectableComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ListSelectableComponent, selectors: [["aa-list-selectable"]], inputs: { minWidth: "minWidth", topPos: "topPos", leftPos: "leftPos", rightPos: "rightPos", bottomPos: "bottomPos", zIndex: "zIndex", flexStart: "flexStart", fixedPosition: "fixedPosition" }, ngContentSelectors: _c18, decls: 3, vars: 9, consts: [[1, "aa-list-selectable", "flex-group", 3, "ngStyle", "ngClass"]], template: function ListSelectableComponent_Template(rf, ctx) { if (rf & 1) {
+ListSelectableComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type: ListSelectableComponent, selectors: [["aa-list-selectable"]], inputs: { minWidth: "minWidth", topPos: "topPos", leftPos: "leftPos", rightPos: "rightPos", bottomPos: "bottomPos", zIndex: "zIndex", flexStart: "flexStart", fixedPosition: "fixedPosition" }, ngContentSelectors: _c19, decls: 3, vars: 9, consts: [[1, "aa-list-selectable", "flex-group", 3, "ngStyle", "ngClass"]], template: function ListSelectableComponent_Template(rf, ctx) { if (rf & 1) {
         ɵngcc0.ɵɵprojectionDef();
         ɵngcc0.ɵɵelementStart(0, "nav", 0);
         ɵngcc0.ɵɵelementStart(1, "ul");
@@ -7857,7 +8283,7 @@ ListSelectableComponent.ɵcmp = /*@__PURE__*/ ɵngcc0.ɵɵdefineComponent({ type
         ɵngcc0.ɵɵelementEnd();
         ɵngcc0.ɵɵelementEnd();
     } if (rf & 2) {
-        ɵngcc0.ɵɵproperty("ngStyle", ctx.fixedPosition && ɵngcc0.ɵɵpureFunction4(2, _c124, ctx.leftPos + "rem", ctx.topPos + "rem", ctx.bottomPos + "rem", ctx.zIndex))("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c125, ctx.flexStart));
+        ɵngcc0.ɵɵproperty("ngStyle", ctx.fixedPosition && ɵngcc0.ɵɵpureFunction4(2, _c138, ctx.leftPos + "rem", ctx.topPos + "rem", ctx.bottomPos + "rem", ctx.zIndex))("ngClass", ɵngcc0.ɵɵpureFunction1(7, _c139, ctx.flexStart));
     } }, directives: [ɵngcc1.NgStyle, ɵngcc1.NgClass], styles: [""], changeDetection: 0 });
 ListSelectableComponent.propDecorators = {
     minWidth: [{ type: Input }],
@@ -8042,6 +8468,6 @@ ModalService.ctorParameters = () => [
  * Generated bundle index. Do not edit.
  */
 
-export { AccordionComponent, AccordionFancyComponent, ActionsSummaryComponent, AlertComponent, AlertShieldComponent, AnchorBackComponent, AnimationsModule, BladeBottomComponent, BladeComponent, BladeFooterComponent, BladeTopComponent, ButtonComponent, CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR, CardComponent, CarouselComponent, CarouselItemDirective, CarouselItemElementDirective, CheckboxComponent, ClickOutsideDirective, CommentsComponent, ContextMenuComponent, ContextMenuItemComponent, CounterComponent, CustomSelectComponent, CustomWrapperComponent, DashboardContainerComponent, DashboardFavouritesComponent, DashboardFavouritesListComponent, DirectivesModule, ElementsModule, FavouritesComponent, FavouritesListComponent, FieldComponent, FileUploadComponent, FooterComponent, IconPickerComponent, InfoPanelComponent, InfoPanelStackedComponent, InputTextComponent, LayoutModule, ListSelectableComponent, LoadingSpinnerComponent, LoadingSpinnerPageComponent, ModalComponent, ModalDialogComponent, ModalService, NavContextComponent, NavigationModule, OverlayComponent, PatternsModule, PopoverComponent, ProgressBarComponent, ProgressCircleComponent, ProgressIndicatorAdvancedComponent, ProgressIndicatorComponent, ProjectTourComponent, SliderComponent, StatusIndicatorComponent, StepperComponent, SummaryTopComponent, SummaryTopListComponent, TabNavigationComponent, TabNavigationContentDirective, TabNavigationHeaderContentDirective, TabNavigationItemComponent, TabNavigationSecondaryComponent, TabNavigationSecondaryContentDirective, TabNavigationSecondaryItemComponent, TextareaAutoresizeDirective, ToastrComponent, ToastrItemComponent, TooltipComponent, UiBlockComponent, UnauthorisedComponent, UserFeedbackComponent, WidgetsModule, ɵ0, DateFormatPipe as ɵa, GraphicComponent as ɵb, IconFilterPipe as ɵc, OrderByPipe as ɵd };
+export { AccordionComponent, AccordionFancyComponent, ActionsSummaryComponent, AlertComponent, AlertShieldComponent, AnchorBackComponent, AnimationsModule, BladeBottomComponent, BladeComponent, BladeFooterComponent, BladeTopComponent, ButtonComponent, CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR, CardComponent, CarouselComponent, CarouselItemDirective, CarouselItemElementDirective, CheckboxComponent, ClickOutsideDirective, CommentsComponent, ContextMenuComponent, ContextMenuItemComponent, CounterComponent, CustomSelectComponent, CustomWrapperComponent, DashboardContainerComponent, DashboardFavouritesComponent, DashboardFavouritesListComponent, DirectivesModule, ElementsModule, FavouritesComponent, FavouritesListComponent, FeatureBoxComponent, FieldComponent, FileUploadComponent, FooterComponent, IconPickerComponent, InfoPanelComponent, InfoPanelStackedComponent, InputTextComponent, LayoutModule, ListSelectableComponent, LoadingSpinnerComponent, LoadingSpinnerPageComponent, ModalComponent, ModalDialogComponent, ModalService, NavContextComponent, NavigationModule, OverlayComponent, PatternsModule, PopoverComponent, ProgressBarComponent, ProgressCircleComponent, ProgressIndicatorAdvancedComponent, ProgressIndicatorComponent, ProjectTourComponent, SliderComponent, StatusIndicatorComponent, StepperComponent, SummaryTopComponent, SummaryTopListComponent, TabNavigationComponent, TabNavigationContentDirective, TabNavigationHeaderContentDirective, TabNavigationItemComponent, TabNavigationSecondaryComponent, TabNavigationSecondaryContentDirective, TabNavigationSecondaryItemComponent, TagComponent, TextareaAutoresizeDirective, ToastrComponent, ToastrItemComponent, TooltipComponent, UiBlockComponent, UnauthorisedComponent, UserFeedbackComponent, WidgetsModule, ɵ0, DateFormatPipe as ɵa, GraphicComponent as ɵb, IconFilterPipe as ɵc, OrderByPipe as ɵd };
 
 //# sourceMappingURL=angloamerican-components.js.map

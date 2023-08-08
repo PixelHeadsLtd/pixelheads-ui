@@ -5,25 +5,25 @@ export declare class TabNavigationSecondaryComponent implements OnInit, AfterCon
     tabNavigationItems: QueryList<TabNavigationSecondaryItemComponent>;
     autoChangeTabs: boolean;
     displayTabContent: boolean;
-    routerOutlet: boolean;
+    routerOutletSecondary: boolean;
     ngTemplate: boolean;
     tabColour: any;
     tabActiveColour: any;
     tabClicked: EventEmitter<TabNavigationSecondaryItemComponent>;
     tabChanged: EventEmitter<TabNavigationSecondaryItemComponent>;
-    closeTabSecondary: EventEmitter<Event>;
+    closeTabSecondary: EventEmitter<any>;
     currentTab: TabNavigationSecondaryItemComponent;
     get contentTabs(): TabNavigationSecondaryItemComponent[];
     constructor();
-    onCloseTabSecondary(e: Event): void;
     ngOnInit(): void;
     ngAfterContentInit(): void;
     isActive(tab: TabNavigationSecondaryItemComponent): boolean;
     onTabClicked(tab: TabNavigationSecondaryItemComponent): void;
     changeTab(tab: TabNavigationSecondaryItemComponent): void;
     changeTabById(tabId: string): void;
+    onCloseTabSecondary(e: Event, tabId: any): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<TabNavigationSecondaryComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<TabNavigationSecondaryComponent, "aa-tab-navigation-secondary", never, { "autoChangeTabs": "autoChangeTabs"; "displayTabContent": "displayTabContent"; "routerOutlet": "routerOutlet"; "ngTemplate": "ngTemplate"; "tabColour": "tabColour"; "tabActiveColour": "tabActiveColour"; }, { "tabClicked": "tabClicked"; "tabChanged": "tabChanged"; "closeTabSecondary": "closeTabSecondary"; }, ["tabNavigationItems"], ["[list-items]", "*"]>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<TabNavigationSecondaryComponent, "aa-tab-navigation-secondary", never, { "autoChangeTabs": "autoChangeTabs"; "displayTabContent": "displayTabContent"; "routerOutletSecondary": "routerOutletSecondary"; "ngTemplate": "ngTemplate"; "tabColour": "tabColour"; "tabActiveColour": "tabActiveColour"; }, { "tabClicked": "tabClicked"; "tabChanged": "tabChanged"; "closeTabSecondary": "closeTabSecondary"; }, ["tabNavigationItems"], ["[list-items]", "*"]>;
 }
 
 //# sourceMappingURL=tab-navigation-secondary.component.d.ts.map

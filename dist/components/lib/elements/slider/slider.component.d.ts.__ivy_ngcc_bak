@@ -6,6 +6,7 @@ export declare class SliderComponent implements OnInit {
     sliderId: any;
     sliderName: any;
     disabled: any;
+    labelMinWidth: any;
     sliderCheckedValue: any;
     set sliderChecked(value: any);
     sliderCheckedChanged: EventEmitter<boolean>;

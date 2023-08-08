@@ -5,10 +5,12 @@ export declare class InfoPanelComponent implements OnInit {
     panelHeight: number;
     panelStatus: string;
     preventOpacity: string;
+    removeHeaderBorder: boolean;
+    roundedCorners: boolean;
     constructor();
     ngOnInit(): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<InfoPanelComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<InfoPanelComponent, "aa-info-panel", never, { "panelWidth": "panelWidth"; "panelHeight": "panelHeight"; "panelStatus": "panelStatus"; "preventOpacity": "preventOpacity"; }, {}, never, ["[custom-header]", "[custom-content]", "[custom-footer]"]>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<InfoPanelComponent, "aa-info-panel", never, { "panelWidth": "panelWidth"; "panelHeight": "panelHeight"; "panelStatus": "panelStatus"; "preventOpacity": "preventOpacity"; "removeHeaderBorder": "removeHeaderBorder"; "roundedCorners": "roundedCorners"; }, {}, never, ["[custom-header]", "[custom-content]", "[custom-footer]"]>;
 }
 
 //# sourceMappingURL=info-panel.component.d.ts.map

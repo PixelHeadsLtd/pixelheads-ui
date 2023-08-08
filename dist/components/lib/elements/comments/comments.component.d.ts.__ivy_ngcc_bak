@@ -15,6 +15,7 @@ export declare class CommentsComponent implements ControlValueAccessor {
     makeComments: boolean;
     canDelete: boolean;
     showConfirmation: boolean;
+    iconColour: any;
     constructor();
     private innerValue;
     private onTouchedCallback;

@@ -7,10 +7,13 @@ export declare class AlertComponent implements OnInit {
     collapsible: boolean;
     alignIconTop: boolean;
     expandPanel: boolean;
+    minWidth: any;
+    collapsedHeight: any;
+    removePanel: any;
     constructor();
     ngOnInit(): void;
     static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<AlertComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<AlertComponent, "aa-alert", never, { "alertClass": "alertClass"; "alertTitle": "alertTitle"; "alertText": "alertText"; "collapsible": "collapsible"; "alignIconTop": "alignIconTop"; "expandPanel": "expandPanel"; }, {}, never, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<AlertComponent, "aa-alert", never, { "alertClass": "alertClass"; "alertTitle": "alertTitle"; "alertText": "alertText"; "collapsible": "collapsible"; "alignIconTop": "alignIconTop"; "expandPanel": "expandPanel"; "minWidth": "minWidth"; "collapsedHeight": "collapsedHeight"; "removePanel": "removePanel"; }, {}, never, never>;
 }
 
 //# sourceMappingURL=alert.component.d.ts.map

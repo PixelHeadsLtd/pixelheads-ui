@@ -4,22 +4,22 @@ export declare class TabNavigationSecondaryComponent implements OnInit, AfterCon
     tabNavigationItems: QueryList<TabNavigationSecondaryItemComponent>;
     autoChangeTabs: boolean;
     displayTabContent: boolean;
-    routerOutlet: boolean;
+    routerOutletSecondary: boolean;
     ngTemplate: boolean;
     tabColour: any;
     tabActiveColour: any;
     tabClicked: EventEmitter<TabNavigationSecondaryItemComponent>;
     tabChanged: EventEmitter<TabNavigationSecondaryItemComponent>;
-    closeTabSecondary: EventEmitter<Event>;
+    closeTabSecondary: EventEmitter<any>;
     currentTab: TabNavigationSecondaryItemComponent;
     get contentTabs(): TabNavigationSecondaryItemComponent[];
     constructor();
-    onCloseTabSecondary(e: Event): void;
     ngOnInit(): void;
     ngAfterContentInit(): void;
     isActive(tab: TabNavigationSecondaryItemComponent): boolean;
     onTabClicked(tab: TabNavigationSecondaryItemComponent): void;
     changeTab(tab: TabNavigationSecondaryItemComponent): void;
     changeTabById(tabId: string): void;
+    onCloseTabSecondary(e: Event, tabId: any): void;
 }
 //# sourceMappingURL=tab-navigation-secondary.component.d.ts.map

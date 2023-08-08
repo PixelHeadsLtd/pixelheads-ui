@@ -4,6 +4,8 @@ export declare class InfoPanelComponent implements OnInit {
     panelHeight: number;
     panelStatus: string;
     preventOpacity: string;
+    removeHeaderBorder: boolean;
+    roundedCorners: boolean;
     constructor();
     ngOnInit(): void;
 }

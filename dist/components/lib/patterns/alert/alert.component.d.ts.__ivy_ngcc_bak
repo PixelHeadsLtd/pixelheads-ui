@@ -6,6 +6,9 @@ export declare class AlertComponent implements OnInit {
     collapsible: boolean;
     alignIconTop: boolean;
     expandPanel: boolean;
+    minWidth: any;
+    collapsedHeight: any;
+    removePanel: any;
     constructor();
     ngOnInit(): void;
 }
