@@ -36,6 +36,11 @@ export class ProgressCircleComponent implements OnInit {
   @Input() showTooltipHeading: boolean;
   @Input() tooltipHeading: string;
   @Input() alertShieldText: string;
+  @Input() customClass: string;
+  @Input() customProgressCircle: boolean;
+  @Input() customHeaderClass: string;
+  @Input() customFooterClass: string;
+  @Input() panelHeight: any;
 
   constructor() { }
 

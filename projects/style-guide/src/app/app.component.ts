@@ -1,7 +1,15 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { AppIconsData } from '../app/class/app-icons-data';
 import { NavData } from '../app/class/nav-data';
-import { OpenLeftNavService } from './landing-page/left-nav-service';
+import { OpenLeftNavService } from './_services/left-nav-service';
+import { ToastService } from './_services/toastr.service';
+
+export interface Toast {
+  type: string;
+  title: string;
+  message: string;
+  icon: string
+}
 
 @Component({
   selector: 'body',
@@ -9,6 +17,7 @@ import { OpenLeftNavService } from './landing-page/left-nav-service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  toasts: Toast[] = [];
   showSearch: boolean;
   showSearchResults: boolean;
   searchCleared: boolean;
@@ -30,8 +39,14 @@ export class AppComponent implements OnInit {
   theme = 'Light';
   getComponentId: string;
 
-  constructor(private service: OpenLeftNavService) {
+  constructor(private service: OpenLeftNavService, public toastService: ToastService) {
     this.currentDate = new Date().getTime();
+    toastService.toasts$
+    .subscribe(toasts => this.toasts = toasts);
+  }
+
+  remove(index: number) {
+    this.toastService.remove(index);
   }
 
   toggleTheme(): void {
@@ -470,6 +485,13 @@ export class AppComponent implements OnInit {
       heading: 'Widgets',
       icon: 'touch_app',
       iconColour: 'bg-aa-light-blue-100',
+      link: 'tooltip-dynamic',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
       link: 'favourites',
     },
     {
@@ -852,6 +874,7 @@ export class AppComponent implements OnInit {
       {iconName:'short_text', title:'Summary top', routerLink:'/summary-top'},
       {iconName:'admin_panel_settings', title:'Toastr', routerLink:'/toastr'},
       {iconName:'mode_comment', title:'Tooltip', routerLink:'/tooltip'},
+      {iconName:'question_answer', title:'Tooltip dynamic', routerLink:'/tooltip-dynamic'},
       {iconName:'sentiment_satisfied_alt', title:'User feedback', routerLink:'/user-feedback'}
     ]},
     // MODIFIERS

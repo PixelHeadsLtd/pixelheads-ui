@@ -29,8 +29,32 @@
   }
 }
 
+.ag-theme-balham:not(.disable-cell-focus-colour) {
+  .ag-cell-focus {
+    background-color: _colour(aa-light-blue-15)!important;
+  }
+}
+
 // START AG-GRID CUSTOM STYLING
 .ag-theme-balham {
+
+  .date-picker {
+    .input-group:not(.input-group .dropdown-menu button) {
+      button {
+        display: none!important;
+      }
+    }
+
+    input {
+      width: 100%;
+    }
+    button.material-icons {
+      top: .1rem;
+      background-color: transparent!important;
+      box-shadow: none!important;
+      position: absolute!important;
+    }
+  }
 
   .ag-details-row {
     background-color: _colour(aa-white-100)!important;
@@ -130,9 +154,8 @@
   }
 
   .ag-popup-child:not(.ag-tooltip-custom) {
-    border: none!important;
     box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
-    border: .0875rem solid _colour(aa-grey-5);
+    border: 1px solid _colour(aa-grey-5);
     background: _colour(aa-white-100);
     border-radius: .25rem;
   }
@@ -156,6 +179,9 @@
   // ------------------ SHARED ACROSS HEADER & ROWS -------------------
   .link-grid-primary {
     color: _colour(trans-light-blue-to-blue-light);
+  }
+  .ag-checkbox-input-wrapper {
+    height: 14px;
   }
   .ag-checkbox-input-wrapper,
   .ag-radio-button-input-wrapper {
@@ -236,17 +262,39 @@
         }
     }
 
+    // Start ag-cell styles
     .ag-cell {
       padding-left: calc(#{$cell-horizontal-padding}) !important;
       padding-right: calc(#{$cell-horizontal-padding}) !important;
-      line-height: 2.25rem;
+      line-height: 2rem;
 
-      &.ag-cell-focus {
-        background-color: _colour(aa-light-blue-15);
+      input[type=text],
+      input[type=datepicker] {
+        line-height: initial!important; // override reboot
+        padding: .56rem .75rem!important; // tweak input padding for ag-grid only
+      }
+
+      &.ag-cell-inline-editing {
+        input {
+          background-color: _colour(aa-white-100)!important;
+
+          &:focus {
+            box-shadow: inset 0 0 3px 1px _colour(aa-light-blue-100)!important;
+          }
+        }
+      }
+
+      .date-picker {
+        .anchor-close {
+          &:after {
+            top: -.25rem;
+            padding: .25rem
+          }
+        }
       }
 
       .avatar {
-        margin-top: -.2rem;
+        margin-top: .075rem;
       }
 
       button.btn-ellipsis {
@@ -268,7 +316,7 @@
 
       &.ag-cell-inline-editing {
         padding: 0!important;
-        border: .0875rem solid _colour(aa-light-blue-100)!important;
+        border: 1px solid _colour(aa-light-blue-100)!important;
         background: _colour(aa-grey-2);
         .ag-cell-edit-wrapper {
           .ag-cell-editor {
@@ -408,6 +456,7 @@
       }
 
       &.ag-cell-range-selected {
+        border: none!important;
         button {
           &.material-icons,
           &.material-icons-outlined {

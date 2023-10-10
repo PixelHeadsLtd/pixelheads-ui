@@ -24,6 +24,7 @@ export class CustomSelectComponent implements OnInit {
   @Input() defaultIcon: string;
   @Input() defaultIconColor: string;
   @Input() setWidth: number;
+  @Input() maxHeight: number;
   @Output() closeDropdown = new EventEmitter<boolean>();
   @Output() optionSelected = new EventEmitter<SelectOption>();
   @Output() highlightSection = new EventEmitter<SelectOption>();

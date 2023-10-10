@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class NgbDatepickerComponent implements OnInit {
 
   showPopup: boolean;
+  dateVal: string = '04 May 2023';
+
+  clearDate() {
+    this.dateVal = '';
+  }
 
   constructor() { }
 

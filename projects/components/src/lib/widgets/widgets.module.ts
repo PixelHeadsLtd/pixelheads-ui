@@ -24,6 +24,8 @@ import { SummaryTopListComponent } from './summary-top-list/summary-top-list.com
 import { ToastrComponent } from './toastr/toastr.component';
 import { ToastrItemComponent } from './toastr-item/toastr-item.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
+import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.component';
+import { TooltipDynamicDirective } from './tooltip-dynamic/tooltip-dynamic.directive';
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { OrderByPipe } from '../pipes/order-by';
@@ -54,6 +56,8 @@ import { OrderByPipe } from '../pipes/order-by';
     ToastrComponent,
     ToastrItemComponent,
     TooltipComponent,
+    TooltipDynamicComponent,
+    TooltipDynamicDirective,
     UserFeedbackComponent,
     ListSelectableComponent,
     OrderByPipe
@@ -85,6 +89,8 @@ import { OrderByPipe } from '../pipes/order-by';
     ToastrComponent,
     ToastrItemComponent,
     TooltipComponent,
+    TooltipDynamicComponent,
+    TooltipDynamicDirective,
     UserFeedbackComponent,
     ListSelectableComponent,
     OrderByPipe

@@ -1,0 +1,152 @@
+<section class="control-bar">
+  <h1>Tooltip dynamic</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Tooltip dynamic</h2>
+      <div class="describe margin-bottom-1">
+        <p>This is the dynamic tooltip which attaches the tooltip popup
+          to the dom and repositions it using fixed positioning.
+        </p>
+      </div>
+      
+      <section class="flex-group flex-start">
+        <div
+          position="right"
+          class="
+            material-icons-outlined 
+            small 
+            cursor-default 
+            aa-light-blue-100" 
+          [aaTooltip]="getConditional()"
+          >
+          info
+        </div> 
+
+        <div 
+          position="above"
+          class="
+            material-icons-outlined 
+            small 
+            cursor-default 
+            aa-red-100" 
+          aaTooltip="
+            <section class='width-10'>
+              <h3 class='aa-red-100'>Oops!</h3>
+              <p>There's been some kind of error!</p>
+            </section>"
+          >
+          error_outline
+        </div> 
+
+        <div 
+          position="below"
+          class="
+            material-icons-outlined 
+            small 
+            cursor-default 
+            aa-orange-100" 
+          aaTooltip="
+            <section class='width-10'>
+              <h3 class='aa-orange-100'>Pending</h3>
+              <p>We're waiting for something here.</p>
+            </section>"
+          >
+          pending
+        </div> 
+
+        <div 
+          position="left"
+          class="
+            material-icons-outlined 
+            small 
+            cursor-default 
+            aa-green-100" 
+          aaTooltip="
+            <section class='width-10'>
+              <h3 class='aa-green-100'>Complete</h3>
+              <p>Everything has been taken care of.</p>
+            </section>"
+          >
+          check_circle
+        </div> 
+      </section>
+
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">HTML</td>
+            <td datalabel="Type">Wrapping element</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">position</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">left, right, above and below</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">aaTooltip</td>
+            <td datalabel="Type">HTML</td>
+            <td datalabel="Default">Your content, h1, paragraph etc</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">class</td>
+            <td datalabel="Default"><a class="cursor-pointer" routerLink="/colours">Your custom colour class</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">material-icons</td>
+            <td datalabel="Type">Icon name</td>
+            <td datalabel="Default"><a class="cursor-pointer" target="_blank" href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled">Your chosen icon</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  <!-- start content repeater -->
+</section>
+
+<aa-blade 
+    [showModal]="false"
+    [toggleBlade]="toggleBlade"
+    suppressAutoClose="false"
+    topPosition="3.5"
+    zIndex="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (close)="toggleBlade = false"
+  >
+  <article class="blade-content">
+    <a href="https://gist.github.com/angloux/c0ecbe536f2c3b41e6841e2e78f2d54d" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/c0ecbe536f2c3b41e6841e2e78f2d54d"></app-gist>
+  </article>
+</aa-blade>

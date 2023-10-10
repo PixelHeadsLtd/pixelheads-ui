@@ -610,16 +610,8 @@
           >
             <h4>Bootstrap</h4>
             <p>
-              Some 3rd party components such as NGB Datepicker rely on Bootstrap. 
-              For this please only install <span class="aa-red-100">ng-bootstrap</span> and not the full Bootstrap Library.
-            </p>
-            <h4 class="margin-top-1 margin-bottom-0">You can install ng-bootstrap with</h4>
-            <p>
-              npm i @ng-bootstrap/ng-bootstrap
-            </p>
-            <p>
-              If you see regular bootstrap in your package.json, for example something like <span class="aa-red-100">"bootstrap": "^5.2.3",</span> 
-              please uninstall this as it will cause layout issues.
+              If you see bootstrap in your package.json, please uninstall it
+              as it breaks our css. We use 'Flex' for layout and mobile adaption.
             </p>
           </aa-tooltip> 
         </strong> instead
@@ -703,69 +695,63 @@
         stick to using native elements.
         </p>
     </div>
-    <div class="flex-2 col-right flex-end margin-top-1">
-      <div>
-        <div class="flex-group flex-end">
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/anchor">
-            <div class="material-icons aa-green-100 small">insert_link</div>
-            <p>Anchor</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/buttons">
-            <div class="material-icons aa-green-100">gamepad</div>
-            <p>Buttons</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/field">
-            <div class="material-icons aa-green-100">view_stream</div>
-            <p>Field</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/fieldset">
-            <div class="material-icons aa-green-100">web</div>
-            <p>Fieldset</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/select">
-            <div class="material-icons aa-green-100">rule</div>
-            <p>Select</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
-            <div class="material-icons aa-green-100">grid_on</div>
-            <p>Table</p>
-          </a>
-        </div>
-        <div class="flex-group flex-end">
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/checkbox">
-            <div class="material-icons aa-green-100">check_box</div>
-            <p>Checkbox</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
-            <div class="material-icons aa-green-100">chat</div>
-            <p>Comments</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/file-upload">
-            <div class="material-icons aa-green-100">backup</div>
-            <p>File upload</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-radio">
-            <div class="material-icons aa-green-100">radio_button_checked</div>
-            <p>Radio</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/slider">
-            <div class="material-icons aa-green-100">toggle_off</div>
-            <p>Slider</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input">
-            <div class="material-icons aa-green-100">wysiwyg</div>
-            <p>Text input</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-textarea">
-            <div class="material-icons aa-green-100">subject</div>
-            <p>Textarea</p>
-          </a>
-          <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/validation">
-            <div class="material-icons aa-green-100">fact_check</div>
-            <p>Validation</p>
-          </a>
-        </div>
-      </div>
+    <div class="flex-2 col-right flex-group flex-end margin-top-1">
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/anchor">
+        <div class="material-icons aa-green-100 small">insert_link</div>
+        <p>Anchor</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/buttons">
+        <div class="material-icons aa-green-100">gamepad</div>
+        <p>Buttons</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/checkbox">
+        <div class="material-icons aa-green-100">check_box</div>
+        <p>Checkbox</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
+        <div class="material-icons aa-green-100">chat</div>
+        <p>Comments</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/field">
+        <div class="material-icons aa-green-100">view_stream</div>
+        <p>Field</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/fieldset">
+        <div class="material-icons aa-green-100">web</div>
+        <p>Fieldset</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/file-upload">
+        <div class="material-icons aa-green-100">backup</div>
+        <p>File upload</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input">
+        <div class="material-icons aa-green-100">wysiwyg</div>
+        <p>Input</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-radio">
+        <div class="material-icons aa-green-100">radio_button_checked</div>
+        <p>Radio</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/select">
+        <div class="material-icons aa-green-100">rule</div>
+        <p>Select</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/slider">
+        <div class="material-icons aa-green-100">toggle_off</div>
+        <p>Slider</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
+        <div class="material-icons aa-green-100">grid_on</div>
+        <p>Table</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-textarea">
+        <div class="material-icons aa-green-100">subject</div>
+        <p>Textarea</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/validation">
+        <div class="material-icons aa-green-100">fact_check</div>
+        <p>Validation</p>
+      </a>
     </div>
   </section>
 
@@ -912,6 +898,10 @@
         <div class="material-icons aa-orange-100">format_list_numbered_rtl</div>
         <p>Progress indicator LH</p>
       </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/stepper">
+        <div class="material-icons aa-orange-100">arrow_right_alt</div>
+        <p>Stepper</p>
+      </a>
       <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/tab-navigation">
         <div class="material-icons aa-orange-100">pivot_table_chart</div>
         <p>Tab navigation</p>
@@ -980,10 +970,6 @@
           <div class="material-icons aa-plum-100">remove_moderator</div>
           <p>Alert shield</p>
         </a>
-        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/box">
-          <div class="material-icons aa-plum-100">check_box_outline_blank</div>
-          <p>Box</p>
-        </a>
         <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/colours">
           <div class="material-icons aa-plum-100">palette</div>
           <p>Colour</p>
@@ -991,6 +977,10 @@
         <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/counter">
           <div class="material-icons aa-plum-100">looks_4</div>
           <p>Counter</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/box">
+          <div class="material-icons aa-plum-100">check_box_outline_blank</div>
+          <p>Feature box</p>
         </a>
         <a class="call-to-action flex-center" routerLink="/icons">
           <div class="material-icons aa-plum-100">insert_emoticon</div>
@@ -1114,6 +1104,10 @@
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip">
           <div class="material-icons aa-light-blue-100">mode_comment</div>
           <p>Tooltip</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip-dynamic">
+          <div class="material-icons aa-light-blue-100">question_answer</div>
+          <p>Tooltip dynamic</p>
         </a>
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/user-feedback">
           <div class="material-icons aa-light-blue-100">sentiment_satisfied_alt</div>

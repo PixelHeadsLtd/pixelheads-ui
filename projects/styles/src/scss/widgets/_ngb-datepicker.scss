@@ -1,4 +1,60 @@
 // NGB DATEPICKER CSS - this will ensure that the ngb-datepicker works when bootstrap is removed from a given project.
+
+.date-picker {
+  position: relative!important;
+  width: 100%;
+
+  .anchor-close {
+    position: absolute;
+    top: 0;
+    right: 2rem
+  }
+  
+  button {
+    &:before,
+    &:after {
+      content: none!important;
+    }
+
+    &.material-icons {
+      background-color: transparent!important;
+      color: _colour(aa-light-blue-100)!important;
+      position: absolute!important;
+      top: 0!important;
+      bottom: 0!important;
+      right: 0!important;
+      border-radius: 0!important;
+      box-shadow: none!important;
+      width: 2rem!important;
+      height: 2rem!important;
+      &:hover, &:focus {
+        border: none!important;
+        background-color: transparent!important;
+        color: _colour(aa-blue-100)!important;
+      }
+      &:disabled {
+        background-color: transparent !important;
+      }
+    }
+  }
+  input {
+    padding-right: 2rem;
+    width: 100%;
+    &[readonly] {
+      + button {
+        opacity: .5;
+        color: _colour(aa-grey-5);
+        cursor: not-allowed;
+      }
+    }
+  }
+  input[type=date] {
+    + button {
+      display: none;
+    }
+  }
+}
+
 ngb-datepicker.dropdown-menu,
 .ngb-datepicker {
     z-index: 999999;
@@ -13,9 +69,9 @@ ngb-datepicker.dropdown-menu,
     background-color: _colour(aa-grey-2);
     background-clip: padding-box;
     border-radius: .25rem;
-    box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
+    -webkit-box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
+    -moz-box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
     
     // START HEADER STYLES
     .ngb-dp-header {
@@ -194,9 +250,3 @@ ngb-datepicker.dropdown-menu,
       }
     }
   }
-
- // temp
-//  .ngb-datepicker {
-//     left: 65rem!important;
-//     top: 10rem!important;
-//  } 

@@ -47,7 +47,6 @@
     border-style: solid;
     font-size: _font(size-default);
     border-width: 2px;
-    color: _colour(aa-grey-100);
 
     h4 {
       margin-top: 0;
@@ -338,16 +337,23 @@
         }
       }
   
+      &.error,
       &.bg-aa-red-5,
       &.bg-aa-red-8,
       &.bg-aa-red-25,
       &.bg-aa-red-50,
       &.bg-aa-red-80,
       &.bg-aa-red-100 {color: _palette(aa-red-100)}
+
+      &.complete,
       &.bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100)}
       &.bg-aa-green-100 {color: _palette(aa-green-100)}
+
+      &.pending,
       &.bg-aa-orange-10 {color: _palette(aa-orange-100)}
       &.bg-aa-orange-100 {color: _palette(aa-orange-100)}
+
+      &.info,
       &.bg-aa-light-blue-15 {color: _palette(aa-light-blue-100)}
       &.bg-aa-light-blue-100 {color: _palette(aa-light-blue-100)}
       &.bg-aa-grey-10 {color: _palette(aa-grey-100)}
@@ -365,18 +371,27 @@
     }
   }
 
+  .error,
   .bg-aa-red-5,
   .bg-aa-red-8,
   .bg-aa-red-25,
   .bg-aa-red-50,
   .bg-aa-red-80 {color: _palette(aa-red-100); background-color: _colour(trans-red-5-to-red-dark)!important;}
   .bg-aa-red-100 {color: _palette(aa-white-100)}
+
+  .complete,
   .bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100); background-color: _colour(trans-green-5-to-green-dark)!important;}
   .bg-aa-green-100 {color: _palette(aa-white-100)}
+
+  .pending,
   .bg-aa-orange-10 {color: _palette(aa-orange-100); background-color: _colour(trans-orange-10-to-orange-dark)!important;}
   .bg-aa-orange-100 {color: _palette(aa-white-100)}
+
+  .info,
   .bg-aa-light-blue-15 {color: _palette(aa-light-blue-100); background-color: _colour(trans-light-blue-10-to-blue-dark)!important;}
   .bg-aa-light-blue-100 {color: _palette(aa-white-100)}
+
+  .not-used,
   .bg-aa-grey-10 {color: _palette(aa-grey-100)}
   .bg-aa-grey-100 {color: _colour(aa-white-100)}
 

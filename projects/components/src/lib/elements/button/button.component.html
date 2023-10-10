@@ -15,14 +15,17 @@
     [class]="buttonClass" 
     [disabled]="disabled" 
     (click)="onButtonClick($event)"
-    [ngClass]="{'material-icons' : customIconsRound}"
+    [ngClass]="{
+      'material-icons' : customIconsRound,
+      'material-icons-outlined' : customIconsRoundOutlined
+    }"
   >
-    <div *ngIf="!customIconsRound" [ngClass]="{'display-inline-block' : customIcons}">
+    <div *ngIf="!customIconsRound && !customIconsRoundOutlined" [ngClass]="{'display-inline-block' : customIcons}">
       <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
       <span>{{buttonText}}</span>
       <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>
     </div>
-    <span *ngIf="customIconsRound">{{buttonIcon}}</span>
+    <span *ngIf="customIconsRound || customIconsRoundOutlined">{{buttonIcon}}</span>
   </button>
 </div>
 
@@ -33,7 +36,7 @@
     [id]="buttonId" 
     [disabled]="disabled" 
     (click)="onButtonClick($event)"
-    class="btn-enriched box-shadow gradient-v-grey"
+    class="btn-enriched box-shadow-light gradient-v-grey"
   >
     <div class="flex-group flex-end btn-enriched-toolbar">
       <ng-content select="[toolbar]"></ng-content>
@@ -47,7 +50,10 @@
 
 <div *ngIf="buttonSplit" class="field {{fieldClass}}">
   <label [for]="buttonId">{{buttonLabel}}</label>
-  <div class="button-split" [ngClass]="{'nav-left-side' : navLeftside}">
+  <div 
+    class="button-split" 
+    [ngClass]="{'nav-left-side' : navLeftside, 'nav-bottom' : navBottom}"
+  >
     <div class="flex-group flex-start flex-align-center flex-nowrap">
       <button
         *ngIf="navLeftside"
@@ -82,7 +88,7 @@
     <nav 
       (click)="showBtnMenu=false" 
       *ngIf="showBtnMenu" 
-      class="box-shadow-strong"
+      class="box-shadow"
       [ngStyle]="{'max-height' : maxHeight}"
     >
       <ng-content select="[bs-buttons]"></ng-content>
@@ -92,7 +98,7 @@
 
 <div *ngIf="buttonSummary" class="field {{fieldClass}} flex-stretch">
   <button
-    class="{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5"
+    class="{{status}} button-summary border-radius-0-5 box-shadow-light bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5"
   >
     <div class="flex-group flex-start flex-align-center">
       <h1 class="priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid">{{level}}</h1>
@@ -106,7 +112,7 @@
 
 <button
   *ngIf="buttonDayPicker"
-  class="button-day-picker box-shadow-strong"
+  class="button-day-picker box-shadow-light"
   (click)="onButtonClick($event)"
   [type]="buttonType" 
   [name]="buttonId" 

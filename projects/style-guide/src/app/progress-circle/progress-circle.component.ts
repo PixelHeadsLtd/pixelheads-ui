@@ -11,7 +11,9 @@ export class ProgressCircleComponent implements OnInit {
   showProgressCircle: boolean;
   showProgressCirclePanelView: boolean;
   showProgressCircleClean: boolean;
+  showCustomProgressCircle: boolean;
   selectedIndex: number = null;
+  asLink: boolean;
 
   constructor() { }
 
@@ -66,6 +68,61 @@ export class ProgressCircleComponent implements OnInit {
       valueSplit: '9/10', 
       tooltipEnabled: true, 
       tooltipText: 'Some text for the tooltip'
+    }
+  ];
+
+  progressCustom = [
+    {
+      customProgressCircle: true,
+      panelHeight: '13rem',
+      customHeaderClass: 'bg-aa-red-5',
+      title: 'My custom header with truncation',
+      value: '200/1000',
+      percent: '10',
+      colour: '#c60c31',
+      btnStatus: 'error',
+      btnStatusText: '13 alerts',
+      btnIcon: 'error_outline',
+      asLink: false
+    },
+    {
+      customProgressCircle: true,
+      panelHeight: '13rem',
+      customHeaderClass: 'bg-aa-green-5',
+      title: 'My custom header with truncation',
+      value: '200/1000',
+      percent: '40',
+      colour: '#008770',
+      btnStatus: 'complete',
+      btnStatusText: '2 complete',
+      btnIcon: 'check',
+      asLink: true
+    },
+    {
+      customProgressCircle: true,
+      panelHeight: '13rem',
+      customHeaderClass: 'bg-aa-orange-5',
+      title: 'My custom header with truncation',
+      value: '200/1000',
+      percent: '60',
+      colour: '#e98300',
+      btnStatus: 'pending',
+      btnStatusText: '5 pending',
+      btnIcon: 'pending',
+      asLink: false
+    },
+    {
+      customProgressCircle: true,
+      panelHeight: '13rem',
+      customHeaderClass: 'bg-aa-light-blue-5',
+      title: 'My custom header with truncation',
+      value: '200/1000',
+      percent: '90',
+      colour: '#0075b0',
+      btnStatus: 'info',
+      btnStatusText: '5 info',
+      btnIcon: 'info',
+      asLink: false
     }
   ];
   

@@ -18,6 +18,7 @@ export class ButtonComponent implements OnInit {
   @Input() buttonEnriched: boolean;
   @Input() showBtnMenu: boolean;
   @Input() buttonSplit: boolean;
+  @Input() navBottom: boolean;
   @Input() iconName: string;
   @Input() title: string;
   @Input() iconColour: string;
@@ -33,6 +34,7 @@ export class ButtonComponent implements OnInit {
   @Input() maxHeight: any;
   @Input() showLabel: boolean;
   @Input() customIconsRound: boolean;
+  @Input() customIconsRoundOutlined: boolean;
   @Input() navLeftside: boolean;
   @Input() buttonDayPicker: boolean;
 

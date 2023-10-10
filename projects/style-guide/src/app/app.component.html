@@ -414,8 +414,8 @@
       <!-- login blade -->
       <li class="cursor-pointer" (click)="toggleLoginBlade=!toggleLoginBlade; toggleAppsBlade=false; showSearch=false">
         <div class="avatar">
-          <div>
-            <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+          <div class="bd-orange bd-1">
+            <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
           </div>
         </div>
       </li>
@@ -460,6 +460,29 @@
 </nav>
 
 <main class="main-content" [ngClass]="{'menu-minimized' : minimizeMenu}">
+  <!-- Toastr -->
+  <article class="aa-toastr-service">
+    <section 
+      *ngFor="let toast of toasts; let i = index" 
+      class="
+        aa-toastr-content 
+        width-20 
+        flex-group 
+        space-between 
+        flex-align-center 
+        {{toast.type}}"
+      >
+      <div class="flex-group flex-start flex-align-center">
+        <div class="material-icons">{{toast.icon}}</div>
+        <div>
+          <h3>{{toast.title}}</h3>
+          <p>{{toast.message}}</p>
+        </div>
+      </div>
+      <button (click)="remove(i)" class="material-icons aa-white-100">clear</button>
+    </section>
+  </article>
+  <!-- End Toastr -->
   <router-outlet></router-outlet>
 </main>
 
@@ -546,14 +569,14 @@
 >
 
 <article class="blade-content">
-  <div class="flex-group flex-start">
+  <div class="flex-group flex-start flex-align-center">
     <div class="avatar">
-      <div>
-        <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+      <div class="bd-orange bd-2">
+        <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
       </div>
     </div>
     <div>
-      <h2 class="margin-bottom-0-25">Michael King</h2>
+      <h2 class="margin-bottom-0-25">Han Solo</h2>
       <a class="cursor-pointer" mailto="michael.king@angloamerican.com">michael.king@angloamerican.com</a>
     </div>
   </div>

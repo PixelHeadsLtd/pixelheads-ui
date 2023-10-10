@@ -34,6 +34,10 @@ export class AccordionComponent implements OnInit {
 
   constructor() { }
 
+  onClick() {
+    console.log('You clicked');
+  }
+
   justification() {
     this.showJustification = true;
   }

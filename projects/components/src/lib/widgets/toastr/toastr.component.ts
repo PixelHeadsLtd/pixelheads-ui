@@ -14,5 +14,4 @@ export class ToastrComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

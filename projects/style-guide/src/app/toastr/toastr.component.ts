@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from '../_services/toastr.service';
 
 @Component({
   selector: 'app-toastr',
@@ -6,34 +7,41 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toastr.component.scss']
 })
 export class ToastrComponent implements OnInit {
-
-  error: boolean;
-  warning: boolean;
-  success: boolean;
-  info: boolean;
   toggleBlade: boolean;
 
-  triggerToastr() {
-    if(this.error) {
-      setTimeout(()=> {
-        this.error = false;
-      },5000);
-    }
-    if(this.warning) {
-      setTimeout(()=> {
-        this.warning = false;
-      },5000);
-    }
-    if(this.success) {
-      setTimeout(()=> {
-        this.success = false;
-      },5000);
-    }
-    if(this.info) {
-      setTimeout(()=> {
-        this.info = false;
-      },5000);
-    }
+  constructor(public toastService: ToastService) {}
+
+  showSuccessToaster() {
+    this.toastService.add({
+      type: 'success',
+      title: 'Well done!',
+      message: 'This is a success alert',
+      icon: 'verified_user'
+    });
+  }
+  showWarningToaster() {
+    this.toastService.add({
+      type: 'warning',
+      title: 'Check it out!',
+      message: 'This is a warning alert',
+      icon: 'security'
+    });
+  }
+  showErrorToaster() {
+    this.toastService.add({
+      type: 'error',
+      title: 'Check it out!',
+      message: 'This is a error alert',
+      icon: 'gpp_maybe'
+    });
+  }
+  showInfoToaster() {
+    this.toastService.add({
+      type: 'info',
+      title: 'Check it out!',
+      message: 'This is a info alert',
+      icon: 'privacy_tip'
+    });
   }
 
   bladeIsOpen(open: boolean) {

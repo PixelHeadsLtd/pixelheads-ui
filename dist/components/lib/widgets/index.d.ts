@@ -16,12 +16,14 @@ export * from './modal/modal.component';
 export * from './modal-dialog/modal-dialog.component';
 export * from './overlay/overlay.component';
 export * from './popover/popover.component';
-export * from './services/modal-service/modal.service';
+export * from '../services/modal.service';
 export * from './summary-top/summary-top.component';
 export * from './summary-top-list/summary-top-list.component';
 export * from './toastr/toastr.component';
 export * from './toastr-item/toastr-item.component';
 export * from './tooltip/tooltip.component';
+export * from './tooltip-dynamic/tooltip-dynamic.directive';
+export * from './tooltip-dynamic/tooltip-dynamic.enums';
 export * from './user-feedback/user-feedback.component';
 export * from '../directives/carousel/carousel-item.directive';
 //# sourceMappingURL=index.d.ts.map

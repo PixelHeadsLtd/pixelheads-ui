@@ -20,7 +20,7 @@
       >
         <aa-tab-navigation-item 
           *ngFor="let tab of tabsNgTemplate; let i = index"
-          [tabId]="i"
+          [tabId]="tabPrimary"
           tabName="{{tab.tabName}}" 
           [enableIcons]="tab.enableIcons" 
           iconName="{{tab.iconName}}" 
@@ -44,7 +44,7 @@
               <ul class="margin-top-1">
                 <li>
                   You can choose an 
-                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">iconName here</a>
                 </li>
                 <li>
                   You can choose an 
@@ -63,7 +63,7 @@
               <ul class="margin-top-1">
                 <li>
                   You can choose an 
-                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">iconName here</a>
                 </li>
                 <li>
                   You can choose an 
@@ -82,7 +82,7 @@
               <ul class="margin-top-1">
                 <li>
                   You can choose an 
-                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">iconName here</a>
+                  <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">iconName here</a>
                 </li>
                 <li>
                   You can choose an 
@@ -93,7 +93,7 @@
           </ng-template>
         </aa-tab-navigation-item>
       </aa-tab-navigation>
-      
+
       <section class="content-container padding-bottom-0" *ngIf="activeTab">
         <aa-tab-navigation-secondary 
           [ngTemplate]="true" 
@@ -105,7 +105,7 @@
           >
           <aa-tab-navigation-secondary-item 
             *ngFor="let tab of tabsSecondaryNgTemplate; let i = index"
-            [tabId]="i"
+            [tabId]="tabSecondary"
             tabName="{{tab.tabName}}" 
             [tabDisabled]="tab.tabDisabled"
             [enableCloseSecondary]="tab.enableCloseSecondary"
@@ -141,6 +141,9 @@
             </ng-template>
           </aa-tab-navigation-secondary-item>
         </aa-tab-navigation-secondary>
+      </section>
+
+      <section class="content-container padding-bottom-0 padding-top-0" *ngIf="activeTab">
         <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
       </section>
     </section>
@@ -367,6 +370,22 @@
                 {{ tab.name }}
                 <span *ngIf="tab.enableCount" class="tab-count">{{tab.tabCount}}</span>
                 <span *ngIf="tab.enableIcon" class="material-icons {{tab.iconColor}}">{{tab.iconName}}</span>
+                <div *ngIf="tab.enableContextMenu" class="margin-left-0-25">
+                  <aa-context-menu [showOnLeft]="false">
+                    <aa-context-menu-item 
+                      [noWrap]="true"
+                      menuItemText="Menu item 1"
+                      routerLink="your-path"
+                    >
+                    </aa-context-menu-item>
+                    <aa-context-menu-item 
+                      [noWrap]="true"
+                      menuItemText="Menu item 2"
+                      routerLink="your-path"
+                    >
+                    </aa-context-menu-item>
+                  </aa-context-menu>
+                </div>
                 <a *ngIf="tab.enableClose" (click)="onCloseTabRO($event)" class="anchor-close"></a>
               </a>
               <span *ngIf="tab.tabDisabled && !tab.showRightDivider">
@@ -390,9 +409,26 @@
                   [id]="tab.tabId" 
                   routerLinkActive="active"
                   [routerLink]="tab.routerLink"
+                  class="flex-group flex-nowrap flex-start flex-align-center"
                 >
-                  {{ tab.tabName }}
+                  <span>{{ tab.tabName }}</span>
                   <a *ngIf="tab.enableCloseSecondaryRO" (click)="onCloseTabSecondaryRO($event)" class="anchor-close"></a>
+                  <div *ngIf="tab.enableContextMenu" class="margin-left-0-25">
+                    <aa-context-menu [showOnLeft]="false">
+                      <aa-context-menu-item 
+                        [noWrap]="true"
+                        menuItemText="Menu item 1"
+                        routerLink="your-path"
+                      >
+                      </aa-context-menu-item>
+                      <aa-context-menu-item 
+                        [noWrap]="true"
+                        menuItemText="Menu item 2"
+                        routerLink="your-path"
+                      >
+                      </aa-context-menu-item>
+                    </aa-context-menu>
+                  </div>
                 </a>
                 <span *ngIf="tab.tabDisabled" class="tab-disabled">
                   {{ tab.tabName }}

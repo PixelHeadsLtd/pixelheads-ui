@@ -14,15 +14,34 @@
         </strong>
       </p>
     </div>
+    <a
+      href="https://ng-bootstrap.github.io/#/components/datepicker/examples"
+      target="_blank"
+      class="
+        padding-0-75
+        border-radius-2
+        bg-aa-light-blue-100
+        aa-white-100
+        display-block
+        max-width-15
+        text-align-center
+        cursor-pointer
+        text-decoration-none
+        hover-blue
+        margin-bottom-1
+      "
+    >
+      See the docs & StackBliz demos
+    </a>
     <div class="flex-group max-width-40">
       <div class="field position-relative">
-        <label for="text-input-2">Date (For demonstration purposes only)</label>
+        <label for="text-input-2">Date (For display purposes only)</label>
         <div class="date-picker">
-          <input type="text" name="text-input-2" id="text-input-2" placeholder="dd-mon-yyyy" />
+          <input type="text" name="text-input-2" id="text-input-2" value="{{dateVal}}" placeholder="dd-mon-yyyy" />
+          <span class="anchor-close" (click)="clearDate()"></span>
           <button (click)="showPopup=!showPopup" class="material-icons">date_range</button>
         </div>
 
-        <!--FOR DEMONSTRATION ONLY-->
         <section *ngIf="showPopup" class="dropdown-menu show ngb-datepicker position-absolute top-2-25" data-popper-placement="bottom-start"
         style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 40px, 0px);">
         <div class="ngb-dp-header">
@@ -225,7 +244,6 @@
           </div>
         </div>
         </section>
-        <!--END - FOR DEMONSTRATION ONLY-->
       </div>
 
       <div class="field">
@@ -236,7 +254,18 @@
         </div>
       </div>
     </div>
-    <h2 class="margin-bottom-0">Example</h2>
+    <h2>Installation steps</h2>
+    <ol>
+      <li>Install <strong>ng-bootstrap</strong> with <strong>'ng add @ng-bootstrap/ng-bootstrap'</strong></li>
+      <li>In your package.json you should now see <strong>'ng-bootstrap/ng-bootstrap'</strong> & <strong>'bootstrap'</strong>. <strong class="aa-red-100">Remove the bootstrap entry</strong> and run <strong>npm install</strong></li>
+      <li>After installing, the <strong>'NgbModule'</strong> would have been automatically added to your <strong>app.module.ts</strong></li>
+      <li>In your solution, open the <strong>'styles.scss'</strong> file and remove the <strong class="aa-red-100">@import '~bootstrap/scss/bootstrap'</strong> entry</li>
+      <li>Copy the below Gist markup and paste this into your App</li>
+      <li>Import ng-bootstrap in the associated .ts file <strong class="aa-red-100">NgbAlertModule, NgbDatepickerModule, NgbDateStruct from '@ng-bootstrap/ng-bootstrap'</strong></li>
+      <li>In the same .ts file, add the model reference <strong>model: NgbDateStruct</strong></li>
+      <li>Continue by adding your date-picker logic</li>
+    </ol>
+    <h2 class="margin-bottom-0">Gist</h2>
     <app-gist src="angloux/cd720ceeb8278c691e52facbf8a27990"></app-gist>
   </div>
 </section>

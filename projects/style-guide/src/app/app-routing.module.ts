@@ -68,6 +68,7 @@ import {AccordionComponent} from './accordion/accordion.component';
 import {AccordionFancyComponent} from './accordion-fancy/accordion-fancy.component';
 import {CardComponent} from './card/card.component';
 import {CarouselComponent} from './carousel/carousel.component';
+import {TooltipDynamicComponent} from './tooltip-dynamic/tooltip-dynamic.component';
 import {FavouritesComponent} from './favourites/favourites.component';
 import {IconPickerComponent} from './icon-picker/icon-picker.component';
 import {InfoPanelComponent} from './info-panel/info-panel.component';
@@ -193,6 +194,7 @@ const routes: Routes = [
   { path: 'text', component: TextComponent },
   { path: 'toastr', component: ToastrComponent },
   { path: 'tooltip', component: TooltipComponent },
+  { path: 'tooltip-dynamic', component: TooltipDynamicComponent },
   { path: 'tree-menu', component: TreeMenuComponent },
   { path: 'ui-block', component: UiBlockComponent },
   { path: 'user-feedback', component: UserFeedbackComponent },

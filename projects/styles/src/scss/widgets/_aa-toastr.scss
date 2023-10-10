@@ -1,3 +1,4 @@
+// Legacy 
 .aa-toastr {
     position: fixed;
     top: 4rem;
@@ -38,6 +39,50 @@
             &:last-child {
                 width: 80%;
             }
+        }
+    }
+}
+
+// New
+.aa-toastr-service {
+    position: fixed;
+    z-index: 9999999999;
+    top: 3.5rem;
+    right: 0;
+
+    .aa-toastr-content * {
+        color: _colour(aa-white-100);
+    }
+
+    .aa-toastr-content {
+        padding: .75rem .25rem 1rem 1rem;
+
+        h3 {
+            margin: 0 0 .25rem 0;
+        }
+
+        button.material-icons {
+            background-color: transparent;
+            &:hover {
+                transform: rotate(180deg);
+                transition-duration: .3s;
+            }
+        }
+
+        &.success {
+            background-color: _colour(aa-green-100);
+        }
+    
+        &.warning {
+            background-color: _colour(aa-orange-100);
+        }
+    
+        &.error {
+            background-color: _colour(aa-red-100);
+        }
+    
+        &.info {
+            background-color: _colour(aa-light-blue-100);
         }
     }
 }

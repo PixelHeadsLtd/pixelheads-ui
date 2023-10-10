@@ -90,10 +90,11 @@
           </select>
         </div>
       </div>
+      <h3 class="margin-top-2 margin-bottom-0">Readonly and disabled</h3>
       <div class="flex-group">
         <div class="field small">
-          <label for="pet-select">Select (readonly="readOnly")</label>
-          <select name="pets" id="pet-select" readonly="readOnly">
+          <label for="pet-select">[attr.readonly]="isReadOnly? true : null"</label>
+          <select name="pets" id="pet-select" [attr.readonly]="isDisabled? true : null">
             <option value="" selected>Please select</option>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
@@ -104,8 +105,8 @@
           </select>
         </div>
         <div class="field small">
-          <label for="pet-select">Select (disabled="true")</label>
-          <select name="pets" id="pet-select" disabled="true">
+          <label for="pet-select">[attr.disabled]="isDisabled? true : null"</label>
+          <select name="pets" id="pet-select" [attr.disabled]="isDisabled? true : null">
             <option value="" selected>Please select</option>
             <option value="dog">Dog</option>
             <option value="cat">Cat</option>
@@ -137,10 +138,16 @@
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">Select disabled</td>
-            <td datalabel="Attribute">disabled</td>
+            <td datalabel="Element">Select readonly</td>
+            <td datalabel="Attribute">[attr.readonly]</td>
             <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">false</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Select readonly</td>
+            <td datalabel="Attribute">[attr.disabled]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
           </tr>
           <tr>
             <td datalabel="Element">Option</td>
@@ -164,16 +171,18 @@
       <section class="flex-1 col-left flex-start">
         <h2>Custom select (can add icons)</h2>
         <div class="describe margin-bottom-1">
-          <p>The is the Design Language custom-select that will allow you to add icons.</p>
+          <p>This is the Design Language custom-select that will allow you to add icons.</p>
+          <p>The example below demostrates a 'month picker' which isn't currently available in our 3rd party component <a routerLink="/ngb-datepicker">Ngb-datepicker</a></p>
         </div>
         <div class="field boxed">
           <label>Jump to a question</label>
           <aa-custom-select 
               [options]="optionArray"
-              defaultName="Please select"
-              defaultIcon="touch_app"
-              defaultIconColor="aa-red-100"
+              defaultName="Select month"
+              defaultIcon="calendar_month"
+              defaultIconColor="aa-light-blue-100"
               (optionSelected)="onOptionSelected($event)"
+              maxHeight="16"
           >
           </aa-custom-select>
         </div>
@@ -220,6 +229,12 @@
               <td datalabel="Attribute">(optionSelected)</td>
               <td datalabel="Type">Function</td>
               <td datalabel="Default">Your events</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-custom-select</td>
+              <td datalabel="Attribute">maxHeight</td>
+              <td datalabel="Type">Number</td>
+              <td datalabel="Default">Set the max height for scrolling</td>
             </tr>
           </tbody>
         </table>

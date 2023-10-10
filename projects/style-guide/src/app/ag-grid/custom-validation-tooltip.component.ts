@@ -5,7 +5,7 @@ import { ITooltipParams } from 'ag-grid-community';
 @Component({
   selector: 'tooltip-component',
   template:
-    `<div class="custom-tooltip box-shadow-strong bd-2 bd-red bd-solid aa-red-100">
+    `<div class="custom-tooltip box-shadow bd-2 bd-red bd-solid aa-red-100">
     <p><strong class="boxed">{{ data.athlete }}</strong></p>
     <p class="aa-red-100">
       <strong>Incorrect date format</strong><br/>

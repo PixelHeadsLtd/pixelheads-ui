@@ -5,6 +5,23 @@
   align-items: center;
   flex-direction: column;
 
+  &.progress-circle-custom {
+    h3 {margin: 0}
+    header {
+      width: 100%;
+      padding: 1rem .75rem;
+      margin-bottom: .5rem;
+    }
+    footer {
+      width: 100%;
+      padding: .25rem .75rem 1rem;
+      
+      button {
+        margin: 0;
+      }
+    }
+  }
+
   &.panel-view {
     background-color: _colour(aa-white-100);
     border: 1px solid _colour(aa-grey-10);

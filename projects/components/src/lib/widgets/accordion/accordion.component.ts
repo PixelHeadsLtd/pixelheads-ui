@@ -25,6 +25,7 @@ export class AccordionComponent {
   @Input() clearPadding: boolean;
   @Input() verticalDisplay: boolean;
   @Input() verticalMinHeight: any;
+  @Input() bespokeHeader: boolean;
   @Output() open = new EventEmitter<void>();
 
   onOpen(e: { stopPropagation: () => void; }) {

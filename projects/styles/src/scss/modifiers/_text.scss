@@ -9,6 +9,10 @@
 .text-light {font-family: _font(family-light) !important}
 .text-italic, .italic {font-style: _font(style-italic) !important}
 .strikethrough {text-decoration: line-through !important}
+.size-large, .font-size-large {font-size: _font(size-large) !important}
+.size-medium, .font-size-medium {font-size: _font(size-medium) !important}
+.size-regular, .font-size-regular {font-size: _font(size-regular) !important}
+.size-default, .font-size-default {font-size: _font(size-default) !important}
 .size-small, .font-size-small {font-size: _font(size-small) !important}
 .font-size-xsmall {font-size: _font(size-xsmall) !important}
 .font-size-tiny {font-size: _font(tiny) !important}

@@ -1,6 +1,5 @@
 import { EventEmitter } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import * as ɵngcc0 from '@angular/core';
 export interface CommentArray {
     comment: any;
 }
@@ -29,8 +28,5 @@ export declare class CommentsComponent implements ControlValueAccessor {
     registerOnTouched(fn: any): void;
     addComment(_EVENT: any, _COMMENTARRAY: CommentArray): void;
     removeComment(index: number): void;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<CommentsComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<CommentsComponent, "aa-comments", never, { "comments": "comments"; "person": "person"; "canDelete": "canDelete"; "iconColour": "iconColour"; }, { "commentsMade": "commentsMade"; }, never, never>;
 }
-
 //# sourceMappingURL=comments.component.d.ts.map

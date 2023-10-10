@@ -22,7 +22,8 @@
   </button>
   <div 
     [class.show-dropdown]="showDropdown" 
-    class="aa-custom-select-dropdown box-shadow-strong"
+    class="aa-custom-select-dropdown box-shadow"
+    [ngStyle]="{'max-height' : maxHeight+'rem'}"
   >
     <div *ngFor=" let option of options; let i = index">
       <button 

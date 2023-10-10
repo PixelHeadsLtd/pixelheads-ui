@@ -41,6 +41,7 @@ aa-button {
 }
 
 button {
+  overflow-wrap: initial; // needed to stop inheritance of overflow-wrap set on table in table.scss
   &.btn-fav {
     padding: 0;
     font-size: _font(size-medium);
@@ -130,6 +131,7 @@ button:not(
 
   // Used for creating our own custon icons on a standard button that does have text.
   &.custom-icons {
+    position: relative;
     border: 1px solid transparent;
     color: _palette(aa-white-100);
     padding-left: 2.25rem;
@@ -146,23 +148,23 @@ button:not(
       line-height: .9rem;
       letter-spacing: 0;
 
-      &.orange {
+      &.orange, .pending {
         background-color: _palette(aa-orange-100);
         color: _palette(aa-white-100);
       }
-      &.blue {
+      &.blue, .secondary {
         background-color: _palette(aa-blue-100);
         color: _palette(aa-white-100);
       }
-      &.green {
+      &.green, .complete {
         background-color: _palette(aa-green-100);
         color: _palette(aa-white-100);
       }
-      &.red {
+      &.red, .error {
         background-color: _palette(aa-red-100);
         color: _palette(aa-white-100);
       }
-      &.light-blue {
+      &.light-blue, .info, .primary {
         background-color: _palette(aa-light-blue-100);
         color: _palette(aa-white-100);
       }
@@ -177,10 +179,11 @@ button:not(
       .material-icons,
       .material-icons-outlined {
         font-size: _font(size-regular);
-        line-height: .75rem;
+        line-height: 1rem;
         max-width: 1rem;
         left: .5rem;
         text-align: left;
+        top: .33rem
       }
     }
     .material-icons,
@@ -310,35 +313,41 @@ button:not(
     }
   }
   &.red,
-  &.bg-aa-red-100 {
+  &.bg-aa-red-100,
+  &.error {
     @include button-red;
     &:hover {
       @include button-red-hover;
     }
   }
   &.blue,
-  &.bg-aa-blue-100 {
+  &.bg-aa-blue-100,
+  &.secondary {
     @include button-blue;
     &:hover {
       @include button-blue-hover;
     }
   }
   &.light-blue,
-  &.bg-aa-light-blue-100 {
+  &.bg-aa-light-blue-100,
+  &.primary,
+  &.info {
     @include button-light-blue;
     &:hover {
       @include button-light-blue-hover;
     }
   }
   &.orange,
-  &.bg-aa-orange-100 {
+  &.bg-aa-orange-100,
+  &.pending {
     @include button-orange;
     &:hover {
       @include button-orange-hover;
     }
   }
   &.green,
-  &.bg-aa-green-100 {
+  &.bg-aa-green-100,
+  &.complete {
     @include button-green;
     &:hover {
       @include button-green-hover;
@@ -742,12 +751,12 @@ table:not(.table-feature, .table-feature *) {
 
   button:not(nav button) {
     border: none;
-    height: 2.25rem;
+    min-height: 2.05rem;
     color: _colour(white);
 
     &:first-child {
       border-radius: 1.5rem 0 0 1.5rem;
-      padding-left: .75rem;
+      padding-left: 1rem;
       margin-right: 0;
     }
     
@@ -756,7 +765,7 @@ table:not(.table-feature, .table-feature *) {
       border-radius: 0 1.5rem 1.5rem 0;
       padding: 0 1rem;
       &:after {
-        top: .55rem;
+        top: .5rem;
         right: .75rem;
       }
     }
@@ -770,7 +779,7 @@ table:not(.table-feature, .table-feature *) {
         border-right: 1px solid _colour(white-transparency);
         padding: 0 1rem;
         &:after {
-          top: .55rem;
+          top: .5rem;
           left: .25rem;
           right: auto;
         }
@@ -778,7 +787,7 @@ table:not(.table-feature, .table-feature *) {
   
       &:last-child {
         border-radius: 0 1.5rem 1.5rem 0;
-        padding: 0 .75rem;
+        padding: 0 1rem 0 .75rem;
         margin-right: 0;
         &:after {
           content: none;
@@ -792,9 +801,23 @@ table:not(.table-feature, .table-feature *) {
     }
   }
 
+  &.nav-bottom {
+    nav {
+      top: 100%;
+      bottom: auto;
+    }
+
+    button {
+      &:after {
+        rotate: 180deg;
+      }
+    }
+  }
+
   nav {
     position: absolute;
     overflow: auto;
+    z-index: 9999999;
     left: calc(100% - 2.1rem);
     bottom: 100%;
     background-color: _colour(aa-grey-2);

@@ -256,14 +256,6 @@
       padding-top: 2.5rem;
     }
 
-    a.material-icons {
-      &:hover {
-        box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-        -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-        -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-      }
-    }
-
     .material-icons {
       position: absolute;
       top: 0;

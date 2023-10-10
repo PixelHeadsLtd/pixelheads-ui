@@ -109,3 +109,17 @@
 .force-red {color: _colour(force-red)!important}
 .force-orange {color: _colour(force-orange)!important}
 .force-green {color: _colour(force-green)!important}
+
+// Hover colours
+.hover-blue {&:hover {background-color: _colour(aa-blue-100)!important}}
+.hover-light-blue {&:hover {background-color: _colour(aa-light-blue-100)!important}}
+.hover-red {&:hover {background-color: _colour(aa-red-100)!important}}
+.hover-orange {&:hover {background-color: _colour(aa-orange-100)!important}}
+.hover-green {&:hover {background-color: _colour(aa-green-100)!important}}
+.hover-plum {&:hover {background-color: _colour(aa-plum-100)!important}}
+.hover-pink {&:hover {background-color: _colour(aa-pink-100)!important}}
+.hover-burgundy {&:hover {background-color: _colour(aa-burgundy-100)!important}}
+.hover-ochre {&:hover {background-color: _colour(aa-ochre-100)!important}}
+.hover-light-grey {&:hover {background-color: _colour(aa-grey-5)!important}}
+.hover-mid-grey {&:hover {background-color: _colour(aa-grey-25)!important}}
+.hover-dark-grey {&:hover {background-color: _colour(aa-grey-100)!important}}

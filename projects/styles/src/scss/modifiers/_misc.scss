@@ -10,16 +10,22 @@
 .rotate-180 {transform: rotate(180deg);}
 
 // Shadow
-.box-shadow, .box-shadow-light {
-    box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
-    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
-    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow);
+.box-shadow {
+    box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
+    -webkit-box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
+    -moz-box-shadow: 0 0 .3rem .3rem _colour(box-shadow);
+}
+
+.box-shadow-light {
+    box-shadow: 0 0 .3rem .3rem _colour(box-shadow-light);
+    -webkit-box-shadow: 0 0 .3rem .3rem _colour(box-shadow-light);
+    -moz-box-shadow: 0 0 .3rem .3rem _colour(box-shadow-light);
 }
 
 .box-shadow-strong {
-    box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-    -webkit-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
-    -moz-box-shadow: 0 0 .5rem .05rem _colour(box-shadow-strong);
+    box-shadow: 0 0 .3rem .3rem _colour(box-shadow-strong);
+    -webkit-box-shadow: 0 0 .3rem .3rem _colour(box-shadow-strong);
+    -moz-box-shadow: 0 0 .3rem .3rem _colour(box-shadow-strong);
 }
 
 // Z-index

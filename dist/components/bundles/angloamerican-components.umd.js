@@ -207,7 +207,7 @@
     ButtonComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-button',
-                    template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary &&!buttonDayPicker\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label \r\n    [ngClass]=\"{ 'show-label': showLabel }\"\r\n    [for]=\"buttonId\">\r\n    {{buttonLabel}}\r\n  </label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    [ngClass]=\"{'material-icons' : customIconsRound}\"\r\n  >\r\n    <div *ngIf=\"!customIconsRound\" [ngClass]=\"{'display-inline-block' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n    <span *ngIf=\"customIconsRound\">{{buttonIcon}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div class=\"button-split\" [ngClass]=\"{'nav-left-side' : navLeftside}\">\r\n    <div class=\"flex-group flex-start flex-align-center flex-nowrap\">\r\n      <button\r\n        *ngIf=\"navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n      <button\r\n        (click)=\"onButtonClick($event)\"\r\n        [class]=\"buttonClass\"\r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n        {{buttonText}}\r\n      </button>\r\n      <button\r\n        *ngIf=\"!navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n    </div>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow-strong\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n\r\n<button\r\n  *ngIf=\"buttonDayPicker\"\r\n  class=\"button-day-picker box-shadow-strong\"\r\n  (click)=\"onButtonClick($event)\"\r\n  [type]=\"buttonType\" \r\n  [name]=\"buttonId\" \r\n  [id]=\"buttonId\" \r\n  [disabled]=\"disabled\" \r\n>\r\n  <strong>{{buttonText}}</strong>\r\n  <div></div>\r\n</button>\r\n\r\n",
+                    template: "<div \r\n  *ngIf=\"!buttonEnriched && !buttonSplit &&!buttonSummary &&!buttonDayPicker\" \r\n  class=\"field {{fieldClass}}\"\r\n  [class.button-large]=\"buttonLarge\"\r\n>\r\n  <label \r\n    [ngClass]=\"{ 'show-label': showLabel }\"\r\n    [for]=\"buttonId\">\r\n    {{buttonLabel}}\r\n  </label>\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [class]=\"buttonClass\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    [ngClass]=\"{\r\n      'material-icons' : customIconsRound,\r\n      'material-icons-outlined' : customIconsRoundOutlined\r\n    }\"\r\n  >\r\n    <div *ngIf=\"!customIconsRound && !customIconsRoundOutlined\" [ngClass]=\"{'display-inline-block' : customIcons}\">\r\n      <span *ngIf=\"customIcons\" class=\"material-icons\">{{buttonIcon}}</span>\r\n      <span>{{buttonText}}</span>\r\n      <div *ngIf=\"showCount\" class=\"count {{countColor}}\">{{count}}</div>\r\n    </div>\r\n    <span *ngIf=\"customIconsRound || customIconsRoundOutlined\">{{buttonIcon}}</span>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonEnriched\" class=\"field {{fieldClass}}\">\r\n  <button \r\n    [type]=\"buttonType\" \r\n    [name]=\"buttonId\" \r\n    [id]=\"buttonId\" \r\n    [disabled]=\"disabled\" \r\n    (click)=\"onButtonClick($event)\"\r\n    class=\"btn-enriched box-shadow-light gradient-v-grey\"\r\n  >\r\n    <div class=\"flex-group flex-end btn-enriched-toolbar\">\r\n      <ng-content select=\"[toolbar]\"></ng-content>\r\n    </div>\r\n    <div class=\"btn-enriched-content flex-group flex-start flex-align-center\">\r\n      <div class=\"material-icons {{iconColour}}\">{{iconName}}</div>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n  </button>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSplit\" class=\"field {{fieldClass}}\">\r\n  <label [for]=\"buttonId\">{{buttonLabel}}</label>\r\n  <div \r\n    class=\"button-split\" \r\n    [ngClass]=\"{'nav-left-side' : navLeftside, 'nav-bottom' : navBottom}\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center flex-nowrap\">\r\n      <button\r\n        *ngIf=\"navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n      <button\r\n        (click)=\"onButtonClick($event)\"\r\n        [class]=\"buttonClass\"\r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n        {{buttonText}}\r\n      </button>\r\n      <button\r\n        *ngIf=\"!navLeftside\"\r\n        class=\"chevron-up\"\r\n        [class]=\"buttonClass\"\r\n        (click)=\"showBtnMenu=!showBtnMenu\" \r\n        [type]=\"buttonType\" \r\n        [name]=\"buttonId\" \r\n        [id]=\"buttonId\"\r\n      >\r\n      </button>\r\n    </div>\r\n    <nav \r\n      (click)=\"showBtnMenu=false\" \r\n      *ngIf=\"showBtnMenu\" \r\n      class=\"box-shadow\"\r\n      [ngStyle]=\"{'max-height' : maxHeight}\"\r\n    >\r\n      <ng-content select=\"[bs-buttons]\"></ng-content>\r\n    </nav>\r\n  </div>\r\n</div>\r\n\r\n<div *ngIf=\"buttonSummary\" class=\"field {{fieldClass}} flex-stretch\">\r\n  <button\r\n    class=\"{{status}} button-summary border-radius-0-5 box-shadow-light bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5\"\r\n  >\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <h1 class=\"priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid\">{{level}}</h1>\r\n      <h2 class=\"margin-0\">{{title}}</h2>\r\n    </div>\r\n    <p *ngIf=\"showDescription\" class=\"margin-top-1\">\r\n      {{desc}}\r\n    </p>\r\n  </button>\r\n</div>\r\n\r\n<button\r\n  *ngIf=\"buttonDayPicker\"\r\n  class=\"button-day-picker box-shadow-light\"\r\n  (click)=\"onButtonClick($event)\"\r\n  [type]=\"buttonType\" \r\n  [name]=\"buttonId\" \r\n  [id]=\"buttonId\" \r\n  [disabled]=\"disabled\" \r\n>\r\n  <strong>{{buttonText}}</strong>\r\n  <div></div>\r\n</button>\r\n\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
@@ -227,6 +227,7 @@
         buttonEnriched: [{ type: i0.Input }],
         showBtnMenu: [{ type: i0.Input }],
         buttonSplit: [{ type: i0.Input }],
+        navBottom: [{ type: i0.Input }],
         iconName: [{ type: i0.Input }],
         title: [{ type: i0.Input }],
         iconColour: [{ type: i0.Input }],
@@ -242,6 +243,7 @@
         maxHeight: [{ type: i0.Input }],
         showLabel: [{ type: i0.Input }],
         customIconsRound: [{ type: i0.Input }],
+        customIconsRoundOutlined: [{ type: i0.Input }],
         navLeftside: [{ type: i0.Input }],
         buttonDayPicker: [{ type: i0.Input }],
         buttonClick: [{ type: i0.Output }],
@@ -349,7 +351,7 @@
     CommentsComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-comments',
-                    template: "<div class=\"aa-comments\">\r\n  <div \r\n    (click)=\"\r\n    makeComments=!makeComments; \r\n    toggleComments=false; \r\n    clicked=false\" \r\n    class=\"\r\n    comments-trigger \r\n    cursor-pointer \r\n    flex-group \r\n    flex-start \r\n    margin-bottom-0-5\"\r\n  >\r\n    <div class=\"material-icons {{iconColour}} margin-top-0-25 margin-right-0-5\">comment</div>\r\n    <a class=\"margin-top-0-25 flex-align-center\">\r\n      <span *ngIf=\"comments.length===0\">Click to add a comment</span>\r\n      <span *ngIf=\"comments.length===1\">There is ({{comments.length}}) comment</span>\r\n      <span *ngIf=\"comments.length>1\">There are ({{comments.length}}) comments</span>\r\n    </a>\r\n  </div>\r\n  <div \r\n    class=\"\r\n    comments-panel \r\n    box-shadow-strong\r\n    border-radius-0-25 \r\n    bg-aa-white-100 \r\n    padding-1\" \r\n    [class.show-comments]=\"makeComments\"\r\n  >\r\n    <p \r\n      class=\"margin-top-0 italic aa-blue-100\" \r\n      *ngIf=\"!comments.length && !makeComments\"\r\n    >There are currently no comments\r\n    </p>\r\n    <div *ngIf=\"makeComments\" class=\"field boxed\">\r\n      <label>Comment</label>\r\n      <textarea [(ngModel)]=\"txtComment\" placeholder=\"Your Comment\" (change)=\"clicked=false\"></textarea>\r\n      <div class=\"flex-group flex-start\">\r\n        <button class=\"secondary margin-top-1\" (click)=\"addComment($event, cmt)\">Add comment</button>\r\n        <button \r\n          class=\"cancel margin-top-1\" \r\n          (click)=\"makeComments=false; toggleComments=false\"\r\n          >Close\r\n        </button>\r\n        <div>\r\n          <div \r\n            *ngIf=\"clicked && !txtComment\" \r\n            role=\"alert\"\r\n            class=\"error margin-top-1\" \r\n            >You need to add a comment\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  \r\n    <div class=\"field boxed\" *ngIf=\"comments.length\">\r\n      <h3 *ngIf=\"makeComments\">Comments ({{comments.length}})</h3>\r\n      <div *ngIf=\"!toggleComments\" class=\"scroll-panel\">\r\n          <div class=\"scroll-panel-content\" [ngStyle]=\"{'max-height':'8rem'}\">\r\n            <table class=\"table-comments\">\r\n              <thead>\r\n                <tr>\r\n                  <th width=\"62%\"><div><span>Comment</span></div></th>\r\n                  <th width=\"20%\"><div><span>Added by</span></div></th>\r\n                  <th width=\"16%\"><div><span>Date added</span></div></th>\r\n                  <th width=\"2\" *ngIf=\"canDelete\"><div><span>&nbsp;</span></div></th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let cmt of comments; let i = index\"> \r\n                      <td title=\"{{ cmt.comment }}\">{{ cmt.comment }}</td>\r\n                      <td title=\"{{ person }}\">{{ person }}</td>\r\n                      <td title=\"{{ currentDate | DateFormatPipe }}\">{{ currentDate | DateFormatPipe }}</td>\r\n                      <td *ngIf=\"canDelete\">\r\n                        <button \r\n                          class=\"material-icons aa-red-100 transparent\" \r\n                          (click)=\"removeComment(i)\"\r\n                          >delete_forever</button>\r\n                      </td>\r\n                  </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>",
+                    template: "<div class=\"aa-comments\">\r\n  <div \r\n    (click)=\"\r\n    makeComments=!makeComments; \r\n    toggleComments=false; \r\n    clicked=false\" \r\n    class=\"\r\n    comments-trigger \r\n    cursor-pointer \r\n    flex-group \r\n    flex-start \r\n    margin-bottom-0-5\"\r\n  >\r\n    <div class=\"material-icons {{iconColour}} margin-top-0-25 margin-right-0-5\">comment</div>\r\n    <a class=\"margin-top-0-25 flex-align-center\">\r\n      <span *ngIf=\"comments.length===0\">Click to add a comment</span>\r\n      <span *ngIf=\"comments.length===1\">There is ({{comments.length}}) comment</span>\r\n      <span *ngIf=\"comments.length>1\">There are ({{comments.length}}) comments</span>\r\n    </a>\r\n  </div>\r\n  <div \r\n    class=\"\r\n    comments-panel \r\n    box-shadow\r\n    border-radius-0-25 \r\n    bg-aa-white-100 \r\n    padding-1\" \r\n    [class.show-comments]=\"makeComments\"\r\n  >\r\n    <p \r\n      class=\"margin-top-0 italic aa-blue-100\" \r\n      *ngIf=\"!comments.length && !makeComments\"\r\n    >There are currently no comments\r\n    </p>\r\n    <div *ngIf=\"makeComments\" class=\"field boxed\">\r\n      <label>Comment</label>\r\n      <textarea [(ngModel)]=\"txtComment\" placeholder=\"Your Comment\" (change)=\"clicked=false\"></textarea>\r\n      <div class=\"flex-group flex-start\">\r\n        <button class=\"secondary margin-top-1\" (click)=\"addComment($event, cmt)\">Add comment</button>\r\n        <button \r\n          class=\"cancel margin-top-1\" \r\n          (click)=\"makeComments=false; toggleComments=false\"\r\n          >Close\r\n        </button>\r\n        <div>\r\n          <div \r\n            *ngIf=\"clicked && !txtComment\" \r\n            role=\"alert\"\r\n            class=\"error margin-top-1\" \r\n            >You need to add a comment\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  \r\n    <div class=\"field boxed\" *ngIf=\"comments.length\">\r\n      <h3 *ngIf=\"makeComments\">Comments ({{comments.length}})</h3>\r\n      <div *ngIf=\"!toggleComments\" class=\"scroll-panel\">\r\n          <div class=\"scroll-panel-content\" [ngStyle]=\"{'max-height':'8rem'}\">\r\n            <table class=\"table-comments\">\r\n              <thead>\r\n                <tr>\r\n                  <th width=\"62%\"><div><span>Comment</span></div></th>\r\n                  <th width=\"20%\"><div><span>Added by</span></div></th>\r\n                  <th width=\"16%\"><div><span>Date added</span></div></th>\r\n                  <th width=\"2\" *ngIf=\"canDelete\"><div><span>&nbsp;</span></div></th>\r\n                </tr>\r\n              </thead>\r\n              <tbody>\r\n                  <tr *ngFor=\"let cmt of comments; let i = index\"> \r\n                      <td title=\"{{ cmt.comment }}\">{{ cmt.comment }}</td>\r\n                      <td title=\"{{ person }}\">{{ person }}</td>\r\n                      <td title=\"{{ currentDate | DateFormatPipe }}\">{{ currentDate | DateFormatPipe }}</td>\r\n                      <td *ngIf=\"canDelete\">\r\n                        <button \r\n                          class=\"material-icons aa-red-100 transparent\" \r\n                          (click)=\"removeComment(i)\"\r\n                          >delete_forever</button>\r\n                      </td>\r\n                  </tr>\r\n              </tbody>\r\n            </table>\r\n          </div>\r\n        </div>\r\n    </div>\r\n  </div>\r\n</div>",
                     providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR],
                     styles: [""]
                 },] }
@@ -401,7 +403,7 @@
     CustomSelectComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-custom-select',
-                    template: "<div \r\n  class=\"aa-custom-select\"\r\n  [ngStyle]=\"{'width' : setWidth+'rem'}\"\r\n>\r\n  <button \r\n    class=\"\r\n    border-radius-0-25\r\n    flex-align-center\"\r\n    (click)=\"showDropdown=!showDropdown\"\r\n  >\r\n    <span \r\n      class=\"\r\n      material-icons \r\n      padding-right-0-5\r\n      {{ selectedOption?.iconColor || defaultIconColor }}\"\r\n    >{{ selectedOption?.icon || defaultIcon }}\r\n    </span>\r\n\r\n    <span *ngIf=\"!selectedOption?.display\">{{ defaultName }}</span>\r\n    <span *ngIf=\"selectedOption?.display\">{{ selectedOption?.display }}</span>\r\n\r\n  </button>\r\n  <div \r\n    [class.show-dropdown]=\"showDropdown\" \r\n    class=\"aa-custom-select-dropdown box-shadow-strong\"\r\n  >\r\n    <div *ngFor=\" let option of options; let i = index\">\r\n      <button \r\n        (click)=\"optionIsSelected($event, option); setIndex(i)\" \r\n        class=\"flex-align-center\"\r\n        [class.selected]=\"selectedIndex === i\"\r\n      >\r\n        <span \r\n          *ngIf=\"option.showIcon\"\r\n          class=\"\r\n          material-icons \r\n          padding-right-0-5 \r\n          {{option.iconColor}}\"\r\n        >{{ option.icon }}</span>\r\n          {{ option.display }}\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>",
+                    template: "<div \r\n  class=\"aa-custom-select\"\r\n  [ngStyle]=\"{'width' : setWidth+'rem'}\"\r\n>\r\n  <button \r\n    class=\"\r\n    border-radius-0-25\r\n    flex-align-center\"\r\n    (click)=\"showDropdown=!showDropdown\"\r\n  >\r\n    <span \r\n      class=\"\r\n      material-icons \r\n      padding-right-0-5\r\n      {{ selectedOption?.iconColor || defaultIconColor }}\"\r\n    >{{ selectedOption?.icon || defaultIcon }}\r\n    </span>\r\n\r\n    <span *ngIf=\"!selectedOption?.display\">{{ defaultName }}</span>\r\n    <span *ngIf=\"selectedOption?.display\">{{ selectedOption?.display }}</span>\r\n\r\n  </button>\r\n  <div \r\n    [class.show-dropdown]=\"showDropdown\" \r\n    class=\"aa-custom-select-dropdown box-shadow\"\r\n    [ngStyle]=\"{'max-height' : maxHeight+'rem'}\"\r\n  >\r\n    <div *ngFor=\" let option of options; let i = index\">\r\n      <button \r\n        (click)=\"optionIsSelected($event, option); setIndex(i)\" \r\n        class=\"flex-align-center\"\r\n        [class.selected]=\"selectedIndex === i\"\r\n      >\r\n        <span \r\n          *ngIf=\"option.showIcon\"\r\n          class=\"\r\n          material-icons \r\n          padding-right-0-5 \r\n          {{option.iconColor}}\"\r\n        >{{ option.icon }}</span>\r\n          {{ option.display }}\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>",
                     styles: [""]
                 },] }
     ];
@@ -414,6 +416,7 @@
         defaultIcon: [{ type: i0.Input }],
         defaultIconColor: [{ type: i0.Input }],
         setWidth: [{ type: i0.Input }],
+        maxHeight: [{ type: i0.Input }],
         closeDropdown: [{ type: i0.Output }],
         optionSelected: [{ type: i0.Output }],
         highlightSection: [{ type: i0.Output }],
@@ -627,7 +630,7 @@
     BladeComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-blade',
-                    template: "<!-- MODAL UI BLOCK -->\r\n<div class=\"aa-blade-modal\" *ngIf=\"toggleBlade && showModal\" [ngStyle]=\"{'z-index' : zIndex}\"></div>\r\n\r\n<!-- HEADER BAKED IN -->\r\n<aside \r\n  *ngIf=\"!customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade' : toggleBlade,\r\n    'show-tabs' : bladeTabs\r\n  }\"\r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex+10\r\n  }\"\r\n>\r\n  <article class=\"blade-header flex-group space-between\">\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <div \r\n          *ngIf=\"enablePinning\" \r\n          (click)=\"toggleThePin($event)\"\r\n          [ngClass]=\"{'pinned' : isPinned}\" \r\n          class=\"material-icons pin flex-end\"\r\n      >\r\n        push_pin\r\n      </div>\r\n      <div *ngIf=\"enableIcon\" class=\"material-icons header-icon margin-right-0-5\">{{iconName}}</div>\r\n      <h2 class=\"margin-top-0-25 margin-0 ellipsis\" [ngStyle]=\"{'max-width' : headingMaxWidth+'rem' }\">\r\n        {{bladeHeading}}\r\n      </h2>\r\n    </div>\r\n    <a class=\"anchor-close flex-align-center\" (click)=\"onClose()\">Close</a>\r\n    <ng-content *ngIf=\"bladeTabs\" select=\"[blade-tabs]\"></ng-content>\r\n  </article>\r\n  <ng-content></ng-content>\r\n</aside>\r\n\r\n<!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->\r\n<aside \r\n  *ngIf=\"customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade' : toggleBlade,\r\n    'show-tabs custom-header-tabs' : customBladeTabs\r\n  }\" \r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex\r\n  }\"\r\n>\r\n  <article class=\"blade-header custom-header\">\r\n    <ng-content select=\"[custom-header]\"></ng-content>\r\n    <ng-content *ngIf=\"customBladeTabs\" select=\"[custom-blade-tabs]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-content\">\r\n    <ng-content select=\"[custom-content]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-footer\">\r\n    <ng-content select=\"[custom-footer]\"></ng-content>\r\n  </article>\r\n</aside>\r\n\r\n",
+                    template: "<!-- MODAL UI BLOCK -->\r\n<div class=\"aa-blade-modal\" *ngIf=\"toggleBlade && showModal\" [ngStyle]=\"{'z-index' : zIndex}\"></div>\r\n\r\n<!-- HEADER BAKED IN -->\r\n<aside \r\n  *ngIf=\"!customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade box-shadow' : toggleBlade,\r\n    'show-tabs' : bladeTabs\r\n  }\"\r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex+10\r\n  }\"\r\n>\r\n  <article class=\"blade-header flex-group space-between\">\r\n    <div class=\"flex-group flex-start flex-align-center\">\r\n      <div \r\n          *ngIf=\"enablePinning\" \r\n          (click)=\"toggleThePin($event)\"\r\n          [ngClass]=\"{'pinned' : isPinned}\" \r\n          class=\"material-icons pin flex-end\"\r\n      >\r\n        push_pin\r\n      </div>\r\n      <div *ngIf=\"enableIcon\" class=\"material-icons header-icon margin-right-0-5\">{{iconName}}</div>\r\n      <h2 class=\"margin-top-0-25 margin-0 ellipsis\" [ngStyle]=\"{'max-width' : headingMaxWidth+'rem' }\">\r\n        {{bladeHeading}}\r\n      </h2>\r\n    </div>\r\n    <a class=\"anchor-close flex-align-center\" (click)=\"onClose()\">Close</a>\r\n    <ng-content *ngIf=\"bladeTabs\" select=\"[blade-tabs]\"></ng-content>\r\n  </article>\r\n  <ng-content></ng-content>\r\n</aside>\r\n\r\n<!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->\r\n<aside \r\n  *ngIf=\"customBlade\" \r\n  class=\"blade animate-all {{bladeSize}}\" \r\n  [ngClass]=\"{\r\n    'show-blade box-shadow' : toggleBlade,\r\n    'show-tabs custom-header-tabs' : customBladeTabs\r\n  }\" \r\n  [ngStyle]=\"{\r\n    'top' : topPosition + 'rem', \r\n    'z-index' : zIndex\r\n  }\"\r\n>\r\n  <article class=\"blade-header custom-header\">\r\n    <ng-content select=\"[custom-header]\"></ng-content>\r\n    <ng-content *ngIf=\"customBladeTabs\" select=\"[custom-blade-tabs]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-content\">\r\n    <ng-content select=\"[custom-content]\"></ng-content>\r\n  </article>\r\n  <article class=\"blade-footer\">\r\n    <ng-content select=\"[custom-footer]\"></ng-content>\r\n  </article>\r\n</aside>\r\n\r\n",
                     styles: [""]
                 },] }
     ];
@@ -927,7 +930,7 @@
     CustomWrapperComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-custom-wrapper',
-                    template: "<section\r\n    class=\"{{borderColour}} {{backgroundColour}} position-relative\"\r\n    [ngClass]=\"{\r\n        'box-shadow-strong' : boxShadow\r\n    }\"\r\n    [ngStyle]=\"{\r\n        'border-radius' : borderRadius,\r\n        'padding' : paddingSize,\r\n        'min-width' : minWidth,\r\n        'max-width' : maxWidth,\r\n        'min-height' : minHeight,\r\n        'max-height' : maxHeight,\r\n        'z-index' : zIndex,\r\n        'border-width' : borderWidth,\r\n        'border-style' : borderStyle,\r\n        'margin-bottom' : marginBottom,\r\n        'overflow': enableScrolling ? 'auto' : 'initial'\r\n    }\"\r\n>\r\n    <ng-content></ng-content>\r\n</section>",
+                    template: "<section\r\n    class=\"{{borderColour}} {{backgroundColour}} position-relative\"\r\n    [ngClass]=\"{\r\n        'box-shadow' : boxShadow\r\n    }\"\r\n    [ngStyle]=\"{\r\n        'border-radius' : borderRadius,\r\n        'padding' : paddingSize,\r\n        'min-width' : minWidth,\r\n        'max-width' : maxWidth,\r\n        'min-height' : minHeight,\r\n        'max-height' : maxHeight,\r\n        'z-index' : zIndex,\r\n        'border-width' : borderWidth,\r\n        'border-style' : borderStyle,\r\n        'margin-bottom' : marginBottom,\r\n        'overflow': enableScrolling ? 'auto' : 'initial'\r\n    }\"\r\n>\r\n    <ng-content></ng-content>\r\n</section>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1041,7 +1044,7 @@
     ContextMenuItemComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-context-menu-item',
-                    template: "<li>\r\n    <a [routerLink]=\"routerLink\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact: true}\">{{menuItemText}}</a>\r\n</li>",
+                    template: "<li>\r\n    <a \r\n        [routerLink]=\"routerLink\" \r\n        [routerLinkActive]=\"['active']\" \r\n        [routerLinkActiveOptions]=\"{exact: true}\"\r\n        [ngClass]=\"{'nowrap' : noWrap}\"\r\n        >\r\n        {{menuItemText}}\r\n    </a>\r\n</li>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1053,7 +1056,8 @@
         menuItemText: [{ type: i0.Input }],
         routerLink: [{ type: i0.Input }],
         routerLinkActive: [{ type: i0.Input }],
-        minWidth: [{ type: i0.Input }]
+        minWidth: [{ type: i0.Input }],
+        noWrap: [{ type: i0.Input }]
     };
 
     var NavContextComponent = /** @class */ (function () {
@@ -1125,7 +1129,7 @@
     ProgressIndicatorAdvancedComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-progress-indicator-advanced',
-                    template: "<section class=\"indicator-item flex-group {{ progressClass }}\">\r\n    <div *ngIf=\"showDescription\" class=\"description\">\r\n        <p class=\"box-shadow\">{{description}}</p>\r\n        <div class=\"material-icons {{iconClass}}\">pan_tool_alt</div>\r\n    </div>\r\n    <div class=\"bus-stop flex-group flex-column flex-center\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</section>",
+                    template: "<section class=\"indicator-item flex-group {{ progressClass }}\">\r\n    <div *ngIf=\"showDescription\" class=\"description\">\r\n        <p class=\"box-shadow-light\">{{description}}</p>\r\n        <div class=\"material-icons {{iconClass}}\">pan_tool_alt</div>\r\n    </div>\r\n    <div class=\"bus-stop flex-group flex-column flex-center\">\r\n        <ng-content></ng-content>\r\n    </div>\r\n</section>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1407,7 +1411,7 @@
     TabNavigationSecondaryComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tab-navigation-secondary',
-                    template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutletSecondary\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li>\r\n        <a \r\n          class=\"{{tabColour}}\" \r\n          *ngIf=\"!isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <a \r\n          class=\"{{tabActiveColour}}\" \r\n          *ngIf=\"isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\" class=\"tab-disabled\">{{ tab.tabName }}</span>\r\n      </li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n",
+                    template: "\r\n<!-- ROUTER-OUTLET -->\r\n<nav *ngIf=\"routerOutletSecondary\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-content select=\"[list-items]\"></ng-content>\r\n  </ul>\r\n</nav>\r\n\r\n<!-- NG-TEMPLATE ONLY -->\r\n<nav *ngIf=\"ngTemplate\" class=\"tab-navigation-secondary\">\r\n  <ul>\r\n    <ng-container *ngFor=\"let tab of contentTabs\">\r\n      <li>\r\n        <a \r\n          class=\"{{tabColour}} flex-group flex-align-center flex-start\" \r\n          *ngIf=\"!isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <a \r\n          class=\"{{tabActiveColour}} flex-group flex-align-center flex-start\" \r\n          *ngIf=\"isActive(tab) && !tab.tabDisabled\" \r\n          [id]=\"tab.tabId\" \r\n          [class.active]=\"isActive(tab)\" \r\n          (click)=\"onTabClicked(tab)\">\r\n          {{ tab.tabName }}\r\n          <a *ngIf=\"tab.enableCloseSecondary\" (click)=\"onCloseTabSecondary($event, tab.tabId)\" class=\"anchor-close\"></a>\r\n        </a>\r\n        <span *ngIf=\"tab.tabDisabled\" class=\"tab-disabled\">{{ tab.tabName }}</span>\r\n      </li>\r\n    </ng-container>\r\n    <ng-content></ng-content>\r\n  </ul>\r\n</nav>\r\n",
                     styles: [""]
                 },] }
     ];
@@ -1476,7 +1480,7 @@
     AlertComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-alert',
-                    template: "<div \r\n    role=\"alert\" \r\n    class=\"overflow-hidden {{alertClass}}\"\r\n    [ngClass]=\"{\r\n        'align-icon-top' : alignIconTop,\r\n        'max-height-initial' : expandPanel\r\n    }\"\r\n    [ngStyle]=\"{\r\n        'min-width' : minWidth,\r\n        'max-height': [collapsedHeight]\r\n    }\"\r\n>\r\n    <div \r\n        *ngIf=\"collapsible\" \r\n        class=\"\r\n        flex-group \r\n        space-between \r\n        flex-align-center \r\n        margin-top-0-5\"\r\n    >\r\n        <h3 class=\"margin-0\">{{ alertTitle }}</h3>\r\n        <div \r\n            class=\"flex-align-center cursor-pointer\"\r\n            (click)=\"expandPanel=!expandPanel\"\r\n        >\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"!expandPanel\">open_in_full</span>\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"expandPanel\">close_fullscreen</span>\r\n        </div>\r\n    </div>\r\n    <div *ngIf=\"!collapsible\">\r\n        {{ alertText }}\r\n    </div> \r\n    <div \r\n        *ngIf=\"collapsible\"\r\n        [ngClass]=\"{\r\n            'margin-top-1' : collapsible\r\n        }\"\r\n    >\r\n        {{ alertText }}\r\n    </div>\r\n</div>",
+                    template: "<div \r\n    role=\"alert\" \r\n    class=\"overflow-hidden {{alertClass}}\"\r\n    [ngClass]=\"{\r\n        'align-icon-top' : alignIconTop,\r\n        'max-height-initial' : expandPanel\r\n    }\"\r\n    [ngStyle]=\"{\r\n        'min-width' : minWidth,\r\n        'max-width' : maxWidth,\r\n        'max-height': [collapsedHeight]\r\n    }\"\r\n>\r\n    <div \r\n        *ngIf=\"collapsible\" \r\n        class=\"\r\n        flex-group \r\n        space-between \r\n        flex-align-center \r\n        margin-top-0-5\"\r\n    >\r\n        <h3 class=\"margin-0\">{{ alertTitle }}</h3>\r\n        <div \r\n            class=\"flex-align-center cursor-pointer\"\r\n            (click)=\"expandPanel=!expandPanel\"\r\n        >\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"!expandPanel\">open_in_full</span>\r\n            <span class=\"material-icons padding-left-1\" *ngIf=\"expandPanel\">close_fullscreen</span>\r\n        </div>\r\n    </div>\r\n    <div *ngIf=\"!collapsible\">\r\n        {{ alertText }}\r\n    </div> \r\n    <div \r\n        *ngIf=\"collapsible\"\r\n        [ngClass]=\"{\r\n            'margin-top-1' : collapsible\r\n        }\"\r\n    >\r\n        {{ alertText }}\r\n    </div>\r\n</div>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush
                 },] }
     ];
@@ -1489,6 +1493,7 @@
         alignIconTop: [{ type: i0.Input }],
         expandPanel: [{ type: i0.Input }],
         minWidth: [{ type: i0.Input }],
+        maxWidth: [{ type: i0.Input }],
         collapsedHeight: [{ type: i0.Input }],
         removePanel: [{ type: i0.Input }]
     };
@@ -1598,7 +1603,7 @@
     ProgressCircleComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-progress-circle',
-                    template: "<div *ngIf=\"!isSmall\" class=\"progress-circle\" [ngClass]=\"{'panel-view' : panelView}\">\r\n  <h3 class=\"flex-center title {{headerColor}}\" [ngClass]=\"{'padding-right-1' : enableTooltip}\">\r\n    <span \r\n      title=\"{{name}}\"\r\n      class=\"flex-group flex-align-center\"\r\n      >\r\n      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}\r\n      <span title=\"Error\" *ngIf=\"isError\" class=\"material-icons status padding-left-0-25 small aa-red-100\">error_outline</span>\r\n      <span title=\"Warning\" *ngIf=\"isWarning\" class=\"material-icons status padding-left-0-25 small aa-orange-100\">warning_amber</span>\r\n      <span title=\"Info\" *ngIf=\"isInfo\" class=\"material-icons-outlined status small padding-left-0-25 aa-light-blue-100\">info</span>\r\n    </span>\r\n    <div *ngIf=\"enableTooltip\" class=\"aa-tooltip icon-info margin-left-0-25\" [ngStyle]=\"{'position' : 'absolute', 'right' : '.75rem'}\">\r\n      <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\">\r\n        <p>{{tooltipBody}}</p>\r\n      </div>\r\n    </div>\r\n    <span *ngIf=\"panelView && !hideChevron\" class=\"material-icons\">chevron_right</span>\r\n  </h3>\r\n  <div class=\"percent\">\r\n    <svg viewBox=\"20 0 60 100\">\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n    </svg>\r\n    <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n  </div>\r\n\r\n  <span \r\n    class=\"align-center number\" \r\n    *ngIf=\"panelView && !enableAlertShield && !enableAlertShieldTooltip\">\r\n    {{value}}\r\n  </span>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShield\" \r\n    class=\"alert-shield small {{alertShieldStatus}}\" \r\n    >\r\n      {{alertShieldText}}\r\n  </div>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShieldTooltip\" \r\n    class=\"alert-shield-tooltip-wrapper\"\r\n    [ngClass]=\"{\r\n        'tooltip-top-left' : tooltipTopLeft,\r\n        'tooltip-top-right' : tooltipTopRight,\r\n        'tooltip-bottom-left' : tooltipBottomLeft,\r\n        'tooltip-bottom-right' : tooltipBottomRight\r\n    }\"\r\n  >\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}}\"\r\n        [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield small {{alertShieldStatus}}\" \r\n        >\r\n          {{alertShieldText}}\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<li *ngIf=\"isSmall\" class=\"flex-group flex-start\">\r\n  <div class=\"progress-circle small margin-right-0-5\">\r\n    <div class=\"percent\">\r\n      <svg>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n      </svg>\r\n      <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n    </div>\r\n  </div>\r\n  <div class=\"margin-top-0-75\">{{name}}</div>\r\n</li>\r\n",
+                    template: "<div *ngIf=\"!isSmall && !customProgressCircle\" class=\"progress-circle\" [ngClass]=\"{'panel-view' : panelView}\">\r\n  <h3 class=\"flex-center title {{headerColor}}\" [ngClass]=\"{'padding-right-1' : enableTooltip}\">\r\n    <span \r\n      title=\"{{name}}\"\r\n      class=\"flex-group flex-align-center\"\r\n      >\r\n      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}\r\n      <span title=\"Error\" *ngIf=\"isError\" class=\"material-icons status padding-left-0-25 small aa-red-100\">error_outline</span>\r\n      <span title=\"Warning\" *ngIf=\"isWarning\" class=\"material-icons status padding-left-0-25 small aa-orange-100\">warning_amber</span>\r\n      <span title=\"Info\" *ngIf=\"isInfo\" class=\"material-icons-outlined status small padding-left-0-25 aa-light-blue-100\">info</span>\r\n    </span>\r\n    <div *ngIf=\"enableTooltip\" class=\"aa-tooltip icon-info margin-left-0-25\" [ngStyle]=\"{'position' : 'absolute', 'right' : '.75rem'}\">\r\n      <div class=\"feature-box {{xpos}} {{ypos}}\" [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\">\r\n        <p>{{tooltipBody}}</p>\r\n      </div>\r\n    </div>\r\n    <span *ngIf=\"panelView && !hideChevron\" class=\"material-icons\">chevron_right</span>\r\n  </h3>\r\n  <div class=\"percent\">\r\n    <svg viewBox=\"20 0 60 100\">\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n    </svg>\r\n    <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n  </div>\r\n\r\n  <span \r\n    class=\"align-center number\" \r\n    *ngIf=\"panelView && !enableAlertShield && !enableAlertShieldTooltip\">\r\n    {{value}}\r\n  </span>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShield\" \r\n    class=\"alert-shield small {{alertShieldStatus}}\" \r\n    >\r\n      {{alertShieldText}}\r\n  </div>\r\n\r\n  <div \r\n    *ngIf=\"enableAlertShieldTooltip\" \r\n    class=\"alert-shield-tooltip-wrapper\"\r\n    [ngClass]=\"{\r\n        'tooltip-top-left' : tooltipTopLeft,\r\n        'tooltip-top-right' : tooltipTopRight,\r\n        'tooltip-bottom-left' : tooltipBottomLeft,\r\n        'tooltip-bottom-right' : tooltipBottomRight\r\n    }\"\r\n  >\r\n    <div \r\n        class=\"alert-shield-tooltip {{alertShieldStatus}}\"\r\n        [ngStyle]=\"{'min-width' : tooltipMinWidth+'rem'}\"\r\n    >\r\n        <h4 *ngIf=\"showTooltipHeading\">{{tooltipHeading}}</h4>\r\n        <ng-content select=\"[tooltip-content]\"></ng-content>\r\n    </div>\r\n    <div \r\n        class=\"alert-shield small {{alertShieldStatus}}\" \r\n        >\r\n          {{alertShieldText}}\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<li *ngIf=\"isSmall && !customProgressCircle\" class=\"flex-group flex-start\">\r\n  <div class=\"progress-circle small margin-right-0-5\">\r\n    <div class=\"percent\">\r\n      <svg>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n        <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"15\" cy=\"15\" r=\"15\"></circle>\r\n      </svg>\r\n      <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n    </div>\r\n  </div>\r\n  <div class=\"margin-top-0-75\">{{name}}</div>\r\n</li>\r\n\r\n<div \r\n  *ngIf=\"customProgressCircle\" \r\n  class=\"progress-circle panel-view progress-circle-custom {{customClass}}\"\r\n  [ngStyle]=\"{'height' : panelHeight}\"\r\n>\r\n  <header class=\"flex-center {{customHeaderClass}}\">\r\n    <ng-content select=\"[custom-header]\"></ng-content>\r\n  </header>\r\n  <div class=\"percent\">\r\n    <svg viewBox=\"20 0 60 100\">\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n      <circle [ngStyle]=\"{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }\" cx=\"40\" cy=\"40\" r=\"40\"></circle>\r\n    </svg>\r\n    <span class=\"value margin-0\">{{percent}} <span>%</span></span>\r\n  </div>\r\n  <footer class=\"flex-center {{customFooterClass}}\">\r\n    <ng-content select=\"[custom-footer]\"></ng-content>\r\n  </footer>\r\n</div>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1632,7 +1637,12 @@
         tooltipBottomRight: [{ type: i0.Input }],
         showTooltipHeading: [{ type: i0.Input }],
         tooltipHeading: [{ type: i0.Input }],
-        alertShieldText: [{ type: i0.Input }]
+        alertShieldText: [{ type: i0.Input }],
+        customClass: [{ type: i0.Input }],
+        customProgressCircle: [{ type: i0.Input }],
+        customHeaderClass: [{ type: i0.Input }],
+        customFooterClass: [{ type: i0.Input }],
+        panelHeight: [{ type: i0.Input }]
     };
 
     var ActionsSummaryComponent = /** @class */ (function () {
@@ -1726,7 +1736,7 @@
     TagComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-tag',
-                    template: "<section \n    *ngIf=\"!isShaped\" \n    class=\"aa-tag\"\n    [ngClass]=\"{\n        'bg-aa-red-100' : isRed,\n        'bg-aa-orange-100' : isOrange,\n        'bg-aa-green-100' : isGreen,\n        'bg-aa-blue-100' : isBlue,\n        'bg-aa-light-blue-100' : isLightBlue,\n        'bg-aa-plum-100' : isPlum,\n        'bg-aa-ochre-100' : isOchre,\n        'bg-aa-white-100' : isWhite,\n        'bg-aa-grey-100' : isBlack,\n        'bg-aa-pink-100' : isPink\n    }\"\n>\n    <div *ngIf=\"!isWhite\" class=\"material-icons aa-white-100\">loyalty</div>\n    <div *ngIf=\"isWhite\" class=\"material-icons aa-blue-100\">loyalty</div>\n    <span *ngIf=\"!isWhite\" class=\"aa-white-100\">{{tagText}}</span>\n    <span *ngIf=\"isWhite\" class=\"aa-blue-100\">{{tagText}}</span>\n    <a *ngIf=\"!isWhite\" class=\"anchor-close aa-white-100\" (click)=\"onRemove($event)\"></a>\n    <a *ngIf=\"isWhite\" class=\"anchor-close aa-blue-100\" (click)=\"onRemove($event)\"></a>\n</section>\n\n<section \n    *ngIf=\"isShaped\"\n    class=\"aa-tag-shaped\"\n    [ngClass]=\"{\n        'bg-aa-red-100' : isRed,\n        'bg-aa-orange-100' : isOrange,\n        'bg-aa-green-100' : isGreen,\n        'bg-aa-blue-100' : isBlue,\n        'bg-aa-light-blue-100' : isLightBlue,\n        'bg-aa-plum-100' : isPlum,\n        'bg-aa-ochre-100' : isOchre,\n        'bg-aa-white-100' : isWhite,\n        'bg-aa-grey-100' : isBlack,\n        'bg-aa-pink-100' : isPink\n    }\"\n>\n    <span>{{tagText}}</span>\n</section>",
+                    template: "<section \r\n    *ngIf=\"!isShaped\" \r\n    class=\"aa-tag\"\r\n    [ngClass]=\"{\r\n        'bg-aa-red-100' : isRed,\r\n        'bg-aa-orange-100' : isOrange,\r\n        'bg-aa-green-100' : isGreen,\r\n        'bg-aa-blue-100' : isBlue,\r\n        'bg-aa-light-blue-100' : isLightBlue,\r\n        'bg-aa-plum-100' : isPlum,\r\n        'bg-aa-ochre-100' : isOchre,\r\n        'bg-aa-white-100' : isWhite,\r\n        'bg-aa-grey-100' : isBlack,\r\n        'bg-aa-pink-100' : isPink\r\n    }\"\r\n>\r\n    <div *ngIf=\"!isWhite\" class=\"material-icons aa-white-100\">loyalty</div>\r\n    <div *ngIf=\"isWhite\" class=\"material-icons aa-blue-100\">loyalty</div>\r\n    <span *ngIf=\"!isWhite\" class=\"aa-white-100\">{{tagText}}</span>\r\n    <span *ngIf=\"isWhite\" class=\"aa-blue-100\">{{tagText}}</span>\r\n    <a *ngIf=\"!isWhite\" class=\"anchor-close aa-white-100\" (click)=\"onRemove($event)\"></a>\r\n    <a *ngIf=\"isWhite\" class=\"anchor-close aa-blue-100\" (click)=\"onRemove($event)\"></a>\r\n</section>\r\n\r\n<section \r\n    *ngIf=\"isShaped\"\r\n    class=\"aa-tag-shaped\"\r\n    [ngClass]=\"{\r\n        'bg-aa-red-100' : isRed,\r\n        'bg-aa-orange-100' : isOrange,\r\n        'bg-aa-green-100' : isGreen,\r\n        'bg-aa-blue-100' : isBlue,\r\n        'bg-aa-light-blue-100' : isLightBlue,\r\n        'bg-aa-plum-100' : isPlum,\r\n        'bg-aa-ochre-100' : isOchre,\r\n        'bg-aa-white-100' : isWhite,\r\n        'bg-aa-grey-100' : isBlack,\r\n        'bg-aa-pink-100' : isPink\r\n    }\"\r\n>\r\n    <span>{{tagText}}</span>\r\n</section>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1758,7 +1768,7 @@
     FeatureBoxComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-feature-box',
-                    template: "<section \n  class=\"feature-box {{fbStatus}}\"\n  [ngStyle]=\"{\n      'width' : fbWidth,\n      'margin-top' : marginTop,\n      'margin-bottom' : marginBottom\n  }\"\n  [ngClass]=\"{\n      'solid' : isSolid,\n      'padding-right-0' : enableScrolling\n  }\"\n>\n  <div *ngIf=\"includeHeader\">\n    <div [ngClass]=\"{'padding-right-0-75' : enableScrolling}\">\n      <ng-content select=\"[custom-header]\"></ng-content>\n    </div>\n    <div \n      [ngStyle]=\"{\n        'height' : fbHeight,\n        'overflow': enableScrolling ? 'auto' : ''\n      }\" \n      class=\"fb-contnet\"\n    >\n      <ng-content select=\"[custom-content]\"></ng-content>\n    </div>\n  </div>\n  <div *ngIf=\"!includeHeader\">\n    <ng-content></ng-content>\n  </div>\n</section>\n",
+                    template: "<section \r\n  class=\"feature-box {{fbStatus}}\"\r\n  [ngStyle]=\"{\r\n      'width' : fbWidth,\r\n      'margin-top' : marginTop,\r\n      'margin-bottom' : marginBottom\r\n  }\"\r\n  [ngClass]=\"{\r\n      'solid' : isSolid,\r\n      'padding-right-0' : enableScrolling\r\n  }\"\r\n>\r\n  <div *ngIf=\"includeHeader\">\r\n    <div [ngClass]=\"{'padding-right-0-75' : enableScrolling}\">\r\n      <ng-content select=\"[custom-header]\"></ng-content>\r\n    </div>\r\n    <div \r\n      [ngStyle]=\"{\r\n        'height' : fbHeight,\r\n        'overflow': enableScrolling ? 'auto' : ''\r\n      }\" \r\n      class=\"fb-contnet\"\r\n    >\r\n      <ng-content select=\"[custom-content]\"></ng-content>\r\n    </div>\r\n  </div>\r\n  <div *ngIf=\"!includeHeader\">\r\n    <ng-content></ng-content>\r\n  </div>\r\n</section>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1849,7 +1859,7 @@
     AccordionComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-accordion',
-                    template: "<article \r\n  class=\"accordion-container\"\r\n  [ngStyle]=\"{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }\"\r\n  [ngClass]=\"{'box-shadow-strong' : showBody, 'vertical flex-group flex-start' : verticalDisplay }\"\r\n>\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-nowrap {{customBgColor}}\" \r\n      [ngClass]=\"{\r\n        'expanded' : showBody, \r\n        'clean' : accordionClean, \r\n        'disabled' : disabled, \r\n        'flex-column' : verticalDisplay,\r\n        'flex-align-center' : !verticalDisplay\r\n      }\"\r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <div class=\"flex-align-center flex-group flex-start\">\r\n            <div *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</div>\r\n            <div *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</div>\r\n            <div *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></div>\r\n            <div class=\"nested-icons\">\r\n              <div class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</div>\r\n              <div class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</div>\r\n            </div>\r\n            <div class=\"accordion-heading\">{{accordionHeading}}</div>\r\n          </div>\r\n        <div class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div \r\n    *ngIf=\"showBody\" \r\n    [id]=\"sectionId\" \r\n    class=\"accordion-panel\"\r\n    [ngStyle]=\"{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }\"\r\n    >\r\n      <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
+                    template: "<article \r\n  class=\"accordion-container\"\r\n  [ngStyle]=\"{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }\"\r\n  [ngClass]=\"{'box-shadow' : showBody, 'vertical flex-group flex-start' : verticalDisplay }\"\r\n>\r\n  <h3 class=\"margin-0\">\r\n    <button \r\n      class=\"accordion-trigger flex-group space-between flex-nowrap {{customBgColor}}\" \r\n      [ngClass]=\"{\r\n        'expanded' : showBody, \r\n        'clean' : accordionClean, \r\n        'disabled' : disabled, \r\n        'flex-column' : verticalDisplay,\r\n        'flex-align-center' : !verticalDisplay\r\n      }\"\r\n      (click)=\"onOpen($event)\" \r\n      [attr.aria-expanded.true]=\"showBody\"\r\n      aria-controls=\"sectionId\" \r\n      [id]=\"accordionId\" \r\n      type=\"button\">\r\n        <div *ngIf=\"!bespokeHeader\" class=\"flex-align-center flex-group flex-start\">\r\n            <div *ngIf=\"dragable\" class=\"accordion-icon material-icons drag-icon\">drag_indicator</div>\r\n            <div *ngIf=\"iconsEnabled && !fontAwesome\" class=\"accordion-icon material-icons {{iconBgColor}}\">{{iconName}}</div>\r\n            <div *ngIf=\"iconsEnabled && fontAwesome\" class=\"accordion-icon {{fontClassName}}\"></div>\r\n            <div class=\"nested-icons\">\r\n              <div class=\"material-icons\" *ngIf=\"!showBody\">add_circle_outline</div>\r\n              <div class=\"material-icons\" *ngIf=\"showBody\">remove_circle_outline</div>\r\n            </div>\r\n            <div class=\"accordion-heading\">{{accordionHeading}}</div>\r\n          </div>\r\n        <div *ngIf=\"!bespokeHeader\" class=\"flex-group flex-end flex-align-center\">\r\n          <ng-content select=\"[header-custom]\"></ng-content>\r\n            <div class=\"toggle-icons flex-align-center\">\r\n              <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n              <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n            </div>\r\n        </div>\r\n        <div *ngIf=\"bespokeHeader\" class=\"bespoke-header\">\r\n          <ng-content select=\"[bespoke-header]\"></ng-content>\r\n          <div class=\"toggle-icons flex-align-center\">\r\n            <div *ngIf=\"!showBody\" class=\"material-icons\">add</div>\r\n            <div *ngIf=\"showBody\" class=\"material-icons\">remove</div>\r\n          </div>\r\n        </div>\r\n    </button>\r\n  </h3>\r\n  <div \r\n    *ngIf=\"showBody\" \r\n    [id]=\"sectionId\" \r\n    class=\"accordion-panel\"\r\n    [ngStyle]=\"{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }\"\r\n    >\r\n      <ng-content></ng-content>\r\n  </div>\r\n</article>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -1873,6 +1883,7 @@
         clearPadding: [{ type: i0.Input }],
         verticalDisplay: [{ type: i0.Input }],
         verticalMinHeight: [{ type: i0.Input }],
+        bespokeHeader: [{ type: i0.Input }],
         open: [{ type: i0.Output }]
     };
 
@@ -2559,7 +2570,7 @@
     ToastrComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-toastr',
-                    template: "<div class=\"aa-toastr\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n    <ng-content></ng-content>\r\n</div>",
+                    template: "<div class=\"aa-toastr\" [ngStyle]=\"{'z-index' : zIndex}\">\r\n    <ng-content></ng-content>\r\n</div>\r\n",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -2584,7 +2595,7 @@
     ToastrItemComponent.decorators = [
         { type: i0.Component, args: [{
                     selector: 'aa-toastr-item',
-                    template: "<article \r\n    class=\"animate-normal bg-aa-red-100 box-shadow-strong\" \r\n    [ngClass]=\"{\r\n        'show-toastr': showToastr,\r\n        'bg-aa-red-100': isError,\r\n        'bg-aa-orange-100': isWarning,\r\n        'bg-aa-green-100': isSuccess,\r\n        'bg-aa-light-blue-100': isInfo\r\n    }\"\r\n>\r\n    <button (click)=\"onCloseClick($event)\" class=\"material-icons aa-white-100\">clear</button>\r\n    <div class=\"flex-group flex-start\">\r\n        <section class=\"flex-align-center\">\r\n            <div *ngIf=\"isError\" class=\"material-icons toastr-icon aa-white-100\">local_police</div>\r\n            <div *ngIf=\"isWarning\" class=\"material-icons toastr-icon aa-white-100\">privacy_tip</div>\r\n            <div *ngIf=\"isSuccess\" class=\"material-icons toastr-icon aa-white-100\">verified_user</div>\r\n            <div *ngIf=\"isInfo\" class=\"material-icons toastr-icon aa-white-100\">security</div>\r\n        </section>\r\n        <section>\r\n            <h3 class=\"margin-0 aa-white-100 margin-bottom-0-25\">{{heading}}</h3>\r\n            <p class=\"aa-white-100 small\">{{message}}</p>\r\n        </section>\r\n    </div>\r\n</article>",
+                    template: "<article \r\n    class=\"animate-normal bg-aa-red-100 box-shadow\" \r\n    [ngClass]=\"{\r\n        'show-toastr': showToastr,\r\n        'bg-aa-red-100': isError,\r\n        'bg-aa-orange-100': isWarning,\r\n        'bg-aa-green-100': isSuccess,\r\n        'bg-aa-light-blue-100': isInfo\r\n    }\"\r\n>\r\n    <button (click)=\"onCloseClick($event)\" class=\"material-icons aa-white-100\">clear</button>\r\n    <div class=\"flex-group flex-start\">\r\n        <section class=\"flex-align-center\">\r\n            <div *ngIf=\"isError\" class=\"material-icons toastr-icon aa-white-100\">local_police</div>\r\n            <div *ngIf=\"isWarning\" class=\"material-icons toastr-icon aa-white-100\">privacy_tip</div>\r\n            <div *ngIf=\"isSuccess\" class=\"material-icons toastr-icon aa-white-100\">verified_user</div>\r\n            <div *ngIf=\"isInfo\" class=\"material-icons toastr-icon aa-white-100\">security</div>\r\n        </section>\r\n        <section>\r\n            <h3 class=\"margin-0 aa-white-100 margin-bottom-0-25\">{{heading}}</h3>\r\n            <p class=\"aa-white-100 small\">{{message}}</p>\r\n        </section>\r\n    </div>\r\n</article>",
                     changeDetection: i0.ChangeDetectionStrategy.OnPush,
                     styles: [""]
                 },] }
@@ -2649,6 +2660,478 @@
         tooltipClicked: [{ type: i0.Input }],
         tooltipBtnText: [{ type: i0.Input }],
         buttonClick: [{ type: i0.Output }]
+    };
+
+    exports.TooltipDynamicPosition = void 0;
+    (function (TooltipDynamicPosition) {
+        TooltipDynamicPosition["ABOVE"] = "above";
+        TooltipDynamicPosition["BELOW"] = "below";
+        TooltipDynamicPosition["LEFT"] = "left";
+        TooltipDynamicPosition["RIGHT"] = "right";
+        TooltipDynamicPosition["DYNAMIC"] = "dynamic";
+        TooltipDynamicPosition["DEFAULT"] = "above";
+    })(exports.TooltipDynamicPosition || (exports.TooltipDynamicPosition = {}));
+
+    var TooltipDynamicComponent = /** @class */ (function () {
+        function TooltipDynamicComponent() {
+            this.position = exports.TooltipDynamicPosition.DEFAULT;
+            this.left = 0;
+            this.top = 0;
+            this.visible = false;
+        }
+        TooltipDynamicComponent.prototype.isArrayPassed = function () {
+            return (this.tooltip instanceof Array);
+        };
+        TooltipDynamicComponent.prototype.ngOnInit = function () { };
+        return TooltipDynamicComponent;
+    }());
+    TooltipDynamicComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'aa-tooltip-dynamic',
+                    template: "<div class=\"tooltip-dynamic box-shadow\"\r\n  [ngClass]=\"['tooltip-dynamic--'+position]\"\r\n  [class.tooltip--visible]=\"visible\"\r\n  [style.left]=\"left + 'px'\"\r\n  [style.top]=\"top + 'px'\">\r\n    <div [innerHtml]=\"tooltip\"></div>\r\n</div>\r\n",
+                    changeDetection: i0.ChangeDetectionStrategy.OnPush
+                },] }
+    ];
+    TooltipDynamicComponent.ctorParameters = function () { return []; };
+
+    /*! *****************************************************************************
+    Copyright (c) Microsoft Corporation.
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+    OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
+    ***************************************************************************** */
+    /* global Reflect, Promise */
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b)
+                if (Object.prototype.hasOwnProperty.call(b, p))
+                    d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    function __extends(d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    }
+    var __assign = function () {
+        __assign = Object.assign || function __assign(t) {
+            for (var s, i = 1, n = arguments.length; i < n; i++) {
+                s = arguments[i];
+                for (var p in s)
+                    if (Object.prototype.hasOwnProperty.call(s, p))
+                        t[p] = s[p];
+            }
+            return t;
+        };
+        return __assign.apply(this, arguments);
+    };
+    function __rest(s, e) {
+        var t = {};
+        for (var p in s)
+            if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+                t[p] = s[p];
+        if (s != null && typeof Object.getOwnPropertySymbols === "function")
+            for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+                if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                    t[p[i]] = s[p[i]];
+            }
+        return t;
+    }
+    function __decorate(decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+            r = Reflect.decorate(decorators, target, key, desc);
+        else
+            for (var i = decorators.length - 1; i >= 0; i--)
+                if (d = decorators[i])
+                    r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    }
+    function __param(paramIndex, decorator) {
+        return function (target, key) { decorator(target, key, paramIndex); };
+    }
+    function __metadata(metadataKey, metadataValue) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
+            return Reflect.metadata(metadataKey, metadataValue);
+    }
+    function __awaiter(thisArg, _arguments, P, generator) {
+        function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+        return new (P || (P = Promise))(function (resolve, reject) {
+            function fulfilled(value) { try {
+                step(generator.next(value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function rejected(value) { try {
+                step(generator["throw"](value));
+            }
+            catch (e) {
+                reject(e);
+            } }
+            function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+            step((generator = generator.apply(thisArg, _arguments || [])).next());
+        });
+    }
+    function __generator(thisArg, body) {
+        var _ = { label: 0, sent: function () { if (t[0] & 1)
+                throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function () { return this; }), g;
+        function verb(n) { return function (v) { return step([n, v]); }; }
+        function step(op) {
+            if (f)
+                throw new TypeError("Generator is already executing.");
+            while (_)
+                try {
+                    if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
+                        return t;
+                    if (y = 0, t)
+                        op = [op[0] & 2, t.value];
+                    switch (op[0]) {
+                        case 0:
+                        case 1:
+                            t = op;
+                            break;
+                        case 4:
+                            _.label++;
+                            return { value: op[1], done: false };
+                        case 5:
+                            _.label++;
+                            y = op[1];
+                            op = [0];
+                            continue;
+                        case 7:
+                            op = _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                        default:
+                            if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                                _ = 0;
+                                continue;
+                            }
+                            if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) {
+                                _.label = op[1];
+                                break;
+                            }
+                            if (op[0] === 6 && _.label < t[1]) {
+                                _.label = t[1];
+                                t = op;
+                                break;
+                            }
+                            if (t && _.label < t[2]) {
+                                _.label = t[2];
+                                _.ops.push(op);
+                                break;
+                            }
+                            if (t[2])
+                                _.ops.pop();
+                            _.trys.pop();
+                            continue;
+                    }
+                    op = body.call(thisArg, _);
+                }
+                catch (e) {
+                    op = [6, e];
+                    y = 0;
+                }
+                finally {
+                    f = t = 0;
+                }
+            if (op[0] & 5)
+                throw op[1];
+            return { value: op[0] ? op[1] : void 0, done: true };
+        }
+    }
+    var __createBinding = Object.create ? (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        Object.defineProperty(o, k2, { enumerable: true, get: function () { return m[k]; } });
+    }) : (function (o, m, k, k2) {
+        if (k2 === undefined)
+            k2 = k;
+        o[k2] = m[k];
+    });
+    function __exportStar(m, o) {
+        for (var p in m)
+            if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
+                __createBinding(o, m, p);
+    }
+    function __values(o) {
+        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+        if (m)
+            return m.call(o);
+        if (o && typeof o.length === "number")
+            return {
+                next: function () {
+                    if (o && i >= o.length)
+                        o = void 0;
+                    return { value: o && o[i++], done: !o };
+                }
+            };
+        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+    }
+    function __read(o, n) {
+        var m = typeof Symbol === "function" && o[Symbol.iterator];
+        if (!m)
+            return o;
+        var i = m.call(o), r, ar = [], e;
+        try {
+            while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
+                ar.push(r.value);
+        }
+        catch (error) {
+            e = { error: error };
+        }
+        finally {
+            try {
+                if (r && !r.done && (m = i["return"]))
+                    m.call(i);
+            }
+            finally {
+                if (e)
+                    throw e.error;
+            }
+        }
+        return ar;
+    }
+    /** @deprecated */
+    function __spread() {
+        for (var ar = [], i = 0; i < arguments.length; i++)
+            ar = ar.concat(__read(arguments[i]));
+        return ar;
+    }
+    /** @deprecated */
+    function __spreadArrays() {
+        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
+            s += arguments[i].length;
+        for (var r = Array(s), k = 0, i = 0; i < il; i++)
+            for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+                r[k] = a[j];
+        return r;
+    }
+    function __spreadArray(to, from, pack) {
+        if (pack || arguments.length === 2)
+            for (var i = 0, l = from.length, ar; i < l; i++) {
+                if (ar || !(i in from)) {
+                    if (!ar)
+                        ar = Array.prototype.slice.call(from, 0, i);
+                    ar[i] = from[i];
+                }
+            }
+        return to.concat(ar || Array.prototype.slice.call(from));
+    }
+    function __await(v) {
+        return this instanceof __await ? (this.v = v, this) : new __await(v);
+    }
+    function __asyncGenerator(thisArg, _arguments, generator) {
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
+        var g = generator.apply(thisArg, _arguments || []), i, q = [];
+        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
+        function verb(n) { if (g[n])
+            i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+        function resume(n, v) { try {
+            step(g[n](v));
+        }
+        catch (e) {
+            settle(q[0][3], e);
+        } }
+        function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+        function fulfill(value) { resume("next", value); }
+        function reject(value) { resume("throw", value); }
+        function settle(f, v) { if (f(v), q.shift(), q.length)
+            resume(q[0][0], q[0][1]); }
+    }
+    function __asyncDelegator(o) {
+        var i, p;
+        return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+        function verb(n, f) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    }
+    function __asyncValues(o) {
+        if (!Symbol.asyncIterator)
+            throw new TypeError("Symbol.asyncIterator is not defined.");
+        var m = o[Symbol.asyncIterator], i;
+        return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
+        function verb(n) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve, reject, d, v) { Promise.resolve(v).then(function (v) { resolve({ value: v, done: d }); }, reject); }
+    }
+    function __makeTemplateObject(cooked, raw) {
+        if (Object.defineProperty) {
+            Object.defineProperty(cooked, "raw", { value: raw });
+        }
+        else {
+            cooked.raw = raw;
+        }
+        return cooked;
+    }
+    ;
+    var __setModuleDefault = Object.create ? (function (o, v) {
+        Object.defineProperty(o, "default", { enumerable: true, value: v });
+    }) : function (o, v) {
+        o["default"] = v;
+    };
+    function __importStar(mod) {
+        if (mod && mod.__esModule)
+            return mod;
+        var result = {};
+        if (mod != null)
+            for (var k in mod)
+                if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+                    __createBinding(result, mod, k);
+        __setModuleDefault(result, mod);
+        return result;
+    }
+    function __importDefault(mod) {
+        return (mod && mod.__esModule) ? mod : { default: mod };
+    }
+    function __classPrivateFieldGet(receiver, state, kind, f) {
+        if (kind === "a" && !f)
+            throw new TypeError("Private accessor was defined without a getter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+            throw new TypeError("Cannot read private member from an object whose class did not declare it");
+        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+    }
+    function __classPrivateFieldSet(receiver, state, value, kind, f) {
+        if (kind === "m")
+            throw new TypeError("Private method is not writable");
+        if (kind === "a" && !f)
+            throw new TypeError("Private accessor was defined without a setter");
+        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
+            throw new TypeError("Cannot write private member to an object whose class did not declare it");
+        return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+    }
+
+    var TooltipDynamicDirective = /** @class */ (function () {
+        function TooltipDynamicDirective(elementRef, appRef, componentFactoryResolver, injector) {
+            this.elementRef = elementRef;
+            this.appRef = appRef;
+            this.componentFactoryResolver = componentFactoryResolver;
+            this.injector = injector;
+            this.position = exports.TooltipDynamicPosition.DEFAULT;
+            this.showDelay = 0;
+            this.hideDelay = 0;
+            this.componentRef = null;
+        }
+        TooltipDynamicDirective.prototype.onMouseEnter = function () {
+            this.initializeTooltip();
+        };
+        TooltipDynamicDirective.prototype.onMouseLeave = function () {
+            this.setHideTooltipTimeout();
+        };
+        TooltipDynamicDirective.prototype.onMouseMove = function ($event) {
+            if (this.componentRef !== null && this.position === exports.TooltipDynamicPosition.DYNAMIC) {
+                this.componentRef.instance.left = $event.clientX;
+                this.componentRef.instance.top = $event.clientY;
+                this.componentRef.instance.tooltip = this.aaTooltip;
+            }
+        };
+        TooltipDynamicDirective.prototype.onTouchStart = function ($event) {
+            $event.preventDefault();
+            window.clearTimeout(this.touchTimeout);
+            this.touchTimeout = window.setTimeout(this.initializeTooltip.bind(this), 500);
+        };
+        TooltipDynamicDirective.prototype.onTouchEnd = function () {
+            window.clearTimeout(this.touchTimeout);
+            this.setHideTooltipTimeout();
+        };
+        TooltipDynamicDirective.prototype.initializeTooltip = function () {
+            if (this.componentRef === null) {
+                window.clearInterval(this.hideDelay);
+                var componentFactory = this.componentFactoryResolver.resolveComponentFactory(TooltipDynamicComponent);
+                this.componentRef = componentFactory.create(this.injector);
+                this.appRef.attachView(this.componentRef.hostView);
+                var _a = __read(this.componentRef.hostView.rootNodes, 1), tooltipDOMElement = _a[0];
+                this.setTooltipComponentProperties();
+                document.body.appendChild(tooltipDOMElement);
+                this.showTimeout = window.setTimeout(this.showTooltip.bind(this), this.showDelay);
+            }
+        };
+        TooltipDynamicDirective.prototype.setTooltipComponentProperties = function () {
+            if (this.componentRef !== null) {
+                this.componentRef.instance.tooltip = this.aaTooltip;
+                this.componentRef.instance.position = this.position;
+                var _a = this.elementRef.nativeElement.getBoundingClientRect(), left = _a.left, right = _a.right, top = _a.top, bottom = _a.bottom;
+                switch (this.position) {
+                    case exports.TooltipDynamicPosition.BELOW: {
+                        this.componentRef.instance.left = Math.round((right - left) / 2 + left);
+                        this.componentRef.instance.top = Math.round(bottom);
+                        break;
+                    }
+                    case exports.TooltipDynamicPosition.ABOVE: {
+                        this.componentRef.instance.left = Math.round((right - left) / 2 + left);
+                        this.componentRef.instance.top = Math.round(top);
+                        break;
+                    }
+                    case exports.TooltipDynamicPosition.RIGHT: {
+                        this.componentRef.instance.left = Math.round(right);
+                        this.componentRef.instance.top = Math.round(top + (bottom - top) / 2);
+                        break;
+                    }
+                    case exports.TooltipDynamicPosition.LEFT: {
+                        this.componentRef.instance.left = Math.round(left);
+                        this.componentRef.instance.top = Math.round(top + (bottom - top) / 2);
+                        break;
+                    }
+                    default: {
+                        break;
+                    }
+                }
+            }
+        };
+        TooltipDynamicDirective.prototype.showTooltip = function () {
+            if (this.componentRef !== null) {
+                this.componentRef.instance.visible = true;
+            }
+        };
+        TooltipDynamicDirective.prototype.setHideTooltipTimeout = function () {
+            this.hideTimeout = window.setTimeout(this.destroy.bind(this), this.hideDelay);
+        };
+        TooltipDynamicDirective.prototype.ngOnDestroy = function () {
+            this.destroy();
+        };
+        TooltipDynamicDirective.prototype.destroy = function () {
+            if (this.componentRef !== null) {
+                window.clearInterval(this.showTimeout);
+                window.clearInterval(this.hideDelay);
+                this.appRef.detachView(this.componentRef.hostView);
+                this.componentRef.destroy();
+                this.componentRef = null;
+            }
+        };
+        return TooltipDynamicDirective;
+    }());
+    TooltipDynamicDirective.decorators = [
+        { type: i0.Directive, args: [{
+                    selector: '[aaTooltip]'
+                },] }
+    ];
+    TooltipDynamicDirective.ctorParameters = function () { return [
+        { type: i0.ElementRef },
+        { type: i0.ApplicationRef },
+        { type: i0.ComponentFactoryResolver },
+        { type: i0.Injector }
+    ]; };
+    TooltipDynamicDirective.propDecorators = {
+        aaTooltip: [{ type: i0.Input }],
+        position: [{ type: i0.Input }],
+        showDelay: [{ type: i0.Input }],
+        hideDelay: [{ type: i0.Input }],
+        onMouseEnter: [{ type: i0.HostListener, args: ['mouseenter',] }],
+        onMouseLeave: [{ type: i0.HostListener, args: ['mouseleave',] }],
+        onMouseMove: [{ type: i0.HostListener, args: ['mousemove', ['$event'],] }],
+        onTouchStart: [{ type: i0.HostListener, args: ['touchstart', ['$event'],] }],
+        onTouchEnd: [{ type: i0.HostListener, args: ['touchend',] }]
     };
 
     var UserFeedbackComponent = /** @class */ (function () {
@@ -2796,6 +3279,8 @@
                         ToastrComponent,
                         ToastrItemComponent,
                         TooltipComponent,
+                        TooltipDynamicComponent,
+                        TooltipDynamicDirective,
                         UserFeedbackComponent,
                         ListSelectableComponent,
                         OrderByPipe
@@ -2827,6 +3312,8 @@
                         ToastrComponent,
                         ToastrItemComponent,
                         TooltipComponent,
+                        TooltipDynamicComponent,
+                        TooltipDynamicDirective,
                         UserFeedbackComponent,
                         ListSelectableComponent,
                         OrderByPipe
@@ -2950,6 +3437,7 @@
     exports.ToastrComponent = ToastrComponent;
     exports.ToastrItemComponent = ToastrItemComponent;
     exports.TooltipComponent = TooltipComponent;
+    exports.TooltipDynamicDirective = TooltipDynamicDirective;
     exports.UiBlockComponent = UiBlockComponent;
     exports.UnauthorisedComponent = UnauthorisedComponent;
     exports.UserFeedbackComponent = UserFeedbackComponent;
@@ -2958,7 +3446,8 @@
     exports["ɵa"] = DateFormatPipe;
     exports["ɵb"] = GraphicComponent;
     exports["ɵc"] = IconFilterPipe;
-    exports["ɵd"] = OrderByPipe;
+    exports["ɵd"] = TooltipDynamicComponent;
+    exports["ɵe"] = OrderByPipe;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

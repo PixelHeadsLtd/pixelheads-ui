@@ -12,6 +12,8 @@ export class SelectComponent implements OnInit {
   standardSelect: boolean;
   customSelect: boolean;
   dataList: boolean;
+  isDisabled: boolean = true;
+
 
   constructor() {}
 
@@ -21,39 +23,88 @@ export class SelectComponent implements OnInit {
 
   optionArray: SelectOption[] = [
     {
-      id: 'whichThirdPary', 
-      display: 'Which 3rd party components do we currently support?',
+      id: 'dec', 
+      display: 'December',
       showIcon: true,
-      icon: 'widgets',
-      iconColor: 'aa-green-50'
+      icon: 'ac_unit',
+      iconColor: 'aa-light-blue-50'
     },
     {
-      id: 'whatDateFormat', 
-      display: 'What date format should I use for the NGB-datepicker?',
+      id: 'jan', 
+      display: 'January',
       showIcon: true,
-      icon: 'edit_calendar',
-      iconColor: 'aa-orange-50'
+      icon: 'ac_unit',
+      iconColor: 'aa-light-blue-50'
     },
     {
-      id: 'contextMenu', 
-      display: 'How do I add a context-menu to AG-grid?',
+      id: 'feb', 
+      display: 'February',
       showIcon: true,
-      icon: 'more_vert',
+      icon: 'ac_unit',
+      iconColor: 'aa-light-blue-50'
+    },
+    {
+      id: 'mar', 
+      display: 'March',
+      showIcon: true,
+      icon: 'emoji_nature',
+      iconColor: 'aa-orange-100'
+    },
+    {
+      id: 'apr', 
+      display: 'April',
+      showIcon: true,
+      icon: 'emoji_nature',
+      iconColor: 'aa-orange-100'
+    },
+    {
+      id: 'may', 
+      display: 'May',
+      showIcon: true,
+      icon: 'emoji_nature',
+      iconColor: 'aa-orange-100'
+    },
+    {
+      id: 'jun', 
+      display: 'June',
+      showIcon: true,
+      icon: 'beach_access',
       iconColor: 'aa-red-100'
     },
     {
-      id: 'toolTip', 
-      display: 'How do I add a tooltip to AG-grid?',
+      id: 'jul', 
+      display: 'July',
       showIcon: true,
-      icon: 'mode_comment',
+      icon: 'beach_access',
+      iconColor: 'aa-red-100'
+    },
+    {
+      id: 'aug', 
+      display: 'August',
+      showIcon: true,
+      icon: 'beach_access',
+      iconColor: 'aa-red-100'
+    },
+    {
+      id: 'sep', 
+      display: 'September',
+      showIcon: true,
+      icon: 'spa',
       iconColor: 'aa-ochre-100'
     },
     {
-      id: 'setHeight', 
-      display: 'How do I set the height on AG-grid?',
+      id: 'oct', 
+      display: 'October',
       showIcon: true,
-      icon: 'menu',
-      iconColor: 'aa-light-blue-80'
+      icon: 'spa',
+      iconColor: 'aa-ochre-100'
+    },
+    {
+      id: 'nov', 
+      display: 'November',
+      showIcon: true,
+      icon: 'spa',
+      iconColor: 'aa-ochre-100'
     }
   ];
 

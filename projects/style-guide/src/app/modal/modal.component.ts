@@ -5,7 +5,7 @@ import {
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { ModalService } from 'projects/components/src/lib/widgets/services/modal-service/modal.service';
+import { ModalService } from '../../../../components/src/lib/services/modal.service';
 // path in node_modules for devs - import { ModalService } from '@angloamerican/components/lib/widgets/services/modal-service/modal.service';
 import { Subscription } from 'rxjs';
 

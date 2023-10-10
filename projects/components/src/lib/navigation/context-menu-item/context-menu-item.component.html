@@ -1,3 +1,10 @@
 <li>
-    <a [routerLink]="routerLink" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">{{menuItemText}}</a>
+    <a 
+        [routerLink]="routerLink" 
+        [routerLinkActive]="['active']" 
+        [routerLinkActiveOptions]="{exact: true}"
+        [ngClass]="{'nowrap' : noWrap}"
+        >
+        {{menuItemText}}
+    </a>
 </li>

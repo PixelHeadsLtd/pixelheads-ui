@@ -1,5 +1,4 @@
 import { OnInit, EventEmitter } from '@angular/core';
-import * as ɵngcc0 from '@angular/core';
 export declare class TagComponent implements OnInit {
     isShaped: boolean;
     tagText: boolean;
@@ -17,8 +16,5 @@ export declare class TagComponent implements OnInit {
     constructor();
     onRemove(e: Event): void;
     ngOnInit(): void;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<TagComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<TagComponent, "aa-tag", never, { "isShaped": "isShaped"; "tagText": "tagText"; "isRed": "isRed"; "isOrange": "isOrange"; "isGreen": "isGreen"; "isPlum": "isPlum"; "isBlue": "isBlue"; "isLightBlue": "isLightBlue"; "isWhite": "isWhite"; "isOchre": "isOchre"; "isBlack": "isBlack"; "isPink": "isPink"; }, { "removeTag": "removeTag"; }, never, never>;
 }
-
 //# sourceMappingURL=tag.component.d.ts.map

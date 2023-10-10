@@ -377,7 +377,7 @@
       <h2>Icon buttons</h2>
       <div class="describe margin-bottom-1">
         <p>If you want a button with just an icon and no text, set `customIconsRound` to true, the add the relevant class 
-          shown in the table to the right or <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">pick your own here</a>.
+          shown in the table to the right or <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">pick your own here</a>.
           <strong class="aa-red-100">Our button components have the label hidden by default. If you want 
             display the label, set [showLabel]=`true`.
           </strong>
@@ -1041,6 +1041,7 @@
               [buttonSplit]="true" 
               (buttonClick)="onClick()"
               [navLeftside]="false" 
+              [navBottom]="false"
               fieldClass="boxed margin-right-2" 
               buttonClass="bg-aa-light-blue-100"
               buttonLabel="Primary" 
@@ -1068,6 +1069,7 @@
           <section class="flex-group flex-start margin-bottom-1">
             <aa-button 
                 [buttonSplit]="true" 
+                [navBottom]="false"
                 (buttonClick)="onClick()"
                 fieldClass="boxed" 
                 buttonClass="bg-aa-blue-100"
@@ -1095,6 +1097,7 @@
           <section class="flex-group flex-start">
             <aa-button 
                 [buttonSplit]="true" 
+                [navBottom]="false"
                 (buttonClick)="onClick()"
                 fieldClass="boxed" 
                 buttonClass="bg-aa-red-100" 
@@ -1125,6 +1128,7 @@
             <aa-button 
               class="margin-right-0"
               [buttonSplit]="true" 
+              [navBottom]="false"
               (buttonClick)="onClick()"
               [navLeftside]="true" 
               fieldClass="boxed margin-right-0" 
@@ -1156,6 +1160,7 @@
               [buttonSplit]="true"
               (buttonClick)="onClick()"
               [navLeftside]="true"
+              [navBottom]="false"
               fieldClass="boxed" 
               buttonClass="bg-aa-blue-100"
               buttonLabel="Secondary" 
@@ -1184,6 +1189,7 @@
               [buttonSplit]="true" 
               (buttonClick)="onClick()"
               [navLeftside]="true" 
+              [navBottom]="false"
               fieldClass="boxed" 
               buttonClass="bg-aa-red-100" 
               buttonLabel="Error"
@@ -1232,6 +1238,12 @@
           <tr>
             <td datalabel="Element">aa-button</td>
             <td datalabel="Attribute">[navLeftside]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">false</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-button</td>
+            <td datalabel="Attribute">[navBottom]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>

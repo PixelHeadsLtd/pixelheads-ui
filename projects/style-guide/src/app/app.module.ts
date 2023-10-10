@@ -117,12 +117,13 @@ import { ListSelectableComponent } from './list-selectable/list-selectable.compo
 import { UiBlockComponent } from './ui-block/ui-block.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
 import { CounterComponent } from './counter/counter.component';
-import { OpenLeftNavService } from './landing-page/left-nav-service';
+import { OpenLeftNavService } from './_services/left-nav-service';
 import { ClickOutsideDirective } from '../directives/click-outside.directive';
 import { ResizableComponent } from '../directives/resizable/resizable.component';
 import { ResizableDirective } from '../directives/resizable/resizable.directive';
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
 import { HighChartsComponent } from './high-charts/high-charts.component';
+import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.component';
 
 @NgModule({
   declarations: [
@@ -233,7 +234,8 @@ import { HighChartsComponent } from './high-charts/high-charts.component';
     ResizableDirective,
     CustomWrapperComponent,
     CustomWrapperComponent,
-    HighChartsComponent
+    HighChartsComponent,
+    TooltipDynamicComponent
   ],
   imports: [
     FormsModule,

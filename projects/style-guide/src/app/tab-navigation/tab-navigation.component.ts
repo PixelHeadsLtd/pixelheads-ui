@@ -25,6 +25,7 @@ export class TabNavigationComponent implements AfterContentChecked {
   routerOutlet: boolean;
   routerOutletSecondary: boolean;
   routerOutletSecondaryRO: boolean;
+  routerOutletIsActive: boolean;
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
@@ -206,7 +207,8 @@ export class TabNavigationComponent implements AfterContentChecked {
       showRightDivider: false,
       enableIcons: false,
       iconName: '',
-      iconColor: ''
+      iconColor: '',
+      enableContextMenu: true
     },
     {
       tabId: 'tabDivider',
@@ -242,7 +244,8 @@ export class TabNavigationComponent implements AfterContentChecked {
     },
     {
       tabName: 'Tab sec 2',
-      routerLink: ['tab-sub-page-two']
+      routerLink: ['tab-sub-page-two'],
+      enableContextMenu: true
     },
     {
       tabName: 'Tab sec 3',
@@ -326,8 +329,6 @@ export class TabNavigationComponent implements AfterContentChecked {
       routerLink: ['gist-router-outlet-page-two']
     }
   ]
-
-  routerOutletIsActive: boolean;
 
   routerOutletActive() {
     this.routerOutletIsActive = true

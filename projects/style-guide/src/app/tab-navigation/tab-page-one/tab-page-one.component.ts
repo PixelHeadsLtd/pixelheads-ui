@@ -14,6 +14,11 @@ export class TabPageOneComponent implements OnInit {
   showBodyTwo: boolean;
   showBodyThree: boolean;
   showBodyFour: boolean;
+  showBodyFive: boolean;
+
+  onClick() {
+    console.log('You clicked');
+  }
 
   constructor() { }
 

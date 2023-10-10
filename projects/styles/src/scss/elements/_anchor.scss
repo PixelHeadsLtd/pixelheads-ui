@@ -1,14 +1,10 @@
 a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
   color: _colour(trans-light-blue-to-blue-light); // don't make this important or it breaks the header
   font-size: _font(size-default);
-
-  &:-webkit-any-link {
-    text-decoration: none;
-  }
+  text-decoration: underline;
 
   &:hover {
-    color: _colour(trans-light-blue-to-blue-light);
-    text-decoration: underline;
+    color: _colour(trans-blue-to-white);
   }
 
   h1, h2, h3, h4, h5 {
@@ -30,7 +26,6 @@ a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
 
   &:hover {
     color: _colour(aa-light-blue-100);
-    text-decoration: underline;
   }
 
   &:before {
@@ -52,7 +47,6 @@ a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
   position: relative;
 
   &:hover {
-    text-decoration: underline;
     &:after {
       transform: rotate(180deg);
       transition-duration: 0.3s;

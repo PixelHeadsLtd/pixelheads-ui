@@ -261,6 +261,7 @@ table:not(
     caption-side: top;
     font-size: _font(size-medium);
     padding-bottom: 0.75rem;
+    padding-top: 0;
     *.boxed {
       font-size: _font(size-default);
     }

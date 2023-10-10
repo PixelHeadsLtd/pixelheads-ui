@@ -1,12 +1,13 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'aa-tooltip',
   templateUrl: './tooltip.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TooltipComponent implements OnInit {
-  @Input() setMinWidth: number;
-  @Input() setMaxWidth: number;
+  @Input() setMinWidth: any;
+  @Input() setMaxWidth: any;
   @Input() isSuccess: boolean;
   @Input() isInfo: boolean;
   @Input() isWarning: boolean;

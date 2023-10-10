@@ -5,11 +5,13 @@
 @import './elements/scrollbars';
 
 body {
-  font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif;
-  line-height: initial;
-  letter-spacing: .015rem;
-  font-size: 13px;
-  margin: 0;
+  // *Note: We wouldn't normally use the !important attribute BUT it is neccessary
+  // here on the body to forcefully override some 3rd party css such as Bootstrap
+  font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif!important;
+  line-height: initial!important;
+  letter-spacing: .015rem!important;
+  font-size: 13px!important;
+  margin: 0!important;
   
   // for showing header-secondary
   &.light-mode.show-header-secondary,

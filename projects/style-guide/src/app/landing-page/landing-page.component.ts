@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, ChangeDetectorRef, AfterContentChecked
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { TabData } from '../class/tab-data';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { OpenLeftNavService } from './left-nav-service';
+import { OpenLeftNavService } from '../_services/left-nav-service';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
@@ -722,6 +722,13 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
       icon: 'touch_app',
       iconColour: 'bg-aa-light-blue-100',
       link: 'carousel',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
+      link: 'tooltip-dynamic',
     },
     {
       id: 'Widgets',

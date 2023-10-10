@@ -1,4 +1,5 @@
 $colour: (
+  box-shadow-light:                     rgb(14, 14, 14),
   box-shadow:                           rgb(14, 14, 14),
   box-shadow-strong:                    rgb(14, 14, 14),
   tour-hover:                           rgb(110, 62, 106),
@@ -43,6 +44,7 @@ $colour: (
   white-100:                             _palette(aa-white-100),
 
   // GREY
+  aa-black-100:                          _palette(aa-white-100),
   aa-grey-100:                          rgb(221, 221, 221),
   aa-grey-50:                           rgb(163, 163, 165),
   aa-grey-25:                           rgb(104, 105, 108),
@@ -139,7 +141,7 @@ $colour: (
 @mixin chevron-down {
   background-image: url('#{$icon-path}/keyboard_arrow_down-dark-24px.svg');
   background-repeat: no-repeat;
-  background-position: 98% 50%;
+  background-position: center right .5rem;
 }
 
 @mixin view-switch {

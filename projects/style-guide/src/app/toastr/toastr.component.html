@@ -6,7 +6,6 @@
 <section class="content-container padding-0">
 
     <section class="content-repeater flex-group">
-
         <section class="flex-1 col-left flex-start">
             <h2>Toastr</h2>
             <div class="describe margin-bottom-1">
@@ -15,7 +14,7 @@
             
             <div class="flex-group flex-start">
                 <aa-button
-                    (buttonClick)="triggerToastr(); error=true" 
+                    (buttonClick)="showErrorToaster()"
                     fieldClass="boxed label-hidden" 
                     buttonLabel="Show toastr" 
                     buttonClass="bg-aa-red-100 aa-white-100 bd-aa-red-100" 
@@ -23,7 +22,7 @@
                     >
                 </aa-button>
                 <aa-button
-                    (buttonClick)="triggerToastr(); warning=true" 
+                    (buttonClick)="showWarningToaster()" 
                     fieldClass="boxed label-hidden" 
                     buttonLabel="Show toastr" 
                     buttonClass="bg-aa-orange-100 aa-white-100 bd-aa-orange-100" 
@@ -31,7 +30,7 @@
                     >
                 </aa-button>
                 <aa-button
-                    (buttonClick)="triggerToastr(); success=true" 
+                    (buttonClick)="showSuccessToaster()" 
                     fieldClass="boxed label-hidden" 
                     buttonLabel="Show toastr" 
                     buttonClass="bg-aa-green-100 aa-white-100 bd-aa-green-100" 
@@ -39,49 +38,14 @@
                     >
                 </aa-button>
                 <aa-button
-                    (buttonClick)="triggerToastr(); info=true" 
+                    (buttonClick)="showInfoToaster()" 
                     fieldClass="boxed label-hidden" 
                     buttonLabel="Show toastr" 
-                    buttonClass="primary" 
+                    buttonClass="bg-aa-light-blue-100 aa-white-100 bd-aa-light-blue-100" 
                     buttonText="Show info"
                     >
                 </aa-button>
             </div>
-
-            <aa-toastr [zIndex]="10">
-                <aa-toastr-item
-                    (closeToastr)="triggerToastr; error=false"
-                    [showToastr]="error" 
-                    [isError]="true"
-                    heading="What the!"
-                    message="OK chaps, looks like there's a serious error going on here, but I reckon we can fix it..."
-                 >
-                </aa-toastr-item>
-                <aa-toastr-item
-                    (closeToastr)="triggerToastr; warning=false"
-                    [showToastr]="warning" 
-                    [isWarning]="true"
-                    heading="That's not so bad"
-                    message="Well I guess this isn't as bad as it looks, probably needs investigation though..."
-                >
-                </aa-toastr-item>
-                <aa-toastr-item
-                    (closeToastr)="triggerToastr; success=false"
-                    [showToastr]="success" 
-                    [isSuccess]="true"
-                    heading="This is amazing"
-                    message="OK, this is looking good..."
-                >
-                </aa-toastr-item>
-                <aa-toastr-item
-                    (closeToastr)="triggerToastr; info=false"
-                    [showToastr]="info" 
-                    [isInfo]="true"
-                    heading="Guess what"
-                    message="I thought you might wanna know about this..."
-                >
-                </aa-toastr-item>
-            </aa-toastr>
         </section>
 
         <section class="flex-2 col-right flex-start">
@@ -97,46 +61,51 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td datalabel="Element">aa-toastr</td>
+                        <td colspan="4">
+                            <h3 class="margin-bottom-0">Add the below markup to your app.component.html</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Article</td>
                         <td datalabel="Attribute">aa-toastr</td>
-                        <td datalabel="Type">Component</td>
-                        <td datalabel="Default">N/A</td>
+                        <td datalabel="Type">class</td>
+                        <td datalabel="Default">aa-toastr</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr</td>
-                        <td datalabel="Attribute">zIndex</td>
-                        <td datalabel="Type">Number</td>
-                        <td datalabel="Default">10</td>
+                        <td datalabel="Element">Section repeater</td>
+                        <td datalabel="Attribute">aa-toastr-content</td>
+                        <td datalabel="Type">class</td>
+                        <td datalabel="Default">aa-toastr-content</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr-item</td>
-                        <td datalabel="Attribute">(closeToastr)</td>
-                        <td datalabel="Type">Function</td>
-                        <td datalabel="Default">Your logic</td>
+                        <td datalabel="Element">Section repeater</td>
+                        <td datalabel="Attribute">toast.type</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">success, warning, error, info</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr-item</td>
-                        <td datalabel="Attribute">[showToastr]</td>
-                        <td datalabel="Type">Boolean</td>
-                        <td datalabel="Default">true or false</td>
+                        <td datalabel="Element">Div</td>
+                        <td datalabel="Attribute">material-icons</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.icon</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr-item</td>
-                        <td datalabel="Attribute">[isError], [isWarning], [isSuccess], [isInfo]</td>
-                        <td datalabel="Type">Boolean</td>
-                        <td datalabel="Default">true or false</td>
+                        <td datalabel="Element">H3</td>
+                        <td datalabel="Attribute">N/A</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.title</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr-item</td>
-                        <td datalabel="Attribute">heading</td>
-                        <td datalabel="Type">Any</td>
-                        <td datalabel="Default">Toastr heading</td>
+                        <td datalabel="Element">Paragraph</td>
+                        <td datalabel="Attribute">N/A</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.message</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-toastr-item</td>
-                        <td datalabel="Attribute">message</td>
-                        <td datalabel="Type">Any</td>
-                        <td datalabel="Default">Toastr message</td>
+                        <td datalabel="Element">Button</td>
+                        <td datalabel="Attribute">Click event</td>
+                        <td datalabel="Type">Method</td>
+                        <td datalabel="Default">remove(i)</td>
                     </tr>
                 </tbody>
             </table>

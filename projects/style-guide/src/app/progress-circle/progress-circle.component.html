@@ -117,7 +117,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=true; showProgressCirclePanelView=false; showProgressCircleClean=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=true; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -276,7 +276,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=false; showProgressCirclePanelView=true; showProgressCircleClean=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=false; showProgressCirclePanelView=true; showProgressCircleClean=false; showCustomProgressCircle=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -458,11 +458,167 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=true">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=true; showCustomProgressCircle=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
+
+      <!-- start content repeater -->
+      <section class="content-repeater flex-group">
+        <section class="flex-1 col-left flex-start">
+          <h2>Progress circle - custom version</h2>
+          <div class="describe margin-bottom-1">
+            <p>Build your own bespoke content</p>
+          </div>
+
+          <aa-button 
+            *ngIf="!asLink"
+            (buttonClick)="asLink=!asLink" 
+            fieldClass="boxed margin-bottom-1" 
+            buttonClass="primary" 
+            buttonText="Header as anchor">
+          </aa-button>
+
+          <aa-button 
+            *ngIf="asLink"
+            (buttonClick)="asLink=!asLink" 
+            fieldClass="boxed margin-bottom-1" 
+            buttonClass="secondary" 
+            buttonText="Header basic">
+          </aa-button>
+          
+          <div class="flex-group flex-start">
+            <aa-progress-circle 
+              *ngFor="let item of progressCustom"
+              [customProgressCircle]="item.customProgressCircle" 
+              panelHeight="{{item.panelHeight}}"
+              customHeaderClass="{{item.customHeaderClass}}" 
+              customFooterClass="" 
+              percent="{{item.percent}}" 
+              colour="{{item.colour}}">
+
+              <ng-container custom-header>
+                <h3 
+                  *ngIf="!asLink"
+                  title="My custom header with truncation" 
+                  class="ellipsis max-width-10 space-between">
+                  {{item.title}}
+                </h3>
+                <a *ngIf="asLink" class="flex-group flex-align-center flex-nowrap space-between width-100" title="My custom header with truncation">
+                  <h3 class="ellipsis max-width-10 cursor-pointer">{{item.title}}</h3>
+                  <div class="material-icons position-absolute right-0">chevron_right</div>
+                </a>
+              </ng-container>
+              
+              <ng-container custom-footer>
+                <aa-button
+                  [customIcons]="true"
+                  (buttonClick)="onClick()"
+                  buttonId="buttonId"
+                  buttonClass="custom-icons {{item.btnStatus}} small"
+                  fieldClass="boxed"
+                  buttonText="{{item.btnStatusText}}"
+                  buttonIcon="{{item.btnIcon}}">
+                </aa-button>
+              </ng-container>
+              
+            </aa-progress-circle>
+          </div>
+        </section>
+          
+        <section class="flex-2 col-right flex-start">
+          <table class="half-width">
+            <caption>Attributes</caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">[customProgressCircle]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">True</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">panelHeight</td>
+                <td datalabel="Type">Style</td>
+                <td datalabel="Default">Your panel height in rem or %</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">customHeaderClass</td>
+                <td datalabel="Type">Class</td>
+                <td datalabel="Default">Use one of our <a routerLink="/colours">background colours here</a></td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">customFooterClass</td>
+                <td datalabel="Type">Class</td>
+                <td datalabel="Default">If needed, add one of our modifier classes</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">customHeaderClass</td>
+                <td datalabel="Type">Class</td>
+                <td datalabel="Default">Use one of our <a routerLink="/colours">background colours here</a></td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">percent</td>
+                <td datalabel="Type">Number</td>
+                <td datalabel="Default">Progress percentage</td>
+              </tr>
+              <tr>
+                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Attribute">colour</td>
+                <td datalabel="Type">Progress circle colour</td>
+                <td datalabel="Default">
+                  <div class="flex-group flex-start flex-align-center">
+                    <strong class="margin-right-0-5">Available colours</strong>
+                    <aa-tooltip 
+                      [includeLabel]="false"
+                      [includeLegend]="false"
+                      [isInfo]="true" 
+                      [customIcon]="false" 
+                      iconName=""
+                      setMinWidth="12" 
+                      setMinWidth="20" 
+                      ypos="top" 
+                      xpos="right"
+                      zIndex="1"
+                    >
+                    <section class="flex-group flex-start aa-grey-100">
+                      <div>
+                        <h4>Use the hash value</h4>
+                        Green = #008770<br/>
+                        Orange = #e98300<br/>
+                        Red = #c60c31<br/>
+                        Light-blue = #0075b0<br/>
+                        Black = #3c3c3c<br/>
+                      </div>
+                    </section>
+                    </aa-tooltip>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=true">
+              <span class="material-icons">visibility</span><span>View gist</span>
+            </button>
+          </nav>
+      </section>
 </section>
 
 <aa-blade 
@@ -489,6 +645,10 @@
     <div *ngIf="showProgressCircleClean">
       <a href="https://gist.github.com/angloux/8ea6d0d7efaa2503f59bda90cd369d2d" target="_blank">View Gist on GitHub</a>
       <app-gist src="angloux/8ea6d0d7efaa2503f59bda90cd369d2d"></app-gist>
+    </div>
+    <div *ngIf="showCustomProgressCircle">
+      <a href="https://gist.github.com/angloux/a3481c50712db3bfe841dd6218d6ad2f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/a3481c50712db3bfe841dd6218d6ad2f"></app-gist>
     </div>
   </article>
 </aa-blade>

@@ -1,7 +1,7 @@
 <article 
   class="accordion-container"
   [ngStyle]="{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }"
-  [ngClass]="{'box-shadow-strong' : showBody, 'vertical flex-group flex-start' : verticalDisplay }"
+  [ngClass]="{'box-shadow' : showBody, 'vertical flex-group flex-start' : verticalDisplay }"
 >
   <h3 class="margin-0">
     <button 
@@ -18,7 +18,7 @@
       aria-controls="sectionId" 
       [id]="accordionId" 
       type="button">
-        <div class="flex-align-center flex-group flex-start">
+        <div *ngIf="!bespokeHeader" class="flex-align-center flex-group flex-start">
             <div *ngIf="dragable" class="accordion-icon material-icons drag-icon">drag_indicator</div>
             <div *ngIf="iconsEnabled && !fontAwesome" class="accordion-icon material-icons {{iconBgColor}}">{{iconName}}</div>
             <div *ngIf="iconsEnabled && fontAwesome" class="accordion-icon {{fontClassName}}"></div>
@@ -28,12 +28,19 @@
             </div>
             <div class="accordion-heading">{{accordionHeading}}</div>
           </div>
-        <div class="flex-group flex-end flex-align-center">
+        <div *ngIf="!bespokeHeader" class="flex-group flex-end flex-align-center">
           <ng-content select="[header-custom]"></ng-content>
             <div class="toggle-icons flex-align-center">
               <div *ngIf="!showBody" class="material-icons">add</div>
               <div *ngIf="showBody" class="material-icons">remove</div>
             </div>
+        </div>
+        <div *ngIf="bespokeHeader" class="bespoke-header">
+          <ng-content select="[bespoke-header]"></ng-content>
+          <div class="toggle-icons flex-align-center">
+            <div *ngIf="!showBody" class="material-icons">add</div>
+            <div *ngIf="showBody" class="material-icons">remove</div>
+          </div>
         </div>
     </button>
   </h3>

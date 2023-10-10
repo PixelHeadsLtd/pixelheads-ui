@@ -1,0 +1,7 @@
+<div class="tooltip-dynamic box-shadow"
+  [ngClass]="['tooltip-dynamic--'+position]"
+  [class.tooltip--visible]="visible"
+  [style.left]="left + 'px'"
+  [style.top]="top + 'px'">
+    <div [innerHtml]="tooltip"></div>
+</div>

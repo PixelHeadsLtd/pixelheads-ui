@@ -6,7 +6,7 @@
   *ngIf="!customBlade" 
   class="blade animate-all {{bladeSize}}" 
   [ngClass]="{
-    'show-blade' : toggleBlade,
+    'show-blade box-shadow' : toggleBlade,
     'show-tabs' : bladeTabs
   }"
   [ngStyle]="{
@@ -40,7 +40,7 @@
   *ngIf="customBlade" 
   class="blade animate-all {{bladeSize}}" 
   [ngClass]="{
-    'show-blade' : toggleBlade,
+    'show-blade box-shadow' : toggleBlade,
     'show-tabs custom-header-tabs' : customBladeTabs
   }" 
   [ngStyle]="{

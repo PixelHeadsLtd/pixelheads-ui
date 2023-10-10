@@ -1,5 +1,4 @@
 import { OnInit, ElementRef, EventEmitter } from '@angular/core';
-import * as ɵngcc0 from '@angular/core';
 export interface SelectOption {
     id: any;
     display: string;
@@ -17,6 +16,7 @@ export declare class CustomSelectComponent implements OnInit {
     defaultIcon: string;
     defaultIconColor: string;
     setWidth: number;
+    maxHeight: number;
     closeDropdown: EventEmitter<boolean>;
     optionSelected: EventEmitter<SelectOption>;
     highlightSection: EventEmitter<SelectOption>;
@@ -27,8 +27,5 @@ export declare class CustomSelectComponent implements OnInit {
     optionIsSelected(event: any, selectOption: SelectOption): void;
     setIndex(index: any): void;
     ngOnInit(): void;
-    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<CustomSelectComponent, never>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<CustomSelectComponent, "aa-custom-select", never, { "selectedIndex": "selectedIndex"; "options": "options"; "defaultName": "defaultName"; "defaultIcon": "defaultIcon"; "defaultIconColor": "defaultIconColor"; "setWidth": "setWidth"; }, { "closeDropdown": "closeDropdown"; "optionSelected": "optionSelected"; "highlightSection": "highlightSection"; }, never, never>;
 }
-
 //# sourceMappingURL=custom-select.component.d.ts.map

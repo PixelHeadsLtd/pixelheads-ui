@@ -9,8 +9,7 @@
       <div class="describe margin-bottom-1">
         <p>
           Pass in a custom Material Icon by setting iconsEnabled to true and adding an iconName. You can trigger the
-          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>. To show the drag icon,
-          set <strong>dragable=&quot;true&quot;</strong>
+          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>.
         </p>
       </div>
 
@@ -24,85 +23,76 @@
         showSix=false;
         showSeven=false;
         "
-        [dragable]="false"
         [showBody]="showOne"
         [clearPadding]="false"
         minWidth="35"
-        accordionHeading="Custom header version"
         accordionId="accordion01"
         sectionId="section01"
-        [iconsEnabled]="true"
-        iconName="account_balance"
+        [bespokeHeader]="true"
       >
-        <div header-custom>
-          <button *ngIf="!showJustification" class="primary small" (click)="justification()">Add business justification</button>
-          <strong *ngIf="addJustification" class="alert-shield small info">Justification msg</strong>
-        </div>
-        <ng-container>
-          <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
-            <input type="text" /> 
-            <div class="field boxed">
-              <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
-            </div>
-          </div>
-          <p>Add accordion content in here</p>
-        </ng-container>
-      </aa-accordion>
+        <ng-container bespoke-header>
+          <div class="flex-group space-between flex-align-center">
+            <section class="flex-group flex-start flex-nowrap flex-align-center">
+              <div class="material-icons drag-icon aa-blue-100 margin-right-0">drag_indicator</div>
+              <aa-button 
+                class="margin-right-0-25"
+                (buttonClick)="onClick()" 
+                buttonClass="bg-transparent size-large padding-0 aa-blue-100" 
+                fieldClass="boxed"
+                [customIconsRoundOutlined]="true"
+                buttonIcon="arrow_circle_left">
+              </aa-button>
+              <div class="accordion-heading">
+                Bespoke accordion
+              </div>
+            </section>
 
-      <aa-accordion
-        (open)="
-        showOne=false;
-        showTwo=true;
-        showThree=false;
-        showFour=false;
-        showFive=false;
-        showSix=false;
-        showSeven=false;
-        "
-        [dragable]="true"
-        [showBody]="showTwo"
-        minWidth="35"
-        accordionHeading="Custom header version with 'dragable' true"
-        accordionId="accordion01"
-        sectionId="section01"
-        [iconsEnabled]="true"
-        iconName="extension"
-      >
-        <div header-custom>
-          <div class="flex-group flex-end">
-            <aa-alert-shield
-              [alertShieldSmall]="true"
-              [showTooltip]="false"
-              [noWrap]="true"
-              [hideLabel]="false"
-              minWidth="12rem"
-              alertShieldStatus="info"
-              alertShieldText="Info"
-              [showTooltipHeading]="true"
-            >
-            </aa-alert-shield>
-            <aa-slider
-              [sliderInline]="false"
-              sliderChecked=""
-              labelText="apples"
-              fieldClass="boxed label-hidden"
-              sliderId=""
-              sliderName=""
-              sliderValue=""
-              disabled=""
-            >
-            </aa-slider>
+            <section class="flex-group flex-nowrap">
+              <aa-slider
+                [sliderInline]="false"
+                sliderChecked=""
+                labelText="apples"
+                fieldClass="boxed label-hidden"
+                sliderId=""
+                sliderName=""
+                sliderValue=""
+                disabled=""
+              >
+              </aa-slider>
+              <aa-alert-shield
+                [alertShieldSmall]="true"
+                [hideLabel]="false"
+                [showTooltip]="true"
+                [noWrap]="true"
+                minWidth="12rem"
+                alertShieldStatus="info"
+                alertShieldText="Info"
+                [showTooltipHeading]="true"
+                tooltipHeading="Heading"
+              >
+                <ng-container tooltip-content>
+                  <p>This is my tooltip message</p>
+                  <p>This is another tooltip message</p>
+                </ng-container>
+              </aa-alert-shield>
+            </section>
+
           </div>
-        </div>
-        <ng-container>
-          <p>Add accordion content in here</p>
         </ng-container>
-        
+        <ng-container>
+          <p>
+            This is an example of the accordion using a fully bespoke header.
+            For example code, please take a look at the Gist file on the right of this page.
+          </p>
+          <p>
+            If you want to make your accordion dragable or add alert-shield tooltips, then
+            this is the accordion you should be using.
+          </p>
+        </ng-container>
       </aa-accordion>
 
       <aa-accordion
         [disabled]="true"
-        [dragable]="true"
         minWidth="35"
         accordionHeading="Disabled version"
         accordionId="accordion01"
@@ -125,7 +115,6 @@
         showSix=false;
         showSeven=false;
         "
-        [dragable]="false"
         [showBody]="showThree"
         minWidth="35"
         customBgColor="bg-aa-red-100"
@@ -155,7 +144,6 @@
         showSix=false;
         showSeven=false;
         "
-        [dragable]="false"
         [showBody]="showFour"
         minWidth="35"
         customBgColor="bg-aa-blue-sky-100"
@@ -184,7 +172,6 @@
         showSix=false;
         showSeven=false;
         "
-        [dragable]="false"
         [showBody]="showFive"
         minWidth="35"
         customBgColor="bg-aa-green-100"
@@ -213,7 +200,6 @@
         showSix=true;
         showSeven=false;
         "
-        [dragable]="false"
         [showBody]="showSix"
         minWidth="35"
         customBgColor="bg-aa-orange-100"
@@ -244,7 +230,6 @@
       showSeven=true;
       "
       [clearPadding]="true"
-      [dragable]="false"
       [showBody]="showSeven"
       minWidth="35"
       accordionHeading="Nested accordions"
@@ -258,7 +243,6 @@
         <div>
           <aa-accordion
             (open)="showSevenNested=true"
-            [dragable]="false"
             [showBody]="showSevenNested"
             minWidth="26"
             accordionHeading="This is a nested accordion"
@@ -386,21 +370,26 @@
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">dragable</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">False</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-accordion</td>
             <td datalabel="Attribute">disabled</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">header-custom</td>
-            <td datalabel="Attribute">header-custom</td>
-            <td datalabel="Type">Custom HTML</td>
-            <td datalabel="Default">Add your content</td>
+            <td colspan="4">
+              <h3>Bespoke header</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[bespokeHeader]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">bespoke-header</td>
+            <td datalabel="Type">Ng-container</td>
+            <td datalabel="Default">bespoke-header</td>
           </tr>
         </tbody>
       </table>
@@ -421,8 +410,7 @@
       <div class="describe margin-bottom-1">
         <p>
           Pass in a custom Material Icon by setting iconsEnabled to true and adding an iconName. You can trigger the
-          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>. To show the drag icon,
-          set <strong>dragable=&quot;true&quot;</strong>
+          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>.
         </p>
       </div>
 
@@ -434,7 +422,6 @@
           showVertThree=false; 
           showVertFour=false; 
           showVertFive=false"
-          [dragable]="false"
           [showBody]="showVertOne"
           [clearPadding]="false"
           [verticalDisplay]="true"
@@ -469,7 +456,6 @@
           showVertFour=false; 
           showVertFive=false
           "
-          [dragable]="false"
           [showBody]="showVertTwo"
           [verticalDisplay]="true"
           verticalMinHeight="35vh"
@@ -499,7 +485,6 @@
           showVertFour=false; 
           showVertFive=false
           "
-          [dragable]="false"
           [showBody]="showVertThree"
           [verticalDisplay]="true"
           verticalMinHeight="35vh"
@@ -528,7 +513,6 @@
           showVertFour=true; 
           showVertFive=false
           "
-          [dragable]="false"
           [showBody]="showVertFour"
           [verticalDisplay]="true"
           verticalMinHeight="35vh"
@@ -557,7 +541,6 @@
           showVertFour=false; 
           showVertFive=true
           "
-          [dragable]="false"
           [showBody]="showVertFive"
           [verticalDisplay]="true"
           verticalMinHeight="35vh"
@@ -665,7 +648,6 @@
         [accordionHeading]="'Accordion heading 1'"
         [accordionId]="'accordion01'"
         [sectionId]="'section01'"
-        [dragable]="false"
       >
         <div header-custom>
           <input type="checkbox" />
@@ -685,7 +667,6 @@
         [accordionHeading]="'Accordion heading 2'"
         [accordionId]="'accordion01'"
         [sectionId]="'section01'"
-        [dragable]="false"
       >
         <div header-custom>
           <input type="checkbox" />
@@ -706,7 +687,6 @@
         [accordionHeading]="'Accordion disabled'"
         [accordionId]="'accordion01'"
         [sectionId]="'section01'"
-        [dragable]="false"
       >
         <div header-custom>
           <input type="checkbox" />
@@ -815,12 +795,6 @@
             <td datalabel="Attribute">sectionId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your Id</td>
-          </tr>
-          <tr>
-            <td datalabel="Element">aa-accordion</td>
-            <td datalabel="Attribute">dragable</td>
-            <td datalabel="Type">Boolean</td>
-            <td datalabel="Default">False</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-accordion</td>

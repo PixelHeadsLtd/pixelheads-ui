@@ -13,6 +13,7 @@ export class ContextMenuItemComponent implements OnInit {
   @Input() routerLink: string | any[];
   @Input() routerLinkActive: boolean;
   @Input() minWidth: number;
+  @Input() noWrap: boolean;
 
   constructor(private router: Router) { }
 

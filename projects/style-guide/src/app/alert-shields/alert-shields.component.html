@@ -14,7 +14,7 @@
           </p>
         </div>
   
-        <h3 class="margin-bottom-0">Material-icons only <a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Choose an icon</a></h3>
+        <h3 class="margin-bottom-0">Material-icons only <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">Choose an icon</a></h3>
         <div class="flex-group flex-start">
           <div class="field">
             <aa-alert-shield
@@ -711,6 +711,33 @@
               minWidth="12rem"
               alertShieldText="Ignore"
             >
+            </aa-alert-shield>
+          </div>
+          <div class="field">
+            <aa-alert-shield
+              title="Running"
+              [customShield]="true"
+              [alertShieldSmall]="false"
+              [noWrap]="true"
+              shieldColour="info"
+              [hideLabel]="true"
+              [showTooltip]="true"
+              tooltipHeading="tooltipTopRight = true"
+              [tooltipTopRight]="true"
+              [showTooltipHeading]="true"
+              tooltipHeading="Custom tooltip"
+              iconName="info"
+              minWidth="12rem"
+              alertShieldText="Running"
+              [iconOutlined]="true"
+            >
+              <ng-container custom-tooltip-content>
+                <p>
+                  You can choose to use a tooltip on<br/>
+                  the custom alert shield in order to<br/>
+                  give the user more information
+                </p>
+              </ng-container>
             </aa-alert-shield>
           </div>
         </div>
@@ -1505,6 +1532,12 @@
             </tr>
             <tr>
               <td datalabel="Element">aa-alert-shield</td>
+              <td datalabel="Attribute">[iconOutlined]</td>
+              <td datalabel="Type">Boolean</td>
+              <td datalabel="Default">False</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">aa-alert-shield</td>
               <td datalabel="Attribute">enableRotation</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
@@ -1554,7 +1587,7 @@
               <td datalabel="Element">aa-alert-shield</td>
               <td datalabel="Attribute">iconName</td>
               <td datalabel="Type">String</td>
-              <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Choose an icon</a></td>
+              <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">Choose an icon</a></td>
             </tr>
             <tr>
               <td colspan="4">

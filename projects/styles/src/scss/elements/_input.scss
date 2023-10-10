@@ -85,44 +85,6 @@ input:not(.ag-filter-filter) {
   }
 }
 
-.date-picker {
-  position: relative;
-  input[type=text] {
-    padding-right: 2rem;
-    ~ button {
-      background-color: transparent;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      color: #0075b0;
-      border-radius: 0;
-      width: 2rem;
-      height: 2rem;
-      &:hover, &:focus {
-        border: none;
-        background-color: transparent!important;
-        color: _colour(aa-blue-100);
-      }
-      &:disabled {
-        background-color: transparent !important;
-      }
-    }
-    &[readonly] {
-      + button {
-        opacity: .5;
-        color: _colour(aa-grey-5);
-        cursor: not-allowed;
-      }
-    }
-  }
-  input[type=date] {
-    + button {
-      display: none;
-    }
-  }
-}
-
 .gradient {
   input {
     background-color: _palette(aa-blue-100);
