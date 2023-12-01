@@ -39,6 +39,7 @@ export class BladeComponent implements OnInit {
   showNestedThree: boolean;
   hasBladeTabs: boolean;
   setHeadingMaxWidth: number;
+  tabNgTemplate: boolean;
 
   pinBlade: boolean;
   toggleBlade: boolean;
@@ -80,6 +81,28 @@ export class BladeComponent implements OnInit {
       tabCount: null
     },
   ];
+
+  tabsNgTemplate = [
+    {
+      tabName: 'Basic blade',
+      tabId: 'tab1',
+      showTabOneContent: true
+    },
+    {
+      tabName: 'Blade tabs (router-outlet)',
+      tabId: 'tab2',
+      showTabTwoContent: true
+    },
+    {
+      tabName: 'Blade tabs (ng-template)',
+      tabId: 'tab3',
+      showTabThreeContent: true
+    }
+  ]
+
+  tabChanged(tab: TabNavigationItemComponent) {
+    this.activeTab = tab;
+  }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

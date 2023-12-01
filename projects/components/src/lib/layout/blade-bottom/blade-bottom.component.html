@@ -15,10 +15,6 @@
       </div>
       <div class="flex-group flex-end controls {{controlsColor}}">
         <div *ngIf="!disablePinning" (click)="toggleThePin($event)" class="material-icons pin flex-end">push_pin</div>
-        <div (click)="toggleFullScreen($event)" class="material-icons flex-end">
-          <span *ngIf="!isFullScreen">open_in_full</span>
-          <span *ngIf="isFullScreen">close_fullscreen</span>
-        </div>
       </div>
   </section>
   <section class="blade-bottom-content">

@@ -14,7 +14,7 @@
     'z-index' : zIndex+10
   }"
 >
-  <article class="blade-header flex-group space-between">
+  <article class="blade-header flex-group space-between flex-nowrap">
     <div class="flex-group flex-start flex-align-center">
       <div 
           *ngIf="enablePinning" 
@@ -25,13 +25,13 @@
         push_pin
       </div>
       <div *ngIf="enableIcon" class="material-icons header-icon margin-right-0-5">{{iconName}}</div>
-      <h2 class="margin-top-0-25 margin-0 ellipsis" [ngStyle]="{'max-width' : headingMaxWidth+'rem' }">
+      <h2 class="margin-0 ellipsis" [ngStyle]="{'max-width' : headingMaxWidth+'rem' }">
         {{bladeHeading}}
       </h2>
     </div>
     <a class="anchor-close flex-align-center" (click)="onClose()">Close</a>
-    <ng-content *ngIf="bladeTabs" select="[blade-tabs]"></ng-content>
   </article>
+  <ng-content *ngIf="bladeTabs" select="[blade-tabs]"></ng-content>
   <ng-content></ng-content>
 </aside>
 

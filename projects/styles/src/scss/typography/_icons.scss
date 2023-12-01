@@ -681,6 +681,11 @@ aa-dashboard-favourites {
     @include icon-button-large-svg;
   }
 
+  .icon-report-problem-blue {
+    background-image: url("#{$icon-path}/icon-report-problem-blue.svg");
+    @include icon-button-large-svg;
+  }
+
   .fa-handshake, 
   .icon-agreement, 
   .icon-receive-discount {

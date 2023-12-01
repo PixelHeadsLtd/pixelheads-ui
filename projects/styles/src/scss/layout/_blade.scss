@@ -45,7 +45,7 @@
   }
 
   &.show-tabs {
-    .tab-navigation {
+    .tab-navigation:not(.secondary-tabs .tab-navigation) {
       position: absolute;
       z-index: 1;
       left: 0;
@@ -54,9 +54,11 @@
       background-color: _colour(aa-white-100);
       padding-left: 1.25rem;
 
-      li a {
-        box-sizing: unset;
-        min-height: 2rem;
+      ul {
+        li a {
+          box-sizing: unset;
+          min-height: 2rem;
+        }
       }
     }
 

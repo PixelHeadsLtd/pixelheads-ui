@@ -59,6 +59,26 @@ a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
   }
 }
 
+.anchor-button {
+  border-radius: 1.5rem;
+  padding: .45rem .75rem .45rem .75rem;
+  text-decoration: none!important;
+  font-family: _font(family-medium);
+  letter-spacing: .0575rem;
+  line-height: 1.15rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+  white-space: nowrap;
+
+  .material-icons,
+  .material-icons-outlined {
+    margin-top: -.25rem;
+    margin-bottom: -.25rem;
+  }
+}
+
 .feature-box.solid {
   a {
     color: _colour(aa-light-blue-100);

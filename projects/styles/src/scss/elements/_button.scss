@@ -337,6 +337,21 @@ button:not(
       @include button-light-blue-hover;
     }
   }
+  &.pale-blue,
+  &.bg-aa-light-blue-15 {
+    @include button-pale-blue;
+    &:hover {
+      @include button-pale-blue-hover;
+    }
+  }
+  &.blue-sky,
+  &.bg-aa-blue-sky-100,
+  &.pending {
+    @include button-blue-sky;
+    &:hover {
+      @include button-blue-sky-hover;
+    }
+  }
   &.orange,
   &.bg-aa-orange-100,
   &.pending {

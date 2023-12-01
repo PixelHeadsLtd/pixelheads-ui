@@ -1,13 +1,13 @@
-<section #top class="landing-page" [ngClass]="{'sticky': isSticky}">
+<section #top class="landing-page overflow-hidden" [ngClass]="{'sticky': isSticky}">
   <article class="dl-banner flex-group space-between">
-    <div class="margin-bottom-2 search-section">
-      <div class="flex-group flex-start flex-align-center flex-nowrap max-width-25">
-        <h1>Welcome to the Design Language</h1>
-        <img class="happy-chappy" src="./assets/images/happy-chappy.gif" />
-      </div>
-      <div class="search margin-top-2">
+    <div class="margin-bottom-2 search-section position-relative z-index-1">
+      <h1 class="white-100 display-block">
+        <span class="padding-right-0-75 margin-right-0">Welcome to Design Language</span>
+        <img class="happy-chappy" src="./assets/images/happy-chappy-wht.gif" />
+      </h1>
+      <div class="search margin-top-1-5">
         <input
-          class="animate-normal"
+          class="animate-normal bg-trans-blue-to-black"
           type="text"
           id="search-text"
           aria-describedby="search-text"
@@ -18,7 +18,7 @@
           >
           <div
             (click)="toggleSearchInput(); searchText=''"
-            class="material-icons search-icon flex-1 animate-normal"
+            class="material-icons search-icon aa-yellow-100 flex-1 animate-normal"
           >
           search
         </div>
@@ -349,22 +349,48 @@
                 >
               </a>
             </li>
+            <li 
+              *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index" 
+              (click)="goToPageTemplatesNav()"
+              class="flex-group flex-start flex-align-center cursor-pointer"
+              routerLink="/{{c.link}}"
+              id="{{c.id}}"
+            >
+              <h2 
+                *ngIf="!searchPageTemplates[i-1] || c.heading !== searchPageTemplates[i-1].heading"
+                class="width-100"
+                >
+                {{c.heading}}
+              </h2>
+              <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+              </div>
+              <a 
+                appHighlight 
+                [searchedWord]="searchText" 
+                [content]="
+                  c.link.toString().split('-').join('\n')
+                " 
+                [classToApply]="'highlight'" 
+                [setTitle]="'false'"
+                >
+              </a>
+            </li>
           </ul>
         </section>
       </div>
       <section class="getting-started">
-        <div class="flex-group flex-start flex-align-center">
-          <div class="material-icons star aa-orange-100">star_border</div>
-          <h2 class="margin-bottom-0-5">Getting started</h2>
-        </div>
-        <div class="margin-left-0-25">
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
-            <div class="material-icons aa-light-blue-100 margin-right-0-75">east</div>
-
+        <h2 class="margin-bottom-0-5 margin-top-1-25 force-yellow">What is Design Language?</h2>
+        <p class="force-white max-width-30 margin-bottom-1-5">
+          Design Language is a bespoke component library for IM developers. Aside from our current allowed 3rd party components, 
+          it's mandatory to use this resource for IM project development rather than 3rd party components
+        </p>
+        <div class="margin-left-0-25 flex-group flex-start">
+          <div>
             <aa-project-tour
               (panelIsClosed)="incrementTourCount()"
               [tourMode]="tourCount===0"
-              topPos="-2rem"
+              topPos="-1.75rem"
               rightPos="auto"
               leftPos="calc(100% + 1rem)"
               zIndex="1"
@@ -379,11 +405,21 @@
               "
             >
               <ng-container nested-component>
-                <a
-                  (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'"
-                  class="anchor-small cursor-pointer">
-                  Setting up Design Language in your project
-                </a>
+                <aa-button
+                  [customIcons]="true"
+                  (buttonClick)="bladeIsOpen($event); bladeHeading='Setting up Design Language'"
+                  buttonId="buttonId"
+                  buttonClass="custom-icons blue-sky hover-light-blue margin-bottom-0-5"
+                  fieldClass="boxed"
+                  [showLabel]="false"
+                  buttonLabel="Custom icons"
+                  buttonText="Set up Design Language"
+                  buttonIcon="settings"
+                  [showCount]="false"
+                  count="10"
+                  countColor="blue"
+                  disabled="">
+                </aa-button>
               </ng-container>
               <ng-container tour-navigation>
                 <button class="read-only"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
@@ -398,37 +434,59 @@
               </ng-container>
             </aa-project-tour>
           </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
-            <div class="material-icons aa-light-blue-100 margin-right-0-75">east</div>
-            <a (click)="bladeIsOpen($event); showEmailTemplates=true; bladeHeading='Creating HTML email templates for Outlook 365'" class="anchor-small cursor-pointer">Creating HTML emails for Outlook 365</a>
-          </div>
+          
+          <aa-button
+            (buttonClick)="setTourCount(0)"
+            [customIcons]="true"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-plum-100 hover-plum tour-btn"
+            fieldClass="boxed label-hidden margin-bottom-1"
+            buttonLabel="Custom icons"
+            buttonText="Quick tour"
+            buttonIcon="school"
+            disabled="">
+          </aa-button>
         </div>
       </section>
 
     </div>
     <div class="graphic">
-      <!-- <img src="assets/images/graphic.svg" alt="Design Language" /> -->
+      <app-rotating-sphere class="rotating-sphere"></app-rotating-sphere>
     </div>
-    <div class="features margin-top-4 margin-bottom-2">
+    <div class="features margin-bottom-2">
       <section class="flex-group flex-start">
-        <nav class="margin-right-4">
-          <button 
-            class="custom-icons bg-aa-green-100 margin-bottom-1" 
-            routerLink="/icons"
-            >
-            <div class="display-inline-block">
-              <span class="material-icons">flag</span>
-              <span>Country flag finder</span>
-            </div>
-            
-          </button>
-          <h2 class="margin-bottom-0-5 margin-top-0">Latest packages</h2>
-          <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
+        <nav class="margin-right-2">
+          <h3 
+            class="
+              bg-force-blue-sky
+              force-white
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+            "
+          >
+            Latest packages
+          </h3>
+          <a 
+            (click)="showOverlay=!showOverlay; showReleaseNotes=true" 
+            class="
+              cursor-pointer 
+              flex-group 
+              flex-start 
+              flex-align-center 
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
             <div class="material-icons small aa-orange-100 margin-right-0-5">event_note</div>
-            <a (click)="showOverlay=!showOverlay; showReleaseNotes=true; showDesignPrinciples=false" class="anchor-small cursor-pointer">
-              Release notes
-            </a>
-          </div>
+            <span>Release notes</span>
+          </a>
+
           <aa-project-tour
             (panelIsClosed)="incrementTourCount()"
             [tourMode]="tourCount===1"
@@ -443,25 +501,67 @@
             tourModeHeading="Latest node packages"
             tourModeBody="
               These links will take you to Azure DevOps Artifacts where you can get the latest versions of the Design Language Styles and Components.
-              Always get the very latest versions so that you'll always up-to-date
+              Always get the very latest versions so that you're always up-to-date
             "
           >
             <ng-container nested-component>
-              <div class="margin-bottom-0-25">
-                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank" class="anchor-small">
-                  Latest Styles
-                </a>
-              </div>
-              <div class="margin-bottom-0-25">
-                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank" class="anchor-small">
-                  Latest Components
-                </a>
-              </div>
-              <div class="margin-bottom-0-25">
-                <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/versions" target="_blank" class="anchor-small">
-                  Latest Anglo Framework
-                </a>
-              </div>
+              <a 
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer 
+                  flex-group 
+                  flex-start 
+                  flex-align-center 
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-pink-100 margin-right-0-5">star</div>
+                <span>Latest Styles</span>
+              </a>
+              <a 
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer 
+                  flex-group 
+                  flex-start 
+                  flex-align-center 
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-blue-100 margin-right-0-5">star</div>
+                <span>Latest Components</span>
+              </a>
+              <a 
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/versions" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer 
+                  flex-group 
+                  flex-start 
+                  flex-align-center 
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-burgundy-100 margin-right-0-5">star</div>
+                <span>Latest Anglo Framework</span>
+              </a>
             </ng-container>
             <ng-container tour-navigation>
               <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
@@ -477,70 +577,131 @@
           </aa-project-tour>
         </nav>
         <nav>
-          <aa-button
-            (buttonClick)="setTourCount(0)"
-            [customIcons]="true"
-            buttonId="buttonId"
-            buttonClass="custom-icons bg-aa-plum-100"
-            fieldClass="boxed label-hidden margin-bottom-1"
-            buttonLabel="Custom icons"
-            buttonText="Quick tour"
-            buttonIcon="school"
-            disabled="">
-          </aa-button>
-          <h2 class="margin-bottom-0-5 margin-top-0">Useful links</h2>
-          <div class="margin-bottom-0-25 flex-group flex-start flex-align-center">
-            <div class="new bg-aa-red-100 margin-right-0-5 force-white border-radius-0-25 padding-0-25">NEW!</div>
-            <aa-project-tour
-              (panelIsClosed)="incrementTourCount()"
-              [tourMode]="tourCount===2"
-              topPos="-2.15rem"
-              rightPos="calc(100% + 4rem)"
-              leftPos="auto"
-              zIndex="1"
-              panelWidth="20rem"
-              [arrowRight]="true"
-              arrowPos="2rem"
-              [enableHeading]="true"
-              tourModeHeading="Page layout example"
-              tourModeBody="
-                Click here to choose from a collections of sample markup. This is helpful because it
-                provides the correct structure in order for flexbox to work properly, particulary to ensure
-                layout consistency and responsivity
-              "
-            >
-              <ng-container nested-component>
-                <a routerLink="/page-layout-examples">
-                  Page layout examples
-                </a>
-              </ng-container>
-              <ng-container tour-navigation>
-                <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
-                <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
-                <button class="read-only"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
-                <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
-                <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
-                <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
-                <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
-                <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
-                <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
-              </ng-container>
-            </aa-project-tour>
-          </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
-            <a routerLink="/flex" class="anchor-small">Help using Flex</a>
-          </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
-            <div class="material-icons small aa-brown-100 margin-right-0-25">public</div>
-            <a
-              (click)="showOverlay=!showOverlay; showReleaseNotes=false; showDesignPrinciples=false; showSupportedBrowsers=true"
-              class="anchor-small cursor-pointer">
-              Which browsers do we support?
+          <h3 
+            class="
+              bg-force-burgundy
+              force-white
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+            "
+          >
+            Useful links
+          </h3>
+
+          <aa-project-tour
+            (panelIsClosed)="incrementTourCount()"
+            [tourMode]="tourCount===2"
+            topPos="-1.5rem"
+            rightPos="calc(100% + 1.5rem)"
+            leftPos="auto"
+            zIndex="1"
+            panelWidth="20rem"
+            [arrowRight]="true"
+            arrowPos="2rem"
+            [enableHeading]="true"
+            tourModeHeading="Page templates"
+            tourModeBody="
+              Click here to choose from a collection of templates. This is helpful because it
+              provides the correct structure in order for Flex to work properly, particulary to ensure
+              layout consistency and responsivity
+            "
+          >
+            <ng-container nested-component>
+              <a 
+                routerLink="/page-templates"
+                (click)="goToPageTemplatesNav()"
+                class="
+                  cursor-pointer 
+                  flex-group 
+                  flex-start 
+                  flex-align-center 
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-green-100 margin-right-0-5">view_quilt</div>
+                <span>Page templates</span>
+              </a>
+            </ng-container>
+            <ng-container tour-navigation>
+              <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+              <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+              <button class="read-only"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+              <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+              <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+              <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+              <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+              <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+              <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+            </ng-container>
+          </aa-project-tour>
+
+          <a 
+            routerLink="/flex"
+            (click)="openLayoutNav()"
+            class="
+              cursor-pointer 
+              flex-group 
+              flex-start 
+              flex-align-center 
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-orange-100 margin-right-0-5">view_week</div>
+            <span>Help using Flex</span>
           </a>
-          </div>
-          <div class="flex-group flex-start flex-align-center margin-bottom-0-25">
-            <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank" class="anchor-small">Material Icons reference</a>
-          </div>
+
+          <a 
+            (click)="showOverlay=!showOverlay; showReleaseNotes=false; showSupportedBrowsers=true"
+            class="
+              cursor-pointer 
+              flex-group 
+              flex-start 
+              flex-align-center 
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-red-100 margin-right-0-5">public</div>
+            <span>Which browsers do we support?</span>
+          </a>
+
+          <a 
+            href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank"
+            class="
+              cursor-pointer 
+              flex-group 
+              flex-start 
+              flex-align-center 
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-lime-100 margin-right-0-5">insert_emoticon</div>
+            <span>Material Icons reference</span>
+          </a>
         </nav>
       </section>
     </div>
@@ -556,43 +717,31 @@
 
 
   <!-- INTRODUCTION -->
-  <section class="content-repeater dl-info flex-group padding-top-1 padding-bottom-2">
+  <section class="content-repeater dl-info flex-group padding-top-1 padding-bottom-2 bd-bottom-1 bd-bottom-dashed bd-pink bd-1">
     <div>
-      <h3><strong class="number">1.</strong> What is the Design Language?</h3>
+      <h3><strong class="number">1.</strong> Starting a new project?</h3>
       <p>
-        The Design Language project was built to provide design styleguides and
-        a component library to be used across ALL applications within Marketing IM.
+        Design Language is a mandatory resource for building IM Marketing applications. There are a few exceptions 
+        where we rely on 3rd party components, these are listed under the 'Third party components' section 
+        found in the left-hand navigation
       </p>
-      <aa-button
-        [customIcons]="true"
-        (buttonClick)="showOverlay=true; showDesignPrinciples=true; showReleaseNotes=false"
-        buttonId="buttonId"
-        buttonClass="custom-icons blue"
-        fieldClass="boxed label-hidden margin-top-0-5"
-        buttonLabel="Design principles"
-        buttonText="Design Principles?"
-        buttonIcon="design_services"
-        disabled="">
-      </aa-button>
     </div>
 
     <div>
-      <h3><strong class="number">2.</strong> Who should use this resource?</h3>
+      <h3><strong class="number">2.</strong> Can't find a suitable component?</h3>
       <p>
-        Anyone interested in our design standards, but it's
-        mainly intended for developers. If there's something you cannot find or you need assistance, please check the
-        <a href="https://angloamerican.stackenterprise.co/questions" target="_blank">Stack Overflow</a> page or
-        post a question in the Slack 'core-ui' channel
+        If for any reason you cannot find a suitable component for your project, or you need a modification 
+        to an existing component. Please reach out to the <a href="mailto:michael.king@angloamerican.com.com?cc=claire.burns@angloamerican.com, &subject=Design Language Request">UX Team</a> or add a request in the Slack 'core-ui' channel
       </p>
     </div>
 
     <div>
       <h3><strong class="number">3.</strong> Where do I begin?</h3>
       <p>After you've
-        <a (click)="bladeIsOpen($event); showEmailTemplates=false; bladeHeading='Setting up Design Language'"
+        <a (click)="bladeIsOpen($event); bladeHeading='Setting up Design Language'"
         class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use
         the components listed below. If you need sample markup, please visit the
-         <a routerLink="/page-layout-examples">Page layout examples</a>. 
+         <a routerLink="/page-templates" (click)="goToPageTemplatesNav()">Page templates</a>. 
          <strong class="aa-red-100 position-relative padding-right-1-5">
           Do not use Bootstrap
           <aa-tooltip 
@@ -615,7 +764,7 @@
             </p>
           </aa-tooltip> 
         </strong> instead
-        we use <a routerLink="/flex">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
+        we use <a routerLink="/flex" (click)="openLayoutNav()">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
       </p>
     </div>
 
@@ -772,7 +921,7 @@
         [enableHeading]="true"
         tourModeHeading="Layout"
         tourModeBody="
-          When is comes to forms, there are a few options you should stick with for presentatation. The most
+          When it comes to forms, there are a few options you should stick with for presentatation. The most
           commonly used is the blade, but we also have blade-bottom and blade-top for certain situations. Filter
           is used often and sits at the top of the page below the control-bar. There's
           also a handy section in Layout called Flex, this will provide you with flexbox fundamentals.
@@ -1024,7 +1173,7 @@
           tourModeHeading="Widgets"
           tourModeBody="
             From accordions to person cards and info-panel's, here you'll find all the Design Language widgets. It's been
-            mentioned above but we do not use any 3rd party components apart from those listed under the `Other components` section
+            mentioned above but we do not use any 3rd party components apart from those listed under the `Third party components` section
             in the left navigation
           "
         >
@@ -1129,7 +1278,7 @@
     (close)="toggleBlade = false"
     [enablePinning]="false">
     <article class="blade-content">
-      <div *ngIf="!showEmailTemplates">
+      <div>
 
         <div>
           <h2>Package versions</h2>
@@ -1206,172 +1355,6 @@
           <li>&nbsp;&#x007D;</li>
         </ol>
       </div>
-
-      <!-- Setting up HTML email templates for Outlook 365 -->
-      <div *ngIf="showEmailTemplates">
-        <h2 class="boxed">Getting started</h2>
-        <div class="flex-align-center">
-          <span class="material-icons aa-orange-100 margin-right-0-5">download_for_offline</span>
-          <a target="_blank" href="https://dev.core.angloamerican.com/designlanguage/assets/sample-email-template.zip">Download sample template</a>
-        </div>
-        <h2 class="margin-top-1">Setup</h2>
-        <p>Create a basic html page with your preferred HTML editor. Set your
-          default font family, weight, line-height and size on the body element:
-        </p>
-        <p class="describe">
-          &lt;body style="font-family: Roboto; font-size: 12px; color: #323232; margin:0; padding:20px; line-height: 17px"&gt;&lt;/body&gt;
-        </p>
-        <p>For the construction of the template, use a <strong>table</strong> inside the <strong>body</strong> and set
-          the <strong>cellpadding</strong> to at value of at least 10, as this will help with section spacing.
-        </p>
-        <p class="describe">
-          &lt;table align="center" border="0" cellpadding="10" cellspacing="0" width="600"&gt;
-        </p>
-        <p>
-          <strong>You can’t use stylesheets in the conventional manner</strong>, instead you have to go
-          back to basics and use <strong>inline css</strong> on the actual element itself. If you were thinking
-          of using the block at the top of you’re page, don’t, as that won’t work either.
-        </p>
-        <p>
-          Try and use conventional html tags for aesthetics and layout. For example,
-          use the <strong>strong tag</strong> for bold text rather than setting a style with font-weight:
-          bold to the element. Likewise, utilise the <strong>heading tags h3, h2, h1 etc</strong> for small, medium and
-          large headings. For spacing sections in your template, try and use <strong>new table
-          rows</strong>, that's where the cellpadding you set earlier with come into play, It’s
-          more effective that using margins and padding as these are also ignored by
-          most email clients. For large areas of text, use the <strong>paragraph</strong> tag as you would normally.
-        </p>
-
-        <h2>Using images</h2>
-        <p>
-          If you want to use images in your template, you will need to either host
-          them where your recipients have access or embed them in the html template itself.
-          If you choose to embed them (and this is the easiest option) the <strong>source image
-          must be a bitmap file</strong> such as a PNG, GIF or JPEG <strong class="aa-red-100">you cannot
-          embed vector-based images such as SVG</strong>. When your bitmap image is ready,
-          <a target="_blank" href="https://www.cssportal.com/image-to-data/">use this tool to
-          generate a data url</a>.
-        </p>
-        <p>
-          When you’ve generated the data url, copy and paste it to the source of your image tag like so…
-        </p>
-        <p class="describe">
-          &lt;img src=”the dataurl you copied earlier” alt=”your image name” /&gt;
-        </p>
-        <h2>Anglo American colour palette</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Element</th>
-              <th>Hex ref</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Dark blue (headings)</td>
-              <td>#002776</td>
-            </tr>
-            <tr>
-              <td>Light blue (links)</td>
-              <td>#0075b0</td>
-            </tr>
-            <tr>
-              <td>Green</td>
-              <td>#008770</td>
-            </tr>
-            <tr>
-              <td>Dark grey (body text)</td>
-              <td>#4d4d4d</td>
-            </tr>
-            <tr>
-              <td>Red</td>
-              <td>#c60c30</td>
-            </tr>
-            <tr>
-              <td>Orange</td>
-              <td>#e98300</td>
-            </tr>
-          </tbody>
-        </table>
-        <h2>Creating grids and charts </h2>
-        <p>
-          Use nested tables for grid layouts. If you want unified columns with spacing,
-          you’ll need to set the width of the first cell.
-        </p>
-        <p class="describe">
-          &lt;table&gt;<br/>
-          &nbsp;&nbsp; &lt;tbody&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td width="150"&gt;&lt;strong style="color:#0075b0"&gt;Name&lt;/strong&gt;&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Paul Smith&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td width="150"&gt;&lt;strong style="color:#0075b0"&gt;Job Title&lt;/strong&gt;&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Project Manager&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td width="150"&gt;&lt;strong style="color:#0075b0"&gt;Country&lt;/strong&gt;&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;United Kingdom&lt;/td&gt;<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br/>
-          &nbsp;&nbsp;&lt;/tbody&gt;<br/>
-          &lt;/table&gt;
-        </p>
-
-        <h2>Will produce something like</h2>
-        <dl class="padding-bottom-0-5">
-          <dt class="width-8">Name</dt>
-          <dd>Paul Smith  </dd>
-        </dl>
-        <dl class="padding-bottom-0-5">
-          <dt class="width-8">Job Title</dt>
-          <dd>Project Manager</dd>
-        </dl>
-        <dl class="padding-bottom-0-5">
-          <dt class="width-8">Country</dt>
-          <dd>United Kingdom</dd>
-        </dl>
-
-        <h1 class="margin-top-2">Sending your email template via Outlook 365</h1>
-        <h2 class="margin-top-1">Step 1 - Click the small quick access cheron in the header</h2>
-        <img src="{{stepOne}}" />
-        <h2>Step 2 - Click 'More Commands'</h2>
-        <img src="{{stepTwo}}" />
-        <h2>Step 3 - Find 'Attach File' option and click 'Add'</h2>
-        <img src="{{stepThree}}" />
-        <h2>Step 4 - Click 'OK'</h2>
-        <img src="{{stepFour}}" />
-        <h2>Step 5 - Click the small paperclip icon that's now added</h2>
-        <img src="{{stepFive}}" />
-        <h2>Step 6 - Browse for your HTML file and then select 'Insert as Text'</h2>
-        <img src="{{stepSix}}" />
-        <h2>Step 7 - You now have your template displayed (May need tweeking)</h2>
-        <img src="{{stepSeven}}" />
-
-        <h2>Tidy things up in Outlook or other client</h2>
-        <p>
-          When you have the template open in Outlook, it will most likely look a bit
-          different than your browser version. For example, your images might not appear
-          at the correct size, the font you chose will default to Outlooks default
-          font etc. I would suggest at this point, tidy things up as best you can.
-          Select all and reset your font family, drag images to scale to the correct
-          size and modify font sizes until you’re happy, you can also set the email
-          background to a chosen color if required.
-        </p>
-
-        <p>
-          <a target="_blank" href="https://support.microsoft.com/en-us/office/create-an-email-message-template-43ec7142-4dd0-4351-8727-bd0977b6b2d1">
-            Guide to create an Outlook template
-          </a>
-        </p>
-        <p>
-          <a target="_blank" href="https://support.microsoft.com/en-us/office/send-an-email-message-based-on-a-template-56c645fc-1b25-4059-808b-55ee72b6bc2d">
-            Guide for sending the your newly polished Outlook template
-          </a>
-        </p>
-
-        <h2 class="margin-top-1">You're done!</h2>
-
-      </div>
     </article>
   </aa-blade>
 </section>
@@ -1391,17 +1374,6 @@
           <h1>Release notes</h1>
         </div>
         <button (click)="showOverlay=false" class="material-icons">close</button>
-      </section>
-    </div>
-
-    <!-- START DESIGN PRINCIPLES HEADER -->
-    <div *ngIf="showDesignPrinciples">
-      <section class="aa-overlay-header flex-group space-between">
-        <div class="flex-group flex-start flex-align-center">
-          <div class="material-icons aa-orange-100">design_services</div>
-          <h1>Marketing IM UX Design Principles</h1>
-        </div>
-        <button (click)="showOverlay=false; showDesignPrinciples=false" class="material-icons">close</button>
       </section>
     </div>
 
@@ -1482,282 +1454,6 @@
         we should still endeavour to fix any broken functionality as a fairly low priority, but design look and feel isn't important.
       </p>
 
-    </div>
-
-    <!-- START DESIGN PRINCIPLES TABS AND TAB CONTENT -->
-    <div *ngIf="showDesignPrinciples">
-      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-        <aa-tab-navigation-item tabName="Introduction" [enableIcons]="false" iconName="" iconColour="" routerLinkActive>
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-1 margin-bottom-0">Why should you use them?</h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content">
-
-                  <div class="flex-group">
-                    <p class="margin-top-1 margin-right-2">
-                      In Anglo American, we design applications that users use
-                      extensively. They can forgive less-than-perfect functionality as
-                      they are expert users and know their tasks. Nevertheless, our
-                      designs should offer an experience that is confidence-building
-                      and optimal.
-                    </p>
-                    <p class="margin-right-2">
-                      These design principles offer fundamental advice for making
-                      easy-to-use and pleasing designs. They outline ways to improve
-                      usability, influence user perception of systems, increase the
-                      appeal and help you make effective design decisions in your
-                      projects.
-                    </p>
-                    <h3 class="aa-orange-100">
-                      "Design used to be the seasoning you'd sprinkle
-                      on for taste; now it's the flour you need at the
-                      start of the recipe."
-                    </h3>
-                  </div>
-
-                  <h2 class="margin-bottom-0">Complimentary resources</h2>
-                  <div class="flex-group">
-                    <p class="margin-top-1 margin-right-2">
-                      These design principles support the Design Language project, which provides style guides and a
-                      component library used across ALL applications within Marketing IM.
-                    </p>
-                    <p>
-                      It is important to prioritise a design approach that minimises users' cognitive load and decision-making
-                      time and optimises data usage. Also, we can achieve consistency across the Anglo digital landscape if
-                      we follow these principles.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Accessibility" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-0 max-width-40 feature-box">
-                "Accessibility means that all people can perceive, understand,
-                navigate, and interact with digital information"
-              </h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content editorial-content">
-                  <ol>
-                    <li class="margin-bottom-0-5">
-                      Use plain language and avoid confusing content
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Ensure there is visible focus style for interactive elements
-                      that are navigated to via keyboard input
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make sure all 'img' elements have an 'alt' attribute
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Ensure the viewport zoom is not disabled
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Provide a text alternative for complex images such as charts, graphs, and maps
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Use heading elements to introduce content and use one H1 element per page/view
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Ensure that links are recognisable as links and if they open in a new tab or window, inform the user
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Maintain good proximity between content, but enough space to not be visually overpowering
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Maintain good colour contrast
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Communication" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-0 feature-box">
-                "True interactivity is not about clicking on icons or downloading files,
-                  it's about encouraging communication"
-              </h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content editorial-content">
-                  <ol>
-                    <li class="margin-bottom-0-5">
-                      Understand the purpose of your design and stick to it. If you deviate, it will cause confusion
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Use simple language - jargon requires <strong>prior</strong> knowledge, this might not be the case
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Keep users informed with constant feedback (includes errors, page load and system status)
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make sure that error, warning, and success states are not visually communicated by just colour
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      If errors are possible, ensure users are informed prior to error, through validation and error handling
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Do not expect users to remember information, keep options and instructions always visible
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Choose the correct component. If the user needs to provide a simple
-                      binary response, make sure your design only asks them that
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Stick to the Design Language style guidelines as it offers familiarity and consistency
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Learnability" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-0 feature-box">
-                "Learnability is the ease and speed with which users learn to interact
-                with a system, application or service"
-              </h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content editorial-content">
-                  <ol>
-                    <li class="margin-bottom-0-5">
-                      Do not fear simplicity. Even expert users will appreciate being able to do their complex tasks easily,
-                      and novice users will learn quickly
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make items easy to find
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Keep users informed with constant feedback (includes errors, page load and system status)Remove mundane,
-                      repetitive tasks (like copy and paste) and have the system support these processes
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Use the power of defaults. If we know how the user will answer, then have that selected first. It
-                      shows that we understand the user and reduces the time taken to complete their task
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Explain to a user exactly where they are and what is going on, and where to go next
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Repeat the same interaction with the same outcome: this will reinforce how it works and provide consistency
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Remove distractions. Let the user know their route by performing tasks consecutively, not
-                      simultaneously
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Navigation" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-0 feature-box">
-                "Good navigation seamlessly takes users where they want to go"
-              </h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content editorial-content">
-                  <ol>
-                    <li class="margin-bottom-0-5">
-                      Page hierarchy - ensure a user knows where they are in the application and that they can get back
-                      to where they came from (and forward if available)
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Ensure that navigation elements have correct weight in the design. Do not let them get lost in the page
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Set information in a natural, logical order
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Choose the correct type of navigation - menu items, tab menus, hyperlinks. And ensure your user
-                      knows what to do to progress with their task
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Put navigation items in familiar locations, place them where a user expects them to be
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make labels easy to scan and understand, clearly describe what the navigation does
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make menu links look interactive if they are. Don't make content look like a link if it isn't
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Usability" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="margin-top-0 feature-box">
-                "It doesn’t matter how many times I have to click, as long as each click
-                is an unambiguous choice. Don’t make me think"
-              </h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content editorial-content">
-                  <ol>
-                    <li class="margin-bottom-0-5">
-                      Never assume that the user will know what to do, make sure your design is aligned directly to their goal
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Maintain consistent interactions - so users know what to do next
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Make every design element have a purpose
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Allow users to easily undo/redo actions
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Concentrate on achieving clarity by bringing only useful features to the user's attention
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Aim for efficiency. Don't make a user to repeat a task (no double keying of data) Let the system do the heavy lifting
-                    </li>
-                    <li class="margin-bottom-0-5">
-                      Test your design with your users and be happy to change it based on their feedback
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-        <aa-tab-navigation-item tabName="Contact details" [enableIcons]="false" iconName="" iconColour="">
-          <ng-template aaTabNavigationContent>
-            <div class="content-container">
-              <h2 class="boxed">Contact details</h2>
-              <div class="scroll-panel padding-top-0">
-                <div class="scroll-panel-content">
-                  <p>
-                    <label>Michael King</label>
-                    <a href="maito:michael.king@angloamerican.com">Michael.King@AngloAmerican.com</a>
-                  </p>
-                  <p>
-                    <label>Claire Burns</label>
-                    <a href="maito:claire.burns@angloamerican.com">Claire.Burns@AngloAmerican.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </aa-tab-navigation-item>
-      </aa-tab-navigation>
-
-      <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
-        <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
-      </section>
     </div>
   </ng-container>
 

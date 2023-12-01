@@ -82,6 +82,27 @@
     }
   }
 
+  // Layout for forms with validation
+  &.inline-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    label {
+      display: flex;
+      max-height: 2rem;
+      margin-right: .75rem;
+      padding: 0;
+    }
+
+    input[type='text'],
+    select,
+    textarea,
+    .ng-select {
+      width: 100%;
+    }
+
+  }
+
   &.align-right {
     text-align: right;
     max-width: 100%;

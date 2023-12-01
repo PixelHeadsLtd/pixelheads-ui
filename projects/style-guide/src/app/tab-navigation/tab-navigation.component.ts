@@ -29,8 +29,7 @@ export class TabNavigationComponent implements AfterContentChecked {
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
-  onCloseTab(tabId: any) { 
-    console.log(`Tab closed id:${tabId}`);
+  onCloseTab() { 
     if(this.enableClose = true) {
       this.toggleModal = true;
       this.ngTemplate = true;
@@ -40,7 +39,7 @@ export class TabNavigationComponent implements AfterContentChecked {
     }
   }
 
-  onCloseTabSecondary(tabId: any) { 
+  onCloseTabSecondary() { 
     if(this.enableCloseSecondary = true) {
       this.toggleModal = true;
       this.ngTemplate = false;
@@ -71,14 +70,14 @@ export class TabNavigationComponent implements AfterContentChecked {
   // Ng Template
   removeTab(index: number) {
     if(this.tabsNgTemplate) {
-      this.tabsNgTemplate.splice(index, 1)
+      this.tabsNgTemplate.splice(index, 1);
       this.toggleModal = false;
     }
   }
 
   removeTabSecondary(index: number) {
     if(this.tabsSecondaryNgTemplate) {
-      this.tabsSecondaryNgTemplate.splice(index, 1)
+      this.tabsSecondaryNgTemplate.splice(index, 1);
       this.toggleModal = false;
     }
   }
@@ -86,14 +85,14 @@ export class TabNavigationComponent implements AfterContentChecked {
   // Router Outlet 
   removeTabRO(index: number) {
     if(this.tabsRouterOutlet) {
-      this.tabsRouterOutlet.splice(index, 1)
+      this.tabsRouterOutlet.splice(index, 1);
       this.toggleModal = false;
     }
   }
 
   removeTabSecondaryRO(index: number) {
     if(this.tabsSecondaryRouterOutlet) {
-      this.tabsSecondaryRouterOutlet.splice(index, 1)
+      this.tabsSecondaryRouterOutlet.splice(index, 1);
       this.toggleModal = false;
     }
   }
@@ -101,6 +100,7 @@ export class TabNavigationComponent implements AfterContentChecked {
   tabsNgTemplate = [
     {
       tabName: 'Tab 1',
+      tabId: 'tab1',
       enableIcons: false,
       iconName: 'error',
       iconColour: 'aa-red-100',
@@ -114,6 +114,7 @@ export class TabNavigationComponent implements AfterContentChecked {
     },
     {
       tabName: 'Tab 2',
+      tabId: 'tab2',
       enableIcons: true,
       iconName: 'check_circle',
       iconColour: 'aa-green-100',
@@ -126,18 +127,21 @@ export class TabNavigationComponent implements AfterContentChecked {
     },
     {
       tabName: 'Tab 3',
+      tabId: 'tab3',
       enableIcons: false,
       iconName: '',
       iconColour: '',
       tabDisabled: false,
       showRightDivider: true,
       enableCount: true,
+      enableClose: true,
       tabCount: '200',
       countColour: 'bg-aa-red-100',
       showTabThreeContent: true
     },
     {
       tabName: 'Disabled',
+      tabId: 'tab4',
       enableIcons: false,
       iconName: '',
       iconColour: '',
@@ -238,21 +242,21 @@ export class TabNavigationComponent implements AfterContentChecked {
 
   tabsSecondaryRouterOutlet = [
     {
-      tabName: 'Tab sec 1',
+      name: 'Tab sec 1',
       routerLink: ['tab-sub-page-one'],
       enableCloseSecondaryRO: true
     },
     {
-      tabName: 'Tab sec 2',
+      name: 'Tab sec 2',
       routerLink: ['tab-sub-page-two'],
       enableContextMenu: true
     },
     {
-      tabName: 'Tab sec 3',
+      name: 'Tab sec 3',
       routerLink: ['tab-sub-page-three']
     },
     {
-      tabName: 'Disabled',
+      name: 'Disabled',
       tabDisabled: true
     }
   ]

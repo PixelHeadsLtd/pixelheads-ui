@@ -4,8 +4,8 @@ $colour: (
   box-shadow-strong:                    rgba(0, 0, 0, .1), 
   tour-hover:                           rgba(110, 62, 106),
   tour-shadow:                          rgba(92, 30, 128, 0.10),
-  dl-gradient-light:                    rgb(248, 251, 253),
-  dl-gradient-dark:                     rgb(243, 249, 251),
+  dl-gradient-light:                    rgb(32, 76, 165),
+  dl-gradient-dark:                     rgb(0, 29, 88),
   gradient-blue-start:                  rgb(2, 76, 146) 0%,
   gradient-blue-middle:                 rgb(19, 109, 161) 50%,
   gradient-blue-end:                    rgb(12, 166, 209) 100%,
@@ -15,6 +15,7 @@ $colour: (
   trans-blue-to-white:                   _palette(aa-blue-100),
   trans-blue-to-grey:                    _palette(aa-blue-100),
   trans-blue-to-orange:                  _palette(aa-blue-100),
+  trans-blue-to-black:                   _palette(aa-blue-100),
   trans-light-blue-to-white:             _palette(aa-light-blue-100),
   trans-light-blue-5-to-grey:            _palette(aa-light-blue-5),
   trans-light-blue-10-to-blue-dark:      _palette(aa-light-blue-10),
@@ -29,13 +30,6 @@ $colour: (
   trans-white-to-black:                  _palette(aa-white-100),
   trans-white-to-blue:                   _palette(aa-white-100),
   trans-pink-to-plum:                    _palette(aa-pink-100),
-
-  // FORCED COLOURS
-  force-white:                           _palette(aa-white-100),
-  force-blue:                            _palette(aa-blue-100),
-  force-red:                             _palette(aa-red-100),
-  force-orange:                          _palette(aa-orange-100),
-  force-green:                           _palette(aa-green-100),
 
   // WHITE
   aa-white-100:                          _palette(aa-white-100),
@@ -82,6 +76,7 @@ $colour: (
 
   // GREEN
   aa-green-100:                          _palette(aa-green-100),
+  aa-green-80:                           _palette(aa-green-80),
   aa-green-50:                           _palette(aa-green-50),
   aa-green-25:                           _palette(aa-green-25),
   aa-green-15:                           _palette(aa-green-15),
@@ -89,6 +84,7 @@ $colour: (
 
   // ORANGE
   aa-orange-100:                         _palette(aa-orange-100),
+  aa-orange-80:                          _palette(aa-orange-80),
   aa-orange-50:                          _palette(aa-orange-50),
   aa-orange-25:                          _palette(aa-orange-25),
   aa-orange-10:                          _palette(aa-orange-10),
@@ -115,6 +111,7 @@ $colour: (
 
   // LIME
   aa-lime-100:                           _palette(aa-lime-100),
+  aa-lime-50:                            _palette(aa-lime-50),
   aa-lime-15:                            _palette(aa-lime-15),
   aa-lime-4:                             _palette(aa-lime-4),
   
@@ -122,18 +119,24 @@ $colour: (
   aa-pink-100:                           _palette(aa-pink-100),
   aa-pink-25:                           rgb(255, 243, 247),
 
+  // Yellow
+  aa-yellow-100:                         _palette(aa-yellow-100),
+  aa-yellow-50:                          _palette(aa-yellow-50),
+
   // MIXED
   aa-blue-sky-100:                       _palette(aa-blue-sky-100),
   aa-brown-100:                          _palette(aa-brown-100),
-  aa-yellow-100:                         _palette(aa-yellow-100),
   white-transparency:                   rgba(255, 255, 255, 0.26),
 
   // TINTS FOR LEFT NAV ONLY
   tinted-red:                           rgba(198, 12, 49, 0.075),
   tinted-green:                         rgba(0, 135, 112, 0.075),
+  tinted-lime:                          rgba(170, 165, 22, 0.075),
   tinted-blue:                          rgba(0, 39, 118, 0.1),
+  tinted-blue-sky:                      rgba(54, 147, 205, 0.1),
   tinted-orange:                        rgba(233, 131, 0, 0.075),
   tinted-plum:                          rgba(126, 81, 122, 0.1),
+  tinted-ochre:                         rgba(215, 150, 86, 0.1),
   tinted-light-blue:                    rgba(0, 117, 176, 0.1),
   tinted-burgundy:                      rgba(126, 81, 122, 0.1),
 );

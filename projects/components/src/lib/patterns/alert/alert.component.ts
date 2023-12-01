@@ -16,6 +16,7 @@ export class AlertComponent implements OnInit {
   @Input() maxWidth: any;
   @Input() collapsedHeight: any;
   @Input() removePanel: any;
+  @Input() defaultExpanded: boolean;
 
   constructor() { }
 

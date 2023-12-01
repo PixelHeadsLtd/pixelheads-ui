@@ -19,7 +19,10 @@
         fileUploadName="fileUploadName.pdf"
         fileUploadExtentions=".csv,.xlsx,.xls,.pdf"
         fileUploadText="Choose file..."
-        fieldClass="boxed label-hidden">
+        fieldClass="boxed label-hidden"
+        truncateFileName="true"
+        truncateWidth="11"
+        >
       </aa-file-upload>
     </section>
       
@@ -36,40 +39,52 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">Div</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">.boxed</td>
           </tr>
           <tr>
-            <td datalabel="Element">Label</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fileUploadLabel</td>
-            <td datalabel="Type">Label</td>
+            <td datalabel="Type">String</td>
             <td datalabel="Default">Upload your file...</td>
           </tr>
           <tr>
-            <td datalabel="Element">Input Id</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fileUploadId</td>
             <td datalabel="Type">Id</td>
-            <td datalabel="Default">fileUpoadId</td>
+            <td datalabel="Default">Your Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">Input accept</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fileUploadExtentions</td>
             <td datalabel="Type">File type</td>
             <td datalabel="Default">.csv,.xlsx,.xls,.pdf</td>
           </tr>
           <tr>
-            <td datalabel="Element">Div</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fileUploadText</td>
-            <td datalabel="Type">Div</td>
+            <td datalabel="Type">String</td>
             <td datalabel="Default">Choose file...</td>
           </tr>
           <tr>
-            <td datalabel="Element">Uploaded file</td>
+            <td datalabel="Element">aa-file-upload</td>
             <td datalabel="Attribute">fileUploadName</td>
-            <td>Span</td>
+            <td>String</td>
             <td datalabel="Default">fileUploadName.pdf</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Attribute">truncateFileName</td>
+            <td>Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Attribute">truncateWidth</td>
+            <td>Number</td>
+            <td datalabel="Default">Your width</td>
           </tr>
         </tbody>
       </table>

@@ -37,7 +37,7 @@
         </div>
         <div *ngIf="bespokeHeader" class="bespoke-header">
           <ng-content select="[bespoke-header]"></ng-content>
-          <div class="toggle-icons flex-align-center">
+          <div *ngIf="!hideToggleIcon" class="toggle-icons flex-align-center">
             <div *ngIf="!showBody" class="material-icons">add</div>
             <div *ngIf="showBody" class="material-icons">remove</div>
           </div>

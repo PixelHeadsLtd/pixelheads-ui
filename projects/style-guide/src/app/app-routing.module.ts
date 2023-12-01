@@ -110,7 +110,7 @@ import {QuestionsAndAnswersComponent} from './questions-and-answers/questions-an
 
 // Addendum
 import {ElementsAlignmentComponent} from './elements-alignment/elements-alignment.component';
-import {PageLayoutExamplesComponent} from './page-layout-examples/page-layout-examples.component';
+import {PageTemplatesComponent} from './page-templates/page-templates.component';
 import {UnauthorisedComponent} from './unauthorised/unauthorised.component';
 
 const routes: Routes = [
@@ -177,7 +177,7 @@ const routes: Routes = [
     { path: 'tab-sub-page-three', component: TabSubPageThreeComponent }
   ] },
   { path: 'padding', component: PaddingComponent },
-  { path: 'page-layout-examples', component: PageLayoutExamplesComponent },
+  { path: 'page-templates', component: PageTemplatesComponent },
   { path: 'widths', component: WidthsComponent },
   { path: 'progress-indicator', component: ProgressIndicatorComponent },
   { path: 'progress-indicator-lh', component: ProgressIndicatorLhComponent },

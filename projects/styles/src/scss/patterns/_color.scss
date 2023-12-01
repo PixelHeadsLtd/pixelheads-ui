@@ -90,6 +90,7 @@
 .trans-blue-to-white {color: _colour(trans-blue-to-white)!important}
 .trans-blue-to-grey {color: _colour(trans-blue-to-grey)!important} 
 .trans-blue-to-orange {color: _colour(trans-blue-to-orange)!important}
+.trans-blue-to-black {color: _colour(trans-blue-to-black)!important}
 .trans-light-blue-to-white {color: _colour(trans-light-blue-to-white)!important}
 .trans-light-blue-10-to-blue-dark {color: _colour(trans-light-blue-10-blue-dark)!important}
 .trans-light-blue-to-orange {color: _colour(trans-light-blue-to-orange)!important}
@@ -104,22 +105,12 @@
 .trans-pink-to-plum {color: _colour(trans-pink-to-plum)!important}
 
 // Forced colours
-.force-white {color: _colour(force-white)!important}
-.force-blue {color: _colour(force-blue)!important}
-.force-red {color: _colour(force-red)!important}
-.force-orange {color: _colour(force-orange)!important}
-.force-green {color: _colour(force-green)!important}
-
-// Hover colours
-.hover-blue {&:hover {background-color: _colour(aa-blue-100)!important}}
-.hover-light-blue {&:hover {background-color: _colour(aa-light-blue-100)!important}}
-.hover-red {&:hover {background-color: _colour(aa-red-100)!important}}
-.hover-orange {&:hover {background-color: _colour(aa-orange-100)!important}}
-.hover-green {&:hover {background-color: _colour(aa-green-100)!important}}
-.hover-plum {&:hover {background-color: _colour(aa-plum-100)!important}}
-.hover-pink {&:hover {background-color: _colour(aa-pink-100)!important}}
-.hover-burgundy {&:hover {background-color: _colour(aa-burgundy-100)!important}}
-.hover-ochre {&:hover {background-color: _colour(aa-ochre-100)!important}}
-.hover-light-grey {&:hover {background-color: _colour(aa-grey-5)!important}}
-.hover-mid-grey {&:hover {background-color: _colour(aa-grey-25)!important}}
-.hover-dark-grey {&:hover {background-color: _colour(aa-grey-100)!important}}
+.force-white {color: _palette(aa-white-100)!important}
+.force-blue {color: _palette(aa-blue-100)!important}
+.force-red {color: _palette(aa-red-100)!important}
+.force-orange {color: _palette(aa-orange-100)!important}
+.force-green {color: _palette(aa-green-100)!important}
+.force-yellow {color: _palette(aa-yellow-100)!important}
+.force-lime {color: _palette(aa-lime-100)!important}
+.force-burgundy {color: _palette(aa-burgundy-100)!important}
+.force-light-blue {color: _palette(aa-light-blue-100)!important}

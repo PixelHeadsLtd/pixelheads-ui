@@ -400,6 +400,33 @@
                   >
                 </a>
               </li>
+              <li 
+                *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index" 
+                (click)="goToPageTemplatesNav()"
+                class="flex-group flex-start flex-align-center"
+                routerLink="/{{c.link}}"
+                id="{{c.id}}"
+              >
+                <h2 
+                  *ngIf="!searchPageTemplates[i-1] || c.heading !== searchPageTemplates[i-1].heading"
+                  class="white-100 width-100"
+                  >
+                  {{c.heading}}
+                </h2>
+                <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
+                  <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
+                </div>
+                <a 
+                  appHighlight 
+                  [searchedWord]="searchText" 
+                  [content]="
+                    c.link.toString().split('-').join('\n')
+                  " 
+                  [classToApply]="'highlight'" 
+                  [setTitle]="'false'"
+                  >
+                </a>
+              </li>
             </ul>
           </section>
         </div>
@@ -429,7 +456,23 @@
   >
   <ul>
     <li *ngFor="let item of navDataItems; let i = index">
+      <!-- If it's an href -->
+      <a 
+        *ngIf="item.isHref" 
+        href="{{item.hRef}}"
+        target="_blank"
+        [class.expanded]="selectedIndex === i"
+        (click)="setIndex(i)"
+        class="flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}"
+      >
+        <span class="material-icons font-size-large">{{item.iconName}}</span>
+        <span class="margin-right-0-5">{{item.title}}</span>
+        <span class="material-icons position-static bg-transparent aa-burgundy-100">open_in_new</span>
+      </a>
+      <!-- If it's a routerOutlet -->
       <a
+        *ngIf="!item.isHref"
+        routerLink="{{item.routerLink}}"
         [class.expanded]="selectedIndex === i"
         (click)="setIndex(i)"
         class="flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}"
@@ -437,7 +480,10 @@
         <span class="material-icons">{{item.iconName}}</span>
         <span class="margin-right-0-5">{{item.title}}</span>
       </a>
-      <ul [ngStyle]="selectedIndex === i && { 'max-height' : item.nestedItems.length * '33' + 'px' }">
+      <ul 
+        *ngIf="!item.soloItem"
+        [ngStyle]="selectedIndex === i && { 'max-height' : item.nestedItems.length * '33' + 'px' }"
+      >
         <li *ngFor="let nestedItem of item.nestedItems; let n = index">
           <a
             (click)="setSelectedItem(nestedItem)"

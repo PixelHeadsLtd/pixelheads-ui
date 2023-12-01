@@ -93,11 +93,20 @@ table:not(.table-feature) {
         z-index: 1;
       }
     }
+    
     .slider {
+      padding-top: 0;
       label {
+        &:first-child {
+          display: none;
+          margin: 0 .5rem 0 0;
+          padding: 0;
+          font-family: _font(family-regular);
+        }
         &:last-child {
           width: 2.25rem;
           height: 1.25rem;
+          margin: 0;
           input {
             &:checked + .slider-btn {
               &:before {
@@ -523,7 +532,7 @@ table.table-feature {
 
 @media screen and (max-width: 780px) {
 
-  table {
+  table:not(.aa-overlay table) {
     tr {
       th, td {
         &:first-child {
@@ -619,7 +628,7 @@ table.table-feature {
     }
   }
 
-  table:not(.email-container, .table-feature, .js-file-line-container) {
+  table:not(.email-container, .table-feature, .js-file-line-container, .aa-overlay table) {
     &.two-col-row {
       th[scope='row'] {
         display: none;

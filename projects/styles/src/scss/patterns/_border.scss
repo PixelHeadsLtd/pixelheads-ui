@@ -195,12 +195,14 @@
 .bd-aa-grey-2 {border: 1px solid _colour(aa-grey-2)!important}
 // green
 .bd-aa-green-100 {border: 1px solid _colour(aa-green-100)!important}
+.bd-aa-green-80 {border: 1px solid _colour(aa-green-80)!important}
 .bd-aa-green-50 {border: 1px solid _colour(aa-green-50)!important}
 .bd-aa-green-25 {border: 1px solid _colour(aa-green-25)!important}
 .bd-aa-green-15 {border: 1px solid _colour(aa-green-15)!important}
 .bd-aa-green-5 {border: 1px solid _colour(aa-green-5)!important}
 // orange
 .bd-aa-orange-100 {border: 1px solid _colour(aa-orange-100)!important}
+.bd-aa-orange-80 {border: 1px solid _colour(aa-orange-80)!important}
 .bd-aa-orange-50 {border: 1px solid _colour(aa-orange-50)!important}
 .bd-aa-orange-25 {border: 1px solid _colour(aa-orange-25)!important}
 .bd-aa-orange-10 {border: 1px solid _colour(aa-orange-10)!important}
@@ -210,16 +212,23 @@
 .bd-aa-brown-100 {border: 1px solid _colour(aa-brown-100)!important}
 .bd-aa-ochre-100 {border: 1px solid _colour(aa-ochre-100)!important}
 .bd-aa-yellow-100 {border: 1px solid _colour(aa-yellow-100)!important}
+.bd-aa-yellow-50 {border: 1px solid _colour(aa-yellow-50)!important}
 .bd-aa-lime-100 {border: 1px solid _colour(aa-lime-100)!important}
 .bd-aa-blue-sky-100 {border: 1px solid _colour(aa-blue-sky-100)!important}
 .bd-aa-plum-100 {border: 1px solid _colour(aa-plum-100)!important}
 .bd-aa-pink-100 {border: 1px solid _colour(aa-pink-100)!important}
 .bd-aa-white-100 {border: 1px solid _colour(aa-white-100)!important}
 
-// LEGACY COLOURS DO NOT USE  ------------------------------------------------------
+// REMOVE BORDERS  ------------------------------------------------------
 
 .border-none {border: none!important;}
+.border-top-none {border-top: none!important;}
+.border-right-none {border-right: none!important;}
 .border-bottom-none {border-bottom: none!important;}
+.border-left-none {border-left: none!important;}
+
+// MISC ----------------------------------------------
+
 .border {border: 1px solid _colour(border-subtle);}
 .border-dashed {border-style: dashed;}
 .border-right-dashed-light {border-right: 1px dashed _colour(aa-white-100);}

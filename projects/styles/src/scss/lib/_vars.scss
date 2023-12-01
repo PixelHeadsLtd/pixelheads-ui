@@ -45,7 +45,7 @@ $breakpoint: (
         breakpoint-320:                 320px,
         breakpoint-500:                 500px,
         breakpoint-570:                 570px,
-        breakpoint-50rem:               50rem,
+        breakpoint-720:                 720px,
 );
 
 $palette: (
@@ -108,6 +108,7 @@ $palette: (
   // Secondary palette
 
   aa-green-100:                       rgb(0,135,112),
+  aa-green-80:                        rgb(51,159,141),
   aa-green-50:                        rgb(127,195,183),
   aa-green-25:                        rgb(191,225,219),
   aa-green-15:                        rgb(217,237,234),
@@ -115,6 +116,7 @@ $palette: (
   aa-green-4:                         rgb(242,249,248),
 
   aa-orange-100:                      rgb(233,131,0),
+  aa-orange-80:                       rgb(237,156,51),
   aa-orange-50:                       rgb(244,193,127),
   aa-orange-25:                       rgb(249,224,191),
   aa-orange-10:                       rgb(252,237,217),
@@ -128,8 +130,11 @@ $palette: (
   aa-ochre-8:                         rgb(252,247,242),
 
   aa-yellow-100:                      rgb(250,220,100),
+  aa-yellow-50:                       rgb(250,235,175),
 
+  aa-lime-dark:                   rgb(145,140,6),
   aa-lime-100:                        rgb(170,165,22),
+  aa-lime-50:                         rgb(230,230,230),
   aa-lime-15:                         rgb(242,242,220),
   aa-lime-4:                          rgb(252,251,246),
 
@@ -139,6 +144,7 @@ $palette: (
   aa-pink-25:                         rgb(251,241,245),
   aa-white-100:                       rgb(255,255,255),
 
+  aa-plum-dark:                       rgb(107, 65, 105),
   aa-plum-100:                        rgb(126,81,122),
   aa-plum-50:                         rgb(188,166,186),
   aa-plum-25:                         rgb(219,207,218),

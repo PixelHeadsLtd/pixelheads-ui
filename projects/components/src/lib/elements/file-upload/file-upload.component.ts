@@ -15,6 +15,8 @@ export class FileUploadComponent implements OnInit {
   @Input() fileUploadExtentions: string;
   @Input() fileUploadText: string;
   @Input() fieldClass: string;
+  @Input() truncateFileName: boolean;
+  @Input() truncateWidth: number;
 
   constructor() { }
 

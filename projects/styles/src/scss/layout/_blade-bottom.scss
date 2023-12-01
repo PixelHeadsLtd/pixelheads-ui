@@ -115,11 +115,6 @@
     .material-icons,
     .material-icons-outlined {
       font-size: _font(size-medium);
-
-      &:last-child {
-        margin-top: 0.4rem;
-        padding: 0 1.25rem 0 0;
-      }
     }
   }
 
@@ -136,6 +131,6 @@
   .pin {
     transform: rotate(90deg);
     margin-right: .75rem;
-    padding: 0 .5rem 0 .5rem;
+    padding: 1rem .5rem 0 .5rem;
   }
 }

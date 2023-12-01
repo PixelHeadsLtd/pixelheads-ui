@@ -36,14 +36,16 @@ export class BladeBottomComponent implements OnInit {
 
   toggleThePin(e) {
     this.isPinned = ! this.isPinned;
+    if (!this.isPinned) {
+      this.isFullScreen = true;
+      this.bladeFullScreen.emit(this.isFullScreen);
+    } else if (this.isPinned) {
+      this.isFullScreen = false;
+      this.isOpen = true;
+    }
+
     e.stopPropagation();
     this.bladePinned.emit(this.isPinned);
-  }
-
-  toggleFullScreen(e) {
-    this.isFullScreen = ! this.isFullScreen;
-    e.stopPropagation();
-    this.bladeFullScreen.emit(this.isFullScreen);
   }
 
   expandedPosition() {

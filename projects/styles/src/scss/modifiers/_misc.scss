@@ -36,8 +36,13 @@
 .z-index-1000 {z-index: 1000!important;}
 .z-index-10000 {z-index: 10000!important;}
 
-// Pseudo hover class
-.hover-light-blue {&:hover {background-color: _colour(trans-light-blue-10-to-blue-dark)}}
-.hover-light-green {&:hover {background-color: _colour(trans-green-5-to-green-dark)}}
-.hover-light-orange {&:hover {background-color: _colour(trans-orange-10-to-orange-dark)}}
-.hover-light-red {&:hover {background-color: _colour(trans-red-5-to-red-dark)}}
+// Cursors
+.cursor-pointer {cursor: pointer!important;;}
+.cursor-default {cursor: default!important;;}
+.cursor-move {cursor: move!important;;}
+.cursor-grab {cursor:grab!important;}
+.cursor-grabbing {cursor:grabbing!important;}
+.cursor-help {cursor:help!important;}
+.cursor-crosshair {cursor:crosshair!important;}
+.cursor-copy {cursor:copy!important;}
+.cursor-progress {cursor:progress!important;}

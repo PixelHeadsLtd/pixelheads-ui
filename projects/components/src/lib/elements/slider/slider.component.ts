@@ -18,11 +18,6 @@ export class SliderComponent implements OnInit {
   sliderCheckedValue: any;
   @Input() set sliderChecked(value: any) {
     this.sliderCheckedValue = value;
-    if (value) {
-      this.sliderCheckedChanged.emit(true);
-    } else {
-      this.sliderCheckedChanged.emit(false);
-    }
   }
   @Output() sliderCheckedChanged = new EventEmitter<boolean>();
 

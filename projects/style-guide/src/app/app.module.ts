@@ -73,7 +73,7 @@ import { TabSubPageThreeComponent } from './tab-navigation/tab-sub-page-three/ta
 import { TextComponent } from './text/text.component'
 import { PaddingComponent } from './padding/padding.component';
 import { DlPopoverComponent } from './popover/popover.component';
-import { PageLayoutExamplesComponent } from './page-layout-examples/page-layout-examples.component';
+import { PageTemplatesComponent } from './page-templates/page-templates.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 import { ProgressIndicatorLhComponent } from './progress-indicator-lh/progress-indicator-lh.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
@@ -124,6 +124,7 @@ import { ResizableDirective } from '../directives/resizable/resizable.directive'
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
 import { HighChartsComponent } from './high-charts/high-charts.component';
 import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.component';
+import { RotatingSphereComponent } from './landing-page/rotating-sphere.component';
 
 @NgModule({
   declarations: [
@@ -180,7 +181,7 @@ import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.compo
     TabSubPageOneComponent,
     TabSubPageTwoComponent,
     TabSubPageThreeComponent,
-    PageLayoutExamplesComponent,
+    PageTemplatesComponent,
     PaddingComponent,
     ProgressIndicatorComponent,
     ProgressIndicatorLhComponent,
@@ -235,7 +236,8 @@ import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.compo
     CustomWrapperComponent,
     CustomWrapperComponent,
     HighChartsComponent,
-    TooltipDynamicComponent
+    TooltipDynamicComponent,
+    RotatingSphereComponent
   ],
   imports: [
     FormsModule,

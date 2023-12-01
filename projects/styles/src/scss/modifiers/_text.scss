@@ -16,7 +16,10 @@
 .size-small, .font-size-small {font-size: _font(size-small) !important}
 .font-size-xsmall {font-size: _font(size-xsmall) !important}
 .font-size-tiny {font-size: _font(tiny) !important}
-.underline, .anchor-underline {text-decoration: underline!important}
+.underline, .decoration-none {text-decoration: none!important}
+.wrap {white-space: normal!important; flex-wrap: wrap;}
+.break-word {word-break: break-word!important;}
+.flex-nowrap {flex-wrap: nowrap!important;}
 
 // will need to set a max-width in conjunction with .ellipsis
 .ellipsis {

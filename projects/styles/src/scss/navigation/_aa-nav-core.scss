@@ -78,6 +78,14 @@
         font-family: _font(family-medium);
         border-bottom: 1px solid _colour(aa-light-blue-30);
         box-shadow: 0 8px 20px rgba(0, 39, 118, 15%);
+        &.solo-menu-item {
+          &:after {
+            display: none;
+          }
+          + ul {
+            display: none;
+          }
+        }
         span:not(.material-icons, .material-icons-outlined) {
           margin-left: 2.75rem;
         }
@@ -102,6 +110,16 @@
         &.green:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-green-100)}}
         &.green:not(.expanded, :hover).reversed {background-color: transparent}
         &.green.reversed {.material-icons, .material-icons-outlined {color: _colour(aa-green-50)}}
+        // lime
+        &.lime:hover,
+        &.lime.expanded,
+        &.lime.expanded + ul li a:hover,
+        &.lime.expanded + ul li a.selected {background-color: _colour(tinted-lime)}
+        &.lime.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-lime-100)}
+        &.lime + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-lime-100)}}
+        &.lime:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-lime-100)}}
+        &.lime:not(.expanded, :hover).reversed {background-color: transparent}
+        &.lime.reversed {.material-icons, .material-icons-outlined {color: _colour(aa-lime-100)}}
         // blue
         &.blue:hover,
         &.blue.expanded,
@@ -112,6 +130,26 @@
         &.blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-blue-100)}}
         &.blue:not(.expanded, :hover).reversed {background-color: transparent}
         &.blue.reversed {.material-icons, .material-icons-outlined {color: _colour(aa-blue-50)}}
+        // light-blue
+        &.light-blue:hover,
+        &.light-blue.expanded,
+        &.light-blue.expanded + ul li a:hover,
+        &.light-blue.expanded + ul li a.selected {background-color: _colour(tinted-light-blue)}
+        &.light-blue.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-light-blue-100)}
+        &.light-blue + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-light-blue-100)}}
+        &.light-blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-light-blue-100)}}
+        &.light-blue:not(.expanded, :hover).reversed {background-color: transparent}
+        &.light-blue.reversed {.material-icons, .material-icons {color: _colour(aa-light-blue-50)}}
+        // sky-blue
+        &.blue-sky:hover,
+        &.blue-sky.expanded,
+        &.blue-sky.expanded + ul li a:hover,
+        &.blue-sky.expanded + ul li a.selected {background-color: _colour(tinted-blue-sky)}
+        &.blue-sky.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-blue-sky-100)}
+        &.blue-sky + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-blue-sky-100)}}
+        &.blue-sky:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-blue-sky-100)}}
+        &.blue-sky:not(.expanded, :hover).reversed {background-color: transparent}
+        &.blue-sky.reversed {.material-icons, .material-icons {color: _colour(aa-blue-sky-50)}}
         // orange
         &.orange:hover,
         &.orange.expanded,
@@ -132,16 +170,16 @@
         &.plum:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-plum-100)}}
         &.plum:not(.expanded, :hover).reversed {background-color: transparent}
         &.plum.reversed {.material-icons, .material-icons-outlined {color: _colour(aa-plum-50)}}
-        // light-blue
-        &.light-blue:hover,
-        &.light-blue.expanded,
-        &.light-blue.expanded + ul li a:hover,
-        &.light-blue.expanded + ul li a.selected {background-color: _colour(tinted-light-blue)}
-        &.light-blue.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-light-blue-100)}
-        &.light-blue + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-light-blue-100)}}
-        &.light-blue:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-light-blue-100)}}
-        &.light-blue:not(.expanded, :hover).reversed {background-color: transparent}
-        &.light-blue.reversed {.material-icons, .material-icons {color: _colour(aa-light-blue-50)}}
+        // ochre
+        &.ochre:hover,
+        &.ochre.expanded,
+        &.ochre.expanded + ul li a:hover,
+        &.ochre.expanded + ul li a.selected {background-color: _colour(tinted-ochre)}
+        &.ochre.expanded + ul {border-bottom: 0.085rem dashed _colour(aa-ochre-100)}
+        &.ochre + ul li {.material-icons, .material-icons-outlined {color: _colour(aa-ochre-100)}}
+        &.ochre:not(.reversed) {.material-icons, .material-icons-outlined {background-color: _colour(aa-ochre-100)}}
+        &.ochre:not(.expanded, :hover).reversed {background-color: transparent}
+        &.ochre.reversed {.material-icons, .material-icons-outlined {color: _colour(aa-ochre-50)}}
         // burgundy
         &.burgundy:hover,
         &.burgundy.expanded,

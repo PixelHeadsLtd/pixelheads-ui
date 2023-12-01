@@ -328,11 +328,6 @@
   iconName="{{bladeIcon}}"
   headingMaxWidth="{{setHeadingMaxWidth}}"
   >
-  <!-- blade gist -->
-  <article *ngIf="showBladeGist" class="blade-content">
-    <a href="https://gist.github.com/angloux/69327c3e18e20b0f1b5a780d32945073" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/69327c3e18e20b0f1b5a780d32945073"></app-gist>
-  </article>
   <!-- blade custom gist -->
   <article *ngIf="showCustomBladeGist" class="blade-content padding-top-1">
     <a href="https://gist.github.com/angloux/35c803fb8616ad17cacd53883d0de4f9" target="_blank">View Gist on GitHub</a>
@@ -642,6 +637,70 @@
           <aa-button buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden" [disabled]="''"></aa-button>
         </aa-blade-footer>
       </div>
+</aa-blade>
+
+<aa-blade 
+  *ngIf="showBladeGist"
+  [bladeTabs]="true"
+  [showModal]="false"
+  [enablePinning]="enablePin"
+  [toggleBlade]="toggleBlade"
+  (bladeOpen)="bladeIsOpen($event)"
+  (bladePinned)="bladeIsPinned($event)"
+  [suppressAutoClose]="false"
+  topPosition="3.5"
+  zIndex="30"
+  bladeSize="one-column-width"
+  bladeHeading="{{bladeHeading}}"
+  [enableIcon]="showIcon"
+  iconName="{{bladeIcon}}"
+  headingMaxWidth="{{setHeadingMaxWidth}}"
+  >
+  <ng-container blade-tabs>
+    <nav>
+      <aa-tab-navigation 
+        [ngTemplate]="true" 
+        [displayTabContent]="false" 
+        (tabChanged)="tabChanged($event)"
+        (closeTab)="onCloseTab()"
+      >
+        <aa-tab-navigation-item 
+          *ngFor="let tab of tabsNgTemplate; let i = index"
+          [tabId]="tabPrimary"
+          tabName="{{tab.tabName}}" 
+          [enableIcons]="tab.enableIcons" 
+          iconName="{{tab.iconName}}" 
+          iconColour="{{tab.iconColour}}"
+          [showRightDivider]="tab.showRightDivider"
+          [enableCount]="tab.enableCount"
+          [enableClose]="tab.enableClose"
+          tabCount="{{tab.tabCount}}"
+          countColour="{{tab.countColour}}"
+          [tabDisabled]="tab.tabDisabled"
+        > 
+          <ng-template aaTabNavigationContent>
+            <div *ngIf="tab.showTabOneContent">
+              <a href="https://gist.github.com/angloux/9762a8d2e861b6f3ba0a640b7f71eb47" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/9762a8d2e861b6f3ba0a640b7f71eb47"></app-gist>
+            </div>
+            <div *ngIf="tab.showTabTwoContent">
+              <a href="https://gist.github.com/angloux/f93db3a7fe3051d86ef966ae9eac2d9d" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/f93db3a7fe3051d86ef966ae9eac2d9d"></app-gist>
+            </div>
+            <div *ngIf="tab.showTabThreeContent">
+              <a href="https://gist.github.com/angloux/b0d783cceafb140f517bfa50c92e5a34" target="_blank">View Gist on GitHub</a>
+              <app-gist src="angloux/b0d783cceafb140f517bfa50c92e5a34"></app-gist>
+            </div>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+    </nav>
+  </ng-container>
+
+  <section class="blade-content" *ngIf="activeTab">
+    <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+  </section>
+  
 </aa-blade>
 
 <aa-blade 

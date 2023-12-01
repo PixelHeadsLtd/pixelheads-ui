@@ -11,7 +11,13 @@
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li [ngClass]="{ 'tab-disabled' : tab.tabDisabled }">
-        <a *ngIf="!tab.tabDisabled" [id]="tab.tabId" [class.active]="isActive(tab)" (click)="onTabClicked(tab)">
+        <a 
+          *ngIf="!tab.tabDisabled" 
+          class="flex-group flex-align-center flex-start"
+          [id]="tab.tabId" 
+          [class.active]="isActive(tab)" 
+          (click)="onTabClicked(tab)"
+        >
           {{ tab.tabName }}
           <span *ngIf="tab.enableIcons" class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
           <span *ngIf="tab.enableCount" class="tab-count {{tab.countColour}}">{{tab.tabCount}}</span>

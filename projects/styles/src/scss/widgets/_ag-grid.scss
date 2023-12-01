@@ -437,10 +437,12 @@
       }
 
       .custom-alert-shield {
+        padding-top: .25rem;
         .custom-alert-shield-container {
           font-size: _font(size-small);
           height: 1.5rem;
           padding: 0 0 0 .15rem;
+          line-height: initial;
       
           span {
             font-size: _font(size-small);
@@ -450,7 +452,7 @@
           .material-icons,
           .material-icons-outlined {
             font-size: _font(size-medium);
-            margin-right: .15rem;
+            margin-right: .25rem;
           }
         }
       }

@@ -101,29 +101,19 @@ export class AppComponent implements OnInit {
     this.selectedIndex = 6;
   }
 
-  openTypographyNav() {
+  openOtherWidgetsNav() {
     this.showSearch = false;
     this.selectedIndex = 7;
   }
 
-  openOtherWidgetsNav() {
+  goToPageTemplatesNav() {
     this.showSearch = false;
     this.selectedIndex = 8;
   }
 
-  openEmailTemplatesNav() {
-    this.showSearch = false;
-    this.selectedIndex = 9;
-  }
-
-  openQandANav() {
-    this.showSearch = false;
-    this.selectedIndex = 10;
-  }
-
   openAddendumNav() {
     this.showSearch = false;
-    this.selectedIndex = 11;
+    this.selectedIndex = 9;
   }
 
   searchAnimations = [
@@ -667,23 +657,12 @@ export class AppComponent implements OnInit {
     }
   ]
 
-  searchEmailTemplates = [
+  searchPageTemplates = [
     {
-      id: 'EmailTemplates',
-      heading: 'Email templates',
-      icon: 'attach_email',
+      heading: 'Page templates',
+      icon: 'subject',
       iconColour: 'aa-green-50',
-      link: 'html-email',
-    }
-  ]
-
-  searchQandAs = [
-    {
-      id: 'QAndA',
-      heading: 'Q&A`s',
-      icon: 'help_outline',
-      iconColour: 'aa-green-50',
-      link: 'questions-and-answers',
+      link: 'page-templates',
     }
   ]
 
@@ -694,12 +673,6 @@ export class AppComponent implements OnInit {
       icon: 'subject',
       iconColour: 'aa-green-50',
       link: 'elements-alignment',
-    },
-    {
-      heading: 'Addendum',
-      icon: 'subject',
-      iconColour: 'aa-green-50',
-      link: 'page-layout-examples',
     },
     {
       heading: 'Addendum',
@@ -758,6 +731,7 @@ export class AppComponent implements OnInit {
     {appIconClass: 'icon-reporting apple fa-chart-line', appIconName: 'Reporting'},
     {appIconClass: 'icon-reporting fa-chart-pie ', appIconName: 'Reporting (legacy)'},
     {appIconClass: 'icon-report-problem', appIconName: 'Report Problem'},
+    {appIconClass: 'icon-report-problem-blue', appIconName: 'Finance Reporting Invoice Error'},
     {appIconClass: 'icon-reporting-portal fa-file-signature ', appIconName: 'Reporting Portal'},
     {appIconClass: 'icon-risk fa-square-root-alt', appIconName: 'Risk'},
     {appIconClass: 'icon-security-amp fa-users-cog ', appIconName: 'Security AMP'},
@@ -890,12 +864,6 @@ export class AppComponent implements OnInit {
       {iconName:'format_color_text', title:'Text', routerLink:'/text'},
       {iconName:'open_with', title:'Width', routerLink:'/widths'}
     ]},
-    // TYPOGRAPHY
-    {color:'green reversed', iconName:'text_fields', title:'Typography', nestedItems:
-    [
-      {iconName:'edit_note', title:'Editorial content', routerLink:'/editorial-content'},
-      {iconName:'text_format', title:'Typography', routerLink:'/typography'}
-    ]},
     // THIRD PARTY COMPONENTS
     {color:'green reversed', iconName:'widgets', title:'Third party components', nestedItems:
     [
@@ -905,23 +873,16 @@ export class AppComponent implements OnInit {
       {iconName:'checklist', title:'Ng select', routerLink:'/ng-select'},
       {iconName:'edit_note', title:'Ngx quill', routerLink:'/ngx-quill'}
     ]},
-    // EMAIL TEMPLATES
-    {color:'green reversed', iconName:'attach_email', title:'Email templates', nestedItems:
-    [
-      {iconName:'forward_to_inbox', title:'Email templates', routerLink:'/html-email'}
-    ]}, 
-    // Q&A's
-    {color:'green reversed', iconName:'help_outline', title:'Q&A`s', nestedItems:
-    [
-      {iconName:'psychology_alt', title:'Common Q&A`s', routerLink:'/questions-and-answers'}
-    ]}, 
+    // PAGE TEMPLATES
+    {soloItem: true, color:'green reversed solo-menu-item', iconName:'view_quilt', title:'Page templates', routerLink:'/page-templates'},
     // ADDENDUM
-    {color:'green reversed', iconName:'subject', title:'Addendum', nestedItems:
+    {color:'green reversed', iconName:'subject', title:'Addendum', routerLink:'/page-templates', nestedItems:
     [
       {iconName:'view_comfy', title:'Elements alignment', routerLink:'/elements-alignment'},
-      {iconName:'view_quilt', title:'Page layout examples', routerLink:'/page-layout-examples'},
       {iconName:'block', title:'Unauthorised', routerLink:'/unauthorised'}
     ]},
+    // GO TO DESIGN PRINCIPLES
+    {soloItem: true, color:'burgundy solo-menu-item', iconName:'psychology', title:'Visit Design Principles', isHref: true, hRef:'https://dev.core.angloamerican.com/designprinciples/'},
   ];
 
   ngOnInit() {

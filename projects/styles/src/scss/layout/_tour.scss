@@ -71,7 +71,7 @@
     
     .tour-navigation {
         border-radius: 0 0 .75rem 0;
-        background-color: _palette(aa-plum-100);
+        background-color: _palette(aa-blue-100);
         padding: 0;
         overflow: hidden;
         button {
@@ -99,7 +99,7 @@
                 padding-bottom: .5rem;
             }
             &:hover {
-                background-color: _colour(tour-hover);
+                background-color: _colour(aa-blue-70);
             }
             &.read-only {
                 color: _palette(aa-pink-100);
@@ -115,7 +115,7 @@
     bottom: 0;
     left: 0;
     background-color: _palette(aa-blue-100);
-    opacity: .2;
+    opacity: .4;
 }
 
 .tour-active {

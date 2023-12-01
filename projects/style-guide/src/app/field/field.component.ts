@@ -10,7 +10,9 @@ export class FieldComponent implements OnInit {
   showField: boolean;
   showFieldSmall: boolean;
   showFieldInline: boolean;
+  showFieldInlineForm: boolean;
   toggleBlade: boolean;
+  isError: boolean = true;
 
   constructor() { }
 

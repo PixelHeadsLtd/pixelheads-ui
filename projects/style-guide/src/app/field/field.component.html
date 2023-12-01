@@ -57,7 +57,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showField=true; showFieldSmall=false; showFieldInline=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showField=true; showFieldSmall=false; showFieldInline=false; showFieldInlineForm=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -113,7 +113,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldSmall=true; showField=false; showFieldInline=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldSmall=true; showField=false; showFieldInline=false; showFieldInlineForm=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -162,7 +162,94 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldInline=true; showField=false; showFieldSmall=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldInline=true; showField=false; showFieldSmall=false; showFieldInlineForm=false">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Field inline-form</h2>
+        <div class="describe margin-bottom-1">
+          <p>
+            For inline multiple inputs displayed vertically, use this example. 
+            If you would like your label text aligned to the right, add the class 
+            <strong class="aa-red-100">text-aligh-right</strong> to your label. 
+          </p>
+          <p>
+            Note that we try to avoid using the inline forms version. Therefore, 
+            only ever use this approach if there's a genuine business case and it's 
+            not practical to use our standard approach
+          </p>
+        </div>
+
+        <form>
+          <div class="field inline-form" [class.error]="isError">
+              <label class="flex-1">This label has a long name</label>
+              <div class="flex-4">
+                  <input type="text" />
+                  <div role="alert">
+                     This is your validation message
+                  </div>
+              </div>
+          </div>
+          <div class="field inline-form" [class.error]="isError">
+              <label class="flex-1">This has a shorter name</label>
+              <div class="flex-4">
+                  <input type="text" />
+                  <div role="alert">
+                    This is your validation message
+                  </div>
+              </div>
+          </div>
+          <div class="field inline-form" [class.error]="isError">
+              <label class="flex-1 flex-align-center max-height-2"><span>This is the smallest</span></label>
+              <div class="flex-4">
+                  <select class="width-100">
+                    <option>Please select</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                  </select>
+                  <div role="alert">
+                    This is your validation message
+                  </div>
+              </div>
+          </div>
+        </form>
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Div</td>
+              <td datalabel="Attribute">.field .inline</td>
+              <td datalabel="Type">Class</td>
+              <td datalabel="Default">.field .inline</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Input</td>
+              <td datalabel="Attribute">N/A</td>
+              <td datalabel="Type">Text</td>
+              <td datalabel="Default">N/A</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFieldInline=false; showField=false; showFieldSmall=false; showFieldInlineForm=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -193,6 +280,10 @@
     <div *ngIf="showFieldInline">
       <a href="https://gist.github.com/angloux/717cc6a05b0488023d85920201771e98" target="_blank">View Gist on GitHub</a>
       <app-gist src="angloux/717cc6a05b0488023d85920201771e98"></app-gist>
+    </div>
+    <div *ngIf="showFieldInlineForm">
+      <a href="https://gist.github.com/angloux/7416441aa65f97dd0716018615c980aa" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/7416441aa65f97dd0716018615c980aa"></app-gist>
     </div>
   </article>
 </aa-blade>

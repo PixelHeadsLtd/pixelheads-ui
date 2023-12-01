@@ -71,6 +71,10 @@
   align-items: stretch;
 }
 
+.flex-top {
+  align-items: flex-start!important;
+}
+
 .flex-align-center {
   display: flex;
   align-items: center;
@@ -81,7 +85,8 @@
 }
 
 @media screen and (min-width: _breakpoint(breakpoint-320)) {
-  .flex-group {
+  .flex-group, 
+  .inline-form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -115,80 +120,6 @@
       }
       &.flex-5 {
         flex: 5;
-      }
-    }
-
-    &.width-control {
-
-      > * {
-        &.one-rem {
-          max-width: 1rem;
-          flex: none;
-        }
-        &.two-rem {
-          width: 2rem;
-          flex: none;
-        }
-        &.three-rem {
-          width: 3rem;
-          flex: none;
-        }
-        &.four-rem {
-          width: 4rem;
-          flex: none;
-        }
-        &.five-rem {
-          width: 5rem;
-          flex: none;
-        }
-        &.six-rem {
-          width: 6rem;
-          flex: none;
-        }
-        &.seven-rem {
-          width: 7rem;
-          flex: none;
-        }
-        &.eight-rem {
-          width: 8rem;
-          flex: none;
-        }
-        &.nine-rem {
-          width: 9rem;
-          flex: none;
-        }
-        &.ten-rem {
-          width: 10rem;
-          flex: none;
-        }
-        &.eleven-rem {
-          width: 11rem;
-          flex: none;
-        }
-        &.fifteen-rem {
-          width: 15rem;
-          flex: none;
-        }
-        &.sixteen-rem {
-          width: 16rem;
-          flex: none;
-        }
-        &.twenty-rem {
-          width: 20rem;
-          flex: none;
-        }
-        &.twenty-five-percent {
-          width: 25%;
-          flex: none;
-        }
-        &.thirty-percent {
-          width: 30%;
-          flex: none;
-        }
-        &.fifty-percent {
-          width: 50%;
-          flex: none;
-        }
       }
     }
   }

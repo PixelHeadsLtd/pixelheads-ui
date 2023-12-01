@@ -36,15 +36,7 @@
     background-color: _colour(trans-red-5-to-red-dark);
     color: _colour(aa-red-100);
     position: relative;
-    //background-image: url("#{$icon-path}/icon-alert-red.svg");
-    &:before {
-      font-family: _font(material-icons);
-      font-size: _font(size-medium);
-      content: "\e001";
-      position: absolute;
-      left: .75rem;
-      top: calc(50% - .65rem);
-    }
+    background-image: url("#{$icon-path}/icon-alert-red.svg");
   }
 
   &.info {

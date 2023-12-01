@@ -1,3 +1,31 @@
+// Default
+dl {
+  dt {
+    font-family: _font(family-medium);
+    color: _colour(aa-light-blue-100);
+    letter-spacing: .025rem;
+  }
+}
+
+dl:not(.colour-swatch dl) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .5rem 1.5rem;
+
+  dt {
+    font-family: _font(family-medium);
+    color: _colour(aa-light-blue-100);
+    letter-spacing: .025rem;
+  }
+
+  dd {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// Summary-top
 .dl-container {
   dl {
     &.vertical-display {
@@ -10,76 +38,78 @@
       }
     }
   }
+
   &.display-block {
     dt {
       margin-bottom: .25rem;
     }
+
     dt,
     dd {
       display: block;
     }
   }
-}
 
-dt,
-dd {
-  white-space: normal;
-}
+  dt,
+  dd {
+    white-space: normal;
+  }
 
-dl {
-  font-size: _font(size-default);
-  margin: 0 0 0 0;
-  padding: 0;
+  dl {
+    font-size: _font(size-default);
+    margin: 0 0 0 0;
+    padding: 0;
 
-  .dl-repeater {
-    margin: .25rem;
-    padding: .5rem .75rem;
+    .dl-repeater {
+      margin: .25rem;
+      padding: .5rem .75rem;
 
-    &.highlight {
-      background-color: _colour(aa-light-blue-15);
-      border-radius: .25rem;
-      margin-right: 1.75rem;
+      &.highlight {
+        background-color: _colour(aa-light-blue-15);
+        border-radius: .25rem;
+        margin-right: 1.75rem;
 
-      dt,
-      dd {
-        margin-left: 0;
-        margin-right: 0;
+        dt,
+        dd {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      &.truncate-text {
+
+        dt,
+        dd {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
     }
 
-    &.truncate-text {
+    &.no-wrap {
+
       dt,
       dd {
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
       }
     }
-  }
 
-  &.no-wrap {
-
-    dt,
-    dd {
-      white-space: nowrap;
+    dt {
+      font-family: _font(family-medium);
+      color: _colour(aa-light-blue-100);
+      display: inline-block;
+      padding-right: 0.5rem;
     }
-  }
 
-  dt {
-    font-family: _font(family-medium);
-    color: _colour(aa-light-blue-100);
-    display: inline-block;
-    padding-right: 0.5rem;
-  }
-
-  dd {
-    display: inline-block;
-    margin: 0 1.75rem 0 0;
+    dd {
+      display: inline-block;
+      margin: 0 1.75rem 0 0;
+    }
   }
 }
 
 @media screen and (min-width: _breakpoint(breakpoint-570)) {
-
   .dl-container {
     padding: 0;
     border-radius: .5rem;
