@@ -18,6 +18,7 @@ export declare class AccordionComponent {
     verticalDisplay: boolean;
     verticalMinHeight: any;
     bespokeHeader: boolean;
+    hideToggleIcon: boolean;
     open: EventEmitter<void>;
     onOpen(e: {
         stopPropagation: () => void;

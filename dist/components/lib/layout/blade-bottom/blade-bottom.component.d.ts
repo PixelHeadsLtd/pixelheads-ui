@@ -16,7 +16,6 @@ export declare class BladeBottomComponent implements OnInit {
     bladeFullScreen: EventEmitter<boolean>;
     toggle(): void;
     toggleThePin(e: any): void;
-    toggleFullScreen(e: any): void;
     expandedPosition(): any;
     constructor();
     ngOnInit(): void;

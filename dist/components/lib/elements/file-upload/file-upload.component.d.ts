@@ -7,6 +7,8 @@ export declare class FileUploadComponent implements OnInit {
     fileUploadExtentions: string;
     fileUploadText: string;
     fieldClass: string;
+    truncateFileName: boolean;
+    truncateWidth: number;
     constructor();
     ngOnInit(): void;
 }

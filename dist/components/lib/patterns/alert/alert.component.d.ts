@@ -10,6 +10,7 @@ export declare class AlertComponent implements OnInit {
     maxWidth: any;
     collapsedHeight: any;
     removePanel: any;
+    defaultExpanded: boolean;
     constructor();
     ngOnInit(): void;
 }
