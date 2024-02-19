@@ -26,10 +26,10 @@
       <div class="flex-group space-between flex-align-center">
         <section class="flex-group flex-start flex-nowrap flex-align-center">
           <div class="material-icons drag-icon aa-white-100 margin-right-0">drag_indicator</div>
-          <aa-button 
+          <aa-button
             class="margin-right-0-25"
-            (buttonClick)="onClick()" 
-            buttonClass="bg-transparent size-large padding-0 aa-white-100" 
+            (buttonClick)="onClick()"
+            buttonClass="bg-transparent size-large padding-0 aa-white-100"
             fieldClass="boxed"
             [customIconsRoundOutlined]="true"
             buttonIcon="arrow_circle_left">
@@ -41,13 +41,13 @@
 
         <section>
           <div
-            position="left"
+            [position]="TooltipDynamicPosition.LEFT"
             class="
-              material-icons-outlined 
+              material-icons-outlined
               margin-top-0-25
-              small 
-              cursor-default 
-              aa-white-100" 
+              small
+              cursor-default
+              aa-white-100"
             aaTooltip="
               <section class='width-15'>
                 <h3>Information</h3>
@@ -58,7 +58,7 @@
               </section>"
             >
             info
-          </div> 
+          </div>
           <!-- <aa-alert-shield
             [alertShieldSmall]="true"
             [hideLabel]="false"
@@ -185,9 +185,9 @@
     customBgColor="bg-aa-blue-sky-100"
     >
     <div class="field boxed">
-      <p>If you would like to use an accordion in your blade. Just add the 
-        <a class="cursor-pointer" routerLink="/accordion">standard accordion</a> like you would 
-        normally. For nested accordions, you will still need the boolean 
+      <p>If you would like to use an accordion in your blade. Just add the
+        <a class="cursor-pointer" routerLink="/accordion">standard accordion</a> like you would
+        normally. For nested accordions, you will still need the boolean
         [iconsEnabled] but you won't need to add the iconName or iconBgColor
         as these are modified in css.
       </p>
@@ -211,15 +211,15 @@
     <div class="field boxed">
       <h3>Standard blade</h3>
       <p>
-        Please refer to the gist file. You have to make sure that the aa-tab-navigation component 
-        sits just above the blade-content wrapper. Then ensure that your router-outlet sits 
-        inside the blade-content wrapper. 
+        Please refer to the gist file. You have to make sure that the aa-tab-navigation component
+        sits just above the blade-content wrapper. Then ensure that your router-outlet sits
+        inside the blade-content wrapper.
       </p>
       <h3>Custom blade</h3>
       <p>
-        If adding tabs to the custom-blade, you will need to add an ng-container with the select name 
-        custom-blade-tabs just inside your custom-header and below your content for the custom-header. 
-        Then add your router-outlet inside the custom-content ng-container wrapper. Again please refer 
+        If adding tabs to the custom-blade, you will need to add an ng-container with the select name
+        custom-blade-tabs just inside your custom-header and below your content for the custom-header.
+        Then add your router-outlet inside the custom-content ng-container wrapper. Again please refer
         to the custom-blade gist file.
       </p>
     </div>
@@ -242,10 +242,10 @@
       <div class="flex-group space-between flex-align-center">
         <section class="flex-group flex-start flex-nowrap flex-align-center">
           <div class="material-icons drag-icon aa-white-100 margin-right-0">drag_indicator</div>
-          <aa-button 
+          <aa-button
             class="margin-right-0-25"
-            (buttonClick)="onClick()" 
-            buttonClass="bg-transparent size-large padding-0 aa-white-100" 
+            (buttonClick)="onClick()"
+            buttonClass="bg-transparent size-large padding-0 aa-white-100"
             fieldClass="boxed"
             [customIconsRoundOutlined]="true"
             buttonIcon="arrow_circle_left">

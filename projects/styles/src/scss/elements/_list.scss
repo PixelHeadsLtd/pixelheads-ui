@@ -1,5 +1,5 @@
-ul:not(nav ul, ul.aa-stepper-header, .aa-card-list) {padding: 0 0 0 1rem}
-ol:not(nav ul, ul.aa-stepper-header) {padding: 0 0 0 1.25rem}
+ul:not(nav ul, ul.aa-stepper-header, .aa-card-list, .list-arrows) {padding: 0 0 0 1rem}
+ol:not(nav ul, nav ol, ul.aa-stepper-header) {padding: 0 0 0 1.25rem}
 
 ul,
 ol {

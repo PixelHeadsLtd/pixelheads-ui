@@ -1,5 +1,4 @@
 <section class="control-bar">
-    <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
     <h1>High charts</h1>
 </section>
 
@@ -10,19 +9,32 @@
           <h2>High charts</h2>
           <div class="describe margin-bottom-1">
             <p>
-                Please refer to the High charts documentation 
+                Please refer to the High charts documentation
                 for installation instructions. There is also a
                 working demo <a href="https://stackblitz.com/edit/highcharts-angular-basic-line-ucnkbj?file=src%2Fapp%2Fapp.component.ts" target="_blank">available here on Stackblitz</a>
             </p>
           </div>
           <div>
-            <highcharts-chart 
-                [Highcharts]="Highcharts" 
+            <highcharts-chart
+                class="hc-dark-mode"
+                [Highcharts]="Highcharts"
                 [options]="chartOptions">
             </highcharts-chart>
           </div>
+          <h2 class="margin-top-1-5">Setting up dark-mode</h2>
+          <div class="feature">
+            <p>
+              We have some custom css available for Highcharts dark-mode. You can use this by adding the class 
+              'hc-dark-mode' to your 'highcharts-chart' component. However, it is preferable to use Highcharts 
+              own dark-mode settings as there may be display issues, especially on the more complex charts.
+            </p>
+            <p>Please visit this the <a href="https://www.highcharts.com/docs/dashboards/light-dark-theme#live-example" target="_blank">
+                Highcharts website
+              </a> for instructions on setting up dark-mode. 
+            </p>
+          </div>
         </section>
-          
+
         <section class="flex-2 col-right flex-start">
           <table class="half-width">
             <caption>Attributes</caption>
@@ -56,31 +68,31 @@
             </tbody>
           </table>
         </section>
-        
+
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
-      
-      <aa-blade 
-        [showModal]="false"
+
+      <aa-blade
+        [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
-        suppressAutoClose="false"
-        topPosition="3.5"
-        zIndex="2"
+        [suppressAutoClose]="false"
+        topPosition="3.5rem"
+        [zIndex]="2"
         bladeSize="one-column-width"
         bladeHeading="Gist"
         [enableIcon]="true"
         iconName="table_rows"
-        (close)="toggleBlade = false"
+        (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
             <a href="https://gist.github.com/angloux/8510b221184f1206a05311f393da67be" target="_blank">View Gist on GitHub</a>
             <app-gist src="angloux/8510b221184f1206a05311f393da67be"></app-gist>
         </article>
       </aa-blade>
-    
+
 </section>

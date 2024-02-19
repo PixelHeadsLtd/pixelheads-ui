@@ -8,18 +8,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BladeBottomComponent implements AfterContentChecked  {
 
-  isPinned: boolean;
-  isOpen : boolean;
-  toggleTable: boolean;
-  fullScreenPos: string;
-  splitScreenPos: string;
-  closedPos: string;
-  toggleBlade: boolean;
-  gridApi;
-  gridColumnApi;
+  isPinned: boolean = false;
+  isOpen : boolean = false;
+  toggleTable: boolean = false;
+  fullScreenPos?: string;
+  splitScreenPos?: string;
+  closedPos?: string;
+  toggleBlade: boolean = false;
+  gridApi: any;
+  gridColumnApi: any;
   columnDefs;
   defaultColDef;
-  rowData;
+  rowData: any;
 
   constructor(
     public http: HttpClient,
@@ -86,14 +86,14 @@ export class BladeBottomComponent implements AfterContentChecked  {
   }
 
   autoSizeAll() {
-    const allColumnIds = [];
-    this.gridColumnApi.getAllColumns().forEach(function(column) {
+    const allColumnIds:any[] = [];
+    this.gridColumnApi.getAllColumns().forEach(function(column:any) {
       allColumnIds.push(column.colId);
     });
     this.gridColumnApi.autoSizeColumns(allColumnIds);
   }
 
-  onGridReady(params) {
+  onGridReady(params: any) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
 

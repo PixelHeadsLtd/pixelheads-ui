@@ -1,11 +1,11 @@
-import { ComponentFactoryResolver, ViewContainerRef } from '@angular/core';
+import { ViewContainerRef } from '@angular/core';
+import * as i0 from "@angular/core";
 export declare class ModalService {
-    private resolver;
     private componentRef;
     private componentSubscriber;
-    constructor(resolver: ComponentFactoryResolver);
     openModal(entry: ViewContainerRef, modalHeading: any, modalMessage: any): import("rxjs").Observable<string>;
     closeModal(): void;
     confirm(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ModalService, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<ModalService>;
 }
-//# sourceMappingURL=modal.service.d.ts.map

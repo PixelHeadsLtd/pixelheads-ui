@@ -1,10 +1,10 @@
 <ul *ngIf="treeData">
     <li *ngFor="let node of treeData">
         <span class="tree-group flex-group flex-start flex-align-center">
-            <span (click)="toggleChild(node)" class="chevron" [ngClass]="{'chevron-down': node.showChildren}" *ngIf="node.children != 0"></span>
+            <span (click)="toggleChild(node)" class="chevron" [ngClass]="{'chevron-down': node.showChildren}" *ngIf="node.children.length !== 0"></span>
             <input type="checkbox" />
-            <strong *ngIf="node.children != 0"> {{ node.name }} </strong>
-            <a *ngIf="node.children == 0" href="{{node.url}}" target="_blank"> {{ node.name }} </a>
+            <strong *ngIf="node.children.length !== 0"> {{ node.name }} </strong>
+            <a *ngIf="node.children.length === 0" href="{{node.url}}" target="_blank"> {{ node.name }} </a>
             <!-- <button class="material-icons">edit</button> -->
         </span>
         <ul>
@@ -12,5 +12,5 @@
                 <app-tree *ngIf="node.showChildren" [treeData]="node.children"></app-tree>
             </li>
         </ul>
-    </li>  
+    </li>
 </ul>

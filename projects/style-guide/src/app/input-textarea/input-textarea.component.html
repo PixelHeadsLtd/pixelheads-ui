@@ -18,11 +18,11 @@
       </div>
       <div class="field">
         <label for="text-area">Readonly (readonly="readOnly")</label>
-        <textarea name="text-area" id="text-area" rows="5" readonly="readOnly"></textarea>
+        <textarea name="text-area" id="text-area2" rows="5" readonly="readOnly"></textarea>
       </div>
       <div class="field">
         <label for="text-area">Readonly (disabled="true")</label>
-        <textarea name="text-area" id="text-area" rows="5" disabled="true"></textarea>
+        <textarea name="text-area" id="text-area3" rows="5" disabled="true"></textarea>
       </div>
     </section>
 
@@ -56,7 +56,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showTextarea=true; showTextareaAutoresize=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showTextarea=true; showTextareaAutoresize=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -72,7 +72,7 @@
       </div>
       <div class="field boxed">
         <label for="text-area-2">Textarea auto-resize</label>
-        <textarea class="auto-resize" [aaTextareaAutoresize]></textarea>
+        <textarea id="text-area-2" class="auto-resize" [aaTextareaAutoresize]></textarea>
       </div>
     </section>
 
@@ -117,7 +117,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showTextarea=false; showTextareaAutoresize=true">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showTextarea=false; showTextareaAutoresize=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -125,16 +125,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <div *ngIf="showTextarea">

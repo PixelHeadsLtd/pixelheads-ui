@@ -7,4 +7,3 @@ export * from './field/field.component';
 export * from './file-upload/file-upload.component';
 export * from './input-text/input-text.component';
 export * from './slider/slider.component';
-//# sourceMappingURL=index.d.ts.map

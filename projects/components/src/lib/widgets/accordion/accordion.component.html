@@ -1,6 +1,6 @@
 <article 
   class="accordion-container"
-  [ngStyle]="{'min-width' : minWidth+'rem', 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }"
+  [ngStyle]="{'min-width' : minWidth, 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }"
   [ngClass]="{'box-shadow' : showBody, 'vertical flex-group flex-start' : verticalDisplay }"
 >
   <h3 class="margin-0">
@@ -35,9 +35,13 @@
               <div *ngIf="showBody" class="material-icons">remove</div>
             </div>
         </div>
-        <div *ngIf="bespokeHeader" class="bespoke-header">
+        <div 
+          *ngIf="bespokeHeader" 
+          class="bespoke-header"
+          [ngStyle]="{ 'width': hideToggleIcon ? '100%' : 'calc(100% - 2rem)' }"
+        >
           <ng-content select="[bespoke-header]"></ng-content>
-          <div *ngIf="!hideToggleIcon" class="toggle-icons flex-align-center">
+          <div *ngIf="!hideToggleIcon" class="toggle-icons flex-align-center {{toggleIconColor}}">
             <div *ngIf="!showBody" class="material-icons">add</div>
             <div *ngIf="showBody" class="material-icons">remove</div>
           </div>

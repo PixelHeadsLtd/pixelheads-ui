@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FieldsetComponent {
 
-  myRadios: string;
-  myRadios2: string;
-  toggleBlade: boolean;
+  myRadios?: string;
+  myRadios2?: string;
+  toggleBlade: boolean = false;
 
   constructor() { }
 

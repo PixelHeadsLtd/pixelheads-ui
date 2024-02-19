@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'aa-card',
@@ -6,22 +6,22 @@ import { ChangeDetectionStrategy, Component, Input, OnInit, Output, EventEmitter
   styleUrls: ['./card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
-  @Input() cardName: string;
-  @Input() cardRole: string;
-  @Input() cardOptional: boolean;
-  @Input() cardMini: boolean;
-  @Input() cardDetailed: boolean;
+  @Input() cardName: string  = '';
+  @Input() cardRole: string = '';
+  @Input() cardOptional: boolean = false;
+  @Input() cardMini: boolean = false;
+  @Input() cardDetailed: boolean = false;
   @Input() cardWidth: any;
-  @Input() themeColour: boolean;
-  @Input() zIndex: number;
+  @Input() themeColour: string = '';
+  @Input() zIndex: number = 0;
   @Input() imgPath: any;
   @Input() title: any;
-  @Input() showAsIcon: boolean;
-  @Input() showAsProfile: boolean;
-  @Input() iconName: string;
-  @Input() borderClass: string;
+  @Input() showAsIcon: boolean = false;
+  @Input() showAsProfile: boolean = false;
+  @Input() iconName: string = '';
+  @Input() borderClass: string = '';
   @Input() topPos: any;
   @Input() rightPos: any;
   @Input() leftPos: any;
@@ -34,8 +34,5 @@ export class CardComponent implements OnInit {
   }
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

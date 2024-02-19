@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-list-selectable',
@@ -6,18 +6,14 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./list-selectable.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListSelectableComponent implements OnInit {
+export class ListSelectableComponent {
 
-  @Input() minWidth: number;
-  @Input() topPos: number;
-  @Input() leftPos: number;
-  @Input() rightPos: number;
-  @Input() bottomPos: number;
-  @Input() zIndex: number;
-  @Input() flexStart: boolean;
-  @Input() fixedPosition: boolean;
-
-  ngOnInit(): void {
-  }
-
+  @Input() minWidth: any;
+  @Input() topPos: any;
+  @Input() leftPos: any;
+  @Input() rightPos: any;
+  @Input() bottomPos: any;
+  @Input() zIndex: number = 0;
+  @Input() flexStart: boolean = false;
+  @Input() fixedPosition: boolean = false;
 }

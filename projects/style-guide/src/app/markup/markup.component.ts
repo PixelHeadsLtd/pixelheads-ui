@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './markup.component.html',
   styleUrls: ['./markup.component.scss']
 })
-export class MarkupComponent implements OnInit {
+export class MarkupComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }

@@ -227,11 +227,17 @@
 }
 
 .blade {
-    .aa-card-list {
-        .aa-card {
-            position: fixed;
-            right: 2%;
-            left: unset;
+    &.half-column-width {
+        .aa-card-list {
+            .aa-card {
+                position: fixed;
+                right: 16.25%;
+                left: unset;
+
+                h3 {
+                    margin-bottom: .25rem;
+                }
+            }
         }
     }
     .card-detailed {
@@ -267,7 +273,6 @@
     }
     
     > li {
-        position: relative;
         padding-bottom: 1rem;
         cursor: pointer;
         
@@ -276,25 +281,22 @@
         }
         
         .aa-card {
+            box-shadow: 0 0 12px _colour(box-shadow);
             visibility: hidden;
             opacity: 0;
             position: absolute;
-            margin-top: 3rem;
             right: unset;
-            left: 3rem;
-            width: calc(19rem - 2%);
+            left: 4.25rem;
+            width: 19rem;
         }
         
         &:hover {
             .aa-card {
                 visibility: visible;
                 opacity: 1;
-                box-shadow: 0 0 12px _colour(box-shadow);
                 transition: all .15s linear;
                 transition-delay: 1s;
                 z-index: 999;
-                right: 1%;
-                width: 19rem;
             }
         }
     }
@@ -476,13 +478,15 @@ table {
       width: calc(19rem - 2%);
       transition: all .15s linear;
       transition-delay: .5s;
+      position: absolute;
+      left: 4.5rem;
+      top: 0;
     }
     &:hover {
       overflow: initial;
       .aa-card {
         visibility: visible;
         opacity: 1;
-        position: absolute;
         display: flex;
         transition: all .15s linear;
         transition-delay: .5s;

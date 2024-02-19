@@ -68,6 +68,7 @@ import {AccordionComponent} from './accordion/accordion.component';
 import {AccordionFancyComponent} from './accordion-fancy/accordion-fancy.component';
 import {CardComponent} from './card/card.component';
 import {CarouselComponent} from './carousel/carousel.component';
+import {ElementSliderComponent} from './element-slider/element-slider.component';
 import {TooltipDynamicComponent} from './tooltip-dynamic/tooltip-dynamic.component';
 import {FavouritesComponent} from './favourites/favourites.component';
 import {IconPickerComponent} from './icon-picker/icon-picker.component';
@@ -95,7 +96,7 @@ import {WidthsComponent} from './widths/widths.component';
 import {EditorialComponent} from './editorial/editorial.component';
 import {TypographyComponent} from './typography/typography.component';
 
-// Third party components
+// Third-party components
 import {AgGridComponent} from './ag-grid/ag-grid.component';
 import {NgbDatepickerComponent} from './ngb-datepicker/ngb-datepicker.component';
 import {NgSelectComponent} from './ng-select/ng-select.component';
@@ -142,6 +143,7 @@ const routes: Routes = [
   { path: 'context-menu', component: ContextMenuComponent },
   { path: 'custom-wrapper', component: CustomWrapperComponent },
   { path: 'favourites', component: FavouritesComponent },
+  { path: 'element-slider', component: ElementSliderComponent },
   { path: 'editorial-content', component: EditorialComponent },
   { path: 'field', component: FieldComponent },
   { path: 'validation', component: ValidationComponent },

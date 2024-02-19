@@ -15,7 +15,7 @@
       
       <div class="flex-group flex-start margin-top-0-25">
         <h3 class="boxed">This is context-menu</h3>
-        <aa-context-menu [showOnLeft]="false" minWidth="11.5">
+        <aa-context-menu [showOnLeft]="false" minWidth="11.5rem">
           <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
           <aa-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></aa-context-menu-item>
           <aa-context-menu-item menuItemText="View blades" routerLink="/blade"></aa-context-menu-item>
@@ -45,8 +45,8 @@
           <tr>
             <td datalabel="Element">aa-context-menu</td>
             <td datalabel="Attribute">minWidth</td>
-            <td datalabel="Type">Number</td>
-            <td datalabel="Default">5</td>
+            <td datalabel="Type">any</td>
+            <td datalabel="Default">11.5rem</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-context-menu</td>
@@ -72,7 +72,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -80,16 +80,16 @@
 </section>
 
 <aa-blade 
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <a href="https://gist.github.com/angloux/432b009c9a8116539c70002f6bedc9e8" target="_blank">View Gist on GitHub</a>

@@ -6,14 +6,11 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./summary-top.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SummaryTopComponent implements OnInit {
+export class SummaryTopComponent {
 
-  @Input() displayBlock: boolean;
-  @Input() verticalDisplay: boolean;
+  @Input() displayBlock: boolean = false;
+  @Input() verticalDisplay: boolean = false;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { StepperData } from '../class/stepper-data';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 
@@ -7,12 +7,12 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
   templateUrl: './stepper.component.html',
   styleUrls: ['./stepper.component.scss']
 })
-export class StepperComponent implements OnInit {
+export class StepperComponent {
 
   stepperHTML = '';
   currentIndex = 0;
   stepComplete: boolean = false;
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   stepperForm = new FormGroup({
     name: new  FormControl('', [Validators.required, Validators.minLength(5), Validators.maxLength(50)]),
@@ -62,9 +62,6 @@ export class StepperComponent implements OnInit {
   reset() {
     this.currentIndex = 0;
     this.stepperForm.reset();
-  }
-
-  ngOnInit() {
   }
 
 }

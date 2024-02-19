@@ -1,22 +1,22 @@
 <div class="position-relative">
-    <div [ngClass]="{'tour-active' : tourMode}" [ngStyle]="tourMode && {'position' : 'relative', 'z-index' : zIndex+1}">
+    <div [ngClass]="{'tour-active' : tourMode}" [ngStyle]="tourMode ? {'position' : 'relative', 'z-index' : zIndex+1} : {}">
         <ng-content select="[nested-component]"></ng-content>
     </div>
     <div *ngIf="tourMode">
       <div class="tour-mode-info"
           [ngStyle]="{
               'width' : panelWidth,
-              'top' : topPos, 
-              'right' : rightPos, 
+              'top' : topPos,
+              'right' : rightPos,
               'bottom' : bottomPos,
               'left' : leftPos,
               'z-index' : zIndex+1
           }">
-          
-          <div *ngIf="arrowTop" class="arrow-top" [ngStyle]="{'left' : arrowPos}" [ngClass]="{'arrow-plum':arrowIsPlum}"></div>
-          <div *ngIf="arrowRight" class="arrow-right" [ngStyle]="{'top' : arrowPos}" [ngClass]="{'arrow-plum':arrowIsPlum}"></div>
-          <div *ngIf="arrowBottom" class="arrow-bottom" [ngStyle]="{'left' : arrowPos}" [ngClass]="{'arrow-plum':arrowIsPlum}"></div>
-          <div *ngIf="arrowLeft" class="arrow-left" [ngStyle]="{'top' : arrowPos}" [ngClass]="{'arrow-plum':arrowIsPlum}"></div>
+
+          <div *ngIf="arrowTop" class="arrow-top {{arrowClass}}" [ngStyle]="{'left' : arrowPos}"></div>
+          <div *ngIf="arrowRight" class="arrow-right {{arrowClass}}" [ngStyle]="{'top' : arrowPos}"></div>
+          <div *ngIf="arrowBottom" class="arrow-bottom {{arrowClass}}" [ngStyle]="{'left' : arrowPos}"></div>
+          <div *ngIf="arrowLeft" class="arrow-left {{arrowClass}}" [ngStyle]="{'top' : arrowPos}"></div>
 
           <div class="tour-content">
             <h3 *ngIf="enableHeading">{{tourModeHeading}}</h3>

@@ -80,6 +80,18 @@
         border-bottom: 3px solid transparent;
         cursor: pointer;
 
+        &.aa-red-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-red-100 )}}
+        &.aa-orange-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-orange-100 )}}
+        &.aa-green-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-green-100 )}}
+        &.aa-plum-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-plum-100 )}}
+        &.aa-burgundy-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-burgundy-100 )}}
+        &.aa-lime-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-lime-100 )}}
+        &.aa-pink-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-pink-100 )}}
+        &.aa-blue-sky-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-blue-sky-100 )}}
+        &.aa-brown-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-brown-100 )}}
+        &.aa-ochre-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-ochre-100 )}}
+        &.aa-blue-100 {&:hover, &.active, &.selected { border-bottom: 3px solid _colour(aa-blue-100 )}}
+
         &:hover,
         &.active,
         &.selected {
@@ -313,6 +325,7 @@
   
   ul:not(.context-menu ul) {
     display: block;
+    padding-left: 0;
 
     .context-menu {
       margin: -.35rem -.75rem -.5rem 0;

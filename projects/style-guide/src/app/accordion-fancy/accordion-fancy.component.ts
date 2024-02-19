@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './accordion-fancy.component.html',
   styleUrls: ['./accordion-fancy.component.scss']
 })
-export class AccordionFancyComponent implements OnInit {
+export class AccordionFancyComponent {
 
   constructor() { }
+  showMore: boolean = false;
 
-  showMore: boolean;
   isFavourite = false;
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   onAnchorClick() {
     console.log('You clicked the anchor');
@@ -25,9 +25,6 @@ export class AccordionFancyComponent implements OnInit {
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './elements-alignment.component.html',
   styleUrls: ['./elements-alignment.component.scss']
 })
-export class ElementsAlignmentComponent implements OnInit {
+export class ElementsAlignmentComponent {
 
-  showMarkers: boolean;
-  myRadios: string;
-  myRadios2: string;
+  showMarkers: boolean = false;
+  myRadios?: string;
+  myRadios2?: string;
 
   cities = [
     { id: 1, name: 'Vilnius' },
@@ -33,7 +33,7 @@ export class ElementsAlignmentComponent implements OnInit {
     { id: 3, name: 'Pavilnys', avatar: '//www.gravatar.com/avatar/6acb7abf486516ab7fb0a6efa372042b?d=retro&r=g&s=15' }
   ];
 
-  cities4 = [];
+  cities4: { id:number, name:string }[] = [];
 
   users = [
     { id: 'anjmao', name: 'Anjmao' },
@@ -54,17 +54,17 @@ export class ElementsAlignmentComponent implements OnInit {
     { name: 'Nicolás', email: 'nicole@email.com', age: 43, country: 'Colombia' }
   ];
 
-  selectedCityIds: string[];
-  selectedCity: string;
+  selectedCityIds?: string[];
+  selectedCity?: string;
   selectedCityName = 'Vilnius';
-  selectedCityId: number;
-  selectedUserIds: number[];
+  selectedCityId?: number;
+  selectedUserIds?: number[];
 
   constructor() {
     this.create10kCities();
   }
 
-  addCustomUser = (term) => ({ id: term, name: term });
+  addCustomUser = (term:any) => ({ id: term, name: term });
 
   private create10kCities() {
     this.cities4 = Array.from({ length: 10000 }, (value, key) => key)
@@ -73,8 +73,4 @@ export class ElementsAlignmentComponent implements OnInit {
         name: `city ${val}`
       }));
   }
-
-  ngOnInit() {
-  }
-
 }

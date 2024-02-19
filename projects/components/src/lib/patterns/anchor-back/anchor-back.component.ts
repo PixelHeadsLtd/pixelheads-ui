@@ -5,11 +5,10 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   templateUrl: './anchor-back.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AnchorBackComponent implements OnInit {
+export class AnchorBackComponent  {
 
-  @Input() anchorBackText: string;
-  @Input() anchorURL: string;
+  @Input() anchorBackText: string = '';
+  @Input() anchorURL: string = '';
 
-  ngOnInit() { }
 
 }

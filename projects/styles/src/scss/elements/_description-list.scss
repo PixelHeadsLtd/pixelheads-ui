@@ -7,7 +7,7 @@ dl {
   }
 }
 
-dl:not(.colour-swatch dl) {
+dl:not(.colour-swatch dl, .dl-container dl) {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: .5rem 1.5rem;
@@ -27,6 +27,14 @@ dl:not(.colour-swatch dl) {
 
 // Summary-top
 .dl-container {
+
+  .dl-repeater:not(.dl-container .vertical-display .dl-repeater) {
+    &.divider {
+      border-right: 2px solid _colour(aa-light-blue-15);
+      padding-right: 1.5rem;
+    }
+  }
+
   dl {
     &.vertical-display {
       display: block;
@@ -34,6 +42,10 @@ dl:not(.colour-swatch dl) {
       .dl-repeater {
         &.highlight {
           margin-right: .25rem;
+        }
+        &.divider {
+          border-bottom: 2px solid _colour(aa-light-blue-15);
+          padding-bottom: .75rem;
         }
       }
     }
@@ -62,7 +74,7 @@ dl:not(.colour-swatch dl) {
 
     .dl-repeater {
       margin: .25rem;
-      padding: .5rem .75rem;
+      padding: .5rem 1rem;
 
       &.highlight {
         background-color: _colour(aa-light-blue-15);
@@ -104,7 +116,7 @@ dl:not(.colour-swatch dl) {
 
     dd {
       display: inline-block;
-      margin: 0 1.75rem 0 0;
+      margin: 0;
     }
   }
 }

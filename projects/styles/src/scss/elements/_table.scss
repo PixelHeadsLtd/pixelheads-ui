@@ -29,6 +29,7 @@ table {
         font-size: _font(size-medium);
         border: none;
         background: transparent;
+        user-select: none;
       }
       &.expanded {
         .toggle {
@@ -213,7 +214,7 @@ table:not(.table-feature) {
       border-bottom: none;
       border-bottom: solid 2px _colour(aa-light-blue-100);
       .rotate {
-        transform-origin: .4rem .6rem;
+        transform-origin: .2rem .5rem;
         padding-top: .6rem;
       }
     }
@@ -233,6 +234,8 @@ table:not(.table-feature) {
     }
     th, td {
       white-space: nowrap;
+      vertical-align: bottom;
+      padding-bottom: .5rem;
       &.progress-cell {
         width: 1.75rem;
         min-width: 1.75rem;
@@ -280,7 +283,6 @@ table:not(
     th, [datalabel] {
       border-bottom: solid 2px _colour(aa-light-blue-100);
       font-family: _font(family-medium);
-      font-weight: normal;
       padding: 0.5rem 1rem;
       &:first-child {
         padding-left: 1.5rem;

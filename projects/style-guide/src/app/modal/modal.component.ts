@@ -1,12 +1,11 @@
-import { 
+import { ModalService } from '@angloamerican/components';
+import {
   Component,
   OnDestroy,
   OnInit,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { ModalService } from '../../../../components/src/lib/services/modal.service';
-// path in node_modules for devs - import { ModalService } from '@angloamerican/components/lib/widgets/services/modal-service/modal.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -14,13 +13,13 @@ import { Subscription } from 'rxjs';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit, OnDestroy {
+export class ModalComponent implements OnDestroy {
 
-  toggleModal: boolean;
-  toggleModalTwo: boolean;
-  toggleBlade: boolean;
-  showModalGist: boolean;
-  showModalEventGist: boolean;
+  toggleModal: boolean = false;
+  toggleModalTwo: boolean = false;
+  toggleBlade: boolean = false;
+  showModalGist: boolean = false;
+  showModalEventGist: boolean = false;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
@@ -32,14 +31,12 @@ export class ModalComponent implements OnInit, OnDestroy {
   entry!: ViewContainerRef;
   sub!: Subscription;
 
-  ngOnInit(): void {}
-
   openModal() {
     this.sub = this.modalService
-      .openModal(this.entry, 
-        'Are you sure?', 
+      .openModal(this.entry,
+        'Are you sure?',
         'This is your message to be displayed')
-      .subscribe((v) => {
+      .subscribe((v:any) => {
         //your logic
       });
   }

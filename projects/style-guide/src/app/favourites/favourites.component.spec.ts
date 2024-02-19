@@ -1,17 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FavouritesComponent } from './favourites.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DashboardFavouritesComponent } from '@angloamerican/components';
 
 describe('FavouritesComponent', () => {
   let component: FavouritesComponent;
   let fixture: ComponentFixture<FavouritesComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FavouritesComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [FavouritesComponent, DashboardFavouritesComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FavouritesComponent);

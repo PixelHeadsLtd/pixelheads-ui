@@ -6,9 +6,9 @@ import { NavContextData } from '../class/nav-context-data';
   templateUrl: './nav-context.component.html',
   styleUrls: ['./nav-context.component.scss']
 })
-export class NavContextComponent implements OnInit {
+export class NavContextComponent {
 
-  selectedIndex: number = null;
+  selectedIndex: number | null = null;
 
   constructor() { }
 
@@ -28,13 +28,9 @@ export class NavContextComponent implements OnInit {
     this.selectedIndex = index;
   }
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

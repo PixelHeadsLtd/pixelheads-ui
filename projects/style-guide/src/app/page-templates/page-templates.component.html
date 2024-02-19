@@ -7,22 +7,23 @@
         <div class="max-width-50 describe margin-bottom-1">
             <h3 class="aa-red-100 boxed">Important information regarding forms</h3>
             <p>
-                All form elements must be nested inside a div with the class 
-                <strong class="aa-red-100">.field</strong>, if there is too much margin 
-                (usually on the first field in the group), please add the additional 
+                All form elements must be nested inside a div with the class
+                <strong class="aa-red-100">.field</strong>, if there is too much margin
+                (usually on the first field in the group), please add the additional
                 class <strong class="aa-red-100">.boxed</strong>. This also applies to the first H2 on the page.
             </p>
             <p>
-                Nested inside this div and in the following order, you should have a 
-                <strong class="aa-red-100">label</strong>, <strong class="aa-red-100">input</strong> 
-                and any <strong class="aa-red-100">validation message</strong>. The validation div is 
-                triggered by the class name <strong class="aa-red-100">.error</strong> appended to the 
-                wrapping field div and an additional <strong class="aa-red-100">*ngIf</strong> 
-                added to the error message div itself. The <strong class="aa-red-100">Basic 
+                Nested inside this div and in the following order, you should have a
+                <strong class="aa-red-100">label</strong>, <strong class="aa-red-100">input</strong>
+                and any <strong class="aa-red-100">validation message</strong>. The validation div is
+                triggered by the class name <strong class="aa-red-100">.error</strong> appended to the
+                wrapping field div and an additional <strong class="aa-red-100">*ngIf</strong>
+                added to the error message div itself. The <strong class="aa-red-100">Basic
                 vertical form</strong> below includes common form markup and example validation
             </p>
         </div>
         <div class="flex-group flex-start">
+            <!-- copyOneHTML -->
             <section class="page-template-container">
                 <h2>Just the barebones</h2>
                 <article class="page-template">
@@ -34,16 +35,18 @@
                     <div class="content-container tagged">
                         <h2>H2 Sub-heading</h2>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copyOneHTML); 
+                        copyToClipboard(copyOneHTML);
                         copyOne=true;
                         copyTwo=false;
                         copyThree=false;
                         copyFour=false;
                         copyFive=false;
-                        copySix=false
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
                         <div *ngIf="!copyOne" class="flex-group flex-start">
@@ -57,12 +60,12 @@
                     </section>
                 </article>
                 <div class="describe margin-top-0-5">
-                    <p>All of our Apps <strong>MUST</strong> follow this very<br/> 
+                    <p>All of our Apps <strong>MUST</strong> follow this very<br/>
                         basic page structure or as close as possible
                     </p>
                 </div>
             </section>
-
+            <!-- copyTwoHTML -->
             <section class="page-template-container">
                 <h2>Basic vertical form (most used)</h2>
                 <article class="page-template">
@@ -83,16 +86,18 @@
                             </div>
                         </section>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copyTwoHTML); 
+                        copyToClipboard(copyTwoHTML);
                         copyOne=false;
                         copyTwo=true;
                         copyThree=false;
                         copyFour=false;
                         copyFive=false;
-                        copySix=false
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
                         <div *ngIf="!copyTwo" class="flex-group flex-start">
@@ -112,7 +117,7 @@
                     </p>
                 </div>
             </section>
-
+            <!-- copyThreeHTML -->
             <section class="page-template-container">
                 <h2>Grouping horizontally</h2>
                 <article class="page-template">
@@ -136,16 +141,18 @@
                             </span>
                         </div>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copyThreeHTML); 
+                        copyToClipboard(copyThreeHTML);
                         copyOne=false;
                         copyTwo=false;
                         copyThree=true;
                         copyFour=false;
                         copyFive=false;
-                        copySix=false
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
                         <div *ngIf="!copyThree" class="flex-group flex-start">
@@ -165,7 +172,7 @@
                     </p>
                 </div>
             </section>
-
+            <!-- copyFourHTML -->
             <section class="page-template-container">
                 <h2>Space-between grouping</h2>
                 <article class="page-template">
@@ -189,16 +196,18 @@
                             </span>
                         </div>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copyFourHTML); 
+                        copyToClipboard(copyFourHTML);
                         copyOne=false;
                         copyTwo=false;
                         copyThree=false;
                         copyFour=true;
                         copyFive=false;
-                        copySix=false
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
                         <div *ngIf="!copyFour" class="flex-group flex-start">
@@ -218,7 +227,7 @@
                     </p>
                 </div>
             </section>
-
+            <!-- copyFiveHTML -->
             <section class="page-template-container">
                 <h2>Top filter with ag-grid</h2>
                 <article class="page-template">
@@ -240,16 +249,18 @@
                             <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                         </table>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copyFiveHTML); 
+                        copyToClipboard(copyFiveHTML);
                         copyOne=false;
                         copyTwo=false;
                         copyThree=false;
                         copyFour=false;
                         copyFive=true;
-                        copySix=false
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
                         <div *ngIf="!copyFive" class="flex-group flex-start">
@@ -263,12 +274,12 @@
                     </section>
                 </article>
                 <div class="describe margin-top-0-5">
-                    <p> Above is an example of <a routerLink="/ag-grid">AG-Grid</a> with a<br/> 
+                    <p> Above is an example of <a routerLink="/ag-grid">AG-Grid</a> with a<br/>
                         Design Language <a routerLink="/filter">filter</a> component
                     </p>
                 </div>
             </section>
-
+            <!-- copySixHTML -->
             <section class="page-template-container">
                 <h2>Top filter with tabs and ag-grid</h2>
                 <article class="page-template">
@@ -293,35 +304,37 @@
                             <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                         </table>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copySixHTML); 
+                        copyToClipboard(copySixHTML);
                         copyOne=false;
                         copyTwo=false;
                         copyThree=false;
                         copyFour=false;
-                        copyFive=true;
-                        copySix=false
+                        copyFive=false;
+                        copySix=true;
+                        copySeven=false;
+                        copyEight=false
                         "
                     >
-                        <div *ngIf="!copyFive" class="flex-group flex-start">
+                        <div *ngIf="!copySix" class="flex-group flex-start">
                             <div class="material-icons aa-orange-100">content_copy</div>
                             <p>Click to copy this markup</p>
                         </div>
-                        <div *ngIf="copyFive" class="copied">
+                        <div *ngIf="copySix" class="copied">
                             <div class="material-icons aa-orange-100">thumb_up_alt</div>
                             <p>Markup copied!</p>
                         </div>
                     </section>
                 </article>
                 <div class="describe margin-top-0-5">
-                    <p> Above is an example of <a routerLink="/ag-grid">AG-Grid</a> with a<br/> 
-                        Design Language <a routerLink="/filter">filter</a> component
+                    <p> Above is an example of <a routerLink="/ag-grid">AG-Grid</a> with a<br/>
+                        <a routerLink="/filter">filter</a> and <a routerLink="/tab-navigation">tab-navigation</a>
                     </p>
                 </div>
             </section>
-
+            <!-- copySevenHTML -->
             <section class="page-template-container">
                 <h2>Mixing groups</h2>
                 <article class="page-template">
@@ -360,23 +373,25 @@
                             </div>
                         </span>
                     </div>
-                    <section 
+                    <section
                         class="hover"
                         (click)="
-                        copyToClipboard(copySevenHTML); 
+                        copyToClipboard(copySevenHTML);
                         copyOne=false;
                         copyTwo=false;
                         copyThree=false;
                         copyFour=false;
                         copyFive=false;
-                        copySix=true
+                        copySix=false;
+                        copySeven=true;
+                        copyEight=false
                         "
                     >
-                        <div *ngIf="!copySix" class="flex-group flex-start">
+                        <div *ngIf="!copySeven" class="flex-group flex-start">
                             <div class="material-icons aa-orange-100">content_copy</div>
                             <p>Click to copy this markup</p>
                         </div>
-                        <div *ngIf="copySix" class="copied">
+                        <div *ngIf="copySeven" class="copied">
                             <div class="material-icons aa-orange-100">thumb_up_alt</div>
                             <p>Markup copied!</p>
                         </div>
@@ -384,18 +399,66 @@
                 </article>
                 <div class="describe margin-top-0-5">
                     <p>
-                        Rarely used but this is useful for comparing left and 
+                        Rarely used but this is useful for comparing left and
                         right sections of a given form
                     </p>
                 </div>
             </section>
+            <!-- copyEightHTML -->
+            <section class="page-template-container">
+                <h2>Basic example using the top filter</h2>
+                <article class="page-template">
+                    <div class="header"></div>
+                    <div class="nav"></div>
+                    <div class="control-bar">
+                        <h1>H1 Heading</h1>
+                    </div>
+                    <div class="flex-group flex-start">
+                        <div></div><div></div><div></div><div class="bg-aa-blue-100"></div>
+                    </div>
+                    <div class="content-container margin-top-0-25 height-5">
+                        <h2>H2 Sub-heading</h2>
+                        <span class=" flex-group flex-column">
+                            <div class="flex-group flex-start margin-top-0-25">
+                                <span class="bd-aa-pink-100 padding-0-25">
+                                    <div class="width-5 margin-right-0 margin-top-0"></div>
+                                    <div class="width-5 margin-right-0"></div>
+                                    <div class="width-5 margin-right-0"></div>
+                                </span>
+                            </div>
+                        </span>
+                    </div>
+                    <section
+                        class="hover"
+                        (click)="
+                        copyToClipboard(copyEightHTML);
+                        copyOne=false;
+                        copyTwo=false;
+                        copyThree=false;
+                        copyFour=false;
+                        copyFive=false;
+                        copySix=false;
+                        copySeven=false;
+                        copyEight=true
+                        "
+                    >
+                        <div *ngIf="!copyEight" class="flex-group flex-start">
+                            <div class="material-icons aa-orange-100">content_copy</div>
+                            <p>Click to copy this markup</p>
+                        </div>
+                        <div *ngIf="copyEight" class="copied">
+                            <div class="material-icons aa-orange-100">thumb_up_alt</div>
+                            <p>Markup copied!</p>
+                        </div>
+                    </section>
+                </article>
+                <div class="describe margin-top-0-5">
+                    <p> This is a basic example form using the top
+                        <a routerLink="/filter">filter</a>
+                    </p>
+                </div>
+            </section>
         </div>
-        <!-- mini menu -->
-        <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showTemplates=true; showAgGridHeight=false">
-            <span class="material-icons">visibility</span><span>View gist</span>
-            </button>
-        </nav>
     </section>
 
     <section class="content-repeater">
@@ -428,7 +491,7 @@
                         <h2 class="margin-0">Your section title goes here (h2)</h2>
                         <strong class="max-width-22 display-block margin-top-1">
                             <p class="aa-blue-100">
-                                To ensure the page has the correct padding, make sure you 
+                                To ensure the page has the correct padding, make sure you
                                 wrap everything inside a <span class="aa-orange-100">'content-container'</span>
                             </p>
                         </strong>
@@ -459,182 +522,202 @@
                         <h1 class="margin-0">Your page title goes here (h1)</h1>
                     </div>
                     <h3 class="margin-bottom-1">
-                        <strong class="aa-orange-100">`aa-tab-navigation`</strong> and/or <strong class="aa-orange-100">`aa-filter`</strong> sits between the control-bar and the content-container
+                        <strong class="aa-orange-100">`aa-tab-navigation`</strong> and/or <strong class="aa-orange-100">`aa-filter`</strong> between control-bar & content-container
                     </h3>
-                    <div class="bd-orange bd-3 bd-solid padding-1 border-radius-0-5 position-relative min-height-8">
-                        <h3 class="position-absolute right-0 top-0 margin-0 bg-aa-orange-100 padding-x-1 padding-top-0-25 padding-bottom-0-5 aa-white-100">
+
+                    <div style="border-radius: .5rem 0 .5rem .5rem" class="bd-orange bd-3 bd-solid padding-1 position-relative min-height-30">
+                        <h3 style="top: -2rem; right:-.2rem" class="position-absolute margin-0 bg-aa-orange-100 padding-x-1 padding-top-0-25 padding-bottom-0-5 aa-white-100">
+                            class='content-container grid ag-grid-full-height' <strong class="aa-red-100">[ngStyle] here</strong>
+                        </h3>
+
+                        <div class="bd-green bd-3 bd-solid padding-1 border-radius-0-5 position-relative min-height-8">
+                        <h3 class="position-absolute right-0 top-0 margin-0 bg-aa-green-100 padding-x-1 padding-top-0-25 padding-bottom-0-5 aa-white-100">
                             class=`content-container`
                         </h3>
                         <h2 class="margin-0">Your section title goes here (h2)</h2>
                         <strong class="max-width-19 display-block margin-top-1">
                             <p class="aa-blue-100">
-                                Other page content must be wrapped inside another 
-                                <span class="aa-orange-100">content-container</span> 
-                                this will ensure that the correct page padding is 
+                                Other page content must be wrapped inside another
+                                <span class="aa-orange-100">content-container</span>
+                                this will ensure that the correct page padding is
                                 maintained
                             </p>
                         </strong>
                     </div>
-                    <div class="position-relative overflow-hidden bd-orange bd-3 bd-solid padding-1 border-radius-0-5 position-relative min-height-20 margin-top-0-75">
-                        <h3 class="position-absolute right-0 top-0 margin-0 bg-aa-orange-100 padding-x-1 padding-top-0-25 padding-bottom-0-5 aa-white-100">
-                            class=`content-container grid`
+                    <div class="position-relative overflow-hidden bd-green bd-3 bd-solid padding-1 border-radius-0-5 position-relative min-height-20 margin-top-0-75">
+                        <h3 class="position-absolute right-0 top-0 margin-0 bg-aa-green-100 padding-x-1 padding-top-0-25 padding-bottom-0-5 aa-white-100">
+                            class=`ag-grid-wrapper`
                         </h3>
                         <h2 class="margin-0">Ag-grid</h2>
-                        <strong class="max-width-19 display-block margin-top-1">
+                        <strong class="max-width-20 display-block margin-top-1">
                             <p class="aa-blue-100">
-                                So that ag-grid displays properly, filling the screen 
-                                horizontally, you must add the <span class="aa-orange-100">grid</span> class 
-                                to the <span class="aa-orange-100">content-container</span>
+                                So that ag-grid displays properly, filling the screen
+                                horizontally and vertically, you must add the
+                                <span class="aa-orange-100">'grid ag-grid-full-height'</span> class
+                                and your <strong class="aa-orange-100">ngStyle setting</strong> to the
+                                <span class="aa-orange-100">top-level content-container, as seen above in orange</span>
                             </p>
                         </strong>
-                        <a 
-                            (click)="bladeIsOpen($event); showTemplates=false; showAgGridHeight=true"
-                            class="flex-group flex-end margin-bottom-1 cursor-pointer"
-                        >
-                            <strong>Setting ag-grid full height</strong>
-                        </a>
+
+                        <div class="flex-group flex-end">
+                            <aa-button
+                                [customIcons]="true"
+                                (buttonClick)="bladeIsOpen(true)"
+                                buttonId="buttonId"
+                                buttonClass="custom-icons bg-aa-plum-100 hover-blue margin-bottom-0-5"
+                                fieldClass="boxed"
+                                [showLabel]="false"
+                                buttonLabel="Custom icons"
+                                buttonText="Help Setting ag-grid height"
+                                buttonIcon="expand"
+                                [showCount]="false"
+                                [count]="10"
+                                countColor="blue">
+                            </aa-button>
+                        </div>
                         <section class="position-absolute left-0 right-0 margin-top-0-25">
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                            <div class="bd-top-orange bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
-                                <div class="bd-right-1 bd-right-solid bd-right-orange padding-x-2 padding-y-0-5"></div>
+                            <div class="bd-top-green bd-top-solid bd-top-1 width-100 flex-group flex-nowrap">
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
+                                <div class="bd-right-1 bd-right-solid bd-right-green padding-x-2 padding-y-0-5"></div>
                                 <div class="padding-x-2 padding-y-0-5"></div>
                             </div>
-                        </section>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -642,26 +725,20 @@
     </section>
 </section>
 
-<aa-blade 
-    [showModal]="false"
+<aa-blade
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <div *ngIf="showTemplates">
-      <a href="https://gist.github.com/angloux/798ef18d606cae741c31463927b87ba6" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/798ef18d606cae741c31463927b87ba6"></app-gist>
-    </div>
-    <div *ngIf="showAgGridHeight">
-      <a href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/eb0cf91a2f53876188e72aa94a9b4000"></app-gist>
-    </div>
+    <a href="https://gist.github.com/angloux/eb0cf91a2f53876188e72aa94a9b4000" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/eb0cf91a2f53876188e72aa94a9b4000"></app-gist>
   </article>
 </aa-blade>

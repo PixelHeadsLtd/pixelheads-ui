@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PageTemplatesComponent } from './page-templates.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('PageLayoutExamplesComponent', () => {
   let component: PageTemplatesComponent;
@@ -8,9 +8,9 @@ describe('PageLayoutExamplesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PageTemplatesComponent ]
-    })
-    .compileComponents();
+      declarations: [PageTemplatesComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

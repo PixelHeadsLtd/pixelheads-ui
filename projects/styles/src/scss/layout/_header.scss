@@ -1,5 +1,9 @@
 header.page-header:not(header .blade) {
   background-color: _colour(trans-blue-to-grey);
+  background-image: url("#{$logo-path}anglo-american-logo-white.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 8.5rem;
   box-sizing: border-box;
   padding: 0 1.5rem;
   position: fixed;
@@ -126,8 +130,9 @@ header.page-header:not(header .blade) {
 }
 
 // mobile
-@media screen and (max-width: _breakpoint(breakpoint-50rem)) {
+@media screen and (max-width: _breakpoint(breakpoint-720)) {
   header.page-header {
+    background-image: none!important;
     .aa-logo {
       display: none;
     }

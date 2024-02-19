@@ -1,5 +1,5 @@
-import { OnInit } from '@angular/core';
-export declare class FieldComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class FieldComponent {
     fieldId: string;
     fieldLabel: string;
     fieldClass: string;
@@ -7,6 +7,6 @@ export declare class FieldComponent implements OnInit {
     buttonClass: string;
     readOnly: boolean;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FieldComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FieldComponent, "aa-field", never, { "fieldId": { "alias": "fieldId"; "required": false; }; "fieldLabel": { "alias": "fieldLabel"; "required": false; }; "fieldClass": { "alias": "fieldClass"; "required": false; }; "inputValue": { "alias": "inputValue"; "required": false; }; "buttonClass": { "alias": "buttonClass"; "required": false; }; "readOnly": { "alias": "readOnly"; "required": false; }; }, {}, never, never, false, never>;
 }
-//# sourceMappingURL=field.component.d.ts.map

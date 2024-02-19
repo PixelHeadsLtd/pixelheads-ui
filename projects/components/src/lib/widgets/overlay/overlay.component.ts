@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-overlay',
@@ -6,10 +6,10 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./overlay.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class OverlayComponent implements OnInit {
+export class OverlayComponent {
 
-  @Input() zIndex: number;
-  @Input() showOverlay: boolean;
+  @Input() zIndex: number = 0;
+  @Input() showOverlay: boolean = false;
   @Input() topPos: any;
   @Input() rightPos: any;
   @Input() bottomPos: any;
@@ -18,8 +18,5 @@ export class OverlayComponent implements OnInit {
   @Input() maxWidth: any;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

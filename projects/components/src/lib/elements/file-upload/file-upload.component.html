@@ -10,8 +10,20 @@
         value="{{fileUploadValue}}"
         title="{{fileUploadName}}"
       >
-      <div class="file-upload-graphic">
+      <div 
+        *ngIf="!customButton" 
+        class="file-upload-graphic"
+      >
         <div>{{fileUploadText}}</div>
+      </div>
+      <div 
+        *ngIf="customButton" 
+        class="custom-file-upload-graphic {{bgColor}}"
+      >
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons margin-right-0-25 {{textColor}}">{{iconName}}</div>
+          <div class="{{textColor}}">{{fileUploadText}}</div>
+        </div>
       </div>
     </div>
     <div 
@@ -19,7 +31,7 @@
       title="{{ fileUploadName }}"
       class="file-upload-name italic"
       [ngClass]="{'ellipsis' : truncateFileName}"
-      [ngStyle]="{'max-width' : truncateWidth+'rem'}"
+      [ngStyle]="{'max-width' : truncateWidth}"
       >
       {{ fileUploadName }}
     </div>

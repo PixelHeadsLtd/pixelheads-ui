@@ -1,4 +1,4 @@
 export interface FeedbackEvent {
-    rating: number;
-    comments: string;
+    rating: number | null;
+    comments: string | null | undefined;
 }

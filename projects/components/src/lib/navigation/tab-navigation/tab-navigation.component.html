@@ -1,4 +1,3 @@
-
 <!-- ROUTER-OUTLET ONLY -->
 <nav *ngIf="routerOutlet" class="tab-navigation">
   <ul>
@@ -11,17 +10,37 @@
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li [ngClass]="{ 'tab-disabled' : tab.tabDisabled }">
-        <a 
-          *ngIf="!tab.tabDisabled" 
-          class="flex-group flex-align-center flex-start"
-          [id]="tab.tabId" 
-          [class.active]="isActive(tab)" 
+        <a
+          *ngIf="!tab.tabDisabled"
+          class="flex-group flex-align-center flex-start {{tab.textColour}}"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
           (click)="onTabClicked(tab)"
         >
           {{ tab.tabName }}
-          <span *ngIf="tab.enableIcons" class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
+          <span class="tab-tooltip flex-align-center" *ngIf="tab.enableIcons">
+            <span class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
+            <span 
+              *ngIf="tab.enableTooltip" 
+              class="aa-tooltip position-fixed z-index-10"
+              [ngStyle]="{
+                'margin-left' : tab.tooltipXPos,
+                'margin-top' : tab.tooltipYPos
+              }"
+            >
+              <span 
+                class="feature-box {{tab.iconColour}}"
+                [ngStyle]="{
+                  'min-width' : tab.tooltipWidth
+                }"
+              >
+                <h3 class="nowrap {{tab.iconColour}}">{{tab.tabTooltipTitle}}</h3>
+                <p>{{tab.tabTooltipBody}}</p>
+              </span>
+            </span>
+          </span>
           <span *ngIf="tab.enableCount" class="tab-count {{tab.countColour}}">{{tab.tabCount}}</span>
-          <a *ngIf="tab.enableClose" (click)="onCloseTab($event, tab.tabId)"  class="anchor-close"></a>
+          <a *ngIf="tab.enableClose" (click)="onCloseTab($event, tab.tabId)"  class="anchor-close {{tab.closeColour}}"></a>
         </a>
         <span *ngIf="tab.tabDisabled">
           {{ tab.tabName }}
@@ -57,7 +76,7 @@
       </ng-container>
     </ul>
   </nav>
-  
+
   <ng-container *ngIf="displayTabContent && currentTab">
     <ng-template *ngTemplateOutlet="currentTab.templateRef"></ng-template>
   </ng-container>

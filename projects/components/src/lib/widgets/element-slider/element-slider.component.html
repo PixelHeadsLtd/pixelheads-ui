@@ -1,0 +1,25 @@
+<section class="
+    element-slider
+    flex-group 
+    flex-end 
+    position-relative"
+>
+    <button 
+        class="
+            secondary 
+            material-icons 
+            slider-button 
+            animate-normal
+        "
+        (click)="toggleSlider()"
+        [ngClass]="{ 'rotate-180' : openSlider }"
+    >
+        chevron_left
+    </button>
+    <div 
+        class="position-absolute animate-normal slider-content"
+        [ngClass]="{ 'slider-open' : openSlider }"
+    >
+        <ng-content></ng-content>
+    </div>
+</section>

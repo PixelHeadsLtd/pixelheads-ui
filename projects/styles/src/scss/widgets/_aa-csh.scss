@@ -1,3 +1,37 @@
+quill-editor {
+    width: 100%;
+    .ql-container {
+        font-family: _font(family-regular);
+        min-height: 10rem;
+    }
+
+    .ql-toolbar.ql-snow {
+        border-radius: .5rem .5rem 0 0;
+        background-color: _colour(aa-light-blue-5);
+    }
+
+    .ql-container.ql-snow {
+        border-radius: 0 0 .5rem .5rem;
+        background-color: _colour(aa-white-100);
+    }
+
+    .ql-snow {
+        z-index: 9999;
+        .ql-picker.ql-expanded {
+            .ql-picker-options {
+                z-index: 99999999;
+            }
+        }
+        .ql-tooltip {
+            left: .5rem!important;
+            top: 0!important;
+            input[type=text] {
+                width: auto
+            }
+        }
+    }
+}
+
 // Always show on the left for Blades
 .blade {
     .csh-container {
@@ -17,6 +51,8 @@
         }
     }
 }
+
+
 
 .accordion-fancy-panel {
     .csh-container {
@@ -77,26 +113,6 @@
             margin: -.5rem 0 0 -.25rem!important;
         }
     }
-
-
-    // aa-button,
-    // aa-button[fieldclass="label-transparent"] {
-    //     + .aa-csh {
-    //         margin-top: 2.5rem
-    //     }
-    // }
-
-    // aa-button[fieldclass="label-transparent boxed"] {
-    //     + .aa-csh {
-    //         margin-top: 1.5rem
-    //     }
-    // }
-
-    // aa-button[fieldclass="label-hidden"] {
-    //     + .aa-csh {
-    //         margin-top: 1.25rem
-    //     }
-    // }
 
     .aa-csh {
         position: relative;

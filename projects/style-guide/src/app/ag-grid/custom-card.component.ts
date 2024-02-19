@@ -18,8 +18,8 @@ import { ITooltipParams } from 'ag-grid-community';
           <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png">
         </section>
         <section>
-          <h3 class="margin-top-0-5" title="Obi-Wan">{{data.athlete}}</h3>
-          <p title="Jedi Master">{{data.sport}}</p>
+          <h3 class="margin-top-0-5" title="Obi-Wan">{{data?.athlete}}</h3>
+          <p title="Jedi Master">{{data?.sport}}</p>
           <div class="aa-toolbar flex-group space-between">
               <div>&nbsp;</div>
               <div class="flag gb margin-right-0-5"></div>
@@ -40,11 +40,12 @@ import { ITooltipParams } from 'ag-grid-community';
   ],
 })
 export class CustomCardComponent implements ITooltipAngularComp {
-  params: {
-    } & ITooltipParams;
+  params: ({} & ITooltipParams) | undefined;
   data: any;
-  agInit(params: {
-    } & ITooltipParams): void {
-    this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;
+  agInit(params: {} & ITooltipParams): void {
+    if(params?.rowIndex)
+    {
+      this.data = params.api.getDisplayedRowAtIndex(params.rowIndex)?.data;
+    }
   }
 }

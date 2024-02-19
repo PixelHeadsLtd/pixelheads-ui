@@ -1,5 +1,12 @@
-a:not(.nav-core a, .tab-navigation a, .context-menu a), a.icon-info {
-  color: _colour(trans-light-blue-to-blue-light); // don't make this important or it breaks the header
+a:not(
+  .tab-navigation-info a, 
+  .nav-core a, 
+  .tab-navigation a, 
+  .context-menu a, 
+  .nav-link, 
+  a.icon-info,
+  .feature a) {
+  color: _colour(trans-light-blue-to-blue-light);
   font-size: _font(size-default);
   text-decoration: underline;
 

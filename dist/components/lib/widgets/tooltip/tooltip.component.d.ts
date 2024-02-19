@@ -1,5 +1,6 @@
-import { OnInit, EventEmitter } from '@angular/core';
-export declare class TooltipComponent implements OnInit {
+import { EventEmitter } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class TooltipComponent {
     setMinWidth: any;
     setMaxWidth: any;
     isSuccess: boolean;
@@ -26,10 +27,10 @@ export declare class TooltipComponent implements OnInit {
     showTooltipOnClick: boolean;
     showTooltipOnHover: boolean;
     tooltipClicked: boolean;
-    tooltipBtnText: boolean;
+    tooltipBtnText: string;
     buttonClick: EventEmitter<Event>;
     onButtonClick(e: Event): void;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipComponent, "aa-tooltip", never, { "setMinWidth": { "alias": "setMinWidth"; "required": false; }; "setMaxWidth": { "alias": "setMaxWidth"; "required": false; }; "isSuccess": { "alias": "isSuccess"; "required": false; }; "isInfo": { "alias": "isInfo"; "required": false; }; "isWarning": { "alias": "isWarning"; "required": false; }; "includeLabel": { "alias": "includeLabel"; "required": false; }; "includeLegend": { "alias": "includeLegend"; "required": false; }; "labelName": { "alias": "labelName"; "required": false; }; "isError": { "alias": "isError"; "required": false; }; "xpos": { "alias": "xpos"; "required": false; }; "ypos": { "alias": "ypos"; "required": false; }; "customIcon": { "alias": "customIcon"; "required": false; }; "iconName": { "alias": "iconName"; "required": false; }; "zIndex": { "alias": "zIndex"; "required": false; }; "labelFor": { "alias": "labelFor"; "required": false; }; "showAsAnchor": { "alias": "showAsAnchor"; "required": false; }; "tooltipAnchor": { "alias": "tooltipAnchor"; "required": false; }; "preventAnchorWrapping": { "alias": "preventAnchorWrapping"; "required": false; }; "showAsButton": { "alias": "showAsButton"; "required": false; }; "buttonText": { "alias": "buttonText"; "required": false; }; "buttonId": { "alias": "buttonId"; "required": false; }; "buttonClass": { "alias": "buttonClass"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "showTooltipOnClick": { "alias": "showTooltipOnClick"; "required": false; }; "showTooltipOnHover": { "alias": "showTooltipOnHover"; "required": false; }; "tooltipClicked": { "alias": "tooltipClicked"; "required": false; }; "tooltipBtnText": { "alias": "tooltipBtnText"; "required": false; }; }, { "buttonClick": "buttonClick"; }, never, ["*"], false, never>;
 }
-//# sourceMappingURL=tooltip.component.d.ts.map

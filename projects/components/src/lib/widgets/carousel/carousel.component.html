@@ -1,19 +1,20 @@
-<section 
-    class="flex-group flex-center {{customClass}}"
+<section
+    class="flex-group flex-center {{customClass}} position-relative"
     [ngStyle]="{'width' : carouselOuterWidth}"
 >
-    <div 
-        class="aa-carousel" 
+    <span class="carousel-count">{{currentSlide + 1}} of {{items?.length}}</span>
+    <div
+        class="aa-carousel"
         [ngStyle]="{
             'width' : carouselInnerWidth,
             'height' : carouselInnerHeight
         }"
     >
         <div class="aa-carousel-content flex-group flex-nowrap" #carousel>
-            <div 
+            <div
                 aaCarouselSlide
-                *ngFor="let item of items;" 
-                class="carousel-item {{carouselItemBgColour}}" 
+                *ngFor="let item of items;"
+                class="aa-carousel-item {{carouselItemBgColour}}"
                 [ngStyle]="{
                     'min-width' : carouselItemWidth,
                     'padding' : carouselItemPadding
@@ -25,17 +26,19 @@
     </div>
 </section>
 <footer class="aa-carousel-footer flex-group flex-center">
-    <button 
+    <button
         (click)="prev()"
-        class="{{prevBtnColour}} material-icons" 
-        type="button" 
+        class="{{prevBtnColour}} material-icons"
+        [ngClass]="{'disable-first' : firstSlide}"
+        type="button"
         >
         <span>{{prevBtnIcon}}</span>
     </button>
-    <button 
+    <button
         (click)="next()"
-        class="{{nextBtnColour}} material-icons" 
-        type="button" 
+        class="{{nextBtnColour}} material-icons"
+        [ngClass]="{'disable-last' : lastSlide}"
+        type="button"
         >
         <span>{{nextBtnIcon}}</span>
     </button>

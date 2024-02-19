@@ -29,20 +29,19 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/components/src/test.ts",
-            "tsConfig": "projects/components/tsconfig.spec.json",
-            "karmaConfig": "projects/components/karma.conf.js"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/components/tsconfig.spec.json"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/components/tsconfig.lib.json",
-              "projects/components/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/components/**/*.ts",
+              "projects/components/**/*.html"
             ]
           }
         }
@@ -70,9 +69,22 @@
             ],
             "styles": [
               "projects/styles/src/scss/styles.scss",
-              "projects/style-guide/src/styles.scss"
+              "projects/style-guide/src/styles.scss",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.snow.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/quill/dist/quill.min.js",
+              "./node_modules/postscribe/dist/postscribe.min.js"
+            ],
+            "aot": true,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -98,52 +110,46 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "style-guide:build"
+            "buildTarget": "style-guide:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "style-guide:build:production"
+              "buildTarget": "style-guide:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "style-guide:build"
+            "buildTarget": "style-guide:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/style-guide/src/test.ts",
-            "polyfills": "projects/style-guide/src/polyfills.ts",
-            "tsConfig": "projects/style-guide/tsconfig.spec.json",
-            "karmaConfig": "projects/style-guide/karma.conf.js",
-            "styles": [
-              "projects/styles/src/scss/styles.scss"
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
             ],
-            "scripts": [],
-            "assets": [
-              "projects/style-guide/src/favicon.ico",
-              "projects/style-guide/src/assets",
-              "projects/style-guide/src/data.json"
-            ]
+            "scripts": [
+              "./node_modules/quill/dist/quill.min.js",
+              "./node_modules/postscribe/dist/postscribe.min.js"
+            ],
+            "tsConfig": "projects/style-guide/tsconfig.spec.json"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/style-guide/tsconfig.app.json",
-              "projects/style-guide/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/style-guide/**/*.ts",
+              "projects/style-guide/**/*.html"
             ]
           }
         }

@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SelectComponent } from './select.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('SelectComponent', () => {
   let component: SelectComponent;
   let fixture: ComponentFixture<SelectComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ SelectComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [SelectComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SelectComponent);

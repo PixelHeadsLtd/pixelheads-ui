@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckboxComponent {
 
-  myCheckboxes: string;
-  showCheckbox: boolean;
-  showCheckboxFeature: boolean;
-  toggleBlade: boolean;
+  myCheckboxes?: string;
+  showCheckbox: boolean = false;
+  showCheckboxFeature: boolean = false;
+  toggleBlade: boolean = false;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

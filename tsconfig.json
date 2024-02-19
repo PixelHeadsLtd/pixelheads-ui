@@ -1,29 +1,37 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
-  "angularCompilerOptions": {
-    "enableIvy": false
-  },
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "module": "es2020",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "ES2022",
+    "module": "ES2020",
+    "useDefineForClassFields": false,
     "lib": [
-      "es2018",
+      "ES2020",
       "dom"
     ],
     "paths": {
       "@angloamerican/components": [ "dist/components" ],
       "@angloamerican/components/*": [ "dist/components/*" ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   }
 }

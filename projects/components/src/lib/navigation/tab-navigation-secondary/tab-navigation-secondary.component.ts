@@ -6,26 +6,25 @@ import { TabNavigationSecondaryItemComponent } from '../tab-navigation-secondary
   templateUrl: './tab-navigation-secondary.component.html',
   styleUrls: ['./tab-navigation-secondary.component.scss']
 })
-export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit {
-  @ContentChildren(TabNavigationSecondaryItemComponent) tabNavigationItems: QueryList<TabNavigationSecondaryItemComponent>;
+export class TabNavigationSecondaryComponent implements AfterContentInit {
+  @ContentChildren(TabNavigationSecondaryItemComponent) tabNavigationItems?: QueryList<TabNavigationSecondaryItemComponent>;
   @Input() autoChangeTabs = true;
   @Input() displayTabContent = true;
-  @Input() routerOutletSecondary: boolean;
-  @Input() ngTemplate: boolean;
+  @Input() routerOutletSecondary: boolean = false;
+  @Input() ngTemplate: boolean = false;
   @Input() tabColour: any;
   @Input() tabActiveColour: any;
   @Output() tabClicked = new EventEmitter<TabNavigationSecondaryItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationSecondaryItemComponent>();
   @Output() closeTabSecondary = new EventEmitter<any>();
-  currentTab: TabNavigationSecondaryItemComponent;
+  currentTab?: TabNavigationSecondaryItemComponent;
 
   get contentTabs() {
     return this.tabNavigationItems?.filter((tabNavigationItem: TabNavigationSecondaryItemComponent) => !!tabNavigationItem.templateRef);
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
 
   ngAfterContentInit() {
     if (this.contentTabs && this.contentTabs[0]) {
@@ -34,12 +33,11 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   }
 
   isActive(tab: TabNavigationSecondaryItemComponent) {
-    return this.currentTab.tabName === tab.tabName;
+    return this.currentTab?.tabName === tab.tabName;
   }
 
   onTabClicked(tab: TabNavigationSecondaryItemComponent) {
     this.tabClicked.emit(tab);
-
     if (this.autoChangeTabs) {
       this.changeTab(tab);
     }
@@ -51,7 +49,7 @@ export class TabNavigationSecondaryComponent implements OnInit, AfterContentInit
   }
 
   changeTabById(tabId: string) {
-    const tab = this.contentTabs.find((x) => x.tabId === tabId);
+    const tab = this.contentTabs?.find((x) => x.tabId === tabId);
     if (tab) {
       this.changeTab(tab);
     }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UiBlockComponent } from './ui-block.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('UiBlockComponent', () => {
   let component: UiBlockComponent;
@@ -8,9 +8,9 @@ describe('UiBlockComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UiBlockComponent ]
-    })
-    .compileComponents();
+      declarations: [UiBlockComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

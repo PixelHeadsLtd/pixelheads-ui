@@ -1,6 +1,6 @@
 // 28/9/2020 Upgraded to v24.0.0 - see https://www.ag-grid.com/javascript-grid-themes-v23-migration/
-@import '~ag-grid-community/dist/styles/ag-grid.css';
-@import '~ag-grid-community/dist/styles/ag-theme-balham.css';
+@import '~ag-grid-community/styles/ag-grid.css';
+@import '~ag-grid-community/styles/ag-theme-balham.css';
 @import './typography/fonts';
 @import './elements/scrollbars';
 
@@ -12,7 +12,7 @@ body {
   letter-spacing: .015rem!important;
   font-size: 13px!important;
   margin: 0!important;
-  
+
   // for showing header-secondary
   &.light-mode.show-header-secondary,
   &.dark-mode.show-header-secondary,
@@ -23,7 +23,7 @@ body {
       top: 3.45rem;
       width: 100%;
     }
-    
+
     // New for 'Angular Elements' and using the new Left navigation
     main.main-content {
       padding-top: 7rem!important;
@@ -47,7 +47,6 @@ body {
     @import './lib/functions';
     @import './lib/vars';
     @import './lib/elements-dark';
-    @import './widgets/anglo-framework';
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
     @import 'style-imports';
@@ -61,12 +60,11 @@ body {
     @import './lib/functions';
     @import './lib/vars';
     @import './lib/elements-light';
-    @import './widgets/anglo-framework';
     @import './lib/ag-theme-anglo-vars';
     @import './widgets/ag-grid';
     @import 'style-imports';
     background-color: _colour(aa-grey-2);
     color: _colour(aa-grey-100);
     min-width: _breakpoint(breakpoint-320);
-  }    
+  }
 }

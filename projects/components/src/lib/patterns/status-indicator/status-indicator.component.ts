@@ -8,11 +8,11 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 })
 export class StatusIndicatorComponent {
 
-  @Input() iconClass: string;
-  @Input() iconTitle: string;
-  @Input() iconName: string;
-  @Input() iconStatus: string;
-  @Input() removeLine: boolean;
-  @Input() currentStatus: Array<object>;
+  @Input() iconClass: string = '';
+  @Input() iconTitle: string = '';
+  @Input() iconName: string = '';
+  @Input() iconStatus: string = '';
+  @Input() removeLine: boolean = false;
+  @Input() currentStatus: Array<any> = [];
 
 }

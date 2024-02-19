@@ -1,50 +1,55 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-progress-bar',
   templateUrl: './progress-bar.component.html',
   styleUrls: ['./progress-bar.component.scss']
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
 
-  toggleBlade: boolean;
-  progress: number;
-  
+  toggleBlade: boolean = false;
+  progress: number = 0;
+  i: number = 0;
+
   constructor() { }
 
-  i:number = 0;
-
-   moveHeaderProgressBar() {
+  moveHeaderProgressBar() {
     if (this.i == 0) {
       this.i = 0;
+      let context = this;
       let elem = document.getElementById("headerProgressBar");
       let width = 0;
       let id = setInterval(frame, 50);
       function frame() {
         if (width >= 100) {
           clearInterval(id);
-          this.i = 0;
+          context.i = 0;
         } else {
           width++;
-          elem.style.width = width + "%";
+          if (elem) {
+            elem.style.width = width + "%";
+          }
         }
       }
     }
   }
 
-   moveProgressBar() {
+  moveProgressBar() {
     if (this.i == 0) {
       this.i = 0;
+      let context = this;
       let elem = document.getElementById("progressBar");
       let width = 0;
       let id = setInterval(frame, 50);
       function frame() {
         if (width >= 100) {
           clearInterval(id);
-          this.i = 0;
+          context.i = 0;
         } else {
           width++;
-          elem.style.width = width + "%";
+          if (elem) {
+            elem.style.width = width + "%";
+          }
         }
       }
     }
@@ -53,8 +58,4 @@ export class ProgressBarComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

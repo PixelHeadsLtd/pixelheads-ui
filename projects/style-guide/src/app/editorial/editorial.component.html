@@ -1,63 +1,81 @@
 <section class="control-bar">
-    <h1>Editorial content</h1>
+  <h1>Editorial content</h1>
+</section>
+
+<section class="content-container padding-0">
+  <section class="content-repeater">
+    <article class="flex-group flex-start">
+      <article class="min-width-9">
+        <h2>Unordered list</h2>
+        <ul>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </article>
+      <article class="min-width-9">
+        <h2>Ordered list</h2>
+        <ol>
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ol>
+      </article>
+      <article class="min-width-9">
+        <h2>Arrow list</h2>
+        <ul class="list-arrows primary">
+          <li>List item</li>
+          <li>List item</li>
+          <li>List item</li>
+        </ul>
+      </article>
+    </article>
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
   </section>
-  
-  <section class="content-container">
-      <article class="max-width-40">
-        <h2 class="boxed">Editorial content</h2>
-        <div class="describe">
-          <p>
-            Use `.describe` for description text
-          </p>
-          <p class="margin-top-0-5">
-            To stack list horizontally, Use <a routerLink="/flex">flex-group flex-start</a> and set a <a routerLink="/widths">min-width</a> on each group if required. <br/>
-            Alternatively add the class `editorial-content` to each list or list wrapper.
-          </p>
-        </div>
-        <p>The Robin appeared to understand the matter thoroughly. It kept going from tree to tree, always a few yards
-          ahead
-          of them but always so near that they could easily follow it. In this way it led them on, slightly down hill.
-          Wherever the Robin alighted a little shower of snow would fall off the branch. </p>
-        <p>Presently the clouds parted
-          overhead and the winter sun came out and the snow all around them grew dazzlingly bright. They had been
-          travelling in this way for about half an hour, with the two girls in front, when Edmund said to Peter, "If
-          you're not still too high and mighty to talk to me, I've something to say which you'd better listen to."</p>
-      </article>
-      <!--  <app-gist src="angloux/855337e9e0713261361f5dea2549f971"></app-gist>-->
-    
-      <article class="flex-group flex-start">
-        <article class="min-width-16">
-          <h2>Unordered list</h2>
-          <ul>
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
-        </article>
-        <article class="min-width-16">
-          <h2>Ordered list</h2>
-          <ol>
-            <li>List item</li>
-            <li>List item that is a bit longer and may wrap</li>
-            <li>List item</li>
-          </ol>
-        </article>
-        <article class="min-width-16">
-          <h2>Arrow list</h2>
-          <ul class="list-arrows primary">
-            <li>List item</li>
-            <li>List item</li>
-            <li>List item</li>
-          </ul>
-        </article>
-      </article>
-    
-      <article class="max-width-40">
-        <h2>Feature paragraph</h2>
-        <div class="describe">Make a paragraph stand out with .feature.</div>
-        <p class="feature">"Nothing there!" said Peter, and they all trooped out again—all except Lucy. She stayed
-          behind because she thought it would be worth while trying the door of the wardrobe, even though she felt almost
-          sure that it would be locked. To her surprise it opened quite easily, and two moth-balls dropped out.</p>
-      </article>
-      <app-gist src="angloux/018c92a2a070f216c78704a4cf4f9fbb"></app-gist>
+  <section class="content-repeater">
+    <article class="min-width-9">
+      <h2>Description list</h2>
+      <dl>
+        <dt>DL title</dt>
+        <dd>DL description</dd>
+        <dt>DL title longer</dt>
+        <dd>DL description</dd>
+        <dt>DL title longer still</dt>
+        <dd>DL description</dd>
+      </dl>
+    </article>
   </section>
+  <section class="content-repeater">
+    <article class="max-width-40">
+      <h2>Feature paragraph</h2>
+      <div class="describe">Make a paragraph stand out with .feature.</div>
+      <p class="feature">"Nothing there!" said Peter, and they all trooped out again—all except Lucy. She stayed
+        behind because she thought it would be worth while trying the door of the wardrobe, even though she felt almost
+        sure that it would be locked. To her surprise it opened quite easily, and two moth-balls dropped out.</p>
+    </article>
+  </section>
+
+  <aa-blade
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+    >
+    <article class="blade-content">
+      <a href="https://gist.github.com/angloux/5624517ec7906c834bb5ad96ec916915" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/5624517ec7906c834bb5ad96ec916915"></app-gist>
+    </article>
+  </aa-blade>
+
+</section>

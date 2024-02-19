@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { StatusIndicatorComponent } from './status-indicator.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('StatusIndicatorComponent', () => {
   let component: StatusIndicatorComponent;
@@ -8,9 +8,9 @@ describe('StatusIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StatusIndicatorComponent ]
-    })
-    .compileComponents();
+      declarations: [StatusIndicatorComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

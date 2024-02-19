@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TabPageFourComponent } from './tab-page-four.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('TabPageFourComponent', () => {
   let component: TabPageFourComponent;
@@ -8,9 +8,9 @@ describe('TabPageFourComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TabPageFourComponent ]
-    })
-    .compileComponents();
+      declarations: [TabPageFourComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

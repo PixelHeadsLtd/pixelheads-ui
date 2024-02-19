@@ -8,11 +8,11 @@
     <section class="flex-1 col-left flex-start">
       <h2>User feedback</h2>
       <div class="describe margin-bottom-1">
-        <p>The user feedback component has already been implemented in Core so this is 
+        <p>The user feedback component has already been implemented in Core so this is
             just to demonstrate its functionality.
         </p>
       </div>
-      <button 
+      <button
         (click)="toggleUserFeedback = !toggleUserFeedback"
         class="custom-icons light-blue"
         >
@@ -97,7 +97,7 @@
       <button class="custom-icons bg-aa-light-blue-100" (click)="copyToClipboard(userFeedbackHTML)">
         <span class="material-icons">content_copy</span><span>Copy component</span>
       </button>
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -105,16 +105,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <a href="https://gist.github.com/angloux/622491eeefb2c06da85f8bb3e9abf321" target="_blank">View Gist on GitHub</a>

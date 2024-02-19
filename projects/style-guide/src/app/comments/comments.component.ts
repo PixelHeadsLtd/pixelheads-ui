@@ -6,9 +6,9 @@ import { CommentArray } from 'projects/components/src/lib/elements/comments/comm
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.scss']
 })
-export class CommentsComponent implements OnInit {
+export class CommentsComponent {
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
   userName: string = 'Michael King';
   commentsArray: CommentArray[] = [];
 
@@ -16,7 +16,5 @@ export class CommentsComponent implements OnInit {
     this.toggleBlade = open;
   }
 
-  ngOnInit(): void {
-  }
 
 }

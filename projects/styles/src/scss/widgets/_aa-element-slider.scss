@@ -1,0 +1,20 @@
+.element-slider {
+    overflow: hidden;
+    min-height: 4rem;
+    .slider-button {
+        position: relative;
+        margin: 1.5rem 0 0 0;
+        z-index: 1;
+    }
+
+    .slider-content {
+        position: absolute;
+        right: -100%;
+        opacity: 0;
+
+        &.slider-open {
+            right: 3rem;
+            opacity: 1;
+        }
+    }
+}

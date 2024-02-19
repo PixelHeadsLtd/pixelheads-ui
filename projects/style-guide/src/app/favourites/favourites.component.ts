@@ -1,21 +1,21 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.component.html',
   styleUrls: ['./favourites.component.scss']
 })
-export class FavouritesComponent implements OnInit {
+export class FavouritesComponent {
 
   @Output() favClick = new EventEmitter();
-  toggleBlade: boolean;
-  showMore: boolean;
-  isActiveTwo: boolean;
-  toggleFavourite: boolean;
-  clickAnchor: boolean;
-  showFavourites: boolean;
-  showDashboardFavourites: boolean;
+  toggleBlade: boolean = false;
+  showMore: boolean = false;
+  isActiveTwo: boolean = false;
+  toggleFavourite: boolean = false;
+  clickAnchor: boolean = false;
+  showFavourites: boolean = false;
+  showDashboardFavourites: boolean = false;
   isFavourite: boolean = false;
-  showFavHeading: boolean;
+  showFavHeading: boolean = false;
 
   constructor() { }
 
@@ -39,6 +39,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAS | Copper Concentrate',
       favTextLineThree: '',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-green-15',
@@ -47,6 +48,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAML.Cu | Copper Concentrate',
       favTextLineThree: '',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-orange-10',
@@ -55,6 +57,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAL.CuA | Copper Concentrate',
       favTextLineThree: '',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-light-blue-15',
@@ -63,6 +66,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'IO.AMML_Ni | Nickel',
       favTextLineThree: '',
+      isFavourite: false
     }
   ];
 
@@ -74,6 +78,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAS',
       favTextLineThree: 'Copper Concentrate',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-green-15',
@@ -82,6 +87,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAML.Cu',
       favTextLineThree: 'Copper Concentrate',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-orange-10',
@@ -90,6 +96,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'BM.AAL.CuA',
       favTextLineThree: 'Copper Concentrate',
+      isFavourite: false
     },
     {
       favColour: 'bg-aa-light-blue-15',
@@ -98,6 +105,7 @@ export class FavouritesComponent implements OnInit {
       favTextLineOne: 'Base Metals',
       favTextLineTwo: 'IO.AMML_Ni',
       favTextLineThree: 'Nickel',
+      isFavourite: false
     }
   ];
 
@@ -110,6 +118,7 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     },
     {
       materialIcons: true,
@@ -119,6 +128,7 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     },
     {
       materialIcons: false,
@@ -128,6 +138,7 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     },
     {
       materialIcons: false,
@@ -137,6 +148,7 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     },
     {
       materialIcons: false,
@@ -146,6 +158,7 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     },
     {
       materialIcons: false,
@@ -155,13 +168,9 @@ export class FavouritesComponent implements OnInit {
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
       lastViewed: '20 Apr 2020',
+      isFavourite: false
     }
   ];
-  
-
-  ngOnInit() {
-  }
-
 }
 
 

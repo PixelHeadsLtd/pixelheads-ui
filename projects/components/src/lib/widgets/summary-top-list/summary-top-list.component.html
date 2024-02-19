@@ -1,4 +1,11 @@
-<div class="dl-repeater" [ngClass]="{'highlight' : highlight, 'truncate-text' : truncate}">
-  <dt title="{{itemTitle}}" [ngStyle]="{'max-width' : maxWidth+'rem'}">{{itemTitle}}</dt>
-  <dd title="{{itemDescription}}" [ngStyle]="{'max-width' : maxWidth+'rem'}">{{itemDescription}}</dd>
+<div 
+  class="dl-repeater" 
+  [ngClass]="{
+    'highlight' : highlight, 
+    'truncate-text' : truncate,
+    'divider' : divider
+  }"
+>
+  <dt title="{{itemTitle}}" [ngStyle]="{'max-width' : maxWidth}">{{itemTitle}}</dt>
+  <dd title="{{itemDescription}}" [ngStyle]="{'max-width' : maxWidth}">{{itemDescription}}</dd>
 </div>

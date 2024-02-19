@@ -1,6 +1,6 @@
-import { OnInit } from '@angular/core';
-export declare class BladeFooterComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class BladeFooterComponent {
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<BladeFooterComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<BladeFooterComponent, "aa-blade-footer", never, {}, {}, never, ["*"], false, never>;
 }
-//# sourceMappingURL=blade-footer.component.d.ts.map

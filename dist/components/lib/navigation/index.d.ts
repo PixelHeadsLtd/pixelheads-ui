@@ -12,4 +12,3 @@ export * from './tab-navigation-secondary-item/tab-navigation-secondary-content.
 export * from './tab-navigation-item/tab-navigation-header-content.directive';
 export * from './tab-navigation-secondary/tab-navigation-secondary.component';
 export * from './tab-navigation-secondary-item/tab-navigation-secondary-item.component';
-//# sourceMappingURL=index.d.ts.map

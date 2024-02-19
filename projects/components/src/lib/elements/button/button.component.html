@@ -20,9 +20,9 @@
       'material-icons-outlined' : customIconsRoundOutlined
     }"
   >
-    <div *ngIf="!customIconsRound && !customIconsRoundOutlined" [ngClass]="{'display-inline-block' : customIcons}">
+    <div *ngIf="!customIconsRound && !customIconsRoundOutlined" class="flex-center">
       <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
-      <span>{{buttonText}}</span>
+      <span class="text-align-left">{{buttonText}}</span>
       <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>
     </div>
     <span *ngIf="customIconsRound || customIconsRoundOutlined">{{buttonIcon}}</span>

@@ -1,41 +1,42 @@
-<div 
+<div
   class="aa-custom-select"
-  [ngStyle]="{'width' : setWidth+'rem'}"
+  [ngStyle]="{'width' : setWidth}"
 >
-  <button 
+  <button
     class="
     border-radius-0-25
     flex-align-center"
     (click)="showDropdown=!showDropdown"
   >
-    <span 
+    <span
       class="
-      material-icons 
+      material-icons
       padding-right-0-5
-      {{ selectedOption?.iconColor || defaultIconColor }}"
-    >{{ selectedOption?.icon || defaultIcon }}
+      {{ selectedOption?.iconColor }}"
+    >{{ selectedOption?.icon }}
     </span>
 
-    <span *ngIf="!selectedOption?.display">{{ defaultName }}</span>
-    <span *ngIf="selectedOption?.display">{{ selectedOption?.display }}</span>
+    <span>{{ selectedOption?.display }}</span>
 
   </button>
-  <div 
-    [class.show-dropdown]="showDropdown" 
+
+  <!-- dropdown -->
+  <div
+    [class.show-dropdown]="showDropdown"
     class="aa-custom-select-dropdown box-shadow"
-    [ngStyle]="{'max-height' : maxHeight+'rem'}"
+    [ngStyle]="{'max-height' : maxHeight}"
   >
     <div *ngFor=" let option of options; let i = index">
-      <button 
-        (click)="optionIsSelected($event, option); setIndex(i)" 
+      <button
+        (click)="optionIsSelected($event, option); setIndex(i)"
         class="flex-align-center"
-        [class.selected]="selectedIndex === i"
+        [class.selected]="sIndex === i"
       >
-        <span 
+        <span
           *ngIf="option.showIcon"
           class="
-          material-icons 
-          padding-right-0-5 
+          material-icons
+          padding-right-0-5
           {{option.iconColor}}"
         >{{ option.icon }}</span>
           {{ option.display }}

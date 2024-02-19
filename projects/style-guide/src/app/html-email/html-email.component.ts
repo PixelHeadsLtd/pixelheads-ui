@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './html-email.component.html',
   styleUrls: ['./html-email.component.scss']
 })
-export class HtmlEmailComponent implements OnInit {
+export class HtmlEmailComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

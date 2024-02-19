@@ -6,13 +6,13 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
   styleUrls: ['./toastr-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ToastrItemComponent implements OnInit {
+export class ToastrItemComponent {
 
-  @Input() showToastr: boolean;
-  @Input() isError: boolean;
-  @Input() isWarning: boolean;
-  @Input() isSuccess: boolean;
-  @Input() isInfo: boolean;
+  @Input() showToastr: boolean = false;
+  @Input() isError: boolean = false;
+  @Input() isWarning: boolean = false;
+  @Input() isSuccess: boolean = false;
+  @Input() isInfo: boolean = false;
   @Input() heading: any;
   @Input() message: any;
 
@@ -24,8 +24,5 @@ export class ToastrItemComponent implements OnInit {
   }
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

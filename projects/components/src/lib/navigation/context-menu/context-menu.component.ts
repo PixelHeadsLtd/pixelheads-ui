@@ -6,21 +6,21 @@ import { ChangeDetectionStrategy, Component, Input, OnInit, HostListener, Elemen
   styleUrls: ['./context-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContextMenuComponent implements OnInit {
+export class ContextMenuComponent {
 
-  @Input() absolutePosition: boolean;
-  @Input() leftPos: number;
-  @Input() topPos: number;
-  @Input() rightPos: number;
-  @Input() zIndex: number;
-  @Input() minWidth: number;
-  @Input() showOnLeft: boolean;
-  showContextMenu: boolean; // now exposed as api and not property - more flexible
+  @Input() absolutePosition: boolean = false;
+  @Input() leftPos: any;
+  @Input() topPos: any;
+  @Input() rightPos: any;
+  @Input() zIndex: number = 0;
+  @Input() minWidth: any;
+  @Input() showOnLeft: boolean = false;
+  showContextMenu: boolean = false; // now exposed as api and not property - more flexible
 
   constructor(private elementRef: ElementRef) { }
 
   @HostListener('document:click', ['$event.target'])
-  public onClick(targetElement) {
+  public onClick(targetElement:any) {
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
     if (!clickedInside) {
         this.showContextMenu = false;
@@ -33,9 +33,6 @@ export class ContextMenuComponent implements OnInit {
 
   public close() {
     this.showContextMenu = false;
-  }
-
-  ngOnInit() {
   }
 
 }

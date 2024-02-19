@@ -25,14 +25,14 @@
 
         <section class="search-results" *ngIf="searchText.length">
           <ul class="padding-left-0">
-            <li 
-              *ngFor="let c of searchAnimations | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchAnimations | appFilter: searchText; let i = index"
               (click)="openAnimationsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchAnimations[i-1] || c.heading !== searchAnimations[i-1].heading"
                 class="width-100"
                 >
@@ -41,25 +41,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchElements | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchElements | appFilter: searchText; let i = index"
               (click)="openElementsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchElements[i-1] || c.heading !== searchElements[i-1].heading"
                 class="width-100"
               >
@@ -68,25 +68,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchLayout | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchLayout | appFilter: searchText; let i = index"
               (click)="openLayoutNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchLayout[i-1] || c.heading !== searchLayout[i-1].heading"
                 class="width-100"
                 >
@@ -95,25 +95,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchNavigation | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchNavigation | appFilter: searchText; let i = index"
               (click)="openNavigationNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchNavigation[i-1] || c.heading !== searchNavigation[i-1].heading"
                 class="width-100"
                 >
@@ -122,25 +122,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchPatterns | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchPatterns | appFilter: searchText; let i = index"
               (click)="openPatternsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchPatterns[i-1] || c.heading !== searchPatterns[i-1].heading"
                 class="width-100"
                 >
@@ -149,25 +149,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchWidgets | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchWidgets | appFilter: searchText; let i = index"
               (click)="openWidgetsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchWidgets[i-1] || c.heading !== searchWidgets[i-1].heading"
                 class="width-100"
                 >
@@ -176,25 +176,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchModifiers | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchModifiers | appFilter: searchText; let i = index"
               (click)="openModifiersNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchModifiers[i-1] || c.heading !== searchModifiers[i-1].heading"
                 class="width-100"
                 >
@@ -203,25 +203,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchTypography | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchTypography | appFilter: searchText; let i = index"
               (click)="openTypographyNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchTypography[i-1] || c.heading !== searchTypography[i-1].heading"
                 class="width-100"
                 >
@@ -230,25 +230,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index"
               (click)="openOtherWidgetsNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchThirdPartyComponents[i-1] || c.heading !== searchThirdPartyComponents[i-1].heading"
                 class="width-100"
                 >
@@ -257,25 +257,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index"
               (click)="openEmailTemplatesNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchEmailTemplates[i-1] || c.heading !== searchEmailTemplates[i-1].heading"
                 class="width-100"
                 >
@@ -284,25 +284,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchQandAs | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchQandAs | appFilter: searchText; let i = index"
               (click)="openQandANav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchQandAs[i-1] || c.heading !== searchQandAs[i-1].heading"
                 class="width-100"
                 >
@@ -311,25 +311,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchAddendum | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchAddendum | appFilter: searchText; let i = index"
               (click)="openAddendumNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchAddendum[i-1] || c.heading !== searchAddendum[i-1].heading"
                 class="width-100"
                 >
@@ -338,25 +338,25 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
-            <li 
-              *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index" 
+            <li
+              *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index"
               (click)="goToPageTemplatesNav()"
               class="flex-group flex-start flex-align-center cursor-pointer"
               routerLink="/{{c.link}}"
               id="{{c.id}}"
             >
-              <h2 
+              <h2
                 *ngIf="!searchPageTemplates[i-1] || c.heading !== searchPageTemplates[i-1].heading"
                 class="width-100"
                 >
@@ -365,14 +365,14 @@
               <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                 <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
               </div>
-              <a 
-                appHighlight 
-                [searchedWord]="searchText" 
+              <a
+                appHighlight
+                [searchedWord]="searchText"
                 [content]="
                   c.link.toString().split('-').join('\n')
-                " 
-                [classToApply]="'highlight'" 
-                [setTitle]="'false'"
+                "
+                [classToApply]="'highlight'"
+                [setTitle]="false"
                 >
               </a>
             </li>
@@ -382,8 +382,9 @@
       <section class="getting-started">
         <h2 class="margin-bottom-0-5 margin-top-1-25 force-yellow">What is Design Language?</h2>
         <p class="force-white max-width-30 margin-bottom-1-5">
-          Design Language is a bespoke component library for IM developers. Aside from our current allowed 3rd party components, 
-          it's mandatory to use this resource for IM project development rather than 3rd party components
+          Design Language is a mandatory resource for IM project development. Please do not use
+          any third-party components unless they are listed under the 'Third-party components'
+          section, found in the <span class="aa-yellow-100"><span class="fa-regular fa-hand-point-left"></span> left navigation menu </span>
         </p>
         <div class="margin-left-0-25 flex-group flex-start">
           <div>
@@ -393,7 +394,7 @@
               topPos="-1.75rem"
               rightPos="auto"
               leftPos="calc(100% + 1rem)"
-              zIndex="1"
+              [zIndex]="1"
               panelWidth="21rem"
               [arrowLeft]="true"
               arrowPos="2rem"
@@ -407,7 +408,7 @@
               <ng-container nested-component>
                 <aa-button
                   [customIcons]="true"
-                  (buttonClick)="bladeIsOpen($event); bladeHeading='Setting up Design Language'"
+                  (buttonClick)="bladeIsOpen(true); bladeHeading='Setting up Design Language'"
                   buttonId="buttonId"
                   buttonClass="custom-icons blue-sky hover-light-blue margin-bottom-0-5"
                   fieldClass="boxed"
@@ -416,9 +417,8 @@
                   buttonText="Set up Design Language"
                   buttonIcon="settings"
                   [showCount]="false"
-                  count="10"
-                  countColor="blue"
-                  disabled="">
+                  [count]="10"
+                  countColor="blue">
                 </aa-button>
               </ng-container>
               <ng-container tour-navigation>
@@ -434,7 +434,7 @@
               </ng-container>
             </aa-project-tour>
           </div>
-          
+
           <aa-button
             (buttonClick)="setTourCount(0)"
             [customIcons]="true"
@@ -443,8 +443,7 @@
             fieldClass="boxed label-hidden margin-bottom-1"
             buttonLabel="Custom icons"
             buttonText="Quick tour"
-            buttonIcon="school"
-            disabled="">
+            buttonIcon="school">
           </aa-button>
         </div>
       </section>
@@ -456,7 +455,7 @@
     <div class="features margin-bottom-2">
       <section class="flex-group flex-start">
         <nav class="margin-right-2">
-          <h3 
+          <h3
             class="
               bg-force-blue-sky
               force-white
@@ -467,13 +466,13 @@
           >
             Latest packages
           </h3>
-          <a 
-            (click)="showOverlay=!showOverlay; showReleaseNotes=true" 
+          <a
+            (click)="showOverlay=!showOverlay; showReleaseNotes=true"
             class="
-              cursor-pointer 
-              flex-group 
-              flex-start 
-              flex-align-center 
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
               decoration-none
               bg-aa-white-100
               padding-x-0-75
@@ -493,7 +492,7 @@
             topPos="-1.4rem"
             rightPos="calc(100% + 1.5rem)"
             leftPos="auto"
-            zIndex="1"
+            [zIndex]="1"
             panelWidth="20rem"
             [arrowRight]="true"
             arrowPos="2rem"
@@ -505,13 +504,13 @@
             "
           >
             <ng-container nested-component>
-              <a 
+              <a
                 href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank" class="anchor-small"
                 class="
-                  cursor-pointer 
-                  flex-group 
-                  flex-start 
-                  flex-align-center 
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
                   decoration-none
                   bg-aa-white-100
                   padding-x-0-75
@@ -524,13 +523,13 @@
                 <div class="material-icons small aa-pink-100 margin-right-0-5">star</div>
                 <span>Latest Styles</span>
               </a>
-              <a 
+              <a
                 href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank" class="anchor-small"
                 class="
-                  cursor-pointer 
-                  flex-group 
-                  flex-start 
-                  flex-align-center 
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
                   decoration-none
                   bg-aa-white-100
                   padding-x-0-75
@@ -543,13 +542,13 @@
                 <div class="material-icons small aa-blue-100 margin-right-0-5">star</div>
                 <span>Latest Components</span>
               </a>
-              <a 
+              <a
                 href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/versions" target="_blank" class="anchor-small"
                 class="
-                  cursor-pointer 
-                  flex-group 
-                  flex-start 
-                  flex-align-center 
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
                   decoration-none
                   bg-aa-white-100
                   padding-x-0-75
@@ -577,7 +576,7 @@
           </aa-project-tour>
         </nav>
         <nav>
-          <h3 
+          <h3
             class="
               bg-force-burgundy
               force-white
@@ -595,7 +594,7 @@
             topPos="-1.5rem"
             rightPos="calc(100% + 1.5rem)"
             leftPos="auto"
-            zIndex="1"
+            [zIndex]="1"
             panelWidth="20rem"
             [arrowRight]="true"
             arrowPos="2rem"
@@ -608,14 +607,14 @@
             "
           >
             <ng-container nested-component>
-              <a 
+              <a
                 routerLink="/page-templates"
                 (click)="goToPageTemplatesNav()"
                 class="
-                  cursor-pointer 
-                  flex-group 
-                  flex-start 
-                  flex-align-center 
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
                   decoration-none
                   bg-aa-white-100
                   padding-x-0-75
@@ -642,14 +641,14 @@
             </ng-container>
           </aa-project-tour>
 
-          <a 
+          <a
             routerLink="/flex"
             (click)="openLayoutNav()"
             class="
-              cursor-pointer 
-              flex-group 
-              flex-start 
-              flex-align-center 
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
               decoration-none
               bg-aa-white-100
               padding-x-0-75
@@ -663,13 +662,13 @@
             <span>Help using Flex</span>
           </a>
 
-          <a 
+          <a
             (click)="showOverlay=!showOverlay; showReleaseNotes=false; showSupportedBrowsers=true"
             class="
-              cursor-pointer 
-              flex-group 
-              flex-start 
-              flex-align-center 
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
               decoration-none
               bg-aa-white-100
               padding-x-0-75
@@ -683,13 +682,13 @@
             <span>Which browsers do we support?</span>
           </a>
 
-          <a 
+          <a
             href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank"
             class="
-              cursor-pointer 
-              flex-group 
-              flex-start 
-              flex-align-center 
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
               decoration-none
               bg-aa-white-100
               padding-x-0-75
@@ -721,8 +720,8 @@
     <div>
       <h3><strong class="number">1.</strong> Starting a new project?</h3>
       <p>
-        Design Language is a mandatory resource for building IM Marketing applications. There are a few exceptions 
-        where we rely on 3rd party components, these are listed under the 'Third party components' section 
+        Design Language is a mandatory resource for building IM Marketing applications. There are a few exceptions
+        where we rely on 3rd party components, these are listed under the 'Third-party components' section
         found in the left-hand navigation
       </p>
     </div>
@@ -730,7 +729,7 @@
     <div>
       <h3><strong class="number">2.</strong> Can't find a suitable component?</h3>
       <p>
-        If for any reason you cannot find a suitable component for your project, or you need a modification 
+        If for any reason you cannot find a suitable component for your project, or you need a modification
         to an existing component. Please reach out to the <a href="mailto:michael.king@angloamerican.com.com?cc=claire.burns@angloamerican.com, &subject=Design Language Request">UX Team</a> or add a request in the Slack 'core-ui' channel
       </p>
     </div>
@@ -738,31 +737,32 @@
     <div>
       <h3><strong class="number">3.</strong> Where do I begin?</h3>
       <p>After you've
-        <a (click)="bladeIsOpen($event); bladeHeading='Setting up Design Language'"
+        <a (click)="bladeIsOpen(true); bladeHeading='Setting up Design Language'"
         class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use
         the components listed below. If you need sample markup, please visit the
-         <a routerLink="/page-templates" (click)="goToPageTemplatesNav()">Page templates</a>. 
+         <a routerLink="/page-templates" (click)="goToPageTemplatesNav()">Page templates</a>.
          <strong class="aa-red-100 position-relative padding-right-1-5">
           Do not use Bootstrap
-          <aa-tooltip 
+          <aa-tooltip
             class="position-absolute"
             [includeLabel]="false"
             [includeLegend]="false"
-            [isError]="true" 
-            [customIcon]="true" 
+            [isError]="true"
+            [customIcon]="true"
             iconName="error"
-            setMinWidth="12" 
-            setMinWidth="20" 
-            ypos="top" 
+            setMinWidth="15rem"
+            setMaxWidth="20rem"
+            ypos="top"
             xpos="left"
-            zIndex="1"
+            [zIndex]="1"
           >
             <h4>Bootstrap</h4>
             <p>
               If you see bootstrap in your package.json, please uninstall it
               as it breaks our css. We use 'Flex' for layout and mobile adaption.
             </p>
-          </aa-tooltip> 
+            <p>The only exception is 'ng-bootstrap' which is allowed</p>
+          </aa-tooltip>
         </strong> instead
         we use <a routerLink="/flex" (click)="openLayoutNav()">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
       </p>
@@ -798,7 +798,7 @@
       </a>
     </div>
   </section>
-  
+
   <!-- ELEMENTS AND INPUTS -->
   <section class="content-repeater flex-group">
     <div #elements class="anchor-point"></div>
@@ -809,7 +809,7 @@
         topPos="-1.5rem"
         rightPos="auto"
         leftPos="calc(100% + 2rem)"
-        zIndex="1"
+        [zIndex]="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
@@ -817,7 +817,7 @@
         tourModeHeading="Elements and Inputs"
         tourModeBody="
           Here is everything you'll need to build your forms including anchors, buttons, selects, checkbox's etc.
-          If there's something you need not listed here and not under the `Third party components` section in the left navigation,
+          If there's something you need not listed here and not under the `Third-party components` section in the left navigation,
           please let the UX team know and we'll create it for you.
         "
       >
@@ -914,7 +914,7 @@
         topPos="-1.5rem"
         rightPos="auto"
         leftPos="calc(100% + 2rem)"
-        zIndex="1"
+        [zIndex]="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
@@ -1000,7 +1000,7 @@
         topPos="-1.5rem"
         rightPos="auto"
         leftPos="calc(100% + 2rem)"
-        zIndex="1"
+        [zIndex]="1"
         panelWidth="21rem"
         [arrowLeft]="true"
         arrowPos="2rem"
@@ -1072,7 +1072,7 @@
           topPos="-1.5rem"
           rightPos="auto"
           leftPos="calc(100% + 2rem)"
-          zIndex="1"
+          [zIndex]="1"
           panelWidth="21rem"
           [arrowLeft]="true"
           arrowPos="2rem"
@@ -1164,16 +1164,16 @@
           topPos="-18rem"
           rightPos="auto"
           leftPos="calc(100% + 2rem)"
-          zIndex="1"
+          [zIndex]="1"
           panelWidth="21rem"
           [arrowLeft]="true"
           arrowPos="18.5rem"
-          [arrowIsPlum]="true"
+          arrowClass="bd-right-blue"
           [enableHeading]="true"
           tourModeHeading="Widgets"
           tourModeBody="
             From accordions to person cards and info-panel's, here you'll find all the Design Language widgets. It's been
-            mentioned above but we do not use any 3rd party components apart from those listed under the `Third party components` section
+            mentioned above but we do not use any 3rd party components apart from those listed under the `Third-party components` section
             in the left navigation
           "
         >
@@ -1213,6 +1213,10 @@
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/carousel">
           <div class="material-icons aa-light-blue-100">recent_actors</div>
           <p>Carousel</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/element-slider">
+          <div class="material-icons aa-light-blue-100">chevron_left</div>
+          <p>Element slider</p>
         </a>
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/dashboard-favourites">
           <div class="material-icons aa-light-blue-100">star</div>
@@ -1266,16 +1270,16 @@
     </section>
 
   <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="0"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="0"
     bladeSize="two-column-width"
     bladeHeading="{{bladeHeading}}"
     [enableIcon]="true"
     iconName="architecture"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
     [enablePinning]="false">
     <article class="blade-content">
       <div>
@@ -1296,19 +1300,19 @@
 
         <h2 class="margin-bottom-0-5">Styles</h2>
         <ol class="code">
-          <li>npm install @angloamerican/styles@X.X.X</li>
+          <li>npm install &#64;angloamerican/styles&#64;X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
 
         <h2 class="margin-bottom-0-5">Components</h2>
         <ol class="code">
-          <li>1. npm install @angloamerican/components@X.X.X</li>
+          <li>1. npm install &#64;angloamerican/components&#64;X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
 
         <h2 class="margin-bottom-0-5">Anglo Angular Framework</h2>
         <ol class="code">
-          <li>1. npm install @angloamerican/anglo-angular-framework@X.X.X</li>
+          <li>1. npm install &#64;angloamerican/anglo-angular-framework&#64;X.X.X</li>
         </ol>
         <p>Replacing X with the required version</p>
 
@@ -1318,7 +1322,7 @@
         <ol class="code margin-top-0-5">
           <li>"styles": [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;"path/to/all/other/scss/files.scss",</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;"node_modules/@angloamerican/styles/src/scss/styles.scss"</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;"node_modules/&#64;angloamerican/styles/src/scss/styles.scss"</li>
           <li>&nbsp;],</li>
         </ol>
 
@@ -1332,10 +1336,10 @@
           <li>&nbsp;&nbsp;&nbsp;&nbsp;NavigationModule, </li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;PatternsModule,</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
-          <li>&nbsp;&#x007D; from '@angloamerican/components';</li>
+          <li>&nbsp;&#x007D; from '&#64;angloamerican/components';</li>
         </ol>
 
-        <p>and declare them under @NgModule > imports</p>
+        <p>and declare them under &#64;NgModule > imports</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;imports: [</li>
           <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
@@ -1350,8 +1354,8 @@
         <p>In your project <strong class="aa-red-100">tsconfig.json</strong> declare the Components paths.</p>
         <ol class="code margin-top-0-5">
           <li>&nbsp;"paths": &#123;</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components": [ "node_modules/@angloamerican/components" ],</li>
-          <li>&nbsp;&nbsp;&nbsp;&nbsp;"@angloamerican/components/*": [ "node_modules/@angloamerican/components/*" ]</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;"&#64;angloamerican/components": [ "node_modules/&#64;angloamerican/components" ],</li>
+          <li>&nbsp;&nbsp;&nbsp;&nbsp;"&#64;angloamerican/components/*": [ "node_modules/&#64;angloamerican/components/*" ]</li>
           <li>&nbsp;&#x007D;</li>
         </ol>
       </div>
@@ -1362,7 +1366,7 @@
 
 <aa-overlay
   [showOverlay]="showOverlay"
-  zIndex="999"
+  [zIndex]="999"
   minWidth="55rem"
 >
   <ng-container overlay-header>
@@ -1393,7 +1397,7 @@
     <!-- START RELEASE NOTES TABS AND TAB CONTENT -->
     <div *ngIf="showReleaseNotes">
       <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="" routerLinkActive>
+        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="">
           <ng-template aaTabNavigationContent>
             <h2 class="boxed padding-1-25 padding-bottom-0-5">Styles</h2>
             <app-release-notes-styles [styles]="true"></app-release-notes-styles>

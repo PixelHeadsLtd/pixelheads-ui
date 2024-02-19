@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TextComponent } from './text.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('TextComponent', () => {
   let component: TextComponent;
@@ -8,9 +8,10 @@ describe('TextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextComponent ]
+      declarations: [TextComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

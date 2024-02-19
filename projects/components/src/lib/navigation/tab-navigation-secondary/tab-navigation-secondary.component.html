@@ -11,20 +11,20 @@
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li>
-        <a 
-          class="{{tabColour}} flex-group flex-align-center flex-start" 
-          *ngIf="!isActive(tab) && !tab.tabDisabled" 
-          [id]="tab.tabId" 
-          [class.active]="isActive(tab)" 
+        <a
+          class="{{tabColour}} flex-group flex-align-center flex-start"
+          *ngIf="!isActive(tab) && !tab.tabDisabled"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
           (click)="onTabClicked(tab)">
           {{ tab.tabName }}
           <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>
         </a>
-        <a 
-          class="{{tabActiveColour}} flex-group flex-align-center flex-start" 
-          *ngIf="isActive(tab) && !tab.tabDisabled" 
-          [id]="tab.tabId" 
-          [class.active]="isActive(tab)" 
+        <a
+          class="{{tabActiveColour}} flex-group flex-align-center flex-start"
+          *ngIf="isActive(tab) && !tab.tabDisabled"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
           (click)="onTabClicked(tab)">
           {{ tab.tabName }}
           <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { FeedbackEvent } from './feedbackEvent';
 
@@ -8,16 +8,17 @@ import { FeedbackEvent } from './feedbackEvent';
   styleUrls: ['./user-feedback.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserFeedbackComponent implements OnInit {
-  @Input() panelWidth: number;
-  @Input() question: string;
-  @Input() appName: string;
-  @Input() label: string;
-  @Input() description: string;
-  @Input() footNote: string;
-  @Input() closingMessage: string;
-  @Input() toggleUserFeedback: boolean;
+export class UserFeedbackComponent {
+  @Input() panelWidth: number = 0;
+  @Input() question: string = '';
+  @Input() appName: string = '';
+  @Input() label: string = '';
+  @Input() description: string = '';
+  @Input() footNote: string = '';
+  @Input() closingMessage: string = '';
+  @Input() toggleUserFeedback: boolean = false;
   @Output() sendFeedback = new EventEmitter<FeedbackEvent>();
+  // eslint-disable-next-line @angular-eslint/no-output-native
   @Output() close = new EventEmitter<void>();
 
   startRating = true;
@@ -28,8 +29,8 @@ export class UserFeedbackComponent implements OnInit {
   neutral: any;
   satisfied: any;
   verySatisfied: any;
-  rating: number;
-  userClosedPanel: boolean;
+  rating: number | null = 0;
+  userClosedPanel: boolean = false;
 
   feedbackForm = this.formBuilder.group({
     comment: [null]
@@ -56,9 +57,6 @@ export class UserFeedbackComponent implements OnInit {
   }
 
   constructor(private readonly formBuilder: FormBuilder) {
-  }
-
-  ngOnInit(): void {
   }
 
 }

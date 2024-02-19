@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './border-radius.component.html',
   styleUrls: ['./border-radius.component.scss']
 })
-export class BorderRadiusComponent implements OnInit {
+export class BorderRadiusComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MarginComponent } from './margin.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('MarginComponent', () => {
   let component: MarginComponent;
   let fixture: ComponentFixture<MarginComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ MarginComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [MarginComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MarginComponent);

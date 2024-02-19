@@ -1,5 +1,5 @@
 <!-- MODAL UI BLOCK -->
-<div class="aa-blade-modal" *ngIf="toggleBlade && showModal" [ngStyle]="{'z-index' : zIndex}"></div>
+<div class="aa-blade-modal" *ngIf="toggleBlade && blockPageUI" [ngStyle]="{'z-index' : zIndex}"></div>
 
 <!-- HEADER BAKED IN -->
 <aside 
@@ -10,7 +10,7 @@
     'show-tabs' : bladeTabs
   }"
   [ngStyle]="{
-    'top' : topPosition + 'rem', 
+    'top' : topPosition, 
     'z-index' : zIndex+10
   }"
 >
@@ -25,13 +25,20 @@
         push_pin
       </div>
       <div *ngIf="enableIcon" class="material-icons header-icon margin-right-0-5">{{iconName}}</div>
-      <h2 class="margin-0 ellipsis" [ngStyle]="{'max-width' : headingMaxWidth+'rem' }">
+      <h2 class="margin-0 ellipsis" [ngStyle]="{'max-width' : headingMaxWidth }">
         {{bladeHeading}}
       </h2>
     </div>
     <a class="anchor-close flex-align-center" (click)="onClose()">Close</a>
   </article>
   <ng-content *ngIf="bladeTabs" select="[blade-tabs]"></ng-content>
+  <!-- BLADE MODAL -->
+  <div *ngIf="showBladeModal" class="blade-modal flex-center">
+    <div class="modal-background-tint"></div>
+    <div class="modal-content">
+      <ng-content select="[blade-modal]"></ng-content>
+    </div>
+  </div>
   <ng-content></ng-content>
 </aside>
 
@@ -44,10 +51,18 @@
     'show-tabs custom-header-tabs' : customBladeTabs
   }" 
   [ngStyle]="{
-    'top' : topPosition + 'rem', 
+    'top' : topPosition, 
     'z-index' : zIndex
   }"
 >
+  <!-- BLADE CUSTOM MODAL -->
+  <div *ngIf="showBladeModal" class="blade-modal flex-center">
+    <div class="modal-background-tint"></div>
+    <div class="modal-content">
+      <ng-content select="[blade-custom-modal]"></ng-content>
+    </div>
+  </div>
+
   <article class="blade-header custom-header">
     <ng-content select="[custom-header]"></ng-content>
     <ng-content *ngIf="customBladeTabs" select="[custom-blade-tabs]"></ng-content>

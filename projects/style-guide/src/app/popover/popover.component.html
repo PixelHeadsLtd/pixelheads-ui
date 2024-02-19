@@ -21,12 +21,12 @@
           <input type="text" placeholder="Name" />
         </div>
 
-        <aa-popover 
-          leftPos="0" 
-          rightPos="initial" 
-          topPos="5.5" 
-          width="22"
-          zIndex="10"
+        <aa-popover
+          leftPos="0"
+          rightPos="initial"
+          topPos="5.5rem"
+          width="22rem"
+          [zIndex]="15"
           >
           <ng-container call-to-action>
             <div class="field label-transparent">
@@ -45,7 +45,7 @@
                 <label>Save</label>
                 <button class="primary">Save</button>
               </div>
-  
+
               <div class="field boxed label-transparent">
                 <label>Cancel</label>
                 <button (click)="togglePopover()" class="cancel">Cancel</button>
@@ -70,13 +70,13 @@
             <td>Banksy</td>
             <td>
               <span class="padding-right-1">Artist</span>
-              <aa-popover 
+              <aa-popover
                 [popoverTop]="true"
-                arrowPos="-1"
-                bottomPos="3"
-                leftPos="-8" 
-                topPos="unset" 
-                width="22"
+                arrowPos="-1rem"
+                bottomPos="3rem"
+                leftPos="-8rem"
+                topPos="unset"
+                width="22rem"
               >
                 <ng-container call-to-action>
                   <div class="field boxed label-transparent">
@@ -89,7 +89,7 @@
                   <section class="flex-group flex-start">
                     <div class="field boxed">
                       <label for="nameId">Name</label>
-                      <input type="text" id="nameId" placeholder="name" />
+                      <input type="text" id="nameId-2" placeholder="name" />
                     </div>
                     <div class="field boxed label-transparent">
                       <label>Save</label>
@@ -110,10 +110,10 @@
             <td>Banksy</td>
             <td>
               <span class="padding-right-1">Plumber</span>
-              <aa-popover 
-                [leftPos]="'-9'" 
-                [topPos]="'2.25'" 
-                [width]="'22'" 
+              <aa-popover
+                leftPos="-9rem"
+                topPos="2.25rem"
+                width="22rem"
                 [btnSmall]="true"
                 >
                 <ng-container call-to-action>
@@ -127,7 +127,7 @@
                   <section class="flex-group flex-start">
                     <div class="field boxed">
                       <label for="nameId">Name</label>
-                      <input type="text" id="nameId" placeholder="name" />
+                      <input type="text" id="nameId-3" placeholder="name" />
                     </div>
                     <div class="field boxed label-transparent">
                       <label>Save</label>
@@ -138,7 +138,7 @@
                       <button (click)="togglePopover()" class="cancel">Cancel</button>
                     </div>
                   </section>
-         
+
                 </ng-container>
               </aa-popover>
             </td>
@@ -170,20 +170,20 @@
           <tr>
             <td datalabel="Element">aa-popover</td>
             <td datalabel="Attribute">leftPos - <strong class="aa-red-100">to show popover on the left</strong></td>
-            <td datalabel="Type">Number</td>
+            <td datalabel="Type">Any</td>
             <td datalabel="Default">0 <strong class="aa-red-100">(set rightPos to initial)</strong></td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
             <td datalabel="Attribute">rightPos - <strong class="aa-red-100">to show popover on the right</strong></td>
-            <td datalabel="Type">Number</td>
+            <td datalabel="Type">Any</td>
             <td datalabel="Default">0 <strong class="aa-red-100">(set leftPos to initial)</strong></td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
             <td datalabel="Attribute">width</td>
-            <td datalabel="Type">Number</td>
-            <td datalabel="Default">20</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">20rem</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
@@ -224,13 +224,13 @@
             <td datalabel="Element">aa-popover</td>
             <td datalabel="Attribute">bottomPos</td>
             <td datalabel="Type">Any</td>
-            <td datalabel="Default">3</td>
+            <td datalabel="Default">3rem</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
             <td datalabel="Attribute">arrowPos</td>
             <td datalabel="Type">Any</td>
-            <td datalabel="Default">-1</td>
+            <td datalabel="Default">-1rem</td>
           </tr>
           <tr>
             <td datalabel="Element">aa-popover</td>
@@ -244,7 +244,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -252,16 +252,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <a href="https://gist.github.com/angloux/2dbf290ef0c433a5ae3b075dabddbcd1" target="_blank">View Gist on GitHub</a>

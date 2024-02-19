@@ -1,36 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-list-selectable',
   templateUrl: './list-selectable.component.html',
   styleUrls: ['./list-selectable.component.scss']
 })
-export class ListSelectableComponent implements OnInit {
+export class ListSelectableComponent {
 
-  selectedIndex: number = null;
-  toggleBlade: boolean;
+  selectedIndex: number|null = null;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
   listSelectableItems = [
-    { 
+    {
       name: 'Vilnius',
     },
-    { 
-      name: 'Kaunas' 
+    {
+      name: 'Kaunas'
     },
-    { 
-      name: 'This is a disabled item', 
-      disabled: true 
+    {
+      name: 'This is a disabled item',
+      disabled: true
     },
-    { 
+    {
       name: 'Pavilnys'
     },
-    { 
-      name: 'Pabradė' 
+    {
+      name: 'Pabradė'
     },
-    { 
-      name: 'Klaipėda' 
+    {
+      name: 'Klaipėda'
     }
   ];
 
@@ -41,8 +41,4 @@ export class ListSelectableComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -6,11 +6,11 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
   styleUrls: ['./slider.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
 
-  @Input() fieldClass: string;
+  @Input() fieldClass: string = '';
   @Input() labelText: any;
-  @Input() sliderInline: boolean;
+  @Input() sliderInline: boolean = false;
   @Input() sliderId: any;
   @Input() sliderName: any;
   @Input() disabled: any;
@@ -22,9 +22,6 @@ export class SliderComponent implements OnInit {
   @Output() sliderCheckedChanged = new EventEmitter<boolean>();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onChange(event: any) {
     if (event.target.checked) {

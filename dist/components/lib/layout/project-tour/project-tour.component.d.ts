@@ -1,7 +1,7 @@
-import { OnInit } from '@angular/core';
-export declare class ProjectTourComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class ProjectTourComponent {
     tourMode: boolean;
-    enableHeading: string;
+    enableHeading: boolean;
     tourModeHeading: string;
     tourModeBody: string;
     topPos: any;
@@ -14,9 +14,9 @@ export declare class ProjectTourComponent implements OnInit {
     arrowRight: boolean;
     arrowBottom: boolean;
     arrowLeft: boolean;
-    arrowIsPlum: boolean;
+    arrowClass: string;
     zIndex: number;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProjectTourComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProjectTourComponent, "aa-project-tour", never, { "tourMode": { "alias": "tourMode"; "required": false; }; "enableHeading": { "alias": "enableHeading"; "required": false; }; "tourModeHeading": { "alias": "tourModeHeading"; "required": false; }; "tourModeBody": { "alias": "tourModeBody"; "required": false; }; "topPos": { "alias": "topPos"; "required": false; }; "rightPos": { "alias": "rightPos"; "required": false; }; "bottomPos": { "alias": "bottomPos"; "required": false; }; "leftPos": { "alias": "leftPos"; "required": false; }; "panelWidth": { "alias": "panelWidth"; "required": false; }; "arrowPos": { "alias": "arrowPos"; "required": false; }; "arrowTop": { "alias": "arrowTop"; "required": false; }; "arrowRight": { "alias": "arrowRight"; "required": false; }; "arrowBottom": { "alias": "arrowBottom"; "required": false; }; "arrowLeft": { "alias": "arrowLeft"; "required": false; }; "arrowClass": { "alias": "arrowClass"; "required": false; }; "zIndex": { "alias": "zIndex"; "required": false; }; }, {}, never, ["[nested-component]", "[tour-navigation]"], false, never>;
 }
-//# sourceMappingURL=project-tour.component.d.ts.map

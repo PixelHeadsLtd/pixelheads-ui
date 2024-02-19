@@ -18,7 +18,7 @@ import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 })
 export class TooltipDynamicDirective implements OnDestroy {
 
-  @Input() aaTooltip: string | string[];
+  @Input() aaTooltip: string | string[]='';
   @Input() position: TooltipDynamicPosition = TooltipDynamicPosition.DEFAULT;
   @Input() showDelay = 0;
   @Input() hideDelay = 0;

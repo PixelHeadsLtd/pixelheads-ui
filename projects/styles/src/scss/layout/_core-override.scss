@@ -1,17 +1,7 @@
-// override core framework bootstrap
-html {
-  .container-fluid {
-    padding-left: 0;
-    padding-right:0;
-    .row {
-      margin-right: 0;
-      margin-left: 0;
-    }
-    .col {
-      padding-left: 0;
-      padding-right:0;
-    }
-  }
+/* A very odd bug is present in AMP when updating to Angular Elements. The [hidden] attr on elements isn't working.
+Am now setting this manually in the overrides to forcefully hide hidden elements */
+[hidden] {
+  display: none!important;
 }
 
 /* PLEASE DO NOT DELETE ---

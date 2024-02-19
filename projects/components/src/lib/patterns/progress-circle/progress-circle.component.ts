@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-progress-circle',
@@ -6,46 +6,43 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./progress-circle.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProgressCircleComponent implements OnInit {
+export class ProgressCircleComponent {
 
-  @Input() name: any;
-  @Input() percent: any;
-  @Input() value: any;
-  @Input() colour: any;
-  @Input() isSmall: boolean;
-  @Input() panelView: boolean;
-  @Input() enableTooltip: boolean;
+  @Input() name: string = '';
+  @Input() percent: string = '';
+  @Input() value: string = '';
+  @Input() colour: string = '';
+  @Input() isSmall: boolean = false;
+  @Input() panelView: boolean = false;
+  @Input() enableTooltip: boolean = false;
   @Input() tooltipTitle: any;
   @Input() tooltipBody: any;
-  @Input() xpos: string;
-  @Input() ypos: string;
+  @Input() xpos: string = '';
+  @Input() ypos: string = '';
   @Input() tooltipMinWidth: any;
-  @Input() hideChevron: boolean;
+  @Input() hideChevron: boolean = false;
   @Input() headerColor: any;
-  @Input() isError: boolean;
-  @Input() isWarning: boolean;
-  @Input() isInfo: boolean;
-  @Input() enableAlertShield: boolean;
-  @Input() enableAlertShieldTooltip: boolean;
-  @Input() alertShieldStatus: string;
-  @Input() alertShieldSmall: boolean;
-  @Input() tooltipTopLeft: boolean;
-  @Input() tooltipTopRight: boolean;
-  @Input() tooltipBottomLeft: boolean;
-  @Input() tooltipBottomRight: boolean;
-  @Input() showTooltipHeading: boolean;
-  @Input() tooltipHeading: string;
-  @Input() alertShieldText: string;
-  @Input() customClass: string;
-  @Input() customProgressCircle: boolean;
-  @Input() customHeaderClass: string;
-  @Input() customFooterClass: string;
+  @Input() isError: boolean = false;
+  @Input() isWarning: boolean = false;
+  @Input() isInfo: boolean = false;
+  @Input() enableAlertShield: boolean = false;
+  @Input() enableAlertShieldTooltip: boolean = false;
+  @Input() alertShieldStatus: string = '';
+  @Input() alertShieldSmall: boolean = false;
+  @Input() tooltipTopLeft: boolean = false;
+  @Input() tooltipTopRight: boolean = false;
+  @Input() tooltipBottomLeft: boolean = false;
+  @Input() tooltipBottomRight: boolean = false;
+  @Input() showTooltipHeading: boolean = false;
+  @Input() tooltipHeading: string = '';
+  @Input() alertShieldText: string = '';
+  @Input() customClass: string = '';
+  @Input() customProgressCircle: boolean = false;
+  @Input() customHeaderClass: string = '';
+  @Input() customFooterClass: string = '';
   @Input() panelHeight: any;
 
   constructor() { }
 
-
-  ngOnInit() {
-  }
 
 }

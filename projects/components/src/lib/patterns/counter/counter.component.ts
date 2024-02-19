@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-counter',
@@ -6,21 +6,17 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./counter.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CounterComponent implements OnInit {
+export class CounterComponent {
 
-  @Input() count: number;
-  @Input() countError: boolean;
-  @Input() countWarning: boolean;
-  @Input() countInfo: boolean;
-  @Input() countSuccess: boolean;
-  @Input() countErrorLight: boolean;
-  @Input() countWarningLight: boolean;
-  @Input() countInfoLight: boolean;
-  @Input() countSuccessLight: boolean;
+  @Input() count: number = 0;
+  @Input() countError: boolean = false;
+  @Input() countWarning: boolean = false;
+  @Input() countInfo: boolean = false;
+  @Input() countSuccess: boolean = false;
+  @Input() countErrorLight: boolean = false;
+  @Input() countWarningLight: boolean = false;
+  @Input() countInfoLight: boolean = false;
+  @Input() countSuccessLight: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

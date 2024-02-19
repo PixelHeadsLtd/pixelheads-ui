@@ -6,7 +6,7 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "11.x",
-    "@angular/core": "11.x"
+    "@angular/common": "17.x",
+    "@angular/core": "17.x"
   }
 }

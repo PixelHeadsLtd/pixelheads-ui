@@ -460,7 +460,6 @@ button:not(
     @include icon-left;
     &:before {
       @include icon-button-large-material;
-      margin-top: .2rem;
       content: '\e9bd';
     }
   }

@@ -11,14 +11,14 @@ export class BladeBottomComponent implements OnInit {
   @Input() fullScreenPos: any;
   @Input() splitScreenPos: any;
   @Input() closedPos: any;
-  @Input() isOpen: boolean;
-  @Input() isPinned: boolean;
-  @Input() disablePinning: boolean;
-  @Input() isFullScreen: boolean;
-  @Input() innitiallyPinned: boolean;
-  @Input() controlsColor: string;
-  @Input() headerBgColor: string;
-  @Input() zIndex: number;
+  @Input() isOpen: boolean = false;
+  @Input() isPinned: boolean = false;
+  @Input() disablePinning: boolean = false;
+  @Input() isFullScreen: boolean = false;
+  @Input() innitiallyPinned: boolean = false;
+  @Input() controlsColor: string = '';
+  @Input() headerBgColor: string = '';
+  @Input() zIndex: number = 0;
   @Output() bladePinned = new EventEmitter<boolean>();
   @Output() bladeOpen = new EventEmitter<boolean>();
   @Output() bladeFullScreen = new EventEmitter<boolean>();
@@ -34,7 +34,7 @@ export class BladeBottomComponent implements OnInit {
     }
   }
 
-  toggleThePin(e) {
+  toggleThePin(e:any) {
     this.isPinned = ! this.isPinned;
     if (!this.isPinned) {
       this.isFullScreen = true;

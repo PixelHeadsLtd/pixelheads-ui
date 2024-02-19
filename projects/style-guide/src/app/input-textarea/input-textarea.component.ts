@@ -6,19 +6,16 @@ import { AbstractControl, FormControl, FormGroup } from '@angular/forms';
   templateUrl: './input-textarea.component.html',
   styleUrls: ['./input-textarea.component.scss']
 })
-export class InputTextareaComponent implements OnInit {
+export class InputTextareaComponent {
 
-  showTextarea: boolean;
-  showTextareaAutoresize: boolean;
-  toggleBlade: boolean;
+  showTextarea: boolean = false;
+  showTextareaAutoresize: boolean= false;
+  toggleBlade: boolean= false;
 
   constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

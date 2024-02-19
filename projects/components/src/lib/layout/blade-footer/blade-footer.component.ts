@@ -6,11 +6,8 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./blade-footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class BladeFooterComponent implements OnInit {
+export class BladeFooterComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

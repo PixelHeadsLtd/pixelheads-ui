@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,21 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./context-menu-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ContextMenuItemComponent implements OnInit {
+export class ContextMenuItemComponent {
 
-  @Input() menuItemText: string;
-  @Input() routerLink: string | any[];
-  @Input() routerLinkActive: boolean;
-  @Input() minWidth: number;
-  @Input() noWrap: boolean;
+  @Input() menuItemText: string = '';
+  @Input() routerLink: string | any[] = '';
+  @Input() routerLinkActive: boolean  = false;
+  @Input() minWidth: number = 0;
+  @Input() noWrap: boolean = false;
 
   constructor(private router: Router) { }
 
   onClick() {
     this.router.navigate([this.routerLink, 500]);
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CounterComponent } from './counter.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -8,9 +8,9 @@ describe('CounterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CounterComponent ]
-    })
-    .compileComponents();
+      declarations: [CounterComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

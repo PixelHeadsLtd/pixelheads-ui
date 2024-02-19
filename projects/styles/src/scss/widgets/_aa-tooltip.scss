@@ -48,6 +48,24 @@
   }
 }
 
+.tab-navigation {
+  .tab-tooltip {
+    &:hover {
+      .feature-box {
+        display: block;
+        &.aa-light-blue-100 {border-color: _colour(aa-light-blue-100)}
+        &.aa-green-100 {border-color: _colour(aa-green-100)}
+        &.aa-orange-100 {border-color: _colour(aa-orange-100)}
+        &.aa-red-100 {border-color: _colour(aa-red-100)}
+      }
+    }
+  }
+}
+
+.aa-tooltip:not(.tab-navigation, .tab-navigation .aa-tooltip) {
+  z-index: unset!important; // should be set on the popup hover state
+}
+
 .aa-tooltip {
   position: relative;
   display: inline-block;
@@ -56,7 +74,6 @@
   margin: 0;
   opacity: 1 !important; //override bs
   font-size: _font(size-default);
-  z-index: unset!important; // should be set on the popup hover state
 
   &.as-link {
     width: auto;
@@ -73,6 +90,10 @@
     .right.bottom {
       left: calc(100% + .5rem)
     }
+  }
+
+  h3 {
+    margin-top: 0;
   }
 
   h4 {

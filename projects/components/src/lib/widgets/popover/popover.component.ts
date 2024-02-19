@@ -1,37 +1,35 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, HostListener, ElementRef, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit, HostListener, ElementRef, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'aa-popover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush - not needed, showpover is not input anymore
-  // so should not be used
 })
 export class PopoverComponent implements OnInit {
 
-  showPopover: boolean; // now exposed as api and not property - more flexible
-  @Input() buttonClass: string;
-  @Input() leftPos: number;
+  showPopover: boolean = false; // now exposed as api and not property - more flexible
+  @Input() buttonClass: string = '';
+  @Input() leftPos: any;
   @Input() topPos: any;
   @Input() bottomPos: any;
   @Input() rightPos: any;
-  @Input() width: number;
-  @Input() hideLabel: boolean;
-  @Input() btnSmall: boolean;
-  @Input() popoverTop: boolean;
-  @Input() arrowPos: number;
-  @Input() zIndex: number;
+  @Input() width: any;
+  @Input() hideLabel: boolean = false;
+  @Input() btnSmall: boolean = false;
+  @Input() popoverTop: boolean = false;
+  @Input() arrowPos: any;
+  @Input() zIndex: number = 0;
 
   @Output() popoverVisibilityChanged = new EventEmitter<boolean>();
 
   constructor(private elementRef: ElementRef) { }
 
   @HostListener('document:click', ['$event.target'])
-  public onClick(targetElement) {
+  public onClick(targetElement: any) {
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
     if (!clickedInside) {
-        this.showPopover = false;
-        this.popoverVisibilityChanged.emit(this.showPopover);
+      this.showPopover = false;
+      this.popoverVisibilityChanged.emit(this.showPopover);
     }
   }
 
@@ -49,8 +47,6 @@ export class PopoverComponent implements OnInit {
     this.showPopover = !this.showPopover;
     this.popoverVisibilityChanged.emit(this.showPopover);
   }
-
-
   ngOnInit() {
     this.popoverVisibilityChanged.emit(this.showPopover);
   }

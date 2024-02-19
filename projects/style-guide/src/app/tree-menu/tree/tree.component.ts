@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TreeNode } from '../../class/tree-node';
 
 @Component({
@@ -6,12 +6,9 @@ import { TreeNode } from '../../class/tree-node';
   templateUrl: './tree.component.html',
   styleUrls: ['./tree.component.scss']
 })
-export class TreeComponent implements OnInit {
+export class TreeComponent {
 
-  @Input() treeData: TreeNode[];
-
-  ngOnInit() {
-  }
+  @Input() treeData: TreeNode[] = [];
 
   toggleChild(node: { showChildren: boolean; }) {
     node.showChildren =! node.showChildren;

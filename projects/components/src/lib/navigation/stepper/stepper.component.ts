@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-stepper',
@@ -6,13 +6,10 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./stepper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class StepperComponent implements OnInit {
+export class StepperComponent {
 
-  @Input() formName: string;
+  @Input() formName: string = '';
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { Subject } from 'rxjs';
+
+/* eslint-disable @angular-eslint/component-selector */
 @Component({
   selector: 'avatar',
   templateUrl: './avatar.component.html'
@@ -13,10 +15,10 @@ export class AvatarComponent implements ICellRendererAngularComp {
     private readonly destroy$ = new Subject();
 
 
-    params;
-    link: string;
+    params:any;
+    link: string = '';
 
-    agInit(params): void {
+    agInit(params:any): void {
       this.params = params;
       this.link = this.params.link || null;
     }
@@ -25,7 +27,7 @@ export class AvatarComponent implements ICellRendererAngularComp {
       return false;
     }
 
-    onClick($event) {
+    onClick($event:any) {
       if (this.params.onClick instanceof Function) {
         // put anything into params u want pass into parents component
         console.log('This event handles your data');

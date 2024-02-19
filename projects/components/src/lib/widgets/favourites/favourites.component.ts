@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, EventEmitter, Component, Input, Output, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, EventEmitter, Component, Input, Output } from '@angular/core';
 
-class FavouriteItem {
+interface FavouriteItem {
   favColour: string;
   favLabel: string;
   favTitle: string;
@@ -16,24 +16,24 @@ class FavouriteItem {
   styleUrls: ['./favourites.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FavouritesComponent implements OnInit {
+export class FavouritesComponent {
 
-  @Input() showLandscapeFavs: boolean;
-  @Input() showPortraitFavs: boolean;
-  @Input() anchorIsClicked: boolean;
-  @Input() disableFavsStar: boolean;
-  @Input() toggleFavourite: string;
-  @Input() favsHeading: string;
-  @Input() clickAnchor: string;
-  @Input() favLabel: string;
-  @Input() favTitle: string;
-  @Input() favTextLineOne: string;
-  @Input() favTextLineTwo: string;
-  @Input() favTextLineThree: string;
-  @Input() favColour: string;
-  @Input() favsOrigin: Array<FavouriteItem>;
-  @Input() favsTarget: Array<FavouriteItem>;
-  @Input() favsPortrait: Array<FavouriteItem>;
+  @Input() showLandscapeFavs: boolean = false;
+  @Input() showPortraitFavs: boolean = false;
+  @Input() anchorIsClicked: boolean = false;
+  @Input() disableFavsStar: boolean = false;
+  @Input() toggleFavourite: string = '';
+  @Input() favsHeading: string = '';
+  @Input() clickAnchor: string = '';
+  @Input() favLabel: string = '';
+  @Input() favTitle: string = '';
+  @Input() favTextLineOne: string = '';
+  @Input() favTextLineTwo: string = '';
+  @Input() favTextLineThree: string = '';
+  @Input() favColour: string = '';
+  @Input() favsOrigin: Array<FavouriteItem> = [];
+  @Input() favsTarget: Array<FavouriteItem> = [];
+  @Input() favsPortrait: Array<FavouriteItem> = [];
   @Input() isFavourite: any = null;
 
   @Output() anchorClick = new EventEmitter<Event>();
@@ -56,9 +56,7 @@ export class FavouritesComponent implements OnInit {
     }
   }
 
-  constructor() {}
-
-  ngOnInit() {
+  constructor() {
     if (!this.favsTarget) {
       this.favsTarget = [];
     }

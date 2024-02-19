@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CommentsComponent } from './comments.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 describe('CommentsComponent', () => {
   let component: CommentsComponent;
@@ -8,9 +9,10 @@ describe('CommentsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentsComponent ]
-    })
-    .compileComponents();
+      declarations: [CommentsComponent],
+      imports: [FormsModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,21 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-progress-indicator-lh',
   templateUrl: './progress-indicator-lh.component.html',
   styleUrls: ['./progress-indicator-lh.component.scss']
 })
-export class ProgressIndicatorLhComponent implements OnInit {
+export class ProgressIndicatorLhComponent {
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit() {
-  }
-
 }

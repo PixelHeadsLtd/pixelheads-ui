@@ -1,7 +1,8 @@
-import { AfterContentChecked, OnInit, TemplateRef } from '@angular/core';
+import { AfterContentChecked, TemplateRef } from '@angular/core';
 import { TabNavigationContentDirective } from './tab-navigation-content.directive';
 import { TabNavigationHeaderContentDirective } from './tab-navigation-header-content.directive';
-export declare class TabNavigationItemComponent implements OnInit, AfterContentChecked {
+import * as i0 from "@angular/core";
+export declare class TabNavigationItemComponent implements AfterContentChecked {
     templateRefDirective: TabNavigationContentDirective;
     templateRefHeaderDirective: TabNavigationHeaderContentDirective;
     tabId: any;
@@ -10,19 +11,27 @@ export declare class TabNavigationItemComponent implements OnInit, AfterContentC
     enableIcons: boolean;
     iconName: string;
     iconColour: string;
+    textColour: string;
+    closeColour: string;
     enableCount: boolean;
     enableClose: boolean;
     tabCount: number;
-    countColour: string;
     tabRoute: string;
     tabDisabled: boolean;
+    countColour: string;
     showRightDivider: boolean;
     routerLink: string | any[];
     routerLinkActive: boolean;
+    enableTooltip: boolean;
+    tabTooltipTitle: string;
+    tabTooltipBody: string;
+    tooltipXPos: any;
+    tooltipYPos: any;
+    tooltipWidth: any;
     templateRef: TemplateRef<any>;
     templateRefHeader: TemplateRef<any>;
-    ngOnInit(): void;
     ngAfterContentChecked(): void;
     get route(): string | any[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TabNavigationItemComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TabNavigationItemComponent, "aa-tab-navigation-item", never, { "tabId": { "alias": "tabId"; "required": false; }; "tabName": { "alias": "tabName"; "required": false; }; "activeColor": { "alias": "activeColor"; "required": false; }; "enableIcons": { "alias": "enableIcons"; "required": false; }; "iconName": { "alias": "iconName"; "required": false; }; "iconColour": { "alias": "iconColour"; "required": false; }; "textColour": { "alias": "textColour"; "required": false; }; "closeColour": { "alias": "closeColour"; "required": false; }; "enableCount": { "alias": "enableCount"; "required": false; }; "enableClose": { "alias": "enableClose"; "required": false; }; "tabCount": { "alias": "tabCount"; "required": false; }; "tabRoute": { "alias": "tabRoute"; "required": false; }; "tabDisabled": { "alias": "tabDisabled"; "required": false; }; "countColour": { "alias": "countColour"; "required": false; }; "showRightDivider": { "alias": "showRightDivider"; "required": false; }; "routerLink": { "alias": "routerLink"; "required": false; }; "routerLinkActive": { "alias": "routerLinkActive"; "required": false; }; "enableTooltip": { "alias": "enableTooltip"; "required": false; }; "tabTooltipTitle": { "alias": "tabTooltipTitle"; "required": false; }; "tabTooltipBody": { "alias": "tabTooltipBody"; "required": false; }; "tooltipXPos": { "alias": "tooltipXPos"; "required": false; }; "tooltipYPos": { "alias": "tooltipYPos"; "required": false; }; "tooltipWidth": { "alias": "tooltipWidth"; "required": false; }; }, {}, ["templateRefDirective", "templateRefHeaderDirective"], never, false, never>;
 }
-//# sourceMappingURL=tab-navigation-item.component.d.ts.map

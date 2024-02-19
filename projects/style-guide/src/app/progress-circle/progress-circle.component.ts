@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-progress-circle',
   templateUrl: './progress-circle.component.html',
   styleUrls: ['./progress-circle.component.scss']
 })
-export class ProgressCircleComponent implements OnInit {
+export class ProgressCircleComponent {
 
-  toggleBlade: boolean;
-  showProgressCircle: boolean;
-  showProgressCirclePanelView: boolean;
-  showProgressCircleClean: boolean;
-  showCustomProgressCircle: boolean;
-  selectedIndex: number = null;
-  asLink: boolean;
+  toggleBlade: boolean = false;
+  showProgressCircle: boolean = false;
+  showProgressCirclePanelView: boolean = false;
+  showProgressCircleClean: boolean = false;
+  showCustomProgressCircle: boolean = false;
+  selectedIndex: number | null = null;
+  asLink: boolean = false;
 
   constructor() { }
 
@@ -23,51 +23,55 @@ export class ProgressCircleComponent implements OnInit {
 
   progressItems = [
     {
-      progressColor: 'orange', 
-      progressName: 'Total team', 
-      percentage: '60', 
-      valueSplit: '6/10', 
+      progressColor: 'orange',
+      progressName: 'Total team',
+      percentage: '60',
+      valueSplit: '6/10',
       tooltipEnabled: true,
       tooltipText: 'Some other text',
       enableAlertShieldTooltip: true,
       isTopRight: true,
-      tooltipMinWidth: '10',
+      tooltipMinWidth: '12rem',
       showTooltipHeading: true,
       myTooltipHeading: 'My tooltip heading',
       alertShieldStatus: 'warning',
       alertShieldText: 'Warning'
     },
     {
-      progressColor: 'green', 
-      progressName: 'Unchanged', 
-      percentage: '40', 
-      valueSplit: '4/10',  
-      tooltipEnabled: true, 
-      tooltipText: 'Some text for the tooltip'
+      progressColor: 'green',
+      progressName: 'Unchanged',
+      percentage: '40',
+      valueSplit: '4/10',
+      tooltipEnabled: true,
+      tooltipText: 'Some text for the tooltip',
+      tooltipMinWidth: '12rem',
     },
     {
-      progressColor: 'blue', 
-      progressName: 'Joiners', 
-      percentage: '60', 
-      valueSplit: '6/10',  
-      tooltipEnabled: true, 
-      tooltipText: 'Some text for the tooltip'
+      progressColor: 'blue',
+      progressName: 'Joiners',
+      percentage: '60',
+      valueSplit: '6/10',
+      tooltipEnabled: true,
+      tooltipText: 'Some text for the tooltip',
+      tooltipMinWidth: '12rem',
     },
     {
-      progressColor: 'red', 
-      progressName: 'Leavers', 
-      percentage: '80', 
-      valueSplit: '8/10',  
-      tooltipEnabled: true, 
-      tooltipText: 'Some text for the tooltip'
+      progressColor: 'red',
+      progressName: 'Leavers',
+      percentage: '80',
+      valueSplit: '8/10',
+      tooltipEnabled: true,
+      tooltipText: 'Some text for the tooltip',
+      tooltipMinWidth: '12rem',
     },
     {
-      progressColor: 'light-blue', 
-      progressName: 'Movers', 
-      percentage: '90', 
-      valueSplit: '9/10', 
-      tooltipEnabled: true, 
-      tooltipText: 'Some text for the tooltip'
+      progressColor: 'light-blue',
+      progressName: 'Movers',
+      percentage: '90',
+      valueSplit: '9/10',
+      tooltipEnabled: true,
+      tooltipText: 'Some text for the tooltip',
+      tooltipMinWidth: '12rem',
     }
   ];
 
@@ -125,13 +129,10 @@ export class ProgressCircleComponent implements OnInit {
       asLink: false
     }
   ];
-  
+
+  onClick() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit() {
-  }
-
 }

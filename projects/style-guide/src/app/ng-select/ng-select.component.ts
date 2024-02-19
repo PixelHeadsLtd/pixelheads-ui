@@ -5,13 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ng-select.component.html',
   styleUrls: ['./ng-select.component.scss']
 })
-export class NgSelectComponent implements OnInit {
+export class NgSelectComponent {
 
-  selectedCityIds: string[];
-  selectedCity: string;
+  selectedCityIds: string[]=[];
+  selectedCity: string = '';
   selectedCityName = 'Vilnius';
-  selectedCityId: number;
-  selectedUserIds: number[];
+  selectedCityId: number = 0;
+  selectedUserIds: number[]=[];
 
   constructor() {this.create10kCities();}
 
@@ -36,8 +36,7 @@ export class NgSelectComponent implements OnInit {
     { id: 2, name: 'Kaunas', avatar: '//www.gravatar.com/avatar/ddac2aa63ce82315b513be9dc93336e5?d=retro&r=g&s=15' },
     { id: 3, name: 'Pavilnys', avatar: '//www.gravatar.com/avatar/6acb7abf486516ab7fb0a6efa372042b?d=retro&r=g&s=15' }
   ];
-
-  cities4 = [];
+  cities4:any[] = [];
 
   users = [
     { id: 'anjmao', name: 'Anjmao' },
@@ -58,7 +57,7 @@ export class NgSelectComponent implements OnInit {
     { name: 'Nicolás', email: 'nicole@email.com', age: 43, country: 'Colombia' }
   ];
 
-  addCustomUser = (term) => ({ id: term, name: term });
+  addCustomUser = (term:any) => ({ id: term, name: term });
 
   create10kCities() {
     this.cities4 = Array.from({ length: 10000 }, (value, key) => key)
@@ -66,8 +65,6 @@ export class NgSelectComponent implements OnInit {
         id: val,
         name: `city ${val}`
       }));
-  }
-  ngOnInit() {
   }
 
 }

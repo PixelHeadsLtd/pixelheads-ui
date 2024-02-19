@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
+import { Component, HostListener, ChangeDetectorRef, AfterContentChecked } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { OpenLeftNavService } from '../_services/left-nav-service';
 @Component({
@@ -6,113 +6,135 @@ import { OpenLeftNavService } from '../_services/left-nav-service';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit, AfterContentChecked  {
-  
-  isSticky: boolean = false;
-  showSearch: boolean;
-  showSearchResults: boolean;
-  inputValue: string;
-  searchText = '';
-  rotateIcon: boolean;
-  showOverlay: boolean;
-  showLeftNav: boolean;
-  showHeading: boolean;
-  showBlade: boolean;
-  bladeHeading: string;
-  showReleaseNotes: boolean;
-  showDesignPrinciples: boolean;
-  showSupportedBrowsers: boolean;
+export class LandingPageComponent implements AfterContentChecked {
 
-  chrome="./assets/images/browsers/chrome.png"
-  firefox="./assets/images/browsers/firefox.png"
-  edge="./assets/images/browsers/edge.png"
-  safari="./assets/images/browsers/safari.png"
-  ios="./assets/images/browsers/ios.png"
-  android="./assets/images/browsers/android.png"
+  isSticky: boolean = false;
+  showSearch: boolean = false;
+  showSearchResults: boolean = false;
+  inputValue: string = '';
+  searchText = '';
+  rotateIcon: boolean = false;
+  showOverlay: boolean = false;
+  showLeftNav: boolean = false;
+  showHeading: boolean = false;
+  showBlade: boolean = false;
+  bladeHeading: string = '';
+  showReleaseNotes: boolean = false;
+  showDesignPrinciples: boolean = false;
+  showSupportedBrowsers: boolean = false;
+
+  chrome = "./assets/images/browsers/chrome.png"
+  firefox = "./assets/images/browsers/firefox.png"
+  edge = "./assets/images/browsers/edge.png"
+  safari = "./assets/images/browsers/safari.png"
+  ios = "./assets/images/browsers/ios.png"
+  android = "./assets/images/browsers/android.png"
 
   public constructor(
     private changeDetector: ChangeDetectorRef,
     private service: OpenLeftNavService
-  ) {}
-  
-  public activeTab: TabNavigationItemComponent;
+  ) { }
 
-  public toggleBlade: boolean;
+  public activeTab?: TabNavigationItemComponent;
+
+  public toggleBlade: boolean = false;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-  
-  scrollToElement($element): void {
-    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+
+  scrollToElement($element: any): void {
+    $element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 350;
   }
-  
+
   tabChanged(tab: TabNavigationItemComponent) {
     this.activeTab = tab;
   }
-  
+
   toggleSearchInput() {
-    this.showSearch = ! this.showSearch;
-    if(this.showSearch) {
-      document.getElementById('search-text').focus();
+    this.showSearch = !this.showSearch;
+    if (this.showSearch) {
+      document.getElementById('search-text')?.focus();
     }
   }
 
   openAnimationsNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(0);
     console.log("Well something happened so....");
   }
 
   openElementsNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(1);
   }
 
   openLayoutNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(2);
   }
 
   openNavigationNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(3);
   }
 
   openPatternsNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(4);
   }
 
   openWidgetsNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(5);
   }
 
   openModifiersNav() {
-    this.showSearch = ! this.showSearch;
+    this.showSearch = !this.showSearch;
     this.service.updateIndex.next(6);
   }
 
-  openOtherWidgetsNav() {
-    this.showSearch = ! this.showSearch;
+  openTypographyNav() {
+    this.showSearch = false;
     this.service.updateIndex.next(7);
+  }
+
+  openOtherWidgetsNav() {
+    this.showSearch = !this.showSearch;
+    this.service.updateIndex.next(8);
   }
 
   goToPageTemplatesNav() {
     this.showSearch = false;
-    this.service.updateIndex.next(8);
+    this.service.updateIndex.next(9);
   }
 
   openAddendumNav() {
-    this.showSearch = ! this.showSearch;
-    this.service.updateIndex.next(9);
+    this.showSearch = !this.showSearch;
+    this.service.updateIndex.next(10);
   }
+
+  searchEmailTemplates: {
+    id: string,
+    link: string,
+    heading: string,
+    iconColour: string,
+    borderColour: string,
+    icon: string
+  }[] = [];
+  searchQandAs: {
+    id: string,
+    link: string,
+    heading: string
+  }[] = [];
+
+  openEmailTemplatesNav() { }
+  openQandANav() { }
 
   searchAnimations = [
     {
@@ -233,7 +255,7 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
   ]
 
   searchLayout = [
-   {
+    {
       id: 'Layout',
       heading: 'Layout',
       icon: 'dashboard',
@@ -473,6 +495,13 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
       heading: 'Widgets',
       icon: 'touch_app',
       iconColour: 'bg-aa-light-blue-100',
+      link: 'element-slider',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-aa-light-blue-100',
       link: 'tooltip-dynamic',
     },
     {
@@ -611,28 +640,44 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     }
   ]
 
+  searchTypography = [
+    {
+      id: 'Typography',
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'editorial-content',
+    },
+    {
+      heading: 'Typography',
+      icon: 'text_fields',
+      iconColour: 'aa-green-50',
+      link: 'typography',
+    }
+  ]
+
   searchThirdPartyComponents = [
     {
       id: 'OtherWidgets',
-      heading: 'Third party components',
+      heading: 'Third-party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ag-grid',
     },
     {
-      heading: 'Third party components',
+      heading: 'Third-party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngb-datepicker',
     },
     {
-      heading: 'Third party components',
+      heading: 'Third-party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ng-select',
     },
     {
-      heading: 'Third party components',
+      heading: 'Third-party components',
       icon: 'widgets',
       iconColour: 'aa-green-50',
       link: 'ngx-quill',
@@ -664,13 +709,17 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     }
   ]
 
-  tourCount: number = null;
+  tourCount: number | null | undefined;
 
   incrementTourCount() {
-    this.tourCount++;
+    // if(this.tourCount) {
+    //   this.tourCount++;
+    // } else {
+    //   this.tourCount = 0
+    // }
   }
-  
-  setTourCount(step:number) {
+
+  setTourCount(step: number | null) {
     this.tourCount = step;
     this.toggleBlade = false;
   }
@@ -695,9 +744,6 @@ export class LandingPageComponent implements OnInit, AfterContentChecked  {
     "select",
     "select"
   ];
-
-  ngOnInit() {
-  }
 
   ngAfterContentChecked(): void {
     this.changeDetector.detectChanges();

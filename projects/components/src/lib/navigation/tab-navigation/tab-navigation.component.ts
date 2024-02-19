@@ -7,28 +7,35 @@ import { TabNavigationItemComponent } from '../tab-navigation-item/tab-navigatio
   styleUrls: ['./tab-navigation.component.scss']
 })
 export class TabNavigationComponent implements OnInit, AfterContentInit {
-  @ContentChildren(TabNavigationItemComponent) tabNavigationItems: QueryList<TabNavigationItemComponent>;
+  @ContentChildren(TabNavigationItemComponent) tabNavigationItems?: QueryList<TabNavigationItemComponent>;
   @Input() autoChangeTabs = true;
   @Input() displayTabContent = true;
-  @Input() tabInfo: boolean;
-  @Input() routerOutlet: boolean;
-  @Input() ngTemplate: boolean;
-  @Input() tabInfoRouterOutlet: boolean;
-  @Input() toggleFullscreen: boolean;
-  @Input() standardTabs: boolean;
+  @Input() tabInfo: boolean = false;
+  @Input() routerOutlet: boolean = false;
+  @Input() ngTemplate: boolean = false;
+  @Input() defaultTabId: any;
+  @Input() tabInfoRouterOutlet: boolean = false;
+  @Input() toggleFullscreen: boolean = false;
+  @Input() standardTabs: boolean = false;
   @Output() tabClicked = new EventEmitter<TabNavigationItemComponent>();
   @Output() tabChanged = new EventEmitter<TabNavigationItemComponent>();
   @Output() closeTab = new EventEmitter<any>();
 
-  currentTab: TabNavigationItemComponent;
+  currentTab?: TabNavigationItemComponent;
 
   get contentTabs() {
     return this.tabNavigationItems?.filter((tabNavigationItem: TabNavigationItemComponent) => !!tabNavigationItem.templateRef);
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.defaultTabId) {
+      setTimeout((_: any) => {
+        this.changeTabById(this.defaultTabId);
+      }, 100);
+    }
+  }
 
   ngAfterContentInit() {
     if (this.contentTabs && this.contentTabs[0]) {
@@ -37,7 +44,7 @@ export class TabNavigationComponent implements OnInit, AfterContentInit {
   }
 
   isActive(tab: TabNavigationItemComponent) {
-    return this.currentTab.tabName === tab.tabName;
+    return this.currentTab?.tabName === tab.tabName;
   }
 
   isDividerTab() {
@@ -58,7 +65,7 @@ export class TabNavigationComponent implements OnInit, AfterContentInit {
   }
 
   changeTabById(tabId: string) {
-    const tab = this.contentTabs.find((x) => x.tabId === tabId);
+    const tab = this.contentTabs?.find((x) => x.tabId === tabId);
     if (tab) {
       this.changeTab(tab);
     }

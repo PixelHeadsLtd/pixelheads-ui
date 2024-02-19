@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbDateStruct, NgbDateAdapter, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
+import { CustomDateAdapter } from './custom-date-adaptor';
+import { CustomDateParserFormatter } from './custom-date-parser-formatter';
 
 @Component({
   selector: 'app-ngb-datepicker',
   templateUrl: './ngb-datepicker.component.html',
-  styleUrls: ['./ngb-datepicker.component.scss']
+  styleUrls: ['./ngb-datepicker.component.scss'],
+  providers: [
+    { provide: NgbDateAdapter, useClass: CustomDateAdapter },
+    { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter }
+  ]
 })
-export class NgbDatepickerComponent implements OnInit {
+export class NgbDatepickerComponent {
 
-  showPopup: boolean;
-  dateVal: string = '04 May 2023';
+  toggleBlade: boolean = false;
+  model?: NgbDateStruct;
 
-  clearDate() {
-    this.dateVal = '';
-  }
+	constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  bladeIsOpen(open: boolean) {
+    this.toggleBlade = open;
+    }
 }

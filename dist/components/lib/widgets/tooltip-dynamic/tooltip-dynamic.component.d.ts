@@ -1,6 +1,6 @@
-import { OnInit } from '@angular/core';
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
-export declare class TooltipDynamicComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class TooltipDynamicComponent {
     position: TooltipDynamicPosition;
     tooltip: string | string[];
     left: number;
@@ -8,6 +8,6 @@ export declare class TooltipDynamicComponent implements OnInit {
     visible: boolean;
     isArrayPassed(): boolean;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDynamicComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TooltipDynamicComponent, "aa-tooltip-dynamic", never, {}, {}, never, never, false, never>;
 }
-//# sourceMappingURL=tooltip-dynamic.component.d.ts.map

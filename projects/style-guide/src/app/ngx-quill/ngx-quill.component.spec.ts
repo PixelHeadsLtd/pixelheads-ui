@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NgxQuillComponent } from './ngx-quill.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('NgxQuillComponent', () => {
   let component: NgxQuillComponent;
@@ -8,9 +8,10 @@ describe('NgxQuillComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxQuillComponent ]
+      declarations: [NgxQuillComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

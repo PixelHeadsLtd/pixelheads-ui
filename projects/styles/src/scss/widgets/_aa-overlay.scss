@@ -14,7 +14,9 @@
     width: 100%;
     max-width: 52rem;
     background-color: _colour(aa-grey-2);
-    box-shadow: 0 0 12px _colour(box-shadow);
+    box-shadow: 0 0 .2rem .2rem _colour(tinted-dark-blue);
+    -webkit-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+    -moz-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
     
     .contact {
       .material-icons,

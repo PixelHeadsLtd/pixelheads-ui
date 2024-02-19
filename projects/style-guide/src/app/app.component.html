@@ -1,5 +1,5 @@
-<header 
-  class="page-header flex-group space-between flex-align-center" 
+<header
+  class="page-header flex-group space-between flex-align-center"
   [ngClass]="{ 'shift-aa-logo' : minimizeMenu }"
 >
   <!--LEFT SECTION -->
@@ -32,29 +32,27 @@
     <ul [ngClass]="{'show-search' : showSearch}">
       <!-- search -->
       <li class="change-theme-button animate-normal">
-        <aa-button 
+        <aa-button
           class="height-2"
           *ngIf="!darkTheme"
-          (buttonClick)="toggleTheme()" 
-          buttonClass="bg-aa-red-80" 
+          (buttonClick)="toggleTheme()"
+          buttonClass="bg-aa-red-80"
           fieldClass="boxed"
           [customIconsRound]="true"
           [showLabel]="false"
-          buttonLabel="" 
-          buttonIcon="light_mode"
-          disabled="">
+          buttonLabel=""
+          buttonIcon="light_mode">
         </aa-button>
-        <aa-button 
+        <aa-button
           class="height-2"
           *ngIf="darkTheme"
-          (buttonClick)="toggleTheme()" 
-          buttonClass="bg-aa-orange-100 aa-white-100" 
+          (buttonClick)="toggleTheme()"
+          buttonClass="bg-aa-orange-100 aa-white-100"
           fieldClass="boxed"
           [customIconsRound]="true"
           [showLabel]="false"
-          buttonLabel="" 
-          buttonIcon="dark_mode"
-          disabled="">
+          buttonLabel=""
+          buttonIcon="dark_mode">
         </aa-button>
       </li>
       <li class="cursor-pointer" (click)="toggleAppsBlade=false; toggleLoginBlade=false">
@@ -76,14 +74,14 @@
           </div>
           <section class="search-results" *ngIf="searchText.length && showSearch">
             <ul class="padding-left-0">
-              <li 
-                *ngFor="let c of searchAnimations | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchAnimations | appFilter: searchText; let i = index"
                 (click)="openAnimationsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchAnimations[i-1] || c.heading !== searchAnimations[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -92,25 +90,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchElements | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchElements | appFilter: searchText; let i = index"
                 (click)="openElementsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchElements[i-1] || c.heading !== searchElements[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -119,25 +117,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchLayout | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchLayout | appFilter: searchText; let i = index"
                 (click)="openLayoutNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchLayout[i-1] || c.heading !== searchLayout[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -146,25 +144,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchNavigation | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchNavigation | appFilter: searchText; let i = index"
                 (click)="openNavigationNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchNavigation[i-1] || c.heading !== searchNavigation[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -173,25 +171,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchPatterns | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchPatterns | appFilter: searchText; let i = index"
                 (click)="openPatternsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchPatterns[i-1] || c.heading !== searchPatterns[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -200,25 +198,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchWidgets | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchWidgets | appFilter: searchText; let i = index"
                 (click)="openWidgetsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchWidgets[i-1] || c.heading !== searchWidgets[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -227,25 +225,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchModifiers | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchModifiers | appFilter: searchText; let i = index"
                 (click)="openModifiersNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchModifiers[i-1] || c.heading !== searchModifiers[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -254,25 +252,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchTypography | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchTypography | appFilter: searchText; let i = index"
                 (click)="openTypographyNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchTypography[i-1] || c.heading !== searchTypography[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -281,25 +279,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index"
                 (click)="openOtherWidgetsNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchThirdPartyComponents[i-1] || c.heading !== searchThirdPartyComponents[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -308,25 +306,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index"
                 (click)="openEmailTemplatesNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchEmailTemplates[i-1] || c.heading !== searchEmailTemplates[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -335,25 +333,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchQandAs | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchQandAs | appFilter: searchText; let i = index"
                 (click)="openQandANav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchQandAs[i-1] || c.heading !== searchQandAs[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -362,25 +360,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchAddendum | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchAddendum | appFilter: searchText; let i = index"
                 (click)="openAddendumNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchAddendum[i-1] || c.heading !== searchAddendum[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -389,25 +387,25 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
-              <li 
-                *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index" 
+              <li
+                *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index"
                 (click)="goToPageTemplatesNav()"
                 class="flex-group flex-start flex-align-center"
                 routerLink="/{{c.link}}"
                 id="{{c.id}}"
               >
-                <h2 
+                <h2
                   *ngIf="!searchPageTemplates[i-1] || c.heading !== searchPageTemplates[i-1].heading"
                   class="white-100 width-100"
                   >
@@ -416,14 +414,14 @@
                 <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
                   <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
                 </div>
-                <a 
-                  appHighlight 
-                  [searchedWord]="searchText" 
+                <a
+                  appHighlight
+                  [searchedWord]="searchText"
                   [content]="
                     c.link.toString().split('-').join('\n')
-                  " 
-                  [classToApply]="'highlight'" 
-                  [setTitle]="'false'"
+                  "
+                  [classToApply]="'highlight'"
+                  [setTitle]="false"
                   >
                 </a>
               </li>
@@ -456,22 +454,20 @@
   >
   <ul>
     <li *ngFor="let item of navDataItems; let i = index">
-      <!-- If it's an href -->
-      <a 
-        *ngIf="item.isHref" 
+      <!-- If it's just an href -->
+      <a
+        *ngIf="item.isHref"
         href="{{item.hRef}}"
         target="_blank"
-        [class.expanded]="selectedIndex === i"
-        (click)="setIndex(i)"
         class="flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}"
       >
         <span class="material-icons font-size-large">{{item.iconName}}</span>
         <span class="margin-right-0-5">{{item.title}}</span>
         <span class="material-icons position-static bg-transparent aa-burgundy-100">open_in_new</span>
       </a>
-      <!-- If it's a routerOutlet -->
+      <!-- If it's just a solo routerOutlet and NOT expandable -->
       <a
-        *ngIf="!item.isHref"
+        *ngIf="!item.isHref && !item.isExpandable"
         routerLink="{{item.routerLink}}"
         [class.expanded]="selectedIndex === i"
         (click)="setIndex(i)"
@@ -480,9 +476,19 @@
         <span class="material-icons">{{item.iconName}}</span>
         <span class="margin-right-0-5">{{item.title}}</span>
       </a>
-      <ul 
+      <!-- If it's just an expandable item with no href or routerLink -->
+      <a
+        *ngIf="item.isExpandable"
+        [class.expanded]="selectedIndex === i"
+        (click)="setIndex(i)"
+        class="flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}"
+      >
+        <span class="material-icons">{{item.iconName}}</span>
+        <span class="margin-right-0-5">{{item.title}}</span>
+      </a>
+      <ul
         *ngIf="!item.soloItem"
-        [ngStyle]="selectedIndex === i && { 'max-height' : item.nestedItems.length * '33' + 'px' }"
+        [ngStyle]="selectedIndex === i && item.nestedItems ? { 'max-height' : item.nestedItems.length * 33 + 'px' }: {}"
       >
         <li *ngFor="let nestedItem of item.nestedItems; let n = index">
           <a
@@ -496,7 +502,7 @@
             <span>{{nestedItem.title}}</span>
           </a>
         </li>
-      </ul> 
+      </ul>
     </li>
   </ul>
   <div class="flex-group nav-min-max flex-align-center">
@@ -508,21 +514,21 @@
 <main class="main-content" [ngClass]="{'menu-minimized' : minimizeMenu}">
   <!-- Toastr -->
   <article class="aa-toastr-service">
-    <section 
-      *ngFor="let toast of toasts; let i = index" 
+    <section
+      *ngFor="let toast of toasts; let i = index"
       class="
-        aa-toastr-content 
-        width-20 
-        flex-group 
-        space-between 
-        flex-align-center 
+        aa-toastr-content
+        width-20
+        flex-group
+        space-between
+        flex-align-center
         {{toast.type}}"
       >
       <div class="flex-group flex-start flex-align-center">
         <div class="material-icons">{{toast.icon}}</div>
         <div>
           <h3>{{toast.title}}</h3>
-          <p>{{toast.message}}</p>
+          <p class="max-width-14">{{toast.message}}</p>
         </div>
       </div>
       <button (click)="remove(i)" class="material-icons aa-white-100">clear</button>
@@ -537,11 +543,11 @@
 <aa-blade
   class="apps-blade"
   [customBlade]="true"
-  [showModal]="false"
+  [blockPageUI]="false"
   [toggleBlade]="toggleAppsBlade"
-  suppressAutoClose="false"
-  topPosition="3.5"
-  zIndex="99999"
+  [suppressAutoClose]="false"
+  topPosition="3.5rem"
+  [zIndex]="99999"
   bladeSize="one-column-width"
   bladeHeading="Hello"
   [enableIcon]="true"
@@ -602,11 +608,11 @@
 <aa-blade
   class="login-blade"
   [customBlade]="false"
-  [showModal]="false"
+  [blockPageUI]="false"
   [toggleBlade]="toggleLoginBlade"
-  suppressAutoClose="false"
-  topPosition="3.5"
-  zIndex="999"
+  [suppressAutoClose]="false"
+  topPosition="3.5rem"
+  [zIndex]="999"
   bladeSize="one-column-width"
   [enableIcon]="true"
   iconName="directions_bike"
@@ -623,7 +629,7 @@
     </div>
     <div>
       <h2 class="margin-bottom-0-25">Han Solo</h2>
-      <a class="cursor-pointer" mailto="michael.king@angloamerican.com">michael.king@angloamerican.com</a>
+      <a class="cursor-pointer" mailto="michael.king@angloamerican.com">michael.king&#64;angloamerican.com</a>
     </div>
   </div>
 </article>

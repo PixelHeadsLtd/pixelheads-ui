@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 @Component({
   selector: 'aa-info-panel',
   templateUrl: './info-panel.component.html',
@@ -6,18 +6,14 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class InfoPanelComponent implements OnInit {
+export class InfoPanelComponent {
 
-  @Input() panelWidth: number;
-  @Input() panelHeight: number;
-  @Input() panelStatus: string;
-  @Input() preventOpacity: string;
-  @Input() removeHeaderBorder: boolean;
-  @Input() roundedCorners: boolean;
+  @Input() panelWidth: any;
+  @Input() panelHeight: any;
+  @Input() panelStatus: string = '';
+  @Input() preventOpacity: boolean = false;
+  @Input() removeHeaderBorder: boolean = false;
+  @Input() roundedCorners: boolean = false;
 
   constructor() { }
-
-
-  ngOnInit() {
-  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-modal',
@@ -6,25 +6,22 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./modal.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  @Input() heading: string;
-  @Input() message: string;
+  @Input() heading: string  = '';
+  @Input() message: string = '';
   @Input() topPos: any;
   @Input() rightPos: any;
   @Input() leftPos: any;
   @Input() minWidth: any;
   @Input() maxWidth: any;
-  @Input() green: boolean;
-  @Input() orange: boolean;
-  @Input() red: boolean;
-  @Input() blue: boolean;
-  @Input() zIndex: number;
-  @Input() hideHeader: number;
+  @Input() green: boolean = false;
+  @Input() orange: boolean = false;
+  @Input() red: boolean = false;
+  @Input() blue: boolean = false;
+  @Input() zIndex: number = 0;
+  @Input() hideHeader: number = 0;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

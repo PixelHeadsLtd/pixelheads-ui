@@ -6,15 +6,15 @@ import { BoostOptions } from 'highcharts';
   templateUrl: './icons.component.html',
   styleUrls: ['./icons.component.scss']
 })
-export class IconsComponent implements OnInit {
-  
-  materialIcons: Boolean;
-  countryFlags: boolean;
-  toggleBlade: boolean;
+export class IconsComponent {
 
-  showSearch: boolean;
-  showSearchResults: boolean;
-  searchText = '';
+  materialIcons: boolean = false;
+  countryFlags: boolean = false;
+  toggleBlade: boolean = false;
+
+  showSearch: boolean = false;
+  showSearchResults: boolean = false;
+  searchText:string|null = '';
 
   constructor() { }
 
@@ -234,17 +234,14 @@ export class IconsComponent implements OnInit {
   toggleSearchInput() {
     this.showSearch = ! this.showSearch;
     if(this.showSearch) {
-      document.getElementById('search-text').focus();
+      document.getElementById('search-text')?.focus();
     } else {
       this.searchText = '';
     }
   }
-  
+
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

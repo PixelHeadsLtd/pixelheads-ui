@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tooltip',
   templateUrl: './tooltip.component.html',
   styleUrls: ['./tooltip.component.scss']
 })
-export class TooltipComponent implements OnInit {
+export class TooltipComponent {
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   public onClick() { console.log('You clicked the button'); }
 
@@ -16,8 +16,4 @@ export class TooltipComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit() {
-  }
-
 }

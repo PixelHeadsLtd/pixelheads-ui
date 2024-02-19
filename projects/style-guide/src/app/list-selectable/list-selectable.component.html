@@ -15,20 +15,15 @@
             <aa-list-selectable
                 [fixedPosition]="false"
                 [flexStart]="true"
-                topPos=""
-                rightPos=""
-                bottomPos=""
-                leftPos=""
-                zIndex=""
             >
-            <li 
-                *ngFor="let item of listSelectableItems; let i = index" 
-                (click)="setIndex(i)"
-                [ngClass]="{'selected':selectedIndex === i, 'disabled':item.disabled}" 
-                class="flex-group flex-start flex-align-center"
-            >
-                <a>{{item.name}}</a>
-            </li>
+                <li
+                    *ngFor="let item of listSelectableItems; let i = index"
+                    (click)="setIndex(i)"
+                    [ngClass]="{'selected':selectedIndex === i, 'disabled':item.disabled}"
+                    class="flex-group flex-start flex-align-center"
+                >
+                    <a>{{item.name}}</a>
+                </li>
             </aa-list-selectable>
 
         </section>
@@ -60,25 +55,25 @@
                     <tr>
                         <td datalabel="Element">aa-list-selectable</td>
                         <td datalabel="Attribute">topPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">Only applicable if 'fixedPosition' is true</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-list-selectable</td>
                         <td datalabel="Attribute">rightPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">Only applicable if 'fixedPosition' is true</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-list-selectable</td>
                         <td datalabel="Attribute">bottomPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">Only applicable if 'fixedPosition' is true</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-list-selectable</td>
                         <td datalabel="Attribute">leftPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">Only applicable if 'fixedPosition' is true</td>
                     </tr>
                     <tr>
@@ -93,23 +88,23 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-blade 
-        [showModal]="false" 
-        [toggleBlade]="toggleBlade" 
-        suppressAutoClose="false" 
-        topPosition="3.5" 
-        zIndex="2"
-        bladeSize="one-column-width" 
-        bladeHeading="Gist" 
-        [enableIcon]="true" 
+    <aa-blade
+        [blockPageUI]="false"
+        [toggleBlade]="toggleBlade"
+        [suppressAutoClose]="false"
+        topPosition="3.5rem"
+        [zIndex]="2"
+        bladeSize="one-column-width"
+        bladeHeading="Gist"
+        [enableIcon]="true"
         iconName="table_rows"
-        (close)="toggleBlade = false"
+        (bladeOpen)="bladeIsOpen($event)"
     >
         <article class="blade-content">
             <a href="https://gist.github.com/angloux/679fa7cc34b47a08f4fc0b9fee12835b" target="_blank">View Gist on GitHub</a>

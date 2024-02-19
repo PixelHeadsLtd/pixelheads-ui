@@ -9,8 +9,8 @@
       <h2>Material icons</h2>
       <div class="describe margin-bottom-1">
         <p>
-          We use Google's Material icons. There are some legacy Font Awesome icons around, but we are 
-          moving towards Material. The easy way to use them is to find one you like and call it by its 
+          We use Google's Material icons. There are some legacy Font Awesome icons around, but we are
+          moving towards Material. The easy way to use them is to find one you like and call it by its
           name in a wrapper element with class <strong class="aa-red-100">'material-icons' or 'material-icons-outlined'</strong>
         </p>
       </div>
@@ -128,7 +128,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons=true; countryFlags=false">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); materialIcons=true; countryFlags=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -139,8 +139,8 @@
       <h2>Country flags</h2>
       <div class="describe margin-bottom-1">
         <p>
-          We have a complete set of country flags that you can use. All you need to do 
-          is add the class "flag" and the country code class, for example, for Great Britain 
+          We have a complete set of country flags that you can use. All you need to do
+          is add the class "flag" and the country code class, for example, for Great Britain
           you would use classes "flag bg"
         </p>
       </div>
@@ -156,26 +156,26 @@
           />
           <button *ngIf="searchText" (click)="searchText=null" class="cancel">clear</button>
       </div>
-      <section 
+      <section
         *ngIf="searchText"
         class="
-          scroll-panel 
-          max-height-15 
-          bd-orange 
-          bd-dashed 
-          bd-1 
-          bd-solid 
-          border-radius-0-25 
-          padding-0-75 
-          padding-bottom-0 
-          padding-right-0 
+          scroll-panel
+          max-height-15
+          bd-orange
+          bd-dashed
+          bd-1
+          bd-solid
+          border-radius-0-25
+          padding-0-75
+          padding-bottom-0
+          padding-right-0
           box-shadow
         ">
         <div class="flex-group flex-start scroll-panel-content">
-          <div 
-            *ngFor="let flag of flags | appFilter: searchText"  
+          <div
+            *ngFor="let flag of flags | appFilter: searchText"
             class="
-              flex-group 
+              flex-group
               flex-align-center
               width-10
               margin-bottom-1
@@ -186,7 +186,7 @@
           </div>
         </div>
       </section>
-     
+
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -221,7 +221,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); materialIcons=false; countryFlags=true">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); materialIcons=false; countryFlags=true">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -229,16 +229,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <div *ngIf="materialIcons">

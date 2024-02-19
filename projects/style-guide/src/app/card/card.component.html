@@ -17,7 +17,7 @@
         </p>
       </div>
 
-      <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath">
+      <aa-card cardName="Person card name" cardRole="Person card role" [imgPath]="imgPath1">
         <ng-container card-menu>
           <div class="flex-group space-between">
             <div class="flex-group flex-start">
@@ -26,7 +26,7 @@
             </div>
             <div class="flex-group">
               <div class="flag gb"></div>
-              <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="99999">
+              <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                 <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                 <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                 <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -39,14 +39,14 @@
       <article class="aa-card aa-card-icon width-16">
         <div class="flex-group flex-start flex-align-center">
           <section>
-            <div 
+            <div
             class="
               flex-1
-              card-icon 
-              fas 
-              fa-binoculars 
-              aa-blue-100 
-              border-radius-2 
+              card-icon
+              fas
+              fa-binoculars
+              aa-blue-100
+              border-radius-2
               bg-aa-pink-100
               padding-0-5
               "
@@ -56,9 +56,9 @@
           <section class="flex-3">
             <a class="ellipsis max-width-10" title="This is a long name that's truncated">This is a long name that's truncated</a>
           </section>
-          <aa-context-menu 
-            [showOnLeft]="false" 
-            minWidth="11.5"
+          <aa-context-menu
+            [showOnLeft]="false"
+            minWidth="11.5rem"
             class="flex-1"
           >
             <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
@@ -133,14 +133,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = true; 
-          showCardMini = false; 
-          showCardList = false; 
-          showAvatar = false; 
+          bladeIsOpen(true);
+          showCard = true;
+          showCardMini = false;
+          showCardList = false;
+          showAvatar = false;
           showCardOptional = false;
           showCardDetailed = false
         "
@@ -149,25 +149,25 @@
       </button>
     </nav>
   </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
       <h2>Card mini</h2>
       <div class="describe margin-bottom-1">
         <p>
-          The card mini is used for the Organisation app overlay, but can be used in others 
+          The card mini is used for the Organisation app overlay, but can be used in others
           areas where you might want to display a collection of contacts/details. You can switch to
           use a profile image or alternatively an icon.
         </p>
       </div>
 
       <div class="flex-group">
-        <aa-card 
+        <aa-card
           [cardMini]="true"
           [showAsProfile]="true"
           borderClass=""
-          title="Obi-Wan Kenobi"  
+          title="Obi-Wan Kenobi"
           (cardClick)="onClick()"
         >
           <ng-container profile-image>
@@ -177,8 +177,8 @@
             <span>Jedi Master</span>
           </ng-container>
         </aa-card>
-        
-        <aa-card 
+
+        <aa-card
           [cardMini]="true"
           [showAsProfile]="true"
           borderClass=""
@@ -193,30 +193,30 @@
           </ng-container>
         </aa-card>
       </div>
-      
+
       <div class="flex-group">
-        <aa-card 
+        <aa-card
           [cardMini]="true"
           [showAsIcon]="true"
           iconName="mail_outline"
           title="Email"
         >
           <ng-container content>
-            <a href="obi-wan@kenobi.com">obi-wan@kenobi.com</a>
+            <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
           </ng-container>
         </aa-card>
-        <aa-card 
+        <aa-card
           [cardMini]="true"
           [showAsIcon]="true"
           iconName="chat_bubble_outline"
-          title="Chat"  
+          title="Chat"
         >
           <ng-container content>
-            <a href="obi-wan@kenobi.com">obi-wan@kenobi.com</a>
+            <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
           </ng-container>
         </aa-card>
       </div>
-    
+
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -281,14 +281,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = false; 
-          showCardMini = true; 
-          showCardList = false; 
-          showAvatar = false; 
+          bladeIsOpen(true);
+          showCard = false;
+          showCardMini = true;
+          showCardList = false;
+          showAvatar = false;
           showCardOptional = false;
           showCardDetailed = false
         "
@@ -303,18 +303,18 @@
         <h2>Card list</h2>
         <div class="describe margin-bottom-1">
           <p>
-            The card-list is used with the Design Language blade "column-half-width", to see a working example the 
+            The card-list is used with the Design Language blade "column-half-width", to see a working example the
             includes the animated aa-card popop and overlay in action, <a routerLink="/blade">please go here</a>
             and hover over and click the first list-item in the blade.
           </p>
         </div>
-  
+
         <ul class="aa-card-list">
-          <li class="flex-group" title="Obi-Wan">
+          <li class="flex-group">
             <div class="card-list-image fingerprint">
               <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
             </div>
-            <div class="margin-top-0-25">
+            <div>
               <strong>Obi-Wan</strong>
               <p>Jedi Knight</p>
             </div>
@@ -329,7 +329,7 @@
                     <div class="margin-right-0-25">
                       <div class="flag gb"></div>
                     </div>
-                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                       <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -339,15 +339,15 @@
               </ng-container>
             </aa-card>
           </li>
-          <li class="flex-group" title="Darth Vader">
+          <li class="flex-group">
             <div class="card-list-image fingerprint">
               <img onerror="this.style.display='none'" src="./assets/images/samples/darth.png" />
             </div>
-            <div class="margin-top-0-25">
+            <div>
               <strong>Darth Vader</strong>
               <p>Member</p>
             </div>
-            <aa-card cardName="Darth Vader" cardRole="Sith Lord" [imgPath]="imgPath">
+            <aa-card cardName="Darth Vader" cardRole="Sith Lord" [imgPath]="imgPath1">
               <ng-container card-menu>
                 <div class="flex-group space-between">
                   <div class="flex-group flex-start">
@@ -358,7 +358,7 @@
                     <div class="margin-right-0-25">
                       <div class="flag gb"></div>
                     </div>
-                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                       <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -368,11 +368,11 @@
               </ng-container>
             </aa-card>
           </li>
-          <li class="flex-group" title="Yoda">
+          <li class="flex-group">
             <div class="card-list-image fingerprint">
               <img onerror="this.style.display='none'" src="./assets/images/samples/yoda.png" />
             </div>
-            <div class="margin-top-0-25">
+            <div>
               <strong>Yoda</strong>
               <p>Member</p>
             </div>
@@ -387,7 +387,7 @@
                     <div class="margin-right-0-25">
                       <div class="flag gb"></div>
                     </div>
-                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                       <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -397,11 +397,11 @@
               </ng-container>
             </aa-card>
           </li>
-          <li class="flex-group" title="Luke Skywalker">
+          <li class="flex-group">
             <div class="card-list-image fingerprint">
               <img onerror="this.style.display='none'" src="./assets/images/samples/luke.png" />
             </div>
-            <div class="margin-top-0-25">
+            <div>
               <strong>Luke Skywalker</strong>
               <p>Member</p>
             </div>
@@ -416,7 +416,7 @@
                     <div class="margin-right-0-25">
                       <div class="flag gb"></div>
                     </div>
-                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu [showOnLeft]="false" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                       <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -429,7 +429,7 @@
         </ul>
 
       </section>
-  
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>
@@ -477,17 +477,17 @@
           </tbody>
         </table>
       </section>
-  
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button 
-        class="custom-icons bg-aa-light-blue-100" 
+        <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = false; 
-          showCardMini = false; 
-          showCardList = true; 
-          showAvatar = false; 
+          bladeIsOpen(true);
+          showCard = false;
+          showCardMini = false;
+          showCardList = true;
+          showAvatar = false;
           showCardOptional = false;
           showCardDetailed = false
         "
@@ -496,10 +496,10 @@
       </button>
       </nav>
     </section>
-    
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
-          
+
     <section class="flex-1 col-left flex-start">
       <h2>Card standalone avatar with overlay</h2>
       <div class="describe margin-bottom-1">
@@ -510,23 +510,23 @@
       <section class="flex-group">
         <div>
           <h3>Image found</h3>
-          <div 
+          <div
             class="avatar"
             [ngStyle]="{
-              'width':'4rem', 
+              'width':'4rem',
               'height':'4rem'
             }"
           >
             <div>
-              <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
+              <img onerror="this.style.display='none'" src="{{imgPath1}}" />
             </div>
-            <aa-card 
-              cardName="Person card name" 
-              cardRole="Person card role" 
-              [imgPath]="imgPath"
-              zIndex="999"
-              topPos="2"
-              leftPos="2"
+            <aa-card
+              cardName="Person card name"
+              cardRole="Person card role"
+              [imgPath]="imgPath1"
+              [zIndex]="999"
+              [topPos]="2"
+              [leftPos]="2"
             >
               <ng-container card-menu>
                 <div class="flex-group space-between">
@@ -538,7 +538,7 @@
                     <div class="margin-right-0-25">
                       <div class="flag gb"></div>
                     </div>
-                    <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="99999">
+                    <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
                       <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                       <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -552,9 +552,9 @@
         <div>
           <h3>Image missing</h3>
           <div class="avatar">
-            <div 
+            <div
               [ngStyle]="{
-                'width':'4rem', 
+                'width':'4rem',
                 'height':'4rem'
               }"
             >
@@ -564,7 +564,7 @@
         </div>
       </section>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -592,17 +592,17 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = false; 
-          showCardMini = false; 
-          showCardList = false; 
-          showAvatar = true; 
+          bladeIsOpen(true);
+          showCard = false;
+          showCardMini = false;
+          showCardList = false;
+          showAvatar = true;
           showCardOptional = false;
           showCardDetailed = false
         "
@@ -611,7 +611,7 @@
       </button>
       </nav>
   </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
       <section class="flex-1 col-left flex-start">
@@ -648,12 +648,12 @@
             cardName="Lord D. Vader"
             cardRole="Sith Lord, and Lead Empire Eradication Officer"
             themeColour="#0075b0"
-            [imgPath]="imgPath"
+            [imgPath]="imgPath1"
           >
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag sg"></div>
-                <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                   <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -672,7 +672,7 @@
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
-                <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                   <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -685,13 +685,13 @@
             [cardOptional]="true"
             cardName="Yoda"
             cardRole="Jedi Master"
-            themeColour="#e6b127"
+            [themeColour]="'#e6b127'"
             [imgPath]="imgPath3"
           >
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
-                <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                   <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -703,7 +703,7 @@
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
-                <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                   <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                   <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -719,13 +719,13 @@
             cardName="Lord D. Vader"
             cardRole="Sith Lord, and Lead Empire Eradication Officer"
             themeColour="#0075b0"
-            [imgPath]="imgPath"
+            [imgPath]="imgPath1"
           >
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
                 <div>
-                  <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                  <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                     <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -746,7 +746,7 @@
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
                 <div>
-                  <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                  <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                     <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -767,7 +767,7 @@
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
                 <div>
-                  <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                  <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                     <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -776,12 +776,19 @@
               </div>
             </ng-container>
           </aa-card>
-          <aa-card (cardClick)="onClick()" [cardOptional]="true" cardName="Unknown" cardRole="Unknown" themeColour="#3CC6E2" [imgPath]="">
+          <aa-card 
+            (cardClick)="onClick()" 
+            [cardOptional]="true" 
+            cardName="Unknown" 
+            cardRole="Unknown" 
+            themeColour="#3CC6E2" 
+            [imgPath]=""
+          >
             <ng-container card-menu-opt>
               <div class="flex-group position-relative">
                 <div class="flag gb"></div>
                 <div>
-                  <aa-context-menu class="padding-right-0-75" minWidth="7" zIndex="9999">
+                  <aa-context-menu class="padding-right-0-75" minWidth="7rem" [zIndex]="9999">
                     <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
@@ -831,14 +838,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button 
-        class="custom-icons bg-aa-light-blue-100" 
+        <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = false; 
-          showCardMini = false; 
-          showCardList = false; 
-          showAvatar = false; 
+          bladeIsOpen(true);
+          showCard = false;
+          showCardMini = false;
+          showCardList = false;
+          showAvatar = false;
           showCardOptional = true;
           showCardDetailed = false
         "
@@ -873,13 +880,13 @@
               cardName="Lord D. Vader"
               cardRole="Sith Lord, and Lead Empire Eradication Officer"
               themeColour="#0075b0"
-              [imgPath]="imgPath"
+              [imgPath]="imgPath1"
             >
               <ng-container card-hover-content>
-                <aa-card 
-                  cardName="Person card name" 
-                  cardRole="Person card role" 
-                  [imgPath]="imgPath"
+                <aa-card
+                  cardName="Person card name"
+                  cardRole="Person card role"
+                  [imgPath]="imgPath1"
                   >
                   <ng-container card-menu>
                     <div class="flex-group space-between">
@@ -904,7 +911,7 @@
           <td datalabel="Primary job role">Empire Eradication Lead</td>
           <td datalabel="Manager">Tarkin</td>
           <td datalabel="Address">Death Star</td>
-          <td datalabel="Email">darth@deathstarinc.com</td>
+          <td datalabel="Email">darth&#64;deathstarinc.com</td>
           <td datalabel="Active">Yes</td>
           <td datalabel="Marketing">No</td>
           <td datalabel="Compliance">No</td>
@@ -921,9 +928,9 @@
               [imgPath]="imgPath2"
             >
               <ng-container card-hover-content>
-                <aa-card 
-                  cardName="Person card name" 
-                  cardRole="Person card role" 
+                <aa-card
+                  cardName="Person card name"
+                  cardRole="Person card role"
                   [imgPath]="imgPath2"
                   >
                   <ng-container card-menu>
@@ -949,7 +956,7 @@
           <td datalabel="Primary job role">Dark-Side Residence and Jedi Training</td>
           <td datalabel="Manager">Unknown</td>
           <td datalabel="Address">planet Tatooine</td>
-          <td datalabel="Email">obi-wan@kenobi.com</td>
+          <td datalabel="Email">obi-wan&#64;kenobi.com</td>
           <td datalabel="Active">Yes</td>
           <td datalabel="Marketing">No</td>
           <td datalabel="Compliance">No</td>
@@ -966,9 +973,9 @@
               [imgPath]="imgPath3"
             >
               <ng-container card-hover-content>
-                <aa-card 
-                  cardName="Person card name" 
-                  cardRole="Person card role" 
+                <aa-card
+                  cardName="Person card name"
+                  cardRole="Person card role"
                   [imgPath]="imgPath3"
                   >
                   <ng-container card-menu>
@@ -994,7 +1001,7 @@
           <td datalabel="Primary job role">Senior Jedi Trainer</td>
           <td datalabel="Manager">Unknown</td>
           <td datalabel="Address">Dagobah</td>
-          <td datalabel="Email">yoda@master.com</td>
+          <td datalabel="Email">yoda&#64;master.com</td>
           <td datalabel="Active">Yes</td>
           <td datalabel="Marketing">No</td>
           <td datalabel="Compliance">No</td>
@@ -1011,9 +1018,9 @@
               [imgPath]="imgPath4"
             >
               <ng-container card-hover-content>
-                <aa-card 
-                  cardName="Person card name" 
-                  cardRole="Person card role" 
+                <aa-card
+                  cardName="Person card name"
+                  cardRole="Person card role"
                   [imgPath]="imgPath4"
                   >
                   <ng-container card-menu>
@@ -1055,18 +1062,16 @@
       <h2>Card detailed</h2>
       <div class="describe margin-bottom-1">
         <p>
-          Use the detailed version if you need to add more information. 
-          These are also used for our blades. A working version can be found in the last tab of the 
+          Use the detailed version if you need to add more information.
+          These are also used for our blades. A working version can be found in the last tab of the
           <strong class="aa-red-100">`One column width` </strong> <a routerLink="/blade">blade example here</a>.
         </p>
       </div>
 
-      <aa-card 
+      <aa-card
       [cardDetailed]="true"
-      topPos=""
-      leftPos=""
       cardWidth="32rem"
-      [imgPath]="imgPath"
+      [imgPath]="imgPath1"
       >
       <ng-container card-detailed-content>
         <h2>Obi-Wan Kenobi</h2>
@@ -1077,18 +1082,18 @@
             <h4>Skills</h4>
             <div>Force powers</div>
           </section>
-      
+
           <section>
             <h4>Species</h4>
             <div>Human</div>
             <h4>Affiliation</h4>
             <div>Rebel Alliance</div>
           </section>
-      
+
           <section>
             <h4>Apprentices</h4>
-            <div 
-              title="Luke & Anakin Skywalker" 
+            <div
+              title="Luke & Anakin Skywalker"
               class="max-width-8">
               Luke & Anakin Skywalker
             </div>
@@ -1165,14 +1170,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          showCard = false; 
-          showCardMini = false; 
-          showCardList = false; 
-          showAvatar = false; 
+          bladeIsOpen(true);
+          showCard = false;
+          showCardMini = false;
+          showCardList = false;
+          showAvatar = false;
           showCardOptional = false;
           showCardDetailed = true
         "
@@ -1184,16 +1189,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <div *ngIf="showCard">

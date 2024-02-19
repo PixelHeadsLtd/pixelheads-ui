@@ -13,15 +13,14 @@
             QuestionEight=false;
             QuestionNine=false;
             QuestionTen=false
-            " fieldClass="boxed label-hidden" buttonClass="secondary filter" buttonLabel="Filter" buttonText="Filter"
-            disabled="">
+            " fieldClass="boxed label-hidden" buttonClass="secondary filter" buttonLabel="Filter" buttonText="Filter">
         </aa-button>
     </section>
 
     <article *ngIf="!toggleFilter" class="
-        flex-group 
-        flex-start 
-        filter-container 
+        flex-group
+        flex-start
+        filter-container
         padding-1-25">
         <div class="field boxed">
             <label>Questions</label>
@@ -35,9 +34,9 @@
 
 <section class="content-container padding-left-0 padding-right-0" [ngStyle]="toggleFilter ? {'padding-top' : '3.5rem'}:{'padding-top' : '10rem'}">
     <article id="whichThirdPary" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 0}">
         <h1>Questions about 3rd-party components</h1>
         <h3>Which 3rd party components do we currently support?</h3>
@@ -51,9 +50,9 @@
     </article>
 
     <article id="whatDateFormat" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 1}">
         <h3 class="margin-top-0">What date format should I use for the NGB-datepicker</h3>
         <p class="max-width-50">The format is <a routerLink="/ngb-datepicker">described here</a> but just to reiterate,
@@ -64,9 +63,9 @@
     </article>
 
     <article id="contextMenu" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 2}">
         <h3 class="margin-top-0">How do I add a context-menu to AG-grid?</h3>
         <p class="max-width-50">Please visit the <a routerLink="/ag-grid">AG-grid</a> page of this site and open the
@@ -76,9 +75,9 @@
     </article>
 
     <article id="toolTip" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 3}">
         <h3 class="margin-top-0">How do I add a tooltip to AG-grid?</h3>
         <p class="max-width-50">Please visit the <a routerLink="/ag-grid">AG-grid</a> page of this site and open the
@@ -88,9 +87,9 @@
     </article>
 
     <article id="setHeight" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 4}">
         <h3 class="margin-top-0">How do I set the height on AG-grid?</h3>
         <p class="max-width-50">Please visit the <a routerLink="/ag-grid">AG-grid</a> page of this site and open the
@@ -100,9 +99,9 @@
     </article>
 
     <article id="dlInAgGrid" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 5}">
         <h3 class="margin-top-0">Which Design Language components can I use with AG-grid?</h3>
         <p class="max-width-50">
@@ -127,9 +126,9 @@
     </article>
 
     <article id="agGridHelp" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 6}">
         <h3 class="margin-top-0">Where can I get further help with AG-grid?</h3>
         <p class="max-width-50">Please visit the Angular Data Grid - Getting Started page on the <a
@@ -137,9 +136,9 @@
     </article>
 
     <article id="dlComponents" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 7}">
         <h1>Questions about Design Language components</h1>
         <h3>Where can I find the markup for a given component?</h3>
@@ -151,9 +150,9 @@
     </article>
 
     <article id="customCss" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 8}">
         <h3 class="margin-top-0">Can we use custom css in our projects?</h3>
         <p class="max-width-50"><strong class="aa-red-100">No, please do not use custom css!</strong> This is for a very
@@ -174,9 +173,9 @@
     </article>
 
     <article id="whichNode" style="scroll-margin-top: 13.5rem;" class="content-repeater" [ngClass]="{'
-        bg-aa-pink-25 
-        bd-left-6 
-        bd-left-pink 
+        bg-aa-pink-25
+        bd-left-6
+        bd-left-pink
         bd-left-solid' : selectedIndex === 9}">
         <h3 class="margin-top-0">How do I know which node packages to use?</h3>
         <p class="max-width-50">We advise that you always update to the very latest Styles and Components packages.

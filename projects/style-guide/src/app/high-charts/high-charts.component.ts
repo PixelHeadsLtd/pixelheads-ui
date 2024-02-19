@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_dilldown from 'highcharts/modules/drilldown';
 HC_dilldown(Highcharts);
@@ -8,9 +8,9 @@ HC_dilldown(Highcharts);
   templateUrl: './high-charts.component.html',
   styleUrls: ['./high-charts.component.scss']
 })
-export class HighChartsComponent implements OnInit {
+export class HighChartsComponent {
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   constructor() {}
 
@@ -96,7 +96,7 @@ export class HighChartsComponent implements OnInit {
           {
             name: 'Other',
             y: 7.62,
-            drilldown: null,
+            drilldown: '',
           },
         ],
       },
@@ -197,8 +197,4 @@ export class HighChartsComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

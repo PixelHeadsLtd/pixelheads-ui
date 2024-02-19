@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-progress-bar',
@@ -6,22 +6,19 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./progress-bar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProgressBarComponent implements OnInit {
+export class ProgressBarComponent {
 
-  @Input() titleBold: string;
-  @Input() titleRegular: string;
+  @Input() titleBold: string = '';
+  @Input() titleRegular: string = '';
   @Input() leftSideText: any;
   @Input() rightSideText: any;
-  @Input() complete: number;
-  @Input() maxWidth: number;
-  @Input() displayOverHeader: boolean;
+  @Input() complete: number = 0;
+  @Input() maxWidth: string = '';
+  @Input() displayOverHeader: boolean = false;
   @Input() progressBgColour: any;
   @Input() progressColour: any;
   @Input() progressId: any;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

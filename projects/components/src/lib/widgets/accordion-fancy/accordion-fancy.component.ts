@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 @Component({
   selector: 'aa-accordion-fancy',
   templateUrl: './accordion-fancy.component.html',
@@ -6,18 +6,16 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class AccordionFancyComponent implements OnInit {
+export class AccordionFancyComponent  {
 
-  @Input() showBody: boolean;
-  @Input() materialIcons: boolean;
-  @Input() itemTitle: string;
-  @Input() accordionId: string;
-  @Input() iconName: string;
-  @Input() iconColour: string;
+  @Input() showBody: boolean = false;
+  @Input() materialIcons: boolean = false;
+  @Input() itemTitle: string = '';
+  @Input() accordionId: string = '';
+  @Input() iconName: string = '';
+  @Input() iconColour: string = '';
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

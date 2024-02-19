@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AccordionComponent } from './accordion.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('AccordionComponent', () => {
   let component: AccordionComponent;
   let fixture: ComponentFixture<AccordionComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ AccordionComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [AccordionComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AccordionComponent);

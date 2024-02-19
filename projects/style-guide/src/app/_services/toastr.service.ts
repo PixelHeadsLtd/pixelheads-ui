@@ -15,7 +15,7 @@ export class ToastService {
   toasts: Toast[] = [];
   delay = 8000;
 
-  subject = new BehaviorSubject<Toast[]>(null);
+  subject = new BehaviorSubject<Toast[]>([]);
   toasts$ = this.subject.asObservable();
 
   add(toast: Toast) {

@@ -63,11 +63,11 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          featureBox=true; 
+          bladeIsOpen(true);
+          featureBox=true;
           featureBoxCustomBorder=false;
           featureBoxCustomContent=false;
           featureBoxApproval=false
@@ -83,7 +83,7 @@
     <section class="flex-1 col-left flex-start">
       <h2>Feature box - custom border colour</h2>
       <div class="describe margin-bottom-1">
-        <p>You can choose to add the class 'feature-box' to any container, 
+        <p>You can choose to add the class 'feature-box' to any container,
           or you can choose to use the component as seen in the mixed content version
           further down the page.
         </p>
@@ -130,11 +130,11 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          featureBox=false; 
+          bladeIsOpen(true);
+          featureBox=false;
           featureBoxCustomBorder=true;
           featureBoxCustomContent=false;
           featureBoxApproval=false
@@ -152,8 +152,8 @@
         <div class="describe margin-bottom-1">
           <p>
             As mentioned above, you can add the feature-box class to any element along
-            with any other modifiers. However, we also have a component that allows you 
-            to add custom content, either as a single column or two collumn layout as 
+            with any other modifiers. However, we also have a component that allows you
+            to add custom content, either as a single column or two collumn layout as
             seen in the below example.
           </p>
         </div>
@@ -162,7 +162,7 @@
           <aa-feature-box
             *ngFor="let item of featureBoxArray"
             [includeHeader]="true"
-            [enableScrolling]="[item.scrolling]"
+            [enableScrolling]="item.scolling"
             [marginTop]="item.marginTop"
             [marginBottom]="item.marginBottom"
             [fbWidth]="item.width"
@@ -176,9 +176,9 @@
               </header>
             </ng-container>
 
-            <ng-container custom-content>                
-              <div 
-                  *ngFor="let item of fbContent" 
+            <ng-container custom-content>
+              <div
+                  *ngFor="let item of fbContent"
                   class="flex-group space-between flex-nowrap flex-align-center"
                 >
                   <span>{{item.name}}</span>
@@ -195,7 +195,7 @@
           </aa-feature-box>
         </div>
       </section>
-  
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>
@@ -267,14 +267,14 @@
           </tbody>
         </table>
       </section>
-  
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-            bladeIsOpen($event); 
-            featureBox=false; 
+            bladeIsOpen(true);
+            featureBox=false;
             featureBoxCustomBorder=false;
             featureBoxCustomContent=true;
             featureBoxApproval=false
@@ -284,7 +284,7 @@
         </button>
       </nav>
     </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-1 col-left flex-start">
@@ -362,11 +362,11 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-          bladeIsOpen($event); 
-          featureBox=false; 
+          bladeIsOpen(true);
+          featureBox=false;
           featureBoxCustomBorder=false;
           featureBoxCustomContent=false;
           featureBoxApproval=true
@@ -379,16 +379,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <div *ngIf="featureBox">

@@ -6,13 +6,12 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./loading-spinner.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoadingSpinnerComponent implements OnInit {
+export class LoadingSpinnerComponent {
 
   @Input() loadingText = 'Loading...';
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }

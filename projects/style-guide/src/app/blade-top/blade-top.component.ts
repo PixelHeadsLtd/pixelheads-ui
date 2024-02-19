@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './blade-top.component.html',
   styleUrls: ['./blade-top.component.scss']
 })
-export class BladeTopComponent implements OnInit {
+export class BladeTopComponent {
 
-  isPinned: boolean;
-  isOpen: boolean;
-  showBlade: boolean;
-  toggleBlade: boolean;
+  isPinned: boolean = false;
+  isOpen: boolean = false;
+  showBlade: boolean = false;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
@@ -26,7 +26,5 @@ export class BladeTopComponent implements OnInit {
     this.toggleBlade = open;
   }
 
-  ngOnInit(): void {
-  }
 
 }

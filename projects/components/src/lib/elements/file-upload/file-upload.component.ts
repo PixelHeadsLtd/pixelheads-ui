@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-file-upload',
@@ -6,21 +6,22 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./file-upload.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FileUploadComponent implements OnInit {
+export class FileUploadComponent {
 
-  @Input() fileUploadLabel: string;
-  @Input() fileUploadId: string;
-  @Input() fileUploadValue: string;
-  @Input() fileUploadName: string;
-  @Input() fileUploadExtentions: string;
-  @Input() fileUploadText: string;
-  @Input() fieldClass: string;
-  @Input() truncateFileName: boolean;
-  @Input() truncateWidth: number;
+  @Input() fileUploadLabel: string  = '';
+  @Input() fileUploadId: string = '';
+  @Input() fileUploadValue: string = '';
+  @Input() fileUploadName: string = '';
+  @Input() fileUploadExtentions: string = '';
+  @Input() fileUploadText: string = '';
+  @Input() fieldClass: string = '';
+  @Input() truncateFileName: boolean = false;
+  @Input() truncateWidth: any;
+  @Input() customButton: boolean = false;
+  @Input() iconName: string = '';
+  @Input() textColor: string = '';
+  @Input() bgColor: any;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

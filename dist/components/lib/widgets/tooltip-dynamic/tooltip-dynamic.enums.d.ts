@@ -6,4 +6,3 @@ export declare enum TooltipDynamicPosition {
     DYNAMIC = "dynamic",
     DEFAULT = "above"
 }
-//# sourceMappingURL=tooltip-dynamic.enums.d.ts.map

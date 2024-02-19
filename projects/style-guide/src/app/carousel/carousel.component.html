@@ -7,8 +7,8 @@
             <h2>Carousel</h2>
             <div class="describe margin-bottom-1">
                 <p>
-                    The Carousel can be used to display any custom content of your choosing. 
-                    You can also set the max-width and have you items displayed center by setting 
+                    The Carousel can be used to display any custom content of your choosing.
+                    You can also set the max-width and have you items displayed center by setting
                     the alignCenter boolean to true
                 </p>
             </div>
@@ -103,17 +103,17 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-carousel 
+    <aa-carousel
         customClass="bg-aa-light-blue-5 bd-bottom-1 bd-bottom-solid bd-bottom-blue-15"
         carouselOuterWidth="100%"
-        carouselInnerWidth="25rem" 
-        carouselInnerHeight="auto" 
+        carouselInnerWidth="25rem"
+        carouselInnerHeight="auto"
         carouselItemWidth="100%"
         carouselItemPadding="2rem"
         carouselItemBgColour="bg-aa-burgundy-5"
@@ -130,10 +130,10 @@
             </ng-container>
         </ng-container>
     </aa-carousel>
-    
-    <aa-blade [showModal]="false" [toggleBlade]="toggleBlade" suppressAutoClose="false" topPosition="3.5" zIndex="2"
+
+    <aa-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
         bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
-        (close)="toggleBlade = false">
+        (bladeOpen)="bladeIsOpen($event)">
         <article class="blade-content">
             <a href="https://gist.github.com/angloux/50af90b6876826c56c3c2a68216a8026" target="_blank">View Gist on GitHub</a>
             <app-gist src="angloux/50af90b6876826c56c3c2a68216a8026"></app-gist>

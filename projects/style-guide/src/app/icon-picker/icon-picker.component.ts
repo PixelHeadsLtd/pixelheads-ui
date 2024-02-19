@@ -5,17 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './icon-picker.component.html',
   styleUrls: ['./icon-picker.component.scss']
 })
-export class IconPickerComponent implements OnInit {
-  
-  toggleBlade: boolean;
+export class IconPickerComponent {
+
+  toggleBlade: boolean = false;
 
   constructor() { }
-  
+
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit(): void {
   }
 
 }

@@ -6,15 +6,17 @@ import { Subscription } from 'rxjs';
   selector: '[aaTextareaAutoresize]'
 })
 export class TextareaAutoresizeDirective implements OnInit, OnDestroy {
-  private formControlSubscription: Subscription;
+  private formControlSubscription!: Subscription;
 
-  @Input('aaTextareaAutoresize') set formControlInstance(control: AbstractControl) {
+  @Input('aaTextareaAutoresize') set formControlInstance(control: AbstractControl | undefined) {
     this.cleanControlSubscription();
 
     setTimeout(() => this.resize());
-    this.formControlSubscription = control.valueChanges.subscribe(() => {
-      this.resize();
-    });
+    if(control) {
+      this.formControlSubscription = control.valueChanges.subscribe(() => {
+        this.resize();
+      });
+    }
   }
 
   constructor(private elementRef: ElementRef) {}

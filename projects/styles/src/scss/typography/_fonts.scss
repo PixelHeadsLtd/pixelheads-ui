@@ -92,7 +92,7 @@ $font-path: '../../assets/fonts';
 @font-face {
   font-family: "font-awesome";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 900!important;
   font-display: block;
   src: url("#{$font-path}/font-awesome/webfonts/fa-solid-900.ttf") format("truetype");
 }
@@ -100,7 +100,7 @@ $font-path: '../../assets/fonts';
 @font-face {
   font-family: "font-awesome-regular";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400!important;
   font-display: block;
   src: url("#{$font-path}/font-awesome/webfonts/fa-regular-400.ttf") format("truetype");
 }
@@ -108,7 +108,7 @@ $font-path: '../../assets/fonts';
 @font-face {
   font-family: "font-awesome-brands";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400!important;
   font-display: block;
   src: url("#{$font-path}/font-awesome/webfonts/fa-brands-400.ttf") format("truetype");
 }

@@ -7,24 +7,24 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BladeComponent implements OnInit {
 
-  @Input() pinBlade: boolean;
-  @Input() topPosition: number;
-  @Input() zIndex: number;
-  @Input() suppressAutoClose: boolean;
-  @Input() customBlade: boolean;
-  @Input() enableIcon: boolean;
-  @Input() iconName: string;
-  @Input() bladeTabs: boolean;
-  @Input() customBladeTabs: boolean;
-  @Input() headingMaxWidth: number;
+  @Input() pinBlade: boolean = false;
+  @Input() topPosition: any;
+  @Input() zIndex: number = 0;
+  @Input() suppressAutoClose: boolean = false;
+  @Input() customBlade: boolean = false;
+  @Input() enableIcon: boolean = false;
+  @Input() iconName: string = '';
+  @Input() bladeTabs: boolean = false;
+  @Input() customBladeTabs: boolean = false;
+  @Input() headingMaxWidth: any;
 
-  @Input() showModal: boolean;
-  @Input() oneColWidth: boolean;
-  @Input() bladeSize: string;
-  @Input() bladeHeading: string;
-  @Input() enablePinning: boolean;
-  @Input() toggleBlade: boolean;
-  @Input() isPinned: boolean;
+  @Input() blockPageUI: boolean = false;
+  @Input() showBladeModal: boolean = false;
+  @Input() bladeSize: string = '';
+  @Input() bladeHeading: string = '';
+  @Input() enablePinning: boolean = false;
+  @Input() toggleBlade: boolean = false;
+  @Input() isPinned: boolean = false;
   @Output() bladeOpen = new EventEmitter<boolean>();
   @Output() bladePinned = new EventEmitter<boolean>();
 
@@ -35,7 +35,7 @@ export class BladeComponent implements OnInit {
     }
   }
 
-  toggleThePin(e) {
+  toggleThePin(e:any) {
     this.isPinned = !this.isPinned;
     e.stopPropagation();
     this.bladePinned.emit(this.isPinned);

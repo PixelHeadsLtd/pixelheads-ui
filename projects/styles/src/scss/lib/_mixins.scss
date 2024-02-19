@@ -248,7 +248,7 @@
   font-family: _font(material-icons);
   font-size: _font(size-medium);
   position: absolute;
-  top: .25rem;
+  top: calc(50% - .65rem);
   left: .5rem;
 }
 
@@ -256,7 +256,7 @@
   font-family: _font(material-icons-outlined);
   font-size: _font(size-medium);
   position: absolute;
-  top: .25rem;
+  top: calc(50% - .65rem);
   left: .5rem;
 }
 
@@ -304,7 +304,7 @@
   font-size: _font(size-default);
   margin: 0 0 0 .5rem;
   position: absolute;
-  top: .4rem;
+  top: calc(50% - .5rem);
   right: .75rem;
 }
 
@@ -313,7 +313,7 @@
   font-size: _font(size-default);
   margin: 0 0 0 .5rem;
   position: absolute;
-  top: .4rem;
+  top: calc(50% - .5rem);
   left: .25rem;
 }
 

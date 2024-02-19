@@ -127,8 +127,56 @@ aa-accordion {
       border-radius: .1rem;
       font-family: _font(family-regular);
       text-align: left;
-      padding: 0 .75rem 0 1.25rem;
+      padding: 0 .75rem 0 1rem;
       width: 100%;
+
+      // custom colour classes for darker backgrounds
+      &.bg-aa-grey-100,
+      &.bg-aa-grey-50,
+      &.bg-aa-blue-100,
+      &.bg-aa-blue-70,
+      &.bg-aa-blue-60,
+      &.bg-aa-red-100,
+      &.bg-aa-red-80,
+      &.bg-aa-red-50,
+      &.bg-aa-light-blue-100,
+      &.bg-aa-light-blue-80,
+      &.bg-aa-light-blue-60,
+      &.bg-aa-lime-100,
+      &.bg-aa-green-100,
+      &.bg-aa-green-60,
+      &.bg-aa-grey-100,
+      &.bg-aa-orange-100,
+      &.bg-aa-orange-50,
+      &.bg-aa-burgundy-100,
+      &.bg-aa-burgundy-50,
+      &.bg-aa-plum-100,
+      &.bg-aa-plum-50,
+      &.bg-aa-brown-100,
+      &.bg-aa-ochre-100,
+      &.bg-aa-blue-sky-100 {
+
+         .accordion-heading,
+         .material-icons,
+         .material-icons-outlined,
+         .toggle-icons,
+         button span,
+         .drag-icon {
+            color: _palette(aa-white-100);
+         }
+
+         // We don't want to be setting colours for the bespoke-header version
+         .bespoke-header {
+            .accordion-heading,
+            .material-icons,
+            .material-icons-outlined,
+            .toggle-icons,
+            button span,
+            .drag-icon {
+               color: inherit;
+            }
+         }
+      }
 
       .field,
       .checkbox {
@@ -154,44 +202,10 @@ aa-accordion {
       }
 
       .bespoke-header {
-         width: calc(100% - 2rem); // compensate for toggle-icons icons
          .toggle-icons {
             position: absolute;
             top: .5rem;
             right: .75rem;
-         }
-      }
-
-      // custom colour classes for darker backgrounds
-      &.bg-aa-grey-100,
-      &.bg-aa-grey-50,
-      &.bg-aa-blue-100,
-      &.bg-aa-blue-70,
-      &.bg-aa-blue-60,
-      &.bg-aa-red-100,
-      &.bg-aa-red-80,
-      &.bg-aa-red-50,
-      &.bg-aa-light-blue-100,
-      &.bg-aa-light-blue-80,
-      &.bg-aa-light-blue-60,
-      &.bg-aa-lime-100,
-      &.bg-aa-green-100,
-      &.bg-aa-green-60,
-      &.bg-aa-orange-100,
-      &.bg-aa-orange-50,
-      &.bg-aa-burgundy-100,
-      &.bg-aa-burgundy-50,
-      &.bg-aa-plum-100,
-      &.bg-aa-plum-50,
-      &.bg-aa-brown-100,
-      &.bg-aa-ochre-100,
-      &.bg-aa-blue-sky-100 {
-
-         .accordion-heading,
-         .material-icons,
-         .material-icons-outlined,
-         .toggle-icons {
-            color: _palette(aa-white-100);
          }
       }
 

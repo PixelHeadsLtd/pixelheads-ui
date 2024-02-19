@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'aa-favourites-list',
@@ -6,12 +6,12 @@ import { Component, ChangeDetectionStrategy, EventEmitter, Input, OnInit, Output
   styleUrls: ['./favourites-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FavouritesListComponent implements OnInit {
+export class FavouritesListComponent {
 
-  @Input() isFavourite: boolean;
-  @Input() itemAnchorTitle: string;
-  @Input() itemAnchor: string;
-  @Input() itemDescription: string;
+  @Input() isFavourite: boolean = false;
+  @Input() itemAnchorTitle: string = '';
+  @Input() itemAnchor: string = '';
+  @Input() itemDescription: string = '';
 
   @Input() text = 'Click me';
 
@@ -28,7 +28,5 @@ export class FavouritesListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

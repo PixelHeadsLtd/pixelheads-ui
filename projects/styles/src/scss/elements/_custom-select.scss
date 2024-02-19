@@ -2,6 +2,8 @@
     position: relative;
     button {
         @include chevron-down;
+        max-height: 2.1rem;
+        min-height: 2.1rem;
         font-family: _font(family-medium);
         width: 100%;
         background-color: _colour(aa-white-100);

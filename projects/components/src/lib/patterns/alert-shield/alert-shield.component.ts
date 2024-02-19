@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-alert-shield',
@@ -6,42 +6,38 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./alert-shield.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AlertShieldComponent implements OnInit {
+export class AlertShieldComponent {
 
-  @Input() alertShieldStatus: boolean;
-  @Input() alertShieldText: string;
-  @Input() showTooltip: boolean;
-  @Input() showTooltipHeading: boolean;
-  @Input() tooltipHeading: string;
+  @Input() alertShieldStatus: string = '';
+  @Input() alertShieldText: string = '';
+  @Input() showTooltip: boolean = false;
+  @Input() showTooltipHeading: boolean = false;
+  @Input() tooltipHeading: string = '';
   @Input() minWidth: any;
-  @Input() alertShieldSmall: boolean;
-  @Input() noWrap: boolean;
-  @Input() hideLabel: boolean;
-  @Input() tooltipTopLeft: boolean;
-  @Input() tooltipTopRight: boolean;
-  @Input() tooltipBottomLeft: boolean;
-  @Input() tooltipBottomRight: boolean;
+  @Input() alertShieldSmall: boolean = false;
+  @Input() noWrap: boolean = false;
+  @Input() hideLabel: boolean = false;
+  @Input() tooltipTopLeft: boolean = false;
+  @Input() tooltipTopRight: boolean = false;
+  @Input() tooltipBottomLeft: boolean = false;
+  @Input() tooltipBottomRight: boolean = false;
 
-  @Input() customShield: boolean;
-  @Input() iconName: string;
-  @Input() iconOutlined: boolean;
-  @Input() bgRedLight: boolean;
-  @Input() bgRedDark: boolean;
-  @Input() bgGreenLight: boolean;
-  @Input() bgGreenDark: boolean;
-  @Input() bgOrangeLight: boolean;
-  @Input() bgOrangeDark: boolean;
-  @Input() bgBlueLight: boolean;
-  @Input() bgBlueDark: boolean;
-  @Input() bgGreyLight: boolean;
-  @Input() bgGreyDark: boolean;
+  @Input() customShield: boolean = false;
+  @Input() iconName: string = '';
+  @Input() iconOutlined: boolean = false;
+  @Input() bgRedLight: boolean = false;
+  @Input() bgRedDark: boolean = false;
+  @Input() bgGreenLight: boolean = false;
+  @Input() bgGreenDark: boolean = false;
+  @Input() bgOrangeLight: boolean = false;
+  @Input() bgOrangeDark: boolean = false;
+  @Input() bgBlueLight: boolean = false;
+  @Input() bgBlueDark: boolean = false;
+  @Input() bgGreyLight: boolean = false;
+  @Input() bgGreyDark: boolean = false;
   @Input() shieldColour: any;
-  @Input() iconOnly: boolean;
-  @Input() enableRotation: boolean;
+  @Input() iconOnly: boolean = false;
+  @Input() enableRotation: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

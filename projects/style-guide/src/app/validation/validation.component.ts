@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 @Component({
@@ -6,19 +6,17 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
   templateUrl: './validation.component.html',
   styleUrls: ['./validation.component.scss']
 })
-export class ValidationComponent implements OnInit {
+export class ValidationComponent {
 
-  showText: boolean;
-  showCheck: boolean;
-  showRadio: boolean;
-  myRadios1: string;
-  myRadios2: string;
-  toggleBlade: boolean;
+  showText: boolean = false;
+  showCheck: boolean= false;
+  showRadio: boolean = false;
+  myRadios1: string = '';
+  myRadios2: string = '';
+  toggleBlade: boolean = false;
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
-
-  ngOnInit() {
+  constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       name: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
@@ -30,9 +28,8 @@ export class ValidationComponent implements OnInit {
       })
     });
   }
-
   isFieldValid(field: string) {
-    return !this.form.get(field).valid && this.form.get(field).touched;
+    return !this.form.get(field)?.valid && this.form.get(field)?.touched;
   }
 
   onSubmit() {

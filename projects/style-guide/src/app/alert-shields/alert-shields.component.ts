@@ -1,27 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-alert-shields',
   templateUrl: './alert-shields.component.html',
   styleUrls: ['./alert-shields.component.scss']
 })
-export class AlertShieldsComponent implements OnInit {
 
-  customShields: boolean;
-  statusShields: boolean;
-  regularShields: boolean;
-  pendingShields: boolean;
-  riskShields: boolean;
-  mixedShields: boolean;
-  toggleBlade: boolean;
+export class AlertShieldsComponent {
+
+  customShields: boolean = false;
+  statusShields: boolean = false;
+  regularShields: boolean = false;
+  pendingShields: boolean = false;
+  riskShields: boolean = false;
+  mixedShields: boolean = false;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit() {
-  }
-
 }

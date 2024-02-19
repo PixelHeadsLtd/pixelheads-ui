@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-project-tour',
@@ -6,27 +6,25 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./project-tour.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProjectTourComponent implements OnInit {
+export class ProjectTourComponent  {
 
-  @Input() tourMode: boolean;
-  @Input() enableHeading: string;
-  @Input() tourModeHeading: string;
-  @Input() tourModeBody: string;
+  @Input() tourMode: boolean  = false;
+  @Input() enableHeading: boolean = false;
+  @Input() tourModeHeading: string = '';
+  @Input() tourModeBody: string = '';
   @Input() topPos: any;
   @Input() rightPos: any;
   @Input() bottomPos: any;
   @Input() leftPos: any;
   @Input() panelWidth: any;
   @Input() arrowPos: any;
-  @Input() arrowTop: boolean;
-  @Input() arrowRight: boolean;
-  @Input() arrowBottom: boolean;
-  @Input() arrowLeft: boolean;
-  @Input() arrowIsPlum: boolean;
-  @Input() zIndex: number;
+  @Input() arrowTop: boolean = false;
+  @Input() arrowRight: boolean = false;
+  @Input() arrowBottom: boolean = false;
+  @Input() arrowLeft: boolean = false;
+  @Input() arrowClass: string = '';
+  @Input() zIndex: number = 0;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 }

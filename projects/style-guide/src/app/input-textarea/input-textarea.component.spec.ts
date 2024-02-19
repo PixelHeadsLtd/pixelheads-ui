@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InputTextareaComponent } from './input-textarea.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('InputTextareaComponent', () => {
   let component: InputTextareaComponent;
   let fixture: ComponentFixture<InputTextareaComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ InputTextareaComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [InputTextareaComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(InputTextareaComponent);

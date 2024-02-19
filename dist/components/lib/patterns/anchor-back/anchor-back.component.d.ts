@@ -1,7 +1,7 @@
-import { OnInit } from '@angular/core';
-export declare class AnchorBackComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class AnchorBackComponent {
     anchorBackText: string;
     anchorURL: string;
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AnchorBackComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AnchorBackComponent, "aa-anchor-back", never, { "anchorBackText": { "alias": "anchorBackText"; "required": false; }; "anchorURL": { "alias": "anchorURL"; "required": false; }; }, {}, never, never, false, never>;
 }
-//# sourceMappingURL=anchor-back.component.d.ts.map

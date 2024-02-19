@@ -8,22 +8,22 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
 })
 export class BladeTopComponent implements OnInit {
 
-  @Input() rightPos: number;
-  @Input() leftPos: number;
-  @Input() topPos: number;
-  @Input() zIndex: number;
-  @Input() maxHeight: number;
-  @Input() countryFlag: string;
-  @Input() paddingTop: boolean;
-  @Input() paddingRight: boolean;
-  @Input() paddingBottom: boolean;
-  @Input() paddingLeft: boolean;
-  @Input() userProfile: boolean;
-  @Input() borderColour: string;
-  @Input() profileSize: number;
-  @Input() borderThickness: string;
-  @Input() isOpen: boolean;
-  @Input() isPinned: boolean;
+  @Input() rightPos: any;
+  @Input() leftPos: any;
+  @Input() topPos: any;
+  @Input() zIndex: number = 0;
+  @Input() maxHeight: any;
+  @Input() countryFlag: string = '';
+  @Input() paddingTop: boolean = false;
+  @Input() paddingRight: boolean = false;
+  @Input() paddingBottom: boolean = false;
+  @Input() paddingLeft: boolean = false;
+  @Input() userProfile: boolean = false;
+  @Input() borderColour: string = '';
+  @Input() profileSize: any;
+  @Input() borderThickness: any;
+  @Input() isOpen: boolean = false;
+  @Input() isPinned: boolean = false;
   @Output() bladeOpen = new EventEmitter<boolean>();
   @Output() bladePinned = new EventEmitter<boolean>();
 
@@ -32,7 +32,7 @@ export class BladeTopComponent implements OnInit {
     this.bladeOpen.emit(this.isOpen);
   }
 
-  toggleThePin(e) {
+  toggleThePin(e:any) {
     this.isPinned = !this.isPinned;
     e.stopPropagation();
     this.bladePinned.emit(this.isPinned);

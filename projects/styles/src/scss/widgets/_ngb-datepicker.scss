@@ -38,6 +38,7 @@
     }
   }
   input {
+    min-width: 9.5em;
     padding-right: 2rem;
     width: 100%;
     &[readonly] {

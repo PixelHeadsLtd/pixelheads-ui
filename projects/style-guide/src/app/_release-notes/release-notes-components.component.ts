@@ -5,14 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './release-notes-components.component.html',
   styleUrls: ['./release-notes-components.component.scss']
 })
-export class ReleaseNotesComponentsComponent implements OnInit {
-  
-  @Input() styles: boolean;
-  @Input() components: boolean;
+export class ReleaseNotesComponentsComponent {
+
+  @Input() styles: boolean = false;
+  @Input() components: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

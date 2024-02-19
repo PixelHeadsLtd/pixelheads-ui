@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { WidthsComponent } from './widths.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('WidthsComponent', () => {
   let component: WidthsComponent;
   let fixture: ComponentFixture<WidthsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ WidthsComponent ]
-    })
-    .compileComponents();
-  }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [WidthsComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WidthsComponent);

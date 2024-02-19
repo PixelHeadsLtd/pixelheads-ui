@@ -9,9 +9,9 @@ export interface CommentArray {
 }
 
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => CommentsComponent),
-    multi: true
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => CommentsComponent),
+  multi: true
 };
 
 @Component({
@@ -22,24 +22,25 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
 })
 export class CommentsComponent implements ControlValueAccessor {
 
-  @Input() comments: CommentArray[];
+  @Input() comments: CommentArray[] = [];
   @Output() commentsMade = new EventEmitter<CommentArray>();
-  cmt: CommentArray;
-  toggleComments: boolean;
-  clicked: boolean;
-  @Input() person: string;
+  cmt?: CommentArray;
+  toggleComments: boolean = false;
+  clicked: boolean = false;
+  @Input() person: string = '';
   currentDate: any;
-  makeComments: boolean;
-  @Input() canDelete: boolean;
-  showConfirmation: boolean;
+  makeComments: boolean = false;
+  @Input() canDelete: boolean = false;
+  showConfirmation: boolean = false;
   @Input() iconColour: any;
+  @Input() buttonClass: string = '';
 
   constructor() {
     this.currentDate = new Date().getTime();
   }
 
   // The internal data model
-  private innerValue: any = '';
+  private innerValue: any;
 
   // Placeholders for the callbacks which are later provided
   // by the Control Value Accessor
@@ -48,40 +49,40 @@ export class CommentsComponent implements ControlValueAccessor {
 
   // get accessor
   get txtComment(): any {
-      return this.innerValue;
+    return this.innerValue;
   }
 
   // set accessor including call the onchange callback
   set txtComment(v: any) {
-      if (v !== this.innerValue) {
-          this.innerValue = v;
-          this.onChangeCallback(v);
-      }
+    if (v !== this.innerValue) {
+      this.innerValue = v;
+      this.onChangeCallback(v);
+    }
   }
 
   // Set touched on blur
   onBlur() {
-      this.onTouchedCallback();
+    this.onTouchedCallback();
   }
 
   // From ControlValueAccessor interface
   writeValue(txtComment: any) {
-      if (txtComment !== this.innerValue) {
-          this.innerValue = txtComment;
-      }
+    if (txtComment !== this.innerValue) {
+      this.innerValue = txtComment;
+    }
   }
 
   // From ControlValueAccessor interface
   registerOnChange(fn: any) {
-      this.onChangeCallback = fn;
+    this.onChangeCallback = fn;
   }
 
   // From ControlValueAccessor interface
   registerOnTouched(fn: any) {
-      this.onTouchedCallback = fn;
+    this.onTouchedCallback = fn;
   }
 
-  addComment(_EVENT: any, _COMMENTARRAY: CommentArray) {
+  addComment(_EVENT: any, _COMMENTARRAY?: CommentArray) {
     if (this.txtComment) {
       const comments: CommentArray = {
         comment: this.txtComment
@@ -91,10 +92,10 @@ export class CommentsComponent implements ControlValueAccessor {
       console.log('comment is ', this.txtComment);
       console.log('this comment ', this.comments);
       this.txtComment = '';
-      } else {
-        this.clicked = true;
-      }
+    } else {
+      this.clicked = true;
     }
+  }
 
 
   removeComment(index: number) {

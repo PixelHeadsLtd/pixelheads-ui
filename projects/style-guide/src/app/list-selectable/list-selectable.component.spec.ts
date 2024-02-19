@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ListSelectableComponent } from './list-selectable.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ListSelectableComponent', () => {
   let component: ListSelectableComponent;
@@ -8,9 +8,9 @@ describe('ListSelectableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListSelectableComponent ]
-    })
-    .compileComponents();
+      declarations: [ListSelectableComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

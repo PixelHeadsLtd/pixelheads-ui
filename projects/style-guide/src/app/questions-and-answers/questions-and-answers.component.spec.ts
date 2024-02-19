@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuestionsAndAnswersComponent } from './questions-and-answers.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('QuestionsAndAnswersComponent', () => {
   let component: QuestionsAndAnswersComponent;
@@ -8,9 +9,9 @@ describe('QuestionsAndAnswersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuestionsAndAnswersComponent ]
-    })
-    .compileComponents();
+      declarations: [QuestionsAndAnswersComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

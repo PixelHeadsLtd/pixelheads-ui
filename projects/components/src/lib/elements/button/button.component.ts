@@ -5,38 +5,38 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
   templateUrl: './button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ButtonComponent implements OnInit {
-  @Input() buttonLabel: string;
-  @Input() buttonText: string;
-  @Input() buttonId: string;
-  @Input() buttonClass: string;
-  @Input() buttonType = 'button';
-  @Input() disabled: boolean;
-  @Input() fieldClass: string;
-  @Input() buttonIcon: string;
-  @Input() customIcons: boolean;
-  @Input() buttonEnriched: boolean;
-  @Input() showBtnMenu: boolean;
-  @Input() buttonSplit: boolean;
-  @Input() navBottom: boolean;
-  @Input() iconName: string;
-  @Input() title: string;
-  @Input() iconColour: string;
-  @Input() buttonLarge: boolean;
-  @Input() buttonSummary: boolean;
-  @Input() showDescription: boolean;
-  @Input() status: string;
-  @Input() level: number;
+export class ButtonComponent {
+  @Input() buttonLabel: string = '';
+  @Input() buttonText: string = '';
+  @Input() buttonId: string = '';
+  @Input() buttonClass: string = '';
+  @Input() buttonType: string = 'button';
+  @Input() disabled: boolean = false;
+  @Input() fieldClass: string = '';
+  @Input() buttonIcon: string = '';
+  @Input() customIcons: boolean = false;
+  @Input() buttonEnriched: boolean = false;
+  @Input() showBtnMenu: boolean = false;
+  @Input() buttonSplit: boolean = false;
+  @Input() navBottom: boolean = false;
+  @Input() iconName: string = '';
+  @Input() title: string = '';
+  @Input() iconColour: string = '';
+  @Input() buttonLarge: boolean = false;
+  @Input() buttonSummary: boolean = false;
+  @Input() showDescription: boolean = false;
+  @Input() status: string = '';
+  @Input() level: number = 0;
   @Input() desc: any;
-  @Input() showCount: boolean;
-  @Input() count: number;
+  @Input() showCount: boolean = false;
+  @Input() count: number = 0;
   @Input() countColor: any;
   @Input() maxHeight: any;
-  @Input() showLabel: boolean;
-  @Input() customIconsRound: boolean;
-  @Input() customIconsRoundOutlined: boolean;
-  @Input() navLeftside: boolean;
-  @Input() buttonDayPicker: boolean;
+  @Input() showLabel: boolean = false;
+  @Input() customIconsRound: boolean = false;
+  @Input() customIconsRoundOutlined: boolean = false;
+  @Input() navLeftside: boolean = false;
+  @Input() buttonDayPicker: boolean = false;
 
   @Output() buttonClick = new EventEmitter<Event>();
 
@@ -49,7 +49,7 @@ export class ButtonComponent implements OnInit {
   constructor(private elementRef: ElementRef) { }
   @HostListener('document:click', ['$event.target'])
 
-  public onClick(targetElement) {
+  public onClick(targetElement:any) {
     const clickedInside = this.elementRef.nativeElement.contains(targetElement);
     if (!clickedInside) {
         this.showBtnMenu = false;
@@ -64,6 +64,4 @@ export class ButtonComponent implements OnInit {
     this.showBtnMenu = false;
   }
 
-  ngOnInit() {
-  }
 }

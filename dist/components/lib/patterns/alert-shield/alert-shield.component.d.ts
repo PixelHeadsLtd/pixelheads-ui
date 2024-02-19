@@ -1,6 +1,6 @@
-import { OnInit } from '@angular/core';
-export declare class AlertShieldComponent implements OnInit {
-    alertShieldStatus: boolean;
+import * as i0 from "@angular/core";
+export declare class AlertShieldComponent {
+    alertShieldStatus: string;
     alertShieldText: string;
     showTooltip: boolean;
     showTooltipHeading: boolean;
@@ -30,6 +30,6 @@ export declare class AlertShieldComponent implements OnInit {
     iconOnly: boolean;
     enableRotation: boolean;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AlertShieldComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AlertShieldComponent, "aa-alert-shield", never, { "alertShieldStatus": { "alias": "alertShieldStatus"; "required": false; }; "alertShieldText": { "alias": "alertShieldText"; "required": false; }; "showTooltip": { "alias": "showTooltip"; "required": false; }; "showTooltipHeading": { "alias": "showTooltipHeading"; "required": false; }; "tooltipHeading": { "alias": "tooltipHeading"; "required": false; }; "minWidth": { "alias": "minWidth"; "required": false; }; "alertShieldSmall": { "alias": "alertShieldSmall"; "required": false; }; "noWrap": { "alias": "noWrap"; "required": false; }; "hideLabel": { "alias": "hideLabel"; "required": false; }; "tooltipTopLeft": { "alias": "tooltipTopLeft"; "required": false; }; "tooltipTopRight": { "alias": "tooltipTopRight"; "required": false; }; "tooltipBottomLeft": { "alias": "tooltipBottomLeft"; "required": false; }; "tooltipBottomRight": { "alias": "tooltipBottomRight"; "required": false; }; "customShield": { "alias": "customShield"; "required": false; }; "iconName": { "alias": "iconName"; "required": false; }; "iconOutlined": { "alias": "iconOutlined"; "required": false; }; "bgRedLight": { "alias": "bgRedLight"; "required": false; }; "bgRedDark": { "alias": "bgRedDark"; "required": false; }; "bgGreenLight": { "alias": "bgGreenLight"; "required": false; }; "bgGreenDark": { "alias": "bgGreenDark"; "required": false; }; "bgOrangeLight": { "alias": "bgOrangeLight"; "required": false; }; "bgOrangeDark": { "alias": "bgOrangeDark"; "required": false; }; "bgBlueLight": { "alias": "bgBlueLight"; "required": false; }; "bgBlueDark": { "alias": "bgBlueDark"; "required": false; }; "bgGreyLight": { "alias": "bgGreyLight"; "required": false; }; "bgGreyDark": { "alias": "bgGreyDark"; "required": false; }; "shieldColour": { "alias": "shieldColour"; "required": false; }; "iconOnly": { "alias": "iconOnly"; "required": false; }; "enableRotation": { "alias": "enableRotation"; "required": false; }; }, {}, never, ["[tooltip-content]", "[custom-tooltip-content]"], false, never>;
 }
-//# sourceMappingURL=alert-shield.component.d.ts.map

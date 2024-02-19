@@ -1,9 +1,9 @@
-import { OnInit } from '@angular/core';
-export declare class ProgressCircleComponent implements OnInit {
-    name: any;
-    percent: any;
-    value: any;
-    colour: any;
+import * as i0 from "@angular/core";
+export declare class ProgressCircleComponent {
+    name: string;
+    percent: string;
+    value: string;
+    colour: string;
     isSmall: boolean;
     panelView: boolean;
     enableTooltip: boolean;
@@ -34,6 +34,6 @@ export declare class ProgressCircleComponent implements OnInit {
     customFooterClass: string;
     panelHeight: any;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ProgressCircleComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ProgressCircleComponent, "aa-progress-circle", never, { "name": { "alias": "name"; "required": false; }; "percent": { "alias": "percent"; "required": false; }; "value": { "alias": "value"; "required": false; }; "colour": { "alias": "colour"; "required": false; }; "isSmall": { "alias": "isSmall"; "required": false; }; "panelView": { "alias": "panelView"; "required": false; }; "enableTooltip": { "alias": "enableTooltip"; "required": false; }; "tooltipTitle": { "alias": "tooltipTitle"; "required": false; }; "tooltipBody": { "alias": "tooltipBody"; "required": false; }; "xpos": { "alias": "xpos"; "required": false; }; "ypos": { "alias": "ypos"; "required": false; }; "tooltipMinWidth": { "alias": "tooltipMinWidth"; "required": false; }; "hideChevron": { "alias": "hideChevron"; "required": false; }; "headerColor": { "alias": "headerColor"; "required": false; }; "isError": { "alias": "isError"; "required": false; }; "isWarning": { "alias": "isWarning"; "required": false; }; "isInfo": { "alias": "isInfo"; "required": false; }; "enableAlertShield": { "alias": "enableAlertShield"; "required": false; }; "enableAlertShieldTooltip": { "alias": "enableAlertShieldTooltip"; "required": false; }; "alertShieldStatus": { "alias": "alertShieldStatus"; "required": false; }; "alertShieldSmall": { "alias": "alertShieldSmall"; "required": false; }; "tooltipTopLeft": { "alias": "tooltipTopLeft"; "required": false; }; "tooltipTopRight": { "alias": "tooltipTopRight"; "required": false; }; "tooltipBottomLeft": { "alias": "tooltipBottomLeft"; "required": false; }; "tooltipBottomRight": { "alias": "tooltipBottomRight"; "required": false; }; "showTooltipHeading": { "alias": "showTooltipHeading"; "required": false; }; "tooltipHeading": { "alias": "tooltipHeading"; "required": false; }; "alertShieldText": { "alias": "alertShieldText"; "required": false; }; "customClass": { "alias": "customClass"; "required": false; }; "customProgressCircle": { "alias": "customProgressCircle"; "required": false; }; "customHeaderClass": { "alias": "customHeaderClass"; "required": false; }; "customFooterClass": { "alias": "customFooterClass"; "required": false; }; "panelHeight": { "alias": "panelHeight"; "required": false; }; }, {}, never, ["[tooltip-content]", "[custom-header]", "[custom-footer]"], false, never>;
 }
-//# sourceMappingURL=progress-circle.component.d.ts.map

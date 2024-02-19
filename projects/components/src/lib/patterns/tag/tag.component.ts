@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'aa-tag',
@@ -6,20 +6,20 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
   styleUrls: ['./tag.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TagComponent implements OnInit {
+export class TagComponent {
 
-  @Input() isShaped: boolean;
-  @Input() tagText: boolean;
-  @Input() isRed: boolean;
-  @Input() isOrange: boolean;
-  @Input() isGreen: boolean;
-  @Input() isPlum: boolean;
-  @Input() isBlue: boolean;
-  @Input() isLightBlue: boolean;
-  @Input() isWhite: boolean;
-  @Input() isOchre: boolean;
-  @Input() isBlack: boolean;
-  @Input() isPink: boolean;
+  @Input() isShaped: boolean = false;
+  @Input() tagText: string = '';
+  @Input() isRed: boolean = false;
+  @Input() isOrange: boolean = false;
+  @Input() isGreen: boolean = false;
+  @Input() isPlum: boolean = false;
+  @Input() isBlue: boolean = false;
+  @Input() isLightBlue: boolean = false;
+  @Input() isWhite: boolean = false;
+  @Input() isOchre: boolean = false;
+  @Input() isBlack: boolean = false;
+  @Input() isPink: boolean = false;
   @Output() removeTag = new EventEmitter<Event>();
 
   constructor() { }
@@ -28,8 +28,4 @@ export class TagComponent implements OnInit {
     e.stopPropagation();
     this.removeTag.emit(e);
   }
-
-  ngOnInit(): void {
-  }
-
 }

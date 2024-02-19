@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-summary-top-list',
@@ -6,17 +6,15 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./summary-top-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SummaryTopListComponent implements OnInit {
+export class SummaryTopListComponent {
 
-  @Input() itemTitle: string;
-  @Input() itemDescription: string;
-  @Input() highlight: boolean;
-  @Input() truncate: boolean;
-  @Input() maxWidth: number;
+  @Input() itemTitle: string = '';
+  @Input() itemDescription: string = '';
+  @Input() highlight: boolean = false;
+  @Input() truncate: boolean = false;
+  @Input() divider: boolean = false;
+  @Input() maxWidth: any;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

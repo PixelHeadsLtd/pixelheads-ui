@@ -8,9 +8,9 @@ import { openAgGridContextMenuOnClick } from './context-menu.function';
   templateUrl: './ellipsis-context-menu.component.html',
 })
 export class EllipsisContextMenuComponent implements ICellRendererAngularComp {
-  private params: ICellRendererParams;
+  private params?: ICellRendererParams;
 
-  value: string;
+  value?: string;
   showEllipsis = true;
 
   agInit(params: ICellRendererParams) {
@@ -19,7 +19,9 @@ export class EllipsisContextMenuComponent implements ICellRendererAngularComp {
   }
 
   showMenu(mouseEvent: MouseEvent) {
-    openAgGridContextMenuOnClick(this.params, mouseEvent);
+	if (this.params) {
+		openAgGridContextMenuOnClick(this.params, mouseEvent);
+	}
   }
 
   refresh(): boolean {

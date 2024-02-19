@@ -35,9 +35,36 @@
   }
 }
 
+// Custom checkbox row indentation 
+.ag-theme-balham {
+  &.indent-selection-checkbox {
+    .ag-row {
+      &.ag-row-level-1 {
+        .ag-selection-checkbox .ag-checkbox {
+          padding-left: 1.75rem!important;
+        }
+
+        .ag-row-group-indent-1 {
+          padding-left: 0!important;
+          margin-left: 0!important;
+        }
+      }
+      &.ag-row-level-2 {
+        .ag-selection-checkbox .ag-checkbox {
+          padding-left: 3.5rem!important;
+        }
+
+        .ag-row-group-indent-2 {
+          padding-left: 0!important;
+          margin-left: 0!important;
+        }
+      }
+    }
+  }
+}
+
 // START AG-GRID CUSTOM STYLING
 .ag-theme-balham {
-
   .date-picker {
     .input-group:not(.input-group .dropdown-menu button) {
       button {
@@ -418,6 +445,7 @@
       
       .ag-icon {
         color: _colour(aa-grey-100)!important;
+        margin-top: .6rem;
       }
 
       // Force ALL alert-shields small by default

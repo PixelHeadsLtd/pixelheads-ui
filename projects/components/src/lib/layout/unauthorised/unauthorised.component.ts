@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-unauthorised',
@@ -6,15 +6,11 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./unauthorised.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UnauthorisedComponent implements OnInit {
+export class UnauthorisedComponent {
 
   constructor() { }
 
-  @Input() title: string;
-  @Input() strapline: string;
-  @Input() straplineWidth: string;
-
-  ngOnInit(): void {
-  }
-
+  @Input() title: string = '';
+  @Input() strapline: string = '';
+  @Input() straplineWidth: string = '';
 }

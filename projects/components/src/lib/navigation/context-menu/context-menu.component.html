@@ -1,9 +1,9 @@
 <nav 
   class="context-menu flex-group width-control" 
   [ngStyle]="{
-    'top' : topPos+'rem', 
-    'left' : leftPos+'rem', 
-    'right' : rightPos+'rem'
+    'top' : topPos, 
+    'left' : leftPos, 
+    'right' : rightPos
   }" 
   [ngClass]="{
     'position-absolute' : absolutePosition
@@ -20,7 +20,7 @@
     *ngIf="showContextMenu" 
     class="strip-bullets" 
     [ngClass]="{'show-on-left' : showOnLeft}"
-    [ngStyle]="{'min-width' : minWidth+'rem'}"
+    [ngStyle]="{'min-width' : minWidth}"
   >
     <ng-content></ng-content>
   </ul>

@@ -1,5 +1,5 @@
-import { OnInit } from '@angular/core';
-export declare class AccordionFancyComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class AccordionFancyComponent {
     showBody: boolean;
     materialIcons: boolean;
     itemTitle: string;
@@ -7,6 +7,6 @@ export declare class AccordionFancyComponent implements OnInit {
     iconName: string;
     iconColour: string;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AccordionFancyComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AccordionFancyComponent, "aa-accordion-fancy", never, { "showBody": { "alias": "showBody"; "required": false; }; "materialIcons": { "alias": "materialIcons"; "required": false; }; "itemTitle": { "alias": "itemTitle"; "required": false; }; "accordionId": { "alias": "accordionId"; "required": false; }; "iconName": { "alias": "iconName"; "required": false; }; "iconColour": { "alias": "iconColour"; "required": false; }; }, {}, never, ["*"], false, never>;
 }
-//# sourceMappingURL=accordion-fancy.component.d.ts.map

@@ -15,9 +15,9 @@
                     </p>
                 </div>
                 <div>
-                    <button 
-                    (click)="showUiBlock=!showUiBlock" 
-                    class="primary" 
+                    <button
+                    (click)="showUiBlock=!showUiBlock"
+                    class="primary"
                     [ngStyle]="{'z-index' : showUiBlock&&'999'}"
                     >
                     <span *ngIf="!showUiBlock">Show UI block</span>
@@ -26,14 +26,14 @@
                 </div>
             </div>
 
-            <aa-ui-block 
-                [showUiBlock]="showUiBlock" 
-                zIndex="1"
-                topPos="3.5" 
-                bottomPos="0" 
-                message="Read only data" 
+            <aa-ui-block
+                [showUiBlock]="showUiBlock"
+                [zIndex]="1"
+                topPos="3.5rem"
+                bottomPos="0"
+                message="Read only data"
                 [allCaps]="true"
-                fontSize="6"
+                fontSize="6rem"
             >
             </aa-ui-block>
 
@@ -60,20 +60,20 @@
                     <tr>
                         <td datalabel="Element">aa-ui-block</td>
                         <td datalabel="Attribute">topPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">3.5rem</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-ui-block</td>
                         <td datalabel="Attribute">bottomPos</td>
-                        <td datalabel="Type">Number</td>
+                        <td datalabel="Type">Any</td>
                         <td datalabel="Default">0</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-ui-block</td>
                         <td datalabel="Attribute">fontSize</td>
-                        <td datalabel="Type">Number</td>
-                        <td datalabel="Default">6</td>
+                        <td datalabel="Type">Any</td>
+                        <td datalabel="Default">6rem</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">aa-ui-block</td>
@@ -99,15 +99,15 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-blade [showModal]="false" [toggleBlade]="toggleBlade" suppressAutoClose="false" topPosition="3.5" zIndex="2"
+    <aa-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
         bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
-        (close)="toggleBlade = false">
+        (bladeOpen)="bladeIsOpen($event)">
         <article class="blade-content">
             <a href="https://gist.github.com/angloux/929a7dab99736c9df8b0989b96d1bf22" target="_blank">View Gist on
                 GitHub</a>

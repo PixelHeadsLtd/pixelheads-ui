@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  Version.MajorMinor: 12.2
+  Version.MajorMinor: 17.0
   Version.Revision: $[counter(variables['Version.MajorMinor'], 0)]
 
 steps:
@@ -36,7 +36,7 @@ steps:
     inputs:
       command: custom
       workingDir: workspace
-      customCommand: run build -- components --prod
+      customCommand: run build -- components --configuration production
   - task: Npm@1
     displayName: Publish to Core feed
     inputs:

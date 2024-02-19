@@ -6,16 +6,13 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./dashboard-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DashboardContainerComponent implements OnInit {
+export class DashboardContainerComponent {
 
-  @Input() dashboardId: string;
-  @Input() dashboardHeading: string;
-  @Input() headerColor: string;
+  @Input() dashboardId: string = '';
+  @Input() dashboardHeading: string = '';
+  @Input() headerColor: string = '';
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
 

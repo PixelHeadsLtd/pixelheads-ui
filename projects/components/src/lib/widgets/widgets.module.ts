@@ -10,6 +10,7 @@ import { CarouselItemDirective } from '../directives/carousel/carousel-item.dire
 import { DashboardContainerComponent } from './dashboard-container/dashboard-container.component';
 import { DashboardFavouritesComponent } from './dashboard-favourites/dashboard-favourites.component';
 import { DashboardFavouritesListComponent } from './dashboard-favourites-list/dashboard-favourites-list.component';
+import { ElementSliderComponent } from './element-slider/element-slider.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { FavouritesListComponent } from './favourites-list/favourites-list.component';
 import { IconPickerComponent } from './icon-picker/icon-picker.component';
@@ -42,6 +43,7 @@ import { OrderByPipe } from '../pipes/order-by';
     DashboardContainerComponent,
     DashboardFavouritesComponent,
     DashboardFavouritesListComponent,
+    ElementSliderComponent,
     FavouritesComponent,
     FavouritesListComponent,
     IconPickerComponent,
@@ -75,6 +77,7 @@ import { OrderByPipe } from '../pipes/order-by';
     DashboardContainerComponent,
     DashboardFavouritesComponent,
     DashboardFavouritesListComponent,
+    ElementSliderComponent,
     FavouritesComponent,
     FavouritesListComponent,
     IconPickerComponent,
@@ -94,7 +97,6 @@ import { OrderByPipe } from '../pipes/order-by';
     UserFeedbackComponent,
     ListSelectableComponent,
     OrderByPipe
-  ],
-  entryComponents: []
+  ]
 })
 export class WidgetsModule {}

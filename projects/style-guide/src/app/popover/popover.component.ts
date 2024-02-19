@@ -6,10 +6,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.scss']
 })
-export class DlPopoverComponent implements OnInit {
+export class DlPopoverComponent {
 
-  @ViewChild(PopoverComponent) popOver: PopoverComponent;
-  toggleBlade: boolean;
+  @ViewChild(PopoverComponent) popOver!: PopoverComponent;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
@@ -20,7 +20,5 @@ export class DlPopoverComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit() {}
 
 }

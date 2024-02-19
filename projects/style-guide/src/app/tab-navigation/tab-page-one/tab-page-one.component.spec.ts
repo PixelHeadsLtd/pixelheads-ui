@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TabPageOneComponent } from './tab-page-one.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { TooltipDynamicDirective } from '@angloamerican/components';
 
 describe('TabPageOneComponent', () => {
   let component: TabPageOneComponent;
@@ -8,9 +9,9 @@ describe('TabPageOneComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TabPageOneComponent ]
-    })
-    .compileComponents();
+      declarations: [TabPageOneComponent, TooltipDynamicDirective],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

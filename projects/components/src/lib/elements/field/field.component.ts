@@ -6,18 +6,16 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FieldComponent implements OnInit {
+export class FieldComponent {
 
-  @Input() fieldId: string;
-  @Input() fieldLabel: string;
-  @Input() fieldClass: string;
+  @Input() fieldId: string = '';
+  @Input() fieldLabel: string = '';
+  @Input() fieldClass: string = '';
   @Input() inputValue: any;
-  @Input() buttonClass: string;
-  @Input() readOnly: boolean;
+  @Input() buttonClass: string = '';
+  @Input() readOnly: boolean = false;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

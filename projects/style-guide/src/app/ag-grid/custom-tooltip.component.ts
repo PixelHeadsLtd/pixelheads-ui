@@ -6,9 +6,9 @@ import { ITooltipParams } from 'ag-grid-community';
   selector: 'tooltip-component',
   template:
     `<div class="custom-tooltip box-shadow bd-2 bd-orange bd-solid">
-    <p><strong class="boxed">{{ data.athlete }}</strong></p>
-    <p><span>Country: </span>{{ data.country }}</p>
-    <p><span>Total: </span>{{ data.total }}</p>
+    <p><strong class="boxed">{{ data?.athlete }}</strong></p>
+    <p><span>Country: </span>{{ data?.country }}</p>
+    <p><span>Total: </span>{{ data?.total }}</p>
   </div>`,
   styles: [
     `
@@ -25,11 +25,12 @@ import { ITooltipParams } from 'ag-grid-community';
   ],
 })
 export class CustomTooltipComponent implements ITooltipAngularComp {
-  params: {
-    } & ITooltipParams;
+  params: ({} & ITooltipParams) | undefined;
   data: any;
   agInit(params: {
-    } & ITooltipParams): void {
-    this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;
+  } & ITooltipParams): void {
+    if (params?.rowIndex) {
+      this.data = params.api.getDisplayedRowAtIndex(params.rowIndex)?.data;
+    }
   }
 }

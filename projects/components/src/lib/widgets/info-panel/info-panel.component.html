@@ -1,17 +1,17 @@
-<section 
-  class="info-panel {{panelStatus}}" 
+<section
+  class="info-panel {{panelStatus}}"
   [ngStyle]="{
-    'width' : panelWidth+'rem', 
-    'height' : panelHeight+'rem'
+    'width' : panelWidth,
+    'height' : panelHeight
   }"
 >
-  <div 
-    class="foreground" 
-    [ngStyle]="preventOpacity && {'opacity':'1'}"
+  <div
+    class="foreground"
+    [ngStyle]="preventOpacity ? {'opacity':'1'} : {}"
     [ngClass]="{'border-radius-0-5' : roundedCorners}"
   >
-    <div 
-      class="info-panel-header padding-1" 
+    <div
+      class="info-panel-header padding-1"
       [ngStyle]="{ 'border-bottom': removeHeaderBorder ? 'none' : 'inherit' }"
     >
       <ng-content select="[custom-header]"></ng-content>

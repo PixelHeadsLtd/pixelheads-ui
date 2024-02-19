@@ -59,20 +59,20 @@
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">topPos</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">3.5</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">3.5rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">leftPos</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">14</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">14rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">rightPos</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">0</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">0rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
@@ -89,8 +89,8 @@
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">profileSize</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">15</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">15rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
@@ -101,14 +101,14 @@
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">borderThickness</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">.75</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">.75rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
                 <td datalabel="Attribute">maxHeight</td>
-                <td datalabel="Type">Number</td>
-                <td datalabel="Default">16.5</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">16.5rem</td>
             </tr>
             <tr>
                 <td datalabel="Element">aa-blade-top</td>
@@ -122,7 +122,7 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="sideBladeIsOpen($event)">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="sideBladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -130,16 +130,16 @@
   </section>
   
   <aa-blade 
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
     >
     <article class="blade-content">
         <a href="https://gist.github.com/angloux/e4d09a23c5f657d979dc778d74e03935" target="_blank">View Gist on GitHub</a>
@@ -151,15 +151,15 @@
     [isOpen]="isOpen"
     (bladeOpen)="bladeIsOpen($event)"
     (bladePinned)="bladeIsPinned($event)"
-    topPos="3.5"
-    leftPos="16" 
-    rightPos="0" 
-    zIndex="100"
-    userProfile="true"
-    profileSize="15"
-    maxHeight="16.5"
+    topPos="3.5rem"
+    leftPos="16rem" 
+    rightPos="0rem" 
+    [zIndex]="100"
+    [userProfile]="true"
+    profileSize="15rem"
+    maxHeight="16.5rem"
     borderColour="#0075b0"
-    borderThickness=".75"
+    borderThickness=".75rem"
     countryFlag="tl"
     >
 
@@ -168,45 +168,37 @@
     </ng-container>
 
     <ng-container custom-content>
-        <article class="border-right-dashed-light padding-left-1 margin-top-1-5">
+        <article class="border-right-dashed-light padding-left-1-5 margin-right-1-5 padding-right-1 margin-top-1-5">
             <h2>Dalai Lama</h2>
             <div class="scroll-panel padding-top-0">
                 <div class="scroll-panel-content margin-top-0">
                     <dl>
-                        <dt>Job title</dt>
+                        <dt class="aa-white-100">Job title</dt>
                         <dd>Dalai Lama</dd>
                     </dl>
                     <dl>
-                        <dt>Primary role</dt>
+                        <dt class="aa-white-100">Primary role</dt>
                         <dd>Spiritual Leader</dd>
                     </dl>
                     <dl>
-                        <dt>Email</dt>
-                        <dd>ohhdl@dalailama.com</dd>
+                        <dt class="aa-white-100">Email</dt>
+                        <dd>ohhdl&#64;dalailama.com</dd>
                     </dl>
                     <dl>
-                        <dt>Address</dt>
+                        <dt class="aa-white-100">Address</dt>
                         <dd>India</dd>
                     </dl>
                     <dl>
-                        <dt>Manager</dt>
+                        <dt class="aa-white-100">Manager</dt>
                         <dd>Sonam Rabten</dd>
                     </dl>
                     <dl>
-                        <dt>Active</dt>
+                        <dt class="aa-white-100">Active</dt>
                         <dd>Yes</dd>
                     </dl>
                     <dl>
-                        <dt>Marketing</dt>
+                        <dt class="aa-white-100">Marketing</dt>
                         <dd>No</dd>
-                    </dl>
-                    <dl>
-                        <dt>Compliance</dt>
-                        <dd>Yes</dd>
-                    </dl>
-                    <dl>
-                        <dt>Modified</dt>
-                        <dd>09-Sep-2020 22:20</dd>
                     </dl>
                 </div>
             </div>
@@ -214,7 +206,7 @@
         <article class="margin-top-1-5">
             <h2 class="padding-left-0-75">Subordinates</h2>
             <div class="scroll-panel">
-                <div class="scroll-panel-content with-table">
+                <div class="scroll-panel-content">
                     <table class="table-condensed">
                         <thead>
                             <tr>
@@ -230,7 +222,7 @@
                             <tr>
                                 <td datalabel="Name">Stephanie Cheong</td>
                                 <td datalabel="Address">Singapore</td>
-                                <td datalabel="Email">stephanie.cheong@angloamerican.com</td>
+                                <td datalabel="Email">stephanie.cheong&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -238,7 +230,7 @@
                             <tr>
                                 <td datalabel="Name">Caiyuan He</td>
                                 <td datalabel="Address">Singapore</td>
-                                <td datalabel="Email">carol.he@angloamerican.com</td>
+                                <td datalabel="Email">carol.he&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -246,7 +238,7 @@
                             <tr>
                                 <td datalabel="Name">Genevieve Brown</td>
                                 <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
+                                <td datalabel="Email">genevieve.brown&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -254,7 +246,7 @@
                             <tr>
                                 <td datalabel="Name">Genevieve Brown</td>
                                 <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
+                                <td datalabel="Email">genevieve.brown&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -262,7 +254,7 @@
                             <tr>
                                 <td datalabel="Name">Genevieve Brown</td>
                                 <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
+                                <td datalabel="Email">genevieve.brown&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -270,7 +262,7 @@
                             <tr>
                                 <td datalabel="Name">Genevieve Brown</td>
                                 <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
+                                <td datalabel="Email">genevieve.brown&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>
@@ -278,15 +270,7 @@
                             <tr>
                                 <td datalabel="Name">Genevieve Brown</td>
                                 <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
-                                <td datalabel="Active">Yes</td>
-                                <td datalabel="Modified by">sapautomationservice</td>
-                                <td datalabel="Modified date">10-Sep-2020 08:25</td>
-                            </tr>
-                            <tr>
-                                <td datalabel="Name">Genevieve Brown</td>
-                                <td datalabel="Address">UK</td>
-                                <td datalabel="Email">genevieve.brown@angloamerican.com</td>
+                                <td datalabel="Email">genevieve.brown&#64;angloamerican.com</td>
                                 <td datalabel="Active">Yes</td>
                                 <td datalabel="Modified by">sapautomationservice</td>
                                 <td datalabel="Modified date">10-Sep-2020 08:25</td>

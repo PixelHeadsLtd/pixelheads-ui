@@ -31,6 +31,13 @@ $colour: (
   trans-white-to-blue:                   _palette(aa-white-100),
   trans-pink-to-plum:                    _palette(aa-pink-100),
 
+  // FORCED COLOURS
+  force-white:                           _palette(aa-white-100),
+  force-blue:                            _palette(aa-blue-100),
+  force-red:                             _palette(aa-red-100),
+  force-orange:                          _palette(aa-orange-100),
+  force-green:                           _palette(aa-green-100),
+
   // WHITE
   aa-white-100:                          _palette(aa-white-100),
   white:                                 _palette(aa-white-100),
@@ -130,15 +137,20 @@ $colour: (
 
   // TINTS FOR LEFT NAV ONLY
   tinted-red:                           rgba(198, 12, 49, 0.075),
+  tinted-pink:                          rgba(255, 161, 196, 0.15),
   tinted-green:                         rgba(0, 135, 112, 0.075),
   tinted-lime:                          rgba(170, 165, 22, 0.075),
-  tinted-blue:                          rgba(0, 39, 118, 0.1),
+  tinted-blue:                          rgba(0, 39, 118, 0.075),
+  tinted-dark-blue:                     rgba(0, 39, 118, 0.5),
   tinted-blue-sky:                      rgba(54, 147, 205, 0.1),
   tinted-orange:                        rgba(233, 131, 0, 0.075),
   tinted-plum:                          rgba(126, 81, 122, 0.1),
   tinted-ochre:                         rgba(215, 150, 86, 0.1),
   tinted-light-blue:                    rgba(0, 117, 176, 0.1),
   tinted-burgundy:                      rgba(126, 81, 122, 0.1),
+  tinted-brown:                         rgba(156, 95, 14, 0.1),
+  tinted-grey:                          rgba(60, 60, 60, 0.1),
+  tinted-white:                         rgba(255, 255, 255, 0.3),
 );
 
 @mixin chevron-down {

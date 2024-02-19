@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterContentChecked, ChangeDetectorRef } from '@angular/core';
 import { TabNavigationItemComponent } from '@angloamerican/components';
 import { RouterOutletItem } from '../class/tab-router-oulet';
 
@@ -7,45 +7,47 @@ import { RouterOutletItem } from '../class/tab-router-oulet';
   templateUrl: './blade.component.html',
   styleUrls: ['./blade.component.scss']
 })
-export class BladeComponent implements OnInit {
+export class BladeComponent implements AfterContentChecked {
 
-  suppressAutoClose: boolean;
-  topPosition: number;
-  showBladeGist: boolean;
-  bladeHalf: boolean;
-  oneColWidth: boolean;
-  bladeIcon: string;
-  bladeHeading: string;
-  showIcon: boolean;
-  showCustomBladeGist: boolean;
-  coreMenuBlade: boolean;
-  oneCol: boolean;
-  twoCol: boolean;
-  xlCol: boolean;
-  showCustomBlade: boolean;
+  suppressAutoClose: boolean = false;
+  topPosition: number = 0;
+  showBladeGist: boolean = false;
+  bladeHalf: boolean = false;
+  oneColWidth: boolean = false;
+  bladeIcon: string = '';
+  bladeHeading: string = '';
+  showIcon: boolean = false;
+  showCustomBladeGist: boolean = false;
+  coreMenuBlade: boolean = false;
+  oneCol: boolean = false;
+  twoCol: boolean = false;
+  xlCol: boolean = false;
+  showCustomBlade: boolean = false;
   theBladeSize: string = "one-column-width";
-  obi: boolean;
+  obi: boolean = false;
   searchText = '';
-  showInfo: boolean;
-  enablePin: boolean;
-  activeTab: TabNavigationItemComponent;
-  selectedIndex: number = null;
-  favIndex: number;
-  showBodyOne: boolean;
-  showBodyTwo: boolean;
-  showBodyThree: boolean;
-  showNestedOne: boolean;
-  showNestedTwo: boolean;
-  showNestedThree: boolean;
-  hasBladeTabs: boolean;
-  setHeadingMaxWidth: number;
-  tabNgTemplate: boolean;
+  showInfo: boolean = false;
+  enablePin: boolean = false;
+  activeTab?: TabNavigationItemComponent;
+  selectedIndex: number = 0;
+  favIndex: number = 0;
+  showBodyOne: boolean = false;
+  showBodyTwo: boolean = false;
+  showBodyThree: boolean = false;
+  showNestedOne: boolean = false;
+  showNestedTwo: boolean = false;
+  showNestedThree: boolean = false;
+  hasBladeTabs: boolean = false;
+  tabNgTemplate: boolean = false;
+  displayBladeModal: boolean = false;
 
-  pinBlade: boolean;
-  toggleBlade: boolean;
-  showBlade: boolean;
+  pinBlade: boolean = false;
+  toggleBlade: boolean = false;
+  showBlade: boolean = false;
+  approvals: any[] = [];
+  tabPrimary: any;
 
-  constructor() { }
+  constructor(private changeDetector: ChangeDetectorRef) { }
 
   public readonly tabs: RouterOutletItem[] = [
     {
@@ -82,7 +84,7 @@ export class BladeComponent implements OnInit {
     },
   ];
 
-  tabsNgTemplate = [
+  tabsNgTemplate: any[] = [
     {
       tabName: 'Basic blade',
       tabId: 'tab1',
@@ -97,28 +99,60 @@ export class BladeComponent implements OnInit {
       tabName: 'Blade tabs (ng-template)',
       tabId: 'tab3',
       showTabThreeContent: true
+    },
+    {
+      tabName: 'Blade modal',
+      tabId: 'tab4',
+      showTabFourContent: true
     }
   ]
 
-  tabChanged(tab: TabNavigationItemComponent) {
+  tabChanged(tab?: TabNavigationItemComponent) {
     this.activeTab = tab;
   }
 
-  bladeIsOpen(open: boolean) {
+  bladeIsOpen(open: boolean, tab?: TabNavigationItemComponent) {
     this.toggleBlade = open;
+    if (tab) {
+      this.tabChanged(tab)
+    }
+  }
+
+  onCloseTab() {
+  }
+
+  gistBladeOpen(event: any, tabsNgTemplate: any) {
+    this.bladeIsOpen(event, tabsNgTemplate);
+    this.showBladeGist = true;
+    this.showCustomBladeGist = false;
+    this.bladeHalf = false;
+    this.oneCol = false;
+    this.twoCol = false;
+    this.xlCol = false;
+    this.showCustomBlade = false;
+    this.enablePin = false;
+    this.bladeHeading = 'Gist';
+    this.showIcon = true;
+    this.bladeIcon = 'table_rows';
+    this.hasBladeTabs = false;
+    this.theBladeSize = 'one-column-width'
   }
 
   bladeIsPinned(togglePinned: boolean) {
     this.pinBlade = togglePinned;
   }
 
-  imgPath = "./assets/images/samples/obi-wan.png"
-  
+  imgPath1 = "./assets/images/samples/obi-wan.png"
+  imgPath2 = "./assets/images/samples/darth.png"
+  imgPath3 = "./assets/images/samples/yoda.png"
+  imgPath4 = "./assets/images/samples/luke.png"
+  imgPath5 = "./assets/images/samples/han-solo.png"
+
   menuClicked(event: { stopPropagation: () => void; }) {
     event.stopPropagation();
   }
 
-  ngOnInit() {
+  ngAfterContentChecked(): void {
+    this.changeDetector.detectChanges();
   }
-
 }

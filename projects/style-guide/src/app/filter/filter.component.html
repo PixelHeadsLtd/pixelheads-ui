@@ -10,28 +10,27 @@
       <div class="describe margin-bottom-1">
         <p>The filter can be hidden by default. If this is the case, please use
           the <a routerLink="/buttons">filter button</a> to toggle the filter.
-          <strong class="aa-red-100">Please remember to place the filter inbetween the 
-            'control-bar' and the 'content-container'. For details, 
+          <strong class="aa-red-100">Please remember to place the filter inbetween the
+            'control-bar' and the 'content-container'. For details,
             please refer to the <a routerLink="/page-template">Page templates</a>
           </strong>
         </p>
         <p>
           <strong class="aa-red-100">
-            If you need to add a form to the filter. Make sure the filter sits inside the form and not the form inside the filter. 
+            If you need to add a form to the filter. Make sure the filter sits inside the form and not the form inside the filter.
             This is so we maintain a responsive layout. Adding a form wrapper inside the filter will break flex
           </strong>
         </p>
       </div>
-      <aa-button 
-        (buttonClick)="toggleFilter=!toggleFilter" 
-        fieldClass="boxed" 
-        buttonClass="secondary filter" 
+      <aa-button
+        (buttonClick)="toggleFilter=!toggleFilter"
+        fieldClass="boxed"
+        buttonClass="secondary filter"
         buttonLabel="Filter"
-        buttonText="Filter" 
-        disabled="">
+        buttonText="Filter">
       </aa-button>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -59,10 +58,10 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFilter=true; showFilterLeft=false">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFilter=true; showFilterLeft=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -71,9 +70,16 @@
     <div class="field">
       <div class="flex-group space-between">
         <label for="">Course name</label>
-        <aa-tooltip [customIcon]="true" iconName="help" [isInfo]="true" [setMinWidth]="'12'" [ypos]="'bottom'" [xpos]="'right'">
+        <aa-tooltip 
+          [customIcon]="true" 
+          iconName="help" 
+          [isInfo]="true" 
+          setMinWidth="12rem" 
+          ypos="bottom" 
+          xpos="right"
+        >
           <h4>Ahoy there</h4>
-          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          <p>Mr Beaver had begun telling them that the White Witch wasn't really human at all </p>
         </aa-tooltip>
       </div>
 
@@ -127,8 +133,8 @@
         <option value="hamster">Product development</option>
       </select>
     </div>
-      <aa-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary" disabled=""></aa-button>
-      <aa-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel" disabled=""></aa-button>
+      <aa-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary"></aa-button>
+      <aa-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel"></aa-button>
   </article>
 
     <!-- start content repeater -->
@@ -136,16 +142,16 @@
       <section class="flex-1 col-left flex-start">
         <h2 class="boxed">Filter left</h2>
         <div class="describe margin-bottom-1">
-          <p>Filter left can be useful when we need to display the page in two columns, 
-            it also reducuces vertical page scrolling. <strong class="aa-red-100"> Place this filter inside your 'content-container' adding the 
-              class names 'padding-left-0 flex-group flex-start'</strong>. This will push the filter over to the left side so there is no left spacing 
-              on the page whilst also setting up your container to display it's contents horizontally using flex. You're right side content 
-              will need to be wrapped in some container. You'll need to set the filter to be a lot narrower than your right-side content, to 
-              do this use a flex value on each, for example 'flex-1' for the filter and 'flex-5' for the right-side content. 
+          <p>Filter left can be useful when we need to display the page in two columns,
+            it also reducuces vertical page scrolling. <strong class="aa-red-100"> Place this filter inside your 'content-container' adding the
+              class names 'padding-left-0 flex-group flex-start'</strong>. This will push the filter over to the left side so there is no left spacing
+              on the page whilst also setting up your container to display it's contents horizontally using flex. You're right side content
+              will need to be wrapped in some container. You'll need to set the filter to be a lot narrower than your right-side content, to
+              do this use a flex value on each, for example 'flex-1' for the filter and 'flex-5' for the right-side content.
               <strong class="aa-red-100">See the <a routerLink="/flex">Flex section</a> for more details.</strong>
             </p>
         </div>
-  
+
         <div class="padding-1-25 bg-aa-grey-5">
           <h2>Details</h2>
           <div class="field boxed">
@@ -171,30 +177,28 @@
             </select>
           </div>
           <div class="flex-group flex-start">
-            <aa-button 
-              (buttonClick)="onClick()" 
-              fieldClass="label-hidden" 
-              buttonClass="primary" 
-              buttonId="" 
+            <aa-button
+              (buttonClick)="onClick()"
+              fieldClass="label-hidden"
+              buttonClass="primary"
+              buttonId=""
               buttonLabel="Primary"
-              buttonText="Search" 
-              disabled=""
+              buttonText="Search"
             >
             </aa-button>
-            <aa-button 
-              (buttonClick)="onClick()" 
-              fieldClass="label-hidden" 
-              buttonClass="cancel" 
-              buttonId="" 
+            <aa-button
+              (buttonClick)="onClick()"
+              fieldClass="label-hidden"
+              buttonClass="cancel"
+              buttonId=""
               buttonLabel="Cancel"
-              buttonText="Reset" 
-              disabled=""
+              buttonText="Reset"
             >
             </aa-button>
           </div>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -228,27 +232,27 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showFilter=false; showFilterLeft=true">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFilter=false; showFilterLeft=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
 </section>
 
-<aa-blade 
-    [showModal]="false"
+<aa-blade
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <div *ngIf="showFilter">

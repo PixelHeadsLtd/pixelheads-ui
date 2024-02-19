@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-toastr',
@@ -6,12 +6,10 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./toastr.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ToastrComponent implements OnInit {
+export class ToastrComponent {
 
-  @Input() zIndex: boolean;
+  @Input() zIndex: number = 0;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 }

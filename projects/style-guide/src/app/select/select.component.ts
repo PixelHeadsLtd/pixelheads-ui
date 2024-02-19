@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SelectOption } from 'projects/components/src/public-api';
 
 @Component({
@@ -6,16 +6,18 @@ import { SelectOption } from 'projects/components/src/public-api';
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss']
 })
-export class SelectComponent implements OnInit {
+export class SelectComponent {
 
-  toggleBlade: boolean;
-  standardSelect: boolean;
-  customSelect: boolean;
-  dataList: boolean;
+  toggleBlade: boolean = false;
+  standardSelect: boolean = false;
+  customSelect: boolean = false;
+  dataList: boolean = false;
+  selectedCityIds: string[] = [];
   isDisabled: boolean = true;
+  defaultStart: number = 0;
+  defaultEnd: number = 3;
 
-
-  constructor() {}
+  constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
@@ -23,96 +25,99 @@ export class SelectComponent implements OnInit {
 
   optionArray: SelectOption[] = [
     {
-      id: 'dec', 
-      display: 'December',
+      id: 'pls-select',
+      display: 'Please select',
       showIcon: true,
-      icon: 'ac_unit',
-      iconColor: 'aa-light-blue-50'
+      icon: 'calendar_month',
+      iconColor: 'aa-light-blue-100',
     },
     {
-      id: 'jan', 
+      id: 'jan',
       display: 'January',
       showIcon: true,
       icon: 'ac_unit',
       iconColor: 'aa-light-blue-50'
     },
     {
-      id: 'feb', 
+      id: 'feb',
       display: 'February',
       showIcon: true,
       icon: 'ac_unit',
       iconColor: 'aa-light-blue-50'
     },
     {
-      id: 'mar', 
+      id: 'mar',
       display: 'March',
       showIcon: true,
       icon: 'emoji_nature',
       iconColor: 'aa-orange-100'
     },
     {
-      id: 'apr', 
+      id: 'apr',
       display: 'April',
       showIcon: true,
       icon: 'emoji_nature',
       iconColor: 'aa-orange-100'
     },
     {
-      id: 'may', 
+      id: 'may',
       display: 'May',
       showIcon: true,
       icon: 'emoji_nature',
       iconColor: 'aa-orange-100'
     },
     {
-      id: 'jun', 
+      id: 'jun',
       display: 'June',
       showIcon: true,
       icon: 'beach_access',
       iconColor: 'aa-red-100'
     },
     {
-      id: 'jul', 
+      id: 'jul',
       display: 'July',
       showIcon: true,
       icon: 'beach_access',
       iconColor: 'aa-red-100'
     },
     {
-      id: 'aug', 
+      id: 'aug',
       display: 'August',
       showIcon: true,
       icon: 'beach_access',
       iconColor: 'aa-red-100'
     },
     {
-      id: 'sep', 
+      id: 'sep',
       display: 'September',
       showIcon: true,
       icon: 'spa',
       iconColor: 'aa-ochre-100'
     },
     {
-      id: 'oct', 
+      id: 'oct',
       display: 'October',
       showIcon: true,
       icon: 'spa',
       iconColor: 'aa-ochre-100'
     },
     {
-      id: 'nov', 
+      id: 'nov',
       display: 'November',
       showIcon: true,
       icon: 'spa',
       iconColor: 'aa-ochre-100'
+    },
+    {
+      id: 'dec',
+      display: 'December',
+      showIcon: true,
+      icon: 'ac_unit',
+      iconColor: 'aa-light-blue-50'
     }
   ];
 
-  onOptionSelected(selectOption : SelectOption) {
+  onOptionSelected() {
     console.log("Do something");
   }
-
-  ngOnInit() {
-  }
-
 }

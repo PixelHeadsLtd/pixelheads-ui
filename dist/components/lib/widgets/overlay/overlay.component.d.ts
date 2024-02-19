@@ -1,5 +1,5 @@
-import { OnInit } from '@angular/core';
-export declare class OverlayComponent implements OnInit {
+import * as i0 from "@angular/core";
+export declare class OverlayComponent {
     zIndex: number;
     showOverlay: boolean;
     topPos: any;
@@ -9,6 +9,6 @@ export declare class OverlayComponent implements OnInit {
     minWidth: any;
     maxWidth: any;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<OverlayComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<OverlayComponent, "aa-overlay", never, { "zIndex": { "alias": "zIndex"; "required": false; }; "showOverlay": { "alias": "showOverlay"; "required": false; }; "topPos": { "alias": "topPos"; "required": false; }; "rightPos": { "alias": "rightPos"; "required": false; }; "bottomPos": { "alias": "bottomPos"; "required": false; }; "leftPos": { "alias": "leftPos"; "required": false; }; "minWidth": { "alias": "minWidth"; "required": false; }; "maxWidth": { "alias": "maxWidth"; "required": false; }; }, {}, never, ["[overlay-header]", "[overlay-content]"], false, never>;
 }
-//# sourceMappingURL=overlay.component.d.ts.map

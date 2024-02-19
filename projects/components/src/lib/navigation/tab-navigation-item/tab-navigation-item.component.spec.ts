@@ -1,6 +1,7 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TabNavigationItemComponent } from './tab-navigation-item.component';
+import { RouterModule } from '@angular/router';
 
 describe('TabNavigationItemComponent', () => {
   let component: TabNavigationItemComponent;
@@ -8,7 +9,8 @@ describe('TabNavigationItemComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TabNavigationItemComponent ]
+      declarations: [ TabNavigationItemComponent ],
+	  imports:[RouterModule.forRoot([])]
     })
     .compileComponents();
   }));

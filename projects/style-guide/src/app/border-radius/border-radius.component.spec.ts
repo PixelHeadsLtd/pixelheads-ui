@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BorderRadiusComponent } from './border-radius.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('BorderRadiusComponent', () => {
   let component: BorderRadiusComponent;
@@ -8,9 +8,9 @@ describe('BorderRadiusComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BorderRadiusComponent ]
-    })
-    .compileComponents();
+      declarations: [BorderRadiusComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,9 +1,9 @@
-import { OnInit } from '@angular/core';
-export declare class FooterComponent implements OnInit {
-    leftPos: number;
+import * as i0 from "@angular/core";
+export declare class FooterComponent {
+    leftPos: any;
     zIndex: number;
     colorClass: string;
     constructor();
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<FooterComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<FooterComponent, "aa-footer", never, { "leftPos": { "alias": "leftPos"; "required": false; }; "zIndex": { "alias": "zIndex"; "required": false; }; "colorClass": { "alias": "colorClass"; "required": false; }; }, {}, never, ["*"], false, never>;
 }
-//# sourceMappingURL=footer.component.d.ts.map

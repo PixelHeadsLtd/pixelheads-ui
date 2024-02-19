@@ -10,11 +10,11 @@
       <h2>Info panel</h2>
       <div class="describe margin-bottom-1">
         <p>To modify the info panel width, change the value set on <strong>[panelWidth]</strong>.</p>
-        <p>To change the info panel's status, inject 1 of 4 values into <strong>[panleStatus]</strong>. 
+        <p>To change the info panel's status, inject 1 of 4 values into <strong>[panleStatus]</strong>.
           These are: 'info', 'approved', 'pending' and 'rejected'.</p>
       </div>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -90,16 +90,16 @@
         <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
       </nav>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=true; showInfoPanelStacked=false">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=true; showInfoPanelStacked=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
     </div>
     <div class="flex-group flex-start margin-top-2">
-      <aa-info-panel panelWidth="20" panelHeight="12.5" panelStatus="info">
+      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="info">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -121,8 +121,8 @@
           </div>
         </ng-container>
       </aa-info-panel>
-      
-      <aa-info-panel panelWidth="20" panelHeight="12.5" panelStatus="approved">
+
+      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="approved">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -144,8 +144,8 @@
           </div>
         </ng-container>
       </aa-info-panel>
-      
-      <aa-info-panel panelWidth="20" panelHeight="12.5" panelStatus="pending">
+
+      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="pending">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -167,8 +167,8 @@
           </div>
         </ng-container>
       </aa-info-panel>
-      
-      <aa-info-panel panelWidth="20" panelHeight="12.5" panelStatus="rejected">
+
+      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="rejected">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -195,9 +195,9 @@
       </aa-info-panel>
     </div>
     <div class="flex-group flex-start">
-      <aa-info-panel 
-        panelWidth="30" 
-        panelHeight="20" 
+      <aa-info-panel
+        panelWidth="30rem"
+        panelHeight="20rem"
         panelStatus="info"
         [roundedCorners]="true"
         [removeHeaderBorder]="true"
@@ -225,7 +225,7 @@
       </aa-info-panel>
     </div>
   </section>
-  
+
     <!-- start content repeater -->
     <section class="content-repeater">
       <div class="flex-group">
@@ -238,7 +238,7 @@
           </p>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -307,30 +307,31 @@
           <a class="cursor-pointer" *ngIf="showMoreTwo" (click)="showMoreTwo=!showMoreTwo">show less</a>
         </nav>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); showInfoPanel=false; showInfoPanelStacked=true">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=false; showInfoPanelStacked=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </div>
-      
+
       <div class="margin-top-2 margin-bottom-2">
         <aa-info-panel-stacked
           [approvedForward]="approvedForward"
           [rejectedForward]="rejectedForward"
           [resetAll]="resetAll"
           [fullWidth]="true"
-          wrapperWidth=""
-          wrapperHeight="24"
+          wrapperWidth="100%"
+          wrapperHeight="25rem"
         >
-          <aa-info-panel 
+          <aa-info-panel
             *ngFor="let p of infoPanelItemsFive; let i = index"
             [preventOpacity]="false"
-            (click)="panelFiveClicked(i)" 
+            (click)="panelFiveClicked(i)"
             [ngClass]="{'selected' : panelFiveIndex===i}"
-            panelHeight="23" 
+            panelHeight="24.5rem"
+            panelWidth="100%"
             panelStatus="{{p.panelStatus}}"
           >
             <ng-container custom-header>
@@ -408,54 +409,54 @@
       <div class="flex-group flex-start margin-top-1">
         <button class="approve"
           (click)="
-          approvedForward=true; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          approvedForward=true; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
         >Approved
         </button>
         <button class="void"
           (click)="
-          approvedForward=false; pendingForward=true; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          approvedForward=false; pendingForward=true; rejectedForward=false; withdrawnForward=false; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
         >Pending
         </button>
-        <button class="reject" 
+        <button class="reject"
           (click)="
-          approvedForward=false; pendingForward=false; rejectedForward=true; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          approvedForward=false; pendingForward=false; rejectedForward=true; withdrawnForward=false; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Rejected
         </button>
-        <button class="reject" 
+        <button class="reject"
           (click)="
-          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=true; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false;
+          abandonedForward=true; withdrawalPendingForward=false; draftForward=false; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Abandoned
         </button>
-        <button class="reject" 
+        <button class="reject"
           (click)="
-          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=true; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false; 
+          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=true; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Withdrawn
         </button>
-        <button class="cancel" 
+        <button class="cancel"
           (click)="
-          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=true; resetAll=false; 
+          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=true; resetAll=false;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Draft</button>
-        <button class="primary" 
+        <button class="primary"
           (click)="
-          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false; 
-          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=true; 
+          approvedForward=false; pendingForward=false; rejectedForward=false; withdrawnForward=false; returnedForward=false;
+          abandonedForward=false; withdrawalPendingForward=false; draftForward=false; resetAll=true;
           panelOneIndex=null; panelTwoIndex=null; panelThreeIndex=null; panelFourIndex=null"
           >Reset</button>
       </div>
-      
-      
+
+
       <div class="flex-group flex-start margin-top-2">
         <!--Note - wrapperWidth and wrapperHeight must be 1rem bigger than nested info-panel-->
         <aa-info-panel-stacked
@@ -466,145 +467,16 @@
           [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
-          wrapperWidth="21"
-          wrapperHeight="13.5"
+          wrapperWidth="21rem"
+          wrapperHeight="13.5rem"
         >
-          <aa-info-panel 
+          <aa-info-panel
             *ngFor="let p of infoPanelItemsOne; let i = index"
-            (click)="panelOneClicked(i)" 
+            (click)="panelOneClicked(i)"
             [ngClass]="{'selected' : panelOneIndex===i}"
             [preventOpacity]="false"
-            panelWidth="20" 
-            panelHeight="12.5" 
-            panelStatus="{{p.panelStatus}}"
-          >
-            <ng-container custom-header>
-              <section class="flex-group space-between">
-                <div class="flex-group flex-start flex-align-center">
-                  <div class="material-icons">{{p.headerIconOne}}</div>
-                  <h3>{{p.headerTitle}}</h3>
-                </div>
-                <div class="material-icons">{{p.headerIconTwo}}</div>
-              </section>
-            </ng-container>
-            <ng-container custom-content>
-              <p>
-                {{p.panelContent}}
-              </p>
-            </ng-container>
-            <ng-container custom-footer>
-              <div class="flex-group space-between">
-                <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
-              </div>
-            </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
-        
-        <aa-info-panel-stacked
-          [approvedForward]="approvedForward"
-          [pendingForward]="pendingForward"
-          [rejectedForward]="rejectedForward"
-          [abandonedForward]="abandonedForward"
-          [withdrawnForward]="withdrawnForward"
-          [draftForward]="draftForward"
-          [resetAll]="resetAll"
-          wrapperWidth="21"
-          wrapperHeight="13.5"
-        >
-          <aa-info-panel 
-            *ngFor="let p of infoPanelItemsTwo; let i = index"
-            (click)="panelTwoClicked(i)" 
-            [ngClass]="{'selected' : panelTwoIndex===i}"
-            [preventOpacity]="false"
-            panelWidth="20" 
-            panelHeight="12.5" 
-            panelStatus="{{p.panelStatus}}"
-          >
-            <ng-container custom-header>
-              <section class="flex-group space-between">
-                <div class="flex-group flex-start flex-align-center">
-                  <div class="material-icons">{{p.headerIconOne}}</div>
-                  <h3>{{p.headerTitle}}</h3>
-                </div>
-                <div class="material-icons">{{p.headerIconTwo}}</div>
-              </section>
-            </ng-container>
-            <ng-container custom-content>
-              <p>
-                {{p.panelContent}}
-              </p>
-            </ng-container>
-            <ng-container custom-footer>
-              <div class="flex-group space-between">
-                <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
-              </div>
-            </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
-        
-        <aa-info-panel-stacked
-          [approvedForward]="approvedForward"
-          [pendingForward]="pendingForward"
-          [rejectedForward]="rejectedForward"
-          [abandonedForward]="abandonedForward"
-          [withdrawnForward]="withdrawnForward"
-          [draftForward]="draftForward"
-          [resetAll]="resetAll"
-          wrapperWidth="20"
-          wrapperHeight="13.5"
-        >
-          <aa-info-panel 
-            *ngFor="let p of infoPanelItemsThree; let i = index"
-            (click)="panelThreeClicked(i)" 
-            [ngClass]="{'selected' : panelThreeIndex===i}"
-            [preventOpacity]="false"
-            panelWidth="20" 
-            panelHeight="12.5" 
-            panelStatus="{{p.panelStatus}}"
-          >
-            <ng-container custom-header>
-              <section class="flex-group space-between">
-                <div class="flex-group flex-start flex-align-center">
-                  <div class="material-icons">{{p.headerIconOne}}</div>
-                  <h3>{{p.headerTitle}}</h3>
-                </div>
-                <div class="material-icons">{{p.headerIconTwo}}</div>
-              </section>
-            </ng-container>
-            <ng-container custom-content>
-              <p>
-                {{p.panelContent}}
-              </p>
-            </ng-container>
-            <ng-container custom-footer>
-              <div class="flex-group space-between">
-                <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
-              </div>
-            </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
-        
-        <aa-info-panel-stacked
-          [approvedForward]="approvedForward"
-          [pendingForward]="pendingForward"
-          [rejectedForward]="rejectedForward"
-          [abandonedForward]="abandonedForward"
-          [withdrawnForward]="withdrawnForward"
-          [draftForward]="draftForward"
-          [resetAll]="resetAll"
-          wrapperWidth="21"
-          wrapperHeight="13.5"
-        >
-          <aa-info-panel 
-            *ngFor="let p of infoPanelItemsFour; let i = index"
-            (click)="panelFourClicked(i)" 
-            [ngClass]="{'selected' : panelFourIndex===i}"
-            [preventOpacity]="false"
-            panelWidth="20" 
-            panelHeight="12.5" 
+            panelWidth="20rem"
+            panelHeight="12.5rem"
             panelStatus="{{p.panelStatus}}"
           >
             <ng-container custom-header>
@@ -638,16 +510,145 @@
           [withdrawnForward]="withdrawnForward"
           [draftForward]="draftForward"
           [resetAll]="resetAll"
-          wrapperWidth="21"
-          wrapperHeight="13.5"
+          wrapperWidth="21rem"
+          wrapperHeight="13.5rem"
         >
-          <aa-info-panel 
+          <aa-info-panel
+            *ngFor="let p of infoPanelItemsTwo; let i = index"
+            (click)="panelTwoClicked(i)"
+            [ngClass]="{'selected' : panelTwoIndex===i}"
+            [preventOpacity]="false"
+            panelWidth="20rem"
+            panelHeight="12.5rem"
+            panelStatus="{{p.panelStatus}}"
+          >
+            <ng-container custom-header>
+              <section class="flex-group space-between">
+                <div class="flex-group flex-start flex-align-center">
+                  <div class="material-icons">{{p.headerIconOne}}</div>
+                  <h3>{{p.headerTitle}}</h3>
+                </div>
+                <div class="material-icons">{{p.headerIconTwo}}</div>
+              </section>
+            </ng-container>
+            <ng-container custom-content>
+              <p>
+                {{p.panelContent}}
+              </p>
+            </ng-container>
+            <ng-container custom-footer>
+              <div class="flex-group space-between">
+                <div class="material-icons">{{p.footerIconOne}}</div>
+                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+              </div>
+            </ng-container>
+          </aa-info-panel>
+        </aa-info-panel-stacked>
+
+        <aa-info-panel-stacked
+          [approvedForward]="approvedForward"
+          [pendingForward]="pendingForward"
+          [rejectedForward]="rejectedForward"
+          [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
+          [draftForward]="draftForward"
+          [resetAll]="resetAll"
+          wrapperWidth="20rem"
+          wrapperHeight="13.5rem"
+        >
+          <aa-info-panel
+            *ngFor="let p of infoPanelItemsThree; let i = index"
+            (click)="panelThreeClicked(i)"
+            [ngClass]="{'selected' : panelThreeIndex===i}"
+            [preventOpacity]="false"
+            panelWidth="20rem"
+            panelHeight="12.5rem"
+            panelStatus="{{p.panelStatus}}"
+          >
+            <ng-container custom-header>
+              <section class="flex-group space-between">
+                <div class="flex-group flex-start flex-align-center">
+                  <div class="material-icons">{{p.headerIconOne}}</div>
+                  <h3>{{p.headerTitle}}</h3>
+                </div>
+                <div class="material-icons">{{p.headerIconTwo}}</div>
+              </section>
+            </ng-container>
+            <ng-container custom-content>
+              <p>
+                {{p.panelContent}}
+              </p>
+            </ng-container>
+            <ng-container custom-footer>
+              <div class="flex-group space-between">
+                <div class="material-icons">{{p.footerIconOne}}</div>
+                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+              </div>
+            </ng-container>
+          </aa-info-panel>
+        </aa-info-panel-stacked>
+
+        <aa-info-panel-stacked
+          [approvedForward]="approvedForward"
+          [pendingForward]="pendingForward"
+          [rejectedForward]="rejectedForward"
+          [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
+          [draftForward]="draftForward"
+          [resetAll]="resetAll"
+          wrapperWidth="21rem"
+          wrapperHeight="13.5rem"
+        >
+          <aa-info-panel
+            *ngFor="let p of infoPanelItemsFour; let i = index"
+            (click)="panelFourClicked(i)"
+            [ngClass]="{'selected' : panelFourIndex===i}"
+            [preventOpacity]="false"
+            panelWidth="20rem"
+            panelHeight="12.5rem"
+            panelStatus="{{p.panelStatus}}"
+          >
+            <ng-container custom-header>
+              <section class="flex-group space-between">
+                <div class="flex-group flex-start flex-align-center">
+                  <div class="material-icons">{{p.headerIconOne}}</div>
+                  <h3>{{p.headerTitle}}</h3>
+                </div>
+                <div class="material-icons">{{p.headerIconTwo}}</div>
+              </section>
+            </ng-container>
+            <ng-container custom-content>
+              <p>
+                {{p.panelContent}}
+              </p>
+            </ng-container>
+            <ng-container custom-footer>
+              <div class="flex-group space-between">
+                <div class="material-icons">{{p.footerIconOne}}</div>
+                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+              </div>
+            </ng-container>
+          </aa-info-panel>
+        </aa-info-panel-stacked>
+
+        <aa-info-panel-stacked
+          [approvedForward]="approvedForward"
+          [pendingForward]="pendingForward"
+          [rejectedForward]="rejectedForward"
+          [abandonedForward]="abandonedForward"
+          [withdrawnForward]="withdrawnForward"
+          [draftForward]="draftForward"
+          [resetAll]="resetAll"
+          wrapperWidth="21rem"
+          wrapperHeight="13.5rem"
+        >
+          <aa-info-panel
             *ngFor="let p of infoPanelItemsFive; let i = index"
-            (click)="panelFiveClicked(i)" 
+            (click)="panelFiveClicked(i)"
             [ngClass]="{'selected' : panelFiveIndex===i}"
             [preventOpacity]="false"
-            panelWidth="20" 
-            panelHeight="12.5" 
+            panelWidth="20rem"
+            panelHeight="12.5rem"
             panelStatus="{{p.panelStatus}}"
           >
             <ng-container custom-header>
@@ -676,17 +677,17 @@
     </section>
 </section>
 
-<aa-blade 
-    [showModal]="false"
+<aa-blade
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <div *ngIf="showInfoPanel">

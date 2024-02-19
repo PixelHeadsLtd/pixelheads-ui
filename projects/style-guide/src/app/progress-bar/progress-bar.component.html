@@ -16,21 +16,21 @@
 
       <div>
         <div class="flex-group flex-start margin-bottom-1-5">
-          <aa-button 
-            (buttonClick)="moveProgressBar()" 
-            fieldClass="boxed" 
-            buttonClass="primary" 
+          <aa-button
+            (buttonClick)="moveProgressBar()"
+            fieldClass="boxed"
+            buttonClass="primary"
             buttonId="'uttonId"
             [showLabel]="false"
             buttonText="Test standard progress-bar"
             >
           </aa-button>
-          <aa-button 
-            (buttonClick)="moveHeaderProgressBar()" 
-            fieldClass="boxed" 
-            buttonClass="secondary" 
+          <aa-button
+            (buttonClick)="moveHeaderProgressBar()"
+            fieldClass="boxed"
+            buttonClass="secondary"
             [showLabel]="false"
-            buttonText="Test header version" 
+            buttonText="Test header version"
             >
           </aa-button>
         </div>
@@ -38,16 +38,16 @@
           progressId="headerProgressBar"
           [displayOverHeader]="true"
           progressColour="bg-aa-yellow-100"
-          complete="0"
+          [complete]="0"
         >
         </aa-progress-bar>
-  
+
         <aa-progress-bar
           progressId="progressBar"
           maxWidth="25rem"
           titleBold="Step"
           titleRegular="Aspect extract"
-          complete="0"
+          [complete]="0"
           leftSideText="3 of 4 complete"
           rightSideText="35 rem"
         >
@@ -129,7 +129,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event)">
+      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -137,16 +137,16 @@
 </section>
 
 <aa-blade
-    [showModal]="false"
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
     <a href="https://gist.github.com/angloux/4102f19c058d44fd7c25f44b9933a3fa" target="_blank">View Gist on GitHub</a>

@@ -1,22 +1,39 @@
+
+.carousel-count {
+    position: absolute;
+    z-index: 1;
+    bottom: .5rem;
+    font-size: _font(size-small);
+    color: _colour(aa-blue-100);
+    margin: 0;
+}
+
 .aa-carousel {
+    position: relative;
     overflow: hidden;
     padding: 0;
     .aa-carousel-content {
         padding: 0;
 
-        .carousel-item {
+        .aa-carousel-item {
             padding: 0;
             margin-right: 0;
             height: 100%;
 
             h1, h2, h3 {
-                margin-top: 0;
+                margin-top: .25rem;
             }
-
         }
     }
 }
 
 .aa-carousel-footer {
-    padding: 1rem
+    padding: 1rem;
+
+    button {
+        &.disable-first,
+        &.disable-last {
+            opacity: .3;
+        }
+    }
 }

@@ -1,6 +1,6 @@
 import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ContextMenuItemComponent } from './context-menu-item.component';
+import { RouterModule } from '@angular/router';
 
 describe('ContextMenuItemComponent', () => {
   let component: ContextMenuItemComponent;
@@ -8,7 +8,8 @@ describe('ContextMenuItemComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContextMenuItemComponent ]
+      declarations: [ ContextMenuItemComponent ],
+	  imports:[RouterModule.forRoot([])]
     })
     .compileComponents();
   }));

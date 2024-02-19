@@ -5,10 +5,13 @@ import {
   NavigationModule,
   PatternsModule,
   WidgetsModule,
-  DirectivesModule
+  DirectivesModule,
+  ModalService
 } from '@angloamerican/components';
-import { QuillModule } from 'ngx-quill'
+import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { QuillModule } from 'ngx-quill'
 import { HighchartsChartModule } from 'highcharts-angular';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
@@ -42,8 +45,10 @@ import { CustomCardComponent } from './ag-grid/custom-card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
+import { ElementSliderComponent } from './element-slider/element-slider.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { DateFormatPipe } from '../pipes/date-pipe';
+import { NGBDateFormatPipe } from '../pipes/ngb-date-pipe';
 import { EditorialComponent } from './editorial/editorial.component';
 import { FieldComponent } from './field/field.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
@@ -66,7 +71,7 @@ import { TabNavigationComponent } from './tab-navigation/tab-navigation.componen
 import { TabPageOneComponent } from './tab-navigation/tab-page-one/tab-page-one.component';
 import { TabPageTwoComponent } from './tab-navigation/tab-page-two/tab-page-two.component';
 import { TabPageThreeComponent } from './tab-navigation/tab-page-three/tab-page-three.component'
-import { TabPageFourComponent } from './tab-navigation/tab-page-four/tab-page-four.component'
+import { TabPageFourComponent } from './tab-navigation/tab-page-four/tab-page-four.component';
 import { TabSubPageOneComponent } from './tab-navigation/tab-sub-page-one/tab-sub-page-one.component';
 import { TabSubPageTwoComponent } from './tab-navigation/tab-sub-page-two/tab-sub-page-two.component';
 import { TabSubPageThreeComponent } from './tab-navigation/tab-sub-page-three/tab-sub-page-three.component';
@@ -117,7 +122,6 @@ import { ListSelectableComponent } from './list-selectable/list-selectable.compo
 import { UiBlockComponent } from './ui-block/ui-block.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
 import { CounterComponent } from './counter/counter.component';
-import { OpenLeftNavService } from './_services/left-nav-service';
 import { ClickOutsideDirective } from '../directives/click-outside.directive';
 import { ResizableComponent } from '../directives/resizable/resizable.component';
 import { ResizableDirective } from '../directives/resizable/resizable.directive';
@@ -151,8 +155,10 @@ import { RotatingSphereComponent } from './landing-page/rotating-sphere.componen
     CheckboxComponent,
     ColoursComponent,
     ContextMenuComponent,
+    ElementSliderComponent,
     FavouritesComponent,
     DateFormatPipe,
+    NGBDateFormatPipe,
     EditorialComponent,
     FilterComponent,
     FilterPipe,
@@ -240,6 +246,8 @@ import { RotatingSphereComponent } from './landing-page/rotating-sphere.componen
     RotatingSphereComponent
   ],
   imports: [
+    CommonModule,
+    NgbModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
@@ -259,13 +267,9 @@ import { RotatingSphereComponent } from './landing-page/rotating-sphere.componen
     DragDropModule,
     HighchartsChartModule,
     QuillModule.forRoot(),
-    AgGridModule.withComponents([CustomTooltipComponent, CustomValidationTooltipComponent, CustomCardComponent, AvatarComponent]),
+    AgGridModule
   ],
   exports: [ResizableComponent],
-  providers: [OpenLeftNavService],
-  bootstrap: [AppComponent],
-  entryComponents: [
-    EllipsisContextMenuComponent, //ModalDialogComponent
-  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

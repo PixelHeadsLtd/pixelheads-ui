@@ -5,14 +5,14 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.scss']
 })
-export class SliderComponent implements OnInit {
+export class SliderComponent {
 
-  fileUploadValue: string;
-  fileUploadId: string;
-  fileUploadName: string;
-  myRadios: string;
-  toggleBlade: boolean;
-  testSlider: boolean;
+  fileUploadValue: string = '';
+  fileUploadId: string = '';
+  fileUploadName: string = '';
+  myRadios: string = '';
+  toggleBlade: boolean = false;
+  testSlider: boolean = false;
 
   constructor() { }
 
@@ -26,9 +26,6 @@ export class SliderComponent implements OnInit {
 
   onSliderCheckedChanged(event: any) {
     console.log('received ' + event);
-  }
-
-  ngOnInit() {
   }
 
 }

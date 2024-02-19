@@ -1,5 +1,6 @@
 import { ApplicationRef, ComponentFactoryResolver, ElementRef, Injector, OnDestroy } from '@angular/core';
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
+import * as i0 from "@angular/core";
 export declare class TooltipDynamicDirective implements OnDestroy {
     private elementRef;
     private appRef;
@@ -25,5 +26,6 @@ export declare class TooltipDynamicDirective implements OnDestroy {
     private setHideTooltipTimeout;
     ngOnDestroy(): void;
     destroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TooltipDynamicDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<TooltipDynamicDirective, "[aaTooltip]", never, { "aaTooltip": { "alias": "aaTooltip"; "required": false; }; "position": { "alias": "position"; "required": false; }; "showDelay": { "alias": "showDelay"; "required": false; }; "hideDelay": { "alias": "hideDelay"; "required": false; }; }, {}, never, never, false, never>;
 }
-//# sourceMappingURL=tooltip-dynamic.directive.d.ts.map

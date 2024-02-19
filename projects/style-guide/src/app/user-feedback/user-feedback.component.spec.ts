@@ -1,17 +1,18 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserFeedbackComponent } from './user-feedback.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('UserFeedbackComponent', () => {
   let component: UserFeedbackComponent;
   let fixture: ComponentFixture<UserFeedbackComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ UserFeedbackComponent ]
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [UserFeedbackComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
-  }));
+      .compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UserFeedbackComponent);

@@ -10,6 +10,7 @@ import {
 import { fromEvent } from "rxjs";
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: "[resizable]"
 })
 export class ResizableDirective {
@@ -20,12 +21,10 @@ export class ResizableDirective {
   ).pipe(
     tap(e => e.preventDefault()),
     switchMap(() => {
-      const { width, right } = this.elementRef.nativeElement
-        .closest("th")
-        .getBoundingClientRect();
+      const rect = this.elementRef.nativeElement.closest("th")?.getBoundingClientRect();
 
       return fromEvent<MouseEvent>(this.documentRef, "mousemove").pipe(
-        map(({ clientX }) => width + clientX - right),
+        map(({ clientX }) => rect && (rect.width + clientX - rect.right)),
         distinctUntilChanged(),
         takeUntil(fromEvent(this.documentRef, "mouseup"))
       );
@@ -36,5 +35,5 @@ export class ResizableDirective {
     @Inject(DOCUMENT) private readonly documentRef: Document,
     @Inject(ElementRef)
     private readonly elementRef: ElementRef<HTMLElement>
-  ) {}
+  ) { }
 }

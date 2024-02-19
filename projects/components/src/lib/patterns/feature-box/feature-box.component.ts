@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-feature-box',
@@ -6,20 +6,16 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./feature-box.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FeatureBoxComponent implements OnInit {
+export class FeatureBoxComponent {
 
-  @Input() marginTop: boolean;
-  @Input() marginBottom: boolean;
-  @Input() fbWidth: boolean;
-  @Input() fbHeight: boolean;
-  @Input() isSolid: boolean;
-  @Input() fbStatus: string;
-  @Input() includeHeader: boolean;
-  @Input() enableScrolling: boolean;
+  @Input() marginTop: string = '';
+  @Input() marginBottom: string = '';
+  @Input() fbWidth: string = '';
+  @Input() fbHeight: string = '';
+  @Input() isSolid: boolean = false;
+  @Input() fbStatus: string = '';
+  @Input() includeHeader: boolean = false;
+  @Input() enableScrolling: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

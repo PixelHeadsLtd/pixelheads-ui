@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ngx-quill',
@@ -7,25 +7,25 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class NgxQuillComponent {
 
-  html: '';
-  showEditor: boolean;
+  html = '';
+  showEditor: boolean = false;
   popupPosition: string = 'display-top-right';
-  toggleBlade: boolean;
-  areYouSure: boolean;
-  showOnH1: boolean;
-  showOnH2: boolean;
-  showOnH3: boolean;
-  showOnH4: boolean;
-  showOnLabel: boolean;
-  showOnButton: boolean;
-  showOnAlert: boolean;
-  showOnCheckBoxOne: boolean;
-  showOnCheckBoxTwo: boolean;
-  showOnTextarea: boolean;
-  showOnPara: boolean;
-  showOnSelect: boolean;
-  showOnShield: boolean;
-  fullScreen: boolean;
+  toggleBlade: boolean = false;
+  areYouSure: boolean = false;
+  showOnH1: boolean = false;
+  showOnH2: boolean = false;
+  showOnH3: boolean = false;
+  showOnH4: boolean = false;
+  showOnLabel: boolean = false;
+  showOnButton: boolean = false;
+  showOnAlert: boolean = false;
+  showOnCheckBoxOne: boolean = false;
+  showOnCheckBoxTwo: boolean = false;
+  showOnTextarea: boolean = false;
+  showOnPara: boolean = false;
+  showOnSelect: boolean = false;
+  showOnShield: boolean = false;
+  fullScreen: boolean = false;
 
   constructor() {}
 

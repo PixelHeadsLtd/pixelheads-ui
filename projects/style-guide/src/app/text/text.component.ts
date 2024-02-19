@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.scss']
 })
-export class TextComponent implements OnInit {
+export class TextComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

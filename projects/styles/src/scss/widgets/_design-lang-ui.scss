@@ -38,10 +38,7 @@
   }
 
   header.page-header {
-    background-image: url("#{$logo-path}anglo-american-logo-white.svg");
-    background-position: center left 54.5%;
-    background-repeat: no-repeat;
-    background-size: 8.5rem;
+    background-position: center left 54.5%!important;
     transition: all 0.25s linear;
     &.shift-aa-logo {
       background-position: center left 50.9%;
@@ -996,7 +993,6 @@
     }
     
     header.page-header {
-      background-image: none;
       .mobile-menu {
         display: block;
       }

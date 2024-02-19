@@ -3,9 +3,9 @@ import { Directive, Input, SimpleChanges, Renderer2, ElementRef, OnChanges } fro
   selector: '[appHighlight]'
 })
 export class HighlightDirective implements OnChanges {
-  @Input() searchedWord: string;
-  @Input() content: string;
-  @Input() classToApply: string;
+  @Input() searchedWord: string = '';
+  @Input() content: string = '';
+  @Input() classToApply: string = '';
   @Input() setTitle = false;
 
   constructor(private el: ElementRef, private renderer: Renderer2) { }

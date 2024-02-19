@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 
 @Component({
@@ -6,10 +6,10 @@ import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
   templateUrl: './tooltip-dynamic.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TooltipDynamicComponent implements OnInit {
+export class TooltipDynamicComponent {
 
   position: TooltipDynamicPosition = TooltipDynamicPosition.DEFAULT;
-  tooltip: string | string[];
+  tooltip: string | string[]='';
   left = 0;
   top = 0;
   visible = false;
@@ -19,6 +19,4 @@ export class TooltipDynamicComponent implements OnInit {
   }
 
   constructor() {}
-
-  ngOnInit() {}
 }

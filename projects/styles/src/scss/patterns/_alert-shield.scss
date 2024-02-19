@@ -271,13 +271,15 @@
     &:before {
       @include icon-button-large-material;
       content: "\e15e";
+      margin-top: .125rem
     }
 
     &.small {
       padding-left: 2rem;
       &:before {
         left: .4rem;
-        top: 0
+        top: .2rem;
+        margin-top: 0;
       }
     }
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-actions-summary',
@@ -6,19 +6,15 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./actions-summary.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ActionsSummaryComponent implements OnInit {
+export class ActionsSummaryComponent {
 
-  @Input() heading: string;
-  @Input() title: string;
-  @Input() value: number;
-  @Input() status: string;
-  @Input() verticalDisplay: boolean;
-  @Input() noWrap: boolean;
-  @Input() actionsSummaryItems: Array<object>;
+  @Input() heading: string = '';
+  @Input() title: string = '';
+  @Input() value: number = 0;
+  @Input() status: string = '';
+  @Input() verticalDisplay: boolean = false;
+  @Input() noWrap: boolean = false;
+  @Input() actionsSummaryItems: Array<any>=[];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

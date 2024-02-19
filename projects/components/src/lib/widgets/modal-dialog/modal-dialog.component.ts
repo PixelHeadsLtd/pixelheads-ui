@@ -10,18 +10,18 @@ export class ModalDialogComponent implements OnInit, OnDestroy {
 
   constructor() { }
 
-  @Input() heading: string;
-  @Input() message: string;
+  @Input() heading: string = '';
+  @Input() message: string = '';
   @Input() topPos: any;
   @Input() rightPos: any;
   @Input() leftPos: any;
   @Input() minWidth: any;
   @Input() maxWidth: any;
-  @Input() green: boolean;
-  @Input() orange: boolean;
-  @Input() red: boolean;
-  @Input() blue: boolean;
-  @Input() zIndex: number;
+  @Input() green: boolean = false;
+  @Input() orange: boolean = false;
+  @Input() red: boolean = false;
+  @Input() blue: boolean = false;
+  @Input() zIndex: number = 0;
   @Output() closeMeEvent = new EventEmitter();
   @Output() confirmEvent = new EventEmitter();
 

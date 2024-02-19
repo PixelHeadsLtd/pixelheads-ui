@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './margin.component.html',
   styleUrls: ['./margin.component.scss']
 })
-export class MarginComponent implements OnInit {
+export class MarginComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

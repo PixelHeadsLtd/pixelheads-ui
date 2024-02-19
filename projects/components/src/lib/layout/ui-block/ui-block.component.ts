@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-ui-block',
@@ -6,17 +6,13 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./ui-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UiBlockComponent implements OnInit {
+export class UiBlockComponent {
 
-  @Input() showUiBlock: boolean;
-  @Input() topPos: number;
-  @Input() bottomPos: number;
-  @Input() fontSize: number;
-  @Input() allCaps: boolean;
-  @Input() message: string;
-  @Input() zIndex: number;
-
-  ngOnInit(): void {
-  }
-
+  @Input() showUiBlock: boolean = false;
+  @Input() topPos: any;
+  @Input() bottomPos: any;
+  @Input() fontSize: any;
+  @Input() allCaps: boolean = false;
+  @Input() message: string = '';
+  @Input() zIndex: number = 0;
 }

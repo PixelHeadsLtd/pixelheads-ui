@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NavContextComponent } from './nav-context.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('NavContextComponent', () => {
   let component: NavContextComponent;
@@ -8,9 +8,9 @@ describe('NavContextComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavContextComponent ]
-    })
-    .compileComponents();
+      declarations: [NavContextComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

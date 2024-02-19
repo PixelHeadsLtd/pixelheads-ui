@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-input-text',
@@ -6,19 +6,17 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./input-text.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InputTextComponent implements OnInit {
+export class InputTextComponent {
 
-  @Input() isOptional: boolean;
-  @Input() readOnly: boolean;
-  @Input() inputTextLabel: string;
-  @Input() inputTextId: string;
-  @Input() inputPlaceholder: string;
-  @Input() fieldClass: string;
+  @Input() isOptional: boolean = false;
+  @Input() readOnly: boolean = false;
+  @Input() inputTextLabel: string = '';
+  @Input() inputTextId: string = '';
+  @Input() inputPlaceholder: string = '';
+  @Input() fieldClass: string = '';
   @Input() inputValue: any;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

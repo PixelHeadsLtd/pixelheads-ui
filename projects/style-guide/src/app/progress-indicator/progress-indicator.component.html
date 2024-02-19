@@ -24,8 +24,7 @@
             buttonClass="custom-icons bg-aa-white-100 bd-aa-green-100 aa-green-100"
             fieldClass="boxed label-hidden"
             buttonText="Click to see an example of an 'incomplete' stop"
-            buttonIcon="more_horiz"
-            disabled="">
+            buttonIcon="more_horiz">
           </aa-button>
 
           <aa-button
@@ -36,8 +35,7 @@
             buttonClass="custom-icons bg-aa-green-100"
             fieldClass="boxed label-hidden"
             buttonText="Step one is incomplete. Complete step one"
-            buttonIcon="done"
-            disabled="">
+            buttonIcon="done">
           </aa-button>
 
           <aa-button
@@ -48,8 +46,7 @@
             buttonClass="custom-icons bg-aa-red-100"
             fieldClass="boxed label-hidden"
             buttonText="Go to the next step and see how an 'error' state appears"
-            buttonIcon="priority_high"
-            disabled="">
+            buttonIcon="priority_high">
           </aa-button>
 
           <aa-button *ngIf="showError && !progressComplete"
@@ -57,11 +54,11 @@
             (buttonClick)="
               progressComplete=true;
               checkProgress()
-            " 
+            "
             buttonIcon="thumb_up"
-            buttonClass="custom-icons green" 
-            fieldClass="boxed label-hidden" 
-            buttonText="Complete the progress" 
+            buttonClass="custom-icons green"
+            fieldClass="boxed label-hidden"
+            buttonText="Complete the progress"
             >
           </aa-button>
           <aa-button
@@ -72,12 +69,11 @@
             buttonClass="custom-icons light-blue"
             fieldClass="boxed label-hidden"
             buttonText="Restart"
-            buttonIcon="refresh"
-            disabled="">
+            buttonIcon="refresh">
           </aa-button>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -135,16 +131,16 @@
           <a class="cursor-pointer" *ngIf="showMore" (click)="showMore=!showMore">show less</a>
         </nav>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen($event); progressIndicator=true; progressIndicatorIcons=false">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); progressIndicator=true; progressIndicatorIcons=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </div>
 
-    <nav 
+    <nav
       class="aa-progress-indicator flex-group margin-top-4"
       [ngStyle]="{'padding' : '3rem 15%'}"
     >
@@ -191,7 +187,7 @@
           <strong *ngIf="!isLink" class="material-icons"></strong>
           <label>Legal documents</label>
         </aa-progress-indicator-advanced>
-        
+
         <aa-progress-indicator-advanced
           progressClass="{{stepFiveClass}}"
           [showDescription]="stepFive"
@@ -206,17 +202,17 @@
   </section>
 </section>
 
-<aa-blade 
-    [showModal]="false"
+<aa-blade
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <div *ngIf="progressIndicator">

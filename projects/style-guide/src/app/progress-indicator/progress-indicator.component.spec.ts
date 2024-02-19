@@ -1,17 +1,17 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProgressIndicatorComponent } from './progress-indicator.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ProgressIndicatorComponent', () => {
   let component: ProgressIndicatorComponent;
   let fixture: ComponentFixture<ProgressIndicatorComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-      declarations: [ ProgressIndicatorComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [ProgressIndicatorComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProgressIndicatorComponent);

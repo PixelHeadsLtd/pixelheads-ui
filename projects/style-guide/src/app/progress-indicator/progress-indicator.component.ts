@@ -1,68 +1,70 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-progress-indicator',
   templateUrl: './progress-indicator.component.html',
   styleUrls: ['./progress-indicator.component.scss']
 })
-export class ProgressIndicatorComponent implements OnInit {
+export class ProgressIndicatorComponent {
 
-  progressIndicator: boolean;
-  progressIndicatorIcons: boolean;
-  showCurrent: boolean;
-  showVisited: boolean;
-  showIncomplete: boolean;
-  showComplete: boolean;
-  showError: boolean;
-  progressComplete: boolean;
-  reset: boolean;
-  toggleBlade: boolean;
-  showMore: boolean;
+  toggleBlade:boolean = false;
+  progressIndicator: boolean = false;
+  progressIndicatorIcons: boolean = false;
+  showCurrent: boolean = false;
+  showVisited: boolean = false;
+  showIncomplete: boolean = false;
+  showComplete: boolean = false;
+  showError: boolean = false;
+  progressComplete: boolean = false;
+  reset: boolean = false;
+  showMore: boolean = false;
   stepOneIconColour: string = 'aa-pink-100';
-  stepTwoIconColour: string;
-  stepThreeIconColour: string;
-  stepFourIconColour: string;
-  stepFiveIconColour: string;
+  stepTwoIconColour: string = '';
+  stepThreeIconColour: string = '';
+  stepFourIconColour: string = '';
+  stepFiveIconColour: string = '';
 
   stepOneClass: string = 'current';
-  stepTwoClass: string;
-  stepThreeClass: string;
-  stepFourClass: string;
-  stepFiveClass: string;
+  stepTwoClass: string|null='';
+  stepThreeClass: string|null='';
+  stepFourClass: string|null='';
+  stepFiveClass: string|null='';
 
   stepOne: boolean = true;
-  stepTwo: boolean;
-  stepThree: boolean;
-  stepFour: boolean;
-  stepFive: boolean;
+  stepTwo: boolean = false;
+  stepThree: boolean = false;
+  stepFour: boolean = false;
+  stepFive: boolean = false;
 
   isLink: boolean = false;
 
-  stepOneText: string = 
+  stepOneText: string =
   `
     By default the 'current' class MUST be added to the first
     stop the user arrives at
   `;
-  stepTwoText: string;
-  stepThreeText: string;
-  stepFourText: string;
-  stepFiveText: string;
+  stepTwoText: string = '';
+  stepThreeText: string = '';
+  stepFourText: string = '';
+  stepFiveText: string = '';
+
+  progressLink: string = '';
 
   onClick() { console.log('You clicked'); }
 
   checkProgress() {
     if(this.showIncomplete) {
       this.stepOneClass = `incomplete`;
-      this.stepOneText = 
+      this.stepOneText =
       `
         If a user moves away from an unfinished stop, the 'incomplete' class
         MUST remain until the section is complete
       `;
       this.stepTwo = true;
       this.stepTwoClass = 'current';
-      this.stepTwoText = 
+      this.stepTwoText =
       `
-        You've moved to the next step but in this 
+        You've moved to the next step but in this
         example step-one is still incomplete
       `;
       this.stepThree = false;
@@ -73,14 +75,14 @@ export class ProgressIndicatorComponent implements OnInit {
     }
     if(this.showComplete) {
       this.stepOneClass = 'complete';
-      this.stepOneText = 
+      this.stepOneText =
       `
         Well done! You returned to step-one and completed the section
       `;
       this.stepTwoClass = 'incomplete';
-      this.stepTwoText = 
+      this.stepTwoText =
       `
-        Because you left step-two to complete step-one, 
+        Because you left step-two to complete step-one,
         step-two is now incomplete
       `;
       this.stepOneIconColour = 'aa-pink-100'
@@ -91,9 +93,9 @@ export class ProgressIndicatorComponent implements OnInit {
       this.stepThree = true;
       this.stepOne = false;
       this.stepThreeClass = 'current';
-      this.stepThreeText = 
+      this.stepThreeText =
       `
-        You've moved to step-three but now there's an error at step-two. 
+        You've moved to step-three but now there's an error at step-two.
         In some cases you may want to prevent your users from progression
         past a step containing an error, this will be a business decision
       `;
@@ -110,7 +112,7 @@ export class ProgressIndicatorComponent implements OnInit {
       this.stepTwo = false;
       this.stepThree = false;
       this.stepFive = true;
-      this.stepFiveText = 
+      this.stepFiveText =
       `
         You have successfully completed your journey
       `;
@@ -119,18 +121,18 @@ export class ProgressIndicatorComponent implements OnInit {
     if(this.reset) {
       this.stepOne = true;
       this.stepOneClass = 'current';
-      this.stepOneText = 
+      this.stepOneText =
       `
-        The 'current' class should be passed to the bus-stop 
+        The 'current' class should be passed to the bus-stop
         that you have first arrived at. No data would have been
-        added on first arrival. Click the above button to see 
+        added on first arrival. Click the above button to see
         the 'incomplete' state
       `
       this.stepTwo = false;
       this.stepThree = false;
       this.stepFour = false;
       this.stepFive = false;
-      
+
       this.stepTwoClass = null;
       this.stepThreeClass = null;
       this.stepFourClass = null;
@@ -147,9 +149,6 @@ export class ProgressIndicatorComponent implements OnInit {
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

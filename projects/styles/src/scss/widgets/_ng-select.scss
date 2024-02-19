@@ -10,10 +10,6 @@
   // multi-select
   &.ng-select-multiple {
     .ng-select-container {
-      background-color: _colour(aa-white-100) !important; // aa override
-      border: 1px solid _colour(aa-grey-25);
-      border-radius: .25rem !important;
-
       .ng-value {
         white-space: normal!important;
         display: flex;
@@ -105,6 +101,10 @@
     min-height: 2.1rem;
     line-height: initial;
     @include chevron-down;
+
+    background-color: _colour(aa-white-100) !important; // aa override
+    border: 1px solid _colour(aa-grey-25);
+    border-radius: .25rem !important;
 
     .ng-value-container {
       padding-top: 3px!important;

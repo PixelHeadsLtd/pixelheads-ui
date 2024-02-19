@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-footer',
@@ -6,15 +6,12 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./footer.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent  {
 
-  @Input() leftPos: number;
-  @Input() zIndex: number;
-  @Input() colorClass: string;
+  @Input() leftPos: any;
+  @Input() zIndex: number = 0;
+  @Input() colorClass: string = '';
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

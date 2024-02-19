@@ -1,5 +1,6 @@
-import { EventEmitter, OnInit, ElementRef } from '@angular/core';
-export declare class ButtonComponent implements OnInit {
+import { EventEmitter, ElementRef } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class ButtonComponent {
     private elementRef;
     buttonLabel: string;
     buttonText: string;
@@ -38,6 +39,6 @@ export declare class ButtonComponent implements OnInit {
     onClick(targetElement: any): void;
     open(): void;
     close(): void;
-    ngOnInit(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<ButtonComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<ButtonComponent, "aa-button", never, { "buttonLabel": { "alias": "buttonLabel"; "required": false; }; "buttonText": { "alias": "buttonText"; "required": false; }; "buttonId": { "alias": "buttonId"; "required": false; }; "buttonClass": { "alias": "buttonClass"; "required": false; }; "buttonType": { "alias": "buttonType"; "required": false; }; "disabled": { "alias": "disabled"; "required": false; }; "fieldClass": { "alias": "fieldClass"; "required": false; }; "buttonIcon": { "alias": "buttonIcon"; "required": false; }; "customIcons": { "alias": "customIcons"; "required": false; }; "buttonEnriched": { "alias": "buttonEnriched"; "required": false; }; "showBtnMenu": { "alias": "showBtnMenu"; "required": false; }; "buttonSplit": { "alias": "buttonSplit"; "required": false; }; "navBottom": { "alias": "navBottom"; "required": false; }; "iconName": { "alias": "iconName"; "required": false; }; "title": { "alias": "title"; "required": false; }; "iconColour": { "alias": "iconColour"; "required": false; }; "buttonLarge": { "alias": "buttonLarge"; "required": false; }; "buttonSummary": { "alias": "buttonSummary"; "required": false; }; "showDescription": { "alias": "showDescription"; "required": false; }; "status": { "alias": "status"; "required": false; }; "level": { "alias": "level"; "required": false; }; "desc": { "alias": "desc"; "required": false; }; "showCount": { "alias": "showCount"; "required": false; }; "count": { "alias": "count"; "required": false; }; "countColor": { "alias": "countColor"; "required": false; }; "maxHeight": { "alias": "maxHeight"; "required": false; }; "showLabel": { "alias": "showLabel"; "required": false; }; "customIconsRound": { "alias": "customIconsRound"; "required": false; }; "customIconsRoundOutlined": { "alias": "customIconsRoundOutlined"; "required": false; }; "navLeftside": { "alias": "navLeftside"; "required": false; }; "buttonDayPicker": { "alias": "buttonDayPicker"; "required": false; }; }, { "buttonClick": "buttonClick"; }, never, ["[toolbar]", "[bs-buttons]"], false, never>;
 }
-//# sourceMappingURL=button.component.d.ts.map

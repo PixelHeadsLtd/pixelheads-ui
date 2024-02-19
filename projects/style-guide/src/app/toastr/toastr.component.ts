@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ToastService } from '../_services/toastr.service';
 
 @Component({
@@ -6,8 +6,8 @@ import { ToastService } from '../_services/toastr.service';
   templateUrl: './toastr.component.html',
   styleUrls: ['./toastr.component.scss']
 })
-export class ToastrComponent implements OnInit {
-  toggleBlade: boolean;
+export class ToastrComponent {
+  toggleBlade: boolean = false;
 
   constructor(public toastService: ToastService) {}
 
@@ -15,7 +15,7 @@ export class ToastrComponent implements OnInit {
     this.toastService.add({
       type: 'success',
       title: 'Well done!',
-      message: 'This is a success alert',
+      message: 'This is a success alert with a very long decription indeed, we may need this in certain curcumstances',
       icon: 'verified_user'
     });
   }
@@ -47,8 +47,4 @@ export class ToastrComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

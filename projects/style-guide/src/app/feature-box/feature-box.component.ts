@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-feature-box',
   templateUrl: './feature-box.component.html',
   styleUrls: ['./feature-box.component.scss']
 })
-export class FeatureboxComponent implements OnInit {
-  
-  featureBox: boolean;
-  featureBoxCustomBorder: boolean;
-  featureBoxCustomContent: boolean;
-  featureBoxApproval: boolean;
-  toggleBlade: boolean;
+export class FeatureboxComponent {
+
+  featureBox: boolean = false;
+  featureBoxCustomBorder: boolean = false;
+  featureBoxCustomContent: boolean = false;
+  featureBoxApproval: boolean = false;
+  toggleBlade: boolean = false;
 
   constructor() { }
 
@@ -103,8 +103,4 @@ export class FeatureboxComponent implements OnInit {
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
   }
-
-  ngOnInit(): void {
-  }
-
 }

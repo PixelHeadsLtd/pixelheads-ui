@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'aa-progress-indicator-advanced',
@@ -6,15 +6,15 @@ import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter
   styleUrls: ['./progress-indicator-advanced.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProgressIndicatorAdvancedComponent implements OnInit {
+export class ProgressIndicatorAdvancedComponent {
 
-  @Input() progressClass: string;
-  @Input() progressLabel: string;
-  @Input() iconClass: string;
-  @Input() showDescription: boolean;
-  @Input() description: string;
-  @Input() asLink: boolean;
-  @Input() progressLink: string;
+  @Input() progressClass: string = '';
+  @Input() progressLabel: string = '';
+  @Input() iconClass: string = '';
+  @Input() showDescription: boolean = false;
+  @Input() description: string = '';
+  @Input() asLink: boolean = false;
+  @Input() progressLink: string = '';
 
   @Output() progressClick = new EventEmitter<Event>();
 
@@ -22,8 +22,4 @@ export class ProgressIndicatorAdvancedComponent implements OnInit {
     e.stopPropagation();
     this.progressClick.emit(e);
   }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputRadioComponent {
 
-  myRadios: string;
-  myRadios2: string;
-  toggleBlade: boolean;
+  myRadios?: string;
+  myRadios2?: string;
+  toggleBlade: boolean = false;
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

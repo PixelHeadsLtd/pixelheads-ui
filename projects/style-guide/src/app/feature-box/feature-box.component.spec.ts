@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FeatureboxComponent } from './feature-box.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('FeatureboxComponent', () => {
   let component: FeatureboxComponent;
@@ -8,9 +8,9 @@ describe('FeatureboxComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FeatureboxComponent ]
-    })
-    .compileComponents();
+      declarations: [FeatureboxComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    }).compileComponents();
   });
 
   beforeEach(() => {

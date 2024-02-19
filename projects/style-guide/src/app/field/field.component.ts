@@ -5,22 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.scss']
 })
-export class FieldComponent implements OnInit {
-  
-  showField: boolean;
-  showFieldSmall: boolean;
-  showFieldInline: boolean;
-  showFieldInlineForm: boolean;
-  toggleBlade: boolean;
+export class FieldComponent {
+
+  showField: boolean = false;
+  showFieldSmall: boolean = false;
+  showFieldInline: boolean = false;
+  showFieldInlineForm: boolean = false;
+  toggleBlade: boolean = false;
   isError: boolean = true;
 
   constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

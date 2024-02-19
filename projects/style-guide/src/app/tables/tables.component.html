@@ -57,7 +57,7 @@
         <button class="material-icons">last_page</button>
       </nav>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -79,19 +79,19 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-          bladeIsOpen($event); 
-          tableStandard=true; 
-          tableStandardScrolling=false; 
-          tableStandardExpandable=false; 
+          bladeIsOpen(true);
+          tableStandard=true;
+          tableStandardScrolling=false;
+          tableStandardExpandable=false;
           tableStatus=false;
-          tableHalfWidth=false; 
-          tableRowHeadings=false; 
+          tableHalfWidth=false;
+          tableRowHeadings=false;
           tableFeature=false;
           multiTables=false;
           dynamicTable=false"
@@ -100,15 +100,15 @@
         </button>
       </nav>
   </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-2 col-left flex-start">
       <h2>Native table with fixed header</h2>
       <div class="describe margin-bottom-1">
-        <p>For a scrollable table with a fixed header you will need to nest your table inside 
-          two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
-          to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
+        <p>For a scrollable table with a fixed header you will need to nest your table inside
+          two div elements. Add the class .tbl-container to the outer div and .tbl-fixed
+          to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your
           table thead th cell, add a div with a nested span, inside this span add you cell text.
         </p>
       </div>
@@ -129,7 +129,7 @@
             <tbody>
               <tr *ngFor="let approval of approvals">
                 <td class="padding-right-0 padding-left-0-5">
-                  <aa-context-menu [showOnLeft]="false" minWidth="11.5">
+                  <aa-context-menu [showOnLeft]="false" minWidth="11.5rem">
                     <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></aa-context-menu-item>
                     <aa-context-menu-item menuItemText="View blades" routerLink="/blade"></aa-context-menu-item>
@@ -147,7 +147,7 @@
         </div>
       </div>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -187,19 +187,19 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-          bladeIsOpen($event); 
-          tableStandard=false; 
-          tableStandardScrolling=true; 
-          tableStandardExpandable=false; 
+          bladeIsOpen(true);
+          tableStandard=false;
+          tableStandardScrolling=true;
+          tableStandardExpandable=false;
           tableStatus=false;
-          tableHalfWidth=false; 
-          tableRowHeadings=false; 
+          tableHalfWidth=false;
+          tableRowHeadings=false;
           tableFeature=false;
           multiTables=false;
           dynamicTable=false"
@@ -214,9 +214,9 @@
       <section class="flex-2 col-left flex-start">
         <h2>Native table with fixed header and expandable rows</h2>
         <div class="describe margin-bottom-1">
-          <p>For a scrollable table with a fixed header you will need to nest your table inside 
-            two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
-            to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
+          <p>For a scrollable table with a fixed header you will need to nest your table inside
+            two div elements. Add the class .tbl-container to the outer div and .tbl-fixed
+            to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your
             table thead th cell, add a div with a nested span, inside this span add you cell text.
           </p>
         </div>
@@ -261,7 +261,7 @@
           </div>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -307,19 +307,19 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button 
-            class="custom-icons bg-aa-light-blue-100" 
+          <button
+            class="custom-icons bg-aa-light-blue-100"
             (click)="
-            bladeIsOpen($event); 
-            tableStandard=false; 
-            tableStandardScrolling=false; 
-            tableStandardExpandable=true; 
+            bladeIsOpen(true);
+            tableStandard=false;
+            tableStandardScrolling=false;
+            tableStandardExpandable=true;
             tableStatus=false;
-            tableHalfWidth=false; 
-            tableRowHeadings=false; 
+            tableHalfWidth=false;
+            tableRowHeadings=false;
             tableFeature=false;
             multiTables=false;
             dynamicTable=false"
@@ -334,9 +334,9 @@
       <section class="flex-2 col-left flex-start">
         <h2>Native table with progress status</h2>
         <div class="describe margin-bottom-1">
-          <p>For a scrollable table with a fixed header you will need to nest your table inside 
-            two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
-            to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
+          <p>For a scrollable table with a fixed header you will need to nest your table inside
+            two div elements. Add the class .tbl-container to the outer div and .tbl-fixed
+            to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your
             table thead th cell, add a div with a nested span, inside this span add you cell text.
           </p>
         </div>
@@ -382,7 +382,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colOneMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusOne}}">
                           {{item.iconNameOne}}
                         </div>
@@ -391,7 +391,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colTwoMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusTwo}}">
                           {{item.iconNameTwo}}
                         </div>
@@ -400,7 +400,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colThreeMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusThree}}">
                           {{item.iconNameThree}}
                         </div>
@@ -409,7 +409,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colFourMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusFour}}">
                           {{item.iconNameFour}}
                         </div>
@@ -418,7 +418,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colFiveMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusFive}}">
                           {{item.iconNameFive}}
                         </div>
@@ -427,7 +427,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colSixMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusSix}}">
                           {{item.iconNameSix}}
                         </div>
@@ -436,7 +436,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colSevenMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusSeven}}">
                           {{item.iconNameSeven}}
                         </div>
@@ -445,7 +445,7 @@
                     <td class="status-indicator progress-cell">
                       <div class="status-container padding-0">
                         <div *ngIf="item.colEightMarker" class="marker star material-icons">star</div>
-                        <div 
+                        <div
                           class="{{item.iconClass}} {{item.iconStatusEight}}">
                           {{item.iconNameEight}}
                         </div>
@@ -473,7 +473,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colOneMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusOne}}">
                             {{item.iconNameOne}}
                           </div>
@@ -482,7 +482,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colTwoMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusTwo}}">
                             {{item.iconNameTwo}}
                           </div>
@@ -491,7 +491,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colThreeMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusThree}}">
                             {{item.iconNameThree}}
                           </div>
@@ -500,7 +500,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colFourMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusFour}}">
                             {{item.iconNameFour}}
                           </div>
@@ -509,7 +509,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colFiveMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusFive}}">
                             {{item.iconNameFive}}
                           </div>
@@ -518,7 +518,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colSixMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusSix}}">
                             {{item.iconNameSix}}
                           </div>
@@ -527,7 +527,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colSevenMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusSeven}}">
                             {{item.iconNameSeven}}
                           </div>
@@ -536,7 +536,7 @@
                       <td class="status-indicator progress-cell">
                         <div class="status-container padding-0">
                           <div *ngIf="item.colEightMarker" class="marker star material-icons">star</div>
-                          <div 
+                          <div
                             class="{{item.iconClass}} {{item.iconStatusEight}}">
                             {{item.iconNameEight}}
                           </div>
@@ -549,7 +549,7 @@
           </div>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -601,20 +601,20 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button 
-            class="custom-icons bg-aa-light-blue-100" 
+          <button
+            class="custom-icons bg-aa-light-blue-100"
             (click)="
-            bladeIsOpen($event); 
-            tableStandard=false; 
-            tableStandardScrolling=false; 
-            tableStandardExpandable=false; 
+            bladeIsOpen(true);
+            tableStandard=false;
+            tableStandardScrolling=false;
+            tableStandardExpandable=false;
             tableStatus=false;
             tableProgress=true;
-            tableHalfWidth=false; 
-            tableRowHeadings=false; 
+            tableHalfWidth=false;
+            tableRowHeadings=false;
             tableFeature=false;
             multiTables=false;
             dynamicTable=false"
@@ -629,9 +629,9 @@
   <section class="flex-2 col-left flex-start">
     <h2>Native Table with status cells</h2>
     <div class="describe margin-bottom-1">
-      <p>For a scrollable table with a fixed header you will need to nest your table inside 
-        two div elements. Add the class .tbl-container to the outer div and .tbl-fixed 
-        to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your 
+      <p>For a scrollable table with a fixed header you will need to nest your table inside
+        two div elements. Add the class .tbl-container to the outer div and .tbl-fixed
+        to the inner div along with an [ngStyle] used to set the rem max-height. Then inside your
         table thead th cell, add a div with a nested span, inside this span add you cell text.
       </p>
     </div>
@@ -662,7 +662,7 @@
       </div>
     </div>
   </section>
-    
+
   <section class="flex-2 col-right flex-start">
     <table class="half-width">
       <caption>Attributes</caption>
@@ -708,20 +708,20 @@
       </tbody>
     </table>
   </section>
-  
+
   <!-- mini menu -->
   <nav class="mini-menu flex-group flex-end">
-      <button 
-        class="custom-icons bg-aa-light-blue-100" 
+      <button
+        class="custom-icons bg-aa-light-blue-100"
         (click)="
-        bladeIsOpen($event); 
-        tableStandard=false; 
-        tableStandardScrolling=false; 
-        tableStandardExpandable=false; 
+        bladeIsOpen(true);
+        tableStandard=false;
+        tableStandardScrolling=false;
+        tableStandardExpandable=false;
         tableStatus=true;
         tableProgress=false;
-        tableHalfWidth=false; 
-        tableRowHeadings=false; 
+        tableHalfWidth=false;
+        tableRowHeadings=false;
         tableFeature=false;
         multiTables=false;
         dynamicTable=false"
@@ -730,7 +730,7 @@
       </button>
     </nav>
 </section>
-  
+
   <!-- start content repeater -->
   <section class="content-repeater flex-group">
     <section class="flex-2 col-left flex-start">
@@ -757,7 +757,7 @@
         </tbody>
       </table>
     </section>
-      
+
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>Attributes</caption>
@@ -785,20 +785,20 @@
         </tbody>
       </table>
     </section>
-    
+
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-          bladeIsOpen($event); 
-          tableHalfWidth=true; 
-          tableStandard=false; 
-          tableStandardScrolling=false; 
-          tableStandardExpandable=false; 
+          bladeIsOpen(true);
+          tableHalfWidth=true;
+          tableStandard=false;
+          tableStandardScrolling=false;
+          tableStandardExpandable=false;
           tableStatus=false;
           tableProgress=false;
-          tableRowHeadings=false; 
+          tableRowHeadings=false;
           tableFeature=false;
           multiTables=false;
           dynamicTable=false"
@@ -807,7 +807,7 @@
         </button>
       </nav>
   </section>
-  
+
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
@@ -834,7 +834,7 @@
           </tbody>
         </table>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -862,20 +862,20 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button 
-            class="custom-icons bg-aa-light-blue-100" 
+          <button
+            class="custom-icons bg-aa-light-blue-100"
             (click)="
-            bladeIsOpen($event); 
-            tableRowHeadings=true; 
-            tableStandard=false; 
-            tableStandardScrolling=false; 
-            tableStandardExpandable=false; 
+            bladeIsOpen(true);
+            tableRowHeadings=true;
+            tableStandard=false;
+            tableStandardScrolling=false;
+            tableStandardExpandable=false;
             tableStatus=false;
             tableProgress=false;
-            tableHalfWidth=false; 
+            tableHalfWidth=false;
             tableFeature=false;
             multiTables=false;
             dynamicTable=false"
@@ -884,7 +884,7 @@
           </button>
         </nav>
     </section>
-    
+
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
       <section class="flex-2 col-left flex-start">
@@ -902,7 +902,7 @@
                   <tr>
                     <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
                         <h3>Feature 1</h3>
-                        <aa-tooltip [isInfo]="true" setMinWidth="11" ypos="bottom" xpos="right">
+                        <aa-tooltip [isInfo]="true" setMinWidth="11rem" ypos="bottom" xpos="right">
                           <h4>Ahoy there</h4>
                           <p>Mr Beaver had begun telling them that the<br/> White Witch wasn’t really human at all </p>
                         </aa-tooltip>
@@ -966,17 +966,17 @@
               <td><!-- spacer cell --></td>
               <!-- end feature -->
             </tr>
-            
+
             <!-- these are your left column row labels -->
-            <tr><td>Full legal name</td><td>&nbsp;</td><td>&nbsp;</td></tr>  
-            <tr><td>Company number (BRN)</td><td>&nbsp;</td><td>&nbsp;</td></tr> 
+            <tr><td>Full legal name</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+            <tr><td>Company number (BRN)</td><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>Company type</td><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>Current status</td><td>&nbsp;</td><td>&nbsp;</td></tr>
             <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
           </table>
         </section>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -1004,20 +1004,20 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button 
-            class="custom-icons bg-aa-light-blue-100" 
+          <button
+            class="custom-icons bg-aa-light-blue-100"
             (click)="
-            bladeIsOpen($event); 
-            tableFeature=true; 
-            tableRowHeadings=false; 
-            tableStandardScrolling=false; 
-            tableStandardExpandable=false; 
+            bladeIsOpen(true);
+            tableFeature=true;
+            tableRowHeadings=false;
+            tableStandardScrolling=false;
+            tableStandardExpandable=false;
             tableStatus=false;
             tableProgress=false;
-            tableStandard=false; 
+            tableStandard=false;
             tableHalfWidth=false;
             multiTables=false;
             dynamicTable=false"
@@ -1032,11 +1032,11 @@
       <section class="flex-2 col-left flex-start">
         <h2>Multiple native table with horizontal scrolling</h2>
         <div class="describe margin-bottom-1">
-          <p>In some instances you may need to display multiple tables. 
+          <p>In some instances you may need to display multiple tables.
             Please refer to the side gist for details</p>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -1064,20 +1064,20 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-          bladeIsOpen($event); 
-          tableFeature=false; 
-          tableRowHeadings=false; 
-          tableStandardScrolling=false; 
-          tableStandardExpandable=false; 
+          bladeIsOpen(true);
+          tableFeature=false;
+          tableRowHeadings=false;
+          tableStandardScrolling=false;
+          tableStandardExpandable=false;
           tableStatus=false;
           tableProgress=false;
-          tableStandard=false; 
+          tableStandard=false;
           tableHalfWidth=false;
           multiTables=true;
           dynamicTable=false"
@@ -1253,9 +1253,9 @@
                   (cdkDropListDropped)="drop($event)"
                   cdkDropListAutoScrollStep="10"
                 >
-                  <th 
-                    *ngFor="let column of columns" 
-                    cdkDrag 
+                  <th
+                    *ngFor="let column of columns"
+                    cdkDrag
                     cdkDragLockAxis="x"
                     (mousedown)="$event.stopPropagation()"
                     resizable
@@ -1290,7 +1290,7 @@
           </div>
         </div>
       </section>
-        
+
       <section class="flex-2 col-right flex-start">
         <table class="half-width">
           <caption>Attributes</caption>
@@ -1324,20 +1324,20 @@
           </tbody>
         </table>
       </section>
-      
+
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button 
-          class="custom-icons bg-aa-light-blue-100" 
+        <button
+          class="custom-icons bg-aa-light-blue-100"
           (click)="
-          bladeIsOpen($event); 
-          tableFeature=false; 
-          tableRowHeadings=false; 
-          tableStandardScrolling=false; 
-          tableStandardExpandable=false; 
+          bladeIsOpen(true);
+          tableFeature=false;
+          tableRowHeadings=false;
+          tableStandardScrolling=false;
+          tableStandardExpandable=false;
           tableStatus=false;
           tableProgress=false;
-          tableStandard=false; 
+          tableStandard=false;
           tableHalfWidth=false;
           multiTables=false;
           dynamicTable=true"
@@ -1348,17 +1348,17 @@
     </section>
 </section>
 
-<aa-blade 
-    [showModal]="false"
+<aa-blade
+    [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
-    suppressAutoClose="false"
-    topPosition="3.5"
-    zIndex="2"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
     bladeSize="one-column-width"
     bladeHeading="Gist"
     [enableIcon]="true"
     iconName="table_rows"
-    (close)="toggleBlade = false"
+    (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
     <div *ngIf="tableStandard">

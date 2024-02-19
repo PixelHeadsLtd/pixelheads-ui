@@ -11,12 +11,11 @@
   }
   .background {
     position: absolute;
-    opacity: .2;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: black
+    background-color: _colour(aa-blue-100-overlay);
   }
   .loading-spinner-small {
     width: 6.5rem;
@@ -24,8 +23,8 @@
     &:after {
       width: 6.5rem;
       height: 6.5rem;
-      border: .2rem solid _palette(grey-50);
-      border-color:  _palette(grey-50) transparent _palette(grey-50) transparent;
+      border: .2rem solid _colour(aa-grey-50);
+      border-color:  _colour(aa-grey-50) transparent _colour(aa-grey-50) transparent;
     }
   }
 }

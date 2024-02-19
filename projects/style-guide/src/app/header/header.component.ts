@@ -5,19 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  toggleBlade: boolean;
-  standardHeader: boolean;
-  secondaryHeader: boolean;
-  
+  toggleBlade: boolean = false;
+  standardHeader: boolean = false;
+  secondaryHeader: boolean = false;
+
   constructor() { }
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit(): void {
   }
 
 }

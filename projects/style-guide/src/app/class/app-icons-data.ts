@@ -1,4 +1,4 @@
-export class AppIconsData {
-    public appIconClass: string;
-    public appIconName: string;
+export interface AppIconsData {
+    appIconClass: string;
+    appIconName: string;
 }

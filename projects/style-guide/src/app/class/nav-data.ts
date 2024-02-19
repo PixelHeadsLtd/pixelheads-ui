@@ -6,6 +6,7 @@ export class NavData {
     public iconName?: string;
     public title?: string;
     public routerLink?: string;
+    public isExpandable?: boolean;
     public isHref?: boolean;
     public hRef?: string;
     public nestedItems?: NavData[]

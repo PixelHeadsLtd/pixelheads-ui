@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-actions-summary',
   templateUrl: './actions-summary.component.html',
   styleUrls: ['./actions-summary.component.scss']
 })
-export class ActionsSummaryComponent implements OnInit {
+export class ActionsSummaryComponent {
 
-  toggleBlade: boolean;
-  verticalDisplay: boolean;
+  toggleBlade: boolean = false;
+  verticalDisplay: boolean = false;
 
   constructor() { }
 
@@ -48,8 +48,4 @@ export class ActionsSummaryComponent implements OnInit {
       value: '1'
     }
   ]
-
-  ngOnInit(): void {
-  }
-
 }

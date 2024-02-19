@@ -1,15 +1,15 @@
-<nav 
+<nav
     class="
         aa-list-selectable
         flex-group
-    " 
-    [ngStyle]="fixedPosition && {
-        'position' : 'fixed', 
-        'left' : leftPos+'rem', 
-        'top' : topPos+'rem', 
-        'bottom' : bottomPos+'rem', 
+    "
+    [ngStyle]="fixedPosition ? {
+        'position' : 'fixed',
+        'left' : leftPos,
+        'top' : topPos,
+        'bottom' : bottomPos,
         'z-index' : zIndex
-    }"
+    } : {}"
     [ngClass]="{
         'flex-start' : flexStart
     }"

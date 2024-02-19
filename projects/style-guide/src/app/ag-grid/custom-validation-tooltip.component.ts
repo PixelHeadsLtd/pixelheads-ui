@@ -27,11 +27,12 @@ import { ITooltipParams } from 'ag-grid-community';
   ],
 })
 export class CustomValidationTooltipComponent implements ITooltipAngularComp {
-  params: {
-    } & ITooltipParams;
+  params: ({} & ITooltipParams) | undefined;
   data: any;
   agInit(params: {
-    } & ITooltipParams): void {
-    this.data = params.api.getDisplayedRowAtIndex(params.rowIndex).data;
+  } & ITooltipParams): void {
+    if (params?.rowIndex) {
+      this.data = params.api.getDisplayedRowAtIndex(params.rowIndex)?.data;
+    }
   }
 }

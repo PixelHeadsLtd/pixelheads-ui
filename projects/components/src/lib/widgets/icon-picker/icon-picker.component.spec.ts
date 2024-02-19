@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IconPickerComponent } from './icon-picker.component';
+import { FormsModule } from '@angular/forms';
 
 describe('IconPickerComponent', () => {
   let component: IconPickerComponent;
@@ -8,7 +9,8 @@ describe('IconPickerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IconPickerComponent ]
+      declarations: [ IconPickerComponent ],
+	  imports:[FormsModule]
     })
     .compileComponents();
   });

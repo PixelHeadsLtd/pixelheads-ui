@@ -1,9 +1,6 @@
-<div 
-  class="flex-group" 
-  [ngStyle]="{ 'display': showAsButton ? 'block' : 'flex' }"
-  [ngClass]="{ 
-    'space-between' : includeLabel, 
-    'flex-start' : includeLegend, 
+<div class="flex-group" [ngStyle]="{ 'display': showAsButton ? 'block' : 'flex' }" [ngClass]="{
+    'space-between' : includeLabel,
+    'flex-start' : includeLegend,
     'show-as-button' : showAsButton,
     'show-tooltip-on-hover' : showTooltipOnHover,
     'show-tooltip-on-click' : showTooltipOnClick,
@@ -11,73 +8,44 @@
   }">
   <label for="{{labelFor}}" *ngIf="includeLabel && !showAsButton">{{labelName}}</label>
   <legend class="margin-right-0-5" *ngIf="includeLegend && !showAsButton">{{labelName}}</legend>
-  <div 
-    class="aa-tooltip icon-info" 
-    [ngClass]="{
-      'is-success' : isSuccess, 
-      'is-info' : isInfo, 
-      'is-warning' : isWarning, 
+  <div class="aa-tooltip icon-info" [ngClass]="{
+      'is-success' : isSuccess,
+      'is-info' : isInfo,
+      'is-warning' : isWarning,
       'is-error' : isError,
       'custom-icon' : customIcon,
       'as-link': showAsAnchor
-    }"
-    [ngStyle]="{'z-index' : zIndex}"
-    >
-    
-    <div 
-      *ngIf="customIcon && !showAsAnchor && !showAsButton" 
-      class="material-icons"
-      [ngClass]="{
-        'is-success' : isSuccess, 
-        'is-info' : isInfo, 
-        'is-warning' : isWarning, 
+    }" [ngStyle]="{'z-index' : zIndex}">
+
+    <div *ngIf="customIcon && !showAsAnchor && !showAsButton" class="material-icons" [ngClass]="{
+        'is-success' : isSuccess,
+        'is-info' : isInfo,
+        'is-warning' : isWarning,
         'is-error' : isError
-      }"
-    >
+      }">
       {{iconName}}
     </div>
 
-    <button 
-      *ngIf="showAsButton && !showTooltipOnClick"
-      class="show-tooltip-on-hover"
-      [name]="buttonId" 
-      [id]="buttonId" 
-      [class]="buttonClass" 
-      [disabled]="disabled" 
-      (click)="onButtonClick($event)"
-    >
+    <button *ngIf="showAsButton && !showTooltipOnClick" class="show-tooltip-on-hover" [name]="buttonId" [id]="buttonId"
+      [class]="buttonClass" [disabled]="disabled" (click)="onButtonClick($event)">
       <span>{{buttonText}}</span>
     </button>
 
-    <button 
-      *ngIf="showAsButton && showTooltipOnClick"
-      class="show-tooltip-on-hover"
-      [name]="buttonId" 
-      [id]="buttonId" 
-      [class]="buttonClass" 
-      [disabled]="disabled" 
-      (click)="onButtonClick($event); tooltipClicked=!tooltipClicked"
-    >
+    <button *ngIf="showAsButton && showTooltipOnClick" class="show-tooltip-on-hover" [name]="buttonId" [id]="buttonId"
+      [class]="buttonClass" [disabled]="disabled" (click)="onButtonClick($event); tooltipClicked=!tooltipClicked">
       <span *ngIf="!tooltipClicked">{{buttonText}}</span>
       <span *ngIf="tooltipClicked">{{tooltipBtnText}}</span>
     </button>
 
-    <a 
-      *ngIf="showAsAnchor" 
-      class="cursor-pointer"
-      [ngClass]="{'nowrap' : preventAnchorWrapping}"
-      >
+    <a *ngIf="showAsAnchor" class="cursor-pointer" [ngClass]="{'nowrap' : preventAnchorWrapping}">
       {{tooltipAnchor}}
     </a>
-        
-    <div 
-      class="feature-box {{xpos}} {{ypos}}" 
-      [ngStyle]="{
-        'min-width': setMinWidth+'rem', 
-        'max-width': setMaxWidth+'rem'
-      }"
-      >
-        <ng-content></ng-content>
+
+    <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{
+        'min-width': setMinWidth,
+        'max-width': setMaxWidth
+      }">
+      <ng-content></ng-content>
     </div>
   </div>
 </div>

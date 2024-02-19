@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-editorial',
   templateUrl: './editorial.component.html',
   styleUrls: ['./editorial.component.scss']
 })
-export class EditorialComponent implements OnInit {
+export class EditorialComponent {
 
-  constructor() { }
+  toggleBlade: boolean = false;
 
-  ngOnInit() {
-  }
-
+  constructor() {}
+  bladeIsOpen(open: boolean) {
+    this.toggleBlade = open;
+    }
 }

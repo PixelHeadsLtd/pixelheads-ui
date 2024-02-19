@@ -5,7 +5,7 @@
 
 	input[type="file"] {
 		position: absolute;
-    font-weight: unset;
+    	font-weight: unset;
 		width: 100%;
 		height: 100%;
 		opacity: 0;
@@ -26,13 +26,26 @@
 		font-family: _font(family-medium);
 		font-size: _font(size-default);
 		border-radius: 1.5rem;
-    @include icon-left;
-    @include button-light-blue;
-    &:before {
-      @include icon-button-large-material;
-			margin-top: .1rem;
-      content: "\e5d8";
-    }
+		@include icon-left;
+		@include button-light-blue;
+
+		&:before {
+			@include icon-button-large-material;
+			content: "\e5d8";
+		}
+	}
+
+	.custom-file-upload-graphic {
+		position: relative;
+		letter-spacing: 0.0575rem;
+		padding: .45rem 1rem .45rem .5rem;
+		font-family: _font(family-medium);
+		font-size: _font(size-default);
+		border-radius: 1.5rem;
+
+		.material-icons {
+			font-size: _font(size-medium);
+		}
 	}
 }
 

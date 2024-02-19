@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss']
 })
-export class FilterComponent implements OnInit {
-  
-  showFilterGradient: boolean;
-  myRadios: string;
-  toggleFilter: boolean;
-  toggleBlade: boolean;
-  showFilter: boolean;
-  showFilterLeft: boolean;
+export class FilterComponent {
+
+  showFilterGradient: boolean  = false;
+  myRadios: string = '';
+  toggleFilter: boolean = false;
+  toggleBlade: boolean = false;
+  showFilter: boolean = false;
+  showFilterLeft: boolean = false;
 
   constructor() { }
 
@@ -22,9 +22,6 @@ export class FilterComponent implements OnInit {
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;
-  }
-
-  ngOnInit() {
   }
 
 }

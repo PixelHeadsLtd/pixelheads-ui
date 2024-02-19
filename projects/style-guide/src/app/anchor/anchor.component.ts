@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnchorComponent {
 
-  toggleBlade: boolean;
+  toggleBlade: boolean = false;
 
   constructor() {}
 

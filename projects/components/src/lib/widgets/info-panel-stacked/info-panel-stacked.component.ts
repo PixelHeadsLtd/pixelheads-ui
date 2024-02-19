@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'aa-info-panel-stacked',
@@ -6,25 +6,22 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
   styleUrls: ['./info-panel-stacked.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InfoPanelStackedComponent implements OnInit {
+export class InfoPanelStackedComponent {
 
-  @Input() approvedForward: boolean;
-  @Input() pendingForward: boolean;
-  @Input() rejectedForward: boolean;
-  @Input() withdrawnForward: boolean;
-  @Input() returnedForward: boolean;
-  @Input() abandonedForward: boolean;
-  @Input() draftForward: boolean;
-  @Input() withdrawalPendingForward: boolean;
+  @Input() approvedForward: boolean = false;
+  @Input() pendingForward: boolean = false;
+  @Input() rejectedForward: boolean = false;
+  @Input() withdrawnForward: boolean = false;
+  @Input() returnedForward: boolean = false;
+  @Input() abandonedForward: boolean = false;
+  @Input() draftForward: boolean = false;
+  @Input() withdrawalPendingForward: boolean = false;
 
-  @Input() resetAll: boolean;
-  @Input() wrapperWidth: number;
-  @Input() wrapperHeight: number;
-  @Input() fullWidth: boolean;
+  @Input() resetAll: boolean = false;
+  @Input() wrapperWidth: any;
+  @Input() wrapperHeight: any;
+  @Input() fullWidth: boolean = false;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

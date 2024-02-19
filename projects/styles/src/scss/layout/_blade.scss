@@ -1,4 +1,4 @@
-.aa-blade-modal {
+.aa-blade-block-ui {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +38,85 @@
   bottom: 0;
   background-color: _colour(aa-grey-2);
   height: unset;
+
+  .blade-modal {
+    height: 100%;
+    .modal-background-tint {
+      background-color: _colour(aa-blue-100-overlay);
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: -.75rem;
+      bottom: 0;
+      left: 0;
+    }
+
+    .modal-content {
+      background-color: _colour(aa-white-100);
+      box-shadow: 0 0 .2rem .2rem _colour(tinted-dark-blue);
+      -webkit-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+      -moz-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+      position: relative;
+      z-index: 20;
+      padding: 1.25rem;
+      border-radius: .5rem;
+      max-width: 24rem;
+
+      button {
+        margin-top: 1rem
+      }
+
+      aa-button {
+        flex: none;
+      }
+
+      h1, h2, h3, h4 {
+        margin: 0 0 .5rem 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        h1, h2, h3, h4 {
+          color: _colour(aa-red-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-red-100);
+        }
+      }
+
+      .warning {
+        h1, h2, h3, h4 {
+          color: _colour(aa-orange-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-orange-100);
+        }
+      }
+
+      .success {
+        h1, h2, h3, h4 {
+          color: _colour(aa-green-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-green-100);
+        }
+      }
+
+      .info {
+        h1, h2, h3, h4 {
+          color: _colour(aa-light-blue-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-light-blue-100);
+        }
+      }
+    }
+  }
 
   table:not(.gist table) {
     margin-left: -1.25rem;

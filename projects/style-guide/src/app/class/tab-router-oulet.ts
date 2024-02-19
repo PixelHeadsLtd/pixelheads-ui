@@ -5,5 +5,5 @@ export class RouterOutletItem {
         public tabDisabled: boolean,
         public routerLink: string | string[],
         public enableCount: boolean,
-        public tabCount: number) { }
+        public tabCount: number|null) { }
 }
