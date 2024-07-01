@@ -13,8 +13,7 @@
     "lint": "ng lint",
     "magic": "ng build components && npm start",
     "install-magic": "npm install && ng build components && npm start",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --configuration=production"
+    "build": "ng build"
   },
   "private": true,
   "dependencies": {
