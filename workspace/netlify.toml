@@ -1,3 +1,4 @@
 [build]
   publish = "dist/style-guide"
   command = "npm run build"
+  directory = "workspace"
