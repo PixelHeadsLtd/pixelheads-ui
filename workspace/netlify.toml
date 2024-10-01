@@ -1,4 +1,4 @@
 [build]
-  base = "workspace"  # This should point to your workspace directory
-  command = "npm ci && npm run build:style-guide"
-  publish = "dist/style-guide"
+  base = "workspace"  # Set the base to your workspace directory
+  command = "npm ci && npm run build:style-guide && ls -R dist"
+  publish = "dist/style-guide"  # This should match your Angular output directory
