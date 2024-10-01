@@ -1,7 +1,4 @@
 [build]
+  base = "workspace"  # This should point to your workspace directory
   command = "npm ci && npm run build:style-guide"
   publish = "dist/style-guide"
-
-# Optional: to specify environment variables if needed
-[build.environment]
-  NODE_VERSION = "20" # or whatever version you need
