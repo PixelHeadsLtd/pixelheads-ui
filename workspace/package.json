@@ -6,7 +6,6 @@
     "npm": "10.x"
   },
   "scripts": {
-    "prebuild": "ls -la",
     "ng": "ng",
     "start": "ng serve --port 4200",
     "build": "ng build",
