@@ -9,7 +9,8 @@
     "prebuild": "ls -la",
     "ng": "ng",
     "start": "ng serve --port 4200",
-    "build": "ng build style-guide --configuration=production",
+    "build": "ng build",
+    "build:style-guide": "ng build style-guide",
     "test": "ng test",
     "lint": "ng lint"
   },
