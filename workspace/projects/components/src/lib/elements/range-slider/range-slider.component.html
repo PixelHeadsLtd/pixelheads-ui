@@ -1,0 +1,6 @@
+<div id="aa-range-slider" class="flex-group flex-start flex-align-center flex-nowrap {{customClass}}">
+    <div class="margin-right-0-5 padding-bottom-0-25">
+    <input #rangeInput min="0" max="60" type="range" [value]="initialValue" (input)="updateRangeValue($event)" />
+    </div>
+    <div class="size-small italic aa-grey-50">{{ rangeValue }}</div>
+</div>

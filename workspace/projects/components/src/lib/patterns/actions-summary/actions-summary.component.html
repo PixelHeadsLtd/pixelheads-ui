@@ -1,0 +1,30 @@
+<article 
+    id="aa-actions-summary"
+    class="actions-summary flex-group flex-start"
+    [ngClass]="{ 
+        'flex-column' : verticalDisplay,
+        'flex-nowrap' : noWrap
+    }"
+>
+    <section 
+        *ngFor="let item of actionsSummaryItems; let i = index" 
+        title="{{item.value}}"
+        class="
+            flex-center 
+            flex-group 
+            flex-column
+        "
+    >
+        <strong class="nowrap margin-0">{{item.heading}}</strong>
+        <h4 class="
+            {{item.status}} 
+            flex-center 
+            bd-2 
+            bd-solid 
+            margin-top-0-75
+            margin-right-0"
+            >
+            {{(item.value.length>7)? (item.value | slice:0:7)+'...':(item.value)}}
+        </h4>
+    </section>
+</article>

@@ -1,0 +1,72 @@
+.aa-comments {
+  position: relative;
+  z-index: 10;
+
+  h3 {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .material-icons {
+    font-size: _font(size-regular);
+    padding: .1rem 0 0 .25rem;
+    border-radius: 0;
+  }
+
+  .comments-trigger {
+      &:hover + .comments-panel {
+          display: block;
+      }
+  }
+
+  &.position-right {
+    .comments-trigger,
+    .comments-panel {
+      right: 0
+    }
+  }
+
+  .comments-panel {
+      position: absolute;
+      display: none;
+      top: 2.75rem;
+      padding: 1rem 0 0 1rem;
+
+      &.show-comments {
+          display: block;
+      }
+
+      textarea {
+        min-height: 6rem;
+        max-width: 35rem;
+      }
+  }
+  .scroll-panel {
+    padding-top: 0;
+    .comments {
+      font-size: _font(size-small);
+      .comment {
+        padding: 1rem 0 .25rem;
+        border-bottom: 1px dashed _colour(aa-grey-25);
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: .75rem;
+        }
+
+        .comment-details {
+          margin-top: .5rem;
+          a {
+            font-size: _font(size-small);
+          }
+        }
+      }
+      pre {
+        white-space: break-spaces;
+        word-break: break-word;
+        font-family: _font(family-regular);
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+ngb-timepicker {
+    .visually-hidden {
+        display: none;
+    }
+
+    fieldset {
+        margin: 0;
+
+        .ngb-tp-input-container {
+            position: relative;
+            input.ngb-tp-input {
+                padding: .51rem 1.85rem .51rem .75rem
+            }
+
+            button.btn {
+                position: absolute;
+                background: transparent;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                right: 0;
+                border-left: 1px solid _colour(aa-grey-10);
+
+                &:first-child {
+                    top: .05rem;
+                }
+
+                &:last-child {
+                    bottom: .05rem;
+                }
+
+                &:active {
+                    .ngb-tp-chevron {
+                        color: _colour(aa-orange-100);
+                    }
+                }
+
+                .ngb-tp-chevron {
+                    color: _colour(aa-light-blue-100);
+                    background: transparent;
+                    padding: .5rem .5rem .5rem .35rem;
+
+                    &:before {
+                        width: .4rem;
+                        height: .4rem;
+                        border-width: .155rem .155rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

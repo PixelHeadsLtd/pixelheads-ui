@@ -1,0 +1,23 @@
+<form 
+    id="aa-filter"
+    [ngStyle]="{'width': 'calc(' + setWidth + ' + ' + offsetAdjacentContentPos + ')'}" 
+    [formGroup]="myForm" 
+    (ngSubmit)="submitForm()"
+>
+    <article 
+            class="aa-filter flex-group flex-start"
+            [ngClass]="{
+                'flex-column flex-nowrap padding-top-1-25 padding-right-0-5' : verticalDisplay,
+                'space-between' : (spaceBetween && !verticalDisplay),
+                'position-fixed overflow-y-scroll' : (positionFixed && verticalDisplay)
+            }"
+            [ngStyle]="{
+                'top': (positionFixed ? topPos : ''),
+                'bottom' : (positionFixed ? bottomPos : ''),
+                'margin-left' : (positionFixed ? leftPos : ''),
+                'width' : (verticalDisplay ? setWidth : '')
+            }"
+        >
+            <ng-content></ng-content>
+    </article>    
+</form>

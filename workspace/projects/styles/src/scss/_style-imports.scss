@@ -1,0 +1,130 @@
+@import './layout/reset';
+@import './animations/animate';
+@import './animations/loading-spinner';
+@import './animations/text-pulsate';
+
+@import 'dashboard/dashboard';
+
+@import './elements/anchor';
+@import './elements/button';
+@import './elements/comments';
+@import './elements/custom-select';
+@import './elements/description-list';
+@import './elements/field';
+@import './elements/fieldset';
+@import './elements/file-upload';
+@import './elements/input';
+@import './elements/label';
+@import './elements/list';
+@import './elements/hr';
+@import './elements/paragraph';
+@import './elements/select';
+@import './elements/table';
+@import './elements/textarea';
+@import './elements/ticker';
+@import './elements/slider';
+
+@import './layout/blade';
+@import './layout/blade-bottom.scss';
+@import './layout/blade-bottom-legacy.scss';
+@import './layout/blade-top.scss';
+@import './layout/content-container';
+@import './layout/control-bar';
+@import './layout/editorial-content';
+@import './layout/favourite';
+@import './layout/filter';
+@import './layout/flex';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/logo';
+@import './layout/core-override';
+@import './layout/main';
+@import './layout/tab-content';
+@import './layout/tour';
+@import './layout/unauthorised';
+@import './layout/aa-ui-block.scss';
+
+@import './patterns/actions-summary';
+@import './patterns/alert';
+@import './patterns/alert-icon';
+@import './patterns/alert-shield';
+@import './patterns/border';
+@import './patterns/border-radius';
+@import './patterns/background-color';
+@import './patterns/feature-box';
+@import './patterns/color';
+@import './patterns/describe';
+@import './patterns/field-multi';
+@import './patterns/gradient';
+@import './patterns/optional';
+@import './patterns/progress-bar';
+@import './patterns/progress-circle';
+@import './patterns/radio';
+@import './patterns/read-only';
+@import './patterns/repeatable';
+@import './patterns/status-indicator';
+@import './patterns/table-boxed';
+@import './patterns/tags';
+
+@import './typography/flags';
+@import './typography/fonts';
+@import './typography/icons';
+@import './typography/material-icons';
+@import './typography/typography';
+
+@import './modifiers/align';
+@import './modifiers/misc';
+@import './modifiers/padding';
+@import './modifiers/height';
+@import './modifiers/margin';
+@import './modifiers/markup';
+@import './modifiers/opacity';
+@import './modifiers/position';
+@import './modifiers/text';
+@import './modifiers/width';
+@import './modifiers/z-index';
+
+@import './navigation/nav-context';
+@import './navigation/aa-nav-angular-elements';
+@import './navigation/aa-progress-indicator';
+@import './navigation/context-menu';
+@import './navigation/progress-indicator-lh';
+@import './navigation/aa-stepper';
+@import './navigation/aa-tree';
+@import './navigation/tab-navigation';
+
+@import './widgets/core-overrides';
+@import './widgets/design-lang-ui';
+@import './widgets/cdk-drag-and-drop';
+
+@import './widgets/aa-accordion';
+@import './widgets/dl-alignment-markers';
+@import './widgets/aa-accordion-fancy';
+@import './widgets/aa-card';
+@import './widgets/aa-carousel';
+@import './widgets/aa-csh';
+@import './widgets/aa-element-slider';
+@import './widgets/aa-icon-picker';
+@import './widgets/aa-info-panel';
+@import './widgets/aa-list-selectable';
+@import './widgets/aa-modal';
+@import './widgets/aa-overlay';
+@import './widgets/aa-popover';
+@import './widgets/aa-search';
+@import './widgets/aa-toastr';
+@import './widgets/aa-tooltip';
+@import './widgets/aa-user-feedback';
+@import './widgets/bs-datepicker';
+@import './widgets/bs-tooltip';
+@import './widgets/ngb-datepicker';
+@import './widgets/ngb-timepicker';
+@import './widgets/ngb-modal';
+@import './widgets/ngb-tab';
+@import './widgets/ng-select';
+@import './widgets/ngx-editor';
+@import './widgets/toastr';
+@import './widgets/highcharts';
+
+
+// Font Awesome css
+@import '../assets/fonts/font-awesome/css/all';

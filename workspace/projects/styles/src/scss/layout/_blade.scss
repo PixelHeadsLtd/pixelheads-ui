@@ -1,0 +1,411 @@
+.aa-blade-block-ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: _colour(aa-blue-100-overlay);
+}
+
+.half-column-width {
+  width: 20rem;
+  right: -20rem;
+}
+
+.one-column-width {
+  width: 35rem;
+  right: -35rem;
+}
+
+.two-column-width {
+  width: 50rem;
+  right: -50rem;
+}
+
+.xl-column-width {
+  width: 66rem;
+  right: -66rem;
+}
+
+.blade.show-blade {
+  right: 0 !important;
+}
+
+.blade {
+  position: fixed;
+  transition: all 0.25s linear;
+  top: 3.438rem;
+  bottom: 0;
+  background-color: _colour(aa-grey-2);
+  height: unset;
+
+  .core-apps-wrapper {
+    margin: -1rem 0 0 -1.25rem;
+    width: calc(100% + 2.5rem);
+    height: 100vh;
+    button.core-apps {
+      padding: .25rem 1.25rem;
+      background: transparent;
+      border: none;
+      width: 100%;
+      .core-app-icon {
+        display: flex;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50rem;
+        font-size: _font(size-regular);
+        color: _colour(aa-white-100);
+        &.icon-upscale {
+          font-size: 1.2rem;
+        }
+        &.icon-downscale {
+          font-size: _font(size-default);
+        }
+      }
+      &:first-child {
+        padding-top:.5rem;
+      }
+      &.selected {
+        background-color: _colour(aa-grey-5);
+        p {
+          color: _colour(aa-grey-50)
+        }
+      }
+      &:hover {
+        background-color: _colour(aa-light-blue-10);
+      }
+      p {
+        color: _colour(aa-light-blue-100);
+        text-align: left;
+        width: 90%;
+      }
+    }
+  }
+
+  .min-max-tab {
+    position: absolute;
+    top: .75rem;
+    left: -2.5rem;
+    background-color: transparent;
+
+    &.material-icons {
+      color: _colour(aa-light-blue-100);
+    }
+
+  }
+
+  .blade-modal {
+    height: 100%;
+    .modal-background-tint {
+      background-color: _colour(aa-blue-100-overlay);
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: -.75rem;
+      bottom: 0;
+      left: 0;
+    }
+
+    .modal-content {
+      background-color: _colour(aa-white-100);
+      box-shadow: 0 0 .2rem .2rem _colour(tinted-dark-blue);
+      -webkit-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+      -moz-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+      position: relative;
+      z-index: 20;
+      padding: 1.25rem;
+      border-radius: .5rem;
+      max-width: 24rem;
+
+      button {
+        margin-top: 1rem
+      }
+
+      aa-button {
+        flex: none;
+      }
+
+      h1, h2, h3, h4 {
+        margin: 0 0 .5rem 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        h1, h2, h3, h4 {
+          color: _colour(aa-red-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-red-100);
+        }
+      }
+
+      .warning {
+        h1, h2, h3, h4 {
+          color: _colour(aa-orange-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-orange-100);
+        }
+      }
+
+      .success {
+        h1, h2, h3, h4 {
+          color: _colour(aa-green-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-green-100);
+        }
+      }
+
+      .info {
+        h1, h2, h3, h4 {
+          color: _colour(aa-light-blue-100);
+        }
+        button:not(.cancel) {
+          border: none;
+          background-color: _colour(aa-light-blue-100);
+        }
+      }
+    }
+  }
+
+  table:not(.gist table) {
+    margin-left: -1.25rem;
+    width: calc(100% + 3rem);
+  }
+
+  &.show-tabs {
+    .tab-navigation:not(.secondary-tabs .tab-navigation) {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 2.75rem;
+      background-color: _colour(aa-white-100);
+      padding-left: 1.25rem;
+
+      ul {
+        li a {
+          box-sizing: unset;
+          min-height: 2rem;
+        }
+      }
+    }
+
+    .blade-content {
+      top: 5.5rem;
+    }
+
+    &.custom-header-tabs {
+      .tab-navigation {
+        top: 3rem;
+      }
+    }
+  }
+
+  .blade-footer,
+  .blade-header,
+  .blade-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .blade-header {
+    border-bottom: 2px solid _colour(aa-light-blue-30);
+    background-color: _colour(aa-white-100);
+    padding: 0.75rem 1.25rem;
+    top: 0;
+    height: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+    z-index: 1;
+
+    &.custom-header {
+      h2 {
+        margin: .25rem 0 0 0;
+      }
+
+      label,
+      aa-button label {
+        display: none;
+      }
+
+      .field {
+        padding-top: 0;
+      }
+    }
+
+    .pin,
+    .header-icon {
+      color: _colour(aa-blue-100);
+    }
+
+    .pin {
+      font-size: 1.25rem;
+      margin: .25rem .75rem 0 0;
+      vertical-align: middle;
+      transform: rotate(90deg);
+      cursor: pointer;
+
+      &.pinned {
+        transform: rotate(0);
+      }
+    }
+
+  }
+
+  .blade-content {
+    padding: 1rem 1.25rem 5rem; 
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 3.48rem;
+    bottom: 5rem;
+
+    h3 {
+      margin-bottom: .75rem;
+    }
+
+    h2,
+    h3 {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    // Minor accordion adjustments
+    .accordion-container {
+      margin-bottom: 2px;
+      &:not(.accordion-container .accordion-container) {
+        margin-left: -1.25rem;
+        width: calc(100% + 2.5rem);
+      }
+      .accordion-trigger:not(.disabled) {
+        &:not(.accordion-container .accordion-panel .accordion-trigger) {
+          background-color: _palette(aa-blue-sky-100);
+          .accordion-heading,
+          .material-icons,
+          .material-icons-outlined {
+            color: _palette(aa-white-100);
+          }
+        }
+      }
+    }
+
+    .ag-grid {
+      height: calc(100vh - 14rem);
+    }
+
+    // menu blade setup
+    .blade-navigation {
+      .search-results {
+        .search-item * {
+          background-image: none !important;
+        }
+
+        span {
+          padding-bottom: .25rem;
+        }
+
+        i {
+          width: 1rem;
+          max-width: 1rem;
+          height: 1rem;
+          max-height: 1rem;
+
+          &.chevron,
+          &.search {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .nav-icon:not(.nav-icon.core-apps) {
+        position: relative;
+        margin: .5rem .5rem 0;
+        min-width: 6.75rem;
+        max-width: 6.75rem;
+        min-height: 6.5rem;
+        text-align: center;
+        padding: 0;
+
+        * {
+          &:before {
+            content: none !important;
+          }
+        }
+
+        p {
+          color: _colour(aa-grey-100);
+        }
+
+        .icon-star-favourites {
+          display: none;
+          position: absolute;
+          top: -.5rem;
+          right: 0;
+          padding: 0;
+        }
+
+        &:hover .icon-star-favourites,
+        .icon-star-favourites.selected {
+          display: block;
+        }
+
+        // override bs in core, icons set up in DB
+        a.fas,
+        a.fas:hover,
+        a.fas:active {
+          font-family: none !important;
+          border: none;
+          outline: none;
+          color: unset;
+          border: unset;
+          text-decoration: unset;
+        }
+      }
+    }
+  }
+
+  .blade-footer {
+    border-top: 2px solid _colour(aa-light-blue-30);
+    background-color: _colour(aa-white-100);
+    padding: 0 1.25rem 1.25rem;
+    bottom: 0;
+
+    aa-button {
+      label {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: _breakpoint(breakpoint-1080)) {
+  .blade {
+    &.show-blade:not(.show-blade.half-column-width) {
+      display: block;
+      width: auto;
+      left: 0;
+    }
+
+    .blade-content {
+      width: auto;
+      right: 0;
+      left: 0;
+      bottom: 8rem; // iPhone needed a bit more scroll area
+    }
+
+    .field {
+      max-width: 20rem; // reduced to fit hand-held
+    }
+
+    button+button {
+      margin-top: 0.75rem;
+    }
+  }
+}

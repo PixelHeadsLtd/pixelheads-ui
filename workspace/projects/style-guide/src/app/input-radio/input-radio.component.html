@@ -1,0 +1,309 @@
+<section class="control-bar flex-group space-between">
+  <h1>Radio</h1>
+  <aa-alert alertClass="error" alertText="Please ensure all fieldset inputs are wrapped in div.field label"></aa-alert>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Radio</h2>
+      <div class="describe margin-bottom-1">
+        <p>Below is the standard radio. If you're using straight HTML markup, Please
+          remember to use a div.field.radio nested inside a fieldset.
+        </p>
+      </div>
+      <fieldset>
+        <legend>Radio button</legend>
+        <div class="field radio">
+          <label [ngClass]="{'checked': myRadios==='yes'}">
+            <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="yes">
+            <span>Yes</span>
+          </label>
+        </div>
+        <div class="field radio">
+          <label [ngClass]="{'checked': myRadios==='no'}">
+            <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="no">
+            <span>No</span>
+          </label>
+        </div>
+        <div class="field radio">
+          <label [ngClass]="{'checked': myRadios==='disabled'}">
+            <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="disabled" disabled="true">
+            <span>disabled=&ldquo;true&rdquo;</span>
+          </label>
+        </div>
+        <div class="field radio">
+          <label [ngClass]="{'checked': true}">
+            <input [(ngModel)]="myRadios" name="myRadios" type="radio" disabled="true">
+            <span>checked=&ldquo;true&rdquo;</span>
+          </label>
+        </div>
+      </fieldset>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Fieldset</td>
+            <td datalabel="Attribute">N/A</td>
+            <td datalabel="Type">Fieldset</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.field .radio</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Label</td>
+            <td datalabel="Attribute">[ngClass]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">.checked</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Input</td>
+            <td datalabel="Attribute">disabled</td>
+            <td datalabel="Type">Disabled</td>
+            <td datalabel="Default">false</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=true; showRadioRange=false">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Radio range</h2>
+      <div class="describe margin-bottom-1">
+        <p>Used primarily for selecting date ranges but can<br/> 
+          be used for other purposes as you see fit.
+        </p>
+      </div>
+      <h3>Selected option: {{ selectedOption }}</h3>
+      <section class="flex-group flex-start flex-nowrap">
+        <fieldset class="radio-range flex-column margin-right-2">
+          <legend>Quarters</legend>
+          <!-- Quarters Row 1 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q1-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q1-24">
+                <span>Q1-24</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q2-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q2-24">
+                <span>Q2-24</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q3-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q3-24">
+                <span>Q3-24</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q4-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q4-24">
+                <span>Q4-24</span>
+              </label>
+            </div>
+          </div>
+          <!-- Quarters Row 2 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q1-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q1-25">
+                <span>Q1-25</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q2-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q2-25">
+                <span>Q2-25</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q3-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q3-25">
+                <span>Q3-25</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q4-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q4-25">
+                <span>Q4-25</span>
+              </label>
+            </div>
+          </div>
+          <!-- Quarters Row 3 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q1-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q1-26">
+                <span>Q1-26</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q2-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q2-26">
+                <span>Q2-26</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q3-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q3-26">
+                <span>Q3-26</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='Q4-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="Q4-26">
+                <span>Q4-26</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="radio-range flex-column">
+          <legend>Halves</legend>
+          <!-- Halves Row 1 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H1-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H1-24">
+                <span>H1-24</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H2-24'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H2-24">
+                <span>H2-24</span>
+              </label>
+            </div>
+          </div>
+          <!-- Halves Row 2 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H1-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H1-25">
+                <span>H1-25</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H2-25'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H2-25">
+                <span>H2-25</span>
+              </label>
+            </div>
+          </div>
+          <!-- Halves Row 3 -->
+          <div class="flex-group flex-start">
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H1-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H1-26">
+                <span>H1-26</span>
+              </label>
+            </div>
+            <div class="field radio">
+              <label [ngClass]="{'checked': selectedOption=='H2-26'}">
+                <input [(ngModel)]="selectedOption" name="option" type="radio" value="H2-26">
+                <span>H2-26</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+    </section>
+      
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">Fieldset</td>
+            <td datalabel="Attribute">Class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">radio-range</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Div</td>
+            <td datalabel="Attribute">class</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">flex-group flex-start</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Label</td>
+            <td datalabel="Attribute">[ngClass]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">selectedOption</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">Input</td>
+            <td datalabel="Attribute">disabled</td>
+            <td datalabel="Type">Disabled</td>
+            <td datalabel="Default">false</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=false; showRadioRange=true">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+</section>
+
+<aa-blade 
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+  >
+  <article class="blade-content">
+    <div *ngIf="showRadioDefault">
+      <a href="https://gist.github.com/angloux/4e6f7537babfe54d86ab2198c096c4fe" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/4e6f7537babfe54d86ab2198c096c4fe"></app-gist>
+    </div>
+    <div *ngIf="showRadioRange">
+      <a href="https://gist.github.com/angloux/e95ec03106df3bc0ce214561b9785d5e" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/e95ec03106df3bc0ce214561b9785d5e"></app-gist>
+    </div>
+  </article>
+</aa-blade>

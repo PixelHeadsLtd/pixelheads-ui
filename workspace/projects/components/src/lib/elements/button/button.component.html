@@ -1,0 +1,127 @@
+<div 
+  id="aa-button"
+  *ngIf="!buttonEnriched && !buttonSplit &&!buttonSummary &&!buttonDayPicker" 
+  class="field {{fieldClass}}"
+  [class.button-large]="buttonLarge"
+>
+  <label 
+    [ngClass]="{ 'show-label': showLabel }"
+    [for]="buttonId">
+    {{buttonLabel}}
+  </label>
+  <button 
+    [type]="buttonType" 
+    [name]="buttonId" 
+    [id]="buttonId" 
+    [class]="buttonClass" 
+    [disabled]="disabled" 
+    (click)="onButtonClick($event)"
+    [ngClass]="{
+      'material-icons' : customIconsRound,
+      'material-icons-outlined' : customIconsRoundOutlined
+    }"
+  >
+    <div *ngIf="!customIconsRound && !customIconsRoundOutlined" class="flex-center">
+      <span *ngIf="customIcons" class="material-icons">{{buttonIcon}}</span>
+      <span class="text-align-left">{{buttonText}}</span>
+      <div *ngIf="showCount" class="count {{countColor}}">{{count}}</div>
+    </div>
+    <span *ngIf="customIconsRound || customIconsRoundOutlined">{{buttonIcon}}</span>
+  </button>
+</div>
+
+<div id="aa-button-enriched" *ngIf="buttonEnriched" class="field {{fieldClass}}">
+  <button 
+    [type]="buttonType" 
+    [name]="buttonId" 
+    [id]="buttonId" 
+    [disabled]="disabled" 
+    (click)="onButtonClick($event)"
+    class="btn-enriched box-shadow-light gradient-v-grey"
+  >
+    <div class="flex-group flex-end btn-enriched-toolbar">
+      <ng-content select="[toolbar]"></ng-content>
+    </div>
+    <div class="btn-enriched-content flex-group flex-start flex-align-center">
+      <div class="material-icons {{iconColour}}">{{iconName}}</div>
+      <h2 class="margin-0">{{title}}</h2>
+    </div>
+  </button>
+</div>
+
+<div id="aa-button-split" *ngIf="buttonSplit" class="field {{fieldClass}}">
+  <label [for]="buttonId">{{buttonLabel}}</label>
+  <div 
+    class="button-split" 
+    [ngClass]="{'nav-left-side' : navLeftside, 'nav-bottom' : navBottom}"
+  >
+    <div class="flex-group flex-start flex-align-center flex-nowrap">
+      <button
+        *ngIf="navLeftside"
+        class="chevron-up"
+        [class]="buttonClass"
+        (click)="showBtnMenu=!showBtnMenu" 
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+      </button>
+      <button
+        (click)="onButtonClick($event)"
+        [class]="buttonClass"
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+        {{buttonText}}
+      </button>
+      <button
+        *ngIf="!navLeftside"
+        class="chevron-up"
+        [class]="buttonClass"
+        (click)="showBtnMenu=!showBtnMenu" 
+        [type]="buttonType" 
+        [name]="buttonId" 
+        [id]="buttonId"
+      >
+      </button>
+    </div>
+    <nav 
+      (click)="showBtnMenu=false" 
+      *ngIf="showBtnMenu" 
+      class="box-shadow"
+      [ngStyle]="{'max-height' : maxHeight}"
+    >
+      <ng-content select="[bs-buttons]"></ng-content>
+    </nav>
+  </div>
+</div>
+
+<div id="aa-button-summary" *ngIf="buttonSummary" class="field {{fieldClass}} flex-stretch">
+  <button
+    class="{{status}} button-summary border-radius-0-5 box-shadow-light bg-aa-white-100 padding-1-5 flex-column bd-aa-grey-5"
+  >
+    <div class="flex-group flex-start flex-align-center">
+      <h1 class="priority bg-aa-white-100 border-radius-50 width-3 height-3 flex-center bd-solid">{{level}}</h1>
+      <h2 class="margin-0">{{title}}</h2>
+    </div>
+    <p *ngIf="showDescription" class="margin-top-1">
+      {{desc}}
+    </p>
+  </button>
+</div>
+
+<button
+  id="aa-button-day-picker"
+  *ngIf="buttonDayPicker"
+  class="button-day-picker box-shadow-light"
+  (click)="onButtonClick($event)"
+  [type]="buttonType" 
+  [name]="buttonId" 
+  [id]="buttonId" 
+  [disabled]="disabled" 
+>
+  <strong>{{buttonText}}</strong>
+  <div></div>
+</button>
+

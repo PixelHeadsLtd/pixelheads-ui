@@ -1,0 +1,16 @@
+<app-dl-header></app-dl-header>
+<app-dl-apps-blade></app-dl-apps-blade>
+<app-dl-login-blade></app-dl-login-blade>
+<app-dl-left-nav></app-dl-left-nav>
+
+<main 
+  class="main-content" 
+  [ngClass]="{'menu-minimized' : minimizeMenu}"
+>
+  <router-outlet></router-outlet>
+
+  <!-- Modal container -->
+  <div #modalContainer></div>
+
+</main>
+

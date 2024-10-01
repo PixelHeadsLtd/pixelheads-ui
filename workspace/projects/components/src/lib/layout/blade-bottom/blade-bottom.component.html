@@ -1,0 +1,35 @@
+<div 
+  id="aa-blade-bottom"
+  class="blade-bottom box-shadow" 
+  [ngClass]="{
+    'show' : isOpen, 
+    'pinned' : isPinned,
+    'unpinned' : !isPinned,
+    'fullscreen' : isFullScreen,
+    'toggle-blade' : toggleBlade
+  }" 
+  [ngStyle]="{
+    'top': expandedPosition(), 
+    'z-index': zIndex,
+    'margin-top': isOpen && !isPinned ? '-' + unpinnedOffset : ''
+  }">
+  <section class="blade-bottom-header flex-group">
+
+      <div class="flex-group flex-start flex-align-center">
+        <button class="unpinned-trigger" *ngIf="!isPinned" (click)="toggleBlade=!toggleBlade">unpinned-trigger</button>
+        <ng-content select="[custom-header]"></ng-content>
+      </div>
+
+      <div class="flex-group flex-end controls flex-align-center">
+        <div (click)="toggleThePin($event)" class="material-icons pin flex-end cursor-pointer">push_pin</div>
+        <div (click)="toggleFullScreen($event)" class="material-icons flex-align-center flex-end cursor-pointer">
+          <span *ngIf="!isFullScreen">open_in_full</span>
+          <span *ngIf="isFullScreen">close_fullscreen</span>
+        </div>
+        <div class="anchor-close cursor-pointer aa-blue-100" (click)="close()"></div>
+      </div>
+  </section>
+  <section class="blade-bottom-content">
+    <ng-content select="[custom-content]"></ng-content>
+  </section>
+</div>

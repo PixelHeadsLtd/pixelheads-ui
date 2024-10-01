@@ -1,0 +1,89 @@
+<div 
+ id="aa-comments"
+ class="aa-comments position-relative"
+ [ngClass]="{'position-right' : positionRight}"
+>
+  <button 
+    class="custom-icons cursor-pointer comments-trigger {{buttonClass}} position-absolute"
+    (click)="makeComments = ! makeComments; toggleComments=false; clicked=false"
+  >
+    <div class="flex-center">
+      <span class="material-icons {{iconColour}}">chat</span>
+      <span class="padding-left-0-25" *ngIf="comments.length===0">{{buttonText}}</span>
+      <span *ngIf="comments.length===1">There is ({{comments.length}}) comment</span>
+      <span *ngIf="comments.length>1">There are ({{comments.length}}) comments</span>
+    </div>
+  </button>
+  <div
+    class="
+    comments-panel
+    box-shadow
+    border-radius-0-25
+    bg-aa-white-100
+    position-absolute"
+    [class.show-comments]="makeComments"
+    [ngStyle]="{'width' : panelWidth}"
+  >
+    <p
+      class="margin-top-0 margin-bottom-1 italic aa-blue-100"
+      *ngIf="!comments.length && !makeComments"
+    >There are currently no comments
+    </p>
+    <div *ngIf="makeComments" class="field boxed margin-right-1">
+      <label>Comment</label>
+      <textarea [(ngModel)]="txtComment" placeholder="Your Comment" (change)="clicked=false"></textarea>
+      <div class="flex-group flex-start margin-bottom-1">
+        <button class="secondary margin-top-1 nowrap" (click)="addComment($event, cmt)">Add</button>
+        <button
+          class="cancel margin-top-1"
+          (click)="makeComments=false; toggleComments=false"
+          >Close
+        </button>
+        <div>
+          <div
+            *ngIf="clicked && !txtComment"
+            role="alert"
+            class="error margin-top-1"
+            >You need to add a comment
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field boxed" *ngIf="comments.length">
+      <h3 class="margin-0">Comments ({{comments.length}})</h3>
+      <div *ngIf="!toggleComments" class="scroll-panel">
+          <div 
+            class="scroll-panel-content"
+            [ngStyle]="{'max-height' : scrollHeight}"
+          >
+            <div class="comments">
+              <div 
+                *ngFor="let cmt of comments; let i = index" 
+                class="comment flex-group flex-column"
+              >
+                <div class="margin-right-0">
+                  <pre>{{ cmt.comment }}</pre>
+                </div>
+                <div 
+                class="comment-details margin-right-0 flex-group space-between flex-align-center">
+                  <div class="italic flex-group flex-start flex-align-center aa-grey-25 padding-top-0-25">
+                    <span title="{{ cmt.userName }}">{{ cmt.userName }}</span>
+                    <span title="{{ cmt.currentDate | DateFormatPipe }}">{{ cmt.currentDate | DateFormatPipe }}</span>
+                  </div>
+                 
+                  <button
+                    *ngIf="canDelete"
+                    class="material-icons aa-red-100 transparent"
+                    (click)="removeComment($event, i)"
+                    >
+                      delete_forever
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

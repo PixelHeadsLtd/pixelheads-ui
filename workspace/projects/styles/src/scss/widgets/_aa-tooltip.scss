@@ -1,0 +1,287 @@
+.show-as-button {
+
+  &.show-tooltip-on-click {
+    &.tooltip-clicked {
+      div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .aa-tooltip {
+    width: auto;
+    &:before {
+      content: ''
+    }
+
+    button {
+      position: relative;
+    }
+
+    .left.top {
+      bottom: calc(100% + 0.5rem);
+      left: 0;
+      right: auto;
+      top: auto;
+    }
+
+    .right.top {
+      bottom: calc(100% + 0.5rem);
+      right: 0;
+      top: auto;
+      left: auto;
+    }
+
+    .left.bottom {
+      top: calc(100% + 1.5rem);
+      left: 0;
+      right: auto;
+      bottom: auto;
+    }
+
+    .right.bottom {
+      top: calc(100% + 1.5rem);
+      right: 0;
+      bottom: auto;
+      left: auto;
+    }
+  }
+}
+
+.tab-navigation {
+  .tab-tooltip {
+    &:hover {
+      .feature-box {
+        display: block;
+        &.aa-light-blue-100 {border-color: _colour(aa-light-blue-100)}
+        &.aa-green-100 {border-color: _colour(aa-green-100)}
+        &.aa-orange-100 {border-color: _colour(aa-orange-100)}
+        &.aa-red-100 {border-color: _colour(aa-red-100)}
+      }
+    }
+  }
+}
+
+.aa-tooltip:not(.tab-navigation, .tab-navigation .aa-tooltip, .hover-stay-open) {
+  z-index: unset!important; // should be set on the popup hover state
+}
+
+.aa-tooltip {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  padding: 0;
+  margin: 0;
+  opacity: 1 !important; //override bs
+  font-size: _font(size-default);
+
+  &.hover-stay-open {
+    h2, h3, h4 {
+      padding-right: 4rem;
+    }
+    .feature-box {
+      display: inline-block;
+    }
+    .anchor-close {
+      position: absolute;
+      right: 1rem;
+      &:after {
+        top: .175rem
+      }
+    }
+  }
+
+  &.popup-closed {
+    .feature-box {
+      display: none;
+    }
+  }
+
+  &.as-link {
+    width: auto;
+    &:before {
+      content: "";
+    }
+
+    .left.top,
+    .left.bottom {
+      right: calc(100% + .5rem)
+    }
+
+    .right.top,
+    .right.bottom {
+      left: calc(100% + .5rem)
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  h4 {
+    margin: 0 0 .5rem 0;
+  }
+
+  .feature-box { // TODO this needs to be controlled using the reusable component feature-box which we should not alter here
+    position: absolute;
+    white-space: normal;
+    margin-top: -1rem; // TODO negative margin alert
+    display: none;
+  }
+
+  &:hover div:not(.show-tooltip-on-click:hover div, .popup-closed:hover div, .hover-stay-open:hover div) {
+    display: inline-block;
+  }
+
+  .right.bottom {
+    left: 1.5rem;
+    top: .25rem;
+  }
+
+  .left.bottom {
+    right: 1.5rem;
+    top: .25rem;
+  }
+
+  .right.top {
+    left: 1.5rem;
+    bottom: 0;
+  }
+
+  .left.top {
+    right: 1.5rem;
+    bottom: 0;
+  }
+
+  &.is-warning {
+    color: _colour(aa-orange-100);
+    .feature-box {
+      color: _colour(aa-orange-100);
+      border-color: _colour(aa-orange-100);
+    }
+  }
+
+  &.is-error {
+    color: _colour(aa-red-100);
+    .feature-box {
+      color: _colour(aa-red-100);
+      border-color: _colour(aa-red-100);
+    }
+  }
+
+  &.is-info {
+    color: _colour(aa-light-blue-100);
+    .feature-box {
+      color: _colour(aa-light-blue-100) !important;
+      border-color: _colour(alert-info-100);
+    }
+  }
+
+  &.is-success {
+    color: _colour(aa-green-100);
+    .feature-box {
+      color: _colour(aa-green-100);
+      border-color: _colour(aa-green-100);
+    }
+  }
+  &.custom-icon {
+    .material-icons,
+    .material-icons-outlined {
+      font-size: 1.15rem;
+      cursor: default;
+      display: inline-block;
+      &.is-warning {color: _colour(aa-orange-100);}
+      &.is-error {color: _colour(aa-red-100);}
+      &.is-info {color: _colour(aa-light-blue-100);}
+      &.is-success {color: _colour(aa-green-100);}
+    }
+    &:before {
+      content: "";
+    }
+  }
+}
+
+.aa-tooltip.icon-info,
+.aa-tooltip.icon-edit {
+  &:before {
+    position: static;
+  }
+}
+
+.tooltip-dynamic {
+  position: fixed;
+  z-index: 999999;
+  background-color: _colour(aa-white-100);
+  border-radius: .5rem;
+  font-family: Arial;
+  padding: .75rem;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+
+  h1, h2, h3, h4, h5 {
+    margin: 0 0 .5rem 0;
+  }
+
+  &:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  &--visible {
+    opacity: 1;
+  }
+
+  &--below {
+    transform:translateX(-50%);
+    margin-top: .5rem;
+
+    &:before {
+      left: calc(50% - .5rem);
+      top: -.5rem;
+      border-bottom: .5rem solid _colour(aa-white-100);
+      border-right: .5rem solid transparent;
+      border-left: .5rem solid transparent;
+    }
+  }
+
+  &--above {
+    transform:translate(-50%, -100%);
+    margin-top: -.5rem;
+
+    &:before {
+      left: calc(50% - .5rem);
+      bottom: -.5rem;
+      border-top: .5rem solid _colour(aa-white-100);
+      border-right: .5rem solid transparent;
+      border-left: .5rem solid transparent;
+    }
+  }
+
+  &--left {
+    transform:translate(calc(-100% - .5rem), -50%);
+
+    &:before {
+      right: -.5rem;
+      top: calc(50% - .5rem);
+      border-top: .5rem solid transparent;
+      border-bottom: .5rem solid transparent;
+      border-left: .5rem solid _colour(aa-white-100);
+    }
+  }
+
+  &--right {
+    transform:translateY(-50%);
+    margin-left: .5rem;
+
+    &:before {
+      left: -.5rem;
+      top: calc(50% - .5rem);
+      border-top: .5rem solid transparent;
+      border-bottom: .5rem solid transparent;
+      border-right: .5rem solid _colour(aa-white-100);
+    }
+  }
+}
+

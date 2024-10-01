@@ -1,0 +1,28 @@
+<nav 
+  id="aa-context-menu"
+  class="context-menu flex-group width-control" 
+  [ngStyle]="{
+    'top' : topPos, 
+    'left' : leftPos, 
+    'right' : rightPos
+  }" 
+  [ngClass]="{
+    'position-absolute' : absolutePosition
+  }"
+  >
+  <div class="margin-right-0">
+    <button 
+      (click)="showContextMenu=!showContextMenu" 
+      class="material-icons">
+      more_vert
+    </button>
+  </div>
+  <ul 
+    *ngIf="showContextMenu" 
+    class="strip-bullets" 
+    [ngClass]="{'show-on-left' : showOnLeft}"
+    [ngStyle]="{'min-width' : minWidth}"
+  >
+    <ng-content></ng-content>
+  </ul>
+</nav>

@@ -1,0 +1,144 @@
+header.page-header:not(header .blade) {
+  background-color: _colour(trans-blue-to-grey);
+  background-image: url("#{$logo-path}anglo-american-logo-white.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 8.5rem;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  position: fixed;
+  z-index: 999; // if higher then increase 'quick mock' overlay
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  
+  .app-name {
+    text-decoration: none;
+    .material-icons,
+    .material-icons-outlined {
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      align-items: center;
+      text-align: center;
+      display: grid;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  
+  a:not(.blade a),
+  .material-icons,
+  .material-icons-outlined {
+    &:not(
+      .blade .material-icons, 
+      .app-name .material-icons, 
+      .aa-search .material-icons, 
+      .aa-search-dl .material-icons, 
+      button.material-icons
+      ) {
+      color: _palette(aa-white-100);
+    }
+  }
+  
+  nav {
+    .material-icons:not(.nav-icon, .clear-search),
+    .material-icons-outlined:not(.nav-icon, .clear-search) {
+      font-size: _font(size-large);
+    }
+    > ul {
+      display: flex;
+      list-style: none;
+      > li {
+        margin-right: 0.75rem;
+        width: 2.25rem;
+        height: 3.5rem;
+        text-align: center;
+        align-items: center;
+        display: grid;
+        
+        > div,
+        > section,
+        > article,
+        > a,
+        > span,
+        > button,
+        > input,
+        > caption {
+          margin: auto;
+        }
+        
+        &:last-child {
+          margin-right: 0;
+        }
+        .avatar {
+          width: 2rem;
+          height: 2rem;
+          > div {
+              border: 1px solid _colour(aa-light-blue-100);
+          }
+        }
+      }
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button {
+    &.material-icons:not(.clear-search),
+    &.material-icons-outlined:not(.clear-search) {
+      background-color: _colour(aa-light-blue-100);
+      color: _colour(aa-white-100);
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.header-secondary {
+  min-height: 3.5rem;
+  max-height: 3.5rem;
+  z-index: 0;
+  padding: .75rem 1.5rem;
+  background-color: _colour(aa-light-blue-100);
+  color: _palette(aa-white-100);
+  h1, h2, h3, h4 {
+    color: _palette(aa-white-100);
+  }
+}
+
+
+.login-blade {
+  .blade-header {
+    display: none;
+  }
+  .blade-content {
+    top: 0;
+    .avatar {
+      width: 7rem;
+      height: 7rem;
+      > div {
+        border: 1px solid _colour(aa-grey-25);
+      }
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: _breakpoint(breakpoint-720)) {
+  header.page-header {
+    background-image: none!important;
+    .aa-logo {
+      display: none;
+    }
+    
+    .login-nav {
+      display: none;
+    }
+  }
+}

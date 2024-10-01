@@ -1,0 +1,47 @@
+<section
+    id="aa-carousel"
+    class="flex-group flex-center {{customClass}} position-relative"
+    [ngStyle]="{'width' : carouselOuterWidth}"
+>
+    <span class="carousel-count">{{currentSlide + 1}} of {{items?.length}}</span>
+    <div
+        class="aa-carousel"
+        [ngStyle]="{
+            'width' : carouselInnerWidth,
+            'height' : carouselInnerHeight
+        }"
+    >
+        <div class="aa-carousel-content flex-group flex-nowrap" #carousel>
+            <div
+                aaCarouselSlide
+                *ngFor="let item of items;"
+                class="aa-carousel-item {{carouselItemBgColour}}"
+                [ngStyle]="{
+                    'min-width' : carouselItemWidth,
+                    'padding' : carouselItemPadding
+                }"
+            >
+                <ng-container [ngTemplateOutlet]="item.tpl"></ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="aa-carousel-footer flex-group flex-center">
+    <button
+        (click)="prev()"
+        class="{{prevBtnColour}} material-icons"
+        [ngClass]="{'disable-first' : firstSlide}"
+        type="button"
+        >
+        <span>{{prevBtnIcon}}</span>
+    </button>
+    <button
+        (click)="next()"
+        class="{{nextBtnColour}} material-icons"
+        [ngClass]="{'disable-last' : lastSlide}"
+        type="button"
+        >
+        <span>{{nextBtnIcon}}</span>
+    </button>
+</footer>
+

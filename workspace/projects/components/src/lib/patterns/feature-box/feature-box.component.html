@@ -1,0 +1,31 @@
+<section 
+  id="aa-feature-box"  
+  class="feature-box {{fbStatus}}"
+  [ngStyle]="{
+      'width' : fbWidth,
+      'margin-top' : marginTop,
+      'margin-bottom' : marginBottom
+  }"
+  [ngClass]="{
+      'solid' : isSolid,
+      'padding-right-0' : enableScrolling
+  }"
+>
+  <div *ngIf="includeHeader">
+    <div [ngClass]="{'padding-right-0-75' : enableScrolling}">
+      <ng-content select="[custom-header]"></ng-content>
+    </div>
+    <div 
+      [ngStyle]="{
+        'height' : fbHeight,
+        'overflow': enableScrolling ? 'auto' : ''
+      }" 
+      class="fb-contnet"
+    >
+      <ng-content select="[custom-content]"></ng-content>
+    </div>
+  </div>
+  <div *ngIf="!includeHeader">
+    <ng-content></ng-content>
+  </div>
+</section>

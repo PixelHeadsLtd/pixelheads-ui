@@ -1,0 +1,67 @@
+<!-- Conditional rendering for anchor or router link -->
+<a 
+    id="anchorAdvanced" 
+    *ngIf="routerLink; else anchorLink" 
+    [routerLink]="routerLink" 
+    title="{{title}} {{desc}}"
+    class="anchor-advanced box-shadow-light flex-group flex-column bg-aa-white-100"
+    [ngStyle]="{'width': width + 'rem'}"
+>
+    <div class="flex-group flex-start flex-nowrap">
+        <div 
+            class="anchor-icon border-radius-50 flex-center" 
+            [ngClass]="{
+                'blue' : blue,
+                'pink' : pink,
+                'orange' : orange,
+                'lime' : lime,
+                'green' : green,
+                'yellow' : yellow}"
+        >
+            <div class="material-icons">{{icon}}</div>
+        </div>
+        <div class="flex-group flex-column">
+            <h3 class="margin-top-0" [ngStyle]="{'width': (width - 5) + 'rem'}">{{title}}</h3>
+            <p [ngStyle]="{'width': (width - 5) + 'rem'}">{{desc}}</p>
+        </div>
+    </div>
+
+    <div class="flex-group space-between flex-align-center margin-right-0 margin-top-0-75">
+        <span class="aa-grey-50">{{contentType}}</span>
+        <div class="material-icons small rotate-45">arrow_upward</div>
+    </div>
+</a>
+
+<ng-template #anchorLink>
+    <a 
+        id="anchorAdvanced" 
+        [attr.href]="anchorURL" 
+        title="{{title}} {{desc}}"
+        class="anchor-advanced box-shadow-light flex-group flex-column bg-aa-white-100"
+        [ngStyle]="{'width': width + 'rem'}"
+    >
+        <div class="flex-group flex-start flex-nowrap">
+            <div 
+                class="anchor-icon border-radius-50 flex-center" 
+                [ngClass]="{
+                'blue' : blue,
+                'pink' : pink,
+                'orange' : orange,
+                'lime' : lime,
+                'green' : green,
+                'yellow' : yellow}"
+            >
+                <div class="material-icons">{{icon}}</div>
+            </div>
+            <div class="flex-group flex-column">
+                <h3 class="margin-top-0" [ngStyle]="{'width': (width - 5) + 'rem'}">{{title}}</h3>
+                <p [ngStyle]="{'width': (width - 5) + 'rem'}">{{desc}}</p>
+            </div>
+        </div>
+
+        <div class="flex-group space-between flex-align-center margin-right-0 margin-top-0-75">
+            <span class="aa-grey-50">{{contentType}}</span>
+            <div class="material-icons small rotate-45">arrow_upward</div>
+        </div>
+    </a>
+</ng-template>

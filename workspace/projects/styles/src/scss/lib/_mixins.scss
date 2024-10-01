@@ -1,0 +1,594 @@
+@mixin button-blue {
+  background-color: _colour(aa-blue-100);
+  border-color: _colour(aa-blue-100);
+  color: _colour(aa-white-100);
+}
+
+@mixin button-blue-hover {
+  background-color: _palette(aa-blue-70);
+  border-color: _palette(aa-blue-70);
+}
+
+@mixin button-light-blue {
+  background-color: _palette(aa-light-blue-100);
+  border-color: _palette(aa-light-blue-100);
+  color: _palette(white);
+}
+
+@mixin button-light-blue-outline {
+  background-color: _palette(white);
+  border-color: _palette(aa-light-blue-50);
+  color: _palette(aa-light-blue-100);
+}
+
+@mixin button-light-blue-hover {
+  background-color: _palette(aa-light-blue-80);
+  border-color: _palette(aa-light-blue-80);
+}
+
+@mixin button-pale-blue {
+  background-color: _colour(aa-light-blue-15);
+  border-color: _colour(aa-light-blue-40);
+  color: _colour(trans-blue-to-white);
+}
+
+@mixin button-pale-blue-hover {
+  background-color: _colour(aa-light-blue-40);
+  border-color: _colour(aa-light-blue-100);
+}
+
+@mixin button-light-blue-outline-hover {
+  background-color: _palette(aa-light-blue-5);
+  border-color: _palette(aa-light-blue-50);
+}
+
+@mixin button-blue-sky {
+  background-color: _palette(aa-blue-sky-100);
+  border-color: _palette(aa-blue-sky-100);
+  color: _palette(aa-white-100);
+}
+
+@mixin button-blue-sky-hover {
+  background-color: _palette(aa-blue-sky-100);
+  border-color: _palette(aa-blue-sky-100);
+}
+
+@mixin button-red {
+  background-color: _palette(aa-red-100);
+  border-color: _palette(aa-red-100);
+  color: _palette(white);
+}
+
+@mixin button-red-hover {
+  background-color: _palette(aa-red-50);
+  border-color: _palette(aa-red-100);
+}
+
+@mixin button-orange {
+  background-color: _palette(aa-orange-100);
+  border-color: _palette(aa-orange-100);
+  color: _palette(white);
+}
+
+@mixin button-orange-hover {
+  background-color: _palette(aa-orange-50);
+  border-color: _palette(aa-orange-50);
+}
+
+@mixin button-green {
+  background-color: _palette(aa-green-100);
+  border-color: _palette(aa-green-100);
+  color: _palette(white);
+}
+
+@mixin button-green-hover {
+  background-color: _palette(aa-green-50);
+  border-color: _palette(aa-green-100);
+}
+
+@mixin button-grey {
+  background-color: _colour(aa-grey-100);
+  border-color: _colour(aa-grey-100);
+  color: _colour(aa-white-100);
+}
+
+@mixin button-grey-hover {
+  background-color: _colour(aa-grey-50);
+  border-color: _colour(aa-grey-100);
+}
+
+@mixin button-red-outline {
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-red-100);
+  color: _palette(aa-red-100);
+}
+
+@mixin button-red-outline-hover {
+  background-color: _colour(aa-grey-5);
+  border-color: _colour(aa-red-100);
+}
+
+@mixin button-blue-outline {
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-blue-100);
+  color: _colour(trans-blue-to-white);
+}
+
+@mixin button-blue-outline-hover {
+  border-color: _palette(aa-blue-80);
+  background-color: _colour(aa-grey-5);
+}
+
+@mixin button-white {
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
+}
+
+@mixin button-white-bg {
+  background-color: _palette(white);
+  border-color: _palette(white);
+  color: _palette(white);
+}
+
+@mixin button-white-small {
+  background-color: _colour(aa-white-100);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
+}
+
+@mixin button-white-hover {
+  background-color: _colour(aa-grey-5);
+  border-color: _colour(aa-grey-25);
+  color: _colour(aa-grey-100);
+}
+
+@mixin button-all-white {
+  background-color: _palette(white);
+  border: 1px solid _palette(aa-blue-100);
+  color: _palette(aa-blue-100);
+}
+
+@mixin button-all-white-hover {
+  background-color: _palette(aa-grey-5);
+}
+
+@mixin button-white-small-hover {
+  background-color: _palette(grey-2);
+  border-color: _palette(grey-50);
+  color: _palette(aa-blue-100);
+}
+
+@mixin button-disabled {
+  background-color: _colour(aa-grey-5)!important;
+  border-color: _colour(aa-grey-25)!important;
+  color: _colour(aa-grey-100)!important;
+  cursor: not-allowed!important;
+}
+
+@mixin button-disabled-hover {
+  background-color: _palette(grey-5)!important;
+  border-color: _palette(grey-25);
+  color: _palette(grey-50)!important;
+  cursor: not-allowed!important;
+}
+
+@mixin icon-button-small-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+}
+
+@mixin icon-button-medium-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: inline-block;
+}
+
+@mixin icon-button-large-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+@mixin icon-button-xl-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: inline-block;
+  height: 6rem;
+  width: 6rem;
+}
+
+@mixin icon-button-small {
+  float: right;
+  font-family: _font(font-awesome);
+  font-size: _font(size-small);
+  margin-left: .5rem;
+  margin-top: 0;
+}
+
+@mixin icon-button-medium {
+  font-family: _font(font-awesome);
+  font-size: _font(size-default);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translate(.75rem, -50%);
+  transform: translate(.75rem, -50%);
+}
+
+@mixin icon-button-medium-material {
+  font-family: _font(material-icons);
+  font-size: _font(size-default);
+  position: absolute;
+  top: .6rem;
+  left: .75rem;
+}
+
+@mixin icon-button-medium-material-outlined {
+  font-family: _font(material-icons-outlined);
+  font-size: _font(size-default);
+  position: absolute;
+  top: .6rem;
+  left: .75rem;
+}
+
+@mixin icon-button-large-material {
+  font-family: _font(material-icons);
+  font-size: _font(size-medium);
+  position: absolute;
+  top: calc(50% - .65rem);
+  left: .5rem;
+}
+
+@mixin icon-button-large-material-outlined {
+  font-family: _font(material-icons-outlined);
+  font-size: _font(size-medium);
+  position: absolute;
+  top: calc(50% - .65rem);
+  left: .5rem;
+}
+
+@mixin icon-button-xlarge-material {
+  font-family: _font(material-icons);
+  font-size: _font(size-xlarge);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: -.15rem;
+  -ms-transform: translate(.25rem, -50%);
+  transform: translate(.25rem, -50%);
+}
+
+@mixin icon-button-xlarge-material-outlined {
+  font-family: _font(material-icons-outlined);
+  font-size: _font(size-xlarge);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: -.15rem;
+  -ms-transform: translate(.25rem, -50%);
+  transform: translate(.25rem, -50%);
+}
+
+@mixin icon-right-00-before-material {
+  font-family: _font(material-icons);
+  font-size: _font(size-large);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin icon-right-00-before-material-outlined {
+  font-family: _font(material-icons-outlined);
+  font-size: _font(size-large);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+@mixin icon-button-medium-right {
+  font-family: _font(font-awesome);
+  font-size: _font(size-default);
+  margin: 0 0 0 .5rem;
+  position: absolute;
+  top: calc(50% - .5rem);
+  right: .75rem;
+}
+
+@mixin icon-button-medium-left {
+  font-family: _font(font-awesome);
+  font-size: _font(size-default);
+  margin: 0 0 0 .5rem;
+  position: absolute;
+  top: calc(50% - .5rem);
+  left: .25rem;
+}
+
+@mixin icon-button-large {
+  float: right;
+  font-family: _font(font-awesome);
+  font-size: _font(size-large);
+  margin: 0 .5rem 0 -.25rem;
+}
+
+@mixin icon-button-large-solid {
+  font-family: _font(font-awesome);
+  font-size: _font(size-large);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 0;
+  -ms-transform: translate(.25rem, -50%);
+  transform: translate(.25rem, -50%);
+}
+
+@mixin icon-button-large-solid-test {
+  font-family: _font(font-awesome);
+  font-size: _font(size-large);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translate(.25rem, -50%);
+  transform: translate(.25rem, -50%);
+}
+
+@mixin button-icon {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1rem;
+  width: 2.15rem;
+  //min-height: 2rem;
+  span {
+    visibility: hidden;
+  }
+}
+
+@mixin icon-left-small {
+  padding-left: 1.15rem;
+  position: relative;
+}
+
+@mixin icon-left {
+  padding-left: 2rem;
+  position: relative;
+}
+
+@mixin icon-left-medium {
+  padding-left: 2.25rem;
+  position: relative;
+  &.small {
+    padding-left: 1.75rem;
+  }
+}
+
+@mixin icon-left-before {
+  font-family: _font(font-awesome);
+  font-size: _font(size-medium);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin icon-left-before-small {
+  font-family: _font(font-awesome);
+  font-size: _font(size-default);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin icon-left-before-solid {
+  font-family: _font(font-awesome);
+  font-size: _font(size-medium);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin icon-left-before-material {
+  font-family: material-icons;
+  font-size: _font(size-medium);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@mixin icon-left-before-material-outlined {
+  font-family: material-icons-outlined;
+  font-size: _font(size-medium);
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+// new - for favourites only
+
+@mixin icon-left-before-favourites {
+  font-family: _font(font-awesome);
+  font-size: _font(size-regular);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@mixin icon-left-before-favourites-solid {
+  @include icon-left-before-favourites;
+  font-family: _font(font-awesome);
+}
+
+@mixin icon-right {
+  padding-right: 2.25rem;
+  display: inline-block;
+  position: relative;
+}
+
+@mixin icon-right-before {
+  font-family: _font(font-awesome);
+  font-size: _font(size-regular);
+  right: 1rem;
+  top: 1rem;
+  position: absolute;
+}
+
+@mixin icon-right-before-small {
+  font-family: _font(font-awesome);
+  font-size: .75rem;
+  right: 0;
+  top: .7rem;
+  position: absolute;
+}
+
+@mixin icon-right-00-before {
+  font-family: _font(font-awesome);
+  font-size: _font(size-regular);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin icon-right-after {
+  font-family: _font(font-awesome);
+  font-size: .75rem;
+  position: absolute;
+  right: 1rem;
+}
+
+@mixin icon-right-before-solid {
+  @include icon-right-before;
+  font-family: _font(font-awesome);
+}
+
+@mixin icon-center {
+  background-repeat: no-repeat;
+  position: relative;
+  line-height: 1rem;
+  border-radius: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+}
+
+@mixin icon-center-large {
+  font-size: _font(size-large);
+}
+
+@mixin icon-center-xlarge {
+  font-size: _font(size-xlarge);
+}
+
+@mixin icon-center-before {
+  font-family: _font(font-awesome);
+  font-size: .85rem;
+  left: .425rem;
+  top: .275rem;
+  position: absolute;
+}
+
+@mixin icon-center-before-solid {
+  @include icon-center-before;
+  font-family: _font(font-awesome);
+}
+
+@mixin icon-center-solid {
+  font-family: _font(font-awesome);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center-solid {
+  font-family: _font(material-icons);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center-solid-outlined {
+  font-family: _font(material-icons-outlined);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center-solid-large {
+  font-family: _font(material-icons);
+  font-size: _font(size-medium);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center-solid-large-outlined {
+  font-family: _font(material-icons-outlined);
+  font-size: _font(size-medium);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center {
+  // this replaces icon-material-center-solid
+  font-family: _font(material-icons);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material-center-outlined {
+  // this replaces icon-material-center-solid
+  font-family: _font(material-icons-outlined);
+  text-align: center;
+  margin: auto;
+}
+
+@mixin icon-material {
+  font-family: _font(material-icons);
+}
+
+@mixin icon-material-outlined {
+  font-family: _font(material-icons-outlined);
+}
+
+@mixin icon-medium {
+  font-size: _font(size-regular);
+}
+
+
+// New Favourites icons
+
+@mixin icon-favourite {
+  font-family: _font(font-awesome);
+  font-size: 2.2rem;
+  float: left;
+  margin-right: .5rem;
+  text-align: center;
+  line-height: initial;
+}
+
+@mixin icon-favourite-solid {
+  font-family: _font(font-awesome);
+  font-size: 2.2rem;
+  float: left;
+  margin-right: .5rem;
+  text-align: center;
+  line-height: initial;
+}
+
+@mixin icon-center-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+}
+
+@mixin icon-center-large-svg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.15rem;
+}

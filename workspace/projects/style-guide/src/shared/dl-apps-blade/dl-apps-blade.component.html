@@ -1,0 +1,39 @@
+<aa-blade class="apps-blade" [customBlade]="true" [blockPageUI]="false" [toggleBlade]="appsBlade"
+  [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="99999" bladeSize="half-column-width" bladeHeading="Hello"
+  [enableIcon]="true" iconName="directions_bike" (close)="appsBlade" [enablePinning]="false">
+
+  <ng-container custom-header>
+    <input type="text" class="search" placeholder="Search" id="search-text" aria-describedby="search-text"
+      [(ngModel)]="searchText" placeholder="Filter by App name" autofocus />
+  </ng-container>
+
+  <ng-container custom-content>
+    <section class="blade-navigation core-apps-wrapper">
+      <button (click)="coreAppClicked(f)" [class.selected]="coreAppIndex === f" class="
+          core-apps
+          nav-icon 
+          flex-group 
+          flex-start 
+          flex-align-center 
+          flex-nowrap
+          cursor-pointer
+        " *ngFor="let i of coreApps | filterCoreApps: searchText; let f = index">
+        <div class="
+            {{i.coreIconClass}} 
+            core-app-icon
+            material-icons-outlined
+            flex-center
+            ">
+          {{i.coreAppIconName}}
+        </div>
+        <p class="trans-light-blue-to-blue-light">{{i.coreAppName}}</p>
+      </button>
+    </section>
+
+  </ng-container>
+  <ng-container custom-footer>
+    <aa-button (buttonClick)="closeAppsBlade()" buttonText="Close" buttonClass="cancel" fieldClass="label-hidden">
+    </aa-button>
+  </ng-container>
+
+</aa-blade>

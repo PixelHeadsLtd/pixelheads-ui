@@ -1,0 +1,1199 @@
+[
+    {
+        "id": "1000",
+        "userName": "Michael King",
+        "userRole": "Admin",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "editId",
+                "buttonText": "Edit id",
+                "buttonClass": "primary"
+            }
+        },
+        "createdDate": "21 Jan 2023",
+        "modifiedDate": "08 Feb 2023",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1054",
+                "userName": "Martin Smith",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "18 Mar 2020",
+                "modifiedDate": "12 May 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3425",
+                "userName": "Michelle Winter",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "inActive",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "11 Jan 2019",
+                "modifiedDate": "01 Dec 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1001",
+        "userName": "Claire Burns",
+        "userRole": "Admin",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "editId",
+                "buttonText": "Edit id",
+                "buttonClass": "secondary"
+            }
+        },
+        "createdDate": "10 Mar 2023",
+        "modifiedDate": "29 Apr 2023",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1055",
+                "userName": "Jessica Parker",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "22 Apr 2021",
+                "modifiedDate": "05 Aug 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3426",
+                "userName": "Christopher Lee",
+                "userRole": "Developer",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "17 Feb 2020",
+                "modifiedDate": "30 Nov 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1002",
+        "userName": "Oliver Moore",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Inactive",
+                "alertShieldClass": "error"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "14 May 2022",
+        "modifiedDate": "09 Oct 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1061",
+                "userName": "Lucas Stewart",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "03 Oct 2021",
+                "modifiedDate": "18 Apr 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3431",
+                "userName": "Alexander Mitchell",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "22 Dec 2021",
+                "modifiedDate": "08 Aug 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1003",
+        "userName": "Mia Turner",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "21 Jul 2022",
+        "modifiedDate": "13 Nov 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1062",
+                "userName": "Lily Murphy",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "25 Sep 2021",
+                "modifiedDate": "12 May 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3432",
+                "userName": "Charlotte Bailey",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "16 Feb 2021",
+                "modifiedDate": "04 Sep 2021",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1004",
+        "userName": "Ethan Miller",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "19 Aug 2022",
+        "modifiedDate": "03 Dec 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1063",
+                "userName": "Benjamin Hill",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "07 May 2021",
+                "modifiedDate": "24 Jan 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3433",
+                "userName": "Amelia Russell",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "14 Dec 2021",
+                "modifiedDate": "30 Jul 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1005",
+        "userName": "Olivia Evans",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "06 Jun 2022",
+        "modifiedDate": "28 Oct 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1064",
+                "userName": "Elijah Cooper",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "03 Aug 2021",
+                "modifiedDate": "19 Mar 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3434",
+                "userName": "Ava Hughes",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "08 Jan 2022",
+                "modifiedDate": "25 May 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1006",
+        "userName": "William Martinez",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "17 Apr 2022",
+        "modifiedDate": "10 Sep 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1065",
+                "userName": "James Thompson",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "12 Nov 2021",
+                "modifiedDate": "29 May 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3435",
+                "userName": "Sophia Adams",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "22 Mar 2022",
+                "modifiedDate": "07 Aug 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1007",
+        "userName": "Alexander Taylor",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "11 Feb 2022",
+        "modifiedDate": "05 Jul 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1066",
+                "userName": "Charlotte Harris",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "09 Sep 2021",
+                "modifiedDate": "26 Apr 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3436",
+                "userName": "Mia Wilson",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "30 Jul 2021",
+                "modifiedDate": "15 Feb 2022",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    },
+    {
+        "id": "1008",
+        "userName": "Scarlett Turner",
+        "userRole": "User",
+        "alertShield": {
+            "userStatus": {
+                "showAlertShield": true,
+                "alertShieldStatus": "Active",
+                "alertShieldClass": "success"
+            }
+        },
+        "tooltip": {
+            "id": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "This is id tooltip message"
+            },
+            "createdDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-orange-100",
+                "tooltipMsg": "Date when the user was created"
+            },
+            "modifiedDate": {
+                "showTooltip": true,
+                "tooltipIcon": "error_outline",
+                "tooltipColor": "aa-green-100",
+                "tooltipMsg": "Date when the user was last modified"
+            }
+        },
+        "button": {
+            "actions": {
+                "showButton": true,
+                "actionType": "deleteUser",
+                "buttonText": "Delete User",
+                "buttonClass": "error"
+            }
+        },
+        "createdDate": "28 May 2022",
+        "modifiedDate": "20 Nov 2022",
+        "expanded": false,
+        "nestedRows": [
+            {
+                "id": "1067",
+                "userName": "Daniel Lee",
+                "userRole": "Admin",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Active",
+                        "alertShieldClass": "success"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "editId",
+                        "buttonText": "Edit row id",
+                        "buttonClass": "pending"
+                    }
+                },
+                "createdDate": "14 Jul 2021",
+                "modifiedDate": "02 Mar 2022",
+                "expanded": false,
+                "nestedRows": []
+            },
+            {
+                "id": "3437",
+                "userName": "Henry Harris",
+                "userRole": "Editor",
+                "alertShield": {
+                    "userStatus": {
+                        "showAlertShield": true,
+                        "alertShieldStatus": "Inactive",
+                        "alertShieldClass": "error"
+                    }
+                },
+                "tooltip": {
+                    "id": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "This is id tooltip message"
+                    },
+                    "createdDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-orange-100",
+                        "tooltipMsg": "Date when the user was created"
+                    },
+                    "modifiedDate": {
+                        "showTooltip": true,
+                        "tooltipIcon": "error_outline",
+                        "tooltipColor": "aa-green-100",
+                        "tooltipMsg": "Date when the user was last modified"
+                    }
+                },
+                "button": {
+                    "actions": {
+                        "showButton": true,
+                        "actionType": "saveCreatedDate",
+                        "buttonText": "Save created date",
+                        "buttonClass": "complete"
+                    }
+                },
+                "createdDate": "19 Apr 2021",
+                "modifiedDate": "07 Oct 2021",
+                "expanded": false,
+                "nestedRows": []
+            }
+        ]
+    }
+]

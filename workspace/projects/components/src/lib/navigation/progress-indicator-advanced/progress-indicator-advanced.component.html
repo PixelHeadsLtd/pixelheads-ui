@@ -1,0 +1,9 @@
+<section id="aa-progress-indicator-adv" class="indicator-item flex-group {{ progressClass }}">
+    <div *ngIf="showDescription" class="description">
+        <p class="box-shadow-light">{{description}}</p>
+        <div class="material-icons {{iconClass}}">pan_tool_alt</div>
+    </div>
+    <div class="bus-stop flex-group flex-column flex-center">
+        <ng-content></ng-content>
+    </div>
+</section>

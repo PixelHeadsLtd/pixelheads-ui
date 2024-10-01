@@ -1,0 +1,60 @@
+<header class="page-header flex-group space-between flex-align-center" [ngClass]="{ 'shift-aa-logo' : minimizeMenu }">
+  <!--LEFT SECTION -->
+  <nav>
+    <a 
+      class="flex-align-center app-name" 
+      title="Design Language homepage" routerLink="/"
+      (click)="onHomeLinkClick()"
+    >
+      <span class="material-icons {{appLogoColor}} {{appLogoBgColor}} margin-right-0-75">{{appIconName}}</span>
+      Design Language
+    </a>
+  </nav>
+
+  <!-- MOBILE MENU - HIDDEN FOR DESKTOP -->
+  <nav class="mobile-menu flex-group flex-end flex-nowrap">
+    <div *ngIf="mobileMenu" class="aa-blade-modal"></div>
+    <button (click)="toggleTheme()" class="material-icons">brightness_2</button>
+    <button (click)="toggleMobileMenu()" class="material-icons">menu</button>
+    <div class="avatar overflow-hidden width-2 height-2"
+      (click)="toggleLoginBlade()">
+      <div>
+        <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
+      </div>
+    </div>
+  </nav>
+
+  <!-- RIGHT SECTION NAV-->
+  <nav class="login-nav flex-group flex-end flex-align-center">
+    <ul>
+        <!-- colour theme toggle -->
+      <li class="change-theme-button animate-normal">
+        <aa-button class="height-2" *ngIf="!darkTheme" (buttonClick)="toggleTheme()" buttonClass="bg-aa-red-80"
+          fieldClass="boxed" [customIconsRound]="true" [showLabel]="false" buttonLabel="" buttonIcon="light_mode">
+        </aa-button>
+        <aa-button class="height-2" *ngIf="darkTheme" (buttonClick)="toggleTheme()"
+          buttonClass="bg-aa-orange-100 aa-white-100" fieldClass="boxed" [customIconsRound]="true" [showLabel]="false"
+          buttonLabel="" buttonIcon="dark_mode">
+        </aa-button>
+      </li>
+      <!-- search -->
+      <li class="cursor-pointer">
+        <app-dl-search></app-dl-search>
+      </li>
+      <!-- apps blade -->
+      <li class="cursor-pointer" (click)="toggleAppsBlade()">
+        <div class="apps margin-top-1">
+          <div class="material-icons">apps</div>
+        </div>
+      </li>
+      <!-- login blade -->
+      <li class="cursor-pointer" (click)="toggleLoginBlade()">
+        <div class="avatar">
+          <div>
+            <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>

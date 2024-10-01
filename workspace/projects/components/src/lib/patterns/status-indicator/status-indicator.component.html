@@ -1,0 +1,13 @@
+<section id="aa-status-indicator" class="status-indicator flex-group flex-start">
+    <div
+      *ngFor="let item of currentStatus; let i = index"
+      class="status-container"
+      [ngClass]="{'remove-line' : removeLine}"
+    >
+      <div
+        class="{{item.iconClass}} {{item.iconStatus}}"
+        title="{{item.iconTitle}}">
+        {{item.iconName}}
+        </div>
+    </div>
+  </section>

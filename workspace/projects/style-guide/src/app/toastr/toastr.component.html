@@ -1,0 +1,144 @@
+<section class="control-bar">
+    <h1>Toastr</h1>
+</section>
+
+<section class="content-container padding-0">
+
+    <section class="content-repeater flex-group">
+        <section class="flex-1 col-left flex-start">
+            <h2>Toastr</h2>
+            <div class="describe margin-bottom-1">
+                <p>Use this Toastr for server-side validation.</p>
+            </div>
+
+            <div class="flex-group flex-start">
+
+                <aa-toastr 
+                    (toastAdded)="handleToastAdded($event)" 
+                    (toastRemoved)="handleToastRemoved($event)"
+                    [zIndex]="100"
+                    [toastDelay]="5000"
+                >
+                </aa-toastr>
+
+                <aa-button
+                    (buttonClick)="showSuccessToaster()"
+                    fieldClass="label-hidden"
+                    buttonClass="bg-aa-green-100 aa-white-100 bd-aa-green-100"
+                    buttonText="Show success"
+                    >
+                </aa-button>
+                <aa-button
+                    (buttonClick)="showWarningToaster()"
+                    fieldClass="label-hidden"
+                    buttonClass="bg-aa-orange-100 aa-white-100 bd-aa-orange-100"
+                    buttonText="Show warning"
+                    >
+                </aa-button>
+                <aa-button
+                    (buttonClick)="showErrorToaster()"
+                    fieldClass="label-hidden"
+                    buttonClass="bg-aa-red-100 aa-white-100 bd-aa-red-100"
+                    buttonText="Show error"
+                    >
+                </aa-button>
+                <aa-button
+                    (buttonClick)="showInfoToaster()"
+                    fieldClass="label-hidden"
+                    buttonClass="bg-aa-light-blue-100 aa-white-100 bd-aa-light-blue-100"
+                    buttonText="Show info"
+                    >
+                </aa-button>
+            </div>
+        </section>
+
+        <section class="flex-2 col-right flex-start">
+            <table class="half-width">
+                <caption>Attributes</caption>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Attribute</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+                            <h3 class="margin-bottom-0">Add the below markup to your app.component.html</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Article</td>
+                        <td datalabel="Attribute">aa-toastr</td>
+                        <td datalabel="Type">class</td>
+                        <td datalabel="Default">aa-toastr</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Section repeater</td>
+                        <td datalabel="Attribute">aa-toastr-content</td>
+                        <td datalabel="Type">class</td>
+                        <td datalabel="Default">aa-toastr-content</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Section repeater</td>
+                        <td datalabel="Attribute">toast.type</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">success, warning, error, info</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Div</td>
+                        <td datalabel="Attribute">material-icons</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.icon</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">H3</td>
+                        <td datalabel="Attribute">N/A</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.title</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Paragraph</td>
+                        <td datalabel="Attribute">N/A</td>
+                        <td datalabel="Type">String</td>
+                        <td datalabel="Default">toast.message</td>
+                    </tr>
+                    <tr>
+                        <td datalabel="Element">Button</td>
+                        <td datalabel="Attribute">Click event</td>
+                        <td datalabel="Type">Method</td>
+                        <td datalabel="Default">remove(i)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+                <span class="material-icons">visibility</span><span>View gist</span>
+            </button>
+        </nav>
+    </section>
+
+    <aa-blade
+        [blockPageUI]="false"
+        [toggleBlade]="toggleBlade"
+        [suppressAutoClose]="false"
+        topPosition="3.5rem"
+        [zIndex]="999999"
+        bladeSize="one-column-width"
+        bladeHeading="Gist"
+        [enableIcon]="true"
+        iconName="table_rows"
+        (bladeOpen)="bladeIsOpen($event)"
+    >
+        <article class="blade-content">
+            <a href="https://gist.github.com/angloux/1cc8971c036b29d7c76a36ec92b7e583" target="_blank">View Gist on GitHub</a>
+            <app-gist src="angloux/1cc8971c036b29d7c76a36ec92b7e583"></app-gist>
+        </article>
+    </aa-blade>
+
+</section>

@@ -1,0 +1,219 @@
+$colour: (
+  box-shadow-light:                     rgb(14, 14, 14),
+  box-shadow:                           rgb(14, 14, 14),
+  box-shadow-strong:                    rgb(14, 14, 14),
+  tour-hover:                           rgb(110, 62, 106),
+  tour-shadow:                          rgba(92, 30, 128, 0.15),
+  dl-gradient-light:                    rgb(39, 39, 39),
+  dl-gradient-dark:                     rgb(0, 0, 0),
+  gradient-blue-start:                  rgb(2, 76, 146) 0%,
+  gradient-blue-middle:                 rgb(19, 109, 161) 50%,
+  gradient-blue-end:                    rgb(12, 166, 209) 100%,
+  aa-blue-100-overlay:                  rgba(14, 14, 14, .6),
+    
+  // TRANSITIONAL COLOURS
+  trans-blue-to-white:                   _palette(aa-white-100),
+  trans-blue-to-grey:                   rgb(14, 14, 14),
+  trans-blue-to-orange:                  _palette(aa-orange-100),
+  trans-blue-to-black:                  rgb(14, 14, 14),
+  trans-light-blue-to-white:             _palette(aa-white-100),
+  trans-light-blue-5-to-grey:           rgb(14, 14, 14),
+  trans-light-blue-10-to-blue-dark:     rgb(0, 9, 14),
+  trans-light-blue-to-orange:            _palette(aa-orange-100),
+  trans-light-blue-to-blue-light:       rgb(75, 174, 222),
+  trans-green-5-to-green-dark:          rgb(0, 5, 4),
+  trans-orange-10-to-orange-dark:       rgb(15, 9, 0),
+  trans-red-5-to-red-dark:              rgb(26, 0, 8),
+  trans-grey-2-to-black:                rgb(24, 24, 24),
+  trans-grey-5-to-grey-dark:            rgb(51, 51, 51),
+  trans-grey-5-to-plum-dark:            rgb(66, 43, 67),
+  trans-white-to-black:                 rgb(27, 28, 34),
+  trans-white-to-blue:                   _palette(aa-blue-100),
+  trans-pink-to-plum:                   rgb(66, 43, 67),
+
+  // FORCED COLOURS
+  force-white:                           _palette(aa-white-100),
+  force-blue:                            _palette(aa-blue-100),
+  force-red:                             _palette(aa-red-100),
+  force-orange:                          _palette(aa-orange-100),
+  force-green:                           _palette(aa-green-100),
+
+  // WHITE
+  aa-white-100:                         rgb(14, 14, 14),
+  white:                                 _palette(white-50),
+  white-50:                              _palette(white-50),
+  white-100:                             _palette(aa-white-100),
+
+  // GREY
+  aa-black-100:                          _palette(aa-white-100),
+  aa-grey-100:                          rgb(221, 221, 221),
+  aa-grey-50:                           rgb(163, 163, 165),
+  aa-grey-25:                           rgb(104, 105, 108),
+  aa-grey-10:                           rgb(66, 66, 71),
+  aa-grey-5:                            rgb(47, 48, 54),
+  aa-grey-2:                            rgb(31, 32, 38),
+
+  // BLUE
+  aa-blue-100:                          rgb(117, 153, 227),
+  aa-blue-70:                           rgb(98, 133, 203),
+  aa-blue-60:                           rgb(71, 99, 156),
+  aa-blue-50:                           rgb(56, 77, 118),
+  aa-blue-40:                           rgb(43, 58, 89),
+   
+  // LIGHT BLUE
+  aa-light-blue-100:                    rgb(0, 117, 176),
+  aa-light-blue-80:                     rgb(8, 102, 150),
+  aa-light-blue-60:                     rgb(15, 86, 125),
+  aa-light-blue-50:                     rgb(19, 78, 111),
+  aa-light-blue-40:                     rgb(23, 70, 98),
+  aa-light-blue-30:                     rgb(27, 62, 86),
+  aa-light-blue-15:                     rgb(28, 58, 79),
+  aa-light-blue-10:                     rgb(32, 50, 66),
+  aa-light-blue-5:                      rgb(34, 47, 60),
+   
+  // RED
+  aa-red-100:                           rgb(255, 79, 114),
+  aa-red-80:                            rgb(212, 27, 64),
+  aa-red-50:                            rgb(170, 31, 61),
+  aa-red-25:                            rgb(136, 36, 63),
+  aa-red-10:                            rgb(94, 29, 48),
+  aa-red-8:                             rgb(78, 32, 47),
+  aa-red-5:                             rgb(54, 36, 47),
+  aa-red-3:                             rgb(46, 38, 47),
+  
+  // GREEN
+  aa-green-100:                         rgb(0, 135, 112),
+  aa-green-80:                          rgb(3, 111, 93),
+  aa-green-50:                          rgb(7, 75, 63),
+  aa-green-25:                          rgb(10, 44, 38),
+  aa-green-15:                          rgb(12, 32, 29),
+  aa-green-5:                           rgb(13, 20, 19),
+
+  // LIME
+  aa-lime-100:                          rgb(170,165,22),
+  aa-lime-80:                           rgb(139,135,21),
+  aa-lime-50:                           rgb(92,90,18),
+  aa-lime-25:                           rgb(53,51,16),
+  aa-lime-15:                           rgb(37,37,15),
+  aa-lime-5:                            rgb(22,21,14),
+   
+  // ORANGE
+  aa-orange-100:                        rgb(233, 131, 0),
+  aa-orange-80:                         rgb(189, 108, 3),
+  aa-orange-50:                         rgb(151, 90, 14),
+  aa-orange-25:                         rgb(109, 69, 20),
+  aa-orange-10:                         rgb(69, 48, 27),
+  aa-orange-5:                          rgb(48, 38, 31),
+  
+  // PLU
+  aa-plum-100:                          rgb(126, 81, 122),
+  aa-plum-80:                           rgb(106, 70, 103),
+  aa-plum-50:                           rgb(82, 60, 84),
+  aa-plum-25:                           rgb(60, 49, 66),
+  aa-plum-15:                           rgb(51, 45, 58),
+  aa-plum-5:                            rgb(42, 41, 51),
+  
+  // BURGUNDY
+  aa-burgundy-100:                      rgb(179, 2, 92),
+  aa-burgundy-80:                       rgb(148, 7, 79),
+  aa-burgundy-50:                       rgb(109, 20, 69),
+  aa-burgundy-25:                       rgb(73, 30, 58),
+  aa-burgundy-15:                       rgb(59, 33, 54),
+  aa-burgundy-5:                        rgb(45, 37, 50),
+
+  // OCHRE
+  aa-ochre-100:                          _palette(aa-ochre-100),
+  aa-ochre-20:                           _palette(aa-ochre-20),
+  aa-ochre-8:                           rgb(55, 39, 23),
+
+  // PINK
+  aa-pink-100:                           _palette(aa-red-80),
+  aa-pink-50:                            _palette(aa-red-50),
+  aa-pink-25:                           rgb(63, 40, 61),
+  
+  // Yellow
+  aa-yellow-100:                         _palette(aa-yellow-100),
+  aa-yellow-50:                          _palette(aa-yellow-50),
+   
+  // MIXED
+  aa-blue-sky-100:                       _palette(aa-blue-sky-100),
+  aa-brown-100:                          _palette(aa-brown-100),
+  white-transparency:                   rgba(255, 255, 255, 0.26),
+
+  // TINTS FOR LEFT NAV ONLY
+  tinted-red:                            rgba(198, 12, 49, 0.3),
+  tinted-pink:                           rgba(255, 161, 196, 0.2),
+  tinted-green:                          rgba(0, 135, 112, 0.3),
+  tinted-lime:                           rgba(170, 165, 22, 0.3),
+  tinted-blue:                           rgba(0, 39, 118, 0.5),
+  tinted-dark-blue:                      rgba(0, 39, 118, 0.7),
+  tinted-blue-sky:                       rgba(54, 147, 205, 0.1),
+  tinted-orange:                         rgba(233, 131, 0, 0.25),
+  tinted-plum:                           rgba(126, 81, 122, 0.4),
+  tinted-ochre:                          rgba(215, 150, 86, 0.1),
+  tinted-light-blue:                     rgba(0, 117, 176, 0.3),
+  tinted-burgundy:                       rgba(126, 81, 122, 0.1),
+  tinted-brown:                          rgba(156, 95, 14, 0.25),
+  tinted-grey:                           rgba(255, 255, 255, 0.1),
+  tinted-white:                          rgba(0, 0, 0, 0.6),
+);
+
+@mixin chevron-down {
+  background-image: url('#{$icon-path}/keyboard_arrow_down-dark-24px.svg');
+  background-repeat: no-repeat;
+  background-position: center right .5rem;
+}
+
+@mixin view-switch {
+  background-image: url('#{$icon-path}/icon-grid-small-wht.svg');
+}
+
+@mixin view-switch-large {
+  background-image: url('#{$icon-path}/icon-grid-large-wht.svg');
+}
+
+@mixin view-switch-list {
+  background-image: url('#{$icon-path}/icon-grid-list-wht.svg');
+}
+
+@mixin view-switch-list-alt {
+  background-image: url('#{$icon-path}/icon-grid-list-alt-wht.svg');
+}
+
+@mixin dl-graphic {
+  background-image: url('#{$icon-path}/graphic-dark.svg');
+}
+
+@mixin draft-bg-image {
+  background-image: url("#{$icon-path}/icon-draft-wht.svg");
+}
+
+@mixin search-icon {
+  background-image: url("#{$icon-path}/icon-search-orange.svg");
+  background-repeat: no-repeat;
+  &:focus {
+    background-image: url("#{$icon-path}/icon-search-white.svg");
+  }
+}
+
+@mixin face-very-dissatisfied-blk {
+  background-image: url("#{$icon-path}/face-very-dissatisfied-blk.svg");
+}
+
+@mixin face-dissatisfied-blk {
+  background-image: url("#{$icon-path}/face-dissatisfied-blk.svg");
+}
+
+@mixin face-neutral-blk {
+  background-image: url("#{$icon-path}/face-neutral-blk.svg");
+}
+
+@mixin face-satisfied-blk {
+  background-image: url("#{$icon-path}/face-satisfied-blk.svg");
+}
+
+@mixin face-very-satisfied-blk {
+  background-image: url("#{$icon-path}/face-very-satisfied-blk.svg");
+}
+
+$icon-alert-error: '#{$icon-path}/icon-alert-white.svg';

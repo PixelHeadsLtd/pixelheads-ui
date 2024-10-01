@@ -1,0 +1,222 @@
+<div class="tbl-container dynamic-table-wrapper position-relative overflow-hidden padding-top-1-25">
+    <nav class="position-absolute top-0 right-1">
+      <div class="flex-group flex-end">
+        <a 
+          *ngIf="hasFilters()" 
+          (click)="clearAllFilters()" 
+          class="cursor-pointer"
+          >
+            Clear all filters
+        </a>
+      </div>
+    </nav>
+
+    <div
+      #manageSlider
+      [ngStyle]="{ 'left': showManageSlider ? 'calc(100% - ' + sliderWidth + ')' : '100%' }"
+      [ngClass]="{'box-shadow' : showManageSlider}"
+      class="manage-slider position-absolute"
+      >
+        <ul class="manage-columns padding-left-0">
+        <li *ngFor="let column of columns" class="flex-group flex-start nowrap">
+            <input type="checkbox" [checked]="column.visible" (change)="toggleColumnVisibility(column)" />
+            <span>{{ column.text }}</span>
+        </li>
+        </ul>
+    </div>
+
+    <div 
+      class="tbl-fixed" 
+      style="max-height: 15rem"
+      [ngStyle]="{
+        'height' : setHeight,
+        'min-height' : setMinHeight,
+        'max-height' : setMaxHeight,
+      }"
+    >
+      <table class="dynamic-table">
+        <thead>
+          <tr
+            cdkDropList
+            cdkDropListOrientation="horizontal"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)"
+            cdkDropListAutoScrollStep="10"
+          >
+            <th 
+              class="padding-left-0 padding-right-0 width-0" 
+              *ngIf="expandableRows"
+              >
+              <!---->
+            </th>
+            <th
+              *ngFor="let column of columns; let i = index"
+              [class.has-value]="filterValues[column.key]"
+              [class.display-none]="!column.visible"
+              cdkDrag
+              cdkDragLockAxis="x"
+              (mousedown)="$event.stopPropagation()"
+              resizable
+            >
+              <span class="flex-group space-between flex-nowrap">
+                <span>{{column.text}}</span>
+                <span class="header-controls flex-group flex-start">
+                  <span 
+                    (click)="showFilter(i, $event)"
+                    class="filter material-icons xsmall margin-right-0-25 cursor-pointer"
+                  >
+                    filter_list
+                  </span>
+                  <span
+                    (click)="sortData(column.key)"
+                    class="sorting material-icons xsmall cursor-pointer"
+                    [class.active]="isSorted(column.key)"
+                    [class.desc]="isSorted(column.key) && sortOrder === 'desc'"
+                    >
+                    arrow_upward
+                  </span>
+                </span>
+              </span>
+              <div *ngIf="filterIndex === i" class="input-filter">
+                <span (click)="clearFilter(i)" class="material-icons close-icon">close</span>
+                <input
+                  class="width-unset"
+                  type="text"
+                  #filterInput
+                  [(ngModel)]="filterValues[column.key]"
+                  (ngModelChange)="updateFilter(column.key, $event)"
+                />
+              </div>
+            </th>
+            <th 
+              (click)="toggleManageSlider($event)" 
+              class="cursor-pointer menu-toggle padding-left-0-75 width-0"
+            >
+              <div  
+                class="material-icons xsmall"
+                [class.menu-showing]="showManageSlider">
+                  menu
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          cdkDropList
+          cdkDropListOrientation="vertical"
+          (cdkDropListDropped)="dropRow($event)"
+          cdkDropListAutoScrollStep="10"
+        >
+          <ng-container *ngFor="let row of getPaginatedRows(); let rowIndex = index">
+            <tr cdkDrag>
+              <td 
+                *ngIf="expandableRows" 
+                class="toggle-chevron cursor-pointer width-0 padding-left-0 padding-right-0" 
+                (click)="toggleRowExpansion(row)"
+                >
+                <span 
+                  class="material-icons small padding-left-0-75"
+                  [class.row-open]="row.expanded"
+                  >
+                  {{ row.expanded ? 'expand_more' : 'chevron_right' }}
+                </span>
+              </td>
+              <td 
+                *ngFor="let column of columns; let colIndex = index" 
+                [class.display-none]="!column.visible"
+                [ngStyle]="{ 'padding-right': column.tooltip ? '2.25rem' : 'initial' }"
+              >
+                <!-- Default if no HTML elements -->
+                <span 
+                  *ngIf="
+                    !row.alertShield[column.key]?.showAlertShield && 
+                    !row.button[column.key]?.showButton"
+                  >
+                    {{row[column.key]}}
+                </span>
+                <!---------------------------------------------------------------->
+                <!----------------------- HTML elements -------------------------->
+                <!---------------------------------------------------------------->
+
+                <!-- tooltip -->
+                <div 
+                  *ngIf="row.tooltip[column.key]?.showTooltip" 
+                  [aaTooltip]="row.tooltip[column.key]?.tooltipMsg"
+                  class="material-icons small tooltip {{row.tooltip[column.key]?.tooltipColor}}">
+                    {{row.tooltip[column.key]?.tooltipIcon}}
+                </div>
+                
+                <!-- alert shield -->
+                <div 
+                  *ngIf="row.alertShield && column.key === 'alertShield.userStatus.alertShieldStatus'" 
+                  class="alert-shield {{row.alertShield.userStatus?.alertShieldClass}}">
+                  {{row.alertShield.userStatus?.alertShieldStatus}}
+                </div>
+
+                <!-- button -->
+                <button 
+                  *ngIf="row.button && column.key === 'button.actions.buttonText'"
+                  class="small"
+                  [ngClass]="row.button.actions?.buttonClass" 
+                  (click)="handleButtonClick(rowIndex, colIndex, row.button.actions?.actionType)">
+                  {{row.button.actions?.buttonText}}
+                </button>
+
+              </td>
+              <td></td>
+            </tr>
+            <!--------------------------------------------------------->
+            <!--------------------- Expanded row ---------------------->
+            <!--------------------------------------------------------->
+            <ng-container *ngIf="row.expanded && expandableRows">
+              <tr *ngFor="let nestedRow of getNestedPaginatedRows(row); let nestedRowIndex = index">
+                <td class="padding-left-0 padding-right-0 width-0" *ngIf="expandableRows"><!----></td>
+                <td 
+                  *ngFor="let column of columns; let colIndex = index" 
+                  [class.display-none]="!column.visible" 
+                  [ngStyle]="{ 'padding-right': column.tooltip ? '2.25rem' : 'initial' }"
+                >
+                  <span 
+                    *ngIf="
+                      !nestedRow.alertShield[column.key]?.showAlertShield && 
+                      !nestedRow.button[column.key]?.showButton"
+                    >
+                      {{nestedRow[column.key]}}
+                  </span>
+
+                    <!-- tooltip -->
+                  <div 
+                    *ngIf="nestedRow.tooltip[column.key]?.showTooltip" 
+                    [aaTooltip]="nestedRow.tooltip[column.key]?.tooltipMsg"
+                    class="material-icons small tooltip {{nestedRow.tooltip[column.key]?.tooltipColor}}">
+                      {{nestedRow.tooltip[column.key]?.tooltipIcon}}
+                  </div>
+
+                  <!-- alert shield -->
+                  <div 
+                    *ngIf="nestedRow.alertShield && column.key === 'alertShield.userStatus.alertShieldStatus'" 
+                    class="alert-shield {{nestedRow.alertShield.userStatus?.alertShieldClass}}">
+                    {{nestedRow.alertShield.userStatus?.alertShieldStatus}}
+                  </div>
+
+                  <!-- button -->
+                  <button 
+                    *ngIf="nestedRow.button && column.key === 'button.actions.buttonText'" 
+                    class="small"
+                    [ngClass]="nestedRow.button.actions?.buttonClass" 
+                    (click)="handleButtonClick(rowIndex, colIndex, nestedRow.button.actions?.actionType)">
+                    {{nestedRow.button.actions?.buttonText}}
+                  </button>
+                </td>
+                <td><!----></td>
+              </tr>
+            </ng-container>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="enablePagination" class="pagination flex-align-center flex-start bg-aa-white-100">
+      <button (click)="changePage(currentPage - 1)" class="material-icons small" [disabled]="currentPage === 1">chevron_left</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button (click)="changePage(currentPage + 1)" class="material-icons small" [disabled]="currentPage === totalPages">chevron_right</button>
+    </div>
+  </div>

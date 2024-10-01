@@ -1,0 +1,37 @@
+
+<!-- ROUTER-OUTLET -->
+<nav id="aa-tab-sec-nav-router-outlet" *ngIf="routerOutletSecondary" class="tab-navigation-secondary">
+  <ul>
+    <ng-content select="[list-items]"></ng-content>
+  </ul>
+</nav>
+
+<!-- NG-TEMPLATE ONLY -->
+<nav id="aa-tab-nav-sec-ng-template" *ngIf="ngTemplate" class="tab-navigation-secondary">
+  <ul>
+    <ng-container *ngFor="let tab of contentTabs">
+      <li>
+        <a
+          class="{{tabColour}} flex-group flex-align-center flex-start"
+          *ngIf="!isActive(tab) && !tab.tabDisabled"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
+          (click)="onTabClicked(tab)">
+          {{ tab.tabName }}
+          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>
+        </a>
+        <a
+          class="{{tabActiveColour}} flex-group flex-align-center flex-start"
+          *ngIf="isActive(tab) && !tab.tabDisabled"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
+          (click)="onTabClicked(tab)">
+          {{ tab.tabName }}
+          <a *ngIf="tab.enableCloseSecondary" (click)="onCloseTabSecondary($event, tab.tabId)" class="anchor-close"></a>
+        </a>
+        <span *ngIf="tab.tabDisabled" class="tab-disabled">{{ tab.tabName }}</span>
+      </li>
+    </ng-container>
+    <ng-content></ng-content>
+  </ul>
+</nav>

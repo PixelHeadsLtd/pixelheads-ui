@@ -1,0 +1,10 @@
+main.main-content {
+    padding-top: 3.5rem;
+}
+
+// mobile
+@media screen and (max-width: _breakpoint(breakpoint-720)) {
+    main {
+        padding-left: 0 !important;
+    }
+}

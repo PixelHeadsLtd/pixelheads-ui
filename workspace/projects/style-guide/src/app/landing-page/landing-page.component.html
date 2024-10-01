@@ -1,0 +1,1145 @@
+<section #top class="landing-page overflow-hidden" [ngClass]="{'sticky': isSticky}">
+  <article class="dl-banner flex-group space-between">
+    <div class="margin-bottom-2 search-section position-relative z-index-1">
+      <h1 class="white-100 display-block margin-top-1-25 margin-bottom-2">
+        <span class="padding-right-0-75 margin-right-0">Welcome to Design Language</span>
+        <img class="happy-chappy" src="./assets/images/happy-chappy-wht.gif" />
+      </h1>
+      <section class="getting-started">
+        <h2 class="margin-bottom-0-5 margin-top-1-25 force-yellow">What is Design Language?</h2>
+        <p class="force-white max-width-30 margin-bottom-1-5">
+          Design Language is a mandatory resource for IM project development. Please do not use
+          any third-party components unless they are listed under the 'Third-party components'
+          section, found in the <span class="aa-yellow-100"><span class="fa-regular fa-hand-point-left"></span> left navigation menu </span>
+        </p>
+        <div class="margin-left-0-25 flex-group flex-start">
+          <div>
+            <aa-project-tour
+              (panelIsClosed)="incrementTourCount()"
+              [tourMode]="tourCount===0"
+              topPos="-1.75rem"
+              rightPos="auto"
+              leftPos="calc(100% + 1rem)"
+              [zIndex]="1"
+              panelWidth="21rem"
+              [arrowLeft]="true"
+              arrowPos="2rem"
+              [enableHeading]="true"
+              tourModeHeading="Setting up Design Language"
+              tourModeBody="
+                Before you can use the Design Language component library, you'll need to install the Styles and Components node packages.
+                Click this link and it will open installation instructions in the blade to the right of this page
+              "
+            >
+              <ng-container nested-component>
+                <aa-button
+                  [customIcons]="true"
+                  (buttonClick)="bladeIsOpen(true); bladeHeading='Setting up Design Language'"
+                  buttonId="buttonId"
+                  buttonClass="custom-icons blue-sky hover-light-blue margin-bottom-0-5"
+                  fieldClass="boxed"
+                  [showLabel]="false"
+                  buttonLabel="Custom icons"
+                  buttonText="Set up Design Language"
+                  buttonIcon="settings"
+                  [showCount]="false"
+                  [count]="10"
+                  countColor="blue">
+                </aa-button>
+              </ng-container>
+              <ng-container tour-navigation>
+                <button class="read-only"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+                <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+                <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+                <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+                <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+                <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+                <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+                <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+                <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+              </ng-container>
+            </aa-project-tour>
+          </div>
+
+          <aa-button
+            (buttonClick)="setTourCount(0)"
+            [customIcons]="true"
+            buttonId="buttonId"
+            buttonClass="custom-icons bg-aa-plum-100 hover-plum tour-btn"
+            fieldClass="boxed label-hidden margin-bottom-1"
+            buttonLabel="Custom icons"
+            buttonText="Quick tour"
+            buttonIcon="school">
+          </aa-button>
+        </div>
+      </section>
+
+    </div>
+    <div class="graphic">
+      <app-rotating-sphere class="rotating-sphere"></app-rotating-sphere>
+    </div>
+    <div class="features margin-bottom-2">
+      <section class="flex-group flex-start">
+        <nav class="margin-right-2">
+          <h3
+            class="
+              bg-force-blue-sky
+              force-white
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+            "
+          >
+            Latest packages
+          </h3>
+          <a
+            (click)="showOverlay=!showOverlay; showReleaseNotes=true"
+            class="
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-orange-100 margin-right-0-5">event_note</div>
+            <span>Release notes</span>
+          </a>
+
+          <aa-project-tour
+            (panelIsClosed)="incrementTourCount()"
+            [tourMode]="tourCount===1"
+            topPos="-1.4rem"
+            rightPos="calc(100% + 1.5rem)"
+            leftPos="auto"
+            [zIndex]="1"
+            panelWidth="20rem"
+            [arrowRight]="true"
+            arrowPos="2rem"
+            [enableHeading]="true"
+            tourModeHeading="Latest node packages"
+            tourModeBody="
+              These links will take you to Azure DevOps Artifacts where you can get the latest versions of the Design Language Styles and Components.
+              Always get the very latest versions so that you're always up-to-date
+            "
+          >
+            <ng-container nested-component>
+              <a
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-pink-100 margin-right-0-5">star</div>
+                <span>Latest Styles</span>
+              </a>
+              <a
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-blue-100 margin-right-0-5">star</div>
+                <span>Latest Components</span>
+              </a>
+              <a
+                href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/versions" target="_blank" class="anchor-small"
+                class="
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-burgundy-100 margin-right-0-5">star</div>
+                <span>Latest Anglo Framework</span>
+              </a>
+            </ng-container>
+            <ng-container tour-navigation>
+              <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+              <button class="read-only"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+              <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+              <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+              <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+              <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+              <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+              <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+              <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+            </ng-container>
+          </aa-project-tour>
+        </nav>
+        <nav>
+          <h3
+            class="
+              bg-force-burgundy
+              force-white
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+            "
+          >
+            Useful links
+          </h3>
+
+          <aa-project-tour
+            (panelIsClosed)="incrementTourCount()"
+            [tourMode]="tourCount===2"
+            topPos="-1.5rem"
+            rightPos="calc(100% + 1.5rem)"
+            leftPos="auto"
+            [zIndex]="1"
+            panelWidth="20rem"
+            [arrowRight]="true"
+            arrowPos="2rem"
+            [enableHeading]="true"
+            tourModeHeading="Page templates"
+            tourModeBody="
+              Click here to choose from a collection of templates. This is helpful because it
+              provides the correct structure in order for Flex to work properly, particulary to ensure
+              layout consistency and responsivity
+            "
+          >
+            <ng-container nested-component>
+              <a
+                routerLink="/page-templates"
+                (click)="goToPageTemplatesNav()"
+                class="
+                  cursor-pointer
+                  flex-group
+                  flex-start
+                  flex-align-center
+                  decoration-none
+                  bg-aa-white-100
+                  padding-x-0-75
+                  padding-y-0-5
+                  border-radius-0-25
+                  margin-bottom-0-5
+                  hover-light-grey
+                "
+              >
+                <div class="material-icons small aa-green-100 margin-right-0-5">view_quilt</div>
+                <span>Page templates</span>
+              </a>
+            </ng-container>
+            <ng-container tour-navigation>
+              <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+              <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+              <button class="read-only"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+              <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+              <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+              <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+              <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+              <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+              <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+            </ng-container>
+          </aa-project-tour>
+
+          <a
+            routerLink="/flex"
+            (click)="openLayoutNav()"
+            class="
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-orange-100 margin-right-0-5">view_week</div>
+            <span>Help using Flex</span>
+          </a>
+
+          <a
+            (click)="showOverlay=!showOverlay; showReleaseNotes=false; showSupportedBrowsers=true"
+            class="
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-red-100 margin-right-0-5">public</div>
+            <span>Which browsers do we support?</span>
+          </a>
+
+          <a
+            href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank"
+            class="
+              cursor-pointer
+              flex-group
+              flex-start
+              flex-align-center
+              decoration-none
+              bg-aa-white-100
+              padding-x-0-75
+              padding-y-0-5
+              border-radius-0-25
+              margin-bottom-0-5
+              hover-light-grey
+            "
+          >
+            <div class="material-icons small aa-lime-100 margin-right-0-5">insert_emoticon</div>
+            <span>Material Icons reference</span>
+          </a>
+        </nav>
+      </section>
+    </div>
+  </article>
+  <article class="quick-links flex-center">
+    <button (click)="scrollToElement(animations)" class="tertiary">Animations</button>
+    <button (click)="scrollToElement(elements)" class="tertiary">Elements</button>
+    <button (click)="scrollToElement(layout)" class="tertiary">Layout</button>
+    <button (click)="scrollToElement(navigation)" class="tertiary">Navigation</button>
+    <button (click)="scrollToElement(patterns)" class="tertiary">Patterns</button>
+    <button (click)="scrollToElement(widgets)" class="tertiary">Widgets</button>
+  </article>
+
+
+  <!-- INTRODUCTION -->
+  <section class="content-repeater dl-info flex-group padding-top-1 padding-bottom-2 bd-bottom-1 bd-bottom-dashed bd-pink bd-1">
+    <div>
+      <h3><strong class="number">1.</strong> Starting a new project?</h3>
+      <p>
+        Design Language is a mandatory resource for building IM Marketing applications. There are a few exceptions
+        where we rely on 3rd party components, these are listed under the 'Third-party components' section
+        found in the left-hand navigation
+      </p>
+    </div>
+
+    <div>
+      <h3><strong class="number">2.</strong> Can't find a suitable component?</h3>
+      <p>
+        If for any reason you cannot find a suitable component for your project, or you need a modification
+        to an existing component. Please reach out to the <a href="mailto:michael.king@angloamerican.com.com?cc=claire.burns@angloamerican.com, &subject=Design Language Request">UX Team</a> or add a request in the Slack 'core-ui' channel
+      </p>
+    </div>
+
+    <div>
+      <h3><strong class="number">3.</strong> Where do I begin?</h3>
+      <p>After you've
+        <a (click)="bladeIsOpen(true); bladeHeading='Setting up Design Language'"
+        class="anchor-small cursor-pointer">set up Design Language</a>, you'll be able to use
+        the components listed below. If you need sample markup, please visit the
+         <a routerLink="/page-templates" (click)="goToPageTemplatesNav()">Page templates</a>.
+         <strong class="aa-red-100 position-relative padding-right-1-5">
+          Do not use Bootstrap
+          <aa-tooltip
+            class="position-absolute"
+            [includeLabel]="false"
+            [includeLegend]="false"
+            [isError]="true"
+            [customIcon]="true"
+            iconName="error"
+            setMinWidth="15rem"
+            setMaxWidth="20rem"
+            ypos="top"
+            xpos="left"
+            [zIndex]="1"
+          >
+            <h4>Bootstrap</h4>
+            <p>
+              If you see bootstrap in your package.json, please uninstall it
+              as it breaks our css. We use 'Flex' for layout and mobile adaption.
+            </p>
+            <p>The only exception is 'ng-bootstrap' which is allowed</p>
+          </aa-tooltip>
+        </strong> instead
+        we use <a routerLink="/flex" (click)="openLayoutNav()">Flex</a> which is a far cleaner approach, easy to use and very effective for responsive layouts
+      </p>
+    </div>
+
+    <div>
+      <h3><strong class="number">4.</strong> How do I use a component in my project?</h3>
+      <p>When you've found the component you want to use, either by browsing the full list below, using the left navigation or Search facility, click on the <strong class="aa-red-100">View gist</strong> button to access the markup. You'll
+        also find an Attributes table on all the component pages
+      </p>
+    </div>
+  </section>
+
+  <!-- ANIMATIONS -->
+  <section class="content-repeater flex-group">
+    <div #animations class="anchor-point"></div>
+    <div class="flex-1 col-left flex-start">
+      <h1>Animations</h1>
+      <p>Animated loading spinners are available here for your project. We currently have
+        two versions, one for in-line loading whereby other elements such as form
+        submissions are still accessible and a second "page" version that blocks any
+        interactions until the full page has loaded. Be sure to use the correct version.
+        </p>
+    </div>
+    <div class="flex-2 col-right flex-group flex-end margin-top-1">
+      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner">
+        <div class="material-icons aa-red-100">rotate_right</div>
+        <p>Spinner inline</p>
+      </a>
+      <a (click)="openAnimationsNav()" class="call-to-action flex-center" routerLink="/loading-spinner-page">
+        <div class="material-icons aa-red-100 small">published_with_changes</div>
+        <p>Spinner page</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- ELEMENTS AND INPUTS -->
+  <section class="content-repeater flex-group">
+    <div #elements class="anchor-point"></div>
+    <div class="flex-1 col-left flex-start">
+      <aa-project-tour
+        (panelIsClosed)="incrementTourCount()"
+        [tourMode]="tourCount===3"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
+        [zIndex]="1"
+        panelWidth="21rem"
+        [arrowLeft]="true"
+        arrowPos="2rem"
+        [enableHeading]="true"
+        tourModeHeading="Elements and Inputs"
+        tourModeBody="
+          Here is everything you'll need to build your forms including anchors, buttons, selects, checkbox's etc.
+          If there's something you need not listed here and not under the `Third-party components` section in the left navigation,
+          please let the UX team know and we'll create it for you.
+        "
+      >
+        <ng-container nested-component>
+          <h1>Elements and Inputs</h1>
+        </ng-container>
+        <ng-container tour-navigation>
+          <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+          <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+          <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+          <button class="read-only"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+          <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+          <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+          <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+          <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+          <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+        </ng-container>
+      </aa-project-tour>
+      <p>We have a selection of elements and inputs available including Buttons, Selects, Tables,
+        Checkbox's etc. These have been styled specifically inline with the Anglo American brand
+        guidelines. We try to avoid third party components but there are two exceptions to the rule,
+        these are NG-Select and AG-Grid. However, please only use these if the project requires
+        the features that are available with these particular components. Otherwise, always
+        stick to using native elements.
+        </p>
+    </div>
+    <div class="flex-2 col-right flex-group flex-end margin-top-1">
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/anchor">
+        <div class="material-icons aa-green-100 small">insert_link</div>
+        <p>Anchor</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/buttons">
+        <div class="material-icons aa-green-100">gamepad</div>
+        <p>Buttons</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/checkbox">
+        <div class="material-icons aa-green-100">check_box</div>
+        <p>Checkbox</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
+        <div class="material-icons aa-green-100">chat</div>
+        <p>Comments</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/field">
+        <div class="material-icons aa-green-100">view_stream</div>
+        <p>Field</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/fieldset">
+        <div class="material-icons aa-green-100">web</div>
+        <p>Fieldset</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/file-upload">
+        <div class="material-icons aa-green-100">backup</div>
+        <p>File upload</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input">
+        <div class="material-icons aa-green-100">wysiwyg</div>
+        <p>Input</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/multi-select">
+        <div class="material-icons aa-green-100">checklist</div>
+        <p>Multi-select</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-radio">
+        <div class="material-icons aa-green-100">radio_button_checked</div>
+        <p>Radio</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/range-slider">
+        <div class="material-icons aa-green-100">hdr_strong</div>
+        <p>Range slider</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/select">
+        <div class="material-icons aa-green-100">rule</div>
+        <p>Select</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/slider">
+        <div class="material-icons aa-green-100">toggle_off</div>
+        <p>Slider</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
+        <div class="material-icons aa-green-100">grid_on</div>
+        <p>Table</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-textarea">
+        <div class="material-icons aa-green-100">subject</div>
+        <p>Textarea</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/ticker">
+        <div class="material-icons aa-green-100">text_rotation_none</div>
+        <p>Ticker</p>
+      </a>
+      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/validation">
+        <div class="material-icons aa-green-100">fact_check</div>
+        <p>Validation</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- LAYOUT -->
+  <section class="content-repeater flex-group">
+    <div #layout class="anchor-point"></div>
+    <div class="flex-1 col-left flex-start">
+      <aa-project-tour
+        (panelIsClosed)="incrementTourCount()"
+        [tourMode]="tourCount===4"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
+        [zIndex]="1"
+        panelWidth="21rem"
+        [arrowLeft]="true"
+        arrowPos="2rem"
+        [enableHeading]="true"
+        tourModeHeading="Layout"
+        tourModeBody="
+          When it comes to forms, there are a few options you should stick with for presentatation. The most
+          commonly used is the blade, but we also have blade-bottom and blade-top for certain situations. Filter
+          is used often and sits at the top of the page below the control-bar. There's
+          also a handy section in Layout called Flex, this will provide you with flexbox fundamentals.
+        "
+      >
+        <ng-container nested-component>
+          <h1>Layout</h1>
+        </ng-container>
+        <ng-container tour-navigation>
+          <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+          <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+          <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+          <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+          <button class="read-only"><span class="material-icons">list_alt</span>How do I display form data?</button>
+          <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+          <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+          <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+          <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+        </ng-container>
+      </aa-project-tour>
+      <p>We use Flexbox for all our page layouts. We don't use Bootstrap under any
+        circumstances so avoid installing this. For managing form data please
+        use one of our blades. Your page layout and data will determine the type of
+        blade you should use but as a general rule, table data with multiple columns sits
+        best in the Blade bottom component and basic form data, inputs, selects etc sit
+        best inside the regular blade. Blade top is rarely used.
+        </p>
+    </div>
+    <div class="flex-2 col-right flex-group flex-end margin-top-1">
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade">
+        <div class="material-icons aa-blue-100 small">border_right</div>
+        <p>Blade</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade-bottom">
+        <div class="material-icons aa-blue-100">border_bottom</div>
+        <p>Blade bottom</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/blade-top">
+        <div class="material-icons aa-blue-100">border_top</div>
+        <p>Blade top</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/custom-wrapper">
+        <div class="material-icons aa-blue-100">check_box_outline_blank</div>
+        <p>Custom wrapper</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/filter">
+        <div class="material-icons aa-blue-100">filter_alt</div>
+        <p>Filter</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/flex">
+        <div class="material-icons aa-blue-100">view_week</div>
+        <p>Flex</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/footer">
+        <div class="material-icons aa-blue-100">call_to_action</div>
+        <p>Footer</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/header">
+        <div class="material-icons aa-blue-100 flip-y">call_to_action</div>
+        <p>Header</p>
+      </a>
+      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/ui-block">
+        <div class="material-icons aa-blue-100">block</div>
+        <p>UI block</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- NAVIGATION -->
+  <section class="content-repeater flex-group">
+    <div #navigation class="anchor-point"></div>
+    <div class="flex-1 col-left flex-start">
+      <aa-project-tour
+        (panelIsClosed)="incrementTourCount()"
+        [tourMode]="tourCount===5"
+        topPos="-1.5rem"
+        rightPos="auto"
+        leftPos="calc(100% + 2rem)"
+        [zIndex]="1"
+        panelWidth="21rem"
+        [arrowLeft]="true"
+        arrowPos="2rem"
+        [enableHeading]="true"
+        tourModeHeading="Navigation"
+        tourModeBody="
+          Here you'll find all our navigational conponents. Again, everything you need should be here, if it's not please
+          contact the UX team.
+        "
+      >
+        <ng-container nested-component>
+          <h1>Navigation</h1>
+        </ng-container>
+        <ng-container tour-navigation>
+          <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+          <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+          <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+          <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+          <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+          <button class="read-only"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+          <button (click)="setTourCount(6); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+          <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+          <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+        </ng-container>
+      </aa-project-tour>
+      <p>Please note that the main left-hand navigation on our Apps comes from Core Framework.
+        We do however have a contextual navigation that can be used depending on the project requirements.
+        Along with this we also have Tab navigation, Tab info navivation and progress indicators.</p>
+    </div>
+    <div class="flex-2 col-right flex-group flex-end margin-top-1">
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/context-menu">
+        <div class="material-icons aa-orange-100">more_vert</div>
+        <p>Context menu</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/nav-context">
+        <div class="material-icons aa-orange-100">menu_open</div>
+        <p>Nav context</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator">
+        <div class="material-icons aa-orange-100 small">linear_scale</div>
+        <p>Progress indicatior</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator-lh">
+        <div class="material-icons aa-orange-100">format_list_numbered_rtl</div>
+        <p>Progress indicator LH</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/stepper">
+        <div class="material-icons aa-orange-100">arrow_right_alt</div>
+        <p>Stepper</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/tab-navigation">
+        <div class="material-icons aa-orange-100">pivot_table_chart</div>
+        <p>Tab navigation</p>
+      </a>
+      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/tree-menu">
+        <div class="material-icons aa-orange-100">account_tree</div>
+        <p>Tree menu</p>
+      </a>
+    </div>
+  </section>
+
+    <!-- PATTERNS -->
+    <section class="content-repeater flex-group">
+      <div #patterns class="anchor-point"></div>
+      <div class="flex-1 col-left flex-start">
+        <aa-project-tour
+          (panelIsClosed)="incrementTourCount()"
+          [tourMode]="tourCount===6"
+          topPos="-1.5rem"
+          rightPos="auto"
+          leftPos="calc(100% + 2rem)"
+          [zIndex]="1"
+          panelWidth="21rem"
+          [arrowLeft]="true"
+          arrowPos="2rem"
+          [enableHeading]="true"
+          tourModeHeading="Patterns"
+          tourModeBody="
+            Patterns can be found here. There's a growing collection available. Patterns are things that are used frequently,
+            such as alerts and tags.
+          "
+        >
+          <ng-container nested-component>
+            <h1>Patterns</h1>
+          </ng-container>
+          <ng-container tour-navigation>
+            <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+            <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+            <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+            <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+            <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+            <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+            <button class="read-only"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+            <button (click)="setTourCount(7); scrollToElement(widgets)"><span class="material-icons">widgets</span>What widgets are available?</button>
+            <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+          </ng-container>
+        </aa-project-tour>
+        <p>Patterns are reusable/recurring components used to solve common
+          problems in user interface design. For example, the breadcrumbs design pattern
+          lets users retrace their steps. Designers and developers can apply them to a
+          broad range of cases, but must adapt each to the specific context of use.</p>
+
+          <p>If you can't find what you're looking for here, please contact one of the UX Team
+          and we'll look at adding your suggested component.</p>
+      </div>
+      <div class="flex-2 col-right flex-group flex-end margin-top-1">
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/actions-summary">
+          <div class="material-icons aa-plum-100">rocket_launch</div>
+          <p>Actions summary</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/alerts">
+          <div class="material-icons aa-plum-100">add_alert</div>
+          <p>Alert</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/alert-shields">
+          <div class="material-icons aa-plum-100">remove_moderator</div>
+          <p>Alert shield</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/colours">
+          <div class="material-icons aa-plum-100">palette</div>
+          <p>Colour</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/counter">
+          <div class="material-icons aa-plum-100">looks_4</div>
+          <p>Counter</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/box">
+          <div class="material-icons aa-plum-100">check_box_outline_blank</div>
+          <p>Feature box</p>
+        </a>
+        <a class="call-to-action flex-center" routerLink="/icons">
+          <div class="material-icons aa-plum-100">insert_emoticon</div>
+          <p>Icons</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/progress-bar">
+          <div class="material-icons aa-plum-100">history_toggle_off</div>
+          <p>Progress bar</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/progress-circle">
+          <div class="material-icons aa-plum-100">forward_10</div>
+          <p>Progress circle</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/status-indicator">
+          <div class="material-icons aa-plum-100">check_circle</div>
+          <p>Status indicator</p>
+        </a>
+        <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/tags">
+          <div class="material-icons aa-plum-100">loyalty</div>
+          <p>Tags</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- WIDGETS -->
+    <section class="content-repeater flex-group">
+      <div #widgets class="anchor-point"></div>
+      <div class="flex-1 col-left flex-start">
+        <aa-project-tour
+          (panelIsClosed)="incrementTourCount()"
+          [tourMode]="tourCount===7"
+          topPos="-18rem"
+          rightPos="auto"
+          leftPos="calc(100% + 2rem)"
+          [zIndex]="1"
+          panelWidth="21rem"
+          [arrowLeft]="true"
+          arrowPos="18.5rem"
+          arrowClass="bd-right-blue"
+          [enableHeading]="true"
+          tourModeHeading="Widgets"
+          tourModeBody="
+            From accordions to person cards and info-panel's, here you'll find all the Design Language widgets. It's been
+            mentioned above but we do not use any 3rd party components apart from those listed under the `Third-party components` section
+            in the left navigation
+          "
+        >
+          <ng-container nested-component>
+            <h1>Widgets</h1>
+          </ng-container>
+          <ng-container tour-navigation>
+            <button (click)="setTourCount(0); scrollToElement(top)"><span class="material-icons">settings</span>Setting up Design Language in your project</button>
+            <button (click)="setTourCount(1); scrollToElement(top)"><span class="material-icons">folder</span>Where can I find the latest packages version?</button>
+            <button (click)="setTourCount(2); scrollToElement(top)"><span class="material-icons">dashboard</span>Where can I find sample page templates?</button>
+            <button (click)="setTourCount(3); scrollToElement(elements)"><span class="material-icons">check_box</span>Where are all the form elements?</button>
+            <button (click)="setTourCount(4); scrollToElement(layout)"><span class="material-icons">list_alt</span>How do I display form data?</button>
+            <button (click)="setTourCount(5); scrollToElement(navigation)"><span class="material-icons">menu_open</span>What navigational components do we have?</button>
+            <button (click)="setTourCount(7); scrollToElement(patterns)"><span class="material-icons">notifications_none</span>What patterns are available?</button>
+            <button class="read-only"><span class="material-icons">widgets</span>What widgets are available?</button>
+            <button class="align-right display-inline" (click)="setTourCount(null)">Exit tour</button>
+          </ng-container>
+        </aa-project-tour>
+        <p>We have a growing selection of widgets available for your project. We do not
+          use 3rd party widgets with a few expections such as AG-Grid, NGB Datepicker and NG-Select.
+          If you can't find a widget that you need, please contact the UX Team.
+        </p>
+      </div>
+      <div class="flex-2 col-right flex-group flex-end margin-top-1">
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/accordion">
+          <div class="material-icons aa-light-blue-100">reorder</div>
+          <p>Accordion</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/accordion-fancy">
+          <div class="material-icons aa-light-blue-100">view_list</div>
+          <p>Accordion fancy</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/card">
+          <div class="material-icons aa-light-blue-100">account_box</div>
+          <p>Card</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/carousel">
+          <div class="material-icons aa-light-blue-100">recent_actors</div>
+          <p>Carousel</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/element-slider">
+          <div class="material-icons aa-light-blue-100">chevron_left</div>
+          <p>Element slider</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/favourites">
+          <div class="material-icons aa-light-blue-100">star</div>
+          <p>Favourites</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/icon-picker">
+          <div class="material-icons aa-light-blue-100">face</div>
+          <p>Icon picker</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/info-panel">
+          <div class="material-icons aa-light-blue-100">fact_check</div>
+          <p>Info panel</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/list-selectable">
+          <div class="material-icons aa-light-blue-100">checklist_rtl</div>
+          <p>List selectable</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/modal">
+          <div class="material-icons aa-light-blue-100">border_clear</div>
+          <p>Modal</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/overlay">
+          <div class="material-icons aa-light-blue-100">border_outer</div>
+          <p>Overlay</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/popover">
+          <div class="material-icons aa-light-blue-100">sms</div>
+          <p>Popover</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/summary-top">
+          <div class="material-icons aa-light-blue-100">short_text</div>
+          <p>Summary top</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/toastr">
+          <div class="material-icons aa-light-blue-100">admin_panel_settings</div>
+          <p>Toastr</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip">
+          <div class="material-icons aa-light-blue-100">mode_comment</div>
+          <p>Tooltip</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip-dynamic">
+          <div class="material-icons aa-light-blue-100">question_answer</div>
+          <p>Tooltip dynamic</p>
+        </a>
+        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/user-feedback">
+          <div class="material-icons aa-light-blue-100">sentiment_satisfied_alt</div>
+          <p>User feedback</p>
+        </a>
+      </div>
+    </section>
+
+  <aa-blade
+    [bladeTabs]="true"
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="0"
+    bladeSize="two-column-width"
+    bladeHeading="{{bladeHeading}}"
+    [enableIcon]="true"
+    iconName="architecture"
+    (bladeOpen)="bladeIsOpen($event)"
+    [enablePinning]="false">
+    <ng-container blade-tabs>
+      <nav>
+        <aa-tab-navigation 
+          [ngTemplate]="true" 
+          [displayTabContent]="false" 
+          (tabChanged)="tabChanged($event)"
+          defaultTabId="tab2"
+        >
+          <aa-tab-navigation-item 
+            *ngFor="let tab of tabsNgTemplate; let i = index"
+            tabId="{{tab.tabId}}"
+            tabName="{{tab.tabName}}" 
+            [enableIcons]="tab.enableIcons" 
+            iconName="{{tab.iconName}}" 
+            iconColour="{{tab.iconColour}}"
+            closeColour="{{tab.closeColour}}"
+            [showRightDivider]="tab.showRightDivider"
+            [tabDisabled]="tab.tabDisabled"
+          > 
+            <ng-template aaTabNavigationContent>
+              <div *ngIf="tab.showTabOneContent">
+                <h2 class="boxed">Angular 17</h2>
+                <p>
+                  All new projects should now be setup to use Angular 17.
+                </p>
+                <p>
+                  If migrating from legacy NG11, please <a href="https://anglo-american.atlassian.net/wiki/spaces/CORE/pages/3329720490/Upgrading+to+Angular+17" target="_blank">follow the insructions here</a> 
+                </p>
+                <p>
+                  Please note that we no longer use <strong class="aa-red-100">anglo-angular-framework</strong>.<br/>Instead we use 
+                  Angular Elements. please <a href="https://anglo-american.atlassian.net/wiki/spaces/CORE/pages/3149758978/Migrate+Angular+Projects+to+use+Angular+Elements" target="_blank">follow the insructions here</a> 
+                </p>
+              </div>
+              <div *ngIf="tab.showTabTwoContent">
+                <div class="margin-bottom-1">
+                  <aa-alert alertClass="error" alertText="Do no use this approach for new projects as we have now moved to Angular 17"></aa-alert>
+                </div>
+                <div>
+                  <h2>Package versions</h2>
+                  <label>To get Styles and Components working in your project, install the npm packages</label>
+                  <p class="margin-top-0-25">
+                    <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fstyles/versions/" target="_blank">Latest Styles version</a>
+                  </p>
+                  <p class="margin-top-0-25">
+                    <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank">Latest Components version</a>
+                  </p>
+                  <p class="margin-top-0-25">
+                    <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/9.0.20/versions" target="_blank">Latest Anglo Framework (dark-mode requires 11.2^)</a>
+                  </p>
+                </div>
+        
+                <h2 class="margin-bottom-0-5">Styles</h2>
+                <ol class="code">
+                  <li>npm install &#64;angloamerican/styles&#64;X.X.X</li>
+                </ol>
+                <p>Replacing X with the required version</p>
+        
+                <h2 class="margin-bottom-0-5">Components</h2>
+                <ol class="code">
+                  <li>1. npm install &#64;angloamerican/components&#64;X.X.X</li>
+                </ol>
+                <p>Replacing X with the required version</p>
+        
+                <h2 class="margin-bottom-0-5">Anglo Angular Framework</h2>
+                <ol class="code">
+                  <li>1. npm install &#64;angloamerican/anglo-angular-framework&#64;X.X.X</li>
+                </ol>
+                <p>Replacing X with the required version</p>
+        
+                <h2 class="margin-bottom-0-5">Configure your app files</h2>
+                <h3>Add the Design Language Styles</h3>
+                <p>In your project <strong class="aa-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
+                <ol class="code margin-top-0-5">
+                  <li>"styles": [</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;"path/to/all/other/scss/files.scss",</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;"node_modules/&#64;angloamerican/styles/src/scss/styles.scss"</li>
+                  <li>&nbsp;],</li>
+                </ol>
+        
+                <h3 class="margin-top-1-5">Add the Design Language Components</h3>
+                <p>In your project <strong class="aa-red-100">app.module.ts </strong> or <strong class="aa-red-100">shared.module.ts </strong> import the modules</p>
+                <ol class="code margin-top-0-5">
+                  <li>&nbsp;import &#123;</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;ElementsModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;LayoutModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;NavigationModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;PatternsModule,</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
+                  <li>&nbsp;&#x007D; from '&#64;angloamerican/components';</li>
+                </ol>
+        
+                <p>and declare them under &#64;NgModule > imports</p>
+                <ol class="code margin-top-0-5">
+                  <li>&nbsp;imports: [</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;AnimationsModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;ElementsModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;LayoutModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;NavigationModule, </li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;PatternsModule,</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;WidgetsModule</li>
+                  <li>&nbsp;],</li>
+                </ol>
+        
+                <p>In your project <strong class="aa-red-100">tsconfig.json</strong> declare the Components paths.</p>
+                <ol class="code margin-top-0-5">
+                  <li>&nbsp;"paths": &#123;</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;"&#64;angloamerican/components": [ "node_modules/&#64;angloamerican/components" ],</li>
+                  <li>&nbsp;&nbsp;&nbsp;&nbsp;"&#64;angloamerican/components/*": [ "node_modules/&#64;angloamerican/components/*" ]</li>
+                  <li>&nbsp;&#x007D;</li>
+                </ol>
+              </div>
+            </ng-template>
+          </aa-tab-navigation-item>
+        </aa-tab-navigation>
+      </nav>      
+    </ng-container>
+    <article class="blade-content" *ngIf="activeTab">
+      <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+    </article>
+  </aa-blade>
+</section>
+
+
+<aa-overlay
+  [showOverlay]="showOverlay"
+  [zIndex]="999"
+  minWidth="55rem"
+>
+  <ng-container overlay-header>
+    <!-- START RELEASE NOTES HEADERS -->
+    <div *ngIf="showReleaseNotes">
+      <section class="aa-overlay-header flex-group space-between">
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons aa-orange-100">event_note</div>
+          <h1>Release notes</h1>
+        </div>
+        <button (click)="showOverlay=false" class="material-icons">close</button>
+      </section>
+    </div>
+
+    <!-- SUPPORTED BROWSERS -->
+    <div *ngIf="showSupportedBrowsers">
+      <section class="aa-overlay-header flex-group space-between padding-bottom-0-5">
+        <div class="flex-group flex-start flex-align-center">
+          <div class="material-icons aa-brown-100 margin-right-0-5">public</div>
+          <h1>Supported browsers</h1>
+        </div>
+        <button (click)="showOverlay=false; showSupportedBrowsers=false" class="material-icons">close</button>
+      </section>
+    </div>
+  </ng-container>
+
+  <ng-container overlay-content>
+    <!-- START RELEASE NOTES TABS AND TAB CONTENT -->
+    <div *ngIf="showReleaseNotes">
+      <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+        <aa-tab-navigation-item tabName="Styles" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <h2 class="boxed padding-1-25 padding-bottom-0-5">Styles</h2>
+            <app-release-notes-styles [styles]="true"></app-release-notes-styles>
+          </ng-template>
+        </aa-tab-navigation-item>
+        <aa-tab-navigation-item tabName="Components" [enableIcons]="false" iconName="" iconColour="">
+          <ng-template aaTabNavigationContent>
+            <h2 class="boxed padding-1-25 padding-bottom-0-5">Components</h2>
+            <app-release-notes-components [components]="true"></app-release-notes-components>
+          </ng-template>
+        </aa-tab-navigation-item>
+      </aa-tab-navigation>
+
+      <section *ngIf="activeTab" class="aa-overlay-content padding-0" [ngStyle]="{'height':'calc(100vh - 15.5rem)'}">
+        <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
+      </section>
+    </div>
+
+    <!-- SUPPORTED BROWSERS -->
+    <div class="aa-overlay-content padding-top-0"*ngIf="showSupportedBrowsers">
+      <a href="https://angular.io/guide/browser-support" target="_blank">Our Apps should mirror the Angular supported browsers</a>
+
+      <div class="flex-group margin-top-2 bd-bottom-2 bd-bottom-pink bd-bottom-dashed">
+        <div class="max-width-6 margin-1-25">
+          <img src="{{chrome}}" alt="Chrome" />
+          <p class="margin-top-0-5 text-align-center">Current version</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{firefox}}" alt="Firefox" />
+          <p class="margin-top-0-5 text-align-center">latest and extended support release (ESR)</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{edge}}" alt="Edge" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{safari}}" alt="Safari" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{ios}}" alt="IOS" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+        <div class="max-width-6 margin-1-25">
+          <img src="{{android}}" alt="Android" />
+          <p class="margin-top-0-5 text-align-center">2 most recent major versions</p>
+        </div>
+      </div>
+
+      <h2 class="margin-bottom-0-5 margin-top-1">No longer supported</h2>
+      <p>
+        <a href="https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/" target="_blank">
+          Internet Explorer 11 was retired and no longer supported as of June 12, 2022.
+        </a>
+      </p>
+      <p>
+        It is worth noting that there may still be one or two users using IE11 though it's quite unlikely. Nevertheless,
+        we should still endeavour to fix any broken functionality as a fairly low priority, but design look and feel isn't important.
+      </p>
+
+    </div>
+  </ng-container>
+
+</aa-overlay>
+

@@ -1,0 +1,97 @@
+<div id="aa-progress-circle" *ngIf="!isSmall && !customProgressCircle" class="progress-circle" [ngClass]="{'panel-view' : panelView}">
+  <h3 class="flex-center title {{headerColor}}" [ngClass]="{'padding-right-1' : enableTooltip}">
+    <span 
+      title="{{name}}"
+      class="flex-group flex-align-center"
+      >
+      {{ (name.length>19)? (name | slice:0:19)+'...':(name) }}
+      <span title="Error" *ngIf="isError" class="material-icons status padding-left-0-25 small aa-red-100">error_outline</span>
+      <span title="Warning" *ngIf="isWarning" class="material-icons status padding-left-0-25 small aa-orange-100">warning_amber</span>
+      <span title="Info" *ngIf="isInfo" class="material-icons-outlined status small padding-left-0-25 aa-light-blue-100">info</span>
+    </span>
+    <div *ngIf="enableTooltip" class="aa-tooltip icon-info margin-left-0-25" [ngStyle]="{'position' : 'absolute', 'right' : '.75rem'}">
+      <div class="feature-box {{xpos}} {{ypos}}" [ngStyle]="{'min-width' : tooltipMinWidth}">
+        <p>{{tooltipBody}}</p>
+      </div>
+    </div>
+    <span *ngIf="panelView && !hideChevron" class="material-icons">chevron_right</span>
+  </h3>
+  <div class="percent">
+    <svg viewBox="20 0 60 100">
+      <circle [ngStyle]="{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+      <circle [ngStyle]="{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+    </svg>
+    <span class="value margin-0">{{percent}} <span>%</span></span>
+  </div>
+
+  <span 
+    class="align-center number" 
+    *ngIf="panelView && !enableAlertShield && !enableAlertShieldTooltip">
+    {{value}}
+  </span>
+
+  <div 
+    *ngIf="enableAlertShield" 
+    class="alert-shield small {{alertShieldStatus}}" 
+    >
+      {{alertShieldText}}
+  </div>
+
+  <div 
+    *ngIf="enableAlertShieldTooltip" 
+    class="alert-shield-tooltip-wrapper"
+    [ngClass]="{
+        'tooltip-top-left' : tooltipTopLeft,
+        'tooltip-top-right' : tooltipTopRight,
+        'tooltip-bottom-left' : tooltipBottomLeft,
+        'tooltip-bottom-right' : tooltipBottomRight
+    }"
+  >
+    <div 
+        class="alert-shield-tooltip {{alertShieldStatus}}"
+        [ngStyle]="{'min-width' : tooltipMinWidth}"
+    >
+        <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
+        <ng-content select="[tooltip-content]"></ng-content>
+    </div>
+    <div 
+        class="alert-shield small {{alertShieldStatus}}" 
+        >
+          {{alertShieldText}}
+    </div>
+  </div>
+</div>
+
+<li id="aa-progress-circle-small" *ngIf="isSmall && !customProgressCircle" class="flex-group flex-start">
+  <div class="progress-circle small margin-right-0-5">
+    <div class="percent">
+      <svg>
+        <circle [ngStyle]="{'stroke-dashoffset': 0, 'opacity': '.2', 'stroke': colour }" cx="15" cy="15" r="15"></circle>
+        <circle [ngStyle]="{'stroke-dashoffset': 'calc(250 - (92 * '+ percent +') / 100)', 'stroke': colour }" cx="15" cy="15" r="15"></circle>
+      </svg>
+      <span class="value margin-0">{{percent}} <span>%</span></span>
+    </div>
+  </div>
+  <div class="margin-top-0-75">{{name}}</div>
+</li>
+
+<div 
+  id="aa-custom-progress-circle"
+  *ngIf="customProgressCircle" 
+  class="progress-circle panel-view progress-circle-custom {{customClass}}"
+  [ngStyle]="{'height' : panelHeight}"
+>
+  <header class="flex-center {{customHeaderClass}}">
+    <ng-content select="[custom-header]"></ng-content>
+  </header>
+  <div class="percent">
+    <svg viewBox="20 0 60 100">
+      <circle [ngStyle]="{'stroke-dashoffset': 0, 'opacity': '.3', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+      <circle [ngStyle]="{'stroke-dashoffset': 'calc(250 - (250 * '+ percent +') / 100)', 'stroke': colour }" cx="40" cy="40" r="40"></circle>
+    </svg>
+    <span class="value margin-0">{{percent}} <span>%</span></span>
+  </div>
+  <footer class="flex-center {{customFooterClass}}">
+    <ng-content select="[custom-footer]"></ng-content>
+  </footer>
+</div>

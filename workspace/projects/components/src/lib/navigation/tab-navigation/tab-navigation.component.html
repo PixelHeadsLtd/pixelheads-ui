@@ -1,0 +1,96 @@
+<!-- ROUTER-OUTLET ONLY -->
+<nav id="aa-tab-nav-router-outlet" *ngIf="routerOutlet" class="tab-navigation">
+  <ul>
+    <ng-content select="[list-items]"></ng-content>
+  </ul>
+</nav>
+
+<!-- NG-TEMPLATE ONLY -->
+<nav id="aa-tab-nav-ng-template" *ngIf="ngTemplate" class="tab-navigation">
+  <ul>
+    <ng-container *ngFor="let tab of contentTabs">
+      <li [ngClass]="{ 'tab-disabled' : tab.tabDisabled }">
+        <a
+          *ngIf="!tab.tabDisabled"
+          class="flex-group flex-align-center flex-start {{tab.textColour}}"
+          [id]="tab.tabId"
+          [class.active]="isActive(tab)"
+          (click)="onTabClicked(tab)"
+        >
+          {{ tab.tabName }}
+          <span class="tab-tooltip flex-align-center" *ngIf="tab.enableIcons">
+            <span class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
+            <span 
+              *ngIf="tab.enableTooltip" 
+              class="aa-tooltip position-fixed z-index-10"
+              [ngStyle]="{
+                'margin-left' : tab.tooltipXPos,
+                'margin-top' : tab.tooltipYPos
+              }"
+            >
+              <span 
+                class="feature-box {{tab.iconColour}}"
+                [ngStyle]="{
+                  'min-width' : tab.tooltipWidth
+                }"
+              >
+                <h3 class="nowrap {{tab.iconColour}}">{{tab.tabTooltipTitle}}</h3>
+                <p>{{tab.tabTooltipBody}}</p>
+              </span>
+            </span>
+          </span>
+          <span *ngIf="tab.enableCount" class="tab-count {{tab.countColour}}">{{tab.tabCount}}</span>
+          <a *ngIf="tab.enableClose" (click)="onCloseTab($event, tab.tabId)"  class="anchor-close {{tab.closeColour}}"></a>
+        </a>
+        <span *ngIf="tab.tabDisabled">
+          {{ tab.tabName }}
+          <span *ngIf="tab.enableIcons" class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
+          <span *ngIf="tab.enableCount" class="tab-count {{tab.countColour}}">{{tab.tabCount}}</span>
+        </span>
+      </li>
+      <li *ngIf="tab.showRightDivider" class="divider-tab"></li>
+    </ng-container>
+    <ng-content></ng-content>
+  </ul>
+</nav>
+
+<!-- INFO-PANEL NG-TEMPLATE -->
+<div id="aa-tab-nav-info-panel" *ngIf="tabInfo">
+  <nav class="tab-navigation-info" [ngClass]="{'minimize': toggleFullscreen}">
+    <div class="float-right flex-group">
+      <div class="flex-align-center">
+        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="!toggleFullscreen" class="transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0">close_fullscreen</button>
+        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="toggleFullscreen" class="transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0">open_in_full</button>
+      </div>
+    </div>
+    <ul class="flex-group flex-center">
+      <ng-container *ngFor="let tab of contentTabs">
+        <li [ngClass]="{ 'tab-disabled' : tab.tabDisabled }">
+          <a class="{{tab.activeColor}}" title="{{ tab.tabName }}" *ngIf="!tab.tabDisabled" [id]="tab.tabId" (click)="onTabClicked(tab)" [ngClass]="{'active': isActive(tab)}">
+            <ng-template *ngTemplateOutlet="tab.templateRefHeader"></ng-template>
+          </a>
+          <span title="{{ tab.tabName }}" *ngIf="tab.tabDisabled">
+            <ng-template *ngTemplateOutlet="tab.templateRefHeader"></ng-template>
+          </span>
+        </li>
+      </ng-container>
+    </ul>
+  </nav>
+
+  <ng-container *ngIf="displayTabContent && currentTab">
+    <ng-template *ngTemplateOutlet="currentTab.templateRef"></ng-template>
+  </ng-container>
+</div>
+
+<!-- INFO PANEL ROUTER-OUTLET -->
+<nav id="aa-tab-nav-info-panel-ro" *ngIf="tabInfoRouterOutlet" class="tab-navigation-info" [ngClass]="{'minimize': toggleFullscreen}">
+  <div class="float-right flex-group">
+    <div class="flex-align-center">
+      <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="!toggleFullscreen" class="material-icons">close_fullscreen</button>
+      <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="toggleFullscreen" class="material-icons">open_in_full</button>
+    </div>
+  </div>
+  <ul class="flex-group flex-center">
+    <ng-content select="[tabs]"></ng-content>
+  </ul>
+</nav>

@@ -1,0 +1,177 @@
+<section class="control-bar">
+  <h1>Modal</h1>
+</section>
+
+<section class="content-container padding-0">
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Modal - service version</h2>
+        <div class="describe margin-bottom-1">
+          <p>Modals should only ever be used to display a simple message to your users
+            such as a simple confirmation Yes/No
+          </p>
+        </div>
+
+        <h3>Service version</h3>
+
+        <aa-button
+          (buttonClick)="openModal()"
+          buttonClass="primary"
+          fieldClass="boxed label-hidden"
+          buttonId="BtnId"
+          buttonLabel="Modal"
+          buttonText="Show modal">
+        </aa-button>
+
+      </section>
+
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Button</td>
+              <td datalabel="Attribute">buttonClick</td>
+              <td datalabel="Type">Function</td>
+              <td datalabel="Default">openModal()</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Div</td>
+              <td datalabel="Attribute">Id</td>
+              <td datalabel="Type">Id</td>
+              <td datalabel="Default">#modal</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showDynamicVersion=true; showLegacyVersion=false">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Legacy version</h2>
+        <div class="describe margin-bottom-1">
+          <p>
+            We try to avoid using this version as it doesn't utilise a service and 
+            therefore, in its current form, cannot be called from anywhere in your app. 
+            However, in rare circumstances it can be used, if you want to 
+            add custom buttons for example
+          </p>
+        </div>
+
+        <h3>Legacy version</h3>
+
+        <aa-button
+          (buttonClick)="toggleModal=!toggleModal"
+          buttonClass="primary"
+          fieldClass="boxed label-hidden"
+          buttonId="BtnId"
+          buttonLabel="Modal"
+          buttonText="Show modal">
+        </aa-button>
+
+        <aa-modal
+          *ngIf="toggleModal"
+          [green]="true"
+          topPos=""
+          rightPos=""
+          leftPos=""
+          minWidth=""
+          maxWidth="20rem"
+          [zIndex]="999"
+          [heading]="'Are you sure?'">
+          <div content-custom>Custom content</div>
+          <aa-button
+            (buttonClick)="toggleModal=!toggleModal"
+            buttonClass="primary"
+            fieldClass="boxed label-hidden"
+            buttonId="buttonId"
+            buttonText="Yes">
+          </aa-button>
+          <aa-button
+              (buttonClick)="toggleModal=!toggleModal"
+              buttonClass="cancel"
+              fieldClass="boxed label-hidden"
+              buttonId="buttonId"
+              buttonText="No">
+          </aa-button>
+        </aa-modal>
+
+      </section>
+
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td datalabel="Element">Button</td>
+              <td datalabel="Attribute">buttonClick</td>
+              <td datalabel="Type">Function</td>
+              <td datalabel="Default">openModal()</td>
+            </tr>
+            <tr>
+              <td datalabel="Element">Div</td>
+              <td datalabel="Attribute">Id</td>
+              <td datalabel="Type">Id</td>
+              <td datalabel="Default">#modal</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showDynamicVersion=false; showLegacyVersion=true">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+</section>
+
+<aa-blade
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+  >
+  <article class="blade-content">
+    <div *ngIf="showDynamicVersion">
+      <a href="https://gist.github.com/angloux/fb5164e0aa6b55024dfe9b509fc1d110" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/fb5164e0aa6b55024dfe9b509fc1d110"></app-gist>
+    </div>
+    <div *ngIf="showLegacyVersion">
+      <a href="https://gist.github.com/angloux/6faba326679fb4870afc75464f7caaba" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/6faba326679fb4870afc75464f7caaba"></app-gist>
+    </div>
+  </article>
+</aa-blade>

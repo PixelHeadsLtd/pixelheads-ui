@@ -1,0 +1,82 @@
+<section class="control-bar">
+    <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
+    <h1>Ticker</h1>
+</section>
+
+<section class="content-container padding-0">
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+        <section class="flex-1 col-left flex-start">
+          <h2>Ticker</h2>
+          <div class="describe margin-bottom-1">
+            <p>A handy text ticker when you have limited space</p>
+          </div>
+          <div>
+            <aa-ticker 
+                tickerSpeed="25s"
+                tickerWidth="20rem"
+            >
+                <h2>
+                    This is your ticker text. You can display this text as a span, 
+                    a strong element, a label, an h1 an h2, an h3 or any other element. 
+                    You can set the ticker speed and width.
+                </h2>
+            </aa-ticker>
+          </div>
+        </section>
+  
+        <section class="flex-2 col-right flex-start">
+          <table class="half-width">
+            <caption>Attributes</caption>
+            <thead>
+              <tr>
+                <th>Element</th>
+                <th>Attribute</th>
+                <th>Type</th>
+                <th>Default</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td datalabel="Element">aa-ticker</td>
+                <td datalabel="Attribute">tickerSpeed</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">25s</td>
+                </tr>
+              <tr>
+                <td datalabel="Element">aa-ticker</td>
+                <td datalabel="Attribute">tickerWidth</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">20rem</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- mini menu -->
+        <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+      </section>
+
+      <aa-blade
+        [blockPageUI]="false"
+        [toggleBlade]="toggleBlade"
+        [suppressAutoClose]="false"
+        topPosition="3.5rem"
+        [zIndex]="2"
+        bladeSize="one-column-width"
+        bladeHeading="Gist"
+        [enableIcon]="true"
+        iconName="table_rows"
+        (bladeOpen)="bladeIsOpen($event)"
+        >
+        <article class="blade-content">
+          <a href="https://gist.github.com/angloux/09d8f36067fb2ff9a944bb8a043f22af" target="_blank">View Gist on GitHub</a>
+          <app-gist src="angloux/09d8f36067fb2ff9a944bb8a043f22af"></app-gist>
+        </article>
+      </aa-blade>
+
+</section>

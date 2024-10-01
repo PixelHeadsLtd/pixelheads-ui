@@ -1,0 +1,880 @@
+aa-button {
+  label {
+    min-height: 1.4rem; // Ensure consistent height when label has no data
+    visibility: hidden;
+
+    &.show-label {
+      visibility: visible;
+    }
+  }
+
+  .field.boxed {
+    label {
+      display: none;
+      &.show-label {
+        display: block;
+      }
+    }
+  }
+
+  .field.label-hidden {
+    label {
+      display: none;
+    }
+  }
+
+  &.active {
+    .button-day-picker {
+      background-color: _colour(aa-blue-70);
+      color: _colour(aa-white-100);
+      font-style: italic;
+
+      &:hover {
+        color: _colour(aa-white-100);
+      }
+      
+      div {
+        background-color: _colour(aa-blue-100);
+      }
+    }
+  }
+}
+
+button {
+  overflow-wrap: initial; // needed to stop inheritance of overflow-wrap set on table in table.scss
+  &.btn-fav {
+    padding: 0;
+    font-size: _font(size-medium);
+    color: _palette(aa-plum-100);
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: _colour(aa-blue-100);
+      color: _colour(aa-white-100)
+    }
+  }
+
+  &.button-day-picker {
+    position: relative;
+    cursor: pointer;
+    background-color: _colour(aa-white-100);
+    color: _colour(aa-plum-100);
+    border-radius: .5rem;
+    border: none;
+    width: 3.75rem;
+    height: 3.75rem;
+    max-width: 3.75rem;
+    max-height: 3.75rem;
+
+    &:hover {
+      border: 1px solid _colour(aa-blue-100);
+      color: _colour(aa-blue-100);
+    }
+
+    strong {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: .9rem;
+    }
+    
+    div {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 50%;
+      background-color: _colour(aa-grey-5);
+      border-radius: 0 0 .5rem .5rem;
+    }
+  }
+}
+
+button:not(
+  .btn-fav, 
+  .collapser, 
+  .card-mini, 
+  .ag-side-button-button, 
+  .ql-toolbar button, 
+  .btn-enriched,
+  .aa-custom-select button,
+  .button-day-picker,
+  .core-apps,
+  .ag-button,
+  ngb-timepicker button
+  ) {
+  position: relative;
+  font-family: _font(family-medium);
+  padding: .425rem .75rem .425rem .75rem;
+  font-size: _font(size-default);
+  line-height: 1.15rem;
+  letter-spacing: 0.0575rem;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  flex: none;
+  cursor: pointer;
+
+  &:focus:not(.accordion-trigger, .grid-large, .grid-list, .grid-small) {
+    outline: none;
+    border: 1px solid _colour(aa-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    button {
+      padding: .8rem .75rem .1rem;
+    }
+  }
+
+  // Used for creating our own custon icons on a standard button that does have text.
+  &.custom-icons {
+    position: relative;
+    border: 1px solid transparent;
+    color: _palette(aa-white-100);
+    padding-left: 2.25rem;
+
+    .count {
+      position: absolute;
+      right: .5rem;
+      top: .3rem;
+      border-radius: 50%;
+      width: .8rem;
+      height: .8rem;
+      font-size: _font(size-mini);
+      text-align: center;
+      line-height: .9rem;
+      letter-spacing: 0;
+
+      &.orange, .pending {
+        background-color: _palette(aa-orange-100);
+        color: _palette(aa-white-100);
+      }
+      &.blue, .secondary {
+        background-color: _palette(aa-blue-100);
+        color: _palette(aa-white-100);
+      }
+      &.green, .complete {
+        background-color: _palette(aa-green-100);
+        color: _palette(aa-white-100);
+      }
+      &.red, .error {
+        background-color: _palette(aa-red-100);
+        color: _palette(aa-white-100);
+      }
+      &.light-blue, .info, .primary {
+        background-color: _palette(aa-light-blue-100);
+        color: _palette(aa-white-100);
+      }
+      &.white {
+        background-color: _palette(aa-white-100);
+        color: _palette(aa-blue-100);
+      }
+    }
+    
+    &.small {
+      padding: .25rem .75rem .25rem 1.75rem;
+      .material-icons,
+      .material-icons-outlined {
+        font-size: _font(size-regular);
+        line-height: 1rem;
+        max-width: 1rem;
+        left: .325rem;
+        text-align: left;
+        top: .2rem
+      }
+    }
+    .material-icons,
+    .material-icons-outlined {
+      font-size: _font(size-medium);
+      line-height: 1.15rem;
+      position: absolute;
+      left: .25rem;
+      width: 2rem;
+    }
+  }
+  
+  // Used for when we want a material-icon to be a button with no text.
+  &.material-icons {
+    font-family: _font(material-icons);
+  }
+  &.material-icons-outlined {
+    font-family: _font(material-icons-outlined);
+  }
+  &.material-icons:not(
+    .page-header .material-icons, 
+    .context-menu .material-icons,
+    .aa-comments .material-icons
+    ),
+  &.material-icons-outlined:not(
+    .page-header .material-icons-outlined, 
+    .context-menu .material-icons-outlined,
+    .aa-comments .material-icons-outlined
+    ) {
+    &:focus, &:hover {
+      box-shadow: none;
+      border: none;
+    }
+  }
+  &.material-icons:not(
+    .context-menu .material-icons, 
+    .aa-tree .material-icons, 
+    .material-icons.toggle,
+    .clear-search,
+    .aa-comments .material-icons
+    ),
+  &.material-icons-outlined:not(
+    .context-menu .material-icons-outlined, 
+    .aa-tree .material-icons, 
+    .material-icons.toggle,
+    .clear-search,
+    .aa-comments .material-icons-outlined
+    ) {
+    font-size: 1.15rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    min-width: 2rem;
+    max-width: 2rem;
+    height: 2rem;
+    min-height: 2rem;
+    max-height: 2rem;
+    letter-spacing: -.015rem;
+    flex: none;
+    line-height: 1rem;
+
+    &.small {
+      width: 1.5rem;
+      height: 1.5rem;
+      min-width: 1.5rem;
+      min-height: 1.5rem;
+      font-size: _font(size-default);
+      line-height: 1.55rem;
+    }
+    
+    &.approve {
+      @include button-green;
+      &:hover {
+        @include button-green-hover;
+      }
+    }
+    
+    &.reject {
+      @include button-red;
+      &:hover {
+        @include button-red-hover;
+      }
+    }
+    
+    &.void {
+      @include button-orange;
+      &:hover {
+        @include button-orange-hover;
+      }
+    }
+  }
+
+  &.button-small,
+  &.small {
+    padding: .25rem .75rem;
+    font-size: _font(size-small);
+    min-width: auto;
+    min-height: 1.5rem;
+    line-height: .75rem;
+    &:before {
+      font-size: 1rem!important;
+    }
+  }
+
+  &.no-text {
+    padding-left: 1.5rem !important; // override button padding
+    > span {
+      margin-left: -999px;
+    }
+  }
+
+  &.primary {
+    @include button-light-blue;
+    &:hover {
+      @include button-light-blue-hover;
+    }
+  }
+  &.secondary {
+    @include button-blue;
+    &:hover {
+      @include button-blue-hover;
+    }
+  }
+  &.tertiary,
+  &.menu {
+    // menu is now deprecated, use .tertiary
+    @include button-blue-outline;
+    &:hover {
+      @include button-blue-outline-hover;
+    }
+  }
+  &.red,
+  &.bg-aa-red-100,
+  &.error {
+    @include button-red;
+    &:hover {
+      @include button-red-hover;
+    }
+  }
+  &.blue,
+  &.bg-aa-blue-100,
+  &.secondary {
+    @include button-blue;
+    &:hover {
+      @include button-blue-hover;
+    }
+  }
+  &.light-blue,
+  &.bg-aa-light-blue-100,
+  &.primary,
+  &.info {
+    @include button-light-blue;
+    &:hover {
+      @include button-light-blue-hover;
+    }
+  }
+  &.pale-blue,
+  &.bg-aa-light-blue-15 {
+    @include button-pale-blue;
+    &:hover {
+      @include button-pale-blue-hover;
+    }
+  }
+  &.blue-sky,
+  &.bg-aa-blue-sky-100,
+  &.pending {
+    @include button-blue-sky;
+    &:hover {
+      @include button-blue-sky-hover;
+    }
+  }
+  &.orange,
+  &.bg-aa-orange-100,
+  &.pending {
+    @include button-orange;
+    &:hover {
+      @include button-orange-hover;
+    }
+  }
+  &.green,
+  &.bg-aa-green-100,
+  &.complete {
+    @include button-green;
+    &:hover {
+      @include button-green-hover;
+    }
+  }
+  &.white {
+    @include button-all-white;
+    &:hover {
+      @include button-all-white-hover;
+    }
+  }
+  &.grey {
+    @include button-grey;
+    &:hover {
+      @include button-grey-hover;
+    }
+  }
+  &.transparent {
+    border-color: transparent;
+    background-color: transparent;
+    color: _colour(aa-grey-100);
+  }
+  &.cancel {
+    @include button-white;
+    &:hover {
+      @include button-white-hover;
+    }
+  }
+  &.delete {
+    @include button-red-outline;
+    &:hover {
+      @include button-red-outline-hover;
+    }
+  }
+  &.white-bg {
+    @include button-white-bg;
+  }
+  &.add {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\2b';
+    }
+  }
+  &.calendar {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f073';
+    }
+  }
+  &.download {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f063';
+    }
+  }
+  &.chevron-up {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f077';
+    }
+  }
+  &.chevron-down {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f078';
+    }
+  }
+  &.next {
+    @include icon-right;
+    &:after {
+      @include icon-button-medium-right;
+      content: '\f101';
+    }
+  }
+  &.previous {
+    @include icon-left;
+    &:after {
+      @include icon-button-medium-left;
+      content: '\f100';
+    }
+  }
+  &.excel {
+    @include icon-left;
+    &:before {
+      @include icon-button-medium;
+      content: '\f1c3';
+    }
+  }
+  &.add-selected {
+    @include icon-left;
+    &:before {
+      @include icon-button-large-material;
+      content: '\e9bd';
+    }
+  }
+
+  &.reject:not(.material-icons, .material-icons-outlined) {
+    @include icon-left-medium;
+    @include button-red;
+    &:hover {
+      @include button-red-hover;
+    }
+    &:before {
+      @include icon-button-large-solid-test;
+      content: "\f057";
+    }
+  }
+
+  &.void:not(.material-icons, .material-icons-outlined) {
+    @include icon-left-medium;
+    @include button-orange;
+    &:hover {
+      @include button-orange-hover;
+    }
+    &:before {
+      @include icon-button-large-solid;
+      content: '\f057';
+    }
+  }
+
+  &.review:not(.material-icons, .material-icons-outlined) {
+    @include icon-left-medium;
+    &:before {
+      @include icon-button-xlarge-material;
+      content: '\e933';
+    }
+  }
+
+  &.approve:not(.material-icons, .material-icons-outlined) {
+    @include icon-left-medium;
+    @include button-green;
+    &:hover {
+      @include button-green-hover;
+    }
+    &:before {
+      @include icon-button-large-solid;
+      content: '\f058';
+    }
+  }
+
+  &.return:not(.material-icons, .material-icons-outlined) {
+    @include icon-left-medium;
+    &:before {
+      @include icon-button-large-solid;
+      content: "\f359";
+    }
+  }
+
+  &.filter {
+    @include button-icon;
+    background-image: url(#{$icon-path}/filter_list-24px.svg);
+    min-width: 2.15rem;
+  }
+
+  &.settings {
+    @include button-icon;
+    background-image: url(#{$icon-path}/cog-solid.svg);
+    min-width: 2.15rem;
+  }
+  &.filter {
+    @include button-icon;
+    background-image: url(#{$icon-path}/filter_list-24px.svg);
+    min-width: 2.15rem;
+  }
+
+  &.icon-cog {
+    // deprecated - use .settings
+    color: _colour(white);
+    background-color: _colour(aa-light-blue-100);
+    font-size: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+  }
+
+  &.face-very-dissatisfied-blk,
+  &.face-dissatisfied-blk,
+  &.face-neutral-blk,
+  &.face-satisfied-blk,
+  &.face-very-satisfied-blk {
+    background-color: transparent;
+    padding: 0;
+    &:hover {
+      &:nth-child(2) {background-image: url("#{$icon-path}/face-very-satisfied.svg")}
+      &:nth-child(3) {background-image: url("#{$icon-path}/face-satisfied.svg")}
+      &:nth-child(4) {background-image: url("#{$icon-path}/face-neutral.svg")}
+      &:nth-child(5) {background-image: url("#{$icon-path}/face-dissatisfied.svg")}
+      &:nth-child(6) {background-image: url("#{$icon-path}/face-very-dissatisfied.svg")}
+    }
+    &:focus, 
+    &:hover {
+      border: none;
+    }
+  }
+
+  &:disabled, // this must be the last item otherwise button styles override it
+  &:disabled:hover {
+    @include button-disabled;
+    &.hide-disabled {
+      display: none;
+    }
+  }
+  
+  &.small {
+    &::before {
+      font-size: 1.2rem;
+    }
+  }
+
+  &.button-summary {
+    &:hover {
+      background-color: _colour(aa-light-blue-5)!important;
+    }
+    width: 21rem;
+    p, h2 {
+      font-family: _font(family-regular);
+      text-align: left;
+    }
+    &.insignificant,
+    &.minor {
+      h1, h2 {
+        border-color: _colour(aa-blue-100);
+        border-width: 1px;
+        color: _colour(aa-blue-100);
+      }
+    }
+    &.moderate {
+      h1, h2 {
+        border-color: _palette(aa-orange-100);
+        border-width: 1px;
+        color: _palette(aa-orange-100);
+      }
+    }
+    &.high {
+      h1, h2 {
+        border-color: _palette(aa-red-100);
+        border-width: 1px;
+        color: _palette(aa-red-100);
+      }
+    }
+    &.major {
+      h1, h2 {
+        border-color: _palette(aa-red-100);
+        border-width: 5px;
+        color: _palette(aa-red-100);
+      }
+    }
+  }
+}
+
+.button-large {
+  button {
+    padding: .75rem 1.25rem!important;
+    font-size: _font(size-medium)!important;
+
+    .material-icons,
+    .material-icons-outlined {
+      font-size: _font(size-large)!important;
+      left: .5rem!important;
+    }
+
+    &.custom-icons {
+      padding-left: 2.5rem!important;
+    }
+  }
+}
+
+button {
+  &.btn-enriched {
+    position: relative;
+    font-family: _font(family-regular);
+    font-size: _font(size-small);
+    cursor: pointer;
+    padding: 1rem .5rem 1rem .75rem;
+    border-radius: .25rem;
+    border: 1px solid _colour(aa-grey-10);
+
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        _colour(aa-white-100),
+        _colour(aa-light-blue-10)
+      );
+    }
+
+    .btn-enriched-toolbar {
+      position: absolute;
+      top: .5rem;
+      right: .75rem;
+      .aa-tooltip {
+        width: .75rem;
+        margin: -.05rem 0 0 .25rem;
+        &:before {
+          font-size: .75rem;
+          top: 0;
+          right: 0;
+        }
+      }
+      .material-icons {
+        margin: 0 0 0 .25rem;
+        font-size: _font(size-regular)
+      }
+    }
+    .btn-enriched-content {
+      .material-icons {
+        font-size: _font(size-xxlarge);
+        margin-right: .5rem;
+      }
+      h2 {
+        text-align: left;
+        width: 15rem;
+        padding-right: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: _font(size-regular);
+      }
+    }
+  }
+}
+
+
+.button-star {
+  @include icon-left;
+  padding: 0 0 0 2rem;
+  height: auto;
+  width: auto;
+  line-height: 1.5rem;
+  background: none;
+  border: none;
+  &:before {
+    @include icon-left-before;
+    content: "\f005";
+  }
+  &.selected {
+    color: _palette(aa-orange-100);
+    &:before {
+      @include icon-left-before-solid;
+    }
+  }
+}
+
+.context-menu {
+  button {
+    &.material-icons,
+    &.material-icons-outlined {
+      color: _colour(aa-grey-100);
+    }
+  }
+}
+
+// toggle grid layout
+.grid-small {@include view-switch}
+.grid-large {@include view-switch-large}
+.grid-list {@include view-switch-list}
+.grid-list-alt {@include view-switch-list-alt}
+.grid-small,
+.grid-large,
+.grid-list,
+.grid-list-alt {
+  @include icon-button-small-svg;
+  border-radius: unset;
+}
+
+.button-split {
+  position: relative;
+  float: left;
+
+  button:not(nav button) {
+    border: none;
+    min-height: 2.05rem;
+    color: _colour(white);
+
+    &:first-child {
+      border-radius: 1.5rem 0 0 1.5rem;
+      padding-left: 1rem;
+      margin-right: 0;
+    }
+    
+    &:last-child {
+      border-left: 1px solid _colour(white-transparency);
+      border-radius: 0 1.5rem 1.5rem 0;
+      padding: 0 1rem;
+      &:after {
+        top: .5rem;
+        right: .75rem;
+      }
+    }
+  }
+
+  &.nav-left-side {
+    button:not(nav button) {
+      &:first-child {
+        border-radius: 1.5rem 0 0 1.5rem;
+        border-left: none;
+        border-right: 1px solid _colour(white-transparency);
+        padding: 0 1rem;
+        &:after {
+          top: .5rem;
+          left: .25rem;
+          right: auto;
+        }
+      }
+  
+      &:last-child {
+        border-radius: 0 1.5rem 1.5rem 0;
+        padding: 0 1rem 0 .75rem;
+        margin-right: 0;
+        &:after {
+          content: none;
+        }
+      }
+    }
+
+    nav {
+      left: auto;
+      right: calc(100% - 2rem);
+    }
+  }
+
+  &.nav-bottom {
+    nav {
+      top: 100%;
+      bottom: auto;
+    }
+
+    button {
+      &:after {
+        rotate: 180deg;
+      }
+    }
+  }
+
+  nav {
+    position: absolute;
+    overflow: auto;
+    z-index: 9999999;
+    left: calc(100% - 2.1rem);
+    bottom: 100%;
+    background-color: _colour(aa-grey-2);
+
+    button {
+      border: none;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      padding: .5rem .75rem;
+      color: inherit;
+      background-color: transparent;
+      white-space: nowrap;
+      width: 100%;
+      text-align: left;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      &:hover {
+        background-color: _colour(aa-light-blue-10);
+      }
+      .material-icons,
+      .material-icons-outlined {
+        font-size: _font(size-regular);
+        margin-right: .25rem;
+      }
+    }
+  }
+}
+
+.header-secondary {
+  button {
+    &:hover {
+      background-color: _palette(aa-light-blue-40);
+      color: _palette(aa-blue-100);
+      border-color: _palette(aa-light-blue-40);
+    }
+  }
+}
+
+// global table nested buttons
+table {
+  tr td {
+    button {
+      font-size: _font(size-small)!important;
+      min-width: auto!important;
+      min-height: 1.5rem!important;
+      line-height: .75rem!important;
+      &:before {
+        font-size: 1rem!important;
+      }
+
+      &.reject,
+      &.void,
+      &.approve,
+      &.review,
+      &.return {
+        padding-left: 1.75rem!important;
+      }
+    }
+    .field {
+      padding-top: 0
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<section 
+    class="aa-ticker-wrapper"
+    [ngStyle]="{'width' : tickerWidth}"
+>
+    <div 
+        class="aa-ticker"
+        [ngStyle]="{
+            '-webkit-animation-duration' : tickerSpeed,
+            'animation-duration' : tickerSpeed,
+            'padding-left' : tickerWidth
+        }"
+    >
+        <ng-content></ng-content>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+<div
+  id="aa-tooltip-dynamic"
+  class="tooltip-dynamic box-shadow"
+  [ngClass]="getTooltipClasses()"
+  [style.left.px]="left"
+  [style.top.px]="top">
+  <div [innerHtml]="tooltip"></div>
+</div>

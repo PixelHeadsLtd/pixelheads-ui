@@ -1,0 +1,28 @@
+<section
+  id="aa-info-panel"
+  class="info-panel {{panelStatus}}"
+  [ngStyle]="{
+    'width' : panelWidth,
+    'height' : panelHeight
+  }"
+>
+  <div
+    class="foreground"
+    [ngStyle]="preventOpacity ? {'opacity':'1'} : {}"
+    [ngClass]="{'border-radius-0-5' : roundedCorners}"
+  >
+    <div
+      class="info-panel-header padding-1"
+      [ngStyle]="{ 'border-bottom': removeHeaderBorder ? 'none' : 'inherit' }"
+    >
+      <ng-content select="[custom-header]"></ng-content>
+    </div>
+    <div class="info-panel-content padding-1">
+      <ng-content select="[custom-content]"></ng-content>
+    </div>
+    <div class="info-panel-footer">
+      <ng-content select="[custom-footer]"></ng-content>
+    </div>
+  </div>
+  <div class="background"></div>
+</section>

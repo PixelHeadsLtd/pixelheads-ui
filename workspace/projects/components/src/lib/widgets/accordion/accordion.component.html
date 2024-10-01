@@ -1,0 +1,60 @@
+<article 
+  id="aa-accordion"
+  class="accordion-container"
+  [ngStyle]="{'min-width' : minWidth, 'min-height': verticalDisplay ? verticalMinHeight : 'auto' }"
+  [ngClass]="{'box-shadow' : showBody, 'vertical flex-group flex-start' : verticalDisplay }"
+>
+  <h3 class="margin-0">
+    <button 
+      class="accordion-trigger flex-group space-between flex-nowrap {{customBgColor}}" 
+      [ngClass]="{
+        'expanded' : showBody, 
+        'clean' : accordionClean, 
+        'disabled' : disabled, 
+        'flex-column' : verticalDisplay,
+        'flex-align-center' : !verticalDisplay
+      }"
+      (click)="onOpen($event)" 
+      [attr.aria-expanded.true]="showBody"
+      aria-controls="sectionId" 
+      [id]="accordionId" 
+      type="button">
+        <div *ngIf="!bespokeHeader" class="flex-align-center flex-group flex-start">
+            <div *ngIf="dragable" class="accordion-icon material-icons drag-icon">drag_indicator</div>
+            <div *ngIf="iconsEnabled && !fontAwesome" class="accordion-icon material-icons {{coreIconClass}}">{{iconName}}</div>
+            <div *ngIf="iconsEnabled && fontAwesome" class="accordion-icon {{fontClassName}}"></div>
+            <div class="nested-icons">
+              <div class="material-icons" *ngIf="!showBody">add_circle_outline</div>
+              <div class="material-icons" *ngIf="showBody">remove_circle_outline</div>
+            </div>
+            <div class="accordion-heading">{{accordionHeading}}</div>
+          </div>
+        <div *ngIf="!bespokeHeader" class="flex-group flex-end flex-align-center">
+          <ng-content select="[header-custom]"></ng-content>
+            <div class="toggle-icons flex-align-center">
+              <div *ngIf="!showBody" class="material-icons">add</div>
+              <div *ngIf="showBody" class="material-icons">remove</div>
+            </div>
+        </div>
+        <div 
+          *ngIf="bespokeHeader" 
+          class="bespoke-header"
+          [ngStyle]="{ 'width': hideToggleIcon ? '100%' : 'calc(100% - 2rem)' }"
+        >
+          <ng-content select="[bespoke-header]"></ng-content>
+          <div *ngIf="!hideToggleIcon" class="toggle-icons flex-align-center {{toggleIconColor}}">
+            <div *ngIf="!showBody" class="material-icons">add</div>
+            <div *ngIf="showBody" class="material-icons">remove</div>
+          </div>
+        </div>
+    </button>
+  </h3>
+  <div 
+    *ngIf="showBody" 
+    [id]="sectionId" 
+    class="accordion-panel"
+    [ngStyle]="{ 'padding': clearPadding ? '0' : '1rem 1.25rem' }"
+    >
+      <ng-content></ng-content>
+  </div>
+</article>

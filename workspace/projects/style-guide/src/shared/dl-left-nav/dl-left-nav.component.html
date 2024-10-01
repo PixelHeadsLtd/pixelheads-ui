@@ -1,0 +1,40 @@
+<nav class="nav-angular-elements nav-container" [ngClass]="{ 'minimize-menu' : minimizeMenu, 'show-mobile-menu' : mobileMenu }">
+  <ul>
+    <li *ngFor="let item of navDataItems; let i = index" class="level-0">
+      <!-- If it's solo and not an href -->
+      <a *ngIf="!item.isHref && !item.isExpandable" (click)="closeMobileMenu()" routerLink="{{item.routerLink}}" routerLinkActive="selected"
+        class="level-0-anchor-solo flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}">
+        <span class="material-icons">{{item.iconName}}</span>
+        <span class="margin-right-0-5">{{item.title}}</span>
+      </a>
+      
+      <!-- If it's solo and an href -->
+      <a *ngIf="item.isHref" (click)="closeMobileMenu()" href="{{item.hRef}}" target="_blank"
+        class="level-0-anchor-solo-href flex-group flex-nowrap flex-align-center flex-start {{item.color}} {{item.customClass}}">
+        <span class="material-icons font-size-large">{{item.iconName}}</span>
+        <span class="margin-right-0-5">{{item.title}}</span>
+        <span class="material-icons position-static bg-transparent aa-burgundy-100">open_in_new</span>
+      </a>
+      
+      <!-- If it's an expandable group -->
+      <a *ngIf="item.isExpandable" [class.selected]="isExpanded(i) || hasSelectedChild(i)" (click)="toggleExpand(i)"
+        class="level-0-expandable-item flex-group flex-align-center flex-start {{item.color}} {{item.customClass}}">
+        <span class="material-icons">{{item.iconName}}</span>
+        <span class="margin-right-0-5">{{item.title}}</span>
+      </a>
+    
+      <ul *ngIf="item.nestedItems" [ngStyle]="expandedItems[i] && item.nestedItems ? { 'max-height' : item.nestedItems.length * 33 + 'px' }: {}">
+        <li *ngFor="let nestedItem of item.nestedItems; let n = index" class="level-1">
+          <a (click)="setSelectedItem(nestedItem, i)" class="level-1-ancher flex-group flex-align-center flex-start"
+            [ngClass]="{ 'selected': nestedItem.isSelected }"
+            routerLink="{{nestedItem.routerLink}}" routerLinkActive="selected" title="{{nestedItem.title}}">
+            <span class="material-icons {{nestedItem.customClass}}">{{nestedItem.iconName}}</span>
+            <span>{{nestedItem.title}}</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <button (click)="toggleMinimizeMenu()" class="material-icons nav-min-max">chevron_left</button>
+</nav>

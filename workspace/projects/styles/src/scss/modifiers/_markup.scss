@@ -1,0 +1,24 @@
+.align-left, .text-align-left {text-align: left;}
+.align-right, .text-align-right {text-align: right!important;}
+.align-center, .text-align-center {text-align: center;}
+.align-vertical-middle {vertical-align: middle;}
+.display-none {display: none !important;}
+.display-block {display: block !important;}
+.display-inline {display: inline !important;}
+.display-inline-block {display: inline-block !important;}
+.float-right {float: right !important;} // try not to use floats
+.line-height-2-5 {line-height: 2.5rem !important;}
+.line-height-3 {line-height: 3rem;}
+.max-readable-width {max-width: 37rem;}
+.min-readable-width {width: 10rem;}
+.overflow-y-scroll {overflow-y: scroll!important;}
+.overflow-x-scroll {overflow-x: scroll!important;}
+.overflow-hidden {overflow: hidden!important;}
+.position-fixed {position: fixed!important;}
+.position-relative {position: relative!important;}
+.position-absolute {position: absolute!important;}
+.position-static {position: static!important;}
+.strip-border-bottom {border-bottom: none!important;}
+.strip-letter-spacing {letter-spacing: 0!important;}
+.visibility-hidden {visibility: hidden!important;}
+.visibility-visible {visibility: visible!important;}

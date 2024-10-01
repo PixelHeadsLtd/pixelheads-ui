@@ -1,0 +1,15 @@
+<nav id="aa-nav-context" class="nav-context" 
+    [ngStyle]="{
+        'width' : navWidth, 
+        'left' : leftPos, 
+        'top' : topPos, 
+        'bottom' : bottomPos, 
+        'z-index' : zIndex
+    }">
+    <div class="nav-context-content">
+        <button (click)="toggle()" class="material-icons menu">menu</button>
+        <ul [ngClass]="{'show-menu' : showMenu}">
+            <ng-content></ng-content>
+        </ul>
+    </div>
+</nav>

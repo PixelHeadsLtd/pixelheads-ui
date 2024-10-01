@@ -1,0 +1,25 @@
+<article 
+    id="aa-toastr-item"
+    class="animate-normal bg-aa-red-100 box-shadow" 
+    [ngClass]="{
+        'show-toastr': showToastr,
+        'bg-aa-red-100': isError,
+        'bg-aa-orange-100': isWarning,
+        'bg-aa-green-100': isSuccess,
+        'bg-aa-light-blue-100': isInfo
+    }"
+>
+    <button (click)="onCloseClick($event)" class="material-icons aa-white-100">clear</button>
+    <div class="flex-group flex-start">
+        <section class="flex-align-center">
+            <div *ngIf="isError" class="material-icons toastr-icon aa-white-100">local_police</div>
+            <div *ngIf="isWarning" class="material-icons toastr-icon aa-white-100">privacy_tip</div>
+            <div *ngIf="isSuccess" class="material-icons toastr-icon aa-white-100">verified_user</div>
+            <div *ngIf="isInfo" class="material-icons toastr-icon aa-white-100">security</div>
+        </section>
+        <section>
+            <h3 class="margin-0 aa-white-100 margin-bottom-0-25">{{heading}}</h3>
+            <p class="aa-white-100 small">{{message}}</p>
+        </section>
+    </div>
+</article>

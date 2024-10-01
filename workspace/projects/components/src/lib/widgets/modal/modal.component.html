@@ -1,0 +1,25 @@
+<article id="aa-modal" class="aa-modal">
+  <div 
+    class="aa-modal-container" 
+    [ngClass]="{'aa-green' : green, 'aa-orange' : orange, 'aa-red' : red, 'aa-blue' : blue}"
+    [ngStyle]="{
+      'top' : topPos,
+      'right' : rightPos,
+      'left' : leftPos,
+      'min-width' : minWidth,
+      'max-width' : maxWidth,
+      'z-index' : zIndex
+    }"
+  >
+    <section *ngIf="!hideHeader" class="aa-modal-header">
+      <h2 class="boxed align-center">{{heading}}</h2>
+    </section>
+    <section class="aa-modal-content">
+      {{message}}
+      <ng-content select="[content-custom]"></ng-content>
+    </section>
+    <section class="aa-modal-footer flex-group flex-center">
+        <ng-content></ng-content>
+    </section>
+  </div>
+</article>

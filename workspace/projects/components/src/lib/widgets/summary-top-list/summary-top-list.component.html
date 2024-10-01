@@ -1,0 +1,12 @@
+<div 
+  id="aa-summary-top-list"
+  class="dl-repeater" 
+  [ngClass]="{
+    'highlight' : highlight, 
+    'truncate-text' : truncate,
+    'divider' : divider
+  }"
+>
+  <dt title="{{itemTitle}}" [ngStyle]="{'max-width' : maxWidth}">{{itemTitle}}</dt>
+  <dd title="{{itemDescription}}" [ngStyle]="{'max-width' : maxWidth}">{{itemDescription}}</dd>
+</div>

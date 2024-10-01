@@ -1,0 +1,994 @@
+<section class="control-bar">
+  <h1>NGX Quill</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group padding-1-5">
+      <section class="flex-1 col-left flex-start">
+        <h2>NGX Quill</h2>
+        <div class="describe">
+          <p>
+            The <a href="https://www.npmjs.com/package/ngx-quill" target="_blank">NGX Quill</a>
+            is used for Context-sensitive-help. <br/>
+            <strong class="aa-red-100">For NG17, please use version 25.1.1</strong>
+          </p>
+        </div>
+
+        <div class="max-width-40">
+          <form>
+            <quill-editor></quill-editor>
+          </form>
+        </div>
+
+        <h2 class="margin-top-2 margin-bottom-0-75">Context sensitive help</h2>
+        <div class="flex-group flex-start">
+          <div class="field optional">
+            <!------------------------------- START CSH ------------------------------->
+              <div class="csh-container">
+                <label for="csh" class="min-width-20">CSH wrapping an input label</label>
+                <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnLabel ? {'z-index' : '999999'}: {}">
+                  <div
+                    class="aa-tooltip icon-info is-info margin-x-05"
+                    [ngClass]="{'show-csh aa-green-100' : showOnLabel}"
+                    (click)="
+                    showOnH1=false;
+                    showOnH2=false;
+                    showOnLabel=true;
+                    showOnButton=false;
+                    showOnAlert=false;
+                    showOnCheckBoxOne=false;
+                    showOnCheckBoxTwo=false;
+                    showOnTextarea=false;
+                    showOnPara=false;
+                    showOnSelect=false;
+                    showOnShield=false;
+                    "
+                  >
+                    <div class="mask"></div>
+                  </div>
+                  <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnLabel, 'full-screen' : fullScreen}">
+                    <div class="flex-group flex-align-center space-between">
+                      <div
+                        *ngIf="showOnLabel"
+                        class="
+                        aa-green-100
+                        italic
+                        margin-0-75
+                        padding-top-0-25
+                        size-small
+                        text-pulsate"
+                        >
+                          Edit mode
+                      </div>
+                      <h3 *ngIf="!showOnLabel" class="margin-0-75">
+                        Context sensitive help
+                      </h3>
+                      <div *ngIf="!showOnLabel">
+                        <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                        <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                      </div>
+
+                      <div *ngIf="showOnLabel">
+                        <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                        <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                      </div>
+                    </div>
+                    <form>
+                      <quill-editor></quill-editor>
+                    </form>
+                    <div *ngIf="showOnLabel" class="flex-group flex-start">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnLabel=false"
+                          type="button"
+                          name="buttonIdC"
+                          id="buttonIdC"
+                          class="custom-icons green margin-0-75 margin-right-0"
+                        >
+                          <span class="material-icons">save</span>
+                          <span>Save</span>
+                        </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=true"
+                          type="button"
+                          name="buttonIdC"
+                          id="buttonIdC"
+                          class="cancel margin-top-0-75 margin-left-0"
+                        >
+                        Cancel
+                      </button>
+                      </div>
+                    <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                      <div class="flex-group flex-start">
+                        <div class="material-icons aa-red-100">error_outline</div>
+                        <p class="small aa-red-100">
+                          Are you sure you want to cancel?<br/>
+                          Your changes will be lost.
+                        </p>
+                      </div>
+                      <div class="flex-group flex-end">
+                        <div>
+                          <button
+                            (click)="showEditor=false; showOnLabel=false; areYouSure=false"
+                            type="button"
+                            class="reject small"
+                          >
+                          Yes
+                        </button>
+                        </div>
+                        <div>
+                          <button
+                            (click)="areYouSure=false"
+                            type="button"
+                            class="cancel small"
+                          >
+                          I'll stay
+                        </button>
+                        </div>
+                      </div>
+                    </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!------------------------------- END CSH ------------------------------->
+              <input type="text" placeholder="CSH" />
+            </div>
+
+            <!------------------------------- START CSH ------------------------------->
+            <div class="csh-container">
+              <aa-button
+                  buttonClass="primary"
+                  buttonId="buttonId"
+                  buttonLabel=""
+                  fieldClass=""
+                  buttonText="CSH wrapping a button component">
+              </aa-button>
+              <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnButton ? {'z-index' : '999999'} :{}">
+                <div
+                  class="aa-tooltip icon-info is-info margin-x-05"
+                  [ngClass]="{'show-csh aa-green-100' : showOnButton}"
+                  (click)="
+                  showOnH1=false;
+                  showOnH2=false;
+                  showOnLabel=false;
+                  showOnButton=true;
+                  showOnAlert=false;
+                  showOnCheckBoxOne=false;
+                  showOnCheckBoxTwo=false;
+                  showOnTextarea=false;
+                  showOnPara=false;
+                  showOnSelect=false;
+                  showOnShield=false;
+                  "
+                >
+                  <div class="mask"></div>
+                </div>
+                <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnButton, 'full-screen' : fullScreen}">
+                  <div class="flex-group flex-align-center space-between">
+                    <div
+                      *ngIf="showOnButton"
+                      class="
+                      aa-green-100
+                      italic
+                      margin-0-75
+                      padding-top-0-25
+                      size-small
+                      text-pulsate"
+                      >
+                        Edit mode
+                    </div>
+                    <h3 *ngIf="!showOnButton" class="margin-0-75">
+                      Context sensitive help
+                    </h3>
+                    <div *ngIf="!showOnButton">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+
+                    <div *ngIf="showOnButton">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+                  </div>
+                  <form>
+                    <quill-editor></quill-editor>
+                  </form>
+                  <div *ngIf="showOnButton" class="flex-group flex-start">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnButton=false"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="custom-icons green margin-0-75 margin-right-0"
+                      >
+                        <span class="material-icons">save</span>
+                        <span>Save</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=true"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="cancel margin-top-0-75 margin-left-0"
+                      >
+                      Cancel
+                    </button>
+                    </div>
+                  <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                    <div class="flex-group flex-start">
+                      <div class="material-icons aa-red-100">error_outline</div>
+                      <p class="small aa-red-100">
+                        Are you sure you want to cancel?<br/>
+                        Your changes will be lost.
+                      </p>
+                    </div>
+                    <div class="flex-group flex-end">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnButton=false; areYouSure=false"
+                          type="button"
+                          class="reject small"
+                        >
+                        Yes
+                      </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=false"
+                          type="button"
+                          class="cancel small"
+                        >
+                        I'll stay
+                      </button>
+                      </div>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------- END CSH ------------------------------->
+
+           <fieldset>
+             <legend>CSH wrapping a checkbox within a fieldset</legend>
+              <!------------------------------- START CSH ------------------------------->
+              <div class="csh-container">
+                <aa-checkbox
+                  checkboxName="myCheckboxes"
+                  checkboxText="A checkbox nested inside a fieldset"
+                  checkboxValue=""
+                  fieldClass="">
+                </aa-checkbox>
+              <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnCheckBoxOne ? {'z-index' : '999999'} :{}">
+                <div
+                  class="aa-tooltip icon-info is-info margin-x-05"
+                  [ngClass]="{'show-csh aa-green-100' : showOnCheckBoxOne}"
+                  (click)="
+                  showOnH1=false;
+                  showOnH2=false;
+                  showOnLabel=false;
+                  showOnButton=false;
+                  showOnAlert=false;
+                  showOnCheckBoxOne=true;
+                  showOnCheckBoxTwo=false;
+                  showOnTextarea=false;
+                  showOnPara=false;
+                  showOnSelect=false;
+                  showOnShield=false;
+                  "
+                >
+                  <div class="mask"></div>
+                </div>
+                <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnCheckBoxOne, 'full-screen' : fullScreen}">
+                  <div class="flex-group flex-align-center space-between">
+                    <div
+                      *ngIf="showOnCheckBoxOne"
+                      class="
+                      aa-green-100
+                      italic
+                      margin-0-75
+                      padding-top-0-25
+                      size-small
+                      text-pulsate"
+                      >
+                        Edit mode
+                    </div>
+                    <h3 *ngIf="!showOnCheckBoxOne" class="margin-0-75">
+                      Context sensitive help
+                    </h3>
+                    <div *ngIf="!showOnCheckBoxOne">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+
+                    <div *ngIf="showOnCheckBoxOne">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+                  </div>
+                  <form>
+                    <quill-editor></quill-editor>
+                  </form>
+                  <div *ngIf="showOnCheckBoxOne" class="flex-group flex-start">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnCheckBoxOne=false"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="custom-icons green margin-0-75 margin-right-0"
+                      >
+                        <span class="material-icons">save</span>
+                        <span>Save</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=true"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="cancel margin-top-0-75 margin-left-0"
+                      >
+                      Cancel
+                    </button>
+                    </div>
+                  <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                    <div class="flex-group flex-start">
+                      <div class="material-icons aa-red-100">error_outline</div>
+                      <p class="small aa-red-100">
+                        Are you sure you want to cancel?<br/>
+                        Your changes will be lost.
+                      </p>
+                    </div>
+                    <div class="flex-group flex-end">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnCheckBoxOne=false; areYouSure=false"
+                          type="button"
+                          class="reject small"
+                        >
+                        Yes
+                      </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=false"
+                          type="button"
+                          class="cancel small"
+                        >
+                        I'll stay
+                      </button>
+                      </div>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------- END CSH ------------------------------->
+           </fieldset>
+
+           <div class="field">
+             <label>CSH wrapping a checkbox that's not in a fieldset</label>
+             <!------------------------------- START CSH ------------------------------->
+             <div class="csh-container">
+              <aa-checkbox
+                checkboxName="myCheckboxes"
+                checkboxText="A checkbox that's NOT in a fieldset"
+                fieldClass="">
+              </aa-checkbox>
+            <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnCheckBoxTwo ? {'z-index' : '999999'}: {}">
+              <div
+                class="aa-tooltip icon-info is-info margin-x-05"
+                [ngClass]="{'show-csh aa-green-100' : showOnCheckBoxTwo}"
+                (click)="
+                showOnH1=false;
+                showOnH2=false;
+                showOnLabel=false;
+                showOnButton=false;
+                showOnAlert=false;
+                showOnCheckBoxOne=false;
+                showOnCheckBoxTwo=true;
+                showOnTextarea=false;
+                showOnPara=false;
+                showOnSelect=false;
+                showOnShield=false;
+                "
+              >
+                <div class="mask"></div>
+              </div>
+              <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnCheckBoxTwo, 'full-screen' : fullScreen}">
+                <div class="flex-group flex-align-center space-between">
+                  <div
+                    *ngIf="showOnCheckBoxTwo"
+                    class="
+                    aa-green-100
+                    italic
+                    margin-0-75
+                    padding-top-0-25
+                    size-small
+                    text-pulsate"
+                    >
+                      Edit mode
+                  </div>
+                  <h3 *ngIf="!showOnCheckBoxTwo" class="margin-0-75">
+                    Context sensitive help
+                  </h3>
+                  <div *ngIf="!showOnCheckBoxTwo">
+                    <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                    <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                  </div>
+
+                  <div *ngIf="showOnCheckBoxTwo">
+                    <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                    <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                  </div>
+                </div>
+                <form>
+                  <quill-editor></quill-editor>
+                </form>
+                <div *ngIf="showOnCheckBoxTwo" class="flex-group flex-start">
+                  <div>
+                    <button
+                      (click)="showEditor=false; showOnCheckBoxTwo=false"
+                      type="button"
+                      name="buttonIdC"
+                      id="buttonIdC"
+                      class="custom-icons green margin-0-75 margin-right-0"
+                    >
+                      <span class="material-icons">save</span>
+                      <span>Save</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      (click)="areYouSure=true"
+                      type="button"
+                      name="buttonIdC"
+                      id="buttonIdC"
+                      class="cancel margin-top-0-75 margin-left-0"
+                    >
+                    Cancel
+                  </button>
+                  </div>
+                <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                  <div class="flex-group flex-start">
+                    <div class="material-icons aa-red-100">error_outline</div>
+                    <p class="small aa-red-100">
+                      Are you sure you want to cancel?<br/>
+                      Your changes will be lost.
+                    </p>
+                  </div>
+                  <div class="flex-group flex-end">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnCheckBoxTwo=false; areYouSure=false"
+                        type="button"
+                        class="reject small"
+                      >
+                      Yes
+                    </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=false"
+                        type="button"
+                        class="cancel small"
+                      >
+                      I'll stay
+                    </button>
+                    </div>
+                  </div>
+                </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------- END CSH ------------------------------->
+           </div>
+        </div>
+
+        <div class="flex-group flex-start">
+          <div class="field margin-top-1-5">
+            <!------------------------------- START CSH ------------------------------->
+            <div class="csh-container">
+              <aa-alert alertClass="success" alertText="CSH wrapping an alert component"></aa-alert>
+              <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnAlert ? {'z-index' : '999999'} : {}">
+                <div
+                  class="aa-tooltip icon-info is-info margin-x-05"
+                  [ngClass]="{'show-csh aa-green-100' : showOnAlert}"
+                  (click)="
+                  showOnH1=false;
+                  showOnH2=false;
+                  showOnLabel=false;
+                  showOnButton=false;
+                  showOnAlert=true;
+                  showOnCheckBoxOne=false;
+                  showOnCheckBoxTwo=false;
+                  showOnTextarea=false;
+                  showOnPara=false;
+                  showOnSelect=false;
+                  showOnShield=false;
+                  "
+                >
+                  <div class="mask"></div>
+                </div>
+                <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnAlert, 'full-screen' : fullScreen}">
+                  <div class="flex-group flex-align-center space-between">
+                    <div
+                      *ngIf="showOnAlert"
+                      class="
+                      aa-green-100
+                      italic
+                      margin-0-75
+                      padding-top-0-25
+                      size-small
+                      text-pulsate"
+                      >
+                        Edit mode
+                    </div>
+                    <h3 *ngIf="!showOnAlert" class="margin-0-75">
+                      Context sensitive help
+                    </h3>
+                    <div *ngIf="!showOnAlert">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+
+                    <div *ngIf="showOnAlert">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+                  </div>
+                  <form>
+                    <quill-editor></quill-editor>
+                  </form>
+                  <div *ngIf="showOnAlert" class="flex-group flex-start">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnAlert=false"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="custom-icons green margin-0-75 margin-right-0"
+                      >
+                        <span class="material-icons">save</span>
+                        <span>Save</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=true"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="cancel margin-top-0-75 margin-left-0"
+                      >
+                      Cancel
+                    </button>
+                    </div>
+                  <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                    <div class="flex-group flex-start">
+                      <div class="material-icons aa-red-100">error_outline</div>
+                      <p class="small aa-red-100">
+                        Are you sure you want to cancel?<br/>
+                        Your changes will be lost.
+                      </p>
+                    </div>
+                    <div class="flex-group flex-end">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnAlert=false; areYouSure=false"
+                          type="button"
+                          class="reject small"
+                        >
+                        Yes
+                      </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=false"
+                          type="button"
+                          class="cancel small"
+                        >
+                        I'll stay
+                      </button>
+                      </div>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------- END CSH ------------------------------->
+          </div>
+
+          <div class="field margin-top-1-5">
+            <!------------------------------- START CSH ------------------------------->
+            <div class="csh-container">
+              <div class="alert-shield info">CSH wrapping an alert shield</div>
+              <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnShield ? {'z-index' : '999999'}: {}">
+                <div
+                  class="aa-tooltip icon-info is-info margin-x-05"
+                  [ngClass]="{'show-csh aa-green-100' : showOnShield}"
+                  (click)="
+                  showOnH1=false;
+                  showOnH2=false;
+                  showOnLabel=false;
+                  showOnButton=false;
+                  showOnAlert=false;
+                  showOnCheckBoxOne=false;
+                  showOnCheckBoxTwo=false;
+                  showOnTextarea=false;
+                  showOnPara=false;
+                  showOnSelect=false;
+                  showOnShield=true;
+                  "
+                >
+                  <div class="mask"></div>
+                </div>
+                <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnShield, 'full-screen' : fullScreen}">
+                  <div class="flex-group flex-align-center space-between">
+                    <div
+                      *ngIf="showOnShield"
+                      class="
+                      aa-green-100
+                      italic
+                      margin-0-75
+                      padding-top-0-25
+                      size-small
+                      text-pulsate"
+                      >
+                        Edit mode
+                    </div>
+                    <h3 *ngIf="!showOnShield" class="margin-0-75">
+                      Context sensitive help
+                    </h3>
+                    <div *ngIf="!showOnShield">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+
+                    <div *ngIf="showOnShield">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+                  </div>
+                  <form>
+                    <quill-editor></quill-editor>
+                  </form>
+                  <div *ngIf="showOnShield" class="flex-group flex-start">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnShield=false"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="custom-icons green margin-0-75 margin-right-0"
+                      >
+                        <span class="material-icons">save</span>
+                        <span>Save</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=true"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="cancel margin-top-0-75 margin-left-0"
+                      >
+                      Cancel
+                    </button>
+                    </div>
+                  <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                    <div class="flex-group flex-start">
+                      <div class="material-icons aa-red-100">error_outline</div>
+                      <p class="small aa-red-100">
+                        Are you sure you want to cancel?<br/>
+                        Your changes will be lost.
+                      </p>
+                    </div>
+                    <div class="flex-group flex-end">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnShield=false; areYouSure=false"
+                          type="button"
+                          class="reject small"
+                        >
+                        Yes
+                      </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=false"
+                          type="button"
+                          class="cancel small"
+                        >
+                        I'll stay
+                      </button>
+                      </div>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------- END CSH ------------------------------->
+          </div>
+
+          <div class="field">
+            <!------------------------------- START CSH ------------------------------->
+            <div class="csh-container">
+              <label for="select">CHS wrapping a select label</label>
+              <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnSelect ? {'z-index' : '999999'} : {}">
+                <div
+                  class="aa-tooltip icon-info is-info margin-x-05"
+                  [ngClass]="{'show-csh aa-green-100' : showOnSelect}"
+                  (click)="
+                  showOnH1=false;
+                  showOnH2=false;
+                  showOnLabel=false;
+                  showOnButton=false;
+                  showOnAlert=false;
+                  showOnCheckBoxOne=false;
+                  showOnCheckBoxTwo=false;
+                  showOnTextarea=false;
+                  showOnPara=false;
+                  showOnSelect=true;
+                  showOnShield=false;
+                  "
+                >
+                  <div class="mask"></div>
+                </div>
+                <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnSelect, 'full-screen' : fullScreen}">
+                  <div class="flex-group flex-align-center space-between">
+                    <div
+                      *ngIf="showOnSelect"
+                      class="
+                      aa-green-100
+                      italic
+                      margin-0-75
+                      padding-top-0-25
+                      size-small
+                      text-pulsate"
+                      >
+                        Edit mode
+                    </div>
+                    <h3 *ngIf="!showOnSelect" class="margin-0-75">
+                      Context sensitive help
+                    </h3>
+                    <div *ngIf="!showOnSelect">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+
+                    <div *ngIf="showOnSelect">
+                      <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                      <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                    </div>
+                  </div>
+                  <form>
+                    <quill-editor></quill-editor>
+                  </form>
+                  <div *ngIf="showOnSelect" class="flex-group flex-start">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnSelect=false"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="custom-icons green margin-0-75 margin-right-0"
+                      >
+                        <span class="material-icons">save</span>
+                        <span>Save</span>
+                      </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=true"
+                        type="button"
+                        name="buttonIdC"
+                        id="buttonIdC"
+                        class="cancel margin-top-0-75 margin-left-0"
+                      >
+                      Cancel
+                    </button>
+                    </div>
+                  <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                    <div class="flex-group flex-start">
+                      <div class="material-icons aa-red-100">error_outline</div>
+                      <p class="small aa-red-100">
+                        Are you sure you want to cancel?<br/>
+                        Your changes will be lost.
+                      </p>
+                    </div>
+                    <div class="flex-group flex-end">
+                      <div>
+                        <button
+                          (click)="showEditor=false; showOnSelect=false; areYouSure=false"
+                          type="button"
+                          class="reject small"
+                        >
+                        Yes
+                      </button>
+                      </div>
+                      <div>
+                        <button
+                          (click)="areYouSure=false"
+                          type="button"
+                          class="cancel small"
+                        >
+                        I'll stay
+                      </button>
+                      </div>
+                    </div>
+                  </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!------------------------------- END CSH ------------------------------->
+            <select name="pets" id="pet-select">
+              <option value="" disabled selected>Please select</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="hamster">Hamster</option>
+              <option value="parrot">Parrot</option>
+              <option value="spider">Spider</option>
+              <option value="goldfish">Goldfish</option>
+          </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <!------------------------------- START CSH ------------------------------->
+          <div class="csh-container">
+            <p>CSH wrapping a paragraph</p>
+            <div class="aa-csh {{popupPosition}}" [ngStyle]="showOnPara ? {'z-index' : '999999'}: {}">
+              <div
+                class="aa-tooltip icon-info is-info margin-x-05"
+                [ngClass]="{'show-csh aa-green-100' : showOnPara}"
+                (click)="
+                showOnH1=false;
+                showOnH2=false;
+                showOnLabel=false;
+                showOnButton=false;
+                showOnAlert=false;
+                showOnCheckBoxOne=false;
+                showOnCheckBoxTwo=false;
+                showOnTextarea=false;
+                showOnPara=true;
+                showOnSelect=false;
+                showOnShield=false;
+                "
+              >
+                <div class="mask"></div>
+              </div>
+              <div class="feature-box padding-0" [ngClass]="{'bd-green' : showOnPara, 'full-screen' : fullScreen}">
+                <div class="flex-group flex-align-center space-between">
+                  <div
+                    *ngIf="showOnPara"
+                    class="
+                    aa-green-100
+                    italic
+                    margin-0-75
+                    padding-top-0-25
+                    size-small
+                    text-pulsate"
+                    >
+                      Edit mode
+                  </div>
+                  <h3 *ngIf="!showOnPara" class="margin-0-75">
+                    Context sensitive help
+                  </h3>
+                  <div *ngIf="!showOnPara">
+                    <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                    <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-light-blue-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                  </div>
+
+                  <div *ngIf="showOnPara">
+                    <div *ngIf="!fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">open_in_full</div>
+                    <div *ngIf="fullScreen" (click)="fullScreen=!fullScreen" class="material-icons small aa-green-100 cursor-pointer padding-right-0-75">close_fullscreen</div>
+                  </div>
+                </div>
+                <form>
+                  <quill-editor></quill-editor>
+                </form>
+                <div *ngIf="showOnPara" class="flex-group flex-start">
+                  <div>
+                    <button
+                      (click)="showEditor=false; showOnPara=false"
+                      type="button"
+                      name="buttonIdC"
+                      id="buttonIdC"
+                      class="custom-icons green margin-0-75 margin-right-0"
+                    >
+                      <span class="material-icons">save</span>
+                      <span>Save</span>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      (click)="areYouSure=true"
+                      type="button"
+                      name="buttonIdC"
+                      id="buttonIdC"
+                      class="cancel margin-top-0-75 margin-left-0"
+                    >
+                    Cancel
+                  </button>
+                  </div>
+                <article *ngIf="areYouSure" class="confirmation flex-group flex-align-center space-between margin-0-5">
+                  <div class="flex-group flex-start">
+                    <div class="material-icons aa-red-100">error_outline</div>
+                    <p class="small aa-red-100">
+                      Are you sure you want to cancel?<br/>
+                      Your changes will be lost.
+                    </p>
+                  </div>
+                  <div class="flex-group flex-end">
+                    <div>
+                      <button
+                        (click)="showEditor=false; showOnPara=false; areYouSure=false"
+                        type="button"
+                        class="reject small"
+                      >
+                      Yes
+                    </button>
+                    </div>
+                    <div>
+                      <button
+                        (click)="areYouSure=false"
+                        type="button"
+                        class="cancel small"
+                      >
+                      I'll stay
+                    </button>
+                    </div>
+                  </div>
+                </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------- END CSH ------------------------------->
+        </div>
+
+      </section>
+
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+
+    <aa-blade
+      [blockPageUI]="false"
+      [toggleBlade]="toggleBlade"
+      [suppressAutoClose]="false"
+      topPosition="3.5rem"
+      [zIndex]="2"
+      bladeSize="one-column-width"
+      bladeHeading="Gist"
+      [enableIcon]="true"
+      iconName="table_rows"
+      (bladeOpen)="bladeIsOpen($event)"
+      >
+      <article class="blade-content">
+        <a href="https://gist.github.com/angloux/6d9d4620a4e6de41687c34014360a2ef" target="_blank">View Gist on GitHub</a>
+        <app-gist src="angloux/6d9d4620a4e6de41687c34014360a2ef"></app-gist>
+      </article>
+    </aa-blade>
+
+</section>

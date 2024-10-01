@@ -1,0 +1,890 @@
+<section class="control-bar">
+  <h1>Accordion</h1>
+</section>
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Accordion (non-customisable header)</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          The default accordion has a baked-in header.
+          You can only change the background-colour, icon name and heading text.
+          If you want to add additional components to the header, such as shields or buttons,
+          please use the <strong>bespoke-header</strong> version
+        </p>
+      </div>
+
+      <aa-accordion
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=true;
+        showFour=false;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
+        [showBody]="showThree"
+        minWidth="35rem"
+        customBgColor=""
+        accordionHeading="Default accordion"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconName="surfing"
+      >
+        <ng-container>
+          <h3 class="boxed">Design Language colours</h3>
+          <p>
+            The default accordion has no 'customBgColor' set
+          </p>
+        </ng-container>
+
+      </aa-accordion>
+      <aa-accordion
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=true;
+        showFive=false;
+        showSix=false;
+        showSeven=false;
+        "
+        [showBody]="showFour"
+        minWidth="35rem"
+        customBgColor="bg-aa-yellow-100"
+        accordionHeading="Default accordion with custom colour (see inside)"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconName="emoji_transportation"
+      >
+      <ng-container>
+        <h3 class="boxed">Design Language colours</h3>
+        <div class="editorial-content">
+          <p>
+            Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+          </p>
+        </div>
+      </ng-container>
+      </aa-accordion>
+      <aa-accordion
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=false;
+        showFive=true;
+        showSix=false;
+        showSeven=false;
+        "
+        [showBody]="showFive"
+        minWidth="35rem"
+        customBgColor="bg-aa-orange-100"
+        accordionHeading="Default accordion with custom colour (see inside)"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconName="rocket_launch"
+      >
+      <ng-container>
+        <h3 class="boxed">Design Language colours</h3>
+        <div class="editorial-content">
+          <p>
+            Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+          </p>
+        </div>
+      </ng-container>
+      </aa-accordion>
+      <aa-accordion
+        (open)="
+        showOne=false;
+        showTwo=false;
+        showThree=false;
+        showFour=false;
+        showFive=false;
+        showSix=true;
+        showSeven=false;
+        "
+        [showBody]="showSix"
+        minWidth="35rem"
+        customBgColor="bg-aa-red-100"
+        accordionHeading="Accordion custom colour (see inside)"
+        accordionId="accordion01"
+        sectionId="section01"
+        [iconsEnabled]="true"
+        iconName="tips_and_updates"
+      >
+      <ng-container>
+        <h3 class="boxed">Design Language colours</h3>
+        <div class="editorial-content">
+          <p>
+            Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+          </p>
+        </div>
+      </ng-container>
+      </aa-accordion>
+      <aa-accordion
+      [disabled]="true"
+      minWidth="35rem"
+      accordionHeading="Disabled version"
+      accordionId="accordion01"
+      sectionId="section01"
+      [iconsEnabled]="true"
+      iconName="toys"
+    >
+      <ng-container>
+        <p>Add accordion content in here</p>
+      </ng-container>
+    </aa-accordion>
+      <h2 class="margin-top-2">Nested accordions</h2>
+      <aa-accordion
+      (open)="
+      showOne=false;
+      showTwo=false;
+      showThree=false;
+      showFour=false;
+      showFive=false;
+      showSix=false;
+      showSeven=true;
+      "
+      [clearPadding]="true"
+      [showBody]="showSeven"
+      minWidth="35rem"
+      accordionHeading="Nested accordions"
+      accordionId="accordion01"
+      sectionId="section01"
+      [iconsEnabled]="true"
+      iconName="account_balance"
+      customBgColor=""
+    >
+      <ng-container>
+        <div>
+          <aa-accordion
+            (open)="showSevenNested=true"
+            [showBody]="showSevenNested"
+            minWidth="26rem"
+            accordionHeading="This is a nested accordion"
+            accordionId="accordion01"
+            sectionId="section01"
+            [iconsEnabled]="true"
+            iconName="account_balance"
+          >
+            <ng-container>
+                <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
+                  <input type="text" />
+                  <div class="field boxed">
+                    <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
+                  </div>
+                </div>
+                <p>
+                  This is a nested accordion should you ever require it
+                </p>
+            </ng-container>
+          </aa-accordion>
+        </div>
+      </ng-container>
+    </aa-accordion>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">showBody</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">showBody</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">(open)</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">showBody=true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">clearPadding</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">Only set to true if it's a nested accordion</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">
+              <div class="flex-group flex-start flex-align-center">
+                <aa-tooltip
+                  class="margin-left-0-25"
+                  [isInfo]="true"
+                  [customIcon]="true"
+                  iconName="help"
+                  setMinWidth="20rem"
+                  ypos="bottom"
+                  xpos="right"
+                  [zIndex]="1"
+                >
+                  <h4>Make sure you set a minWidth</h4>
+                  <p>
+                    If you do not set the correct <strong class="aa-red-100">minWidth</strong>, then the text and any other elements nested in the header
+                    will wrap.
+                  </p>
+                  <p>
+                    To get the correct <strong class="aa-red-100">minWidth</strong> minimize the screen for mobile and then you'll see
+                    how the header content behaves. If it's wrapping, keep increasing the width until corrected.
+                  </p>
+                </aa-tooltip>
+              </div>
+            </td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">Your number - returns a rem value</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">enableIcons</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">true</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">iconName (Material Icons only)</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">
+              <a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Your Material icon</a>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">customBgColor</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default"><a class="underline" routerLink="/colours">Choose your bg colour</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">accordionHeading</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your heading</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">accordionId</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your Id</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">sectionId</td>
+            <td datalabel="Type">Id</td>
+            <td datalabel="Default">Your Id</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">disabled</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button
+      class="custom-icons bg-aa-light-blue-100"
+      (click)="
+        bladeIsOpen(true);
+        showAccordion=true;
+        showBespoke=false;
+        showDragDrop=false;
+        showAccordionAlt=false;
+        showAccordionVertical=false
+      ">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Accordion (Bespoke header version - fully customisable)</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          This is the fully customisable header version. You can add additional
+          icons, validation, shields, buttons and tooltips to your accordions
+        </p>
+      </div>
+      <aa-accordion
+        *ngFor="let item of movies; let i = index"
+        (open)="toggleAccordion(i)"
+        customBgColor="{{item.bgColor}}"
+        [showBody]="toggleMe"
+        [clearPadding]="false"
+        minWidth="35rem"
+        accordionId="accordion01"
+        sectionId="section01"
+        [bespokeHeader]="true"
+        [hideToggleIcon]="false"
+        toggleIconColor="{{item.toggleIconColor}}"
+      >
+        <ng-container bespoke-header>
+          <div class="flex-group space-between flex-align-center">
+            <section class="flex-group flex-start flex-nowrap flex-align-center">
+              <aa-button
+                class="margin-right-0-25"
+                (buttonClick)="onClick()"
+                buttonClass="bg-transparent size-large padding-0 {{item.iconColor}}"
+                fieldClass="boxed"
+                [customIconsRoundOutlined]="true"
+                buttonIcon="arrow_circle_left">
+              </aa-button>
+              <div class="accordion-heading {{item.headingColor}}">
+                {{ item.name }}
+              </div>
+            </section>
+
+            <section class="flex-group flex-nowrap">
+              <aa-slider
+                [sliderInline]="false"
+                sliderChecked=""
+                labelText="apples"
+                fieldClass="boxed label-hidden"
+                sliderId=""
+                sliderName=""
+                sliderValue=""
+                disabled=""
+              >
+              </aa-slider>
+              <aa-alert-shield
+                [alertShieldSmall]="true"
+                [hideLabel]="false"
+                [showTooltip]="true"
+                [noWrap]="true"
+                minWidth="12rem"
+                alertShieldStatus="info"
+                alertShieldText="Info"
+                [showTooltipHeading]="true"
+                tooltipHeading="Heading"
+              >
+                <ng-container tooltip-content>
+                  <p>This is my tooltip message</p>
+                  <p>This is another tooltip message</p>
+                </ng-container>
+              </aa-alert-shield>
+            </section>
+          </div>
+        </ng-container>
+        <ng-container>
+          <p>
+            This is an example of the accordion using a fully bespoke header.
+            For example code, please take a look at the Gist file on the right of this page.
+          </p>
+          <p>
+            If you want to make your accordion dragable or add alert-shield tooltips, then
+            this is the accordion you should be using.
+          </p>
+        </ng-container>
+      </aa-accordion>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[bespokeHeader]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">bespoke-header</td>
+            <td datalabel="Type">Ng-container</td>
+            <td datalabel="Default">bespoke-header</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[hideToggleIcon]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[iconColor]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[customBgColor]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[toggleIconColor]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">[headingColor]</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button
+      class="custom-icons bg-aa-light-blue-100"
+      (click)="
+        bladeIsOpen(true);
+        showAccordion=false;
+        showBespoke=true;
+        showDragDrop=false;
+        showAccordionAlt=false;
+        showAccordionVertical=false
+      ">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Drag and drop</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          To enable drag-and-drop for your accordions,
+          please wrap the aa-accordion inside a div with the class <strong class="aa-red-100">aa-drag-container</strong>.
+          On the same div, also add <strong class="aa-red-100">cdkDropList (ckkDropListDropped)="drop($event)" </strong>
+        </p>
+        <p>Finally, add <strong class="aa-red-100">cdkDrap</strong> to the aa-accordion itself. See gist for example markup. Note: This
+        implementation is the same for all accordion.</p>
+      </div>
+
+      <div class="aa-drag-container" cdkDropList (cdkDropListDropped)="drop($event)">
+        <aa-accordion
+          class="aa-drag-item"
+          *ngFor="let item of movies; let i = index"
+          cdkDrag
+          (open)="toggleAccordion(i)"
+          customBgColor="{{item.bgColor}}"
+          [showBody]="toggleMe"
+          [clearPadding]="false"
+          minWidth="35rem"
+          accordionId="accordion01"
+          sectionId="section01"
+          [bespokeHeader]="true"
+          [hideToggleIcon]="false"
+          toggleIconColor="{{item.toggleIconColor}}"
+        >
+          <ng-container bespoke-header>
+            <div class="flex-group space-between flex-align-center">
+              <section class="flex-group flex-start flex-nowrap flex-align-center">
+                <div class="material-icons drag-icon  {{item.iconColor}}">drag_indicator</div>
+                <aa-button
+                  class="margin-right-0-25"
+                  (buttonClick)="onClick()"
+                  buttonClass="bg-transparent size-large padding-0 {{item.iconColor}}"
+                  fieldClass="boxed"
+                  [customIconsRoundOutlined]="true"
+                  buttonIcon="arrow_circle_left">
+                </aa-button>
+                <div class="accordion-heading {{item.headingColor}}">
+                  {{ item.name }}
+                </div>
+              </section>
+
+              <section class="flex-group flex-nowrap">
+                <aa-slider
+                  [sliderInline]="false"
+                  sliderChecked=""
+                  labelText="apples"
+                  fieldClass="boxed label-hidden"
+                  sliderId=""
+                  sliderName=""
+                  sliderValue=""
+                  disabled=""
+                >
+                </aa-slider>
+                <aa-alert-shield
+                  [alertShieldSmall]="true"
+                  [hideLabel]="false"
+                  [showTooltip]="true"
+                  [noWrap]="true"
+                  minWidth="12rem"
+                  alertShieldStatus="info"
+                  alertShieldText="Info"
+                  [showTooltipHeading]="true"
+                  tooltipHeading="Heading"
+                >
+                  <ng-container tooltip-content>
+                    <p>This is my tooltip message</p>
+                    <p>This is another tooltip message</p>
+                  </ng-container>
+                </aa-alert-shield>
+              </section>
+            </div>
+          </ng-container>
+          <ng-container>
+            <p>
+              This is an example of the accordion using a fully bespoke header.
+              For example code, please take a look at the Gist file on the right of this page.
+            </p>
+            <p>
+              If you want to make your accordion dragable or add alert-shield tooltips, then
+              this is the accordion you should be using.
+            </p>
+          </ng-container>
+        </aa-accordion>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">div</td>
+            <td datalabel="Attribute">aa-drag-container</td>
+            <td datalabel="Type">Class</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">div</td>
+            <td datalabel="Attribute">cdkDropList</td>
+            <td datalabel="Type">CDK</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">div</td>
+            <td datalabel="Attribute">(cdkDropListDropped)</td>
+            <td datalabel="Type">Event</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">div</td>
+            <td datalabel="Attribute">cdkDrag</td>
+            <td datalabel="Type">CDK</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button
+      class="custom-icons bg-aa-light-blue-100"
+      (click)="
+        bladeIsOpen(true);
+        showAccordion=false;
+        showBespoke=false;
+        showDragDrop=true;
+        showAccordionAlt=false;
+        showAccordionVertical=false
+      ">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+
+   <!-- start content repeater -->
+   <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Accordion vertical</h2>
+      <div class="describe margin-bottom-1">
+        <p>
+          Pass in a custom Material Icon by setting iconsEnabled to true and adding an iconName. You can trigger the
+          <strong>showBody</strong> event dynamically be calling <strong>(open)=&quot;showBody=true&quot;</strong>.
+        </p>
+      </div>
+
+      <div class="flex-group flex-start">
+        <aa-accordion
+          (open)="
+          showVertOne=true;
+          showVertTwo=false;
+          showVertThree=false;
+          showVertFour=false;
+          showVertFive=false"
+          [showBody]="showVertOne"
+          [clearPadding]="false"
+          [verticalDisplay]="true"
+          verticalMinHeight="50vh"
+          class="margin-right-0-25"
+          accordionHeading="Custom header version"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="account_balance"
+        >
+          <div header-custom>
+            <button *ngIf="!showJustification" class="primary small" (click)="justification()">Justification</button>
+            <strong *ngIf="addJustification" class="alert-shield small info">Justification msg</strong>
+          </div>
+          <ng-container>
+            <div *ngIf="showJustification && !addJustification" class="flex-group margin-bottom-1">
+              <input type="text" />
+              <div class="field boxed">
+                <button class="primary" (click)="addJustification=!addJustification; showBodyOne=false" placeholder="Business justification">Add</button>
+              </div>
+            </div>
+            <p>Add accordion content in here</p>
+          </ng-container>
+        </aa-accordion>
+
+        <aa-accordion
+          (open)="
+          showVertOne=false;
+          showVertTwo=true;
+          showVertThree=false;
+          showVertFour=false;
+          showVertFive=false
+          "
+          [showBody]="showVertTwo"
+          [verticalDisplay]="true"
+          verticalMinHeight="50vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-red-100"
+          accordionHeading="Default accordion with custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="surfing"
+        >
+        <ng-container>
+          <h3 class="boxed">Design Language colours</h3>
+          <div class="editorial-content">
+            <p>
+              Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+            </p>
+          </div>
+        </ng-container>
+
+        </aa-accordion>
+        <aa-accordion
+          (open)="
+          showVertOne=false;
+          showVertTwo=false;
+          showVertThree=true;
+          showVertFour=false;
+          showVertFive=false
+          "
+          [showBody]="showVertThree"
+          [verticalDisplay]="true"
+          verticalMinHeight="50vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-blue-sky-100"
+          accordionHeading="Default accordion with custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="emoji_transportation"
+        >
+        <ng-container>
+          <h3 class="boxed">Design Language colours</h3>
+          <div class="editorial-content">
+            <p>
+              Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+            </p>
+          </div>
+        </ng-container>
+        </aa-accordion>
+        <aa-accordion
+          (open)="
+          showVertOne=false;
+          showVertTwo=false;
+          showVertThree=false;
+          showVertFour=true;
+          showVertFive=false
+          "
+          [showBody]="showVertFour"
+          [verticalDisplay]="true"
+          verticalMinHeight="50vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-green-100"
+          accordionHeading="Default accordion with custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="rocket_launch"
+        >
+        <ng-container>
+          <h3 class="boxed">Design Language colours</h3>
+          <div class="editorial-content">
+            <p>
+              Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+            </p>
+          </div>
+        </ng-container>
+        </aa-accordion>
+        <aa-accordion
+          (open)="
+          showVertOne=false;
+          showVertTwo=false;
+          showVertThree=false;
+          showVertFour=false;
+          showVertFive=true
+          "
+          [showBody]="showVertFive"
+          [verticalDisplay]="true"
+          verticalMinHeight="50vh"
+          class="margin-right-0-25"
+          customBgColor="bg-aa-orange-100"
+          accordionHeading="Default accordion with custom colour (see inside)"
+          accordionId="accordion01"
+          sectionId="section01"
+          [iconsEnabled]="true"
+          iconName="flight"
+        >
+        <ng-container>
+          <h3 class="boxed">Design Language colours</h3>
+          <div class="editorial-content">
+            <p>
+              Please use the background colours listed in our <a routerLink="/colours" class="underline">Design Language colour palette</a>
+            </p>
+          </div>
+        </ng-container>
+        </aa-accordion>
+      </div>
+
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>
+          Attributes - <span class="aa-red-100">As above but with additional attributes</span>
+        </caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">verticalDisplay</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Attribute">
+              <div class="flex-group flex-start flex-align-center">
+                verticalMinHeight
+                <aa-tooltip
+                  class="margin-left-0-25"
+                  [isInfo]="true"
+                  [customIcon]="true"
+                  iconName="help"
+                  setMinWidth="20rem"
+                  ypos="bottom"
+                  xpos="right"
+                  [zIndex]="1"
+                >
+                  <h4>Make sure you set a verticalMinHeight</h4>
+                  <p>
+                    If you do not set the correct <strong class="aa-red-100">verticalMinHeight</strong>, then the text and any other elements nested in the header
+                    will wrap.
+                  </p>
+                  <p>
+                    Keep increasing the <strong class="aa-red-100">verticalMinHeight</strong> until all the elements nested in the header are corrected.
+                  </p>
+                </aa-tooltip>
+              </div>
+            </td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your preferred min-height in rem, % or vh</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+      <button
+        class="custom-icons bg-aa-light-blue-100"
+        (click)="
+          bladeIsOpen(true);
+          showAccordion=false;
+          showBespoke=false;
+          showDragDrop=false;
+          showAccordionAlt=false;
+          showAccordionVertical=true
+      ">
+        <span class="material-icons">visibility</span><span>View gist</span>
+      </button>
+    </nav>
+  </section>
+</section>
+
+<aa-blade
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+>
+  <article class="blade-content">
+    <div *ngIf="showAccordion">
+      <a href="https://gist.github.com/angloux/3eff6d63f90bb98be1d11ae0a5650da1" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/3eff6d63f90bb98be1d11ae0a5650da1"></app-gist>
+    </div>
+    <div *ngIf="showBespoke">
+      <a href="https://gist.github.com/angloux/c4f38f6a42fe109d513ebe8ef0b78b0c" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/c4f38f6a42fe109d513ebe8ef0b78b0c"></app-gist>
+    </div>
+    <div *ngIf="showDragDrop">
+      <a href="https://gist.github.com/angloux/2be3636e59b82c4ceb14129fb58030ac" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/2be3636e59b82c4ceb14129fb58030ac"></app-gist>
+    </div>
+    <div *ngIf="showAccordionVertical">
+      <a href="https://gist.github.com/angloux/4f5141e2fed537c3508b981bad56f9b5" target="_blank">View Gist on GitHub</a>
+      <app-gist src="angloux/4f5141e2fed537c3508b981bad56f9b5"></app-gist>
+    </div>
+  </article>
+</aa-blade>

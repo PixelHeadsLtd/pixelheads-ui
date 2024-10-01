@@ -1,0 +1,9 @@
+.no-header-padding .ngb-dp-header {
+    padding: 0;
+}
+.custom-month-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0.5rem;
+}

@@ -1,0 +1,522 @@
+<section class="control-bar">
+  <h1>Tooltip</h1>
+</section>
+
+<section class="content-container padding-0">
+  <!-- start content repeater -->
+  <section class="content-repeater flex-group">
+    <section class="flex-1 col-left flex-start">
+      <h2>Tooltip</h2>
+      <div class="describe margin-bottom-1">
+        <p>You can use the tooltip only version alongside any HTML element and/or component. If you
+          want the tooltip to appear to the right of a field label, set [includeLabel]=&quot;true&quot; then
+          replace the field label with the tooltip itself as the label is nested inside the component, just
+          add your label text to labelName string.
+        </p>
+      </div>
+
+      <div class="flex-group flex-start">
+        <h3>Tooltip stand-alone with custom icon</h3>
+        <aa-tooltip
+          class="margin-top-1"
+          [isInfo]="true"
+          [customIcon]="true"
+          iconName="help"
+          setMinWidth="12rem"
+          ypos="bottom"
+          xpos="right"
+          [zIndex]="1"
+        >
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+      </div>
+
+      <div class="field optional">
+        <aa-tooltip
+          [includeLabel]="true"
+          labelFor="popup-position-bottom-right"
+          labelName="Popup panel position - bottom right"
+          class="margin-top-1"
+          [isInfo]="true"
+          setMinWidth="12rem"
+          ypos="bottom"
+          xpos="right"
+          [zIndex]="1"
+        >
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <div class="field">
+        <aa-tooltip
+          [includeLabel]="true"
+          labelFor="popup-position-bottom-left"
+          labelName="Popup panel position - bottom left"
+          class="margin-top-1"
+          [isWarning]="true"
+          setMinWidth="12rem"
+          ypos="bottom"
+          xpos="left"
+          [zIndex]="1"
+        >
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <div class="field">
+        <aa-tooltip
+          [includeLabel]="true"
+          labelFor="popup-position-top-right"
+          labelName="Popup panel position - top right"
+          class="margin-top-1"
+          [isError]="true"
+          setMinWidth="12rem"
+          ypos="top"
+          xpos="right"
+          [zIndex]="1"
+        >
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <div class="field">
+        <aa-tooltip
+          [includeLabel]="true"
+          labelFor="popup-position-top-left"
+          labelName="Popup panel position - top left"
+          class="margin-top-1"
+          [isSuccess]="true"
+          setMinWidth="12rem"
+          ypos="top"
+          xpos="left"
+          [zIndex]="1"
+        >
+          <h4>Ahoy there</h4>
+          <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <div class="field">
+        <aa-tooltip
+          [showAsAnchor]="true"
+          tooltipAnchor="Set `showAsAnchor` to true - see Gist"
+          [preventAnchorWrapping]="true"
+          [includeLabel]="true"
+          labelFor="popup-position-top-left"
+          labelName="Popup panel position - top right"
+          class="margin-top-1"
+          [isSuccess]="true"
+          setMinWidth="12rem"
+          ypos="top"
+          xpos="right"
+          [zIndex]="1"
+        >
+          <h4>Show as anchor</h4>
+          <ol>
+            <li>Set `showAsAnchor` to true</li>
+            <li>Add your anchor text to `tooltipAnchor'</li>
+            <li>Prevent tooltip anchor wrapping with `preventAnchorWrapping'</li>
+          </ol>
+        </aa-tooltip>
+        <input type="text" value="The above label is replaced by the tooltip" />
+      </div>
+
+      <h3 class="margin-top-2">Buttons with tooltips - display on hover</h3>
+      <div class="flex-group flex-start">
+        <div class="field boxed">
+          <label>Button - left top</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            (buttonClick)="onClick()"
+            buttonClass="primary"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Primary"
+            buttonText=".primary"
+            setMinWidth="12rem"
+            xpos="left"
+            ypos="top"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - left bottom</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            (buttonClick)="onClick()"
+            buttonClass="secondary"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Secondary"
+            buttonText=".Secondary"
+            setMinWidth="12rem"
+            xpos="left"
+            ypos="bottom"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right top</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            (buttonClick)="onClick()"
+            buttonClass="cancel"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Cancel"
+            buttonText=".Cancel"
+            setMinWidth="12rem"
+            xpos="right"
+            ypos="top"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right bottom</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            [isError]="true"
+            (buttonClick)="onClick()"
+            buttonClass="reject"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Reject"
+            buttonText=".Reject"
+            setMinWidth="12rem"
+            xpos="right"
+            ypos="bottom"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+      </div>
+
+      <h3 class="margin-top-2">Buttons with tooltips - display on click event</h3>
+      <div class="flex-group flex-start">
+        <div class="field boxed">
+          <label>Button - left top</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()"
+            buttonClass="primary"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Primary"
+            buttonText=".primary"
+            setMinWidth="12rem"
+            xpos="left"
+            ypos="top"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - left bottom</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()"
+            buttonClass="secondary"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Secondary"
+            buttonText=".Secondary"
+            setMinWidth="12rem"
+            xpos="left"
+            ypos="bottom"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right top</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()"
+            buttonClass="cancel"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Cancel"
+            buttonText=".Cancel"
+            setMinWidth="12rem"
+            xpos="right"
+            ypos="top"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+        <div class="field boxed">
+          <label>Button - right bottom</label>
+          <aa-tooltip
+            [showAsButton]="true"
+            [isError]="true"
+            [showTooltipOnClick]="true"
+            tooltipBtnText="Close tooltip"
+            (buttonClick)="onClick()"
+            buttonClass="reject"
+            fieldClass="boxed"
+            buttonId="buttonId"
+            buttonLabel="Reject"
+            buttonText=".Reject"
+            setMinWidth="12rem"
+            xpos="right"
+            ypos="bottom"
+            [zIndex]="1"
+          >
+            <h4>Ahoy there</h4>
+            <p>Mr Beaver had begun telling them that the White Witch wasn’t really human at all </p>
+          </aa-tooltip>
+        </div>
+      </div>
+
+      <h3 class="margin-top-2">Hover stay open for ineractions</h3>
+      <div class="flex-group flex-start">
+        <fieldset class="boxed">
+          <legend>Checkbox - bottom right</legend>
+          <div class="field checkbox">
+            <label>
+              <input type="checkbox"/>
+              <span>Checkbox</span>
+              <aa-tooltip
+                [isInfo]="true"
+                [hoverStayOpen]="true"
+                [customIcon]="true"
+                iconName="help"
+                setMinWidth="20rem"
+                ypos="bottom"
+                xpos="right"
+                [zIndex]="10"
+              >
+                <h4>Keep open for interactions</h4>
+                <p>
+                  As an extra feature, you can now choose to keep 
+                  the tooltip open for other interactions. Please see the 
+                  Gist for details.
+                </p>
+                <div class="flex-group flex-column margin-top-1">
+                  <a class="padding-bottom-0-5" routerLink="/">Visit home</a>
+                  <a class="padding-bottom-0-5" routerLink="/blade">See our blades</a>
+                  <a class="padding-bottom-0-5" routerLink="/blade">Take a look at our modals</a>
+                  <a routerLink="/blade">Check out our tab navigation</a>
+                </div>
+              </aa-tooltip>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section class="flex-2 col-right flex-start">
+      <table class="half-width">
+        <caption>Attributes</caption>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[isInfo]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[isWarning]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[isError]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[isSuccess]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[hoverStayOpen]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">zIndex</td>
+            <td datalabel="Type">Number</td>
+            <td datalabel="Default">1</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">setMinWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">12rem</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">setMaxWidth</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">30rem</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">ypos</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">top or bottom</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">xpos</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">left or right</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[includeLabel]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[includeLegend]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">labelName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">Your label text</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">customIcon</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">False</td>
+          </tr>
+          <tr class="highlight">
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">iconName</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">Material icon friendly name</a></td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Show as an anchor</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[showAsAnchor]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">tooltipAnchor</td>
+            <td datalabel="Type">Any</td>
+            <td datalabel="Default">Your tooltip anchor text</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[preventAnchorWrapping]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">N/A</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <h3 class="margin-bottom-0">Show as button</h3>
+            </td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">[showAsButton]</td>
+            <td datalabel="Type">Boolean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">xpos, ypos</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">left top, left bottom, right top, right bottom</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">showTooltipOnClick</td>
+            <td datalabel="Type">Boalean</td>
+            <td datalabel="Default">True</td>
+          </tr>
+          <tr>
+            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Attribute">tooltipBtnText</td>
+            <td datalabel="Type">String</td>
+            <td datalabel="Default">This is the text you want on your button when the tooltip is displayed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- mini menu -->
+    <nav class="mini-menu flex-group flex-end">
+        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+          <span class="material-icons">visibility</span><span>View gist</span>
+        </button>
+      </nav>
+  </section>
+</section>
+
+<aa-blade
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+  >
+  <article class="blade-content">
+    <a href="https://gist.github.com/angloux/0a00c7d138cb756bab6cdc13771e35b3" target="_blank">View Gist on GitHub</a>
+    <app-gist src="angloux/0a00c7d138cb756bab6cdc13771e35b3"></app-gist>
+  </article>
+</aa-blade>

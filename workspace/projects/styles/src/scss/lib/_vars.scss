@@ -1,0 +1,166 @@
+$img-path: '../../assets/images';
+$icon-path: '../../assets/icons';
+$logo-path: '../../assets/logo/';
+
+$font: (
+        family-main:	                ('aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif),
+        family-heading:	                ('aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif),
+
+        family-light:                   ('aa-smart-sans-light', 'din-light', 'roboto-light', sans-serif),
+        family-regular:                 ('aa-smart-sans-regular', 'din-regular', 'roboto-regular', sans-serif),
+        family-medium:                  ('aa-smart-sans-medium', 'din-medium', 'roboto-medium', sans-serif),
+        family-bold:                    ('aa-smart-sans-bold', 'din-bold', 'roboto-bold', sans-serif),
+
+        font-awesome:                   ('font-awesome'),
+        font-awesome-regular:           ('font-awesome-regular'),
+        font-awesome-brands:            ('font-awesome-brands'),
+        material-icons:                 ('material-icons'),
+        material-icons-outlined:        ('material-icons-outlined'),
+
+        weight-light:                   300,
+        weight-regular:	                400,
+        weight-medium:                  500,
+        weight-semibold:                600,
+        weight-bold:	                700,
+        letter-spacing:	                .025em,
+        size-mini:                      .35rem,
+        size-tiny:                      .425rem,
+        size-xsmall:                    .55rem,
+        size-small:                     .675rem,
+        size-default:                   .8rem,
+        size-regular:                   1rem,
+        size-medium:                    1.25rem,
+        size-large:                     1.5rem,
+        size-xlarge:                    1.75rem,
+        size-xxlarge:                   2.5rem,
+        size-xxxlarge:                  4rem,
+        style-italic:                   italic,
+);
+
+$size: (
+        default:                        1rem,
+        medium:                         1.25rem
+);
+
+$breakpoint: (
+        breakpoint-320:                 320px,
+        breakpoint-500:                 500px,
+        breakpoint-570:                 570px,
+        breakpoint-720:                 720px,
+        breakpoint-1080:                1080px,
+);
+
+$palette: (
+  aa-blue-100:                        rgb(0,39,118),
+  aa-blue-70:                         rgb(77,104,159),
+  aa-blue-60:                         rgb(102,125,173),
+  aa-blue-50:                         rgb(127,147,186),
+  aa-blue-40:                         rgb(164,174,206),
+
+  aa-dark-stone-100:                  rgb(226,216,175),
+  aa-dark-stone-80 :                  rgb(232,224,191),
+  aa-dark-stone-70 :                  rgb(235,228,199),
+  aa-dark-stone-60 :                  rgb(238,232,207),
+
+  aa-light-blue-100:                  rgb(0,117,176),
+  aa-light-blue-80:                   rgb(51,145,192),
+  aa-light-blue-60:                   rgb(102,172,208),
+  aa-light-blue-50:                   rgb(127,186,215),
+  aa-light-blue-40:                   rgb(153,200,223),
+  aa-light-blue-30:                   rgb(178,213,231),
+  aa-light-blue-15:                   rgb(217,234,243),
+  aa-light-blue-10:                   rgb(229,241,247),
+  aa-light-blue-5:                    rgb(242,248,251),
+
+  aa-red-dark:                        rgb(198,12,48),
+  aa-red-100:                         rgb(198, 12, 49),
+  aa-red-80:                          rgb(209,61,89),
+  aa-red-50:                          rgb(226,133,151),
+  aa-red-25:                          rgb(237,190,199),
+  aa-red-10:                          rgb(255,224,230),
+  aa-red-8:                           rgb(251,236,239),
+  aa-red-5:                           rgb(252,243,244),
+  aa-red-3:                           rgb(253,247,249),
+
+  // legacy
+  grey-100:                           rgb(60,60,60),
+  grey-80:                            rgb(80,80,80),
+  grey-50:                            rgb(120,120,120),
+  grey-40:                            rgb(160,160,160),
+  grey-25:                            rgb(200,200,200),
+  grey-10:                            rgb(220,220,220),
+  grey-5:                             rgb(240,240,240),
+  grey-2:                             rgb(250,250,250),
+  grey-1:   
+                            rgb(252,252,252),
+  // new
+  aa-grey-100:                        rgb(60,60,60),
+  aa-grey-80:                         rgb(80,80,80),
+  aa-grey-50:                         rgb(120,120,120),
+  aa-grey-40:                         rgb(160,160,160),
+  aa-grey-25:                         rgb(200,200,200),
+  aa-grey-10:                         rgb(220,220,220),
+  aa-grey-5:                          rgb(240,240,240),
+  aa-grey-2:                          rgb(250,250,250),
+  aa-grey-1:                          rgb(252,252,252),
+
+  white:                              rgb(255,255,255),
+  white-50:                           rgb(220,215,215),
+
+  // Secondary palette
+
+  aa-green-100:                       rgb(0,135,112),
+  aa-green-80:                        rgb(51,159,141),
+  aa-green-50:                        rgb(127,195,183),
+  aa-green-25:                        rgb(191,225,219),
+  aa-green-15:                        rgb(217,237,234),
+  aa-green-5:                         rgb(229,243,240),
+  aa-green-4:                         rgb(242,249,248),
+
+  aa-orange-100:                      rgb(233,131,0),
+  aa-orange-80:                       rgb(237,156,51),
+  aa-orange-50:                       rgb(244,193,127),
+  aa-orange-25:                       rgb(249,224,191),
+  aa-orange-10:                       rgb(252,237,217),
+  aa-orange-5:                        rgb(254,249,242),
+
+  // Tertiary palette
+  aa-brown-100:                       rgb(156,95,14),
+
+  aa-ochre-100:                       rgb(215,150,86),
+  aa-ochre-20:                        rgb(247,234,221),
+  aa-ochre-8:                         rgb(252,247,242),
+
+  aa-yellow-100:                      rgb(250,220,100),
+  aa-yellow-50:                       rgb(250,235,175),
+
+  aa-lime-dark:                       rgb(145,140,6),
+  aa-lime-100:                        rgb(170,165,22),
+  aa-lime-80:                         rgb(187,183,69),
+  aa-lime-50:                         rgb(212,210,138),
+  aa-lime-25:                         rgb(234,232,197),
+  aa-lime-15:                         rgb(242,242,220),
+  aa-lime-5:                          rgb(251,250,243),
+
+  aa-grass-green-100:                 rgb(106,209,98),
+  aa-blue-sky-100:                    rgb(54,147,205),
+  aa-pink-100:                        rgb(255,161,196),
+  aa-pink-50:                         rgb(253,206,223),
+  aa-pink-25:                         rgb(251,241,245),
+  aa-white-100:                       rgb(255,255,255),
+
+  aa-plum-dark:                       rgb(107, 65, 105),
+  aa-plum-100:                        rgb(126,81,122),
+  aa-plum-80:                         rgb(151,115,148),
+  aa-plum-50:                         rgb(188,166,186),
+  aa-plum-25:                         rgb(219,207,218),
+  aa-plum-15:                         rgb(232,225,231),
+  aa-plum-5:                          rgb(243,241,243),
+
+  aa-burgundy-100:                    rgb(179,2,92),
+  aa-burgundy-80:                     rgb(193,52,124),
+  aa-burgundy-50:                     rgb(215,126,171),
+  aa-burgundy-25:                     rgb(232,188,210),
+  aa-burgundy-15:                     rgb(240,213,227),
+  aa-burgundy-5:                      rgb(246,237,242),
+);

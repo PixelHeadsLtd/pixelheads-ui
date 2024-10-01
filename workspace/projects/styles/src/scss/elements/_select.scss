@@ -1,0 +1,129 @@
+// Has to sit outside the select wrapper
+.placeholder-selected,
+.placeholder-selected .placeholder-option {
+  color: _colour(aa-grey-25);
+}
+
+select:not(.custom-select) {
+  appearance: none;
+  background-color: _colour(aa-white-100);
+  @include chevron-down;
+  border: 1px solid _colour(aa-grey-25);
+  border-radius: .25rem;
+  //color: _colour(aa-grey-100);
+  display: block;
+  font-family: _font(family-regular);
+  font-size: _font(size-default);
+  padding: .5rem 2rem .5rem .75rem; // avoid changing the vertical padding
+  width: 100%;
+  min-height: 2.1rem;
+
+  option {
+    color: _colour(aa-grey-100);
+
+    &[value=""] {
+      color: _colour(aa-grey-25);
+    }
+  }
+
+  &:focus {
+    outline: 0;
+    border: 1px solid _colour(aa-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+  }
+  
+  // fix for IE11 where both chevrons where being displayed
+  &::-ms-expand {
+    display: none;
+  }
+  
+  // fix for IE11 where both chevrons where being displayed
+  &::-ms-expand {
+    display: none;
+  }
+    
+  // override chrome's autofill bg color for darkmode
+  &:-webkit-autofill, 
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus {
+    -webkit-text-fill-color: _colour(aa-grey-100);
+    -webkit-box-shadow: 0 0 0 1000px _colour(aa-white-100) inset;
+  }
+
+  &[aria-readonly=true],
+  &[readonly],
+  &[aria-disabled=true],
+  &[disabled] {
+    background-color: _colour(aa-grey-5);
+    background-image: none;
+    border-style: dashed;
+    cursor: not-allowed;
+    option {
+      display: none!important;
+    }
+    
+    &:focus {
+      border-color: _colour(aa-grey-25)!important;
+      box-shadow: none!important;
+    }
+  }
+}
+
+.gradient {
+  select {
+    background-color: _palette(aa-blue-100);
+    background-image: url("../../assets/icons/keyboard_arrow_down-wht-24px.svg");
+    border: none;
+    color: _palette(aa-white-100);
+    border-radius: 0;
+    &::placeholder {
+      color: _palette(aa-white-100);
+    }
+  }
+}
+
+.aa-multi-select {
+  .aa-multi-select-header {
+    @include chevron-down;
+    border: 1px solid _colour(aa-grey-25);
+    border-radius: .25rem;
+    font-family: _font(family-regular);
+    font-size: _font(size-default);
+    padding: .5rem 2rem .5rem .75rem;
+    width: 100%;
+    min-height: 2.1rem;
+
+  }
+  .aa-multi-select-popup {
+    padding: 0 0 .75rem;
+    .aa-multi-select-filter {
+      border-radius: .25rem .25rem 0 0;
+      padding: .5rem .75rem;
+      label {
+        width: 1.5rem;
+        margin-top: .25rem;
+      }
+      input[type=text] {
+        width: 100%;
+        margin-right: .5rem;
+      }
+      .material-icons {
+        top: .65rem;
+        right: .5rem;
+        outline: 0;
+      }
+    }
+
+    .aa-multi-select-content {
+      padding: .5rem .75rem 0;
+      label {
+        input {
+          display: flex;
+        }
+      }
+      div {
+        padding: .25rem 0
+      }
+    }
+  }
+}

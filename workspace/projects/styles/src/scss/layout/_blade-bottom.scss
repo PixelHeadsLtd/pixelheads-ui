@@ -1,0 +1,177 @@
+.blade-bottom {
+  position: fixed;
+  bottom: 0;
+  background-color: _colour(aa-grey-2);
+  transition: all 0.25s linear;
+  top: 100%;
+    &.show {
+    top: 50vh;
+    transition: all 0.25s linear;
+    
+    .ag-theme-balham {
+      &.ag-grid {
+        height: calc(50vh - 8.5rem);
+      }
+    }
+
+    .scroll-panel {
+      margin-top: 2rem;
+      height: calc(50% + 4.5rem);
+      position: absolute;
+      overflow: auto;
+
+      thead {
+        th {
+          position: relative;
+          border-bottom: none;
+          padding-bottom: 0;
+
+          &:first-child {
+            padding-left: 0;
+
+            span.mask {
+              padding-left: 1.5rem !important;
+            }
+          }
+
+          label {
+            position: fixed;
+            width: 100%;
+
+            span.mask {
+              position: absolute;
+              background-color: _colour(aa-white-100);
+              border-bottom: solid 1px #002776;
+              width: 100%;
+              top: -2.5rem;
+              left: 0;
+              padding-bottom: 0.25rem;
+              padding-top: .5rem;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:first-child {
+          td {
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+  &.pinned.show {
+    top: 50vh;
+    transition: all 0.25s linear;
+
+    .pin {
+      transform: rotate(0deg);
+      color: _colour(aa-red-100);
+      margin: 0 .25rem 0 0;
+      padding: .5rem;
+    }
+  
+    .ag-theme-balham {
+      &.ag-grid {
+        height: calc(50vh - 9rem);
+      }
+    }
+  }
+
+  // When blade is unpinned and shown, 
+  // we are setting the blade to display at the bottom of the page
+  &.unpinned.show {
+    top: calc(100% - 3.25rem);
+    // When unpinned and shown, we can toggle the blade
+    &.toggle-blade {
+      top: 50vh;
+    }
+  }
+
+  &.fullscreen {
+    .ag-theme-balham {
+      &.ag-grid {
+        height: calc(90vh - 8.5rem);
+      }
+    }
+    .scroll-panel {
+      height: calc(100% - 12.5rem);
+    }
+  }
+  
+  table {
+    table-layout: fixed;
+  }
+
+  .blade-bottom-content {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+}
+
+.blade-bottom-header {
+  background-color: _colour(aa-white-100);
+  border-bottom: 2px solid _colour(aa-light-blue-30);
+  padding: 0 0 0 1.25rem;
+  height: 3.25rem;
+
+  button.unpinned-trigger {
+    position: absolute;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: none;
+    opacity: 0;
+  }
+
+  .material-icons,
+  .material-icons-outlined {
+    font-size: 1.85rem;
+    color: _colour(aa-blue-100);
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .controls {
+    .material-icons,
+    .material-icons-outlined {
+      font-size: _font(size-medium);
+    }
+
+    .anchor-close {
+      margin: 0 1rem 0 0;
+      height: 1.5rem;
+      width: 1.5rem;
+      &:after {
+        top: .3rem;
+        right: .5rem;
+        font-size: _font(size-regular);
+      }
+    }
+  }
+
+  h2 {
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  aa-tab-navigation,
+  .tab-navigation {
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .pin {
+    transform: rotate(90deg);
+    margin-right: .5rem;
+    padding: .5rem;
+  }
+}

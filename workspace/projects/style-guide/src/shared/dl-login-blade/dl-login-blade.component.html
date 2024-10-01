@@ -1,0 +1,32 @@
+<aa-blade class="login-blade" [customBlade]="false" [blockPageUI]="false" [toggleBlade]="loginBlade"
+  [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="999" bladeSize="one-column-width" [enableIcon]="true"
+  iconName="directions_bike" (close)="loginBlade" [enablePinning]="false">
+
+  <article class="blade-content">
+    <div class="flex-group flex-start flex-align-center">
+      <div class="avatar">
+        <div class="bd-orange bd-2">
+          <img onerror="this.style.display='none'" src="./assets/images/samples/han-solo.png" />
+        </div>
+      </div>
+      <div>
+        <h2 class="margin-bottom-0-25">Han Solo</h2>
+        <a class="cursor-pointer" mailto="michael.king@angloamerican.com">michael.king&#64;angloamerican.com</a>
+      </div>
+    </div>
+  </article>
+  <article class="blade-footer flex-group space-between">
+    <!-- <div class="field">
+      <button (click)="toggleTheme()" class="transparent anchor-blue padding-0">
+        <div class="flex-group ng-star-inserted">
+          Switch to dark mode
+        </div>
+      </button>
+    </div> -->
+    <div class="field">
+      <button (click)="closeLoginBlade()" class="transparent anchor-blue padding-0">
+        Close
+      </button>
+    </div>
+  </article>
+</aa-blade>

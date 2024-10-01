@@ -1,0 +1,207 @@
+<section class="control-bar">
+    <h1>Blade top</h1>
+</section>
+
+<section class="content-container position-relative padding-0" [ngStyle]="{'margin-top' : isOpen && isPinned ? '5rem':'', 'transition' : 'all .3s linear'}">
+    <!-- start content repeater -->
+    <section class="content-repeater flex-group">
+      <section class="flex-1 col-left flex-start">
+        <h2>Blade top</h2>
+        <div class="describe margin-bottom-1">
+            <p>To get pinning to work, you must add the following to the page content-container <br/>
+                <strong>[ngStyle]=&quot;&#123;'padding-top' : isOpen && isPinned ? '14rem':'', 'transition' : 'all .3s linear'&#x7d;&quot;</strong>
+            </p>
+            <p>These setting are adjustable.</p>
+        </div>
+        
+        <div class="field">
+            <button 
+            (click)="isOpen=!isOpen" 
+            class="primary"
+            type="button"
+        >
+            Toggle top-blade
+        </button>  
+        </div>
+  
+      </section>
+        
+      <section class="flex-2 col-right flex-start">
+        <table class="half-width">
+          <caption>Attributes</caption>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Attribute</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">[isOpen]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">Your settings</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">(bladeOpen)</td>
+                <td datalabel="Type">Event</td>
+                <td datalabel="Default">Your settings</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">(bladePinned)</td>
+                <td datalabel="Type">Event</td>
+                <td datalabel="Default">Your settings</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">topPos</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">3.5rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">leftPos</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">14rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">rightPos</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">0rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">zIndex</td>
+                <td datalabel="Type">Number</td>
+                <td datalabel="Default">100</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">[userProfile]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">true</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">profileSize</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">15rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">borderColour</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">#0075b0</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">borderThickness</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">.75rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">maxHeight</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">16.5rem</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">countryFlag</td>
+                <td datalabel="Type">Any</td>
+                <td datalabel="Default">tl</td>
+            </tr>
+            <tr>
+                <td datalabel="Element">aa-blade-top</td>
+                <td datalabel="Attribute">[hidePin]</td>
+                <td datalabel="Type">Boolean</td>
+                <td datalabel="Default">False</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- mini menu -->
+      <nav class="mini-menu flex-group flex-end">
+          <button class="custom-icons bg-aa-light-blue-100" (click)="sideBladeIsOpen(true)">
+            <span class="material-icons">visibility</span><span>View gist</span>
+          </button>
+        </nav>
+    </section>
+  </section>
+  
+  <aa-blade 
+    [blockPageUI]="false"
+    [toggleBlade]="toggleBlade"
+    [suppressAutoClose]="false"
+    topPosition="3.5rem"
+    [zIndex]="2"
+    bladeSize="one-column-width"
+    bladeHeading="Gist"
+    [enableIcon]="true"
+    iconName="table_rows"
+    (bladeOpen)="bladeIsOpen($event)"
+    >
+    <article class="blade-content">
+        <a href="https://gist.github.com/angloux/e4d09a23c5f657d979dc778d74e03935" target="_blank">View Gist on GitHub</a>
+        <app-gist src="angloux/e4d09a23c5f657d979dc778d74e03935"></app-gist>
+    </article>
+  </aa-blade>
+  
+  <aa-blade-top 
+    [isOpen]="isOpen"
+    (bladeOpen)="bladeIsOpen($event)"
+    (bladePinned)="bladeIsPinned($event)"
+    [hidePin]="false"
+    topPos="3.5rem"
+    leftPos="16rem" 
+    rightPos="0rem" 
+    [zIndex]="100"
+    >
+    <ng-container custom-content>
+        <form class=" margin-top-1">
+            
+            <header class="flex-group flex-start flex-align-center">
+                <div class="material-icons aa-white-100">brightness_7</div>
+                <h2 class="margin-0">Top-blade</h2>
+            </header>
+
+            <div class="flex-group flex-start">
+                <div class="field" [class.error]="isError">
+                    <label for="firstName">First name</label>
+                    <input type="text" />
+                    <div *ngIf="isError" role="alert">Use an *ngIf to display this error</div>
+                </div>
+                <div class="field" [class.error]="isError">
+                    <label for="lastname">Last name</label>
+                    <input type="text" />
+                    <div *ngIf="isError" role="alert">Use an *ngIf to display this error</div>
+                </div>
+                <div class="field" [class.error]="isError">
+                    <label for="accountNum">Account number</label>
+                    <input type="text" />
+                    <div *ngIf="isError" role="alert">Use an *ngIf to display this error</div>
+                </div>
+                <aa-button 
+                    (buttonClick)="onClick()"
+                    buttonClass="secondary" 
+                    buttonId="ButtonId"
+                    [showLabel]="false"
+                    buttonText="Save">
+                </aa-button>
+                <aa-button 
+                    (buttonClick)="isOpen=false"
+                    buttonClass="cancel" 
+                    buttonId="ButtonId"
+                    [showLabel]="false"
+                    buttonText="Cancel">
+                </aa-button>
+            </div>
+        </form>
+    </ng-container>
+</aa-blade-top>

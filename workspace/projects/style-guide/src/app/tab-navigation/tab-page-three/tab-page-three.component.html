@@ -1,0 +1,45 @@
+<div class="content-container padding-top-0 poem">
+    <h2>Tab 3 content</h2>
+    <p>Despite the storms,
+        beauty arrives like
+        it was always going to.
+    </p>
+</div>
+
+<div class="blades-data">
+    <h3>Standard usage for blades</h3>
+    <div class="field">
+        <label>First name</label>
+        <input type="text"/>
+    </div>
+    <div class="field">
+        <label>Last name</label>
+        <input type="text"/>
+    </div>
+    <div class="field">
+        <label>Country</label>
+        <input type="text"/>
+    </div>
+
+    <h3 class="margin-top-2">User status</h3>
+    <table>
+        <thead>
+            <th>Status</th>
+            <th>Approver</th>
+            <th>Created date</th>
+            <th>Modified date</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let approval of approvals">
+                <td datalabel="status"><span class="alert-shield" ngClass="{{ approval.statusClass }}">{{ approval.status }}</span></td>
+                <td datalabel="approver">{{ approval.approver }}</td>
+                <td datalabel="created-date">{{ approval.created }}</td>
+                <td datalabel="modified-date">{{ approval.modified }}</td>
+                <td datalabel="empty-cell"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
