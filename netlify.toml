@@ -1,6 +1,12 @@
 [build]
-command = "npm run build -- --project components && npm run build -- --project style-guide"
-publish = "dist/style-guide"  # Adjust this path based on your output
+  command = "npm run build -- --project components && npm run build -- --project style-guide"
+  publish = "dist/style-guide"  # Adjust this path based on your output
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
 
 [[plugins]]
-package = "@netlify/angular-runtime"
+  package = "@netlify/angular-runtime"
