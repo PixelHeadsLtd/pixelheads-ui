@@ -1,5 +1,5 @@
 [build]
-publish = "workspace/dist/style-guide"
+publish = "dist/style-guide"
 command = "npm run build -- --project style-guide"
 
 [[plugins]]
