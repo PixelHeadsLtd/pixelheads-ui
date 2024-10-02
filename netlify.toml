@@ -1,6 +1,3 @@
 [build]
 publish = "dist/style-guide"
 command = "npm run build -- --project style-guide"
-
-[[plugins]]
-package = "@netlify/plugin-skip-angular"
