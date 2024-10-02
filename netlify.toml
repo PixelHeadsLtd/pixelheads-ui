@@ -4,7 +4,7 @@
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/designlanguage/index.html"
   status = 200
   force = true
 
