@@ -19,6 +19,8 @@ import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 export class TooltipDynamicDirective implements OnDestroy {
   @Input() aaTooltip: string | string[] = '';
   @Input() position: TooltipDynamicPosition = TooltipDynamicPosition.DEFAULT;
+  @Input() tooltipWidth: string = 'auto';
+  @Input() tooltipStatus: string = '';
 
   private _showDelay = 300;
   @Input() set showDelay(value: number) {
@@ -102,6 +104,8 @@ export class TooltipDynamicDirective implements OnDestroy {
       const instance = this.componentRef.instance as TooltipDynamicComponent;
       instance.tooltip = this.aaTooltip;
       instance.position = this.position;
+      instance.tooltipWidth = this.tooltipWidth;
+      instance.tooltipStatus = this.tooltipStatus;
 
       const { left, right, top, bottom } = this.elementRef.nativeElement.getBoundingClientRect();
 

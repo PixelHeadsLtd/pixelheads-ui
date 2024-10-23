@@ -98,7 +98,7 @@
 
 .alert-shield {
   border-radius: 1rem;
-  display: inline-block;
+  display: inline-flex;
   background-repeat: no-repeat;
   background-size: 1.25rem;
   background-position: .3rem 50%;
@@ -109,6 +109,33 @@
   height: 2rem;
   line-height: 1rem;
   white-space: nowrap;
+
+  &.numerical-alert-shield {
+    padding: 0 .75rem 0 .25rem;
+
+    &.small {
+      font-size: _font(size-small);
+      padding: 0 .5rem 0 .25rem;
+      height: 1.5rem;
+      line-height: .75rem;
+
+      .alert-shield-value {
+        width: 1.05rem;
+        height: 1.05rem;
+        margin: 0 .4rem 0 0;
+      }
+    }
+
+    .alert-shield-value {
+      border-radius: 1rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin: 0 .5rem 0 0;
+      font-size: 65%;
+      font-weight: _font(weight-bold);
+      color: _colour(aa-white-100);
+    }
+  }
 
   span {
     padding-right: 0;
@@ -135,87 +162,136 @@
   &.success {
     background-color: _colour(trans-green-5-to-green-dark);
     color: _colour(aa-green-100);
-    background-image: url("#{$icon-path}/icon-check-green.svg");
+    &:not(.numerical-alert-shield) {
+        background-image: url("#{$icon-path}/icon-check-green.svg");
+    }
+    .alert-shield-value {
+      background-color: _colour(aa-green-100);
+    }
   }
   
   &.info {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
     color: _colour(aa-light-blue-100);
-    background-image: url("#{$icon-path}/icon-info-blue.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-info-blue.svg");
+    }
+    .alert-shield-value {
+      background-color: _colour(aa-light-blue-100);
+    }
+  }
+
+  &.error {
+    background-color: _colour(trans-red-8-to-red-dark);
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-alert-red.svg");
+    }
+    position: relative;
+    color: _colour(aa-red-100);
+    .alert-shield-value {
+      background-color: _colour(aa-red-100);
+    }
   }
 
   &.pending {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
+    }
     color: _colour(aa-light-blue-100);
+    .alert-shield-value {
+      background-color: _colour(aa-orange-100);
+    }
   }
 
   &.pending-orange {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    background-image: url("#{$icon-path}/timelapse-24px-orange.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/timelapse-24px-orange.svg");
+    }
     color: _colour(aa-orange-100);
   }
 
   &.pending-red {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/timelapse-24px-red.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/timelapse-24px-red.svg");
+    }
     color: _colour(aa-red-100);
   }
 
   &.risk-green {
     background-color: _colour(trans-green-5-to-green-dark);
-    background-image: url("#{$icon-path}/icon-check-green.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-check-green.svg");
+    }
     color: _colour(aa-green-100);
   }
 
   &.risk-blue {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    background-image: url("#{$icon-path}/icon-check-blue.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-check-blue.svg");
+    }
     color: _colour(aa-light-blue-100);
   }
 
   &.risk-low {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    background-image: url("#{$icon-path}/icon-risk-24px-blue.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-risk-24px-blue.svg");
+    }
     color: _colour(aa-light-blue-100);
   }
 
   &.risk-medium {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    background-image: url("#{$icon-path}/icon-risk-24px-orange.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-risk-24px-orange.svg");
+    }
     color: _colour(aa-orange-100);
   }
 
   &.risk-high {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/icon-risk-24px-red.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-risk-24px-red.svg");
+    }
     color: _colour(aa-red-100);
   }
 
   &.risk-green-approved {
     background-color: _colour(trans-green-5-to-green-dark);
-    background-image: url("#{$icon-path}/icon-check-green.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-check-green.svg");
+    }
     color: _colour(aa-green-100);
     border: 2px dotted _colour(aa-green-100);
   }
 
   &.risk-low-approved {
     background-color: _colour(trans-green-5-to-green-dark);
-    background-image: url("#{$icon-path}/check_circle-blue-24px.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/check_circle-blue-24px.svg");
+    }
     color: _colour(aa-green-100);
     border: 2px dotted _colour(aa-light-blue-100);
   }
 
   &.risk-medium-approved {
     background-color: _colour(trans-green-5-to-green-dark);
-    background-image: url("#{$icon-path}/check_circle-orange-24px.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/check_circle-orange-24px.svg");
+    }
     color: _colour(aa-green-100);
     border: 2px dotted _colour(aa-orange-100);
   }
 
   &.risk-high-approved {
     background-color: _colour(trans-green-5-to-green-dark);
-    background-image: url("#{$icon-path}/check_circle-red-24px.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/check_circle-red-24px.svg");
+    }
     color: _colour(aa-green-100);
     border: 2px dotted _colour(aa-red-100);
   }
@@ -223,37 +299,43 @@
   &.warning {
     background-color: _colour(trans-orange-10-to-orange-dark);
     color: _colour(aa-orange-100);
-    background-image: url("#{$icon-path}/icon-info-orange.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-info-orange.svg");
+    }
+    .alert-shield-value {
+      background-color: _colour(aa-orange-100);
+    }
   }
 
   &.void {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    background-image: url("#{$icon-path}/icon-cross-orange.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-cross-orange.svg");
+    }
     color: _colour(aa-orange-100);
-  }
-
-  &.error {
-    background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/icon-alert-red.svg");
-    position: relative;
-    color: _colour(aa-red-100);
   }
 
   &.removed, &.circle-x-red, &.do-not-use {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/icon-close-24px-red.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-close-24px-red.svg");
+    }
     color: _colour(aa-red-100);
   }
 
   &.withdrawn {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/undo-red-24px.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/undo-red-24px.svg");
+    }
     color: _colour(aa-red-100);
   }
   
   &.returned {
     background-color: _colour(trans-red-5-to-red-dark);
-    background-image: url("#{$icon-path}/icon-returned-red.svg");
+    &:not(.numerical-alert-shield) {
+      background-image: url("#{$icon-path}/icon-returned-red.svg");
+    }
     color: _colour(aa-red-100);
   }
 

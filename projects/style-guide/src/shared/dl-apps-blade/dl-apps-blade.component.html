@@ -9,25 +9,29 @@
 
   <ng-container custom-content>
     <section class="blade-navigation core-apps-wrapper">
-      <button (click)="coreAppClicked(f)" [class.selected]="coreAppIndex === f" class="
+      <a 
+        *ngFor="let i of coreApps | filterCoreApps: searchText; let f = index"
+        (click)="coreAppClicked(f)" 
+        [class.selected]="coreAppIndex === f" 
+        class="
           core-apps
-          nav-icon 
           flex-group 
           flex-start 
           flex-align-center 
           flex-nowrap
           cursor-pointer
-        " *ngFor="let i of coreApps | filterCoreApps: searchText; let f = index">
-        <div class="
+          decoration-none
+        ">
+        <span class="
             {{i.coreIconClass}} 
             core-app-icon
             material-icons-outlined
             flex-center
             ">
           {{i.coreAppIconName}}
-        </div>
-        <p class="trans-light-blue-to-blue-light">{{i.coreAppName}}</p>
-      </button>
+        </span>
+        <span class="trans-light-blue-to-blue-light decoration-underline">{{i.coreAppName}}</span>
+      </a>
     </section>
 
   </ng-container>

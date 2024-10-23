@@ -127,6 +127,8 @@
     white-space: normal;
     margin-top: -1rem; // TODO negative margin alert
     display: none;
+    border-width: 2px;
+    border-color: _colour(aa-light-blue-100);
   }
 
   &:hover div:not(.show-tooltip-on-click:hover div, .popup-closed:hover div, .hover-stay-open:hover div) {
@@ -158,6 +160,7 @@
     .feature-box {
       color: _colour(aa-orange-100);
       border-color: _colour(aa-orange-100);
+      h1, h2, h3, h4 {color: _colour(aa-orange-100)}
     }
   }
 
@@ -166,6 +169,7 @@
     .feature-box {
       color: _colour(aa-red-100);
       border-color: _colour(aa-red-100);
+      h1, h2, h3, h4 {color: _colour(aa-red-100)}
     }
   }
 
@@ -173,7 +177,8 @@
     color: _colour(aa-light-blue-100);
     .feature-box {
       color: _colour(aa-light-blue-100) !important;
-      border-color: _colour(alert-info-100);
+      border-color: _colour(aa-light-blue-100);
+      h1, h2, h3, h4 {color: _colour(aa-light-blue-100)}
     }
   }
 
@@ -182,11 +187,13 @@
     .feature-box {
       color: _colour(aa-green-100);
       border-color: _colour(aa-green-100);
+      h1, h2, h3, h4 {color: _colour(aa-green-100)}
     }
   }
   &.custom-icon {
     .material-icons,
     .material-icons-outlined {
+      color: _colour(aa-light-blue-100);
       font-size: 1.15rem;
       cursor: default;
       display: inline-block;
@@ -213,10 +220,32 @@
   z-index: 999999;
   background-color: _colour(aa-white-100);
   border-radius: .5rem;
-  font-family: Arial;
+  border-style: solid;
+  border-width: 2px;
+  border-color: _colour(aa-light-blue-100);
   padding: .75rem;
   opacity: 0;
-  transition: opacity .5s ease-out;
+  transition: opacity .3s ease-out;
+
+  &.info {
+    border-color: _colour(aa-light-blue-100);
+    h1, h2, h3, h4 {color: _colour(aa-light-blue-100);}
+  }
+
+  &.success, &.complete {
+    border-color: _colour(aa-green-100);
+    h1, h2, h3, h4 {color: _colour(aa-green-100);}
+  }
+
+  &.pending, &.in-progress, &.waiting {
+    border-color: _colour(aa-orange-100);
+    h1, h2, h3, h4 {color: _colour(aa-orange-100);}
+  }
+
+  &.error {
+    border-color: _colour(aa-red-100);
+    h1, h2, h3, h4 {color: _colour(aa-red-100);}
+  }
 
   h1, h2, h3, h4, h5 {
     margin: 0 0 .5rem 0;
@@ -236,52 +265,20 @@
   &--below {
     transform:translateX(-50%);
     margin-top: .5rem;
-
-    &:before {
-      left: calc(50% - .5rem);
-      top: -.5rem;
-      border-bottom: .5rem solid _colour(aa-white-100);
-      border-right: .5rem solid transparent;
-      border-left: .5rem solid transparent;
-    }
   }
 
   &--above {
     transform:translate(-50%, -100%);
     margin-top: -.5rem;
-
-    &:before {
-      left: calc(50% - .5rem);
-      bottom: -.5rem;
-      border-top: .5rem solid _colour(aa-white-100);
-      border-right: .5rem solid transparent;
-      border-left: .5rem solid transparent;
-    }
   }
 
   &--left {
     transform:translate(calc(-100% - .5rem), -50%);
-
-    &:before {
-      right: -.5rem;
-      top: calc(50% - .5rem);
-      border-top: .5rem solid transparent;
-      border-bottom: .5rem solid transparent;
-      border-left: .5rem solid _colour(aa-white-100);
-    }
   }
 
   &--right {
     transform:translateY(-50%);
     margin-left: .5rem;
-
-    &:before {
-      left: -.5rem;
-      top: calc(50% - .5rem);
-      border-top: .5rem solid transparent;
-      border-bottom: .5rem solid transparent;
-      border-right: .5rem solid _colour(aa-white-100);
-    }
   }
 }
 

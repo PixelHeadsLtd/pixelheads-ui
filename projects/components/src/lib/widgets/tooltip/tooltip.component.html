@@ -4,17 +4,15 @@
   (mouseover)="onMouseOver()"
   (mouseout)="onMouseOut()" 
   class="flex-group" 
-  [ngStyle]="{ 'display': showAsButton ? 'block' : 'flex' }" 
   [ngClass]="{
     'space-between' : includeLabel,
     'flex-start' : includeLegend,
-    'show-as-button' : showAsButton,
     'show-tooltip-on-hover' : showTooltipOnHover,
     'show-tooltip-on-click' : showTooltipOnClick,
     'tooltip-clicked' : tooltipClicked
   }">
-  <label for="{{labelFor}}" *ngIf="includeLabel && !showAsButton">{{labelName}}</label>
-  <legend class="margin-right-0-5" *ngIf="includeLegend && !showAsButton">{{labelName}}</legend>
+  <label for="{{labelFor}}" *ngIf="includeLabel">{{labelName}}</label>
+  <legend class="margin-right-0-5" *ngIf="includeLegend">{{labelName}}</legend>
 
   <section 
     class="aa-tooltip icon-info" 
@@ -25,14 +23,13 @@
       'is-warning' : isWarning,
       'is-error' : isError,
       'custom-icon' : customIcon,
-      'as-link': showAsAnchor,
       'hover-stay-open' : toggleTooltip && hasInteracted && hoverStayOpen,
       'popup-closed': isPopupClosed
     }">
 
     <!-- Default icon but only if hoverStayOpen -->
     <div 
-      *ngIf="!customIcon && hoverStayOpen && !showAsAnchor && !showAsButton" 
+      *ngIf="!customIcon && hoverStayOpen" 
       class="position-absolute top-0 width-1 height-1"
       (click)="togglePopup($event)"
       >
@@ -40,7 +37,7 @@
 
     <!-- Default user defined icon -->
     <div
-      *ngIf="customIcon && !hoverStayOpen && !showAsAnchor && !showAsButton" 
+      *ngIf="customIcon && !hoverStayOpen" 
       class="material-icons" 
       [ngClass]="{
         'is-success' : isSuccess,
@@ -53,7 +50,7 @@
 
     <!-- User defined icon and hoverStayOpen -->
     <div
-      *ngIf="customIcon && hoverStayOpen && !showAsAnchor && !showAsButton" 
+      *ngIf="customIcon && hoverStayOpen" 
       class="material-icons" 
       (click)="togglePopup($event)"
       [ngClass]="{
@@ -65,25 +62,7 @@
       {{iconName}}
     </div>
 
-    <!-- Show as button -->
-    <button *ngIf="showAsButton && !showTooltipOnClick" class="show-tooltip-on-hover" [name]="buttonId" [id]="buttonId"
-      [class]="buttonClass" [disabled]="disabled" (click)="onButtonClick($event)">
-      <span>{{buttonText}}</span>
-    </button>
-
-    <!-- Show as button with onclick -->
-    <button *ngIf="showAsButton && showTooltipOnClick" class="show-tooltip-on-hover" [name]="buttonId" [id]="buttonId"
-      [class]="buttonClass" [disabled]="disabled" (click)="onButtonClick($event); tooltipClicked=!tooltipClicked">
-      <span *ngIf="!tooltipClicked">{{buttonText}}</span>
-      <span *ngIf="tooltipClicked">{{tooltipBtnText}}</span>
-    </button>
-
-    <!-- Show as anchor -->
-    <a *ngIf="showAsAnchor && !showAsButton && !customIcon" class="cursor-pointer" [ngClass]="{'nowrap' : preventAnchorWrapping}">
-      {{tooltipAnchor}}
-    </a>
-
-    <div class="feature-box {{xpos}} {{ypos}}" 
+    <div class="feature-box box-shadow {{xpos}} {{ypos}}" 
       [ngStyle]="{
         'min-width': setMinWidth,
         'max-width': setMaxWidth

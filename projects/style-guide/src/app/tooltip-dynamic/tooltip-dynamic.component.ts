@@ -8,55 +8,56 @@ import { Component } from '@angular/core';
 })
 export class TooltipDynamicComponent {
   TooltipDynamicPosition = TooltipDynamicPosition;
-
+  showDefault: boolean = false;
+  showNested: boolean = false;
   toggleBlade: boolean = false;
 
   public onClick() { console.log('You clicked the button'); }
 
   constructor() {}
 
-  tooltips = [
-    {
-      tooltipTitle: 'Info',
-      tooltipColor: 'aa-light-blue-100',
-      tooltipIconName: 'info',
-      tooltipPosition: TooltipDynamicPosition.ABOVE,
-      tooltipContent: `<section class='width-10'>
-                        <h3 class='aa-light-blue-100'>Info</h3>
-                        <p>This is a tooltip to display general information</p>
-                      </section>`
-    },
-    {
-      tooltipTitle: 'Error',
-      tooltipColor: 'aa-red-100',
-      tooltipIconName: 'error_outline',
-      tooltipPosition: TooltipDynamicPosition.RIGHT,
-      tooltipContent: `<section class='width-10'>
-                        <h3 class='aa-red-100'>Error</h3>
-                        <p>This is a tooltip to display an error</p>
-                      </section>`
-    },
-    {
-      tooltipTitle: 'Pending',
-      tooltipColor: 'aa-orange-100',
-      tooltipIconName: 'pending',
-      tooltipPosition: TooltipDynamicPosition.BELOW,
-      tooltipContent: `<section class='width-10'>
-                        <h3 class='aa-orange-100'>Pending</h3>
-                        <p>This is a tooltip to display pending or in-progress status</p>
-                      </section>`
-    },
-    {
-      tooltipTitle: 'Complete',
-      tooltipColor: 'aa-green-100',
-      tooltipIconName: 'check_circle',
-      tooltipPosition: TooltipDynamicPosition.LEFT,
-      tooltipContent: `<section class='width-10'>
-                        <h3 class='aa-green-100'>Complete</h3>
-                        <p>This is a tooltip to display completed or success status</p>
-                      </section>`
-    }
-  ];
+  // tooltips = [
+  //   {
+  //     tooltipTitle: 'Info',
+  //     tooltipColor: 'aa-light-blue-100',
+  //     tooltipIconName: 'info',
+  //     tooltipPosition: TooltipDynamicPosition.ABOVE,
+  //     tooltipContent: `<section>
+  //                       <h3 class='aa-light-blue-100'>Info</h3>
+  //                       <p>This is a tooltip to display general information</p>
+  //                     </section>`
+  //   },
+  //   {
+  //     tooltipTitle: 'Error',
+  //     tooltipColor: 'aa-red-100',
+  //     tooltipIconName: 'error_outline',
+  //     tooltipPosition: TooltipDynamicPosition.RIGHT,
+  //     tooltipContent: `<section>
+  //                       <h3 class='aa-red-100'>Error</h3>
+  //                       <p>This is a tooltip to display an error</p>
+  //                     </section>`
+  //   },
+  //   {
+  //     tooltipTitle: 'Pending',
+  //     tooltipColor: 'aa-orange-100',
+  //     tooltipIconName: 'pending',
+  //     tooltipPosition: TooltipDynamicPosition.BELOW,
+  //     tooltipContent: `<section>
+  //                       <h3 class='aa-orange-100'>Pending</h3>
+  //                       <p>This is a tooltip to display pending or in-progress status</p>
+  //                     </section>`
+  //   },
+  //   {
+  //     tooltipTitle: 'Complete',
+  //     tooltipColor: 'aa-green-100',
+  //     tooltipIconName: 'check_circle',
+  //     tooltipPosition: TooltipDynamicPosition.LEFT,
+  //     tooltipContent: `<section>
+  //                       <h3 class='aa-green-100'>Complete</h3>
+  //                       <p>This is a tooltip to display completed or success status</p>
+  //                     </section>`
+  //   }
+  // ];
 
   bladeIsOpen(open: boolean) {
     this.toggleBlade = open;

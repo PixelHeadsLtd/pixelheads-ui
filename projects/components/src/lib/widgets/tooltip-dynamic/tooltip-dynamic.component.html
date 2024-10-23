@@ -1,8 +1,10 @@
 <div
   id="aa-tooltip-dynamic"
-  class="tooltip-dynamic box-shadow"
+  class="tooltip-dynamic box-shadow {{tooltipStatus}}"
   [ngClass]="getTooltipClasses()"
   [style.left.px]="left"
-  [style.top.px]="top">
+  [style.top.px]="top"
+  [style.width]="tooltipWidth">
   <div [innerHtml]="tooltip"></div>
+  <ng-content select="[tooltip-html]"></ng-content>
 </div>

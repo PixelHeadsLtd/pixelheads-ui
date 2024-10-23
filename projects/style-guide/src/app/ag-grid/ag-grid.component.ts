@@ -119,7 +119,7 @@ export class AgGridComponent {
       }
     },
     {
-      field: "Context menu",
+      field: "Status",
       width: 110,
       cellRenderer: 'ellipsisContextMenuCell'
     },

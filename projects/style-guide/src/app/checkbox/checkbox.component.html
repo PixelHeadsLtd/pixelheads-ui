@@ -44,61 +44,6 @@
           disabled="true">
         </aa-checkbox>
       </fieldset>
-      <h2 class="margin-top-1">Adding an additional tooltip</h2>
-      <fieldset>
-        <div class="field checkbox">
-          <label>
-            <input type="checkbox"/>
-            <span>Adding a tooltip</span>
-            <aa-tooltip
-              [isInfo]="true"
-              [customIcon]="true"
-              iconName="help"
-              setMinWidth="20rem"
-              ypos="bottom"
-              xpos="right"
-              [zIndex]="1"
-            >
-              <h4>Adding a tooltip</h4>
-              <p>If you would like to add an additional tooltip (aa-tooltip) to your
-                checkbox, please nest the tooltip inside the label element as the last-child
-              </p>
-          </aa-tooltip>
-        </label>
-        </div>
-      </fieldset>
-      <h3>Keeping the tooltip open on hover</h3>
-      <fieldset>
-        <div class="field checkbox">
-          <label>
-            <input type="checkbox"/>
-            <span>Keep tooltip open</span>
-            <aa-tooltip
-              [isInfo]="true"
-              [hoverStayOpen]="true"
-              [customIcon]="true"
-              iconName="help"
-              setMinWidth="20rem"
-              ypos="bottom"
-              xpos="right"
-              [zIndex]="10"
-            >
-              <h4>Keep open for interactions</h4>
-              <p>
-                As an extra feature, you can now choose to keep 
-                the tooltip open for other interactions. Please see the 
-                Gist for details.
-              </p>
-              <div class="flex-group flex-column margin-top-1">
-                <a class="padding-bottom-0-5" routerLink="/">Visit home</a>
-                <a class="padding-bottom-0-5" routerLink="/blade">See our blades</a>
-                <a class="padding-bottom-0-5" routerLink="/blade">Take a look at our modals</a>
-                <a routerLink="/blade">Check out our tab navigation</a>
-              </div>
-          </aa-tooltip>
-        </label>
-        </div>
-      </fieldset>
     </section>
 
     <section class="flex-2 col-right flex-start">

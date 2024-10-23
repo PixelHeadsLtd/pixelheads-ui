@@ -10,19 +10,14 @@ export class AlertShieldComponent {
 
   @Input() alertShieldStatus: string = '';
   @Input() alertShieldText: string = '';
-  @Input() showTooltip: boolean = false;
-  @Input() showTooltipHeading: boolean = false;
-  @Input() tooltipHeading: string = '';
   @Input() minWidth: any;
   @Input() alertShieldSmall: boolean = false;
   @Input() noWrap: boolean = false;
   @Input() hideLabel: boolean = false;
-  @Input() tooltipTopLeft: boolean = false;
-  @Input() tooltipTopRight: boolean = false;
-  @Input() tooltipBottomLeft: boolean = false;
-  @Input() tooltipBottomRight: boolean = false;
 
   @Input() customShield: boolean = false;
+  @Input() numericalShield: boolean = false;
+  @Input() numericalValue: number = 0;
   @Input() iconName: string = '';
   @Input() iconOutlined: boolean = false;
   @Input() bgRedLight: boolean = false;

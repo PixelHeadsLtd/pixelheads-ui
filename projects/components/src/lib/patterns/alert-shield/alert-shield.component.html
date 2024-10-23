@@ -1,6 +1,6 @@
 <div 
     id="aa-alert-shield"
-    *ngIf="!showTooltip && !customShield" 
+    *ngIf="!customShield && !numericalShield" 
     class="alert-shield {{alertShieldStatus}}" 
     [ngClass]="{
         'small' : alertShieldSmall, 
@@ -13,46 +13,9 @@
 </div>
 
 <div 
-    id="aa-alert-shield-tooltip"
-    *ngIf="showTooltip && !customShield" 
-    class="alert-shield-tooltip-wrapper"
-    [ngClass]="{
-        'tooltip-top-left' : tooltipTopLeft,
-        'tooltip-top-right' : tooltipTopRight,
-        'tooltip-bottom-left' : tooltipBottomLeft,
-        'tooltip-bottom-right' : tooltipBottomRight
-    }"
->
-    <div 
-        class="alert-shield-tooltip {{alertShieldStatus}}"
-        [ngStyle]="{'min-width' : minWidth}"
-    >
-        <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
-        <ng-content select="[tooltip-content]"></ng-content>
-    </div>
-    <div 
-        class="alert-shield {{alertShieldStatus}}" 
-        [ngClass]="{
-            'small' : alertShieldSmall, 
-            'nowrap' : noWrap 
-            }"
-        >
-            <span [ngStyle]="{ 'display': hideLabel ? 'none' : 'inline' }">
-                {{alertShieldText}}
-            </span>
-    </div>
-</div>
-
-<div 
     id="aa-custom-alert-shield"
-    *ngIf="customShield" 
+    *ngIf="customShield && !numericalShield" 
     class="custom-alert-shield"
-    [ngClass]="{
-        'tooltip-top-left' : tooltipTopLeft,
-        'tooltip-top-right' : tooltipTopRight,
-        'tooltip-bottom-left' : tooltipBottomLeft,
-        'tooltip-bottom-right' : tooltipBottomRight
-    }"
 >
     <div 
         class="
@@ -70,14 +33,6 @@
         }"
       >
         <div 
-            *ngIf="showTooltip"
-            class="alert-shield-tooltip"
-            [ngStyle]="{'min-width' : minWidth}"
-        >
-            <h4 *ngIf="showTooltipHeading">{{tooltipHeading}}</h4>
-            <ng-content select="[custom-tooltip-content]"></ng-content>
-        </div>
-        <div 
             [ngClass]="{
                 'material-icons' : !iconOutlined,
                 'material-icons-outlined' : iconOutlined
@@ -87,5 +42,19 @@
         <span [ngStyle]="{ 'display': hideLabel ? 'none' : 'inline' }">
             {{alertShieldText}}
         </span>
+    </div>
+</div>
+
+<div 
+    id="aa-numerical-alert-shield"
+    *ngIf="numericalShield && !customShield" 
+    class="alert-shield numerical-alert-shield {{alertShieldStatus}}" 
+    [ngClass]="{ 'small' : alertShieldSmall }"
+    >
+    <div class="flex-group flex-start flex-align-center flex-nowrap">
+        <div class="alert-shield-value flex-center border-radius-1">{{numericalValue}}</div>
+        <div>
+            {{alertShieldText}}
+        </div>
     </div>
 </div>

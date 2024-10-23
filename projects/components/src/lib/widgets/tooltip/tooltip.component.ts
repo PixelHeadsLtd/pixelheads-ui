@@ -21,10 +21,8 @@ export class TooltipComponent {
   @Input() iconName: string = '';
   @Input() zIndex: number = 0;
   @Input() labelFor: string = '';
-  @Input() showAsAnchor: boolean = false;
   @Input() tooltipAnchor: any;
   @Input() preventAnchorWrapping: boolean = false;
-  @Input() showAsButton: boolean = false;
   @Input() buttonText: string = '';
   @Input() buttonId: string = '';
   @Input() buttonClass: string = '';

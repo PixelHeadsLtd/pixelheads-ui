@@ -311,6 +311,11 @@
         }
       }
 
+      aa-counter {
+        display: inline-block;
+        line-height: 1rem;
+      }
+
       .date-picker {
         .anchor-close {
           &:after {
@@ -461,6 +466,19 @@
         &.orange,
         &.red {
           padding-left: .75rem;
+        }
+
+        &.numerical-alert-shield {
+          font-size: _font(size-small);
+          padding: 0 .5rem 0 .25rem;
+          height: 1.5rem;
+          line-height: .75rem;
+    
+          .alert-shield-value {
+            width: 1.05rem;
+            height: 1.05rem;
+            margin: 0 .4rem 0 0;
+          }
         }
       }
 

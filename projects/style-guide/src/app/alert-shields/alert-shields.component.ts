@@ -12,6 +12,7 @@ export class AlertShieldsComponent {
   statusShields: boolean = false;
   regularShields: boolean = false;
   pendingShields: boolean = false;
+  numericalShields: boolean = false;
   riskShields: boolean = false;
   mixedShields: boolean = false;
   toggleBlade: boolean = false;

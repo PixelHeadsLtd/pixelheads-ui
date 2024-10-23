@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, ViewEncapsulation } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, ViewEncapsulation, Input } from '@angular/core';
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 
 @Component({
@@ -9,6 +9,8 @@ import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 })
 export class TooltipDynamicComponent {
   position: TooltipDynamicPosition = TooltipDynamicPosition.DEFAULT;
+  @Input() tooltipWidth: string = 'auto';
+  @Input() tooltipStatus: string = '';
   tooltip: string | string[] = '';
   left = 0;
   top = 0;
