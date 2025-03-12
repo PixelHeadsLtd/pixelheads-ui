@@ -171,7 +171,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
         ]
     },
     // GO TO DESIGN PRINCIPLES
-    { soloItem: true, color: 'burgundy solo-menu-item', iconName: 'psychology', title: 'Visit Design Principles', isHref: true, hRef: 'https://dev.core.angloamerican.com/designprinciples/' },
+    { soloItem: true, color: 'burgundy solo-menu-item', iconName: 'psychology', title: 'Visit Design Principles', isHref: true, hRef: 'https://design-principles.netlify.app/designprinciples/' },
   ];
 
   constructor(private toggleService: ToggleService, private router: Router) {
