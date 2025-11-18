@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-element-slider',
+  selector: 'ph-element-slider',
   templateUrl: './element-slider.component.html',
   styleUrl: './element-slider.component.scss',
 })

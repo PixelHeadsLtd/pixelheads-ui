@@ -16,40 +16,40 @@
 
         <h3>Start the demo</h3>
         <div class="flex-group flex-start">
-          <aa-button
+          <ph-button
             *ngIf="!showIncomplete"
             [customIcons]="true"
             (buttonClick)="showIncomplete=true; checkProgress()"
             buttonId="buttonId"
-            buttonClass="custom-icons bg-aa-white-100 bd-aa-green-100 aa-green-100"
+            buttonClass="custom-icons bg-ph-white-100 bd-ph-green-100 ph-green-100"
             fieldClass="boxed label-hidden"
             buttonText="Click to see an example of an 'incomplete' stop"
             buttonIcon="more_horiz">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             *ngIf="showIncomplete && !showComplete"
             [customIcons]="true"
             (buttonClick)="showComplete=true; checkProgress()"
             buttonId="buttonId"
-            buttonClass="custom-icons bg-aa-green-100"
+            buttonClass="custom-icons bg-ph-green-100"
             fieldClass="boxed label-hidden"
             buttonText="Step one is incomplete. Complete step one"
             buttonIcon="done">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             *ngIf="showComplete && !showError"
             [customIcons]="true"
             (buttonClick)="showError=true; checkProgress()"
             buttonId="buttonId"
-            buttonClass="custom-icons bg-aa-red-100"
+            buttonClass="custom-icons bg-ph-red-100"
             fieldClass="boxed label-hidden"
             buttonText="Go to the next step and see how an 'error' state appears"
             buttonIcon="priority_high">
-          </aa-button>
+          </ph-button>
 
-          <aa-button *ngIf="showError && !progressComplete"
+          <ph-button *ngIf="showError && !progressComplete"
             [customIcons]="true"
             (buttonClick)="
               progressComplete=true;
@@ -60,8 +60,8 @@
             fieldClass="boxed label-hidden"
             buttonText="Complete the progress"
             >
-          </aa-button>
-          <aa-button
+          </ph-button>
+          <ph-button
             *ngIf="progressComplete && !reset"
             [customIcons]="true"
             (buttonClick)="reset=true; checkProgress()"
@@ -70,7 +70,7 @@
             fieldClass="boxed label-hidden"
             buttonText="Restart"
             buttonIcon="refresh">
-          </aa-button>
+          </ph-button>
         </div>
       </section>
 
@@ -87,38 +87,32 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">Nav</td>
-              <td datalabel="Attribute">Class</td>
-              <td datalabel="Type">Class</td>
-              <td datalabel="Default">.aa-progress-indicator, .flex-group</td>
-            </tr>
-            <tr>
-              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Element">ph-progress-indicator</td>
               <td datalabel="Attribute">asLink</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Element">ph-progress-indicator</td>
               <td datalabel="Attribute">progressLink</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your URL</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Element">ph-progress-indicator</td>
               <td datalabel="Attribute">Component</td>
               <td datalabel="Type">Component</td>
               <td datalabel="Default">N/A</td>
             </tr>
             <ng-container *ngIf="showMore">
             <tr>
-              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Element">ph-progress-indicator</td>
               <td datalabel="Attribute">progressClass</td>
               <td datalabel="Type">Class</td>
               <td datalabel="Default">.current, .incomplete, .complete, .error</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-indicator-advanced</td>
+              <td datalabel="Element">ph-progress-indicator</td>
               <td datalabel="Attribute">progressLabel</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your bus-stop label</td>
@@ -134,17 +128,17 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); progressIndicator=true; progressIndicatorIcons=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); progressIndicator=true; progressIndicatorIcons=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </div>
 
     <nav
-      class="aa-progress-indicator flex-group margin-top-4"
+      class="ph-progress-indicator flex-group margin-top-4"
       [ngStyle]="{'padding' : '3rem 15%'}"
     >
-      <aa-progress-indicator-advanced
+      <ph-progress-indicator
         progressClass="{{stepOneClass}}"
         [showDescription]="stepOne"
         description="{{stepOneText}}"
@@ -153,9 +147,9 @@
         <a *ngIf="isLink" href="{{ progressLink }}" class="material-icons"></a>
         <strong *ngIf="!isLink" class="material-icons"></strong>
         <label>Personal details</label>
-      </aa-progress-indicator-advanced>
+      </ph-progress-indicator>
 
-      <aa-progress-indicator-advanced
+      <ph-progress-indicator
           progressClass="{{stepTwoClass}}"
           [showDescription]="stepTwo"
           description="{{stepTwoText}}"
@@ -164,9 +158,9 @@
           <a *ngIf="isLink" href="{{ progressLink }}" class="material-icons"></a>
           <strong *ngIf="!isLink" class="material-icons"></strong>
           <label>Company details</label>
-        </aa-progress-indicator-advanced>
+        </ph-progress-indicator>
 
-        <aa-progress-indicator-advanced
+        <ph-progress-indicator
           progressClass="{{stepThreeClass}}"
           [showDescription]="stepThree"
           description="{{stepThreeText}}"
@@ -175,9 +169,9 @@
           <a *ngIf="isLink" href="{{ progressLink }}" class="material-icons"></a>
           <strong *ngIf="!isLink" class="material-icons"></strong>
           <label>Bank account</label>
-        </aa-progress-indicator-advanced>
+        </ph-progress-indicator>
 
-        <aa-progress-indicator-advanced
+        <ph-progress-indicator
           progressClass="{{stepFourClass}}"
           [showDescription]="stepFour"
           description="{{stepFourText}}"
@@ -186,9 +180,9 @@
           <a *ngIf="isLink" href="{{ progressLink }}" class="material-icons"></a>
           <strong *ngIf="!isLink" class="material-icons"></strong>
           <label>Legal documents</label>
-        </aa-progress-indicator-advanced>
+        </ph-progress-indicator>
 
-        <aa-progress-indicator-advanced
+        <ph-progress-indicator
           progressClass="{{stepFiveClass}}"
           [showDescription]="stepFive"
           description="{{stepFiveText}}"
@@ -197,12 +191,12 @@
           <a *ngIf="isLink" href="{{ progressLink }}" class="material-icons"></a>
           <strong *ngIf="!isLink" class="material-icons"></strong>
           <label>Summary</label>
-        </aa-progress-indicator-advanced>
+        </ph-progress-indicator>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -216,12 +210,12 @@
   >
   <article class="blade-content">
     <div *ngIf="progressIndicator">
-      <a href="https://gist.github.com/angloux/c731c7e7af543ce49b210c442fbb4952" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c731c7e7af543ce49b210c442fbb4952"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c731c7e7af543ce49b210c442fbb4952" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c731c7e7af543ce49b210c442fbb4952"></app-gist>
     </div>
     <div *ngIf="progressIndicatorIcons">
-      <a href="https://gist.github.com/angloux/166d065af3e4273089273a6fdcb3bc35" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/166d065af3e4273089273a6fdcb3bc35"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/166d065af3e4273089273a6fdcb3bc35" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/166d065af3e4273089273a6fdcb3bc35"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

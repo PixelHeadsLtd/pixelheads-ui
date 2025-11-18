@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Tables</h1>
-  <aa-alert alertClass="error max-width-unset" alertText="When using tables, remember to add the class .grid to the page content container. Other page graphics will need their own content-container"></aa-alert>
+  <ph-alert alertClass="error max-width-unset" alertText="When using tables, remember to add the class .grid to the page content container. Other page graphics will need their own content-container"></ph-alert>
 </section>
 <section class="content-container padding-0">
       <!-- start content repeater -->
@@ -16,13 +16,13 @@
             <button 
               class="primary" 
               (click)="clearLocalStorage()" 
-              [ngClass]="{'bg-aa-orange-100': storageCleared, 'bd-aa-orange-100': storageCleared}"
+              [ngClass]="{'bg-ph-orange-100': storageCleared, 'bd-ph-orange-100': storageCleared}"
             >
               <span *ngIf="!storageCleared">Clear local storage</span>
               <span *ngIf="storageCleared">Local storage cleared...</span>
             </button>
           </div>
-          <aa-dynamic-table
+          <ph-dynamic-table
             setHeight="18rem"
             setMinHeight="18rem"
             setMaxHeight="18rem"
@@ -40,7 +40,7 @@
             (pageChange)="onPageChange($event)"
             (pageSizeChange)="onPageSizeChange($event)"
             (buttonClicked)="onButtonClick($event)">
-          </aa-dynamic-table>
+          </ph-dynamic-table>
         </section>
   
         <section class="flex-2 col-right flex-start">
@@ -80,7 +80,7 @@
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
           <button
-            class="custom-icons bg-aa-light-blue-100"
+            class="custom-icons bg-ph-light-blue-100"
             (click)="
             bladeIsOpen(true);
             tableFeature=false;
@@ -129,7 +129,7 @@
       </table>
 
       <h2 class="margin-top-1">Native table pagination</h2>
-      <nav class="aa-pagination flex-group flex-start flex-align-center bg-aa-white-100 padding-0-25 padding-left-1-5 padding-right-1-5">
+      <nav class="ph-pagination flex-group flex-start flex-align-center bg-ph-white-100 padding-0-25 padding-left-1-5 padding-right-1-5">
         <div>Items per page</div>
         <div>
           <select>
@@ -178,7 +178,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
         <button
-          class="custom-icons bg-aa-light-blue-100"
+          class="custom-icons bg-ph-light-blue-100"
           (click)="
           bladeIsOpen(true);
           tableStandard=true;
@@ -224,11 +224,11 @@
             <tbody>
               <tr *ngFor="let approval of approvals">
                 <td class="padding-right-0 padding-left-0-5">
-                  <aa-context-menu [showOnLeft]="false" minWidth="11.5rem">
-                    <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="View blades" routerLink="/blade"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu [showOnLeft]="false" minWidth="11.5rem">
+                    <ph-context-menu-item menuItemText="Design Language home" routerLink="/"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="View blades" routerLink="/blade"></ph-context-menu-item>
+                  </ph-context-menu>
                 </td>
                 <td class="padding-left-0" datalabel="Created by">{{ approval.createdBy }}</td>
                 <td datalabel="Modified by">{{ approval.modifiedBy }}</td>
@@ -286,7 +286,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
         <button
-          class="custom-icons bg-aa-light-blue-100"
+          class="custom-icons bg-ph-light-blue-100"
           (click)="
           bladeIsOpen(true);
           tableStandard=false;
@@ -335,17 +335,17 @@
                     </td>
                     <td datalabel="Approver">{{ approval.approver }}</td>
                     <td>
-                      <aa-status-indicator [currentStatus]="currentStatus"></aa-status-indicator>
+                      <ph-status-indicator [currentStatus]="currentStatus"></ph-status-indicator>
                     </td>
                     <td datalabel="Created date">{{ approval.created }}</td>
                     <td datalabel="Modified date">{{ approval.modified }}</td>
                   </tr>
                 </tbody>
-                <tbody *ngIf="expandedIndex === i" class="bg-aa-grey-5">
+                <tbody *ngIf="expandedIndex === i" class="bg-ph-grey-5">
                   <tr *ngFor="let approval of approvals">
                       <td datalabel="status"><!-- IMPORTANT --></td>
                       <td datalabel="approver">{{ approval.approver }}</td>
-                      <td><aa-status-indicator [currentStatus]="currentStatus"></aa-status-indicator></td>
+                      <td><ph-status-indicator [currentStatus]="currentStatus"></ph-status-indicator></td>
                       <td datalabel="created-date">{{ approval.created }}</td>
                       <td datalabel="modified-date">{{ approval.modified }}</td>
                   </tr>
@@ -405,7 +405,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
           <button
-            class="custom-icons bg-aa-light-blue-100"
+            class="custom-icons bg-ph-light-blue-100"
             (click)="
             bladeIsOpen(true);
             tableStandard=false;
@@ -462,7 +462,7 @@
                     <td datalabel="Approver">{{ item.date }}</td>
                     <td>{{item.Dept}}</td>
                     <td>
-                      <aa-slider
+                      <ph-slider
                         [sliderInline]="false"
                         labelText="Apples"
                         fieldClass=""
@@ -471,14 +471,14 @@
                         sliderValue=""
                         disabled=""
                       >
-                      </aa-slider>
+                      </ph-slider>
                     </td>
                     <td *ngFor="let item of item.progressCells" class="status-indicator progress-cell">
                       <!-- start tooltip -->
                       <div
                         [position]="item.tooltipPosition"
                         class="small cursor-default"
-                        aaTooltip="
+                        phTooltip="
                           <section class='width-10'>
                             <h3 class='{{item.tooltipTitleColor}}'>{{item.tooltipTitle}}</h3>
                             <p>{{item.tooltipBody}}</p>
@@ -496,13 +496,13 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tbody *ngIf="expandedIndexTwo === i" class="bg-aa-grey-5">
+                  <tbody *ngIf="expandedIndexTwo === i" class="bg-ph-grey-5">
                     <tr>
                       <td></td>
                       <td>{{item.date}}</td>
                       <td>{{item.productType}}</td>
                       <td colspan="9">
-                        <aa-slider
+                        <ph-slider
                           [sliderInline]="false"
                           labelText="Apples"
                           fieldClass=""
@@ -511,7 +511,7 @@
                           sliderValue=""
                           disabled=""
                         >
-                        </aa-slider>
+                        </ph-slider>
                       </td>
                     </tr>
                   </tbody>
@@ -576,7 +576,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
           <button
-            class="custom-icons bg-aa-light-blue-100"
+            class="custom-icons bg-ph-light-blue-100"
             (click)="
             bladeIsOpen(true);
             tableStandard=false;
@@ -683,7 +683,7 @@
   <!-- mini menu -->
   <nav class="mini-menu flex-group flex-end">
       <button
-        class="custom-icons bg-aa-light-blue-100"
+        class="custom-icons bg-ph-light-blue-100"
         (click)="
         bladeIsOpen(true);
         tableStandard=false;
@@ -760,7 +760,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
         <button
-          class="custom-icons bg-aa-light-blue-100"
+          class="custom-icons bg-ph-light-blue-100"
           (click)="
           bladeIsOpen(true);
           tableHalfWidth=true;
@@ -837,7 +837,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
           <button
-            class="custom-icons bg-aa-light-blue-100"
+            class="custom-icons bg-ph-light-blue-100"
             (click)="
             bladeIsOpen(true);
             tableRowHeadings=true;
@@ -873,10 +873,10 @@
                   <tr>
                     <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
                         <h3>Feature 1</h3>
-                        <aa-tooltip [isInfo]="true" setMinWidth="11rem" ypos="bottom" xpos="right">
+                        <ph-tooltip [isInfo]="true" setMinWidth="11rem" ypos="bottom" xpos="right">
                           <h4>Ahoy there</h4>
                           <p>Mr Beaver had begun telling them that the<br/> White Witch wasn’t really human at all </p>
-                        </aa-tooltip>
+                        </ph-tooltip>
                     </td>
                   </tr>
                   <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
@@ -916,14 +916,14 @@
                   <tr>
                     <td class="flex-group space-between flex-align-center flex-nowrap min-width-14">
                         <h3>Feature 3</h3>
-                        <aa-alert-shield
+                        <ph-alert-shield
                           [alertShieldSmall]="false"
                           [hideLabel]="false"
                           minWidth="12rem"
                           alertShieldStatus="info"
                           alertShieldText="Optional"
                         >
-                        </aa-alert-shield>
+                        </ph-alert-shield>
                     </td>
                   </tr>
                   <tr><td><input type="text" placeholder="Full legal name" /></td></tr>
@@ -978,7 +978,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
           <button
-            class="custom-icons bg-aa-light-blue-100"
+            class="custom-icons bg-ph-light-blue-100"
             (click)="
             bladeIsOpen(true);
             tableFeature=true;
@@ -1038,7 +1038,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
         <button
-          class="custom-icons bg-aa-light-blue-100"
+          class="custom-icons bg-ph-light-blue-100"
           (click)="
           bladeIsOpen(true);
           tableFeature=false;
@@ -1204,7 +1204,7 @@
     </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -1218,45 +1218,45 @@
   >
   <article class="blade-content">
     <div *ngIf="tableStandard">
-      <a href="https://gist.github.com/angloux/d578a74086b9bff7b9a6872d7fcea316" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/d578a74086b9bff7b9a6872d7fcea316"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/d578a74086b9bff7b9a6872d7fcea316" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/d578a74086b9bff7b9a6872d7fcea316"></app-gist>
     </div>
     <div *ngIf="tableStandardScrolling">
-      <a href="https://gist.github.com/angloux/6837ab47f7d60c9fba2d24754fe95510" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/6837ab47f7d60c9fba2d24754fe95510"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/6837ab47f7d60c9fba2d24754fe95510" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/6837ab47f7d60c9fba2d24754fe95510"></app-gist>
     </div>
     <div *ngIf="tableStandardExpandable">
-      <a href="https://gist.github.com/angloux/bed2190360c79d8e56e33f3140a3a96a" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/bed2190360c79d8e56e33f3140a3a96a"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/bed2190360c79d8e56e33f3140a3a96a" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/bed2190360c79d8e56e33f3140a3a96a"></app-gist>
     </div>
     <div *ngIf="tableStatus">
-      <a href="https://gist.github.com/angloux/b22be5a5093f79771e19c8f8ab7515e2" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/b22be5a5093f79771e19c8f8ab7515e2"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/b22be5a5093f79771e19c8f8ab7515e2" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/b22be5a5093f79771e19c8f8ab7515e2"></app-gist>
     </div>
     <div *ngIf="tableProgress">
-      <a href="https://gist.github.com/angloux/6543a13ccafd4ab6978035c60216508e" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/6543a13ccafd4ab6978035c60216508e"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/6543a13ccafd4ab6978035c60216508e" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/6543a13ccafd4ab6978035c60216508e"></app-gist>
     </div>
     <div *ngIf="tableHalfWidth">
-      <a href="https://gist.github.com/angloux/c47e21b038a33bfcc5eabdbee7a6a3ba" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c47e21b038a33bfcc5eabdbee7a6a3ba"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c47e21b038a33bfcc5eabdbee7a6a3ba" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c47e21b038a33bfcc5eabdbee7a6a3ba"></app-gist>
     </div>
     <div *ngIf="tableRowHeadings">
-      <a href="https://gist.github.com/angloux/d9661f4ed516aa52aa8f7eee2f2a5672" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/d9661f4ed516aa52aa8f7eee2f2a5672"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/d9661f4ed516aa52aa8f7eee2f2a5672" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/d9661f4ed516aa52aa8f7eee2f2a5672"></app-gist>
     </div>
     <div *ngIf="tableFeature">
-      <a href="https://gist.github.com/angloux/6a1ac7be032e564528323f69a815644f" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/6a1ac7be032e564528323f69a815644f"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/6a1ac7be032e564528323f69a815644f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/6a1ac7be032e564528323f69a815644f"></app-gist>
     </div>
     <div *ngIf="multiTables">
-      <a href="https://gist.github.com/angloux/c4054fcf8b6c0fee6fbda1d7a38f0401" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c4054fcf8b6c0fee6fbda1d7a38f0401"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c4054fcf8b6c0fee6fbda1d7a38f0401" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c4054fcf8b6c0fee6fbda1d7a38f0401"></app-gist>
     </div>
     <div *ngIf="dynamicTable">
-      <a href="https://gist.github.com/angloux/9494cd8eb64ecfe33ef5ea1bebe64834" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/9494cd8eb64ecfe33ef5ea1bebe64834"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/9494cd8eb64ecfe33ef5ea1bebe64834" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/9494cd8eb64ecfe33ef5ea1bebe64834"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>
 

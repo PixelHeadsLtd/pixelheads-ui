@@ -31,7 +31,7 @@
         height: 0;
         
         &:checked + .slider-btn {
-          background-color: _colour(aa-light-blue-100);
+          background-color: _colour(ph-light-blue-100);
           
           &:before {
             -webkit-transform: translateX(1.25rem);
@@ -41,7 +41,7 @@
         }
         
         &:focus + .slider-btn {
-          box-shadow: 0 0 .15rem _colour(aa-light-blue-100);
+          box-shadow: 0 0 .15rem _colour(ph-light-blue-100);
         }
       }
       
@@ -53,7 +53,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: _colour(aa-grey-25);
+        background-color: _colour(ph-grey-25);
         -webkit-transition: .4s;
         transition: .4s;
         
@@ -65,7 +65,7 @@
           width: 1rem;
           left: .25rem;
           bottom: .25rem;
-          background-color: _colour(aa-white-100);
+          background-color: _colour(ph-white-100);
           -webkit-transition: .4s;
           transition: .4s;
         }

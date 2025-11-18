@@ -15,7 +15,7 @@
         </p>
       </div>
 
-      <aa-accordion
+      <ph-accordion
         (open)="
         showOne=false;
         showTwo=false;
@@ -41,8 +41,8 @@
           </p>
         </ng-container>
 
-      </aa-accordion>
-      <aa-accordion
+      </ph-accordion>
+      <ph-accordion
         (open)="
         showOne=false;
         showTwo=false;
@@ -54,7 +54,7 @@
         "
         [showBody]="showFour"
         minWidth="35rem"
-        customBgColor="bg-aa-yellow-100"
+        customBgColor="bg-ph-yellow-100"
         accordionHeading="Default accordion with custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
@@ -69,8 +69,8 @@
           </p>
         </div>
       </ng-container>
-      </aa-accordion>
-      <aa-accordion
+      </ph-accordion>
+      <ph-accordion
         (open)="
         showOne=false;
         showTwo=false;
@@ -82,7 +82,7 @@
         "
         [showBody]="showFive"
         minWidth="35rem"
-        customBgColor="bg-aa-orange-100"
+        customBgColor="bg-ph-orange-100"
         accordionHeading="Default accordion with custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
@@ -97,8 +97,8 @@
           </p>
         </div>
       </ng-container>
-      </aa-accordion>
-      <aa-accordion
+      </ph-accordion>
+      <ph-accordion
         (open)="
         showOne=false;
         showTwo=false;
@@ -110,7 +110,7 @@
         "
         [showBody]="showSix"
         minWidth="35rem"
-        customBgColor="bg-aa-red-100"
+        customBgColor="bg-ph-red-100"
         accordionHeading="Accordion custom colour (see inside)"
         accordionId="accordion01"
         sectionId="section01"
@@ -125,8 +125,8 @@
           </p>
         </div>
       </ng-container>
-      </aa-accordion>
-      <aa-accordion
+      </ph-accordion>
+      <ph-accordion
       [disabled]="true"
       minWidth="35rem"
       accordionHeading="Disabled version"
@@ -138,9 +138,9 @@
       <ng-container>
         <p>Add accordion content in here</p>
       </ng-container>
-    </aa-accordion>
+    </ph-accordion>
       <h2 class="margin-top-2">Nested accordions</h2>
-      <aa-accordion
+      <ph-accordion
       (open)="
       showOne=false;
       showTwo=false;
@@ -162,7 +162,7 @@
     >
       <ng-container>
         <div>
-          <aa-accordion
+          <ph-accordion
             (open)="showSevenNested=true"
             [showBody]="showSevenNested"
             minWidth="26rem"
@@ -183,10 +183,10 @@
                   This is a nested accordion should you ever require it
                 </p>
             </ng-container>
-          </aa-accordion>
+          </ph-accordion>
         </div>
       </ng-container>
-    </aa-accordion>
+    </ph-accordion>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -204,28 +204,28 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">showBody</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">(open)</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">showBody=true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">clearPadding</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">Only set to true if it's a nested accordion</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">
               <div class="flex-group flex-start flex-align-center">
-                <aa-tooltip
+                <ph-tooltip
                   class="margin-left-0-25"
                   [isInfo]="true"
                   [customIcon]="true"
@@ -237,27 +237,27 @@
                 >
                   <h4>Make sure you set a minWidth</h4>
                   <p>
-                    If you do not set the correct <strong class="aa-red-100">minWidth</strong>, then the text and any other elements nested in the header
+                    If you do not set the correct <strong class="ph-red-100">minWidth</strong>, then the text and any other elements nested in the header
                     will wrap.
                   </p>
                   <p>
-                    To get the correct <strong class="aa-red-100">minWidth</strong> minimize the screen for mobile and then you'll see
+                    To get the correct <strong class="ph-red-100">minWidth</strong> minimize the screen for mobile and then you'll see
                     how the header content behaves. If it's wrapping, keep increasing the width until corrected.
                   </p>
-                </aa-tooltip>
+                </ph-tooltip>
               </div>
             </td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">Your number - returns a rem value</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">enableIcons</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">iconName (Material Icons only)</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">
@@ -265,31 +265,31 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">customBgColor</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default"><a class="underline" routerLink="/colours">Choose your bg colour</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">accordionHeading</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your heading</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">accordionId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">sectionId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">disabled</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
@@ -301,7 +301,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-      class="custom-icons bg-aa-light-blue-100"
+      class="custom-icons bg-ph-light-blue-100"
       (click)="
         bladeIsOpen(true);
         showAccordion=true;
@@ -324,7 +324,7 @@
           icons, validation, shields, buttons and tooltips to your accordions
         </p>
       </div>
-      <aa-accordion
+      <ph-accordion
         *ngFor="let item of movies; let i = index"
         (open)="toggleAccordion(i)"
         customBgColor="{{item.bgColor}}"
@@ -340,21 +340,21 @@
         <ng-container bespoke-header>
           <div class="flex-group space-between flex-align-center">
             <section class="flex-group flex-start flex-nowrap flex-align-center">
-              <aa-button
+              <ph-button
                 class="margin-right-0-25"
                 (buttonClick)="onClick()"
                 buttonClass="bg-transparent size-large padding-0 {{item.iconColor}}"
                 fieldClass="boxed"
                 [customIconsRoundOutlined]="true"
                 buttonIcon="arrow_circle_left">
-              </aa-button>
+              </ph-button>
               <div class="accordion-heading {{item.headingColor}}">
                 {{ item.name }}
               </div>
             </section>
 
             <section class="flex-group flex-nowrap">
-              <aa-slider
+              <ph-slider
                 [sliderInline]="false"
                 sliderChecked=""
                 labelText="apples"
@@ -364,8 +364,8 @@
                 sliderValue=""
                 disabled=""
               >
-              </aa-slider>
-              <aa-alert-shield
+              </ph-slider>
+              <ph-alert-shield
                 [alertShieldSmall]="true"
                 [hideLabel]="false"
                 [noWrap]="true"
@@ -377,7 +377,7 @@
                   <p>This is my tooltip message</p>
                   <p>This is another tooltip message</p>
                 </ng-container>
-              </aa-alert-shield>
+              </ph-alert-shield>
             </section>
           </div>
         </ng-container>
@@ -391,7 +391,7 @@
             this is the accordion you should be using.
           </p>
         </ng-container>
-      </aa-accordion>
+      </ph-accordion>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -409,46 +409,46 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[bespokeHeader]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">bespoke-header</td>
             <td datalabel="Type">Ng-container</td>
             <td datalabel="Default">bespoke-header</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[hideToggleIcon]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[iconColor]</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-ph modifier classes</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[customBgColor]</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-ph modifier classes</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[toggleIconColor]</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-ph modifier classes</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">[headingColor]</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-aa modifier classes</a></td>
+            <td datalabel="Default">Use our colour <a routerLink="/colours">bg-ph modifier classes</a></td>
           </tr>
         </tbody>
       </table>
@@ -457,7 +457,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-      class="custom-icons bg-aa-light-blue-100"
+      class="custom-icons bg-ph-light-blue-100"
       (click)="
         bladeIsOpen(true);
         showAccordion=false;
@@ -477,16 +477,16 @@
       <div class="describe margin-bottom-1">
         <p>
           To enable drag-and-drop for your accordions,
-          please wrap the aa-accordion inside a div with the class <strong class="aa-red-100">aa-drag-container</strong>.
-          On the same div, also add <strong class="aa-red-100">cdkDropList (ckkDropListDropped)="drop($event)" </strong>
+          please wrap the ph-accordion inside a div with the class <strong class="ph-red-100">ph-drag-container</strong>.
+          On the same div, also add <strong class="ph-red-100">cdkDropList (ckkDropListDropped)="drop($event)" </strong>
         </p>
-        <p>Finally, add <strong class="aa-red-100">cdkDrap</strong> to the aa-accordion itself. See gist for example markup. Note: This
+        <p>Finally, add <strong class="ph-red-100">cdkDrap</strong> to the ph-accordion itself. See gist for example markup. Note: This
         implementation is the same for all accordion.</p>
       </div>
 
-      <div class="aa-drag-container" cdkDropList (cdkDropListDropped)="drop($event)">
-        <aa-accordion
-          class="aa-drag-item"
+      <div class="ph-drag-container" cdkDropList (cdkDropListDropped)="drop($event)">
+        <ph-accordion
+          class="ph-drag-item"
           *ngFor="let item of movies; let i = index"
           cdkDrag
           (open)="toggleAccordion(i)"
@@ -504,21 +504,21 @@
             <div class="flex-group space-between flex-align-center">
               <section class="flex-group flex-start flex-nowrap flex-align-center">
                 <div class="material-icons drag-icon  {{item.iconColor}}">drag_indicator</div>
-                <aa-button
+                <ph-button
                   class="margin-right-0-25"
                   (buttonClick)="onClick()"
                   buttonClass="bg-transparent size-large padding-0 {{item.iconColor}}"
                   fieldClass="boxed"
                   [customIconsRoundOutlined]="true"
                   buttonIcon="arrow_circle_left">
-                </aa-button>
+                </ph-button>
                 <div class="accordion-heading {{item.headingColor}}">
                   {{ item.name }}
                 </div>
               </section>
 
               <section class="flex-group flex-nowrap">
-                <aa-slider
+                <ph-slider
                   [sliderInline]="false"
                   sliderChecked=""
                   labelText="apples"
@@ -528,8 +528,8 @@
                   sliderValue=""
                   disabled=""
                 >
-                </aa-slider>
-                <aa-alert-shield
+                </ph-slider>
+                <ph-alert-shield
                   [alertShieldSmall]="true"
                   [hideLabel]="false"
                   [noWrap]="true"
@@ -541,7 +541,7 @@
                     <p>This is my tooltip message</p>
                     <p>This is another tooltip message</p>
                   </ng-container>
-                </aa-alert-shield>
+                </ph-alert-shield>
               </section>
             </div>
           </ng-container>
@@ -555,7 +555,7 @@
               this is the accordion you should be using.
             </p>
           </ng-container>
-        </aa-accordion>
+        </ph-accordion>
       </div>
     </section>
 
@@ -575,7 +575,7 @@
         <tbody>
           <tr>
             <td datalabel="Element">div</td>
-            <td datalabel="Attribute">aa-drag-container</td>
+            <td datalabel="Attribute">ph-drag-container</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">N/A</td>
           </tr>
@@ -604,7 +604,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-      class="custom-icons bg-aa-light-blue-100"
+      class="custom-icons bg-ph-light-blue-100"
       (click)="
         bladeIsOpen(true);
         showAccordion=false;
@@ -630,7 +630,7 @@
       </div>
 
       <div class="flex-group flex-start">
-        <aa-accordion
+        <ph-accordion
           (open)="
           showVertOne=true;
           showVertTwo=false;
@@ -661,9 +661,9 @@
             </div>
             <p>Add accordion content in here</p>
           </ng-container>
-        </aa-accordion>
+        </ph-accordion>
 
-        <aa-accordion
+        <ph-accordion
           (open)="
           showVertOne=false;
           showVertTwo=true;
@@ -675,7 +675,7 @@
           [verticalDisplay]="true"
           verticalMinHeight="50vh"
           class="margin-right-0-25"
-          customBgColor="bg-aa-red-100"
+          customBgColor="bg-ph-red-100"
           accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
@@ -691,8 +691,8 @@
           </div>
         </ng-container>
 
-        </aa-accordion>
-        <aa-accordion
+        </ph-accordion>
+        <ph-accordion
           (open)="
           showVertOne=false;
           showVertTwo=false;
@@ -704,7 +704,7 @@
           [verticalDisplay]="true"
           verticalMinHeight="50vh"
           class="margin-right-0-25"
-          customBgColor="bg-aa-blue-sky-100"
+          customBgColor="bg-ph-blue-sky-100"
           accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
@@ -719,8 +719,8 @@
             </p>
           </div>
         </ng-container>
-        </aa-accordion>
-        <aa-accordion
+        </ph-accordion>
+        <ph-accordion
           (open)="
           showVertOne=false;
           showVertTwo=false;
@@ -732,7 +732,7 @@
           [verticalDisplay]="true"
           verticalMinHeight="50vh"
           class="margin-right-0-25"
-          customBgColor="bg-aa-green-100"
+          customBgColor="bg-ph-green-100"
           accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
@@ -747,8 +747,8 @@
             </p>
           </div>
         </ng-container>
-        </aa-accordion>
-        <aa-accordion
+        </ph-accordion>
+        <ph-accordion
           (open)="
           showVertOne=false;
           showVertTwo=false;
@@ -760,7 +760,7 @@
           [verticalDisplay]="true"
           verticalMinHeight="50vh"
           class="margin-right-0-25"
-          customBgColor="bg-aa-orange-100"
+          customBgColor="bg-ph-orange-100"
           accordionHeading="Default accordion with custom colour (see inside)"
           accordionId="accordion01"
           sectionId="section01"
@@ -775,7 +775,7 @@
             </p>
           </div>
         </ng-container>
-        </aa-accordion>
+        </ph-accordion>
       </div>
 
     </section>
@@ -783,7 +783,7 @@
     <section class="flex-2 col-right flex-start">
       <table class="half-width">
         <caption>
-          Attributes - <span class="aa-red-100">As above but with additional attributes</span>
+          Attributes - <span class="ph-red-100">As above but with additional attributes</span>
         </caption>
         <thead>
           <tr>
@@ -795,17 +795,17 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">verticalDisplay</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-accordion</td>
+            <td datalabel="Element">ph-accordion</td>
             <td datalabel="Attribute">
               <div class="flex-group flex-start flex-align-center">
                 verticalMinHeight
-                <aa-tooltip
+                <ph-tooltip
                   class="margin-left-0-25"
                   [isInfo]="true"
                   [customIcon]="true"
@@ -817,13 +817,13 @@
                 >
                   <h4>Make sure you set a verticalMinHeight</h4>
                   <p>
-                    If you do not set the correct <strong class="aa-red-100">verticalMinHeight</strong>, then the text and any other elements nested in the header
+                    If you do not set the correct <strong class="ph-red-100">verticalMinHeight</strong>, then the text and any other elements nested in the header
                     will wrap.
                   </p>
                   <p>
-                    Keep increasing the <strong class="aa-red-100">verticalMinHeight</strong> until all the elements nested in the header are corrected.
+                    Keep increasing the <strong class="ph-red-100">verticalMinHeight</strong> until all the elements nested in the header are corrected.
                   </p>
-                </aa-tooltip>
+                </ph-tooltip>
               </div>
             </td>
             <td datalabel="Type">Any</td>
@@ -836,7 +836,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-        class="custom-icons bg-aa-light-blue-100"
+        class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           showAccordion=false;
@@ -851,7 +851,7 @@
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -865,20 +865,20 @@
 >
   <article class="blade-content">
     <div *ngIf="showAccordion">
-      <a href="https://gist.github.com/angloux/3eff6d63f90bb98be1d11ae0a5650da1" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/3eff6d63f90bb98be1d11ae0a5650da1"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/81f1723c09d3175b78764dc345728645" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/81f1723c09d3175b78764dc345728645"></app-gist>
     </div>
     <div *ngIf="showBespoke">
-      <a href="https://gist.github.com/angloux/c4f38f6a42fe109d513ebe8ef0b78b0c" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c4f38f6a42fe109d513ebe8ef0b78b0c"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/acbe352d989d4f8486bc246a3bdf3497" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/acbe352d989d4f8486bc246a3bdf3497"></app-gist>
     </div>
     <div *ngIf="showDragDrop">
-      <a href="https://gist.github.com/angloux/2be3636e59b82c4ceb14129fb58030ac" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/2be3636e59b82c4ceb14129fb58030ac"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/7db15699b4161c9a4f671be3ca55f3db" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/7db15699b4161c9a4f671be3ca55f3db"></app-gist>
     </div>
     <div *ngIf="showAccordionVertical">
-      <a href="https://gist.github.com/angloux/4f5141e2fed537c3508b981bad56f9b5" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/4f5141e2fed537c3508b981bad56f9b5"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/5b67c7d9f92d057ad1ba5b7b86bda8a4" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/5b67c7d9f92d057ad1ba5b7b86bda8a4"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

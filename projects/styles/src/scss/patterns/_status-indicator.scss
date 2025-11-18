@@ -1,4 +1,4 @@
-aa-status-indicator {
+ph-status-indicator {
   &.hide-divider {
     .status-container {
       &:after {
@@ -20,14 +20,14 @@ aa-status-indicator {
         right: .1rem;
         top: -.1rem;
         font-size: _font(size-tiny);
-        color: _colour(aa-grey-2);
+        color: _colour(ph-grey-2);
         border-radius: 50%;
         text-align: center;
         width: 0.65rem;
         height: 0.65rem;
         line-height: .65rem;
-        background: _colour(aa-grey-100);
-        box-shadow: 0 0 2px _palette(aa-white-100);
+        background: _colour(ph-grey-100);
+        box-shadow: 0 0 2px _palette(ph-white-100);
         padding-left: .05rem;
       }
   
@@ -38,7 +38,7 @@ aa-status-indicator {
         content: "";
         width: .5rem;
         height: 2px;
-        background-color: _palette(aa-grey-10);
+        background-color: _palette(ph-grey-10);
       }
 
       &.remove-line {
@@ -60,28 +60,28 @@ aa-status-indicator {
         border: 1px solid transparent;
   
         &.done {
-          color: _palette(aa-green-100);
+          color: _palette(ph-green-100);
         }
         
         &.error {
-          color: _palette(aa-red-100);
+          color: _palette(ph-red-100);
         }
   
         &.not-started {
-          color: _palette(aa-grey-25);
+          color: _palette(ph-grey-25);
           transform: rotate(-90deg);
         }
   
         &.pending {
-          color: _palette(aa-orange-100);
+          color: _palette(ph-orange-100);
         }
   
         &.loading {
-          color: _palette(aa-blue-sky-100);
+          color: _palette(ph-blue-sky-100);
         }
 
         &.stopped {
-          color: _palette(aa-red-100);
+          color: _palette(ph-red-100);
         }
       }
     }

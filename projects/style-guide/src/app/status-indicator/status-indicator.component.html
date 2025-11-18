@@ -13,11 +13,11 @@
             </p>
           </div>
 
-          <aa-status-indicator
+          <ph-status-indicator
             [currentStatus]="currentStatus"
             [removeLine]="false"
             >
-          </aa-status-indicator>
+          </ph-status-indicator>
 
         </section>
 
@@ -34,43 +34,43 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">HTML</td>
                 <td datalabel="Type">Component</td>
                 <td datalabel="Default">N/A</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">currentStatus</td>
                 <td datalabel="Type">Array</td>
                 <td datalabel="Default">Your status</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">iconsClass</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">material-icons, ('icon-time' only used for loading icons)</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">iconStatus</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">done, error, pending, loading, not-started</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">iconTitle</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Your tooltip title</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">iconName</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Material-icons friendly name</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-status-indicator</td>
+                <td datalabel="Element">ph-status-indicator</td>
                 <td datalabel="Attribute">removeLine</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">False</td>
@@ -81,13 +81,13 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -100,9 +100,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/9906993107694226e46e91e08787a8ad" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/9906993107694226e46e91e08787a8ad"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/9906993107694226e46e91e08787a8ad" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/9906993107694226e46e91e08787a8ad"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

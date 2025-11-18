@@ -26,68 +26,68 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td datalabel="Element">aa-carousel</td>
+                        <td datalabel="Element">ph-carousel</td>
                         <td datalabel="Attribute">customClass</td>
                         <td datalabel="Type">Class</td>
                         <td datalabel="Default"><a routerLink="/colours">Choose a background or border colour</a></td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-carousel</td>
+                        <td datalabel="Element">ph-carousel</td>
                         <td datalabel="Attribute">carouselOuterWidth</td>
                         <td datalabel="Type">Any</td>
                         <td datalabel="Default">Set the carousel width</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-carousel</td>
+                        <td datalabel="Element">ph-carousel</td>
                         <td datalabel="Attribute">carouselInnerWidth</td>
                         <td datalabel="Type">Any</td>
                         <td datalabel="Default">Set the carousel inner width</td>
                     </tr>
                     <ng-container *ngIf="showMore">
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">carouselInnerHeight</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the carousel inner height</td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">carouselItemWidth</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the carousel item width</td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">carouselItemBgColour</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the carousel item <a routerLink="/colours">background or border colour</a></td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">carouselItemPadding</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the carousel padding</td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">nextBtnColour</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the next button <a routerLink="/colours">background or border colour</a></td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">nextBtnIcon</td>
                             <td datalabel="Type">String</td>
                             <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">Choose your next btn icon</a></td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">prevBtnColour</td>
                             <td datalabel="Type">Any</td>
                             <td datalabel="Default">Set the previous button <a routerLink="/colours">background or border colour</a></td>
                         </tr>
                         <tr>
-                            <td datalabel="Element">aa-carousel</td>
+                            <td datalabel="Element">ph-carousel</td>
                             <td datalabel="Attribute">prevBtnIcon</td>
                             <td datalabel="Type">String</td>
                             <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">Choose your previous btn icon</a></td>
@@ -103,40 +103,40 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-carousel
-        customClass="bg-aa-light-blue-5 bd-bottom-1 bd-bottom-solid bd-bottom-blue-15"
+    <ph-carousel
+        customClass="bg-ph-light-blue-5 bd-bottom-1 bd-bottom-solid bd-bottom-blue-15"
         carouselOuterWidth="100%"
         carouselInnerWidth="25rem"
         carouselInnerHeight="auto"
         carouselItemWidth="100%"
         carouselItemPadding="2rem"
-        carouselItemBgColour="bg-aa-burgundy-5"
-        nextBtnColour="bg-aa-light-blue-100"
+        carouselItemBgColour="bg-ph-burgundy-5"
+        nextBtnColour="bg-ph-light-blue-100"
         nextBtnIcon="chevron_right"
-        prevBtnColour="bg-aa-light-blue-100"
+        prevBtnColour="bg-ph-light-blue-100"
         prevBtnIcon="chevron_left"
     >
         <ng-container *ngFor="let item of items;">
-            <ng-container *aaCarouselItem>
+            <ng-container *phCarouselItem>
                 <h2>{{item.carouselTitle}}</h2>
                 <p class="margin-bottom-1">{{item.carouselDesc}}</p>
                 <img src="{{item.carouselImage}}" />
             </ng-container>
         </ng-container>
-    </aa-carousel>
+    </ph-carousel>
 
-    <aa-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
+    <ph-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
         bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
         (bladeOpen)="bladeIsOpen($event)">
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/50af90b6876826c56c3c2a68216a8026" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/50af90b6876826c56c3c2a68216a8026"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/b1839a1ae618bbfa1107389f5bee5969" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/b1839a1ae618bbfa1107389f5bee5969"></app-gist>
         </article>
-    </aa-blade>
+    </ph-blade>
 </section>

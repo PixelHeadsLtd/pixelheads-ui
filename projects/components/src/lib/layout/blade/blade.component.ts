@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'aa-blade',
+  selector: 'ph-blade',
   templateUrl: './blade.component.html',
   styleUrls: ['./blade.component.scss']
 })

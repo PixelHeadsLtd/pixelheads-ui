@@ -3,12 +3,12 @@ import { AbstractControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 
 @Directive({
-  selector: '[aaTextareaAutoresize]'
+  selector: '[phTextareaAutoresize]'
 })
 export class TextareaAutoresizeDirective implements OnInit, OnDestroy {
   private formControlSubscription!: Subscription;
 
-  @Input('aaTextareaAutoresize') set formControlInstance(control: AbstractControl | undefined) {
+  @Input('phTextareaAutoresize') set formControlInstance(control: AbstractControl | undefined) {
     this.cleanControlSubscription();
 
     setTimeout(() => this.resize());

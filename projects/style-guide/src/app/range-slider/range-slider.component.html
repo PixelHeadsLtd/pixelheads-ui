@@ -13,7 +13,7 @@
 
           <div class="field">
             <label>Choose range</label>
-            <aa-range-slider customClass="max-width-15" [initialValue]="30"></aa-range-slider>
+            <ph-range-slider customClass="max-width-15" [initialValue]="30"></ph-range-slider>
           </div>
         </section>
 
@@ -30,13 +30,13 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-range-slider</td>
+                <td datalabel="Element">ph-range-slider</td>
                 <td datalabel="Attribute">[initialValue]</td>
                 <td datalabel="Type">Range</td>
                 <td datalabel="Default">30</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-range-slider</td>
+                <td datalabel="Element">ph-range-slider</td>
                 <td datalabel="Attribute">customClass</td>
                 <td datalabel="Type">Class</td>
                 <td datalabel="Default">Use one of our modifier classes</td>
@@ -47,13 +47,13 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -66,9 +66,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-          <a href="https://gist.github.com/angloux/9fe6904748149b01d536d96210d7fe1b" target="_blank">View Gist on GitHub</a>
-          <app-gist src="angloux/9fe6904748149b01d536d96210d7fe1b"></app-gist>
+          <a href="https://gist.github.com/PixelHeadsLtd/9fe6904748149b01d536d96210d7fe1b" target="_blank">View Gist on GitHub</a>
+          <app-gist src="PixelHeadsLtd/9fe6904748149b01d536d96210d7fe1b"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

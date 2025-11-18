@@ -3,13 +3,13 @@ import { CarouselItemDirective } from '../../directives/carousel/carousel-item.d
 import { animate, AnimationBuilder, AnimationFactory, AnimationPlayer, style } from '@angular/animations';
 
 @Directive({
-  selector: '[aaCarouselSlide]'
+  selector: '[phCarouselSlide]'
 })
 
 export class CarouselItemElementDirective { }
 
 @Component({
-  selector: 'aa-carousel',
+  selector: 'ph-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

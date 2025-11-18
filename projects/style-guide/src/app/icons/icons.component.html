@@ -11,7 +11,7 @@
         <p>
           We use Google's Material icons. There are some legacy Font Awesome icons around, but we are
           moving towards Material. The easy way to use them is to find one you like and call it by its
-          name in a wrapper element with class <strong class="aa-red-100">'material-icons' or 'material-icons-outlined'</strong>
+          name in a wrapper element with class <strong class="ph-red-100">'material-icons' or 'material-icons-outlined'</strong>
         </p>
       </div>
       <h3>Solid</h3>
@@ -128,7 +128,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); materialIcons=true; countryFlags=false">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); materialIcons=true; countryFlags=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -221,14 +221,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); materialIcons=false; countryFlags=true">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); materialIcons=false; countryFlags=true">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -242,12 +242,12 @@
 >
   <article class="blade-content">
     <div *ngIf="materialIcons">
-      <a href="https://gist.github.com/angloux/ddd147718088a58a509e3daa5f3c5c4b" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/ddd147718088a58a509e3daa5f3c5c4b"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c1ae88f232fe2a8c875e3e0b36be8e9f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c1ae88f232fe2a8c875e3e0b36be8e9f"></app-gist>
     </div>
     <div *ngIf="countryFlags">
-      <a href="https://gist.github.com/angloux/10af1d5fbf86aab12829ee5e820a7593" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/10af1d5fbf86aab12829ee5e820a7593"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/a924fdf09e7ea51fc3e890be3fa8bbe7" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/a924fdf09e7ea51fc3e890be3fa8bbe7"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

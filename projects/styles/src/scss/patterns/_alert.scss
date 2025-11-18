@@ -34,31 +34,31 @@
 
   &.error {
     background-color: _colour(trans-red-5-to-red-dark);
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
     position: relative;
     background-image: url("#{$icon-path}/icon-alert-red.svg");
   }
 
   &.info {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
     background-image: url("#{$icon-path}/icon-info-blue.svg");
   }
 
   &.warning {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
     background-image: url("#{$icon-path}/icon-info-orange.svg");
   }
 
   &.success {
     background-color: _colour(trans-green-5-to-green-dark);
-    color: _colour(aa-green-100);
+    color: _colour(ph-green-100);
     background-image: url("#{$icon-path}/icon-check-green.svg");
   }
 
   .is-invalid {
-    border: 1px solid _colour(aa-red-100) !important;
+    border: 1px solid _colour(ph-red-100) !important;
     background-color: _palette(trans-red-5-to-red-dark);
     border-radius: .25rem;
   }
@@ -68,8 +68,8 @@
   [role='alert'] {
     margin-top: .5rem;
     background-color: _colour(trans-red-5-to-red-dark);
-    border-color: _colour(aa-red-10);
-    color: _colour(aa-red-100);
+    border-color: _colour(ph-red-10);
+    color: _colour(ph-red-100);
     background-image: url("#{$icon-path}/icon-alert-red.svg");
   }
 }

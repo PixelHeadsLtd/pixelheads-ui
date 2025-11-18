@@ -19,41 +19,41 @@ export class TooltipDynamicComponent {
   // tooltips = [
   //   {
   //     tooltipTitle: 'Info',
-  //     tooltipColor: 'aa-light-blue-100',
+  //     tooltipColor: 'ph-light-blue-100',
   //     tooltipIconName: 'info',
   //     tooltipPosition: TooltipDynamicPosition.ABOVE,
   //     tooltipContent: `<section>
-  //                       <h3 class='aa-light-blue-100'>Info</h3>
+  //                       <h3 class='ph-light-blue-100'>Info</h3>
   //                       <p>This is a tooltip to display general information</p>
   //                     </section>`
   //   },
   //   {
   //     tooltipTitle: 'Error',
-  //     tooltipColor: 'aa-red-100',
+  //     tooltipColor: 'ph-red-100',
   //     tooltipIconName: 'error_outline',
   //     tooltipPosition: TooltipDynamicPosition.RIGHT,
   //     tooltipContent: `<section>
-  //                       <h3 class='aa-red-100'>Error</h3>
+  //                       <h3 class='ph-red-100'>Error</h3>
   //                       <p>This is a tooltip to display an error</p>
   //                     </section>`
   //   },
   //   {
   //     tooltipTitle: 'Pending',
-  //     tooltipColor: 'aa-orange-100',
+  //     tooltipColor: 'ph-orange-100',
   //     tooltipIconName: 'pending',
   //     tooltipPosition: TooltipDynamicPosition.BELOW,
   //     tooltipContent: `<section>
-  //                       <h3 class='aa-orange-100'>Pending</h3>
+  //                       <h3 class='ph-orange-100'>Pending</h3>
   //                       <p>This is a tooltip to display pending or in-progress status</p>
   //                     </section>`
   //   },
   //   {
   //     tooltipTitle: 'Complete',
-  //     tooltipColor: 'aa-green-100',
+  //     tooltipColor: 'ph-green-100',
   //     tooltipIconName: 'check_circle',
   //     tooltipPosition: TooltipDynamicPosition.LEFT,
   //     tooltipContent: `<section>
-  //                       <h3 class='aa-green-100'>Complete</h3>
+  //                       <h3 class='ph-green-100'>Complete</h3>
   //                       <p>This is a tooltip to display completed or success status</p>
   //                     </section>`
   //   }

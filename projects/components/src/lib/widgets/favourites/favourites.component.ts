@@ -11,7 +11,7 @@ interface FavouriteItem {
 }
 
 @Component({
-  selector: 'aa-favourites',
+  selector: 'ph-favourites',
   templateUrl: './favourites.component.html',
   styleUrls: ['./favourites.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

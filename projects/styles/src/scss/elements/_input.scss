@@ -1,11 +1,11 @@
 input:not(.ag-filter-filter input, input[type='range']) {
   display: inline-block;
-  border: 1px solid _colour(aa-grey-25);
+  border: 1px solid _colour(ph-grey-25);
   border-radius: 0.25rem;
   font-family: _font(family-regular);
   font-size: _font(size-default);
-  color: _colour(aa-grey-100);
-  background-color: _colour(aa-white-100);
+  color: _colour(ph-grey-100);
+  background-color: _colour(ph-white-100);
   -webkit-appearance: none;
   
   &[type=text], 
@@ -19,8 +19,8 @@ input:not(.ag-filter-filter input, input[type='range']) {
 
   &:focus:not([type=checkbox], [type=radio], .ng-select input) {
     outline: 0;
-    border: 1px solid _colour(aa-light-blue-100);
-    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+    border: 1px solid _colour(ph-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(ph-light-blue-15);
   }
 
   &[type=checkbox],
@@ -43,28 +43,28 @@ input:not(.ag-filter-filter input, input[type='range']) {
   &[readonly],
   &[aria-disabled=true],
   &[disabled] {
-    background-color: _colour(aa-grey-5);
+    background-color: _colour(ph-grey-5);
     border-style: dashed;
     cursor: not-allowed;
 
     &:focus {
-      border-color: _colour(aa-grey-25)!important;
+      border-color: _colour(ph-grey-25)!important;
       box-shadow: none!important;
     }
   }
 
   ::-webkit-input-placeholder {
-    color: _palette(aa-grey-40);
+    color: _palette(ph-grey-40);
     font-style: italic;
   }
 
   ::-moz-placeholder {
-    color: _palette(aa-grey-40);
+    color: _palette(ph-grey-40);
     font-style: italic;
   }
 
   :-ms-input-placeholder {
-    color: _palette(aa-grey-40);
+    color: _palette(ph-grey-40);
     font-style: italic;
   }
   
@@ -72,8 +72,8 @@ input:not(.ag-filter-filter input, input[type='range']) {
   &:-webkit-autofill, 
   &:-webkit-autofill:hover, 
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: _colour(aa-grey-100)!important;
-    -webkit-box-shadow: 0 0 0 1000px _colour(aa-white-100) inset!important;
+    -webkit-text-fill-color: _colour(ph-grey-100)!important;
+    -webkit-box-shadow: 0 0 0 1000px _colour(ph-white-100) inset!important;
   }
 
   &.search {
@@ -86,8 +86,8 @@ input:not(.ag-filter-filter input, input[type='range']) {
 }
 
 input[type=range] {
-  border: solid 1px _colour(aa-light-blue-80);
-  background-color: _colour(aa-light-blue-5)!important;
+  border: solid 1px _colour(ph-light-blue-80);
+  background-color: _colour(ph-light-blue-5)!important;
   border-radius: 1rem;
   height: .4rem;
   width: 100%;
@@ -103,10 +103,10 @@ input[type=range] {
     height: .75rem;
     width: .75rem;
     border-radius: 1rem;
-    background: _colour(aa-blue-100);
+    background: _colour(ph-blue-100);
 
     &:hover {
-      background: _colour(aa-orange-100);
+      background: _colour(ph-orange-100);
       cursor: pointer;
     }
   }
@@ -119,10 +119,10 @@ input[type=range] {
     height: .75rem;
     width: .75rem;
     border-radius: 1rem;
-    background: _colour(aa-blue-100);
+    background: _colour(ph-blue-100);
 
     &:hover {
-      background: _colour(aa-orange-100);
+      background: _colour(ph-orange-100);
       cursor: pointer;
     }
   }
@@ -130,12 +130,12 @@ input[type=range] {
 
 .gradient {
   input {
-    background-color: _palette(aa-blue-100);
+    background-color: _palette(ph-blue-100);
     border: none;
-    color: _palette(aa-white-100);
+    color: _palette(ph-white-100);
     border-radius: 0;
     &::placeholder {
-      color: _palette(aa-white-100);
+      color: _palette(ph-white-100);
     }
   }
 }

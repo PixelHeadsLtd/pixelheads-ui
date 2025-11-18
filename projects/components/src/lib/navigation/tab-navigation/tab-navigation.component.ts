@@ -2,7 +2,7 @@ import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, OnIn
 import { TabNavigationItemComponent } from '../tab-navigation-item/tab-navigation-item.component';
 
 @Component({
-  selector: 'aa-tab-navigation',
+  selector: 'ph-tab-navigation',
   templateUrl: './tab-navigation.component.html',
   styleUrls: ['./tab-navigation.component.scss']
 })

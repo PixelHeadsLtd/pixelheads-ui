@@ -140,7 +140,7 @@
                 <!-- tooltip -->
                 <div 
                   *ngIf="row.tooltip[column.key]?.showTooltip" 
-                  [aaTooltip]="row.tooltip[column.key]?.tooltipMsg"
+                  [phTooltip]="row.tooltip[column.key]?.tooltipMsg"
                   class="material-icons small tooltip {{row.tooltip[column.key]?.tooltipColor}}">
                     {{row.tooltip[column.key]?.tooltipIcon}}
                 </div>
@@ -186,7 +186,7 @@
                     <!-- tooltip -->
                   <div 
                     *ngIf="nestedRow.tooltip[column.key]?.showTooltip" 
-                    [aaTooltip]="nestedRow.tooltip[column.key]?.tooltipMsg"
+                    [phTooltip]="nestedRow.tooltip[column.key]?.tooltipMsg"
                     class="material-icons small tooltip {{nestedRow.tooltip[column.key]?.tooltipColor}}">
                       {{nestedRow.tooltip[column.key]?.tooltipIcon}}
                   </div>
@@ -214,7 +214,7 @@
         </tbody>
       </table>
     </div>
-    <div *ngIf="enablePagination" class="pagination flex-align-center flex-start bg-aa-white-100">
+    <div *ngIf="enablePagination" class="pagination flex-align-center flex-start bg-ph-white-100">
       <button (click)="changePage(currentPage - 1)" class="material-icons small" [disabled]="currentPage === 1">chevron_left</button>
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button (click)="changePage(currentPage + 1)" class="material-icons small" [disabled]="currentPage === totalPages">chevron_right</button>

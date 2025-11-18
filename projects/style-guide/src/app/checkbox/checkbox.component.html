@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Checkbox</h1>
-  <aa-alert alertClass="error" alertText="Please ensure all fieldset inputs are wrapped in div.field label"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure all fieldset inputs are wrapped in div.field label"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -26,15 +26,15 @@
             <span>Chickens</span>
           </label>
         </div>
-        <aa-checkbox
+        <ph-checkbox
           checkboxChecked="checkboxChecked"
           checkboxId="checkboxIdTwo"
           checkboxName="myCheckboxes"
           checkboxText="Foxes"
           checkboxValue="Foxes"
           fieldClass="boxed">
-        </aa-checkbox>
-        <aa-checkbox
+        </ph-checkbox>
+        <ph-checkbox
           checkboxChecked="checkboxChecked"
           checkboxId="checkboxIdThree"
           checkboxName="myCheckboxes"
@@ -42,7 +42,7 @@
           checkboxValue="Disabled"
           fieldClass="boxed"
           disabled="true">
-        </aa-checkbox>
+        </ph-checkbox>
       </fieldset>
     </section>
 
@@ -106,7 +106,7 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">Label > aa-tooltip (Nested as last-child)</td>
+            <td datalabel="Element">Label > ph-tooltip (Nested as last-child)</td>
             <td datalabel="Attribute">Component</td>
             <td datalabel="Type">Component</td>
             <td datalabel="Default">N/A</td>
@@ -117,7 +117,7 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-tooltip</td>
+            <td datalabel="Element">ph-tooltip</td>
             <td datalabel="Attribute">[hoverStayOpen]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -128,7 +128,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showCheckbox=true; showCheckboxFeature=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showCheckbox=true; showCheckboxFeature=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -157,15 +157,15 @@
               <span>Chickens</span>
             </label>
           </div>
-          <aa-checkbox
+          <ph-checkbox
             checkboxChecked="'checkboxChecked'"
             checkboxId="checkboxIdFive"
             checkboxName="myCheckboxes"
             checkboxText="Foxes"
             checkboxValue="Foxes"
             fieldClass="boxed">
-          </aa-checkbox>
-          <aa-checkbox
+          </ph-checkbox>
+          <ph-checkbox
             checkboxChecked="checkboxChecked"
             checkboxId="checkboxIdSix"
             checkboxName="myCheckboxes"
@@ -173,7 +173,7 @@
             checkboxValue="Disabled"
             fieldClass="boxed"
             disabled="true">
-          </aa-checkbox>
+          </ph-checkbox>
         </fieldset>
       </section>
     </section>
@@ -202,14 +202,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showCheckbox=false; showCheckboxFeature=true">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showCheckbox=false; showCheckboxFeature=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -223,12 +223,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showCheckbox">
-      <a href="https://gist.github.com/angloux/949a17edd98577d82e9f6239836ad5df" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/949a17edd98577d82e9f6239836ad5df"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/e1c58d1921e4425d4239d7e65c0b171f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/e1c58d1921e4425d4239d7e65c0b171f"></app-gist>
     </div>
     <div *ngIf="showCheckboxFeature">
-      <a href="https://gist.github.com/angloux/28c0038bfdf948e34d0912c72c7ab508" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/28c0038bfdf948e34d0912c72c7ab508"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c0bf9fd4c5dfb8cc8d92150941296503" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c0bf9fd4c5dfb8cc8d92150941296503"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

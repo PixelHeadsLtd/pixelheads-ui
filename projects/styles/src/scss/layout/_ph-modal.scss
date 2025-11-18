@@ -1,0 +1,142 @@
+.hide-submit {
+  + ph-modal-dialog {
+    button.primary {
+      display: none;
+    }
+  }
+}
+
+.hide-cancel {
+  + ph-modal-dialog {
+    button.cancel {
+      display: none;
+    }
+  }
+}
+
+.ph-modal {
+  background-color:_colour(ph-blue-100-overlay);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  //z-index: 10;
+}
+
+.ph-modal-container {
+  position: fixed;
+  padding: .75rem 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: _colour(ph-grey-2);
+  border: 1px solid _colour(ph-grey-25);
+  max-height: 80%;
+  min-width: 15rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 .2rem .2rem _colour(tinted-dark-blue);
+  -webkit-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+  -moz-box-shadow: 0 0 .3rem .3rem _colour(tinted-blue);
+  
+  &.red,
+  &.ph-red {
+    h1, h2, h3, h4 {
+      color: _palette(ph-red-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(ph-red-100);
+      border: 1px solid _palette(ph-red-100);
+      &:hover {
+        background-color: _palette(ph-red-50);
+        border: 1px solid _palette(ph-red-50);
+      }
+    }
+  }
+  &.orange,
+  &.ph-orange {
+    h1, h2, h3, h4 {
+      color: _palette(ph-orange-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(ph-orange-100);
+      border: 1px solid _palette(ph-orange-100);
+      &:hover {
+        background-color: _palette(ph-orange-50);
+        border: 1px solid _palette(ph-orange-50);
+      }
+    }
+  }
+  &.green,
+  &.ph-green {
+    h1, h2, h3, h4 {
+      color: _palette(ph-green-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(ph-green-100);
+      border: 1px solid _palette(ph-green-100);
+      &:hover {
+        background-color: _palette(ph-green-50);
+        border: 1px solid _palette(ph-green-50);
+      }
+    }
+  }
+  &.blue,
+  &.ph-blue {
+    h1, h2, h3, h4 {
+      color: _palette(ph-light-blue-100);
+    }
+    button:not(.cancel) {
+      background-color: _palette(ph-light-blue-100);
+      border: 1px solid _palette(ph-light-blue-100);
+      &:hover {
+        background-color: _palette(ph-light-blue-50);
+        border: 1px solid _palette(ph-light-blue-50);
+      }
+    }
+  }
+}
+
+.ph-modal-header {
+  height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.ph-modal-content {
+  position: relative;
+  overflow: auto;
+  max-height: calc(80vh - 11rem);
+  margin-bottom: .75rem;
+  font-size: _font(size-default);
+}
+
+.ph-modal-footer {
+  display: block;
+
+  ph-button {
+    flex: none;
+  }
+
+}
+
+@media screen and (min-width: _breakpoint(breakpoint-570)) {
+
+  .ph-modal-content {
+    max-height: calc(80vh - 6rem);
+  }
+  .ph-modal-footer {
+    bottom: .75rem;
+    display: flex;
+
+    button {
+      flex: 1;
+      margin-right: .75rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

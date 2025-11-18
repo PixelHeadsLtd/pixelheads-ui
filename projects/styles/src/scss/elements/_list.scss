@@ -1,5 +1,5 @@
-ul:not(nav ul, ul.aa-stepper-header, .aa-card-list, .list-arrows) {padding: 0 0 0 1rem}
-ol:not(nav ul, nav ol, ul.aa-stepper-header) {padding: 0 0 0 1.25rem}
+ul:not(nav ul, ul.ph-stepper-header, .ph-card-list, .list-arrows) {padding: 0 0 0 1rem}
+ol:not(nav ul, nav ol, ul.ph-stepper-header) {padding: 0 0 0 1.25rem}
 
 ul,
 ol {
@@ -10,38 +10,38 @@ ol {
 
   &.highlight {
     li:before {
-      color: _colour(aa-light-blue-100);
+      color: _colour(ph-light-blue-100);
     }
   }
 
   &.primary {
     li:before {
-      color: _colour(aa-grey-100);
+      color: _colour(ph-grey-100);
     }
   }
 
   &.secondary {
     li:before {
-      color: _colour(aa-light-blue-100);
+      color: _colour(ph-light-blue-100);
     }
   }
 
   &.tertiary {
     li:before {
-      color: _colour(aa-white-100);
+      color: _colour(ph-white-100);
     }
   }
 
   &.orange {
     li:before {
-      color: _palette(aa-orange-100);
+      color: _palette(ph-orange-100);
     }
   }
 
   &.error,
   &.red {
     li:before {
-      color: _palette(aa-red-100);
+      color: _palette(ph-red-100);
     }
   }
 

@@ -15,13 +15,13 @@
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <div class="field">
             <label>Choose items</label>
-            <aa-multi-select
+            <ph-multi-select
               formControlName="selectedItems"
               [items]="items"
               labelKey="name"
               childrenKey="cities"
               maxHeight="20rem">
-            </aa-multi-select>
+            </ph-multi-select>
           </div>
           <div class="flex-group flex-start">
             <div class="field">
@@ -37,8 +37,8 @@
           <h3>Selected Countries and Cities</h3>
           <div *ngFor="let selectedItem of selectedItemsDisplay">
             <h4 *ngIf="selectedItem.country">
-              <span [ngClass]="{'aa-grey-25': selectedItem.isGrey}">{{ selectedItem.country }}</span>
-              <span class="text-light italic aa-grey-25" *ngIf="selectedItem.isGrey"> (Country not selected)</span>
+              <span [ngClass]="{'ph-grey-25': selectedItem.isGrey}">{{ selectedItem.country }}</span>
+              <span class="text-light italic ph-grey-25" *ngIf="selectedItem.isGrey"> (Country not selected)</span>
               <span class="text-light italic" *ngIf="!selectedItem.isGrey && selectedItem.cities.length === 0"> (No cities selected)</span>
             </h4>
             <span *ngIf="selectedItem.cities.length">
@@ -62,25 +62,25 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-multi-select</td>
+              <td datalabel="Element">ph-multi-select</td>
               <td datalabel="Attribute">labelKey</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Name</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-multi-select</td>
+              <td datalabel="Element">ph-multi-select</td>
               <td datalabel="Attribute">childrenKey</td>
               <td datalabel="Type">Array</td>
               <td datalabel="Default">Your array</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-multi-select</td>
+              <td datalabel="Element">ph-multi-select</td>
               <td datalabel="Attribute">[items]</td>
               <td datalabel="Type">Array</td>
               <td datalabel="Default">Your array</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-multi-select</td>
+              <td datalabel="Element">ph-multi-select</td>
               <td datalabel="Attribute">maxHeight</td>
               <td datalabel="Type">Number</td>
               <td datalabel="Default">20rem</td>
@@ -91,13 +91,13 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
     </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -110,9 +110,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/a72e962365dd6404e505e2f97d520530" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/a72e962365dd6404e505e2f97d520530"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/fbce3db692cd515eab624a29a9ceaf62" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/fbce3db692cd515eab624a29a9ceaf62"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

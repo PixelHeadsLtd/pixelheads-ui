@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Slider</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 <section class="content-container padding-0">
   <!-- start content repeater -->
@@ -13,7 +13,7 @@
       </div>
       <!-- <button (click)="setChecked(true)">Test</button> -->
       <div class="flex-group flex-start">
-        <aa-slider
+        <ph-slider
           [sliderInline]="false"
           [lockOnPosition]="false"
           labelText="Apples"
@@ -25,8 +25,8 @@
           (sliderCheckedChanged)="onSliderCheckedChanged($event)"
           [sliderChecked]="testSlider"
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="false"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -37,8 +37,8 @@
           sliderValue=""
           disabled=""
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="false"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -49,11 +49,11 @@
           sliderValue=""
           disabled=""
         >
-      </aa-slider>
+      </ph-slider>
       </div>
       <h3 class="margin-top-2 margin-bottom-0">Inline version</h3>
       <div class="flex-group flex-start">
-        <aa-slider
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -64,8 +64,8 @@
           sliderValue=""
           disabled=""
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -76,8 +76,8 @@
           sliderValue=""
           disabled=""
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -88,11 +88,11 @@
           sliderValue=""
           disabled=""
         >
-      </aa-slider>
+      </ph-slider>
       </div>
       <h3 class="margin-top-2">Inline version. Horizontally aligned with labelMinWidth</h3>
       <div class="">
-        <aa-slider
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -104,8 +104,8 @@
           sliderValue=""
           disabled=""
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -117,8 +117,8 @@
           sliderValue=""
           disabled=""
         >
-        </aa-slider>
-        <aa-slider
+        </ph-slider>
+        <ph-slider
           [sliderInline]="true"
           [lockOnPosition]="false"
           sliderChecked=""
@@ -130,7 +130,7 @@
           sliderValue=""
           disabled=""
         >
-      </aa-slider>
+      </ph-slider>
       </div>
     </section>
 
@@ -147,55 +147,55 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">Component</td>
             <td datalabel="Type">N/A</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">[sliderInline]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">sliderChecked</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">checked or not checked</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">labelText</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your label text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">labelMinWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your min width in rem or %</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">Your custom class</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">sliderId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">sliderValue</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your Slider value</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-slider</td>
+            <td datalabel="Element">ph-slider</td>
             <td datalabel="Attribute">[lockOnPosition]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -206,14 +206,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -226,7 +226,7 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/46a72ba8314eee3db9bc42ad028da675" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/46a72ba8314eee3db9bc42ad028da675"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/46a72ba8314eee3db9bc42ad028da675" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/46a72ba8314eee3db9bc42ad028da675"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

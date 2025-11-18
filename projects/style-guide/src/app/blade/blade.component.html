@@ -8,16 +8,16 @@
     <section class="flex-1 col-left flex-start">
       <h2>Blade</h2>
       <div class="describe margin-bottom-1">
-        <p class="aa-red-100">There are 3 sizes available - please pass the <strong>bladeSize</strong> value into the component, these are: one-column-width, two-column-width, or xl-column-width</p>
+        <p class="ph-red-100">There are 3 sizes available - please pass the <strong>bladeSize</strong> value into the component, these are: one-column-width, two-column-width, or xl-column-width</p>
         <p>For pinning, set <strong>[enablePinning]</strong> to true. Then add a conditional <strong>[ngStyle]</strong> to the content-container.
           Modify the calculated width depending on the blade size you are using.
           In the example below, we are setting the width for a <strong>one-column-width</strong> blade</p>
-          <p class="aa-red-100"><strong>[ngStyle]=&#8220;&#123;&#8216;width&#8217;: toggleBlade && pinBlade ? &#8216;calc(100% - 38rem)&#8217; : &#8216;&nbsp;&#8217;&nbsp;&#x7d;&#8221;</strong></p>
+          <p class="ph-red-100"><strong>[ngStyle]=&#8220;&#123;&#8216;width&#8217;: toggleBlade && pinBlade ? &#8216;calc(100% - 38rem)&#8217; : &#8216;&nbsp;&#8217;&nbsp;&#x7d;&#8221;</strong></p>
           <p>These setting are adjustable.</p>
         </div>
       <div [ngStyle]="{'z-index' : 1, 'position' : 'relative'}">
         <div class="flex-group">
-          <aa-button
+          <ph-button
             (buttonClick)="
             bladeIsOpen(true);
             bladeHalf=true;
@@ -37,8 +37,8 @@
             buttonClass="primary"
             fieldClass="label-hidden"
             >
-          </aa-button>
-          <aa-button
+          </ph-button>
+          <ph-button
             (buttonClick)="
             bladeIsOpen(true);
             bladeHalf=false;
@@ -57,10 +57,10 @@
             buttonText="One column width"
             buttonClass="primary"
             fieldClass="label-hidden">
-          </aa-button>
+          </ph-button>
         </div>
         <div class="flex-group">
-          <aa-button
+          <ph-button
             (buttonClick)="
             bladeIsOpen(true);
             bladeHalf=false;
@@ -79,8 +79,8 @@
             buttonText="Two column width"
             buttonClass="primary"
             fieldClass="label-hidden">
-            </aa-button>
-          <aa-button
+            </ph-button>
+          <ph-button
             (buttonClick)="
             bladeIsOpen(true);
             bladeHalf=false;
@@ -99,7 +99,7 @@
             buttonText="XL column width"
             buttonClass="primary"
             fieldClass="label-hidden">
-          </aa-button>
+          </ph-button>
         </div>
       </div>
     </section>
@@ -117,91 +117,91 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[blockPageUI]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[showBladeModal]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">bladeTabs</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">toggleBlade</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">bladeSize</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">one-column-width</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">headingMaxWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Depending on blade size</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">topPosition</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">3.5rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">zIndex</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">0</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[enableIcon]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">iconName</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Choose your icon here</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">bladeHeading</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your heading</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">enablePinning</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">suppressAutoClose</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">(bladeOpen)</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">(bladePinned)</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -212,7 +212,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100"
+        <button class="custom-icons bg-ph-light-blue-100"
           (click)="gistBladeOpen($event, tabsNgTemplate[0])">
             <span class="material-icons">visibility</span><span>View gist</span>
         </button>
@@ -230,7 +230,7 @@
       </div>
       <div [ngStyle]="{'z-index' : 1, 'position' : 'relative'}">
         <div class="flex-group">
-          <aa-button
+          <ph-button
             (buttonClick)="
             bladeIsOpen(false);
             bladeHalf=false;
@@ -247,7 +247,7 @@
             hasBladeTabs=false"
             buttonText="Custom version"
             buttonClass="primary">
-          </aa-button>
+          </ph-button>
         </div>
       </div>
     </section>
@@ -265,25 +265,25 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[blockPageUI]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[showBladeModal]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[customBlade]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-blade</td>
+            <td datalabel="Element">ph-blade</td>
             <td datalabel="Attribute">[customBladeTabs]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -294,7 +294,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100"
+        <button class="custom-icons bg-ph-light-blue-100"
           (click)="
           bladeIsOpen(true);
           showBladeGist=false;
@@ -318,7 +318,7 @@
   </section>
 </section>
 
-<aa-blade
+<ph-blade
   [blockPageUI]="false"
   [showBladeModal]="displayBladeModal"
   [enablePinning]="enablePin"
@@ -360,8 +360,8 @@
   <!-- blade custom gist -->
   <article *ngIf="showCustomBladeGist" class="blade-content padding-top-1">
     <h2>Custom blade</h2>
-    <a href="https://gist.github.com/angloux/35c803fb8616ad17cacd53883d0de4f9" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/35c803fb8616ad17cacd53883d0de4f9"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/5e4a5a94fcf7c8914639b563d7dad663" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/5e4a5a94fcf7c8914639b563d7dad663"></app-gist>
   </article>
 
   <ng-container blade-modal>
@@ -369,20 +369,20 @@
       <h2>This is blade-modal?</h2>
       <p>You can use this for validation messages, giving the users a notification</p>
       <section class="flex-group flex-center">
-        <aa-button
+        <ph-button
          (buttonClick)="displayBladeModal=false"
           fieldClass="boxed"
           buttonClass="primary"
           buttonText="OK thanks"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="displayBladeModal=false"
           fieldClass="boxed"
           buttonClass="cancel"
           buttonText="Cancel"
         >
-        </aa-button>
+        </ph-button>
       </section>
     </section>
   </ng-container>
@@ -390,7 +390,7 @@
   <!-- blade half width -->
   <div *ngIf="bladeHalf">
     <article class="blade-content">
-      <ul class="aa-card-list">
+      <ul class="ph-card-list">
         <li class="flex-group" title="Obi-Wan">
           <div class="card-list-image fingerprint">
             <img onerror="this.style.display='none'" src="./assets/images/samples/obi-wan.png" />
@@ -399,7 +399,7 @@
             <strong>Obi-Wan</strong>
             <p>Jedi Master</p>
           </div>
-          <aa-card cardName="Obi-Wan" cardRole="Jedi Master" [imgPath]="imgPath1">
+          <ph-card cardName="Obi-Wan" cardRole="Jedi Master" [imgPath]="imgPath1">
             <ng-container card-menu>
               <div class="flex-group space-between">
                 <div class="flex-group flex-start">
@@ -408,15 +408,15 @@
                 </div>
                 <div class="flex-group">
                   <div class="flag gb"></div>
-                  <aa-context-menu (click)="menuClicked($event)" [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
-                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 1"></aa-context-menu-item>
-                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 2"></aa-context-menu-item>
-                    <aa-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 3"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu (click)="menuClicked($event)" [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
+                    <ph-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 1"></ph-context-menu-item>
+                    <ph-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 2"></ph-context-menu-item>
+                    <ph-context-menu-item (click)="menuClicked($event)" menuItemText="Menu item 3"></ph-context-menu-item>
+                  </ph-context-menu>
                 </div>
               </div>
             </ng-container>
-          </aa-card>
+          </ph-card>
         </li>
         <li class="flex-group" title="Darth Vader">
           <div class="card-list-image fingerprint">
@@ -426,7 +426,7 @@
             <strong>Darth Vader</strong>
             <p>Sith Lord</p>
           </div>
-          <aa-card cardName="Darth Vader" cardRole="Sith Lord" [imgPath]="imgPath2">
+          <ph-card cardName="Darth Vader" cardRole="Sith Lord" [imgPath]="imgPath2">
             <ng-container card-menu>
               <div class="flex-group space-between">
                 <div class="flex-group flex-start">
@@ -435,15 +435,15 @@
                 </div>
                 <div class="flex-group">
                   <div class="flag gb"></div>
-                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
-                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
+                    <ph-context-menu-item menuItemText="Menu item 1"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 2"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 3"></ph-context-menu-item>
+                  </ph-context-menu>
                 </div>
               </div>
             </ng-container>
-          </aa-card>
+          </ph-card>
         </li>
         <li class="flex-group" title="Yoda">
           <div class="card-list-image fingerprint">
@@ -453,7 +453,7 @@
             <strong>Yoda</strong>
             <p>Jedi Master</p>
           </div>
-          <aa-card cardName="Yoda" cardRole="Jedi Master" [imgPath]="imgPath3">
+          <ph-card cardName="Yoda" cardRole="Jedi Master" [imgPath]="imgPath3">
             <ng-container card-menu>
               <div class="flex-group space-between">
                 <div class="flex-group flex-start">
@@ -462,15 +462,15 @@
                 </div>
                 <div class="flex-group">
                   <div class="flag gb"></div>
-                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
-                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
+                    <ph-context-menu-item menuItemText="Menu item 1"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 2"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 3"></ph-context-menu-item>
+                  </ph-context-menu>
                 </div>
               </div>
             </ng-container>
-          </aa-card>
+          </ph-card>
         </li>
         <li class="flex-group" title="Luke Skywalker">
           <div class="card-list-image fingerprint">
@@ -480,7 +480,7 @@
             <strong>Luke Skywalker</strong>
             <p>Jedi Master</p>
           </div>
-          <aa-card cardName="Luke Skywalker" cardRole="Jedi Master" [imgPath]="imgPath4">
+          <ph-card cardName="Luke Skywalker" cardRole="Jedi Master" [imgPath]="imgPath4">
             <ng-container card-menu>
               <div class="flex-group space-between">
                 <div class="flex-group flex-start">
@@ -489,15 +489,15 @@
                 </div>
                 <div class="flex-group">
                   <div class="flag gb"></div>
-                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
-                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
+                    <ph-context-menu-item menuItemText="Menu item 1"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 2"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 3"></ph-context-menu-item>
+                  </ph-context-menu>
                 </div>
               </div>
             </ng-container>
-          </aa-card>
+          </ph-card>
         </li>
         <li class="flex-group" title="Han Solo">
           <div class="card-list-image fingerprint">
@@ -507,7 +507,7 @@
             <strong>Han Solo</strong>
             <p class="nowrap">General - R. Alliance</p>
           </div>
-          <aa-card cardName="Han Solo" cardRole="General - Rebel Alliance" [imgPath]="imgPath5">
+          <ph-card cardName="Han Solo" cardRole="General - Rebel Alliance" [imgPath]="imgPath5">
             <ng-container card-menu>
               <div class="flex-group space-between">
                 <div class="flex-group flex-start">
@@ -516,15 +516,15 @@
                 </div>
                 <div class="flex-group">
                   <div class="flag gb"></div>
-                  <aa-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
-                    <aa-context-menu-item menuItemText="Menu item 1"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 2"></aa-context-menu-item>
-                    <aa-context-menu-item menuItemText="Menu item 3"></aa-context-menu-item>
-                  </aa-context-menu>
+                  <ph-context-menu [showOnLeft]="true" class="padding-right-0-75" minWidth="7rem" [zIndex]="99999">
+                    <ph-context-menu-item menuItemText="Menu item 1"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 2"></ph-context-menu-item>
+                    <ph-context-menu-item menuItemText="Menu item 3"></ph-context-menu-item>
+                  </ph-context-menu>
                 </div>
               </div>
             </ng-container>
-          </aa-card>
+          </ph-card>
         </li>
       </ul>
     </article>
@@ -533,7 +533,7 @@
   <div *ngIf="oneCol">
 
     <ng-container blade-tabs>
-      <aa-tab-navigation [routerOutlet]="true">
+      <ph-tab-navigation [routerOutlet]="true">
         <ng-container list-items>
             <li *ngFor="let tab of tabs">
               <a
@@ -546,17 +546,17 @@
               </a>
             </li>
         </ng-container>
-      </aa-tab-navigation>
+      </ph-tab-navigation>
     </ng-container>
     <article class="blade-content">
       <router-outlet></router-outlet>
     </article>
 
-    <aa-blade-footer>
-      <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></aa-button>
-      <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></aa-button>
-      <aa-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></aa-button>
-    </aa-blade-footer>
+    <ph-blade-footer>
+      <ph-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></ph-button>
+      <ph-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></ph-button>
+      <ph-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></ph-button>
+    </ph-blade-footer>
   </div>
     <!-- Blade twoCol -->
     <div *ngIf="twoCol">
@@ -607,11 +607,11 @@
         </div>
       </article>
 
-      <aa-blade-footer>
-        <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></aa-button>
-        <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></aa-button>
-        <aa-button (buttonClick)="displayBladeModal=true" (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></aa-button>
-      </aa-blade-footer>
+      <ph-blade-footer>
+        <ph-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></ph-button>
+        <ph-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></ph-button>
+        <ph-button (buttonClick)="displayBladeModal=true" (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></ph-button>
+      </ph-blade-footer>
     </div>
 
       <!-- Blade xlCol -->
@@ -685,15 +685,15 @@
           </table>
         </article>
 
-        <aa-blade-footer>
-          <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></aa-button>
-          <aa-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></aa-button>
-          <aa-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></aa-button>
-        </aa-blade-footer>
+        <ph-blade-footer>
+          <ph-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></ph-button>
+          <ph-button (buttonClick)="toggleBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></ph-button>
+          <ph-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></ph-button>
+        </ph-blade-footer>
       </div>
-</aa-blade>
+</ph-blade>
 
-<aa-blade
+<ph-blade
   *ngIf="showBladeGist"
   [bladeTabs]="true"
   [blockPageUI]="false"
@@ -712,13 +712,13 @@
   >
   <ng-container blade-tabs>
     <nav>
-      <aa-tab-navigation
+      <ph-tab-navigation
         [ngTemplate]="true"
         [displayTabContent]="false"
         (tabChanged)="tabChanged($event)"
         (closeTab)="onCloseTab()"
       >
-        <aa-tab-navigation-item
+        <ph-tab-navigation-item
           *ngFor="let tab of tabsNgTemplate; let i = index"
           [tabId]="tabPrimary"
           tabName="{{tab.tabName}}"
@@ -732,40 +732,35 @@
           countColour="{{tab.countColour}}"
           [tabDisabled]="tab.tabDisabled"
         >
-          <ng-template aaTabNavigationContent>
+          <ng-template phTabNavigationContent>
             <div *ngIf="tab.showTabOneContent">
               <h2>Blade basic</h2>
-              <a href="https://gist.github.com/angloux/9762a8d2e861b6f3ba0a640b7f71eb47" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/9762a8d2e861b6f3ba0a640b7f71eb47"></app-gist>
+              <a href="https://gist.github.com/PixelHeadsLtd/421447b86fa53cbe589e8eaa212bc029" target="_blank">View Gist on GitHub</a>
+              <app-gist src="PixelHeadsLtd/421447b86fa53cbe589e8eaa212bc029"></app-gist>
             </div>
             <div *ngIf="tab.showTabTwoContent">
               <h2>Blade tabs (router-outlet)</h2>
-              <a href="https://gist.github.com/angloux/f93db3a7fe3051d86ef966ae9eac2d9d" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/f93db3a7fe3051d86ef966ae9eac2d9d"></app-gist>
+              <a href="https://gist.github.com/PixelHeadsLtd/95f72ddf62230c4b125ca0f9c07fdd00" target="_blank">View Gist on GitHub</a>
+              <app-gist src="PixelHeadsLtd/95f72ddf62230c4b125ca0f9c07fdd00"></app-gist>
             </div>
             <div *ngIf="tab.showTabThreeContent">
               <h2>Blade tabs (ng-template)</h2>
-              <a href="https://gist.github.com/angloux/b0d783cceafb140f517bfa50c92e5a34" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/b0d783cceafb140f517bfa50c92e5a34"></app-gist>
+              <a href="https://gist.github.com/PixelHeadsLtd/eec9de0fe11252d9ecef02d9117cfc2d" target="_blank">View Gist on GitHub</a>
+              <app-gist src="PixelHeadsLtd/eec9de0fe11252d9ecef02d9117cfc2d"></app-gist>
             </div>
             <div *ngIf="tab.showTabFourContent">
               <h2>Blade modal</h2>
-              <a href="https://gist.github.com/angloux/54841a9e2cdc6d4c5b0749770692b667" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/54841a9e2cdc6d4c5b0749770692b667"></app-gist>
+              <a href="https://gist.github.com/PixelHeadsLtd/c6b8beb1d0604779e9c1f04aa99d327f" target="_blank">View Gist on GitHub</a>
+              <app-gist src="PixelHeadsLtd/c6b8beb1d0604779e9c1f04aa99d327f"></app-gist>
             </div>
             <div *ngIf="tab.showTabFiveContent">
               <h2>Expose a minimize/maximize tab</h2>
-              <a href="https://gist.github.com/angloux/eb8079fac4f11620cf70ab6eeed9f791" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/eb8079fac4f11620cf70ab6eeed9f791"></app-gist>
-            </div>
-            <div *ngIf="tab.showTabSixContent">
-              <h2>suppressAutoClose for validation</h2>
-              <a href="https://gist.github.com/angloux/cf1ae2559640d05f725bfd099cb57f58" target="_blank">View Gist on GitHub</a>
-              <app-gist src="angloux/cf1ae2559640d05f725bfd099cb57f58"></app-gist>
+              <a href="https://gist.github.com/PixelHeadsLtd/e5e7af6edf7486f94e8b38f127c23fd9" target="_blank">View Gist on GitHub</a>
+              <app-gist src="PixelHeadsLtd/e5e7af6edf7486f94e8b38f127c23fd9"></app-gist>
             </div>
           </ng-template>
-        </aa-tab-navigation-item>
-      </aa-tab-navigation>
+        </ph-tab-navigation-item>
+      </ph-tab-navigation>
     </nav>
   </ng-container>
 
@@ -773,10 +768,10 @@
     <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
   </section>
 
-</aa-blade>
+</ph-blade>
 
 <!-- CUSTOM BLADE -->
-<aa-blade
+<ph-blade
   [customBlade]="true"
   [showBladeModal]="displayBladeModal"
   [blockPageUI]="false"
@@ -795,7 +790,7 @@
     <h2>This is blade-modal?</h2>
     <p>You can use this for validation messages, giving the users a notification</p>
     <section class="flex-group flex-center">
-      <aa-button
+      <ph-button
         (buttonClick)="displayBladeModal=false"
         fieldClass="boxed"
         buttonClass="primary"
@@ -803,8 +798,8 @@
         buttonLabel="OK thanks"
         buttonText="OK thanks"
         >
-      </aa-button>
-      <aa-button
+      </ph-button>
+      <ph-button
         (buttonClick)="displayBladeModal=false"
         fieldClass="boxed"
         buttonClass="cancel"
@@ -813,7 +808,7 @@
         buttonLabel="Cancel"
         buttonText="Cancel"
         >
-      </aa-button>
+      </ph-button>
     </section>
   </section>
 </ng-container>
@@ -822,7 +817,7 @@
       <h2>Custom header</h2>
       <div class="flex-group">
         <div class="alert-shield risk-green-approved">Risk green approved</div>
-        <aa-button
+        <ph-button
         [customIcons]="true"
         buttonId="buttonId"
         buttonClass="custom-icons light-blue"
@@ -830,11 +825,11 @@
         buttonLabel="Custom icons"
         buttonText="Visibility"
         buttonIcon="visibility">
-      </aa-button>
+      </ph-button>
       </div>
     </div>
     <ng-container custom-blade-tabs>
-      <aa-tab-navigation [routerOutlet]="true">
+      <ph-tab-navigation [routerOutlet]="true">
         <ng-container list-items>
             <li *ngFor="let tab of tabs">
               <a
@@ -847,7 +842,7 @@
               </a>
             </li>
         </ng-container>
-      </aa-tab-navigation>
+      </ph-tab-navigation>
     </ng-container>
   </ng-container>
   <ng-container custom-content>
@@ -855,9 +850,9 @@
   </ng-container>
     <ng-container custom-footer>
       <div class="flex-group flex-start">
-        <aa-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></aa-button>
-        <aa-button (buttonClick)="showCustomBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></aa-button>
-        <aa-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></aa-button>
+        <ph-button buttonLabel="" buttonText="Save" buttonId="buttonId4" buttonClass="primary" fieldClass="label-hidden"></ph-button>
+        <ph-button (buttonClick)="showCustomBlade=false" buttonLabel="" buttonText="Cancel" buttonId="buttonId4" buttonClass="cancel" fieldClass="label-hidden"></ph-button>
+        <ph-button (buttonClick)="displayBladeModal=true" buttonLabel="" buttonText="Reject" buttonId="buttonId4" buttonClass="reject" fieldClass="label-hidden"></ph-button>
       </div>
   </ng-container>
-</aa-blade>
+</ph-blade>

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewChild, ElementRef, AfterViewInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'aa-range-slider',
+  selector: 'ph-range-slider',
   templateUrl: './range-slider.component.html',
   styleUrl: './range-slider.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

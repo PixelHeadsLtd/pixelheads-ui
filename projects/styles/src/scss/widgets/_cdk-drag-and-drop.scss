@@ -1,7 +1,7 @@
-.aa-drag-container {
+.ph-drag-container {
   width: 100%;
   display: block;
-  .aa-drag-item {
+  .ph-drag-item {
     display: flex;
     flex-direction: row;
     margin-bottom: .25rem;
@@ -13,19 +13,19 @@
     }
   }
 
-  &.cdk-drop-list-dragging .aa-drag-item:not(.cdk-drag-placeholder) {
+  &.cdk-drop-list-dragging .ph-drag-item:not(.cdk-drag-placeholder) {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
 .cdk-drag-preview {
-  box-shadow: 0 5px 5px -3px _colour(aa-grey-50);
-  background-color: _colour(aa-white-100);
+  box-shadow: 0 5px 5px -3px _colour(ph-grey-50);
+  background-color: _colour(ph-white-100);
 }
 
 .cdk-drag-placeholder {
   opacity: .5;
-  background-color: _colour(aa-grey-5);
+  background-color: _colour(ph-grey-5);
 }
 
 .cdk-drag-animating {
@@ -36,7 +36,7 @@
 th {
   &.cdk-drag-preview {
     padding: .5rem 1rem;
-    border-bottom: 2px solid _colour(aa-pink-100);
+    border-bottom: 2px solid _colour(ph-pink-100);
     .input-filter {
       display: none;
     }
@@ -44,7 +44,7 @@ th {
 }
 tr {
   &.cdk-drag-preview {
-    border-bottom: 2px solid _colour(aa-pink-100);
+    border-bottom: 2px solid _colour(ph-pink-100);
   }
   &.cdk-drag-preview td {
     padding: .5rem 1rem;

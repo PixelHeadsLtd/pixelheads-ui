@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Radio</h1>
-  <aa-alert alertClass="error" alertText="Please ensure all fieldset inputs are wrapped in div.field label"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure all fieldset inputs are wrapped in div.field label"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -84,7 +84,7 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=true; showRadioRange=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=true; showRadioRange=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -277,14 +277,14 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=false; showRadioRange=true">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showRadioDefault=false; showRadioRange=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade 
+<ph-blade 
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -298,12 +298,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showRadioDefault">
-      <a href="https://gist.github.com/angloux/4e6f7537babfe54d86ab2198c096c4fe" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/4e6f7537babfe54d86ab2198c096c4fe"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/041acf9385e6f450de9bc926cacdeec3" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/041acf9385e6f450de9bc926cacdeec3"></app-gist>
     </div>
     <div *ngIf="showRadioRange">
-      <a href="https://gist.github.com/angloux/e95ec03106df3bc0ce214561b9785d5e" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/e95ec03106df3bc0ce214561b9785d5e"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/a31569d974f10834ab5430556e3e3331" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/a31569d974f10834ab5430556e3e3331"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

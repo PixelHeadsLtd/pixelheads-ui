@@ -16,9 +16,6 @@ import { FavouritesListComponent } from './favourites-list/favourites-list.compo
 import { IconPickerComponent } from './icon-picker/icon-picker.component';
 import { InfoPanelComponent } from './info-panel/info-panel.component';
 import { InfoPanelStackedComponent } from './info-panel-stacked/info-panel-stacked.component';
-import { ModalComponent } from './modal/modal.component';
-import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
-import { OverlayComponent } from './overlay/overlay.component';
 import { PopoverComponent } from './popover/popover.component';
 import { SummaryTopComponent } from './summary-top/summary-top.component';
 import { SummaryTopListComponent } from './summary-top-list/summary-top-list.component';
@@ -51,9 +48,6 @@ import { OrderByPipe } from '../pipes/order-by';
     IconFilterPipe,
     InfoPanelComponent,
     InfoPanelStackedComponent,
-    ModalComponent,
-    ModalDialogComponent,
-    OverlayComponent,
     SummaryTopComponent,
     SummaryTopListComponent,
     ToastrComponent,
@@ -85,9 +79,6 @@ import { OrderByPipe } from '../pipes/order-by';
     IconFilterPipe,
     InfoPanelComponent,
     InfoPanelStackedComponent,
-    ModalComponent,
-    ModalDialogComponent,
-    OverlayComponent,
     SummaryTopComponent,
     SummaryTopListComponent,
     ToastrComponent,

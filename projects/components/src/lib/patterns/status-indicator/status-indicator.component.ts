@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-status-indicator',
+  selector: 'ph-status-indicator',
   templateUrl: './status-indicator.component.html',
   styleUrls: ['./status-indicator.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

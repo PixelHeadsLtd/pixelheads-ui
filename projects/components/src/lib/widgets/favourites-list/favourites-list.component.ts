@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'aa-favourites-list',
+  selector: 'ph-favourites-list',
   templateUrl: './favourites-list.component.html',
   styleUrls: ['./favourites-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

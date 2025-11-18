@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-icon-picker',
+  selector: 'ph-icon-picker',
   templateUrl: './icon-picker.component.html',
   styleUrls: ['./icon-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -12,7 +12,7 @@ export class IconPickerComponent {
 
   @Input() searchIcon = '';
   @Input() selectedIcon = '';
-  @Input() selectedColor = 'aa-light-blue-100';
+  @Input() selectedColor = 'ph-light-blue-100';
   @Input() showIcons: boolean = false;
   @Input() showLabel: boolean = false;
   @Input() labelName: string = '';

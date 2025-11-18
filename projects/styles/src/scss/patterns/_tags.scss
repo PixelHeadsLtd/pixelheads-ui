@@ -1,4 +1,4 @@
-.aa-tag {
+.ph-tag {
   border-radius: 1rem;
   font-size: _font(size-small);
   display: flex;
@@ -42,18 +42,18 @@
     }
   }
 
-  &.bg-aa-white-100 {
-    border: 1px solid _colour(aa-blue-100)
+  &.bg-ph-white-100 {
+    border: 1px solid _colour(ph-blue-100)
   }
 }
 
 table {
-  .aa-tag {
+  .ph-tag {
     margin-bottom: 0;
   }
 }
 
-.aa-tag-shaped {
+.ph-tag-shaped {
   font-size: _font(size-default);
   line-height: 1.25rem;
   white-space: nowrap;
@@ -65,7 +65,7 @@ table {
   margin-bottom: .5rem;
   border-radius: .35rem;
   padding: .25rem .5rem 0 .75rem;
-  color: _colour(aa-white-100);
+  color: _colour(ph-white-100);
 
   span {
     position: relative;
@@ -92,76 +92,76 @@ table {
     bottom: 0;
     width: .35rem;
     height: .35rem;
-    background-color: _colour(aa-white-100);
+    background-color: _colour(ph-white-100);
     border-radius: 50%;
   }
 
   // Colour scheme
-  &.bg-aa-red-100 {
-    border: 1px solid _colour(aa-red-100);
+  &.bg-ph-red-100 {
+    border: 1px solid _colour(ph-red-100);
     &:before {
-      background-color: _colour(aa-red-100)
+      background-color: _colour(ph-red-100)
     }
   }
-  &.bg-aa-orange-100 {
-    border: 1px solid _colour(aa-orange-100);
+  &.bg-ph-orange-100 {
+    border: 1px solid _colour(ph-orange-100);
     &:before {
-      background-color: _colour(aa-orange-100)
+      background-color: _colour(ph-orange-100)
     }
   }
-  &.bg-aa-green-100 {
-    border: 1px solid _colour(aa-green-100);
+  &.bg-ph-green-100 {
+    border: 1px solid _colour(ph-green-100);
     &:before {
-      background-color: _colour(aa-green-100)
+      background-color: _colour(ph-green-100)
     }
   }
-  &.bg-aa-blue-100 {
-    border: 1px solid _colour(aa-blue-100);
+  &.bg-ph-blue-100 {
+    border: 1px solid _colour(ph-blue-100);
     &:before {
-      background-color: _colour(aa-blue-100) 
+      background-color: _colour(ph-blue-100) 
     }
   }
-  &.bg-aa-light-blue-100 {
-    border: 1px solid _colour(aa-light-blue-100);
+  &.bg-ph-light-blue-100 {
+    border: 1px solid _colour(ph-light-blue-100);
     &:before {
-      background-color: _colour(aa-light-blue-100) 
+      background-color: _colour(ph-light-blue-100) 
     }
   }
-  &.bg-aa-plum-100 {
-    border: 1px solid _colour(aa-plum-100);
+  &.bg-ph-plum-100 {
+    border: 1px solid _colour(ph-plum-100);
     &:before {
-      background-color: _colour(aa-plum-100) 
+      background-color: _colour(ph-plum-100) 
     }
   }
-  &.bg-aa-ochre-100 {
-    border: 1px solid _colour(aa-ochre-100);
+  &.bg-ph-ochre-100 {
+    border: 1px solid _colour(ph-ochre-100);
     &:before {
-      background-color: _colour(aa-ochre-100) 
+      background-color: _colour(ph-ochre-100) 
     }
   }
-  &.bg-aa-pink-100 {
-    border: 1px solid _colour(aa-pink-100);
+  &.bg-ph-pink-100 {
+    border: 1px solid _colour(ph-pink-100);
     &:before {
-      background-color: _colour(aa-pink-100) 
+      background-color: _colour(ph-pink-100) 
     }
   }
-  &.bg-aa-white-100 {
-    color: _colour(aa-blue-100);
-    border: 1px solid _colour(aa-light-blue-40);
+  &.bg-ph-white-100 {
+    color: _colour(ph-blue-100);
+    border: 1px solid _colour(ph-light-blue-40);
     &:before {
-      background-color: _colour(aa-white-100);
-      border-left: 1px solid _colour(aa-light-blue-40);
-      border-bottom: 1px solid _colour(aa-light-blue-40);
+      background-color: _colour(ph-white-100);
+      border-left: 1px solid _colour(ph-light-blue-40);
+      border-bottom: 1px solid _colour(ph-light-blue-40);
     }
     &:after {
-      background-color: _colour(aa-white-100);
-      border: 1px solid _colour(aa-light-blue-80);
+      background-color: _colour(ph-white-100);
+      border: 1px solid _colour(ph-light-blue-80);
     }
   }
-  &.bg-aa-grey-100 {
-    border: 1px solid _colour(aa-grey-100);
+  &.bg-ph-grey-100 {
+    border: 1px solid _colour(ph-grey-100);
     &:before {
-      background-color: _colour(aa-grey-100)
+      background-color: _colour(ph-grey-100)
     }
   }
 }

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 @Component({
-  selector: 'aa-accordion-fancy',
+  selector: 'ph-accordion-fancy',
   templateUrl: './accordion-fancy.component.html',
   styleUrls: ['./accordion-fancy.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

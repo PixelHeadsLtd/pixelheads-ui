@@ -12,7 +12,7 @@
             <p>To get the markup, please refer to the gist file on the right</p>
           </div>
 
-          <div class="aa-tree">
+          <div class="ph-tree">
             <app-tree [treeData]="nodes"></app-tree>
           </div>
 
@@ -34,7 +34,7 @@
                 <td datalabel="Element">Div</td>
                 <td datalabel="Attribute">Classname</td>
                 <td datalabel="Type">Class</td>
-                <td datalabel="Default">aa-tree</td>
+                <td datalabel="Default">ph-tree</td>
               </tr>
               <tr>
                 <td datalabel="Element">app-tree</td>
@@ -48,13 +48,13 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -67,9 +67,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-          <a href="https://gist.github.com/angloux/7b2bddeb005feb84a1ea5264bbbb8368" target="_blank">View Gist on GitHub</a>
-          <app-gist src="angloux/7b2bddeb005feb84a1ea5264bbbb8368"></app-gist>
+          <a href="https://gist.github.com/PixelHeadsLtd/7b2bddeb005feb84a1ea5264bbbb8368" target="_blank">View Gist on GitHub</a>
+          <app-gist src="PixelHeadsLtd/7b2bddeb005feb84a1ea5264bbbb8368"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

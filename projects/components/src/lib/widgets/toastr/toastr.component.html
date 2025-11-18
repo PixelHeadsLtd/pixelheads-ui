@@ -1,10 +1,10 @@
-<div *ngIf="useLegacyToastr" id="aa-toastr" class="aa-toastr" [ngStyle]="{'z-index' : zIndex}">
+<div *ngIf="useLegacyToastr" id="ph-toastr" class="ph-toastr" [ngStyle]="{'z-index' : zIndex}">
     <ng-content></ng-content>
 </div>
 
-<div *ngIf="!useLegacyToastr" id="aa-toastr" class="aa-toastr-service" [ngStyle]="{'z-index': zIndex}">
+<div *ngIf="!useLegacyToastr" id="ph-toastr" class="ph-toastr-service" [ngStyle]="{'z-index': zIndex}">
     <ng-container *ngIf="toasts.length > 0">
-        <section *ngFor="let toast of toasts; let i = index" class="aa-toastr-content width-20 flex-group space-between flex-align-center {{toast.type}}">
+        <section *ngFor="let toast of toasts; let i = index" class="ph-toastr-content width-20 flex-group space-between flex-align-center {{toast.type}}">
         <div class="flex-group flex-start flex-align-center">
             <div class="material-icons">{{toast.icon}}</div>
             <div>
@@ -12,7 +12,7 @@
             <p class="max-width-14">{{toast.message}}</p>
             </div>
         </div>
-        <button (click)="removeToast(i)" class="material-icons aa-white-100">clear</button>
+        <button (click)="removeToast(i)" class="material-icons ph-white-100">clear</button>
         </section>
     </ng-container>
 </div>

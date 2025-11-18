@@ -18,7 +18,7 @@ export class ProgressIndicatorComponent {
   progressComplete: boolean = false;
   reset: boolean = false;
   showMore: boolean = false;
-  stepOneIconColour: string = 'aa-pink-100';
+  stepOneIconColour: string = 'ph-pink-100';
   stepTwoIconColour: string = '';
   stepThreeIconColour: string = '';
   stepFourIconColour: string = '';
@@ -70,8 +70,8 @@ export class ProgressIndicatorComponent {
       this.stepThree = false;
       this.stepFour = false;
       this.stepFive = false;
-      this.stepOneIconColour = 'aa-grey-25 shake'
-      this.stepTwoIconColour = 'aa-pink-100'
+      this.stepOneIconColour = 'ph-grey-25 shake'
+      this.stepTwoIconColour = 'ph-pink-100'
     }
     if(this.showComplete) {
       this.stepOneClass = 'complete';
@@ -85,8 +85,8 @@ export class ProgressIndicatorComponent {
         Because you left step-two to complete step-one,
         step-two is now incomplete
       `;
-      this.stepOneIconColour = 'aa-pink-100'
-      this.stepTwoIconColour = 'aa-grey-25 shake rotateNeg45'
+      this.stepOneIconColour = 'ph-pink-100'
+      this.stepTwoIconColour = 'ph-grey-25 shake rotateNeg45'
     }
     if(this.showError) {
       this.stepTwoClass = 'error';
@@ -100,8 +100,8 @@ export class ProgressIndicatorComponent {
         past a step containing an error, this will be a business decision
       `;
       this.stepTwoText = 'Oops you have an `error` at step-two'
-      this.stepTwoIconColour = 'aa-pink-100'
-      this.stepThreeIconColour = 'aa-grey-25 shake'
+      this.stepTwoIconColour = 'ph-pink-100'
+      this.stepThreeIconColour = 'ph-grey-25 shake'
     }
     if(this.progressComplete) {
       this.stepTwoClass = 'complete'
@@ -116,7 +116,7 @@ export class ProgressIndicatorComponent {
       `
         You have successfully completed your journey
       `;
-      this.stepFiveIconColour = 'aa-pink-100'
+      this.stepFiveIconColour = 'ph-pink-100'
     }
     if(this.reset) {
       this.stepOne = true;

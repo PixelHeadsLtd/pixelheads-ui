@@ -33,7 +33,7 @@ export class FavouritesComponent {
 
   favsOriginLandscape = [
     {
-      favColour: 'bg-aa-red-10',
+      favColour: 'bg-ph-red-10',
       favLabel: 'BM',
       favTitle: 'Copper Anodes Chile Shipping',
       favTextLineOne: 'Base Metals',
@@ -42,7 +42,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-green-15',
+      favColour: 'bg-ph-green-15',
       favLabel: 'BM',
       favTitle: 'Cu Concs AAML Schedule',
       favTextLineOne: 'Base Metals',
@@ -51,7 +51,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-orange-10',
+      favColour: 'bg-ph-orange-10',
       favLabel: 'BM',
       favTitle: 'Copper Anodes Chile Shipping',
       favTextLineOne: 'Base Metals',
@@ -60,7 +60,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-light-blue-15',
+      favColour: 'bg-ph-light-blue-15',
       favLabel: 'BM',
       favTitle: 'Ni Booking Control',
       favTextLineOne: 'Base Metals',
@@ -72,7 +72,7 @@ export class FavouritesComponent {
 
   favsOriginPortrait = [
     {
-      favColour: 'bg-aa-red-10',
+      favColour: 'bg-ph-red-10',
       favLabel: 'BM',
       favTitle: 'Copper Anodes Chile Shipping',
       favTextLineOne: 'Base Metals',
@@ -81,7 +81,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-green-15',
+      favColour: 'bg-ph-green-15',
       favLabel: 'BM',
       favTitle: 'Cu Concs AAML Schedule',
       favTextLineOne: 'Base Metals',
@@ -90,7 +90,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-orange-10',
+      favColour: 'bg-ph-orange-10',
       favLabel: 'BM',
       favTitle: 'Copper Anodes Chile Shipping',
       favTextLineOne: 'Base Metals',
@@ -99,7 +99,7 @@ export class FavouritesComponent {
       isFavourite: false
     },
     {
-      favColour: 'bg-aa-light-blue-15',
+      favColour: 'bg-ph-light-blue-15',
       favLabel: 'BM',
       favTitle: 'Ni Booking Control',
       favTextLineOne: 'Base Metals',
@@ -112,7 +112,7 @@ export class FavouritesComponent {
   dashBoardFavourites = [
     {
       materialIcons: false,
-      favIconClass: 'fas fa-ring aa-ochre-100',
+      favIconClass: 'fas fa-ring ph-ochre-100',
       iconColour: '', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',
@@ -123,7 +123,7 @@ export class FavouritesComponent {
     {
       materialIcons: true,
       favIconClass: 'attach_money',
-      iconColour: 'aa-green-100', // material-icons only
+      iconColour: 'ph-green-100', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',
       favDescription: 'Copper Anodes Chile Shipping',
@@ -132,7 +132,7 @@ export class FavouritesComponent {
     },
     {
       materialIcons: false,
-      favIconClass: 'fas fa-chess-rook aa-plum-100',
+      favIconClass: 'fas fa-chess-rook ph-plum-100',
       iconColour: '', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',
@@ -142,7 +142,7 @@ export class FavouritesComponent {
     },
     {
       materialIcons: false,
-      favIconClass: 'fas fa-piggy-bank aa-pink-100',
+      favIconClass: 'fas fa-piggy-bank ph-pink-100',
       iconColour: '', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',
@@ -152,7 +152,7 @@ export class FavouritesComponent {
     },
     {
       materialIcons: false,
-      favIconClass: 'fas fa-fire aa-burgundy-100',
+      favIconClass: 'fas fa-fire ph-burgundy-100',
       iconColour: '', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',
@@ -162,7 +162,7 @@ export class FavouritesComponent {
     },
     {
       materialIcons: false,
-      favIconClass: 'fa-solid fa-hotel aa-light-blue-100',
+      favIconClass: 'fa-solid fa-hotel ph-light-blue-100',
       iconColour: '', // material-icons only
       tagName: 'Gold, Copper',
       favouritesTitle: 'BM.AAS | Copper Concentrate',

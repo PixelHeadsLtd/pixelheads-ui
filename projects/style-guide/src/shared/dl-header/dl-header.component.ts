@@ -15,8 +15,8 @@ export class DlHeaderComponent {
   loginBlade: boolean = false;
   darkTheme: boolean = false;
 
-  appLogoColor: string = 'aa-white-100';
-  appLogoBgColor: string = 'bg-aa-orange-100';
+  appLogoColor: string = 'ph-white-100';
+  appLogoBgColor: string = 'bg-ph-orange-100';
   appIconName: string = 'design_services';
 
   selectedIndex: number | null = null;

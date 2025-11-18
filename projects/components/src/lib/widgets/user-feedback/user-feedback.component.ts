@@ -3,7 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { FeedbackEvent } from './feedbackEvent';
 
 @Component({
-  selector: 'aa-user-feedback',
+  selector: 'ph-user-feedback',
   templateUrl: './user-feedback.component.html',
   styleUrls: ['./user-feedback.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush

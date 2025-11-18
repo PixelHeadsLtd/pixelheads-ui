@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef, ViewEncapsulatio
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 
 @Component({
-  selector: 'aa-tooltip-dynamic',
+  selector: 'ph-tooltip-dynamic',
   templateUrl: './tooltip-dynamic.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None

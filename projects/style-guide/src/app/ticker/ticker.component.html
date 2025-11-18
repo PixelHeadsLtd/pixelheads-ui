@@ -1,5 +1,5 @@
 <section class="control-bar">
-    <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
+    <ph-anchor-back [anchorBackText]="'Style guide'" routerLink=""></ph-anchor-back>
     <h1>Ticker</h1>
 </section>
 
@@ -12,7 +12,7 @@
             <p>A handy text ticker when you have limited space</p>
           </div>
           <div>
-            <aa-ticker 
+            <ph-ticker 
                 tickerSpeed="25s"
                 tickerWidth="20rem"
             >
@@ -21,7 +21,7 @@
                     a strong element, a label, an h1 an h2, an h3 or any other element. 
                     You can set the ticker speed and width.
                 </h2>
-            </aa-ticker>
+            </ph-ticker>
           </div>
         </section>
   
@@ -38,13 +38,13 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-ticker</td>
+                <td datalabel="Element">ph-ticker</td>
                 <td datalabel="Attribute">tickerSpeed</td>
                 <td datalabel="Type">Any</td>
                 <td datalabel="Default">25s</td>
                 </tr>
               <tr>
-                <td datalabel="Element">aa-ticker</td>
+                <td datalabel="Element">ph-ticker</td>
                 <td datalabel="Attribute">tickerWidth</td>
                 <td datalabel="Type">Any</td>
                 <td datalabel="Default">20rem</td>
@@ -55,13 +55,13 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -74,9 +74,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-          <a href="https://gist.github.com/angloux/09d8f36067fb2ff9a944bb8a043f22af" target="_blank">View Gist on GitHub</a>
-          <app-gist src="angloux/09d8f36067fb2ff9a944bb8a043f22af"></app-gist>
+          <a href="https://gist.github.com/PixelHeadsLtd/09d8f36067fb2ff9a944bb8a043f22af" target="_blank">View Gist on GitHub</a>
+          <app-gist src="PixelHeadsLtd/09d8f36067fb2ff9a944bb8a043f22af"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

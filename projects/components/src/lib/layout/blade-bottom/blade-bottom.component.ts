@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 @Component({
-  selector: 'aa-blade-bottom',
+  selector: 'ph-blade-bottom',
   templateUrl: './blade-bottom.component.html',
   styleUrls: ['./blade-bottom.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

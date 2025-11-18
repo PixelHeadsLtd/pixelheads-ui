@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-summary-top-list',
+  selector: 'ph-summary-top-list',
   templateUrl: './summary-top-list.component.html',
   styleUrls: ['./summary-top-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

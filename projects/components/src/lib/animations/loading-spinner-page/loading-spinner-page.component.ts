@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-loading-spinner-page',
+  selector: 'ph-loading-spinner-page',
   templateUrl: './loading-spinner-page.component.html',
   styleUrls: ['./loading-spinner-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

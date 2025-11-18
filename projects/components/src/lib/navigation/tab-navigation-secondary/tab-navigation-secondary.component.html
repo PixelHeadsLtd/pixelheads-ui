@@ -1,13 +1,13 @@
 
 <!-- ROUTER-OUTLET -->
-<nav id="aa-tab-sec-nav-router-outlet" *ngIf="routerOutletSecondary" class="tab-navigation-secondary">
+<nav id="ph-tab-sec-nav-router-outlet" *ngIf="routerOutletSecondary" class="tab-navigation-secondary">
   <ul>
     <ng-content select="[list-items]"></ng-content>
   </ul>
 </nav>
 
 <!-- NG-TEMPLATE ONLY -->
-<nav id="aa-tab-nav-sec-ng-template" *ngIf="ngTemplate" class="tab-navigation-secondary">
+<nav id="ph-tab-nav-sec-ng-template" *ngIf="ngTemplate" class="tab-navigation-secondary">
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li>

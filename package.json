@@ -1,5 +1,6 @@
 {
-  "name": "workspace",
+  "name": "pixelheads-ui",
+  "description": "PixelHeads UI - Design System for Angular",
   "version": "0.0.0",
   "engines": {
     "node": "20.x",

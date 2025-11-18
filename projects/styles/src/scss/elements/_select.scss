@@ -1,16 +1,16 @@
 // Has to sit outside the select wrapper
 .placeholder-selected,
 .placeholder-selected .placeholder-option {
-  color: _colour(aa-grey-25);
+  color: _colour(ph-grey-25);
 }
 
 select:not(.custom-select) {
   appearance: none;
-  background-color: _colour(aa-white-100);
+  background-color: _colour(ph-white-100);
   @include chevron-down;
-  border: 1px solid _colour(aa-grey-25);
+  border: 1px solid _colour(ph-grey-25);
   border-radius: .25rem;
-  //color: _colour(aa-grey-100);
+  //color: _colour(ph-grey-100);
   display: block;
   font-family: _font(family-regular);
   font-size: _font(size-default);
@@ -19,17 +19,17 @@ select:not(.custom-select) {
   min-height: 2.1rem;
 
   option {
-    color: _colour(aa-grey-100);
+    color: _colour(ph-grey-100);
 
     &[value=""] {
-      color: _colour(aa-grey-25);
+      color: _colour(ph-grey-25);
     }
   }
 
   &:focus {
     outline: 0;
-    border: 1px solid _colour(aa-light-blue-100);
-    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+    border: 1px solid _colour(ph-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(ph-light-blue-15);
   }
   
   // fix for IE11 where both chevrons where being displayed
@@ -46,15 +46,15 @@ select:not(.custom-select) {
   &:-webkit-autofill, 
   &:-webkit-autofill:hover, 
   &:-webkit-autofill:focus {
-    -webkit-text-fill-color: _colour(aa-grey-100);
-    -webkit-box-shadow: 0 0 0 1000px _colour(aa-white-100) inset;
+    -webkit-text-fill-color: _colour(ph-grey-100);
+    -webkit-box-shadow: 0 0 0 1000px _colour(ph-white-100) inset;
   }
 
   &[aria-readonly=true],
   &[readonly],
   &[aria-disabled=true],
   &[disabled] {
-    background-color: _colour(aa-grey-5);
+    background-color: _colour(ph-grey-5);
     background-image: none;
     border-style: dashed;
     cursor: not-allowed;
@@ -63,7 +63,7 @@ select:not(.custom-select) {
     }
     
     &:focus {
-      border-color: _colour(aa-grey-25)!important;
+      border-color: _colour(ph-grey-25)!important;
       box-shadow: none!important;
     }
   }
@@ -71,21 +71,21 @@ select:not(.custom-select) {
 
 .gradient {
   select {
-    background-color: _palette(aa-blue-100);
+    background-color: _palette(ph-blue-100);
     background-image: url("../../assets/icons/keyboard_arrow_down-wht-24px.svg");
     border: none;
-    color: _palette(aa-white-100);
+    color: _palette(ph-white-100);
     border-radius: 0;
     &::placeholder {
-      color: _palette(aa-white-100);
+      color: _palette(ph-white-100);
     }
   }
 }
 
-.aa-multi-select {
-  .aa-multi-select-header {
+.ph-multi-select {
+  .ph-multi-select-header {
     @include chevron-down;
-    border: 1px solid _colour(aa-grey-25);
+    border: 1px solid _colour(ph-grey-25);
     border-radius: .25rem;
     font-family: _font(family-regular);
     font-size: _font(size-default);
@@ -94,9 +94,9 @@ select:not(.custom-select) {
     min-height: 2.1rem;
 
   }
-  .aa-multi-select-popup {
+  .ph-multi-select-popup {
     padding: 0 0 .75rem;
-    .aa-multi-select-filter {
+    .ph-multi-select-filter {
       border-radius: .25rem .25rem 0 0;
       padding: .5rem .75rem;
       label {
@@ -114,7 +114,7 @@ select:not(.custom-select) {
       }
     }
 
-    .aa-multi-select-content {
+    .ph-multi-select-content {
       padding: .5rem .75rem 0;
       label {
         input {

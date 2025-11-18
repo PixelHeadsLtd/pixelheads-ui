@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <aa-ui-block
+            <ph-ui-block
                 [showUiBlock]="showUiBlock"
                 [zIndex]="1"
                 topPos="3.5rem"
@@ -35,7 +35,7 @@
                 [allCaps]="true"
                 fontSize="6rem"
             >
-            </aa-ui-block>
+            </ph-ui-block>
 
         </section>
 
@@ -52,43 +52,43 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">showUiBlock</td>
                         <td datalabel="Type">Boolean</td>
                         <td datalabel="Default">True</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">topPos</td>
                         <td datalabel="Type">Any</td>
                         <td datalabel="Default">3.5rem</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">bottomPos</td>
                         <td datalabel="Type">Any</td>
                         <td datalabel="Default">0</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">fontSize</td>
                         <td datalabel="Type">Any</td>
                         <td datalabel="Default">6rem</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">allCaps</td>
                         <td datalabel="Type">Boolean</td>
                         <td datalabel="Default">True</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">message</td>
                         <td datalabel="Type">String</td>
                         <td datalabel="Default">Your message</td>
                     </tr>
                     <tr>
-                        <td datalabel="Element">aa-ui-block</td>
+                        <td datalabel="Element">ph-ui-block</td>
                         <td datalabel="Attribute">zIndex</td>
                         <td datalabel="Type">Number</td>
                         <td datalabel="Default">1</td>
@@ -99,20 +99,20 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
+    <ph-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
         bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
         (bladeOpen)="bladeIsOpen($event)">
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/929a7dab99736c9df8b0989b96d1bf22" target="_blank">View Gist on
+            <a href="https://gist.github.com/PixelHeadsLtd/929a7dab99736c9df8b0989b96d1bf22" target="_blank">View Gist on
                 GitHub</a>
-            <app-gist src="angloux/929a7dab99736c9df8b0989b96d1bf22"></app-gist>
+            <app-gist src="PixelHeadsLtd/929a7dab99736c9df8b0989b96d1bf22"></app-gist>
         </article>
-    </aa-blade>
+    </ph-blade>
 
 </section>

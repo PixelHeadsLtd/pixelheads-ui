@@ -1,9 +1,9 @@
-.aa-filter,
+.ph-filter,
 .filter-container {
-  background-color: _colour(aa-light-blue-15);
+  background-color: _colour(ph-light-blue-15);
   padding: 0 1.25rem 1.25rem !important;
-  border-top: 1px solid _colour(aa-light-blue-30);
-  border-bottom: 1px solid _colour(aa-light-blue-30);
+  border-top: 1px solid _colour(ph-light-blue-30);
+  border-bottom: 1px solid _colour(ph-light-blue-30);
 }
 
 .filter-gradient {
@@ -23,7 +23,7 @@
     &.material-icons,
     &.material-icons-outlined {
       &:hover {
-        background-color: _palette(aa-light-blue-100);
+        background-color: _palette(ph-light-blue-100);
       }
     }
   }

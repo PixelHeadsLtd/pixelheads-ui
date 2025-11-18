@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter, ElementRef, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'aa-tooltip',
+  selector: 'ph-tooltip',
   templateUrl: './tooltip.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

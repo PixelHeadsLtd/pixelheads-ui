@@ -1,5 +1,5 @@
 .control-bar {
-    aa-context-menu {
+    ph-context-menu {
         display: none;
     }
 }
@@ -9,8 +9,8 @@
 .nav-context {
     position: absolute;
     bottom: 0;     
-    background-color: _colour(aa-white-100);
-    border-right: 1px solid _colour(aa-grey-25);
+    background-color: _colour(ph-white-100);
+    border-right: 1px solid _colour(ph-grey-25);
     padding: 0.5rem 0;
     
     button.menu {
@@ -46,7 +46,7 @@
             }
             &:hover,
             &.selected {
-                background-color: _colour(aa-grey-5);
+                background-color: _colour(ph-grey-5);
             }
         }
     }
@@ -54,7 +54,7 @@
 
 @media screen and (max-width: _breakpoint(breakpoint-570)) {
     .control-bar {
-        aa-context-menu {
+        ph-context-menu {
             display: block;
         }
     }

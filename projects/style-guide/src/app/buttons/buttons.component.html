@@ -1,7 +1,7 @@
 <section class="control-bar flex-group space-between">
   <div class="flex-group flex-start">
     <h1>Button</h1>
-    <aa-button
+    <ph-button
       (buttonClick)="showOverlay=!showOverlay"
       buttonClass="custom-icons green"
       fieldClass="boxed"
@@ -11,11 +11,11 @@
       [customIcons]="true"
       buttonIcon="help"
       >
-    </aa-button>
+    </ph-button>
   </div>
-  <aa-alert alertClass="error max-width-unset"
+  <ph-alert alertClass="error max-width-unset"
     alertText="If you're not using the component, ensure ALL elements are wrapped in div.field">
-  </aa-alert>
+  </ph-alert>
 </section>
 
 
@@ -28,14 +28,14 @@
         <p>In certain circumstances, if an existing button is not available you
           might want to create your own. To do this use the below tool to preview
           one of the Material Icons and then choose your background colour.
-          <strong class="aa-red-100">Our button components have the label hidden by default. If you want
+          <strong class="ph-red-100">Our button components have the label hidden by default. If you want
             display the label, set [showLabel]=`true`.
           </strong>
         </p>
       </div>
       <div>
         <div class="flex-group flex-start margin-bottom-2">
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="custom-icons {{selectedColor}}"
             fieldClass=""
@@ -47,7 +47,7 @@
             buttonIcon="{{selectedIcon}}"
             [disabled]="false"
           >
-          </aa-button>
+          </ph-button>
           <div class="field">
             <label>
               Choose icon -
@@ -72,7 +72,7 @@
         <h2>Commonly used</h2>
         <div class="flex-group">
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons pending"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -83,8 +83,8 @@
               buttonIcon="reply"
               title="buttonClass='custom-icons pending', buttonIcon='reply'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons primary"
               fieldClass=""
               buttonId="buttonIdC"
@@ -95,10 +95,10 @@
               buttonIcon="edit"
               title="buttonClass='custom-icons primary', buttonIcon='edit'"
               >
-            </aa-button>
+            </ph-button>
           </div>
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons error"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -109,8 +109,8 @@
               buttonIcon="clear"
               title="buttonClass='custom-icons error', buttonIcon='clear'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons secondary"
               fieldClass=""
               buttonId="buttonIdC"
@@ -121,10 +121,10 @@
               buttonIcon="remove_red_eye"
               title="buttonClass='custom-icons secondary', buttonIcon='remove_red_eye'"
               >
-            </aa-button>
+            </ph-button>
           </div>
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons complete"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -135,8 +135,8 @@
               buttonIcon="check"
               title="buttonClass='custom-icons complete', buttonIcon='check'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons tertiary"
               fieldClass=""
               buttonId="buttonIdC"
@@ -147,13 +147,13 @@
               buttonIcon="update"
               title="buttonClass='custom-icons tertiary', buttonIcon='update'"
               >
-            </aa-button>
+            </ph-button>
           </div>
         </div>
-        <h2 class="margin-top-2">Button class 'small' - better for ag-grid</h2>
+        <h2 class="margin-top-2">Button class 'small'</h2>
         <div class="flex-group">
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons pending small"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -164,8 +164,8 @@
               buttonIcon="reply"
               title="buttonClass='custom-icons pending', buttonIcon='reply'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons primary small"
               fieldClass=""
               buttonId="buttonIdC"
@@ -176,10 +176,10 @@
               buttonIcon="edit"
               title="buttonClass='custom-icons primary', buttonIcon='edit'"
               >
-            </aa-button>
+            </ph-button>
           </div>
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons error small"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -190,8 +190,8 @@
               buttonIcon="clear"
               title="buttonClass='custom-icons error', buttonIcon='clear'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons secondary small"
               fieldClass=""
               buttonId="buttonIdC"
@@ -202,10 +202,10 @@
               buttonIcon="remove_red_eye"
               title="buttonClass='custom-icons secondary', buttonIcon='remove_red_eye'"
               >
-            </aa-button>
+            </ph-button>
           </div>
           <div>
-            <aa-button
+            <ph-button
               buttonClass="custom-icons complete small"
               fieldClass="boxed"
               buttonId="buttonIdC"
@@ -216,8 +216,8 @@
               buttonIcon="check"
               title="buttonClass='custom-icons complete', buttonIcon='check'"
               >
-            </aa-button>
-            <aa-button
+            </ph-button>
+            <ph-button
               buttonClass="custom-icons tertiary small"
               fieldClass=""
               buttonId="buttonIdC"
@@ -228,7 +228,7 @@
               buttonIcon="update"
               title="buttonClass='custom-icons tertiary', buttonIcon='update'"
               >
-            </aa-button>
+            </ph-button>
           </div>
         </div>
       </div>
@@ -247,103 +247,103 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">N/A</td>
             <td datalabel="Type">Component</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">custom-icons</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">boxed (Removes top space)</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">small (Can be applied to all buttons)</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonType</td>
             <td datalabel="Type">Type</td>
             <td datalabel="Default">null</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">.boxed to remove top spacing and/or class of your choosing</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">buttonId</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[showLabel]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonLabel</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Custom icons</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[customIcons]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonIcon</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">visibility</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonLarge]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">.boxed to remove top spacing and/or class of your choosing</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">showCount</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">count</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">Your number</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">countColor</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">red, blue, light-blue, green, orange, white</td>
@@ -354,7 +354,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           customButton=true;
@@ -377,13 +377,13 @@
         <p>There is an array of standard buttons available in<br />
           Design Language. For consistency, please try and use the <br />
           standard versions wherever possible.<br />
-          <strong class="aa-red-100">Our button components have the label hidden by default. If you want
+          <strong class="ph-red-100">Our button components have the label hidden by default. If you want
             display the label, set [showLabel]=`true`.
           </strong>
         </p>
       </div>
       <div class="filter-container flex-group">
-        <aa-button
+        <ph-button
           (buttonClick)="onClick()"
           fieldClass=""
           buttonClass="primary"
@@ -392,9 +392,9 @@
           buttonLabel="Primary boxed"
           buttonText=".primary"
             [disabled]="false">
-        </aa-button>
+        </ph-button>
 
-        <aa-button
+        <ph-button
           (buttonClick)="onClick()"
           fieldClass="inline margin-top-1-5"
           buttonClass="primary margin-top-0-25"
@@ -403,12 +403,12 @@
           buttonLabel="Primary inline"
             buttonText=".primary inline">
           >
-          </aa-button>
+          </ph-button>
       </div>
 
       <div class="flex-group">
         <div class="flex-1">
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary"
@@ -416,9 +416,9 @@
             [showLabel]="true"
             buttonLabel="Primary"
             buttonText=".primary">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="tertiary"
@@ -426,9 +426,9 @@
             [showLabel]="true"
             buttonLabel="Tertiary"
             buttonText=".tertiary (deprecated .menu)"
-            ></aa-button>
+            ></ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="delete"
@@ -436,9 +436,9 @@
             [showLabel]="true"
             buttonLabel="Delete"
             buttonText=".delete">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary add"
@@ -446,9 +446,9 @@
             [showLabel]="true"
             buttonLabel="Add"
             buttonText=".primary .add">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary download"
@@ -456,9 +456,9 @@
             [showLabel]="true"
             buttonLabel="Download"
             buttonText="'.primary .download'">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary chevron-down"
@@ -466,9 +466,9 @@
             [showLabel]="true"
             buttonLabel="Chevron down"
             buttonText=".primary .chevron-down">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary previous"
@@ -476,9 +476,9 @@
             [showLabel]="true"
             buttonLabel="Previous"
             buttonText=".primary .previous">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="approve"
@@ -486,9 +486,9 @@
             [showLabel]="true"
             buttonLabel="Approve"
             buttonText=".approve">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="void"
@@ -496,9 +496,9 @@
             [showLabel]="true"
             buttonLabel="Void"
             buttonText=".void">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="review blue"
@@ -506,9 +506,9 @@
             [showLabel]="true"
             buttonLabel="Review (blue)"
             buttonText=".review .blue">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="secondary return"
@@ -516,11 +516,11 @@
             [showLabel]="true"
             buttonLabel="Secondary return"
             buttonText=".secondary return">
-          </aa-button>
+          </ph-button>
         </div>
 
         <div class="flex-1">
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="secondary"
@@ -528,9 +528,9 @@
             [showLabel]="true"
             buttonLabel="Secondary"
             buttonText=".secondary">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             [buttonClass]="'cancel'"
@@ -538,9 +538,9 @@
             [showLabel]="true"
             [buttonLabel]="'Cancel'"
             buttonText=".cancel">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary"
@@ -549,9 +549,9 @@
             buttonLabel="Disabled"
             buttonText=".disabled"
             [disabled]="true">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary calendar"
@@ -559,9 +559,9 @@
             [showLabel]="true"
             buttonLabel="Calendar"
             buttonText=".primary .calendar">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary chevron-up"
@@ -569,9 +569,9 @@
             [showLabel]="true"
             buttonLabel="Chevron up"
             buttonText=".primary .chevron-up">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary add-selected"
@@ -579,9 +579,9 @@
             [showLabel]="true"
             buttonLabel="Add selected"
             buttonText=".primary .add-selected">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="primary next"
@@ -589,9 +589,9 @@
             [showLabel]="true"
             buttonLabel="Next"
             buttonText=".primary .next">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="reject"
@@ -599,9 +599,9 @@
             [showLabel]="true"
             buttonLabel="Reject"
             buttonText=".reject">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="review red"
@@ -609,9 +609,9 @@
             [showLabel]="true"
             buttonLabel="Review (red)"
             buttonText=".review .red">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             fieldClass=""
             buttonClass="review light blue"
@@ -619,7 +619,7 @@
             [showLabel]="true"
             buttonLabel="Review (light blue)"
             buttonText=".review .blue .light">
-          </aa-button>
+          </ph-button>
         </div>
       </div>
     </section>
@@ -637,49 +637,49 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">E.g. primary</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonType</td>
             <td datalabel="Type">Type</td>
             <td datalabel="Default">null</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">boxed, label-hidden or label-transparent</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">buttonId</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[showLabel]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonLabel</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your label...</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text...</td>
@@ -690,7 +690,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           standardButtons=true;
@@ -713,14 +713,14 @@
       <div class="describe margin-bottom-1">
         <p>If you want a button with just an icon and no text, set `customIconsRound` to true, the add the relevant class
           shown in the table to the right or <a href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled" target="_blank">pick your own here</a>.
-          <strong class="aa-red-100">Our button components have the label hidden by default. If you want
+          <strong class="ph-red-100">Our button components have the label hidden by default. If you want
             display the label, set [showLabel]=`true`.
           </strong>
         </p>
       </div>
       <div class="flex-group">
         <div class="col-left">
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="light-blue"
             [customIconsRound]="true"
@@ -728,9 +728,9 @@
             [showLabel]="true"
             buttonIcon="settings"
             buttonLabel=".light-blue or primary">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="orange"
             fieldClass=""
@@ -738,9 +738,9 @@
             [showLabel]="true"
             buttonLabel=".orange or .void"
             buttonIcon="clear">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="green"
             fieldClass=""
@@ -748,9 +748,9 @@
             [showLabel]="true"
             buttonLabel=".green or .approve"
             buttonIcon="check">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="red"
             fieldClass=""
@@ -758,11 +758,11 @@
             [showLabel]="true"
             buttonLabel=".red or .reject"
             buttonIcon="delete">
-          </aa-button>
+          </ph-button>
         </div>
 
         <div class="col-right">
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="blue"
             fieldClass=""
@@ -770,9 +770,9 @@
             [showLabel]="true"
             buttonLabel=".blue or.secondary"
             buttonIcon="filter_list">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="red"
             fieldClass=""
@@ -780,9 +780,9 @@
             [showLabel]="true"
             buttonLabel=".red or .reject"
             buttonIcon="clear">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="blue"
             fieldClass=""
@@ -790,9 +790,9 @@
             [showLabel]="true"
             buttonLabel=".blue or .secondary"
             buttonIcon="compare_arrows">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             (buttonClick)="onClick()"
             buttonClass="green"
             fieldClass=""
@@ -800,7 +800,7 @@
             [showLabel]="true"
             buttonLabel=".green or .approve"
             buttonIcon="play_arrow">
-          </aa-button>
+          </ph-button>
         </div>
       </div>
     </section>
@@ -818,19 +818,19 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[customIconsRound]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">.primary, .void, .approve, .reject etc</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonIcon</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new" target="_blank">icon friendly name</a></td>
@@ -841,7 +841,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           iconButtons=true;
@@ -867,35 +867,35 @@
           one of the Material Icons and then choose your background colour.</p>
       </div>
 
-      <aa-button [buttonEnriched]="true" (buttonClick)="onClick()" type="button" buttonId="myBtnId"
-        title="Your meeting is at 14:00" iconName="alarm" iconColour="aa-burgundy-100">
+      <ph-button [buttonEnriched]="true" (buttonClick)="onClick()" type="button" buttonId="myBtnId"
+        title="Your meeting is at 14:00" iconName="alarm" iconColour="ph-burgundy-100">
         <ng-container toolbar>
-          <div class="material-icons aa-light-blue-100" (click)="onSettingsClick($event)">settings</div>
-          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
+          <div class="material-icons ph-light-blue-100" (click)="onSettingsClick($event)">settings</div>
+          <ph-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
             <h4>More info</h4>
             <p>Enter any extra information here.</p>
-          </aa-tooltip>
+          </ph-tooltip>
         </ng-container>
-      </aa-button>
+      </ph-button>
 
-      <aa-button [buttonEnriched]="true" title="Your airline tickets have arrived" iconName="flight"
-        iconColour="aa-orange-100">
+      <ph-button [buttonEnriched]="true" title="Your airline tickets have arrived" iconName="flight"
+        iconColour="ph-orange-100">
         <ng-container toolbar>
-          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
+          <ph-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
             <h4>More info</h4>
             <p>Enter any extra information here.</p>
-          </aa-tooltip>
+          </ph-tooltip>
         </ng-container>
-      </aa-button>
+      </ph-button>
 
-      <aa-button [buttonEnriched]="true" title="Review figures" iconName="insights" iconColour="aa-green-100">
+      <ph-button [buttonEnriched]="true" title="Review figures" iconName="insights" iconColour="ph-green-100">
         <ng-container toolbar>
-          <aa-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
+          <ph-tooltip class="align-left" [isInfo]="true" setMinWidth="12rem" ypos="bottom" xpos="right" [zIndex]="1">
             <h4>More info</h4>
             <p>Enter any extra information here.</p>
-          </aa-tooltip>
+          </ph-tooltip>
         </ng-container>
-      </aa-button>
+      </ph-button>
 
     </section>
 
@@ -912,56 +912,56 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">N/A</td>
             <td datalabel="Type">Component</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonEnriched]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonType</td>
             <td datalabel="Type">Type</td>
             <td datalabel="Default">null</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">boxed, label-hidden or label-transparent</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your button Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">title</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">iconName</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default"><a href="https://fonts.google.com/icons?selected=Material+Icons:accessibility_new"
                 target="_blank">icon friendly name</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">iconColour</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your foreground <a routerLink="/colours">colour class name</a></td>
@@ -972,7 +972,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
         bladeIsOpen(true);
         customButton=false;
@@ -1007,180 +1007,180 @@
       <section class="flex-group space-between">
         <div class="margin-bottom-1">
           <section class="flex-group flex-start margin-bottom-1">
-            <aa-button
+            <ph-button
               [buttonSplit]="true"
               (buttonClick)="onClick()"
               [navLeftside]="false"
               [navBottom]="false"
               fieldClass="boxed margin-right-2"
-              buttonClass="bg-aa-light-blue-100"
+              buttonClass="bg-ph-light-blue-100"
               buttonLabel="Primary"
               buttonText="Default"
               buttonId="myBtnId"
               maxHeight="10.75rem"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
 
           <section class="flex-group flex-start margin-bottom-1">
-            <aa-button
+            <ph-button
                 [buttonSplit]="true"
                 [navBottom]="false"
                 (buttonClick)="onClick()"
                 fieldClass="boxed"
-                buttonClass="bg-aa-blue-100"
+                buttonClass="bg-ph-blue-100"
                 buttonLabel="Secondary"
                 buttonText="Default"
                 buttonId="myBtnId"
               >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
 
           <section class="flex-group flex-start">
-            <aa-button
+            <ph-button
                 [buttonSplit]="true"
                 [navBottom]="false"
                 (buttonClick)="onClick()"
                 fieldClass="boxed"
-                buttonClass="bg-aa-red-100"
+                buttonClass="bg-ph-red-100"
                 buttonLabel="Error"
                 buttonText="Default"
                 buttonId="myBtnId"
               >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
         </div>
 
         <div>
           <section class="flex-group flex-end margin-bottom-1">
-            <aa-button
+            <ph-button
               class="margin-right-0"
               [buttonSplit]="true"
               [navBottom]="false"
               (buttonClick)="onClick()"
               [navLeftside]="true"
               fieldClass="boxed margin-right-0"
-              buttonClass="bg-aa-light-blue-100"
+              buttonClass="bg-ph-light-blue-100"
               buttonLabel="Primary"
               buttonText="navLeftside true"
               buttonId="myBtnId"
               maxHeight="10.75rem"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-light-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-light-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
 
           <section class="flex-group flex-end margin-bottom-1">
-            <aa-button
+            <ph-button
               [buttonSplit]="true"
               (buttonClick)="onClick()"
               [navLeftside]="true"
               [navBottom]="false"
               fieldClass="boxed"
-              buttonClass="bg-aa-blue-100"
+              buttonClass="bg-ph-blue-100"
               buttonLabel="Secondary"
               buttonText="navLeftside true"
               buttonId="myBtnId"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-blue-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-blue-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
 
           <section class="flex-group flex-end">
-            <aa-button
+            <ph-button
               [buttonSplit]="true"
               (buttonClick)="onClick()"
               [navLeftside]="true"
               [navBottom]="false"
               fieldClass="boxed"
-              buttonClass="bg-aa-red-100"
+              buttonClass="bg-ph-red-100"
               buttonLabel="Error"
               buttonText="navLeftside true"
               buttonId="myBtnId"
             >
               <ng-container bs-buttons>
-                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=true; showPubLater=false; showCancelPub=false; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">forward_to_inbox</span>
                   Publish now
                 </button>
-                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=true; showCancelPub=false; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">schedule_send</span>
                   Publish later
                 </button>
-                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="aa-red-100">
+                <button (click)="showPub=false; showPubLater=false; showCancelPub=true; showButtonClick=false" class="ph-red-100">
                   <span class="material-icons">unsubscribe</span>
                   Cancel scheduled publish
                 </button>
               </ng-container>
-            </aa-button>
+            </ph-button>
           </section>
         </div>
       </section>
@@ -1200,61 +1200,61 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonSplit]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[navLeftside]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[navBottom]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Function</td>
             <td datalabel="Default">onClick()</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">boxed, label-hidden or label-transparent</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonClass</td>
             <td datalabel="Type">Class</td>
-            <td datalabel="Default"><a routerLink="/colours">bg-aa-light-blue-100</a> chevron-up</td>
+            <td datalabel="Default"><a routerLink="/colours">bg-ph-light-blue-100</a> chevron-up</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[showLabel]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonLabel</td>
             <td datalabel="Type">string</td>
             <td datalabel="Default">Your label</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your button Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
@@ -1265,7 +1265,7 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">maxHeight</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Example: "20.75rem"</td>
@@ -1276,7 +1276,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           customButton=false;
@@ -1301,7 +1301,7 @@
       </div>
 
       <section class="flex-group flex-start">
-        <aa-button
+        <ph-button
           class="flex-stretch"
           [buttonSummary]="true"
           [showDescription]="true"
@@ -1311,8 +1311,8 @@
           title="Insignificant"
           desc="Technical non-compliance. No warning received; no regulatory reporting required"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           class="flex-stretch"
           [buttonSummary]="true"
           [showDescription]="true"
@@ -1324,8 +1324,8 @@
           reports/involvement of authority. Attracts
           administrative fine"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           class="flex-stretch"
           [buttonSummary]="true"
           [showDescription]="true"
@@ -1337,8 +1337,8 @@
           authority. Attracts compensation/penalties/
           enforcement action"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           class="flex-stretch"
           [buttonSummary]="true"
           [showDescription]="true"
@@ -1350,8 +1350,8 @@
           prosecution, penalties/enforcement action.
           Individual license temporarily revoked"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           class="flex-stretch"
           [buttonSummary]="true"
           [showDescription]="true"
@@ -1363,7 +1363,7 @@
           company law suits; permit to operate
           substantially modified or withdrawn"
         >
-        </aa-button>
+        </ph-button>
       </section>
 
     </section>
@@ -1381,43 +1381,43 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonSummary]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">class</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">stretch</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonDescription]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">status</td>
             <td datalabel="Type">string</td>
             <td datalabel="Default">insignificant, minor, moderate, high or major</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">level</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">Your number</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">title</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your title</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">desc</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your description</td>
@@ -1428,7 +1428,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           customButton=false;
@@ -1453,55 +1453,55 @@
       </div>
 
       <section class="flex-group flex-start">
-        <aa-button
+        <ph-button
           (buttonClick)="monActive=!monActive"
           [class.active]="monActive"
           [buttonDayPicker]="true"
           buttonText="Mon"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="tueActive=!tueActive"
           [class.active]="tueActive"
           [buttonDayPicker]="true"
           buttonText="Tue"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="wedActive=!wedActive"
           [class.active]="wedActive"
           [buttonDayPicker]="true"
           buttonText="Wed"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="thuActive=!thuActive"
           [class.active]="thuActive"
           [buttonDayPicker]="true"
           buttonText="Thu"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="friActive=!friActive"
           [class.active]="friActive"
           [buttonDayPicker]="true"
           buttonText="Fri"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="satActive=!satActive"
           [class.active]="satActive"
           [buttonDayPicker]="true"
           buttonText="Sat"
         >
-        </aa-button>
-        <aa-button
+        </ph-button>
+        <ph-button
           (buttonClick)="sunActive=!sunActive"
           [class.active]="sunActive"
           [buttonDayPicker]="true"
           buttonText="Sun"
         >
-        </aa-button>
+        </ph-button>
       </section>
     </section>
 
@@ -1518,25 +1518,25 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[buttonDayPicker]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">true</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">[class.active]</td>
             <td datalabel="Type">Active class based on index</td>
             <td datalabel="Default">active</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">(buttonClick)</td>
             <td datalabel="Type">Method to set active index</td>
             <td datalabel="Default">index</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-button</td>
+            <td datalabel="Element">ph-button</td>
             <td datalabel="Attribute">buttonText</td>
             <td datalabel="Type">string</td>
             <td datalabel="Default">Mon to Sun</td>
@@ -1547,7 +1547,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100"
+      <button class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           customButton=false;
@@ -1564,42 +1564,42 @@
   </section>
 </section>
 
-<aa-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
+<ph-blade [blockPageUI]="false" [toggleBlade]="toggleBlade" [suppressAutoClose]="false" topPosition="3.5rem" [zIndex]="2"
   bladeSize="one-column-width" bladeHeading="Gist" [enableIcon]="true" iconName="table_rows"
   (bladeOpen)="bladeIsOpen($event)">
   <article class="blade-content">
     <div *ngIf="customButton">
-      <a href="https://gist.github.com/angloux/5b70cd0840d5c0bd769ea6779c15b941" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/5b70cd0840d5c0bd769ea6779c15b941"></app-gist>
-    </div>
-    <div *ngIf="iconButtons">
-      <a href="https://gist.github.com/angloux/39c18050b054e45ee13058f134127528" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/39c18050b054e45ee13058f134127528"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/7ca94711e15d6ecee9e7fc630f834d68" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/7ca94711e15d6ecee9e7fc630f834d68"></app-gist>
     </div>
     <div *ngIf="standardButtons">
-      <a href="https://gist.github.com/angloux/c53c6e952f975b5c51dc58892970a25f" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c53c6e952f975b5c51dc58892970a25f"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/2821ce01908d2fdbd4eef3cbe5a4a77b" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/2821ce01908d2fdbd4eef3cbe5a4a77b"></app-gist>
+    </div>
+    <div *ngIf="iconButtons">
+      <a href="https://gist.github.com/PixelHeadsLtd/acaa5a25997bf63f32e63545fb1e313b" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/acaa5a25997bf63f32e63545fb1e313b"></app-gist>
     </div>
     <div *ngIf="buttonEnriched">
-      <a href="https://gist.github.com/angloux/3df7bd5d8164eedb7b51c9e4ed45f925" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/3df7bd5d8164eedb7b51c9e4ed45f925"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/30b833d85b68d81a8f448a617480e997" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/30b833d85b68d81a8f448a617480e997"></app-gist>
     </div>
     <div *ngIf="buttonSplit">
-      <a href="https://gist.github.com/angloux/013a7951b2bc64de155b2fd02763542d" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/013a7951b2bc64de155b2fd02763542d"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/0803f95cef6599d806547a3080059603" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/0803f95cef6599d806547a3080059603"></app-gist>
     </div>
     <div *ngIf="buttonSummary">
-      <a href="https://gist.github.com/angloux/42bc778ad5f8ff285309173d52135dc8" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/42bc778ad5f8ff285309173d52135dc8"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/1484c129f29980566c02ac0184c8dae6" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/1484c129f29980566c02ac0184c8dae6"></app-gist>
     </div>
     <div *ngIf="buttonDayPick">
-      <a href="https://gist.github.com/angloux/53ec55cf348ebb07ce56bd57b8affa59" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/53ec55cf348ebb07ce56bd57b8affa59"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/f027750702725dfafecff718fce46d9c" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/f027750702725dfafecff718fce46d9c"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>
 
-<aa-overlay
+<ph-overlay
 [showOverlay]="showOverlay"
 [zIndex]="10"
 minWidth=""
@@ -1610,12 +1610,12 @@ bottomPos=""
 leftPos=""
 >
 <ng-container overlay-header>
-  <header class="aa-overlay-header flex-group space-between bg-aa-blue-100">
+  <header class="ph-overlay-header flex-group space-between bg-ph-blue-100">
     <div>
       <h1 class="boxed white-100">Always try to use the component</h1>
-      <h3 class="boxed white-100">If you can't use the component, <a class="aa-white-100" routerLink="/field">please go here for info on correct form layout</a></h3>
+      <h3 class="boxed white-100">If you can't use the component, <a class="ph-white-100" routerLink="/field">please go here for info on correct form layout</a></h3>
     </div>
-    <aa-button
+    <ph-button
       (buttonClick)="showOverlay=false"
       buttonClass="primary"
       fieldClass="boxed label-hidden"
@@ -1623,7 +1623,7 @@ leftPos=""
       [showLabel]="false"
       buttonLabel=".void"
       buttonIcon="close">
-    </aa-button>
+    </ph-button>
   </header>
 </ng-container>
 <ng-container overlay-content>
@@ -1636,7 +1636,7 @@ leftPos=""
       </p>
     </div>
     <div class="flex-group flex-start">
-      <aa-button
+      <ph-button
         buttonClass="custom-icons orange"
         fieldClass=""
         [showLabel]="false"
@@ -1645,9 +1645,9 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="reply"
       >
-      </aa-button>
+      </ph-button>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons primary"
         fieldClass=""
         [showLabel]="false"
@@ -1656,14 +1656,14 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="edit"
       >
-      </aa-button>
+      </ph-button>
 
       <div class="field">
         <label>Input</label>
         <input placeholder="Buttons don't need labels" type="text" />
       </div>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons white"
         fieldClass=""
         [showLabel]="false"
@@ -1672,9 +1672,9 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="description"
       >
-      </aa-button>
+      </ph-button>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons red"
         fieldClass=""
         [showLabel]="false"
@@ -1683,18 +1683,18 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="clear"
       >
-      </aa-button>
+      </ph-button>
     </div>
 
     <h2>Show a label with [showLabel]=`true`</h2>
     <div class="describe">
       <p>
         It's very rare, but there may be occassions where you want to display the button
-        with an additional label. To do this, simple set <strong class="aa-red-100">[showLabel]=`true`</strong>
+        with an additional label. To do this, simple set <strong class="ph-red-100">[showLabel]=`true`</strong>
       </p>
     </div>
     <div class="flex-group flex-start">
-      <aa-button
+      <ph-button
         buttonClass="custom-icons orange"
         fieldClass=""
         [showLabel]="true"
@@ -1703,9 +1703,9 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="reply"
       >
-      </aa-button>
+      </ph-button>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons primary"
         fieldClass=""
         [showLabel]="true"
@@ -1714,14 +1714,14 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="edit"
       >
-      </aa-button>
+      </ph-button>
 
       <div class="field">
         <label>Input</label>
         <input placeholder="The left aligns with me" type="text" />
       </div>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons white"
         fieldClass=""
         [showLabel]="true"
@@ -1730,9 +1730,9 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="description"
       >
-      </aa-button>
+      </ph-button>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons red"
         fieldClass=""
         [showLabel]="true"
@@ -1741,23 +1741,23 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="clear"
       >
-      </aa-button>
+      </ph-button>
     </div>
 
     <h2>FieldClass boxed</h2>
     <div class="describe">
       <p>
-        If you have <strong class="aa-red-100">[showLabel]=`true`</strong> and you add <strong class="aa-red-100">fieldClass=`boxed`</strong>, the button will maintain the label
+        If you have <strong class="ph-red-100">[showLabel]=`true`</strong> and you add <strong class="ph-red-100">fieldClass=`boxed`</strong>, the button will maintain the label
         and shift upwards without losing the alignment with other form elements that display a label and have the class `boxed`
       </p>
 
       <p>
-        If you want to hide the label by setting <strong class="aa-red-100">[showLabel]=`false`</strong> and you also want to ensure the
+        If you want to hide the label by setting <strong class="ph-red-100">[showLabel]=`false`</strong> and you also want to ensure the
         correct alignment, then you will need to remove the label on other field elements.
       </p>
     </div>
     <div class="flex-group flex-start">
-      <aa-button
+      <ph-button
         buttonClass="custom-icons primary"
         fieldClass="boxed"
         [showLabel]="true"
@@ -1766,14 +1766,14 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="edit"
       >
-      </aa-button>
+      </ph-button>
 
       <div class="field boxed">
         <label>Input</label>
         <input placeholder="Boxed & with label" type="text" />
       </div>
 
-      <aa-button
+      <ph-button
         buttonClass="custom-icons red"
         fieldClass="boxed"
         buttonLabel="Boxed"
@@ -1781,7 +1781,7 @@ leftPos=""
         [customIcons]="true"
         buttonIcon="clear"
       >
-      </aa-button>
+      </ph-button>
 
       <div class="field boxed">
         <input placeholder="Boxed & no label" type="text" />
@@ -1789,4 +1789,4 @@ leftPos=""
     </div>
   </section>
 </ng-container>
-</aa-overlay>
+</ph-overlay>

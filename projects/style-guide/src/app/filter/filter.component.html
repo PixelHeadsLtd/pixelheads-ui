@@ -10,25 +10,25 @@
       <div class="describe margin-bottom-1">
         <p>The filter can be hidden by default. If this is the case, please use
           the <a routerLink="/buttons">filter button</a> to toggle the filter.
-          <strong class="aa-red-100">Please remember to place the filter inbetween the
+          <strong class="ph-red-100">Please remember to place the filter inbetween the
             'control-bar' and the 'content-container'. For details,
             please refer to the <a routerLink="/page-template">Page templates</a>
           </strong>
         </p>
         <p>
-          <strong class="aa-red-100">
+          <strong class="ph-red-100">
             If you need to add a form to the filter. Make sure the filter sits inside the form and not the form inside the filter.
             This is so we maintain a responsive layout. Adding a form wrapper inside the filter will break flex
           </strong>
         </p>
       </div>
-      <aa-button
+      <ph-button
         (buttonClick)="toggleFilter=!toggleFilter"
         fieldClass="boxed"
         buttonClass="secondary filter"
         buttonLabel="Filter"
         buttonText="Filter">
-      </aa-button>
+      </ph-button>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -44,13 +44,13 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-filter</td>
-            <td datalabel="Attribute">aa-filter</td>
+            <td datalabel="Element">ph-filter</td>
+            <td datalabel="Attribute">ph-filter</td>
             <td datalabel="Type">Component</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-filter</td>
+            <td datalabel="Element">ph-filter</td>
             <td datalabel="Attribute">[myForm]</td>
             <td datalabel="Type">FormGroup instance</td>
             <td datalabel="Default">See gist</td>
@@ -67,13 +67,13 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFilter=true; showFilterLeft=false">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showFilter=true; showFilterLeft=false">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 
-  <aa-filter
+  <ph-filter
     *ngIf="!toggleFilter"
     [spaceBetween]="false"
     [myForm]="parentForm"
@@ -81,7 +81,7 @@
     <div class="field">
       <div class="flex-group space-between">
         <label for="">Course name</label>
-        <aa-tooltip 
+        <ph-tooltip 
           [customIcon]="true" 
           iconName="help" 
           [isInfo]="true" 
@@ -91,7 +91,7 @@
         >
           <h4>Ahoy there</h4>
           <p>Mr Beaver had begun telling them that the White Witch wasn't really human at all </p>
-        </aa-tooltip>
+        </ph-tooltip>
       </div>
 
       <input type="text" name="" id="" />
@@ -144,9 +144,9 @@
         <option value="hamster">Product development</option>
       </select>
     </div>
-      <aa-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary"></aa-button>
-      <aa-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel"></aa-button>
-  </aa-filter>
+      <ph-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary"></ph-button>
+      <ph-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel"></ph-button>
+  </ph-filter>
 
     <!-- start content repeater -->
     <section class="content-repeater flex-group">
@@ -154,17 +154,17 @@
         <h2 class="boxed">Filter left</h2>
         <div class="describe margin-bottom-1">
           <p>Filter left can be useful when we need to display the page in two columns,
-            it also reducuces vertical page scrolling. <strong class="aa-red-100"> Place this filter inside your 'content-container' adding the
+            it also reducuces vertical page scrolling. <strong class="ph-red-100"> Place this filter inside your 'content-container' adding the
               class names 'padding-left-0 flex-group flex-start'</strong>. This will push the filter over to the left side so there is no left spacing
               on the page whilst also setting up your container to display it's contents horizontally using flex. You're right side content
               will need to be wrapped in some container. You'll need to set the filter to be a lot narrower than your right-side content, to
               do this use a flex value on each, for example 'flex-1' for the filter and 'flex-5' for the right-side content.
-              <strong class="aa-red-100">See the <a routerLink="/flex">Flex section</a> for more details.</strong>
+              <strong class="ph-red-100">See the <a routerLink="/flex">Flex section</a> for more details.</strong>
             </p>
         </div>
 
         <div class="flex-group flex-start">
-          <aa-filter
+          <ph-filter
           [verticalDisplay]="true"
           [positionFixed]="false"
           [myForm]="parentForm"
@@ -178,7 +178,7 @@
           <div class="field">
             <div class="flex-group space-between">
               <label for="">Course name</label>
-              <aa-tooltip 
+              <ph-tooltip 
                 [customIcon]="true" 
                 iconName="help" 
                 [isInfo]="true" 
@@ -188,7 +188,7 @@
               >
                 <h4>Ahoy there</h4>
                 <p>Mr Beaver had begun telling them that the White Witch wasn't really human at all </p>
-              </aa-tooltip>
+              </ph-tooltip>
             </div>
       
             <input type="text" name="" id="" />
@@ -242,11 +242,11 @@
             </select>
           </div>
           <div class="flex-group flex-start">
-            <aa-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary"></aa-button>
-            <aa-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel"></aa-button>
+            <ph-button buttonText="Apply" buttonId="buttonApply" buttonClass="secondary"></ph-button>
+            <ph-button buttonText="Clear" buttonId="buttonClear" buttonClass="cancel"></ph-button>
           </div>
-        </aa-filter>
-        <!-- <div class="bg-aa-pink-100 padding-10 bd-red bd-solid bd-2">Test</div> -->
+        </ph-filter>
+        <!-- <div class="bg-ph-pink-100 padding-10 bd-red bd-solid bd-2">Test</div> -->
         </div>
 
       </section>
@@ -264,25 +264,25 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-filter</td>
-              <td datalabel="Attribute">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
+              <td datalabel="Attribute">ph-filter</td>
               <td datalabel="Type">Component</td>
               <td datalabel="Default">N/A</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">verticalDisplay</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">[myForm]</td>
               <td datalabel="Type">FormGroup instance</td>
               <td datalabel="Default">See gist</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">setWidth</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">15rem</td>
@@ -293,31 +293,31 @@
               </td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">positionFixed</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">topPos</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">0</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">leftPos</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">-1.25rem</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">bottomPos</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">0</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-filter</td>
+              <td datalabel="Element">ph-filter</td>
               <td datalabel="Attribute">offsetAdjacentContentPos</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">-4rem</td>
@@ -328,14 +328,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFilter=false; showFilterLeft=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showFilter=false; showFilterLeft=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -349,12 +349,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showFilter">
-      <a href="https://gist.github.com/angloux/3102c4fe214b14c9778de2908a2caccc" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/3102c4fe214b14c9778de2908a2caccc"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/87d84ad852fe7267946c9c4550be0a16" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/87d84ad852fe7267946c9c4550be0a16"></app-gist>
     </div>
     <div *ngIf="showFilterLeft">
-      <a href="https://gist.github.com/angloux/348f9ee97ea749ec31fed4bb80868f28" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/348f9ee97ea749ec31fed4bb80868f28"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/4cc5a9337fb137a98b03c0a95ebb0dd1" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/4cc5a9337fb137a98b03c0a95ebb0dd1"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

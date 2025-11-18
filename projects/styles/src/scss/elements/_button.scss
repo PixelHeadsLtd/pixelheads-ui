@@ -1,4 +1,4 @@
-aa-button {
+ph-button {
   label {
     min-height: 1.4rem; // Ensure consistent height when label has no data
     visibility: hidden;
@@ -25,16 +25,16 @@ aa-button {
 
   &.active {
     .button-day-picker {
-      background-color: _colour(aa-blue-70);
-      color: _colour(aa-white-100);
+      background-color: _colour(ph-blue-70);
+      color: _colour(ph-white-100);
       font-style: italic;
 
       &:hover {
-        color: _colour(aa-white-100);
+        color: _colour(ph-white-100);
       }
       
       div {
-        background-color: _colour(aa-blue-100);
+        background-color: _colour(ph-blue-100);
       }
     }
   }
@@ -45,7 +45,7 @@ button {
   &.btn-fav {
     padding: 0;
     font-size: _font(size-medium);
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     background-color: transparent;
     border-radius: 50%;
     border: none;
@@ -54,16 +54,16 @@ button {
     cursor: pointer;
 
     &:hover {
-      background-color: _colour(aa-blue-100);
-      color: _colour(aa-white-100)
+      background-color: _colour(ph-blue-100);
+      color: _colour(ph-white-100)
     }
   }
 
   &.button-day-picker {
     position: relative;
     cursor: pointer;
-    background-color: _colour(aa-white-100);
-    color: _colour(aa-plum-100);
+    background-color: _colour(ph-white-100);
+    color: _colour(ph-plum-100);
     border-radius: .5rem;
     border: none;
     width: 3.75rem;
@@ -72,8 +72,8 @@ button {
     max-height: 3.75rem;
 
     &:hover {
-      border: 1px solid _colour(aa-blue-100);
-      color: _colour(aa-blue-100);
+      border: 1px solid _colour(ph-blue-100);
+      color: _colour(ph-blue-100);
     }
 
     strong {
@@ -89,7 +89,7 @@ button {
       right: 0;
       bottom: 0;
       top: 50%;
-      background-color: _colour(aa-grey-5);
+      background-color: _colour(ph-grey-5);
       border-radius: 0 0 .5rem .5rem;
     }
   }
@@ -102,7 +102,7 @@ button:not(
   .ag-side-button-button, 
   .ql-toolbar button, 
   .btn-enriched,
-  .aa-custom-select button,
+  .ph-custom-select button,
   .button-day-picker,
   .core-apps,
   .ag-button,
@@ -122,8 +122,8 @@ button:not(
 
   &:focus:not(.accordion-trigger, .grid-large, .grid-list, .grid-small) {
     outline: none;
-    border: 1px solid _colour(aa-light-blue-100);
-    box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
+    border: 1px solid _colour(ph-light-blue-100);
+    box-shadow: 0 0 3pt 1pt _colour(ph-light-blue-15);
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -136,7 +136,7 @@ button:not(
   &.custom-icons {
     position: relative;
     border: 1px solid transparent;
-    color: _palette(aa-white-100);
+    color: _palette(ph-white-100);
     padding-left: 2.25rem;
 
     .count {
@@ -152,28 +152,28 @@ button:not(
       letter-spacing: 0;
 
       &.orange, .pending {
-        background-color: _palette(aa-orange-100);
-        color: _palette(aa-white-100);
+        background-color: _palette(ph-orange-100);
+        color: _palette(ph-white-100);
       }
       &.blue, .secondary {
-        background-color: _palette(aa-blue-100);
-        color: _palette(aa-white-100);
+        background-color: _palette(ph-blue-100);
+        color: _palette(ph-white-100);
       }
       &.green, .complete {
-        background-color: _palette(aa-green-100);
-        color: _palette(aa-white-100);
+        background-color: _palette(ph-green-100);
+        color: _palette(ph-white-100);
       }
       &.red, .error {
-        background-color: _palette(aa-red-100);
-        color: _palette(aa-white-100);
+        background-color: _palette(ph-red-100);
+        color: _palette(ph-white-100);
       }
       &.light-blue, .info, .primary {
-        background-color: _palette(aa-light-blue-100);
-        color: _palette(aa-white-100);
+        background-color: _palette(ph-light-blue-100);
+        color: _palette(ph-white-100);
       }
       &.white {
-        background-color: _palette(aa-white-100);
-        color: _palette(aa-blue-100);
+        background-color: _palette(ph-white-100);
+        color: _palette(ph-blue-100);
       }
     }
     
@@ -209,12 +209,12 @@ button:not(
   &.material-icons:not(
     .page-header .material-icons, 
     .context-menu .material-icons,
-    .aa-comments .material-icons
+    .ph-comments .material-icons
     ),
   &.material-icons-outlined:not(
     .page-header .material-icons-outlined, 
     .context-menu .material-icons-outlined,
-    .aa-comments .material-icons-outlined
+    .ph-comments .material-icons-outlined
     ) {
     &:focus, &:hover {
       box-shadow: none;
@@ -223,17 +223,17 @@ button:not(
   }
   &.material-icons:not(
     .context-menu .material-icons, 
-    .aa-tree .material-icons, 
+    .ph-tree .material-icons, 
     .material-icons.toggle,
     .clear-search,
-    .aa-comments .material-icons
+    .ph-comments .material-icons
     ),
   &.material-icons-outlined:not(
     .context-menu .material-icons-outlined, 
-    .aa-tree .material-icons, 
+    .ph-tree .material-icons, 
     .material-icons.toggle,
     .clear-search,
-    .aa-comments .material-icons-outlined
+    .ph-comments .material-icons-outlined
     ) {
     font-size: 1.15rem;
     padding: 0;
@@ -320,7 +320,7 @@ button:not(
     }
   }
   &.red,
-  &.bg-aa-red-100,
+  &.bg-ph-red-100,
   &.error {
     @include button-red;
     &:hover {
@@ -328,7 +328,7 @@ button:not(
     }
   }
   &.blue,
-  &.bg-aa-blue-100,
+  &.bg-ph-blue-100,
   &.secondary {
     @include button-blue;
     &:hover {
@@ -336,7 +336,7 @@ button:not(
     }
   }
   &.light-blue,
-  &.bg-aa-light-blue-100,
+  &.bg-ph-light-blue-100,
   &.primary,
   &.info {
     @include button-light-blue;
@@ -345,14 +345,14 @@ button:not(
     }
   }
   &.pale-blue,
-  &.bg-aa-light-blue-15 {
+  &.bg-ph-light-blue-15 {
     @include button-pale-blue;
     &:hover {
       @include button-pale-blue-hover;
     }
   }
   &.blue-sky,
-  &.bg-aa-blue-sky-100,
+  &.bg-ph-blue-sky-100,
   &.pending {
     @include button-blue-sky;
     &:hover {
@@ -360,7 +360,7 @@ button:not(
     }
   }
   &.orange,
-  &.bg-aa-orange-100,
+  &.bg-ph-orange-100,
   &.pending {
     @include button-orange;
     &:hover {
@@ -368,7 +368,7 @@ button:not(
     }
   }
   &.green,
-  &.bg-aa-green-100,
+  &.bg-ph-green-100,
   &.complete {
     @include button-green;
     &:hover {
@@ -390,7 +390,7 @@ button:not(
   &.transparent {
     border-color: transparent;
     background-color: transparent;
-    color: _colour(aa-grey-100);
+    color: _colour(ph-grey-100);
   }
   &.cancel {
     @include button-white;
@@ -543,7 +543,7 @@ button:not(
   &.icon-cog {
     // deprecated - use .settings
     color: _colour(white);
-    background-color: _colour(aa-light-blue-100);
+    background-color: _colour(ph-light-blue-100);
     font-size: 1.25rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -586,7 +586,7 @@ button:not(
 
   &.button-summary {
     &:hover {
-      background-color: _colour(aa-light-blue-5)!important;
+      background-color: _colour(ph-light-blue-5)!important;
     }
     width: 21rem;
     p, h2 {
@@ -596,30 +596,30 @@ button:not(
     &.insignificant,
     &.minor {
       h1, h2 {
-        border-color: _colour(aa-blue-100);
+        border-color: _colour(ph-blue-100);
         border-width: 1px;
-        color: _colour(aa-blue-100);
+        color: _colour(ph-blue-100);
       }
     }
     &.moderate {
       h1, h2 {
-        border-color: _palette(aa-orange-100);
+        border-color: _palette(ph-orange-100);
         border-width: 1px;
-        color: _palette(aa-orange-100);
+        color: _palette(ph-orange-100);
       }
     }
     &.high {
       h1, h2 {
-        border-color: _palette(aa-red-100);
+        border-color: _palette(ph-red-100);
         border-width: 1px;
-        color: _palette(aa-red-100);
+        color: _palette(ph-red-100);
       }
     }
     &.major {
       h1, h2 {
-        border-color: _palette(aa-red-100);
+        border-color: _palette(ph-red-100);
         border-width: 5px;
-        color: _palette(aa-red-100);
+        color: _palette(ph-red-100);
       }
     }
   }
@@ -650,13 +650,13 @@ button {
     cursor: pointer;
     padding: 1rem .5rem 1rem .75rem;
     border-radius: .25rem;
-    border: 1px solid _colour(aa-grey-10);
+    border: 1px solid _colour(ph-grey-10);
 
     &:hover {
       background: linear-gradient(
         180deg,
-        _colour(aa-white-100),
-        _colour(aa-light-blue-10)
+        _colour(ph-white-100),
+        _colour(ph-light-blue-10)
       );
     }
 
@@ -664,7 +664,7 @@ button {
       position: absolute;
       top: .5rem;
       right: .75rem;
-      .aa-tooltip {
+      .ph-tooltip {
         width: .75rem;
         margin: -.05rem 0 0 .25rem;
         &:before {
@@ -710,7 +710,7 @@ button {
     content: "\f005";
   }
   &.selected {
-    color: _palette(aa-orange-100);
+    color: _palette(ph-orange-100);
     &:before {
       @include icon-left-before-solid;
     }
@@ -721,7 +721,7 @@ button {
   button {
     &.material-icons,
     &.material-icons-outlined {
-      color: _colour(aa-grey-100);
+      color: _colour(ph-grey-100);
     }
   }
 }
@@ -814,7 +814,7 @@ button {
     z-index: 9999999;
     left: calc(100% - 2.1rem);
     bottom: 100%;
-    background-color: _colour(aa-grey-2);
+    background-color: _colour(ph-grey-2);
 
     button {
       border: none;
@@ -832,7 +832,7 @@ button {
         box-shadow: none;
       }
       &:hover {
-        background-color: _colour(aa-light-blue-10);
+        background-color: _colour(ph-light-blue-10);
       }
       .material-icons,
       .material-icons-outlined {
@@ -846,9 +846,9 @@ button {
 .header-secondary {
   button {
     &:hover {
-      background-color: _palette(aa-light-blue-40);
-      color: _palette(aa-blue-100);
-      border-color: _palette(aa-light-blue-40);
+      background-color: _palette(ph-light-blue-40);
+      color: _palette(ph-blue-100);
+      border-color: _palette(ph-light-blue-40);
     }
   }
 }

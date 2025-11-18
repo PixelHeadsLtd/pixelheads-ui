@@ -8,7 +8,7 @@ interface SelectableItem {
 }
 
 @Component({
-  selector: 'aa-multi-select',
+  selector: 'ph-multi-select',
   templateUrl: './multi-select.component.html',
   styleUrls: ['./multi-select.component.scss'],
   providers: [

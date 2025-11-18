@@ -15,7 +15,7 @@
       </div>
 
       <div class="flex-group flex-start">
-        <aa-progress-circle
+        <ph-progress-circle
           [panelView]="false"
           [value]="'200/1000'"
           [isSmall]="false"
@@ -23,8 +23,8 @@
           [percent]="'20'"
           tooltipMinWidth="12rem"
           [colour]="'#009fe3'">
-        </aa-progress-circle>
-          <aa-progress-circle
+        </ph-progress-circle>
+          <ph-progress-circle
           [panelView]="false"
           [value]="'200/1000'"
           [isSmall]="false"
@@ -32,28 +32,28 @@
           [percent]="'40'"
           tooltipMinWidth="12rem"
           [colour]="'#b3025c'">
-        </aa-progress-circle>
-          <aa-progress-circle
+        </ph-progress-circle>
+          <ph-progress-circle
           [isSmall]="false"
           [name]="'Joiners'"
           [percent]="'60'"
           tooltipMinWidth="12rem"
           [colour]="'#aaa516'">
-        </aa-progress-circle>
-          <aa-progress-circle
+        </ph-progress-circle>
+          <ph-progress-circle
           [isSmall]="false"
           [name]="'Leavers'"
           [percent]="'80'"
           tooltipMinWidth="12rem"
           [colour]="'#9c5f0e'">
-        </aa-progress-circle>
-          <aa-progress-circle
+        </ph-progress-circle>
+          <ph-progress-circle
           [isSmall]="false"
           [name]="'Movers'"
           [percent]="'100'"
           tooltipMinWidth="12rem"
           [colour]="'#ffa1c4'">
-        </aa-progress-circle>
+        </ph-progress-circle>
       </div>
     </section>
 
@@ -76,37 +76,37 @@
             <td datalabel="Default">.flex-group .flex-center</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
-            <td datalabel="Attribute"><strong class="aa-red-100">[panelView]</strong></td>
+            <td datalabel="Element">ph-progress-circle</td>
+            <td datalabel="Attribute"><strong class="ph-red-100">[panelView]</strong></td>
             <td datalabel="Type">Boolean</td>
-            <td datalabel="Default"><strong class="aa-red-100">False</strong></td>
+            <td datalabel="Default"><strong class="ph-red-100">False</strong></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
+            <td datalabel="Element">ph-progress-circle</td>
             <td datalabel="Attribute">[isSmall]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
+            <td datalabel="Element">ph-progress-circle</td>
             <td datalabel="Attribute">name</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Toal reviews</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
+            <td datalabel="Element">ph-progress-circle</td>
             <td datalabel="Attribute">percent</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">0-100</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
+            <td datalabel="Element">ph-progress-circle</td>
             <td datalabel="Attribute">toolTipMinWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">12rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-circle</td>
+            <td datalabel="Element">ph-progress-circle</td>
             <td datalabel="Attribute">colour</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">#009fe3</td>
@@ -117,7 +117,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=true; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=true; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -132,68 +132,68 @@
 
         <div class="flex-group flex-start">
             <a class="text-decoration-none" routerLink="/progress-circle">
-              <aa-progress-circle
+              <ph-progress-circle
                 [panelView]="true"
                 [isSmall]="false"
-                headerColor="bg-aa-light-blue-15"
+                headerColor="bg-ph-light-blue-15"
                 value="200/1000"
                 name="Total reviews"
                 percent="20"
                 tooltipMinWidth="12rem"
                 colour="#009fe3">
-              </aa-progress-circle>
+              </ph-progress-circle>
             </a>
 
             <a class="text-decoration-none" routerLink="/progress-circle">
-              <aa-progress-circle
+              <ph-progress-circle
                 [isSmall]="false"
                 [panelView]="true"
-                headerColor="bg-aa-burgundy-5"
+                headerColor="bg-ph-burgundy-5"
                 value="200/1000"
                 name="Unchanged"
                 percent="40"
                 tooltipMinWidth="12rem"
                 colour="#b3025c">
-              </aa-progress-circle>
+              </ph-progress-circle>
             </a>
 
           <a class="text-decoration-none" routerLink="/progress-circle">
-            <aa-progress-circle
+            <ph-progress-circle
               [panelView]="true"
               [isSmall]="false"
-              headerColor="bg-aa-green-5"
+              headerColor="bg-ph-green-5"
               name="Joiners"
               percent="60"
               tooltipMinWidth="12rem"
               colour="#008770">
-            </aa-progress-circle>
+            </ph-progress-circle>
           </a>
 
           <a class="text-decoration-none" routerLink="/progress-circle">
-            <aa-progress-circle
+            <ph-progress-circle
               [panelView]="true"
               [isSmall]="false"
-              headerColor="bg-aa-orange-5"
+              headerColor="bg-ph-orange-5"
               name="Leavers"
               percent="80"
               tooltipMinWidth="12rem"
               colour="#9c5f0e">
-            </aa-progress-circle>
+            </ph-progress-circle>
           </a>
 
           <a class="text-decoration-none" routerLink="/progress-circle">
-            <aa-progress-circle
+            <ph-progress-circle
               [panelView]="true"
               [hideChevron]="true"
               [isSmall]="false"
               [isError]="true"
-              headerColor="bg-aa-red-5"
+              headerColor="bg-ph-red-5"
               value="200/1000"
               name="Hide chevron true"
               percent="20"
               tooltipMinWidth="12rem"
               colour="#c60c31">
-            </aa-progress-circle>
+            </ph-progress-circle>
           </a>
         </div>
       </section>
@@ -217,55 +217,55 @@
               <td datalabel="Default">.flex-group .flex-center</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
-              <td datalabel="Attribute"><strong class="aa-red-100">[panelView]</strong></td>
+              <td datalabel="Element">ph-progress-circle</td>
+              <td datalabel="Attribute"><strong class="ph-red-100">[panelView]</strong></td>
               <td datalabel="Type">Boolean</td>
-              <td datalabel="Default"><strong class="aa-red-100">True</strong></td>
+              <td datalabel="Default"><strong class="ph-red-100">True</strong></td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[isSmall]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[hideChevron]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[isError], [isWarning], [isInfo]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">False</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">headerColor</td>
               <td datalabel="Type">String</td>
-              <td datalabel="Default"><a routerLink="/colours" class="aa-red-100">Choose colour</a></td>
+              <td datalabel="Default"><a routerLink="/colours" class="ph-red-100">Choose colour</a></td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">name</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Total reviews</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">percent</td>
               <td datalabel="Type">Number</td>
               <td datalabel="Default">0-100</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">toolTipMinWidth</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">12rem</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">colour</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">#009fe3</td>
@@ -276,7 +276,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=true; showProgressCircleClean=false; showCustomProgressCircle=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=true; showProgressCircleClean=false; showCustomProgressCircle=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -300,7 +300,7 @@
               [class.active]="selectedIndex === i"
               class="cursor-pointer text-decoration-none {{item.progressColor}}"
             >
-              <aa-progress-circle
+              <ph-progress-circle
                 [panelView]="true"
                 [hideChevron]="true"
                 [enableTooltip]="item.tooltipEnabled"
@@ -321,7 +321,7 @@
                 <ng-container tooltip-content>
                   This is my tooltip message
                 </ng-container>
-              </aa-progress-circle>
+              </ph-progress-circle>
             </a>
           </div>
 
@@ -359,13 +359,13 @@
               <td datalabel="Default">.active</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">Component</td>
               <td datalabel="Type">Component</td>
-              <td datalabel="Default">See above <strong class="aa-red-100">Progress circle panel view</strong></td>
+              <td datalabel="Default">See above <strong class="ph-red-100">Progress circle panel view</strong></td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">progressColor</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">orange, green, blue, light-blue, red</td>
@@ -376,19 +376,19 @@
               </td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[enableAlertShield]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">alertShieldStatus</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">.info, .error, .warning, .success</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">alertShieldText</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your text (Keep it short)</td>
@@ -399,55 +399,55 @@
               </td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[enableAlertShieldTooltip]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[tooltipTopLeft]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true or false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[tooltipTopRight]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true or false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[tooltipBottomLeft]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true or false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[tooltipBottomRight]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true or false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">toolTipMinWidth</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">12rem</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[showTooltipHeading]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">true of false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">tooltipHeading</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your tooltip heading</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-progress-circle</td>
+              <td datalabel="Element">ph-progress-circle</td>
               <td datalabel="Attribute">[tooltip-content]</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your tooltip message text</td>
@@ -458,7 +458,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=true; showCustomProgressCircle=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=true; showCustomProgressCircle=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -472,24 +472,24 @@
             <p>Build your own bespoke content</p>
           </div>
 
-          <aa-button
+          <ph-button
             *ngIf="!asLink"
             (buttonClick)="asLink=!asLink"
             fieldClass="boxed margin-bottom-1"
             buttonClass="primary"
             buttonText="Header as anchor">
-          </aa-button>
+          </ph-button>
 
-          <aa-button
+          <ph-button
             *ngIf="asLink"
             (buttonClick)="asLink=!asLink"
             fieldClass="boxed margin-bottom-1"
             buttonClass="secondary"
             buttonText="Header basic">
-          </aa-button>
+          </ph-button>
 
           <div class="flex-group flex-start">
-            <aa-progress-circle
+            <ph-progress-circle
               *ngFor="let item of progressCustom"
               [customProgressCircle]="item.customProgressCircle"
               panelHeight="{{item.panelHeight}}"
@@ -512,7 +512,7 @@
               </ng-container>
 
               <ng-container custom-footer>
-                <aa-button
+                <ph-button
                   [customIcons]="true"
                   (buttonClick)="onClick()"
                   buttonId="buttonId"
@@ -520,10 +520,10 @@
                   fieldClass="boxed"
                   buttonText="{{item.btnStatusText}}"
                   buttonIcon="{{item.btnIcon}}">
-                </aa-button>
+                </ph-button>
               </ng-container>
 
-            </aa-progress-circle>
+            </ph-progress-circle>
           </div>
         </section>
 
@@ -540,49 +540,49 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">[customProgressCircle]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">True</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">panelHeight</td>
                 <td datalabel="Type">Style</td>
                 <td datalabel="Default">Your panel height in rem or %</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">customHeaderClass</td>
                 <td datalabel="Type">Class</td>
                 <td datalabel="Default">Use one of our <a routerLink="/colours">background colours here</a></td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">customFooterClass</td>
                 <td datalabel="Type">Class</td>
                 <td datalabel="Default">If needed, add one of our modifier classes</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">customHeaderClass</td>
                 <td datalabel="Type">Class</td>
                 <td datalabel="Default">Use one of our <a routerLink="/colours">background colours here</a></td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">percent</td>
                 <td datalabel="Type">Number</td>
                 <td datalabel="Default">Progress percentage</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-progress-circle</td>
+                <td datalabel="Element">ph-progress-circle</td>
                 <td datalabel="Attribute">colour</td>
                 <td datalabel="Type">Progress circle colour</td>
                 <td datalabel="Default">
                   <div class="flex-group flex-start flex-align-center">
                     <strong class="margin-right-0-5">Available colours</strong>
-                    <aa-tooltip
+                    <ph-tooltip
                       [includeLabel]="false"
                       [includeLegend]="false"
                       [isInfo]="true"
@@ -594,7 +594,7 @@
                       xpos="right"
                       [zIndex]="1"
                     >
-                    <section class="flex-group flex-start aa-grey-100">
+                    <section class="flex-group flex-start ph-grey-100">
                       <div>
                         <h4>Use the hash value</h4>
                         Green = #008770<br/>
@@ -604,7 +604,7 @@
                         Black = #3c3c3c<br/>
                       </div>
                     </section>
-                    </aa-tooltip>
+                    </ph-tooltip>
                   </div>
                 </td>
               </tr>
@@ -614,14 +614,14 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=true">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showProgressCircle=false; showProgressCirclePanelView=false; showProgressCircleClean=false; showCustomProgressCircle=true">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
 </section>
 
-<aa-blade
+<ph-blade
   [blockPageUI]="false"
   [toggleBlade]="toggleBlade"
   [suppressAutoClose]="false"
@@ -635,20 +635,20 @@
   >
   <article class="blade-content">
     <div *ngIf="showProgressCircle">
-      <a href="https://gist.github.com/angloux/adde91f7f8309fc5c6aa5148620850b9" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/adde91f7f8309fc5c6aa5148620850b9"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/44584d312712fe49cc99c892a2db97f4" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/44584d312712fe49cc99c892a2db97f4"></app-gist>
     </div>
     <div *ngIf="showProgressCirclePanelView">
-      <a href="https://gist.github.com/angloux/f95ffa2a6624663ef13cdef6dddd82f3" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/f95ffa2a6624663ef13cdef6dddd82f3"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/b809faa67311f903a837dd5eeb139208" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/b809faa67311f903a837dd5eeb139208"></app-gist>
     </div>
     <div *ngIf="showProgressCircleClean">
-      <a href="https://gist.github.com/angloux/8ea6d0d7efaa2503f59bda90cd369d2d" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/8ea6d0d7efaa2503f59bda90cd369d2d"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/a6b595ea8099f8ab8e08c8eb36cf3eaa" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/a6b595ea8099f8ab8e08c8eb36cf3eaa"></app-gist>
     </div>
     <div *ngIf="showCustomProgressCircle">
-      <a href="https://gist.github.com/angloux/a3481c50712db3bfe841dd6218d6ad2f" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/a3481c50712db3bfe841dd6218d6ad2f"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c709694b2b40ea84867428cba80b2a56" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c709694b2b40ea84867428cba80b2a56"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

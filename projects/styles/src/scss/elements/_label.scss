@@ -3,7 +3,7 @@ label:not(.ag-theme-balham), legend:not(.ag-theme-balham) {
   font-family: _font(family-medium);
   font-size: _font(size-default);
   font-weight: initial;
-  color: _colour(aa-grey-100);
+  color: _colour(ph-grey-100);
   padding: 0 0 .5rem 0;
 }
 
@@ -24,6 +24,6 @@ label:not(.ag-theme-balham), legend:not(.ag-theme-balham) {
 // gradient
 .gradient {
   label {
-    color: _palette(aa-white-100);
+    color: _palette(ph-white-100);
   }
 } 

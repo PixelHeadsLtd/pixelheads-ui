@@ -11,7 +11,7 @@
               <p>These are the Actions summaries that are wrapped inside .feature-box</p>
             </div>
 
-            <aa-button
+            <ph-button
               *ngIf="!verticalDisplay"
               (buttonClick)="verticalDisplay= !verticalDisplay"
               fieldClass="boxed margin-bottom-1"
@@ -20,9 +20,9 @@
               [showLabel]="false"
               buttonLabel="Primary"
               buttonText="Show vertical display">
-            </aa-button>
+            </ph-button>
 
-            <aa-button
+            <ph-button
               *ngIf="verticalDisplay"
               (buttonClick)="verticalDisplay= !verticalDisplay"
               fieldClass="boxed margin-bottom-1"
@@ -31,14 +31,14 @@
               [showLabel]="false"
               buttonLabel="Primary"
               buttonText="Show default display">
-            </aa-button>
+            </ph-button>
 
-            <aa-actions-summary
+            <ph-actions-summary
               [actionsSummaryItems]="actionsSummaryItems"
               [verticalDisplay]="verticalDisplay"
               [noWrap]="true"
             >
-            </aa-actions-summary>
+            </ph-actions-summary>
 
           </section>
 
@@ -57,37 +57,37 @@
               </thead>
               <tbody>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">verticalDisplay</td>
                   <td datalabel="Type">Boolean</td>
                   <td datalabel="Default">False</td>
                 </tr>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">noWrap</td>
                   <td datalabel="Type">Boolean</td>
                   <td datalabel="Default">False</td>
                 </tr>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">actionsSummaryItems</td>
                   <td datalabel="Type">Array</td>
                   <td datalabel="Default">Your array</td>
                 </tr>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">heading</td>
                   <td datalabel="Type">String</td>
                   <td datalabel="Default">Your heading</td>
                 </tr>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">value</td>
                   <td datalabel="Type">Number</td>
                   <td datalabel="Default">Your value</td>
                 </tr>
                 <tr>
-                  <td datalabel="Element">aa-actions-summary</td>
+                  <td datalabel="Element">ph-actions-summary</td>
                   <td datalabel="Attribute">status</td>
                   <td datalabel="Type">String</td>
                   <td datalabel="Default">'default', 'approved', 'pending', 'rejected', 'not-started'</td>
@@ -98,14 +98,14 @@
 
           <!-- mini menu -->
           <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
   </section>
 
-  <aa-blade
+  <ph-blade
       [blockPageUI]="false"
       [toggleBlade]="toggleBlade"
       [suppressAutoClose]="false"
@@ -118,7 +118,7 @@
       (bladeOpen)="bladeIsOpen($event)"
   >
     <article class="blade-content">
-        <a href="https://gist.github.com/angloux/96b30f8bd915e6d9cdad06e372842264" target="_blank">View Gist on GitHub</a>
-        <app-gist src="angloux/96b30f8bd915e6d9cdad06e372842264"></app-gist>
+        <a href="https://gist.github.com/PixelHeadsLtd/fb327b7a80f81f26a8a6053a4ffe9d83" target="_blank">View Gist on GitHub</a>
+        <app-gist src="PixelHeadsLtd/fb327b7a80f81f26a8a6053a4ffe9d83"></app-gist>
     </article>
-  </aa-blade>
+  </ph-blade>

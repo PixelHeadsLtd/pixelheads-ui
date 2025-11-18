@@ -15,19 +15,19 @@
       <div class="flex-group flex-start">
         <div>
           <h3>Success</h3>
-          <aa-alert alertClass="success" alertText="Success"></aa-alert>
+          <ph-alert alertClass="success" alertText="Success"></ph-alert>
         </div>
         <div>
           <h3>Info</h3>
-          <aa-alert alertClass="info" alertText="Info"></aa-alert>
+          <ph-alert alertClass="info" alertText="Info"></ph-alert>
         </div>
         <div>
           <h3>Warning</h3>
-          <aa-alert alertClass="warning" alertText="Warning"></aa-alert>
+          <ph-alert alertClass="warning" alertText="Warning"></ph-alert>
         </div>
         <div>
           <h3>Error</h3>
-          <aa-alert alertClass="error" alertText="Error"></aa-alert>
+          <ph-alert alertClass="error" alertText="Error"></ph-alert>
         </div>
       </div>
     </section>
@@ -47,13 +47,13 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">alertClass</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">success, info,<br/> warning, error</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">alertText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your message</td>
@@ -64,7 +64,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
@@ -78,15 +78,15 @@
         </p>
       </div>
       <h3>Success</h3>
-      <aa-alert [alertClass]="'success'" [alertText]="'I wrote this story for you, but when I began it I had not realized that girls grow quicker than books. '"></aa-alert>
+      <ph-alert [alertClass]="'success'" [alertText]="'I wrote this story for you, but when I began it I had not realized that girls grow quicker than books. '"></ph-alert>
       <h3>Info</h3>
-      <aa-alert [alertClass]="'info'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <ph-alert [alertClass]="'info'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></ph-alert>
       <h3>Warning</h3>
-      <aa-alert [alertClass]="'warning'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <ph-alert [alertClass]="'warning'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></ph-alert>
       <h3>Error</h3>
-      <aa-alert [alertClass]="'error'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></aa-alert>
+      <ph-alert [alertClass]="'error'" [alertText]="'As a result you are already too old for fairy tales, and by the time it is printed and bound you will be older still.'"></ph-alert>
       <h3>Collapsible</h3>
-      <aa-alert 
+      <ph-alert 
         [collapsible]="true"
         [defaultExpanded]="false"
         [alignIconTop]="true"
@@ -108,7 +108,7 @@
         At this, the young man bent down, picked up yet another starfish, and threw it into the ocean. As it met the water, he said,
         `It made a difference for that one.`"
         >
-      </aa-alert>
+      </ph-alert>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -126,13 +126,13 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">alertClass</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">success, info,<br/> warning, error</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">alertText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your message</td>
@@ -143,43 +143,43 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">[collapsible]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">[defaultExpanded]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">[alignIconTop]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">alertTitle</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your title</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">collapsedHeight</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your height in rem or %</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">minWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your min-width in rem or %</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-alert</td>
+            <td datalabel="Element">ph-alert</td>
             <td datalabel="Attribute">maxWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your max-width in rem or %</td>
@@ -190,14 +190,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -210,7 +210,7 @@
     (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/595f67f71f76e5636ae715f0fcb78e33" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/595f67f71f76e5636ae715f0fcb78e33"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/2ce9af46322e4e9747d6f288b1d9c4ae" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/2ce9af46322e4e9747d6f288b1d9c4ae"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

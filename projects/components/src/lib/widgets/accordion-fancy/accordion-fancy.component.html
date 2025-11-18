@@ -1,4 +1,4 @@
-<div id="aa-accordion-fancy">
+<div id="ph-accordion-fancy">
   <section [id]="accordionId">
     <h3 class="margin-0">
       <button class="accordion-fancy-trigger box flex-group flex-align-center space-between" (click)="showBody=!showBody"
@@ -8,7 +8,7 @@
             <div *ngIf="!materialIcons" class="font-awesome-icons {{iconName}} {{iconColour}}"></div>
             <span>{{itemTitle}}</span>
           </div>
-          <div class="aa-toggle flex-align-center">
+          <div class="ph-toggle flex-align-center">
             <div *ngIf="!showBody" class="material-icons">add</div>
             <div *ngIf="showBody" class="material-icons">remove</div>
           </div>

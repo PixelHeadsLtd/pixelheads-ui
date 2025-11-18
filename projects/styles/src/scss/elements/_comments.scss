@@ -1,4 +1,4 @@
-.aa-comments {
+.ph-comments {
   position: relative;
   z-index: 10;
 
@@ -48,7 +48,7 @@
       font-size: _font(size-small);
       .comment {
         padding: 1rem 0 .25rem;
-        border-bottom: 1px dashed _colour(aa-grey-25);
+        border-bottom: 1px dashed _colour(ph-grey-25);
 
         &:last-child {
           border-bottom: none;

@@ -161,7 +161,7 @@
     content: "\f005";
   }
   &.selected {
-    color: _palette(aa-orange-100);
+    color: _palette(ph-orange-100);
     &:before {
       @include icon-left-before-solid;
     }
@@ -171,11 +171,11 @@
 .icon-star-favourites {
   &:before {
     @include icon-left-before-favourites;
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     content: "\f005";
   }
   &.selected {
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
     &:before {
       @include icon-left-before-favourites-solid;
     }
@@ -225,37 +225,37 @@
 
 .icon-red {
   &:before {
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
   }
 }
 
 .icon-green {
   &:before {
-    color: _palette(aa-green-100);
+    color: _palette(ph-green-100);
   }
 }
 
 .icon-blue {
   &:before {
-    color: _palette(aa-light-blue-100);
+    color: _palette(ph-light-blue-100);
   }
 }
 
 .icon-dark-blue {
   &:before {
-    color: _palette(aa-blue-100);
+    color: _palette(ph-blue-100);
   }
 }
 
 .icon-black {
   &:before {
-    color: _palette(aa-dark-grey-100);
+    color: _palette(ph-dark-grey-100);
   }
 }
 
 .icon-orange {
   &:before {
-    color: _palette(aa-orange-100);
+    color: _palette(ph-orange-100);
   }
 }
 
@@ -280,10 +280,10 @@
 
 // Icons for Favourites and Accordions
 .dashboard-container,
-aa-dashboard-favourites {
+ph-dashboard-favourites {
   .icon-pgms {
     @include icon-favourite-solid;
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     &:before {
       content: "\f1b3";
     }
@@ -291,7 +291,7 @@ aa-dashboard-favourites {
   
   .icon-credit-card {
     @include icon-favourite-solid;
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
     &:before {
       content: "\f09d";
     }
@@ -299,7 +299,7 @@ aa-dashboard-favourites {
 
   .icon-people {
     @include icon-favourite-solid;
-    color: _palette(aa-blue-sky-100);
+    color: _palette(ph-blue-sky-100);
     &:before {
       content: "\f0c0";
     }
@@ -307,7 +307,7 @@ aa-dashboard-favourites {
 
   .icon-dollar {
     @include icon-favourite;
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     &:before {
       content: "\f2e8";
     }
@@ -315,7 +315,7 @@ aa-dashboard-favourites {
 
   .icon-pig {
     @include icon-favourite-solid;
-    color: _palette(aa-pink-100);
+    color: _palette(ph-pink-100);
     &:before {
       content: "\f4d3";
     }
@@ -323,7 +323,7 @@ aa-dashboard-favourites {
 
   .icon-coal-thermal {
     @include icon-favourite-solid;
-    color: _palette(aa-burgundy-100);
+    color: _palette(ph-burgundy-100);
     &:before {
       content: "\f90c";
     }
@@ -331,7 +331,7 @@ aa-dashboard-favourites {
 
   .icon-coal {
     @include icon-favourite-solid;
-    color: _palette(aa-dark-grey-100);
+    color: _palette(ph-dark-grey-100);
     &:before {
       content: "\f06d";
     }
@@ -339,7 +339,7 @@ aa-dashboard-favourites {
 
   .icon-thermal-coal {
     @include icon-favourite-solid;
-    color: _palette(aa-burgundy-100);
+    color: _palette(ph-burgundy-100);
     &:before {
       content: "\f7e4";
     }
@@ -358,7 +358,7 @@ aa-dashboard-favourites {
 
   .icon-asterisk {
     @include icon-favourite-solid;
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
     &:before {
       content: "\f069";
     }
@@ -366,7 +366,7 @@ aa-dashboard-favourites {
 
   .icon-spinner {
     @include icon-favourite;
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
     &:before {
       content: "\f110";
     }
@@ -374,7 +374,7 @@ aa-dashboard-favourites {
 
   .icon-ellipsis {
     @include icon-favourite;
-    color: _palette(aa-dark-grey-100);
+    color: _palette(ph-dark-grey-100);
     &:before {
       content: "\f141";
     }
@@ -382,7 +382,7 @@ aa-dashboard-favourites {
 
   .icon-quil {
     @include icon-favourite-solid;
-    color: _palette(aa-dark-grey-100);
+    color: _palette(ph-dark-grey-100);
     &:before {
       content: "\f56b";
     }
@@ -390,7 +390,7 @@ aa-dashboard-favourites {
 
   .icon-user-access-reports {
     @include icon-favourite-solid;
-    color: _palette(aa-blue-sky-100);
+    color: _palette(ph-blue-sky-100);
     &:before {
       content: "\f3e0";
     }
@@ -398,7 +398,7 @@ aa-dashboard-favourites {
 
   .icon-upload {
     @include icon-favourite-solid;
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     &:before {
       content: "\f0aa";
     }
@@ -406,7 +406,7 @@ aa-dashboard-favourites {
 
   .icon-reports-dashboard {
     @include icon-favourite-solid;
-    color: _palette(aa-burgundy-100);
+    color: _palette(ph-burgundy-100);
     &:before {
       content: "\f3fd";
     }
@@ -414,7 +414,7 @@ aa-dashboard-favourites {
 
   .icon-fav-market-data {
     @include icon-favourite-solid;
-    color: _palette(aa-blue-sky-100);
+    color: _palette(ph-blue-sky-100);
     &:before {
       content: "\f201";
     }
@@ -422,7 +422,7 @@ aa-dashboard-favourites {
 
   .icon-bau-support {
     @include icon-favourite-solid;
-    color: _palette(aa-plum-100);
+    color: _palette(ph-plum-100);
     &:before {
       content: "\f0f1";
     }
@@ -430,7 +430,7 @@ aa-dashboard-favourites {
 
   .icon-user-guide {
     @include icon-favourite-solid;
-    color: _palette(aa-brown-100);
+    color: _palette(ph-brown-100);
     &:before {
       content: "\f5da";
     }
@@ -439,7 +439,7 @@ aa-dashboard-favourites {
   .icon-meta-data {
     @include icon-favourite;
     font-size: 2.2rem;
-    color: _palette(aa-dark-grey-100);
+    color: _palette(ph-dark-grey-100);
     &:before {
       content: "\f78a";
     }

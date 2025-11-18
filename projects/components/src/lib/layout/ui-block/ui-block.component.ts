@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-ui-block',
+  selector: 'ph-ui-block',
   templateUrl: './ui-block.component.html',
   styleUrls: ['./ui-block.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

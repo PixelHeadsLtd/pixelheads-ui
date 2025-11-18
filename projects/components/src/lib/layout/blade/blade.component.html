@@ -1,9 +1,9 @@
 <!-- MODAL UI BLOCK -->
-<div id="aa-blade-block-ui" class="aa-blade-block-ui" *ngIf="toggleBlade && blockPageUI" [ngStyle]="{'z-index' : zIndex}"></div>
+<div id="ph-blade-block-ui" class="ph-blade-block-ui" *ngIf="toggleBlade && blockPageUI" [ngStyle]="{'z-index' : zIndex}"></div>
 
 <!-- HEADER BAKED IN -->
 <aside 
-  id="aa-blade"
+  id="ph-blade"
   *ngIf="!customBlade" 
   class="blade animate-all {{bladeSize}}" 
   [ngClass]="{
@@ -45,7 +45,7 @@
 
 <!-- CUSTOMISABLE HEADER, CONTENT AND FOOTER -->
 <aside 
-  id="aa-custom-blade"
+  id="ph-custom-blade"
   *ngIf="customBlade" 
   class="blade animate-all {{bladeSize}}" 
   [ngClass]="{

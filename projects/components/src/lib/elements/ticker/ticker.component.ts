@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-ticker',
+  selector: 'ph-ticker',
   templateUrl: './ticker.component.html',
   styleUrl: './ticker.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

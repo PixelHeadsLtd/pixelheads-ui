@@ -1,5 +1,5 @@
 <div 
-    id="aa-alert-shield"
+    id="ph-alert-shield"
     *ngIf="!customShield && !numericalShield" 
     class="alert-shield {{alertShieldStatus}}" 
     [ngClass]="{
@@ -13,7 +13,7 @@
 </div>
 
 <div 
-    id="aa-custom-alert-shield"
+    id="ph-custom-alert-shield"
     *ngIf="customShield && !numericalShield" 
     class="custom-alert-shield"
 >
@@ -46,7 +46,7 @@
 </div>
 
 <div 
-    id="aa-numerical-alert-shield"
+    id="ph-numerical-alert-shield"
     *ngIf="numericalShield && !customShield" 
     class="alert-shield numerical-alert-shield {{alertShieldStatus}}" 
     [ngClass]="{ 'small' : alertShieldSmall }"

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'aa-dashboard-container',
+  selector: 'ph-dashboard-container',
   templateUrl: './dashboard-container.component.html',
   styleUrls: ['./dashboard-container.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

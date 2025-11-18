@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Field</h1>
-  <aa-alert alertClass="error" alertText="All form inputs must be wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="All form inputs must be wrapped in div.field"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -57,7 +57,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showField=true; showFieldSmall=false; showFieldInline=false; showFieldInlineForm=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showField=true; showFieldSmall=false; showFieldInline=false; showFieldInlineForm=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -113,7 +113,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFieldSmall=true; showField=false; showFieldInline=false; showFieldInlineForm=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showFieldSmall=true; showField=false; showFieldInline=false; showFieldInlineForm=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -162,7 +162,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFieldInline=true; showField=false; showFieldSmall=false; showFieldInlineForm=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showFieldInline=true; showField=false; showFieldSmall=false; showFieldInlineForm=false">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -174,7 +174,7 @@
           <p>
             For inline multiple inputs displayed vertically, use this example.
             If you would like your label text aligned to the right, add the class
-            <strong class="aa-red-100">text-align-right</strong> to your label.
+            <strong class="ph-red-100">text-align-right</strong> to your label.
           </p>
           <p>
             Note that we try to avoid using the inline forms version. Therefore,
@@ -249,14 +249,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showFieldInline=false; showField=false; showFieldSmall=false; showFieldInlineForm=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showFieldInline=false; showField=false; showFieldSmall=false; showFieldInlineForm=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -270,20 +270,20 @@
   >
   <article class="blade-content">
     <div *ngIf="showField">
-      <a href="https://gist.github.com/angloux/da5c890d170d3f1584c90580157797c3" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/da5c890d170d3f1584c90580157797c3"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/6a17c332d81e7695a8351507fea3b905" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/6a17c332d81e7695a8351507fea3b905"></app-gist>
     </div>
     <div *ngIf="showFieldSmall">
-      <a href="https://gist.github.com/angloux/4360c54f4b3e612a34e4b2d956fbb86e" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/4360c54f4b3e612a34e4b2d956fbb86e"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/0f3f627e59921334b420ab7b4fb19c2c" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/0f3f627e59921334b420ab7b4fb19c2c"></app-gist>
     </div>
     <div *ngIf="showFieldInline">
-      <a href="https://gist.github.com/angloux/717cc6a05b0488023d85920201771e98" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/717cc6a05b0488023d85920201771e98"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/f290236f30a77b0db9899138c0b90e4e" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/f290236f30a77b0db9899138c0b90e4e"></app-gist>
     </div>
     <div *ngIf="showFieldInlineForm">
-      <a href="https://gist.github.com/angloux/7416441aa65f97dd0716018615c980aa" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/7416441aa65f97dd0716018615c980aa"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/b7b571a66c9c4afba14e9c0d015b9550" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/b7b571a66c9c4afba14e9c0d015b9550"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

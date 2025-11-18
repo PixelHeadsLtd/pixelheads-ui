@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Comments</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 
 
@@ -16,11 +16,11 @@
             </p>
           </div>
 
-          <aa-comments 
+          <ph-comments 
             [comments]="commentsArray"
             [canDelete]="true"
             [positionRight]="false"
-            iconColour="aa-white-100"
+            iconColour="ph-white-100"
             [userName]="userName"
             buttonClass="primary nowrap"
             buttonText="Add comment"
@@ -29,7 +29,7 @@
             scrollHeight="15rem"
             panelWidth="29.5rem"
             >
-          </aa-comments>
+          </ph-comments>
 
         </section>
           
@@ -46,55 +46,55 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">[comments]</td>
                 <td datalabel="Type">Array</td>
                 <td datalabel="Default">commentsArray</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">[canDelete]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">True</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">[positionRight]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">False</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">iconColour</td>
                 <td datalabel="Type">Class</td>
                 <td datalabel="Default">Please use a <a routerLink="/colours">custom class colour</a></td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">userName</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Dynamically set using the user Id</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">(commentsMade)</td>
                 <td datalabel="Type">Method</td>
                 <td datalabel="Default">addComments($event)</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">(commentRemoved)</td>
                 <td datalabel="Type">Method</td>
                 <td datalabel="Default">onCommentRemoved($event)</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">panelWidth</td>
                 <td datalabel="Type">Any</td>
                 <td datalabel="Default">12rem</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-comments</td>
+                <td datalabel="Element">ph-comments</td>
                 <td datalabel="Attribute">scrollHeight</td>
                 <td datalabel="Type">Any</td>
                 <td datalabel="Default">15rem</td>
@@ -105,13 +105,13 @@
         
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
       
-      <aa-blade 
+      <ph-blade 
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -124,9 +124,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/a474317e50c4bb4cf58a3babbc076794" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/a474317e50c4bb4cf58a3babbc076794"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/af78e90c5d80b6cb3d8f5c33fd94f87a" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/af78e90c5d80b6cb3d8f5c33fd94f87a"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
     
 </section>

@@ -1,0 +1,115 @@
+.dashboard-container {
+  border: 1px solid _colour(ph-grey-10);
+  border-radius: 0.25rem;
+  min-width: 27rem;
+  margin-bottom: 0.75rem;
+
+.dashboard-heading {
+  border-radius: 0.25rem 0.25rem 0 0;
+  color: _colour(ph-grey-2);
+  font-family: _font(family-medium);
+  letter-spacing: 0.05rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.accordion-fancy-trigger {
+  background-color: _colour(ph-grey-2);
+  text-align: left;
+  width: 100%;
+  border: none;
+  border-radius: unset;
+  border-top: 1px solid _colour(ph-grey-10);
+  line-height: 2rem;
+  height: 3rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  .material-icons:not(.ph-toggle .material-icons),
+  .material-icons-outlined:not(.ph-toggle .material-icons),
+  .font-awesome-icons {
+    width: 3rem;
+    margin-right: .5rem;
+    text-align: center;
+    line-height: initial;
+  }
+
+  .font-awesome-icons {
+    font-size: _font(size-xlarge);
+  }
+  
+  .material-icons,
+  .material-icons-outlined {
+    font-size: 2rem;
+  }
+
+  .ph-toggle {
+    .material-icons,
+    .material-icons-outlined {
+      font-size: _font(size-medium);
+      color: _colour(ph-grey-100);
+    }
+  }
+
+  span {
+    color: _colour(trans-light-blue-to-blue-light);
+    font-weight: _font(weight-medium);
+    line-height: 0;
+    padding-top: .25rem;
+  }
+}
+
+.accordion-fancy-panel {
+  .accordion-favourites-list {
+    position: relative;
+    background-color: _colour(ph-light-blue-5);
+    border-top: 1px solid _colour(ph-light-blue-30);
+    padding: 0 0.75rem 0;
+    font-size: _font(size-default);
+    .description {          
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 80%;
+      a, div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline !important;
+    cursor: pointer !important;
+  }
+
+  .icon-star-favourites {
+    height: 3rem;
+    margin-top: .25rem;
+  }
+
+  .more-info {
+    margin: 0 0.25rem 0 3.5rem;
+    padding: 1rem 0 1.5rem;
+    border-top: 1px dashed _colour(ph-light-blue-30);
+  }
+
+  .icon-info {
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    color: _colour(alert-info-50);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+}

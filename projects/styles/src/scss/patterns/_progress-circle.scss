@@ -23,8 +23,8 @@
   }
 
   &.panel-view {
-    background-color: _colour(aa-white-100);
-    border: 1px solid _colour(aa-grey-10);
+    background-color: _colour(ph-white-100);
+    border: 1px solid _colour(ph-grey-10);
     margin-bottom: .75rem;
     width: 13rem;
     height: 13rem;
@@ -34,7 +34,7 @@
       margin: 0 0 1.25rem 0;
       width: 100%;
       padding: 1rem 0;
-      border-bottom: 1px solid _colour(aa-grey-10);
+      border-bottom: 1px solid _colour(ph-grey-10);
 
       .material-icons:not(.status),
       .material-icons-outlined:not(.status) {
@@ -57,7 +57,7 @@
   }
 
   .value {
-    //color: _colour(aa-light-blue-100);
+    //color: _colour(ph-light-blue-100);
     position: absolute;
     top: 0;
     left: 0;
@@ -113,56 +113,56 @@
 
     &.orange {
       svg circle {
-        stroke: _palette(aa-orange-100);
+        stroke: _palette(ph-orange-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _palette(aa-orange-100);
+        color: _palette(ph-orange-100);
       }
     }
 
     &.green {
       svg circle {
-        stroke: _palette(aa-green-100);
+        stroke: _palette(ph-green-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _palette(aa-green-100);
+        color: _palette(ph-green-100);
       }
     }
 
     &.blue {
       svg circle {
-        stroke: _colour(aa-blue-100);
+        stroke: _colour(ph-blue-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _colour(aa-blue-100);
+        color: _colour(ph-blue-100);
       }
     }
 
     &.red {
       svg circle {
-        stroke: _palette(aa-red-100);
+        stroke: _palette(ph-red-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _palette(aa-red-100);
+        color: _palette(ph-red-100);
       }
     }
 
     &.light-blue {
       svg circle {
-        stroke: _palette(aa-light-blue-100);
+        stroke: _palette(ph-light-blue-100);
       }
 
       .progress-circle,
       h3.title {
-        color: _palette(aa-light-blue-100);
+        color: _palette(ph-light-blue-100);
       }
     }
   }
@@ -178,8 +178,8 @@
         .progress-circle,
         h3.title,
         .percent {
-          color: _palette(aa-white-100);
-          background-color: _palette(aa-orange-100);
+          color: _palette(ph-white-100);
+          background-color: _palette(ph-orange-100);
         }
       }
     }
@@ -190,8 +190,8 @@
 
         .progress-circle,
         h3.title {
-          color: _palette(aa-white-100);
-          background-color: _palette(aa-green-100);
+          color: _palette(ph-white-100);
+          background-color: _palette(ph-green-100);
         }
       }
     }
@@ -202,8 +202,8 @@
 
         .progress-circle,
         h3.title {
-          color: _palette(aa-white-100);
-          background-color: _colour(aa-blue-100);
+          color: _palette(ph-white-100);
+          background-color: _colour(ph-blue-100);
         }
       }
     }
@@ -214,8 +214,8 @@
 
         .progress-circle,
         h3.title {
-          color: _palette(aa-white-100);
-          background-color: _palette(aa-red-100);
+          color: _palette(ph-white-100);
+          background-color: _palette(ph-red-100);
         }
       }
     }
@@ -226,8 +226,8 @@
 
         .progress-circle,
         h3.title {
-          color: _palette(aa-white-100);
-          background-color: _palette(aa-light-blue-100);
+          color: _palette(ph-white-100);
+          background-color: _palette(ph-light-blue-100);
         }
       }
     }
@@ -236,7 +236,7 @@
     &.active,
     &:hover {
       svg circle {
-        stroke: _palette(aa-white-100);
+        stroke: _palette(ph-white-100);
       }
     }
   }

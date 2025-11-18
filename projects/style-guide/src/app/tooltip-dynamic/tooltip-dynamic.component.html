@@ -20,8 +20,8 @@
             material-icons-outlined
             small
             cursor-default
-            aa-light-blue-100"
-            [aaTooltip]="
+            ph-light-blue-100"
+            [phTooltip]="
             '<section>' +
               '<h3>Guess what</h3>' +
               '<p>Just some information for you here</p>' +
@@ -39,8 +39,8 @@
             material-icons-outlined
             small
             cursor-default
-            aa-red-100"
-            [aaTooltip]="
+            ph-red-100"
+            [phTooltip]="
             '<section>' +
               '<h3>Oops</h3>' +
               '<p>Looks like there&quot;s some kind of error</p>' +
@@ -58,8 +58,8 @@
             material-icons-outlined
             small
             cursor-default
-            aa-orange-100"
-            [aaTooltip]="
+            ph-orange-100"
+            [phTooltip]="
             '<section>' +
               '<h3>Pending</h3>' +
               '<p>Shouldn&quot;t be too long now</p>' +
@@ -77,8 +77,8 @@
             material-icons-outlined
             small
             cursor-default
-            aa-green-100"
-            [aaTooltip]="
+            ph-green-100"
+            [phTooltip]="
             '<section>' +
               '<h3>Complete</h3>' +
               '<p>Well done! Everything has gone according to plan</p>' +
@@ -113,7 +113,7 @@
           </tr>
           <tr>
             <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">[aaTooltip]</td>
+            <td datalabel="Attribute">[phTooltip]</td>
             <td datalabel="Type">HTML</td>
             <td datalabel="Default">Your content, h1, paragraph etc</td>
           </tr>
@@ -159,7 +159,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showDefault=true; showNested=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showDefault=true; showNested=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -178,7 +178,7 @@
       <section class="flex-group flex-start margin-bottom-0-5">
         <div
           [position]="TooltipDynamicPosition.ABOVE"
-          [aaTooltip]="
+          [phTooltip]="
             '<section>' +
               '<h3>Oh dear!</h3>' +
               '<p>You can submit this form but there has been a serious error</p>' +
@@ -194,7 +194,7 @@
         </div>
         <div
           [position]="TooltipDynamicPosition.BELOW"
-          [aaTooltip]="
+          [phTooltip]="
             '<section>' +
               '<h3>Guess what</h3>' +
               '<p>Just some information for you here</p>' +
@@ -205,7 +205,7 @@
           tooltipStatus="info"
         >
           <ng-container tooltip-html>
-            <aa-alert-shield
+            <ph-alert-shield
               [alertShieldSmall]="false"
               [noWrap]="true"
               [hideLabel]="false"
@@ -213,12 +213,12 @@
               alertShieldStatus="info"
               alertShieldText="Info"
             >
-            </aa-alert-shield>
+            </ph-alert-shield>
           </ng-container>
         </div>
         <div
           [position]="TooltipDynamicPosition.RIGHT"
-          [aaTooltip]="
+          [phTooltip]="
             '<section>' +
               '<h3>Chickens</h3>' +
               '<p>Always let the government know how many chickens you have</p>' +
@@ -229,13 +229,13 @@
           tooltipStatus="info"
         >
           <ng-container tooltip-html>
-            <aa-checkbox 
+            <ph-checkbox 
               checkboxChecked="'checkboxChecked'" 
               checkboxId="checkboxId" 
               checkboxName="myCheckboxes"
               checkboxText="Chickens" 
               fieldClass="boxed margin-bottom-0 margin-right-0">
-          </aa-checkbox>
+          </ph-checkbox>
           </ng-container>
         </div>
       </section>
@@ -261,7 +261,7 @@
           </tr>
           <tr>
             <td datalabel="Element">Div</td>
-            <td datalabel="Attribute">[aaTooltip]</td>
+            <td datalabel="Attribute">[phTooltip]</td>
             <td datalabel="Type">HTML</td>
             <td datalabel="Default">Your content, h1, paragraph etc</td>
           </tr>
@@ -301,14 +301,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showDefault=false; showNested=true">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showDefault=false; showNested=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -322,12 +322,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showDefault">
-      <a href="https://gist.github.com/angloux/c0ecbe536f2c3b41e6841e2e78f2d54d" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/c0ecbe536f2c3b41e6841e2e78f2d54d"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c0ecbe536f2c3b41e6841e2e78f2d54d" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c0ecbe536f2c3b41e6841e2e78f2d54d"></app-gist>
     </div>
     <div *ngIf="showNested">
-      <a href="https://gist.github.com/angloux/624d199760c4737d3583d75c4006e1c6" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/624d199760c4737d3583d75c4006e1c6"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/624d199760c4737d3583d75c4006e1c6" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/624d199760c4737d3583d75c4006e1c6"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

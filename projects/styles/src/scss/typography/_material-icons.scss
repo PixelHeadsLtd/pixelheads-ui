@@ -38,33 +38,33 @@
   font-feature-settings: 'liga';
 
   &.icon-red {
-      color: _palette(aa-red-100);
+      color: _palette(ph-red-100);
   }
   &.icon-green {
-      color: _palette(aa-green-100);
+      color: _palette(ph-green-100);
   }
 
   &.icon-blue {
-      color: _palette(aa-light-blue-100);
+      color: _palette(ph-light-blue-100);
   }
 
   &.icon-dark-blue {
-      color: _palette(aa-blue-100);
+      color: _palette(ph-blue-100);
   }
 
   &.icon-black {
-      color: _palette(aa-dark-grey-100);
+      color: _palette(ph-dark-grey-100);
   }
 
   &.icon-orange {
-      color: _palette(aa-orange-100);
+      color: _palette(ph-orange-100);
   }
 
   &.icon-body-text {
-     color: _colour(aa-grey-100);
+     color: _colour(ph-grey-100);
   }
 }
 
 .icon-body-text {
-  color: _colour(aa-grey-100);
+  color: _colour(ph-grey-100);
 }

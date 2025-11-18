@@ -10,7 +10,7 @@
       <div class="describe margin-bottom-1">
         <p>
           <strong>Set the [leftPos]</strong> to adjust the custom-content popunder position. <strong>Set [width]</strong> to update the
-          popunder width. <strong>Set [hideLabel]</strong> to hide label nested inside aa-button. <strong>Set [btnSmall] to true</strong> if
+          popunder width. <strong>Set [hideLabel]</strong> to hide label nested inside ph-button. <strong>Set [btnSmall] to true</strong> if
           the smaller button is required when nested in a table or ag-grid
         </p>
       </div>
@@ -21,7 +21,7 @@
           <input type="text" placeholder="Name" />
         </div>
 
-        <aa-popover
+        <ph-popover
           leftPos="0"
           rightPos="initial"
           topPos="5.5rem"
@@ -53,7 +53,7 @@
             </section>
 
           </ng-container>
-        </aa-popover>
+        </ph-popover>
       </div>
     </section>
 
@@ -72,49 +72,49 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">btnLabel</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your label text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
-            <td datalabel="Attribute">leftPos - <strong class="aa-red-100">to show popover on the left</strong></td>
+            <td datalabel="Element">ph-popover</td>
+            <td datalabel="Attribute">leftPos - <strong class="ph-red-100">to show popover on the left</strong></td>
             <td datalabel="Type">Any</td>
-            <td datalabel="Default">0 <strong class="aa-red-100">(set rightPos to initial)</strong></td>
+            <td datalabel="Default">0 <strong class="ph-red-100">(set rightPos to initial)</strong></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
-            <td datalabel="Attribute">rightPos - <strong class="aa-red-100">to show popover on the right</strong></td>
+            <td datalabel="Element">ph-popover</td>
+            <td datalabel="Attribute">rightPos - <strong class="ph-red-100">to show popover on the right</strong></td>
             <td datalabel="Type">Any</td>
-            <td datalabel="Default">0 <strong class="aa-red-100">(set leftPos to initial)</strong></td>
+            <td datalabel="Default">0 <strong class="ph-red-100">(set leftPos to initial)</strong></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">width</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">20rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">call-to-action</td>
             <td datalabel="Type">Call to action</td>
             <td datalabel="Default">Your button</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">custom-content</td>
             <td datalabel="Type">Popup content</td>
             <td datalabel="Default">Your content</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">togglePopover()</td>
             <td datalabel="Type">Event</td>
             <td datalabel="Default">this.popOver.close();</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">zIndex</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">10</td>
@@ -125,25 +125,25 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">[popoverTop]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">bottomPos</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">3rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">arrowPos</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">-1rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-popover</td>
+            <td datalabel="Element">ph-popover</td>
             <td datalabel="Attribute">topPos</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">unset</td>
@@ -154,14 +154,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -174,7 +174,7 @@
     (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/2dbf290ef0c433a5ae3b075dabddbcd1" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/2dbf290ef0c433a5ae3b075dabddbcd1"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/7ee87da6fdd333a46a37b83d861a2d69" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/7ee87da6fdd333a46a37b83d861a2d69"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

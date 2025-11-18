@@ -1,5 +1,5 @@
 import { Injectable, ComponentRef, ViewContainerRef } from '@angular/core';
-import { ModalDialogComponent } from '../widgets/modal-dialog/modal-dialog.component';
+import { ModalDialogComponent } from '../layout/modal-dialog/modal-dialog.component';
 import { Subject, Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })

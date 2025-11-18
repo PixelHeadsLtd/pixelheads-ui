@@ -86,7 +86,7 @@ describe('BladeComponent', () => {
     component.toggleBlade = true;
     fixture.detectChanges();
 
-    const blade = debugElement.query(By.css('#aa-blade'));
+    const blade = debugElement.query(By.css('#ph-blade'));
     expect(blade).toBeTruthy();
   });
 

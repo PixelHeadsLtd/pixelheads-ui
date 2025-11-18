@@ -16,7 +16,7 @@
 
       <div>
         <div class="flex-group flex-start margin-bottom-1-5">
-          <aa-button
+          <ph-button
             (buttonClick)="moveProgressBar()"
             fieldClass="boxed"
             buttonClass="primary"
@@ -24,25 +24,25 @@
             [showLabel]="false"
             buttonText="Test standard progress-bar"
             >
-          </aa-button>
-          <aa-button
+          </ph-button>
+          <ph-button
             (buttonClick)="moveHeaderProgressBar()"
             fieldClass="boxed"
             buttonClass="secondary"
             [showLabel]="false"
             buttonText="Test header version"
             >
-          </aa-button>
+          </ph-button>
         </div>
-        <aa-progress-bar
+        <ph-progress-bar
           progressId="headerProgressBar"
           [displayOverHeader]="true"
-          progressColour="bg-aa-yellow-100"
+          progressColour="bg-ph-yellow-100"
           [complete]="0"
         >
-        </aa-progress-bar>
+        </ph-progress-bar>
 
-        <aa-progress-bar
+        <ph-progress-bar
           progressId="progressBar"
           maxWidth="25rem"
           titleBold="Step"
@@ -51,7 +51,7 @@
           leftSideText="3 of 4 complete"
           rightSideText="35 rem"
         >
-        </aa-progress-bar>
+        </ph-progress-bar>
       </div>
 
     </section>
@@ -71,43 +71,43 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">maxWidth</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">10</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">titleBold</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your bold text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">titleRegular</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your regular text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">complete</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">0</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">leftSideText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your left text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">rightSideText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your right text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">progressId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your progress Id</td>
@@ -118,7 +118,7 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-progress-bar</td>
+            <td datalabel="Element">ph-progress-bar</td>
             <td datalabel="Attribute">[displayOverHeader]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -129,14 +129,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -149,7 +149,7 @@
     (bladeOpen)="bladeIsOpen($event)"
 >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/4102f19c058d44fd7c25f44b9933a3fa" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/4102f19c058d44fd7c25f44b9933a3fa"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/acb5b0c53eacb540c68a21e89914b55f" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/acb5b0c53eacb540c68a21e89914b55f"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

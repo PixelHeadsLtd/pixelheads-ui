@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-list-selectable',
+  selector: 'ph-list-selectable',
   templateUrl: './list-selectable.component.html',
   styleUrls: ['./list-selectable.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

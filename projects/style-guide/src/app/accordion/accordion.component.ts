@@ -42,14 +42,14 @@ export class AccordionComponent {
   movies = [
     {
       name: 'Episode I - The Phantom Menace',
-      bgColor: 'bg-aa-blue-sky-100',
+      bgColor: 'bg-ph-blue-sky-100',
       headingColor: 'force-white',
       iconColor: 'force-white',
       toggleIconColor: 'force-white'
     },
     {
       name: 'Episode II - Attack of the Clones',
-      bgColor: 'bg-aa-lime-100',
+      bgColor: 'bg-ph-lime-100',
       headingColor: 'force-white',
       iconColor: 'force-white',
       toggleIconColor: 'force-white'
@@ -57,44 +57,44 @@ export class AccordionComponent {
     {
       name: 'Episode III - Revenge of the Sith',
       bgColour: '',
-      headingColor: 'aa-blue-100',
-      iconColour: 'aa-blue-100',
-      toggleIconColor: 'aa-blue-100'
+      headingColor: 'ph-blue-100',
+      iconColour: 'ph-blue-100',
+      toggleIconColor: 'ph-blue-100'
     },
     {
       name: 'Episode IV - A New Hope',
-      bgColor: 'bg-aa-blue-100',
+      bgColor: 'bg-ph-blue-100',
       headingColor: 'force-white',
       iconColour: 'force-white',
       toggleIconColor: 'force-white'
     },
     {
       name: 'Episode V - The Empire Strikes Back',
-      bgColor: 'bg-aa-red-100',
+      bgColor: 'bg-ph-red-100',
       headingColor: 'force-white',
       iconColour: 'force-white',
       toggleIconColor: 'force-white'
     },
     {
       name: 'Episode VI - Return of the Jedi',
-      bgColor: 'bg-aa-orange-100',
+      bgColor: 'bg-ph-orange-100',
       headingColor: 'force-white',
       iconColour: 'force-white',
       toggleIconColor: 'force-white'
     },
     {
       name: 'Episode VII - The Force Awakens',
-      bgColor: 'bg-aa-green-100',
+      bgColor: 'bg-ph-green-100',
       headingColor: 'force-white',
       iconColor: 'force-white',
       toggleIconColor: 'force-white'
     },
     {
       name: 'Episode VIII - The Last Jedi',
-      bgColor: 'bg-aa-grey-100',
-      headingColor: 'aa-white-100',
-      iconColor: 'aa-white-100',
-      toggleIconColor: 'aa-white-100'
+      bgColor: 'bg-ph-grey-100',
+      headingColor: 'ph-white-100',
+      iconColor: 'ph-white-100',
+      toggleIconColor: 'ph-white-100'
     }
   ];
 

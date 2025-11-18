@@ -1,0 +1,22 @@
+<article 
+  id="ph-overlay"
+  class="ph-overlay flex-center" 
+  *ngIf="showOverlay" 
+  [ngStyle]="{
+    'z-index' : zIndex
+  }">
+  <div 
+    class="ph-overlay-container" 
+    [ngStyle]="{
+      'min-width' : minWidth,
+      'max-width' : maxWidth,
+      'top' : topPos,
+      'right' : rightPos,
+      'bottom' : bottomPos,
+      'left' : leftPos
+    }"
+    >
+    <ng-content select="[overlay-header]"></ng-content>
+    <ng-content select="[overlay-content]"></ng-content>
+  </div>
+</article>

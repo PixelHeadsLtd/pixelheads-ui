@@ -1,6 +1,6 @@
-<section id="aa-icon-picker" class="aa-icon-picker margin-bottom-1">
+<section id="ph-icon-picker" class="ph-icon-picker margin-bottom-1">
     <label for="{{selectedIcon}}" *ngIf="showLabel">{{labelName}}</label>
-    <article class="aa-ip-filter flex-group flex-start flex-align-center">
+    <article class="ph-ip-filter flex-group flex-start flex-align-center">
       <div class="material-icons margin-right-0-5 {{selectedColor}}">{{selectedIcon}}</div>
       <div class="field boxed">
         <input 
@@ -15,26 +15,26 @@
       </div>
       <div class="field boxed">
         <select (change)="selectColor($event)">
-          <option value="aa-light-blue-100">Blue light</option>
-          <option value="aa-blue-100">Blue</option>
-          <option value="aa-brown-100">Brown</option>
-          <option value="aa-burgundy-100">Burgundy</option>
-          <option value="aa-green-100">Green</option>
-          <option value="aa-grey-50">Grey 50</option>
-          <option value="aa-grey-25">Grey 25</option>
-          <option value="aa-grey-10">Grey 10</option>
-          <option value="aa-grey-5">Grey 5</option>
-          <option value="aa-lime-100">Lime</option>
-          <option value="aa-ochre-100">Ochre</option>
-          <option value="aa-orange-100">Orange</option>
-          <option value="aa-pink-100">Pink</option>
-          <option value="aa-plum-100">Plum</option>
-          <option value="aa-red-100">Red</option>
-          <option value="aa-blue-sky-100">Sky blue</option>
+          <option value="ph-light-blue-100">Blue light</option>
+          <option value="ph-blue-100">Blue</option>
+          <option value="ph-brown-100">Brown</option>
+          <option value="ph-burgundy-100">Burgundy</option>
+          <option value="ph-green-100">Green</option>
+          <option value="ph-grey-50">Grey 50</option>
+          <option value="ph-grey-25">Grey 25</option>
+          <option value="ph-grey-10">Grey 10</option>
+          <option value="ph-grey-5">Grey 5</option>
+          <option value="ph-lime-100">Lime</option>
+          <option value="ph-ochre-100">Ochre</option>
+          <option value="ph-orange-100">Orange</option>
+          <option value="ph-pink-100">Pink</option>
+          <option value="ph-plum-100">Plum</option>
+          <option value="ph-red-100">Red</option>
+          <option value="ph-blue-sky-100">Sky blue</option>
         </select>
       </div>
     </article>
-    <article *ngIf="showIcons" class="aa-ip-results">
+    <article *ngIf="showIcons" class="ph-ip-results">
       <div 
         *ngFor="let icon of icons | iconFilter: searchIcon" 
         (click)="selectIcon(icon); showIcons=false" 

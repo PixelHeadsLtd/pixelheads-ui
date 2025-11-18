@@ -1,5 +1,5 @@
-.aa-favs {
-  &.aa-favs-landscape {
+.ph-favs {
+  &.ph-favs-landscape {
     @keyframes slideInLandscape {
       0%  { transform: translate3d(-24rem, 0, 0);}
       100%{ transform: translate3d(50%, 0, 50%);}
@@ -9,7 +9,7 @@
       animation: slideInLandscape .3s ease-in;
     }
   }
-  &.aa-favs-portrait {
+  &.ph-favs-portrait {
     @keyframes slideInPortrait {
       0%  { transform: translate3d(-12rem, 0, 0);}
       100%{ transform: translate3d(50%, 0, 50%);}
@@ -39,13 +39,13 @@
   }
 }
 
-aa-dashboard-favourites {
+ph-dashboard-favourites {
   flex: none !important;
 }
 .dashboard-favourite {
   position: relative;
   display: inline-block;
-  border-right: 1px solid _colour(aa-grey-25);
+  border-right: 1px solid _colour(ph-grey-25);
   padding: 0.5rem 2.5rem 0.5rem 0.75rem;
   margin: 0.5rem 0 0.75rem 0;
   height: 2.25rem;
@@ -66,7 +66,7 @@ aa-dashboard-favourites {
     top: 5rem;
     right: auto;
     width: 11rem;
-    background-color: _colour(aa-grey-2);
+    background-color: _colour(ph-grey-2);
     box-shadow: 0 0 12px _colour(box-shadow);
     padding: 0.75rem 0.75rem 0.75rem;
     opacity: 0;
@@ -78,11 +78,11 @@ aa-dashboard-favourites {
     top: 3.75rem;
     opacity: 1;
     visibility: visible;
-    background-color: _colour(aa-white-100);
+    background-color: _colour(ph-white-100);
   }
 
   &:hover {
-    background-color: _colour(aa-white-100);
+    background-color: _colour(ph-white-100);
     box-shadow: 0 0 12px _colour(box-shadow);
   }
 
@@ -116,7 +116,7 @@ aa-dashboard-favourites {
 
     button.icon-star {
       @include button-icon;
-      color: _colour(aa-grey-100);
+      color: _colour(ph-grey-100);
       position: absolute;
       right: .75rem;
       top: .5rem;
@@ -125,7 +125,7 @@ aa-dashboard-favourites {
       width: 1.5rem;
       height: 1.5rem;
       &.selected {
-        color: _palette(aa-orange-100);
+        color: _palette(ph-orange-100);
       }
     }
 }

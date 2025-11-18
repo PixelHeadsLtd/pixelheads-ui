@@ -2,7 +2,7 @@ import { AfterContentChecked, Component, ContentChild, Input, OnInit, TemplateRe
 import { TabNavigationSecondaryContentDirective } from './tab-navigation-secondary-content.directive';
 
 @Component({
-  selector: 'aa-tab-navigation-secondary-item',
+  selector: 'ph-tab-navigation-secondary-item',
   templateUrl: './tab-navigation-secondary-item.component.html',
   styleUrls: ['./tab-navigation-secondary-item.component.scss']
 })

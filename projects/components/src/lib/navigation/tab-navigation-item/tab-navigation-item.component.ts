@@ -3,7 +3,7 @@ import { TabNavigationContentDirective } from './tab-navigation-content.directiv
 import { TabNavigationHeaderContentDirective } from './tab-navigation-header-content.directive';
 
 @Component({
-  selector: 'aa-tab-navigation-item',
+  selector: 'ph-tab-navigation-item',
   templateUrl: './tab-navigation-item.component.html',
   styleUrls: ['./tab-navigation-item.component.scss']
 })

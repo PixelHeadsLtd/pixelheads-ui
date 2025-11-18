@@ -1,17 +1,17 @@
-<section class="aa-multi-select">
-  <header (click)="toggleDropdown($event)" class="aa-multi-select-header flex-group space-between flex-align-center bg-aa-white-100">
+<section class="ph-multi-select">
+  <header (click)="toggleDropdown($event)" class="ph-multi-select-header flex-group space-between flex-align-center bg-ph-white-100">
     <span>{{ selectedItems.length > 0 ? selectedItems.length + ' selected' : 'Select items' }}</span>
   </header>
 
-  <div *ngIf="isDropdownOpen" class="aa-multi-select-popup border-radius-0-25 bg-aa-white-100 box-shadow">
-    <section class="aa-multi-select-filter flex-align-center bg-aa-light-blue-10">
+  <div *ngIf="isDropdownOpen" class="ph-multi-select-popup border-radius-0-25 bg-ph-white-100 box-shadow">
+    <section class="ph-multi-select-filter flex-align-center bg-ph-light-blue-10">
       <label class="padding-0">
         <input type="checkbox" [checked]="isAllSelected" (change)="toggleSelectAll()" />
       </label>
       <div class="position-relative width-100">
         <input class="padding-right-1-75" [(ngModel)]="searchTerm" placeholder="Search" type="text" />
         <div 
-          class="material-icons xxsmall aa-light-blue-100 cursor-pointer position-absolute"
+          class="material-icons xxsmall ph-light-blue-100 cursor-pointer position-absolute"
           (click)="clearSearch()"
         >close</div>
       </div>
@@ -19,7 +19,7 @@
 
     <section 
       [ngStyle]="{'max-height': maxHeight}"
-      class="aa-multi-select-content flex-group flex-start flex-column flex-nowrap overflow-y-scroll"
+      class="ph-multi-select-content flex-group flex-start flex-column flex-nowrap overflow-y-scroll"
     >
       <div *ngFor="let item of filteredItems; trackBy: trackByItem">
         <div class="flex-group flex-start flex-align-center">

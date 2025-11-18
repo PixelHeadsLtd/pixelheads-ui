@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'aa-anchor-back',
+  selector: 'ph-anchor-back',
   templateUrl: './anchor-back.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

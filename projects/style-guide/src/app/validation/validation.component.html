@@ -1,17 +1,17 @@
 <section class="control-bar flex-group space-between">
   <h1>Validation</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
   <!-- start content repeater -->
-  <section class="content-repeater bg-aa-pink-25">
+  <section class="content-repeater bg-ph-pink-25">
     <h2 class="margin-bottom-0">How should validation work in our Apps?</h2>
     <div class="flex-group">
       <div class="margin-right-6">
         <h3>Defaults</h3>
         <p>
-          All our inputs are mandatory by default unless they are indicated as <strong class="aa-red-100">optional</strong>
+          All our inputs are mandatory by default unless they are indicated as <strong class="ph-red-100">optional</strong>
           by including the optional class on the given field, refer <a routerLink="/input">here</a> for optional tag.
           With this approach we have a much cleaner screen that's not littered with red messages which can be overwhelming for the user,
           particularly on screens with heavy data.
@@ -20,9 +20,9 @@
       <div class="margin-right-6">
         <h3>Touched, dirty or bad data</h3>
         <p>
-          A validation message should appear if a given field has been <strong class="aa-red-100">touched</strong> or if the
-          field is <strong class="aa-red-100">dirty</strong>, in other words a value has been added and then removed for example. Also if
-          <strong class="aa-red-100">bad data</strong> has been added, for example an incorrect email format.
+          A validation message should appear if a given field has been <strong class="ph-red-100">touched</strong> or if the
+          field is <strong class="ph-red-100">dirty</strong>, in other words a value has been added and then removed for example. Also if
+          <strong class="ph-red-100">bad data</strong> has been added, for example an incorrect email format.
         </p>
       </div>
       <div>
@@ -40,8 +40,8 @@
     <section class="flex-1 col-left flex-start">
       <h2>Validation example</h2>
       <div class="describe margin-bottom-1">
-        <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field
-          and include the alert div element with <strong class="aa-red-100">role="alert"</strong></p>
+        <p>Pass in the <strong class="ph-red-100">error</strong> classname to your wrapping div.field
+          and include the alert div element with <strong class="ph-red-100">role="alert"</strong></p>
       </div>
       <form [formGroup]="form" novalidate>
         <div class="field" [class.error]="isFieldValid('name')">
@@ -76,15 +76,15 @@
           </div>
         </div>
         <div class="flex-group flex-start">
-          <aa-button
+          <ph-button
             buttonClass="primary"
             fieldClass="boxed margin-top-1"
             [showLabel]="false"
             buttonText="Submit"
             (buttonClick)="onSubmit()"
           >
-          </aa-button>
-          <aa-button
+          </ph-button>
+          <ph-button
             buttonClass="cancel"
             fieldClass="boxed margin-top-1"
             [showLabel]="false"
@@ -92,7 +92,7 @@
             buttonText="Reset"
             (buttonClick)="reset()"
           >
-          </aa-button>
+          </ph-button>
         </div>
       </form>
     </section>
@@ -123,12 +123,12 @@
           </tr>
         </tbody>
       </table>
-      <aa-alert alertClass="info margin-top-1" alertText="I have added this working example in the Gist file to the right"></aa-alert>
+      <ph-alert alertClass="info margin-top-1" alertText="I have added this working example in the Gist file to the right"></ph-alert>
     </section>
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showText=true; showCheck=false; showRadio=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showText=true; showCheck=false; showRadio=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -139,8 +139,8 @@
     <section class="flex-1 col-left flex-start">
       <h2>Checkbox</h2>
       <div class="describe margin-bottom-1">
-        <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
-          and include the alert div element with <strong class="aa-red-100">role="alert"</strong>
+        <p>Pass in the <strong class="ph-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
+          and include the alert div element with <strong class="ph-red-100">role="alert"</strong>
         </p>
       </div>
       <fieldset class="boxed">
@@ -155,13 +155,13 @@
             <span>Chickens</span>
           </label>
         </div>
-        <aa-checkbox
+        <ph-checkbox
           checkboxId="checkboxIdTwo"
           checkboxName="myCheckboxes"
           checkboxText="Foxes"
           checkboxValue="Foxes"
           fieldClass="error boxed">
-        </aa-checkbox>
+        </ph-checkbox>
         <div class="error" role="alert">Please select at least one option</div>
       </fieldset>
     </section>
@@ -202,7 +202,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showText=false; showCheck=true; showRadio=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showText=false; showCheck=true; showRadio=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -213,8 +213,8 @@
       <section class="flex-1 col-left flex-start">
         <h2>Radio</h2>
         <div class="describe margin-bottom-1">
-          <p>Pass in the <strong class="aa-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
-            and include the alert div element with <strong class="aa-red-100">role="alert"</strong>
+          <p>Pass in the <strong class="ph-red-100">error</strong> classname to your wrapping div.field that's nested in your fieldset
+            and include the alert div element with <strong class="ph-red-100">role="alert"</strong>
           </p>
         </div>
         <fieldset>
@@ -283,14 +283,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showText=false; showCheck=false; showRadio=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showText=false; showCheck=false; showRadio=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -304,16 +304,16 @@
   >
   <article class="blade-content">
     <div *ngIf="showText">
-      <a href="https://gist.github.com/angloux/d857175e82d073b8f24e42dc6181d837" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/d857175e82d073b8f24e42dc6181d837"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/d857175e82d073b8f24e42dc6181d837" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/d857175e82d073b8f24e42dc6181d837"></app-gist>
     </div>
     <div *ngIf="showCheck">
-      <app-gist src="angloux/b68d128666b230aad9bbbd91eab729cf"></app-gist>
-      <a href="https://gist.github.com/angloux/b68d128666b230aad9bbbd91eab729cf" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/b68d128666b230aad9bbbd91eab729cf"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/b68d128666b230aad9bbbd91eab729cf" target="_blank">View Gist on GitHub</a>
     </div>
     <div *ngIf="showRadio">
-      <app-gist src="angloux/e41a93ca5516811ca6b1583390f41ce6"></app-gist>
-      <a href="https://gist.github.com/angloux/e41a93ca5516811ca6b1583390f41ce6" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/e41a93ca5516811ca6b1583390f41ce6"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/e41a93ca5516811ca6b1583390f41ce6" target="_blank">View Gist on GitHub</a>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

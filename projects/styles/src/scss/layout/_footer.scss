@@ -1,9 +1,9 @@
-aa-footer {
+ph-footer {
   footer {
     position: fixed;
     bottom: 0;
-    border-top: 1px solid _colour(aa-grey-25);
-    background-color: _colour(aa-white-100);
+    border-top: 1px solid _colour(ph-grey-25);
+    background-color: _colour(ph-white-100);
     padding: 0.5rem 1.25rem;
     text-align: center;
     width: -webkit-fill-available;
@@ -19,7 +19,7 @@ aa-footer {
         &:after {
           content: '|';
           margin: 0 0.75rem;
-          color: _colour(aa-light-blue-100);
+          color: _colour(ph-light-blue-100);
         }
       }
   

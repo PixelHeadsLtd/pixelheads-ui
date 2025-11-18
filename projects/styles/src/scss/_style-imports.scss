@@ -3,8 +3,6 @@
 @import './animations/loading-spinner';
 @import './animations/text-pulsate';
 
-@import 'dashboard/dashboard';
-
 @import './elements/anchor';
 @import './elements/button';
 @import './elements/comments';
@@ -39,10 +37,11 @@
 @import './layout/logo';
 @import './layout/core-override';
 @import './layout/main';
+@import './layout/ph-modal';
+@import './layout/ph-overlay';
 @import './layout/tab-content';
 @import './layout/tour';
-@import './layout/unauthorised';
-@import './layout/aa-ui-block.scss';
+@import './layout/ph-ui-block.scss';
 
 @import './patterns/actions-summary';
 @import './patterns/alert';
@@ -85,45 +84,29 @@
 @import './modifiers/z-index';
 
 @import './navigation/nav-context';
-@import './navigation/aa-nav-angular-elements';
-@import './navigation/aa-progress-indicator';
+@import './navigation/ph-nav-angular-elements';
+@import './patterns/ph-progress-indicator';
 @import './navigation/context-menu';
-@import './navigation/progress-indicator-lh';
-@import './navigation/aa-stepper';
-@import './navigation/aa-tree';
+@import './navigation/ph-stepper';
+@import './navigation/ph-tree';
 @import './navigation/tab-navigation';
 
-@import './widgets/core-overrides';
 @import './widgets/design-lang-ui';
 @import './widgets/cdk-drag-and-drop';
 
-@import './widgets/aa-accordion';
-@import './widgets/dl-alignment-markers';
-@import './widgets/aa-accordion-fancy';
-@import './widgets/aa-card';
-@import './widgets/aa-carousel';
-@import './widgets/aa-csh';
-@import './widgets/aa-element-slider';
-@import './widgets/aa-icon-picker';
-@import './widgets/aa-info-panel';
-@import './widgets/aa-list-selectable';
-@import './widgets/aa-modal';
-@import './widgets/aa-overlay';
-@import './widgets/aa-popover';
-@import './widgets/aa-search';
-@import './widgets/aa-toastr';
-@import './widgets/aa-tooltip';
-@import './widgets/aa-user-feedback';
-@import './widgets/bs-datepicker';
-@import './widgets/bs-tooltip';
-@import './widgets/ngb-datepicker';
-@import './widgets/ngb-timepicker';
-@import './widgets/ngb-modal';
-@import './widgets/ngb-tab';
-@import './widgets/ng-select';
-@import './widgets/ngx-editor';
+@import './widgets/ph-accordion';
+@import './widgets/ph-accordion-fancy';
+@import './widgets/ph-card';
+@import './widgets/ph-carousel';
+@import './widgets/ph-element-slider';
+@import './widgets/ph-icon-picker';
+@import './widgets/ph-info-panel';
+@import './widgets/ph-list-selectable';
+@import './widgets/ph-popover';
+@import './widgets/ph-search';
+@import './widgets/ph-toastr';
+@import './widgets/ph-tooltip';
 @import './widgets/toastr';
-@import './widgets/highcharts';
 
 
 // Font Awesome css

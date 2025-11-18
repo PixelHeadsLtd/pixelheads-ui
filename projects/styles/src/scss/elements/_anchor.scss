@@ -25,16 +25,16 @@ a:not(
     margin-bottom: .75rem;
     cursor: pointer;
     padding: 1rem .75rem .5rem 1rem;
-    border: 1px solid _colour(aa-grey-5);
+    border: 1px solid _colour(ph-grey-5);
 
     &:hover {
-      background-color: _colour(aa-light-blue-5)!important;
-      border: 1px solid _colour(aa-light-blue-40);
+      background-color: _colour(ph-light-blue-5)!important;
+      border: 1px solid _colour(ph-light-blue-40);
 
       p {text-decoration: underline;}
 
       .anchor-icon {
-        background-color: _colour(aa-light-blue-100)!important;
+        background-color: _colour(ph-light-blue-100)!important;
       }
     }
 
@@ -52,24 +52,24 @@ a:not(
     .anchor-icon {
       width: 2.5rem;
       height: 2.5rem;
-      color: _colour(aa-white-100);
+      color: _colour(ph-white-100);
       &.pink {
-        background-color: _colour(aa-pink-50);
+        background-color: _colour(ph-pink-50);
       }
       &.lime {
-        background-color: _colour(aa-lime-50);
+        background-color: _colour(ph-lime-50);
       }
       &.orange {
-        background-color: _colour(aa-orange-50);
+        background-color: _colour(ph-orange-50);
       }
       &.blue {
-        background-color: _colour(aa-light-blue-40);
+        background-color: _colour(ph-light-blue-40);
       }
       &.green {
-        background-color: _colour(aa-green-50);
+        background-color: _colour(ph-green-50);
       }
       &.yellow {
-        background-color: _colour(aa-yellow-100);
+        background-color: _colour(ph-yellow-100);
       }
       .material-icons {
         font-size: _font(size-large);
@@ -92,7 +92,7 @@ a:not(
   cursor: pointer;
 
   &:hover {
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
   }
 
   &:before {
@@ -150,12 +150,12 @@ a:not(
 
 .feature-box.solid {
   a {
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
   }
 }
 
 .anchor-blue {
-  color: _palette(aa-light-blue-100);
+  color: _palette(ph-light-blue-100);
 }
 
 .anchor-small {
@@ -164,6 +164,6 @@ a:not(
 
 .gradient {
   a {
-    color: _palette(aa-white-100)
+    color: _palette(ph-white-100)
   }
 }

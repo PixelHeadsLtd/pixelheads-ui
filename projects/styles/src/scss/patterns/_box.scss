@@ -1,13 +1,13 @@
 .box {
   border-radius: .25rem;
-  background-color: _colour(aa-white-100);
+  background-color: _colour(ph-white-100);
   &.light-blue {
-    background-color: _palette(aa-light-blue-10);
+    background-color: _palette(ph-light-blue-10);
   }
 }
 
 .box-border {
-  border: 1px solid _colour(aa-blue-100);;
+  border: 1px solid _colour(ph-blue-100);;
 }
 
 .box-medium, .box-medium-max {
@@ -21,7 +21,7 @@
 .feature-box {
   padding: .75rem;
   border-radius: .5rem;
-  border: 2px solid _palette(aa-light-blue-15);
+  border: 2px solid _palette(ph-light-blue-15);
 
   .feature-box-content {
     overflow-y: auto;
@@ -43,7 +43,7 @@
   }
 
   &.solid {
-    background-color: _palette(aa-light-blue-10);
+    background-color: _palette(ph-light-blue-10);
   }
 
   &.small {
@@ -51,7 +51,7 @@
   }
 
   &.secondary {
-    background-color: _palette(aa-light-blue-5);
+    background-color: _palette(ph-light-blue-5);
     display: inline;
   }
 

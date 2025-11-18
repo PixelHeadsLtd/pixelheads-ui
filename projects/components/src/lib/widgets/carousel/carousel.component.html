@@ -1,21 +1,21 @@
 <section
-    id="aa-carousel"
+    id="ph-carousel"
     class="flex-group flex-center {{customClass}} position-relative"
     [ngStyle]="{'width' : carouselOuterWidth}"
 >
     <span class="carousel-count">{{currentSlide + 1}} of {{items?.length}}</span>
     <div
-        class="aa-carousel"
+        class="ph-carousel"
         [ngStyle]="{
             'width' : carouselInnerWidth,
             'height' : carouselInnerHeight
         }"
     >
-        <div class="aa-carousel-content flex-group flex-nowrap" #carousel>
+        <div class="ph-carousel-content flex-group flex-nowrap" #carousel>
             <div
-                aaCarouselSlide
+                phCarouselSlide
                 *ngFor="let item of items;"
-                class="aa-carousel-item {{carouselItemBgColour}}"
+                class="ph-carousel-item {{carouselItemBgColour}}"
                 [ngStyle]="{
                     'min-width' : carouselItemWidth,
                     'padding' : carouselItemPadding
@@ -26,7 +26,7 @@
         </div>
     </div>
 </section>
-<footer class="aa-carousel-footer flex-group flex-center">
+<footer class="ph-carousel-footer flex-group flex-center">
     <button
         (click)="prev()"
         class="{{prevBtnColour}} material-icons"

@@ -28,8 +28,8 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-stepper</td>
-                <td datalabel="Attribute">aa-stepper</td>
+                <td datalabel="Element">ph-stepper</td>
+                <td datalabel="Attribute">ph-stepper</td>
                 <td datalabel="Type">Component</td>
                 <td datalabel="Default">N/A</td>
               </tr>
@@ -39,24 +39,24 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
               <span class="material-icons">visibility</span><span>View gist</span>
             </button>
           </nav>
       </section>
 
-      <aa-stepper [formGroup]="stepperForm">
+      <ph-stepper [formGroup]="stepperForm">
         <ng-container steps-header>
           <li *ngFor="let item of stepsHeader; let i = index">
             <a class="flex-align-center" [class.current-step]="currentIndex === i">
-                <span *ngIf="currentIndex > i" class="aa-step-status material-icons">{{item.stepIcon}}</span>
-                <span class="aa-step-status">{{item.stepNumber}}</span>
-                <label class="aa-step-label">{{item.stepName}}</label>
+                <span *ngIf="currentIndex > i" class="ph-step-status material-icons">{{item.stepIcon}}</span>
+                <span class="ph-step-status">{{item.stepNumber}}</span>
+                <label class="ph-step-label">{{item.stepName}}</label>
             </a>
           </li>
         </ng-container>
         <ng-container steps-content>
-          <div class="aa-steps flex-group" *ngFor="let item of stepsContent; let i = index" [class.selected]="currentIndex === i">
+          <div class="ph-steps flex-group" *ngFor="let item of stepsContent; let i = index" [class.selected]="currentIndex === i">
             <div
               class="field"
               [class.error]="stepperForm.controls.name.errors"
@@ -78,12 +78,12 @@
                 </div>
             </div>
           </div>
-          <aa-alert
+          <ph-alert
             *ngIf="currentIndex>3"
             alertClass="success"
             alertText="Your details have been added successfully. You can now submit this form or start from the beginning by clicking the 'Reset' button."
             >
-          </aa-alert>
+          </ph-alert>
         </ng-container>
         <ng-container steps-footer>
           <div *ngIf="currentIndex<4" class="flex-group flex-start">
@@ -95,9 +95,9 @@
             <button class="approve" type="submit">Submit</button>
           </div>
         </ng-container>
-      </aa-stepper>
+      </ph-stepper>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -110,9 +110,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-          <a href="https://gist.github.com/angloux/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
-          <app-gist src="angloux/9e6c8132425e1a4a431014747fbe029b"></app-gist>
+          <a href="https://gist.github.com/PixelHeadsLtd/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
+          <app-gist src="PixelHeadsLtd/9e6c8132425e1a4a431014747fbe029b"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

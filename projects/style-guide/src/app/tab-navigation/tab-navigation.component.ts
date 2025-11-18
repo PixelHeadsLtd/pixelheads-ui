@@ -108,7 +108,7 @@ export class TabNavigationComponent implements AfterContentChecked {
       tabId: 'tab1',
       enableIcons: false,
       iconName: 'error',
-      iconColour: 'aa-red-100',
+      iconColour: 'ph-red-100',
       tabDisabled: false,
       showRightDivider: false,
       enableCount: false,
@@ -128,7 +128,7 @@ export class TabNavigationComponent implements AfterContentChecked {
       tabId: 'tab2',
       enableIcons: true,
       iconName: 'check_circle',
-      iconColour: 'aa-green-100',
+      iconColour: 'ph-green-100',
       tabDisabled: false,
       showRightDivider: false,
       enableCount: false,
@@ -147,9 +147,9 @@ export class TabNavigationComponent implements AfterContentChecked {
       tooltipBody: `
         TOOLTIP'S ONLY WORK WHEN BOTH 'enableIcons' AND 'enableTooltip' ARE SET TO TRUE!!! 
         You can also set the 'iconColour' using one of our modifiers classes. There are 4
-        to choose from and these represent the current status. For info messages, use 'aa-light-blue-100', 
-        for success use 'aa-green-100', for pending use 'aa-orange-100' and for errors use 
-        'aa-red-100'. Other attributes include: 'tooltipWidth', 'tooltipTitle', 'tooltipBody', 
+        to choose from and these represent the current status. For info messages, use 'ph-light-blue-100', 
+        for success use 'ph-green-100', for pending use 'ph-orange-100' and for errors use 
+        'ph-red-100'. Other attributes include: 'tooltipWidth', 'tooltipTitle', 'tooltipBody', 
         'tooltipXPos' and 'tooltipYPos'
       `,
       tooltipX: '2rem',
@@ -166,7 +166,7 @@ export class TabNavigationComponent implements AfterContentChecked {
       enableCount: true,
       enableClose: true,
       tabCount: '200',
-      countColour: 'bg-aa-red-100',
+      countColour: 'bg-ph-red-100',
       showTabOneContent: false,
       showTabTwoContent: false,
       showTabThreeContent: true,
@@ -242,7 +242,7 @@ export class TabNavigationComponent implements AfterContentChecked {
       showRightDivider: false,
       enableIcons: true,
       iconName: 'error',
-      iconColor: 'aa-red-100'
+      iconColor: 'ph-red-100'
     },
     {
       tabId: 'tabThree',

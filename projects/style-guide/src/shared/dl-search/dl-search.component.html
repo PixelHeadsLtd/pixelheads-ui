@@ -1,5 +1,5 @@
 <div [ngClass]="{'show-search' : showSearch}">
-    <div class="aa-search-dl">
+    <div class="ph-search-dl">
       <input class="animate-normal" type="text" id="search-text" aria-describedby="search-text"
         [(ngModel)]="searchText" placeholder="Search" autofocus>
       <div (click)="toggleSearch()" class="material-icons flex-1 cursor-pointer animate-normal">
@@ -110,78 +110,6 @@
             (click)="openTypographyNav()" class="flex-group flex-start flex-align-center" routerLink="/{{c.link}}"
             id="{{c.id}}">
             <h2 *ngIf="!searchTypography[i-1] || c.heading !== searchTypography[i-1].heading"
-              class="white-100 width-100">
-              {{c.heading}}
-            </h2>
-            <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
-              <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
-            </div>
-            <a appHighlight [searchedWord]="searchText" [content]="
-                c.link.toString().split('-').join('\n')
-              " [classToApply]="'highlight'" [setTitle]="false">
-            </a>
-          </li>
-          <li *ngFor="let c of searchThirdPartyComponents | appFilter: searchText; let i = index"
-            (click)="openOtherWidgetsNav()" class="flex-group flex-start flex-align-center" routerLink="/{{c.link}}"
-            id="{{c.id}}">
-            <h2 *ngIf="!searchThirdPartyComponents[i-1] || c.heading !== searchThirdPartyComponents[i-1].heading"
-              class="white-100 width-100">
-              {{c.heading}}
-            </h2>
-            <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
-              <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
-            </div>
-            <a appHighlight [searchedWord]="searchText" [content]="
-                c.link.toString().split('-').join('\n')
-              " [classToApply]="'highlight'" [setTitle]="false">
-            </a>
-          </li>
-          <li *ngFor="let c of searchEmailTemplates | appFilter: searchText; let i = index"
-            (click)="openEmailTemplatesNav()" class="flex-group flex-start flex-align-center"
-            routerLink="/{{c.link}}" id="{{c.id}}">
-            <h2 *ngIf="!searchEmailTemplates[i-1] || c.heading !== searchEmailTemplates[i-1].heading"
-              class="white-100 width-100">
-              {{c.heading}}
-            </h2>
-            <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
-              <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
-            </div>
-            <a appHighlight [searchedWord]="searchText" [content]="
-                c.link.toString().split('-').join('\n')
-              " [classToApply]="'highlight'" [setTitle]="false">
-            </a>
-          </li>
-          <li *ngFor="let c of searchQandAs | appFilter: searchText; let i = index" (click)="openQandANav()"
-            class="flex-group flex-start flex-align-center" routerLink="/{{c.link}}" id="{{c.id}}">
-            <h2 *ngIf="!searchQandAs[i-1] || c.heading !== searchQandAs[i-1].heading" class="white-100 width-100">
-              {{c.heading}}
-            </h2>
-            <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
-              <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
-            </div>
-            <a appHighlight [searchedWord]="searchText" [content]="
-                c.link.toString().split('-').join('\n')
-              " [classToApply]="'highlight'" [setTitle]="false">
-            </a>
-          </li>
-          <li *ngFor="let c of searchAddendum | appFilter: searchText; let i = index" (click)="openAddendumNav()"
-            class="flex-group flex-start flex-align-center" routerLink="/{{c.link}}" id="{{c.id}}">
-            <h2 *ngIf="!searchAddendum[i-1] || c.heading !== searchAddendum[i-1].heading"
-              class="white-100 width-100">
-              {{c.heading}}
-            </h2>
-            <div class="{{c.iconColour}} {{c.borderColour}} width-1-75 height-1-75 flex-center border-radius-50">
-              <span class="material-icons nav-icon {{c.iconColour}}">{{c.icon}}</span>
-            </div>
-            <a appHighlight [searchedWord]="searchText" [content]="
-                c.link.toString().split('-').join('\n')
-              " [classToApply]="'highlight'" [setTitle]="false">
-            </a>
-          </li>
-          <li *ngFor="let c of searchPageTemplates | appFilter: searchText; let i = index"
-            (click)="goToPageTemplatesNav()" class="flex-group flex-start flex-align-center"
-            routerLink="/{{c.link}}" id="{{c.id}}">
-            <h2 *ngIf="!searchPageTemplates[i-1] || c.heading !== searchPageTemplates[i-1].heading"
               class="white-100 width-100">
               {{c.heading}}
             </h2>

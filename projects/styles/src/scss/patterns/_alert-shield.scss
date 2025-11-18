@@ -41,7 +41,7 @@
   .alert-shield-tooltip {
     display: none;
     position: absolute;
-    background-color: _colour(aa-white-100);
+    background-color: _colour(ph-white-100);
     border-radius: .5rem;
     padding: .75rem;
     border-style: solid;
@@ -75,23 +75,23 @@
     }
 
     &.error {
-      border-color: _colour(aa-red-100);
-      h4 {color: _colour(aa-red-100)}
+      border-color: _colour(ph-red-100);
+      h4 {color: _colour(ph-red-100)}
     }
 
     &.warning {
-      border-color: _palette(aa-orange-100);
-      h4 {color: _palette(aa-orange-100)}
+      border-color: _palette(ph-orange-100);
+      h4 {color: _palette(ph-orange-100)}
     }
 
     &.success {
-      border-color: _palette(aa-green-100);
-      h4 {color: _palette(aa-green-100)}
+      border-color: _palette(ph-green-100);
+      h4 {color: _palette(ph-green-100)}
     }
 
     &.info {
-      border-color: _palette(aa-light-blue-100);
-      h4 {color: _palette(aa-light-blue-100)}
+      border-color: _palette(ph-light-blue-100);
+      h4 {color: _palette(ph-light-blue-100)}
     }
   }
 }
@@ -133,7 +133,7 @@
       margin: 0 .5rem 0 0;
       font-size: 65%;
       font-weight: _font(weight-bold);
-      color: _colour(aa-white-100);
+      color: _colour(ph-white-100);
     }
   }
 
@@ -161,23 +161,23 @@
   
   &.success {
     background-color: _colour(trans-green-5-to-green-dark);
-    color: _colour(aa-green-100);
+    color: _colour(ph-green-100);
     &:not(.numerical-alert-shield) {
         background-image: url("#{$icon-path}/icon-check-green.svg");
     }
     .alert-shield-value {
-      background-color: _colour(aa-green-100);
+      background-color: _colour(ph-green-100);
     }
   }
   
   &.info {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-info-blue.svg");
     }
     .alert-shield-value {
-      background-color: _colour(aa-light-blue-100);
+      background-color: _colour(ph-light-blue-100);
     }
   }
 
@@ -187,9 +187,9 @@
       background-image: url("#{$icon-path}/icon-alert-red.svg");
     }
     position: relative;
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
     .alert-shield-value {
-      background-color: _colour(aa-red-100);
+      background-color: _colour(ph-red-100);
     }
   }
 
@@ -198,9 +198,9 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
     }
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
     .alert-shield-value {
-      background-color: _colour(aa-orange-100);
+      background-color: _colour(ph-orange-100);
     }
   }
 
@@ -209,7 +209,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/timelapse-24px-orange.svg");
     }
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
   }
 
   &.pending-red {
@@ -217,7 +217,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/timelapse-24px-red.svg");
     }
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
 
   &.risk-green {
@@ -225,7 +225,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-check-green.svg");
     }
-    color: _colour(aa-green-100);
+    color: _colour(ph-green-100);
   }
 
   &.risk-blue {
@@ -233,7 +233,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-check-blue.svg");
     }
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
   }
 
   &.risk-low {
@@ -241,7 +241,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-risk-24px-blue.svg");
     }
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
   }
 
   &.risk-medium {
@@ -249,7 +249,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-risk-24px-orange.svg");
     }
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
   }
 
   &.risk-high {
@@ -257,7 +257,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-risk-24px-red.svg");
     }
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
 
   &.risk-green-approved {
@@ -265,8 +265,8 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-check-green.svg");
     }
-    color: _colour(aa-green-100);
-    border: 2px dotted _colour(aa-green-100);
+    color: _colour(ph-green-100);
+    border: 2px dotted _colour(ph-green-100);
   }
 
   &.risk-low-approved {
@@ -274,8 +274,8 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/check_circle-blue-24px.svg");
     }
-    color: _colour(aa-green-100);
-    border: 2px dotted _colour(aa-light-blue-100);
+    color: _colour(ph-green-100);
+    border: 2px dotted _colour(ph-light-blue-100);
   }
 
   &.risk-medium-approved {
@@ -283,8 +283,8 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/check_circle-orange-24px.svg");
     }
-    color: _colour(aa-green-100);
-    border: 2px dotted _colour(aa-orange-100);
+    color: _colour(ph-green-100);
+    border: 2px dotted _colour(ph-orange-100);
   }
 
   &.risk-high-approved {
@@ -292,18 +292,18 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/check_circle-red-24px.svg");
     }
-    color: _colour(aa-green-100);
-    border: 2px dotted _colour(aa-red-100);
+    color: _colour(ph-green-100);
+    border: 2px dotted _colour(ph-red-100);
   }
 
   &.warning {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-info-orange.svg");
     }
     .alert-shield-value {
-      background-color: _colour(aa-orange-100);
+      background-color: _colour(ph-orange-100);
     }
   }
 
@@ -312,7 +312,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-cross-orange.svg");
     }
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
   }
 
   &.removed, &.circle-x-red, &.do-not-use {
@@ -320,7 +320,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-close-24px-red.svg");
     }
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
 
   &.withdrawn {
@@ -328,7 +328,7 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/undo-red-24px.svg");
     }
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
   
   &.returned {
@@ -336,19 +336,19 @@
     &:not(.numerical-alert-shield) {
       background-image: url("#{$icon-path}/icon-returned-red.svg");
     }
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
 
   &.draft {
-    background-color: _colour(aa-grey-10);
-    color: _colour(aa-grey-100);
+    background-color: _colour(ph-grey-10);
+    color: _colour(ph-grey-100);
     @include draft-bg-image;
   }
 
   &.import {
     background-color: _colour(trans-orange-10-to-orange-dark);
     @include icon-left-medium;
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
 
     &:before {
       @include icon-button-large-material;
@@ -370,30 +370,30 @@
   &.cancel {
     background-color: _colour(trans-red-5-to-red-dark);
     background-image: url("#{$icon-path}/cancel-24px-red.svg");
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
   }
 
   &.vanilla, &.blue {
     background-color: _colour(trans-light-blue-10-to-blue-dark);
-    color: _colour(aa-light-blue-100);
+    color: _colour(ph-light-blue-100);
     padding-left: .75rem;
   }
 
   &.green {
     background-color: _colour(trans-green-5-to-green-dark);
-    color: _colour(aa-green-100);
+    color: _colour(ph-green-100);
     padding-left: .75rem;
   }
 
   &.orange {
     background-color: _colour(trans-orange-10-to-orange-dark);
-    color: _colour(aa-orange-100);
+    color: _colour(ph-orange-100);
     padding-left: .75rem;
   }
 
   &.red {
     background-color: _colour(trans-red-5-to-red-dark);
-    color: _colour(aa-red-100);
+    color: _colour(ph-red-100);
     padding-left: .75rem;
   }
 }
@@ -422,26 +422,26 @@
       }
   
       &.error,
-      &.bg-aa-red-5,
-      &.bg-aa-red-8,
-      &.bg-aa-red-25,
-      &.bg-aa-red-50,
-      &.bg-aa-red-80,
-      &.bg-aa-red-100 {color: _palette(aa-red-100)}
+      &.bg-ph-red-5,
+      &.bg-ph-red-8,
+      &.bg-ph-red-25,
+      &.bg-ph-red-50,
+      &.bg-ph-red-80,
+      &.bg-ph-red-100 {color: _palette(ph-red-100)}
 
       &.complete,
-      &.bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100)}
-      &.bg-aa-green-100 {color: _palette(aa-green-100)}
+      &.bg-ph-green-5, .bg-ph-green-15 {color: _palette(ph-green-100)}
+      &.bg-ph-green-100 {color: _palette(ph-green-100)}
 
       &.pending,
-      &.bg-aa-orange-10 {color: _palette(aa-orange-100)}
-      &.bg-aa-orange-100 {color: _palette(aa-orange-100)}
+      &.bg-ph-orange-10 {color: _palette(ph-orange-100)}
+      &.bg-ph-orange-100 {color: _palette(ph-orange-100)}
 
       &.info,
-      &.bg-aa-light-blue-15 {color: _palette(aa-light-blue-100)}
-      &.bg-aa-light-blue-100 {color: _palette(aa-light-blue-100)}
-      &.bg-aa-grey-10 {color: _palette(aa-grey-100)}
-      &.bg-aa-grey-100 {color: _colour(aa-grey-100)}
+      &.bg-ph-light-blue-15 {color: _palette(ph-light-blue-100)}
+      &.bg-ph-light-blue-100 {color: _palette(ph-light-blue-100)}
+      &.bg-ph-grey-10 {color: _palette(ph-grey-100)}
+      &.bg-ph-grey-100 {color: _colour(ph-grey-100)}
   
       &.rotate {
         .material-icons,
@@ -456,28 +456,28 @@
   }
 
   .error,
-  .bg-aa-red-5,
-  .bg-aa-red-8,
-  .bg-aa-red-25,
-  .bg-aa-red-50,
-  .bg-aa-red-80 {color: _palette(aa-red-100); background-color: _colour(trans-red-5-to-red-dark)!important;}
-  .bg-aa-red-100 {color: _palette(aa-white-100)}
+  .bg-ph-red-5,
+  .bg-ph-red-8,
+  .bg-ph-red-25,
+  .bg-ph-red-50,
+  .bg-ph-red-80 {color: _palette(ph-red-100); background-color: _colour(trans-red-5-to-red-dark)!important;}
+  .bg-ph-red-100 {color: _palette(ph-white-100)}
 
   .complete,
-  .bg-aa-green-5, .bg-aa-green-15 {color: _palette(aa-green-100); background-color: _colour(trans-green-5-to-green-dark)!important;}
-  .bg-aa-green-100 {color: _palette(aa-white-100)}
+  .bg-ph-green-5, .bg-ph-green-15 {color: _palette(ph-green-100); background-color: _colour(trans-green-5-to-green-dark)!important;}
+  .bg-ph-green-100 {color: _palette(ph-white-100)}
 
   .pending,
-  .bg-aa-orange-10 {color: _palette(aa-orange-100); background-color: _colour(trans-orange-10-to-orange-dark)!important;}
-  .bg-aa-orange-100 {color: _palette(aa-white-100)}
+  .bg-ph-orange-10 {color: _palette(ph-orange-100); background-color: _colour(trans-orange-10-to-orange-dark)!important;}
+  .bg-ph-orange-100 {color: _palette(ph-white-100)}
 
   .info,
-  .bg-aa-light-blue-15 {color: _palette(aa-light-blue-100); background-color: _colour(trans-light-blue-10-to-blue-dark)!important;}
-  .bg-aa-light-blue-100 {color: _palette(aa-white-100)}
+  .bg-ph-light-blue-15 {color: _palette(ph-light-blue-100); background-color: _colour(trans-light-blue-10-to-blue-dark)!important;}
+  .bg-ph-light-blue-100 {color: _palette(ph-white-100)}
 
   .not-used,
-  .bg-aa-grey-10 {color: _palette(aa-grey-100)}
-  .bg-aa-grey-100 {color: _colour(aa-white-100)}
+  .bg-ph-grey-10 {color: _palette(ph-grey-100)}
+  .bg-ph-grey-100 {color: _colour(ph-white-100)}
 
   .material-icons,
   .material-icons-outlined {
@@ -538,7 +538,7 @@
 .approved:not(.feature-box) .alert-shield {
   background-color: _colour(trans-green-5-to-green-dark);
   background-image: url("#{$icon-path}/check_circle-24px-green.svg");
-  color: _colour(aa-green-100);
+  color: _colour(ph-green-100);
 }
 
 .noMineVisitRegistered .alert-shield,
@@ -551,7 +551,7 @@
 .pending:not(.feature-box) .alert-shield {
   background-color: _colour(trans-light-blue-10-to-blue-dark);
   background-image: url("#{$icon-path}/timelapse-24px-light-blue.svg");
-  color: _colour(aa-light-blue-100);
+  color: _colour(ph-light-blue-100);
 }
 
 .rejected:not(.feature-box) .alert-shield {

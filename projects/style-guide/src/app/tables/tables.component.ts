@@ -321,53 +321,53 @@ export class TablesComponent implements OnInit {
     {
       iconName: 'error', iconClass: 'material-icons', Dept: 'PGM', productType: 'Base Metals', date: '18 Jan 2024', progressCells:
         [
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'aa-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'ph-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
         ]
     },
     {
       iconName: 'error', iconClass: 'material-icons', Dept: 'Base Metals', productType: 'Base Metals', date: '27 Jan 2024', progressCells:
         [
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'aa-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'ph-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
         ]
     },
     {
       iconName: 'error', iconClass: 'material-icons', Dept: 'Energy Sol', productType: 'Base Metals', date: '01 Mar 2024', progressCells:
         [
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
         ]
     },
     {
       iconName: 'error', iconClass: 'material-icons', Dept: 'Iron Ore', productType: 'Base Metals', date: '20 Feb 2024', progressCells:
         [
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'aa-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'aa-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'aa-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
-          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'aa-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Complete', tooltipTitleColor: 'ph-green-100', tooltipBody: 'Your job has completed', iconClass: 'material-icons', iconName: ' check_circle', iconStatus: 'done', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Error', tooltipTitleColor: 'ph-red-100', tooltipBody: 'Your job has an error', iconClass: 'material-icons', iconName: 'error', iconStatus: 'error', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Running', tooltipTitleColor: 'ph-light-blue-100', tooltipBody: 'Your job is currently running', iconClass: 'material-icons', iconName: 'watch_later', iconStatus: 'loading', columnMarker: true },
+          { tooltipPosition: TooltipDynamicPosition.LEFT, tooltipTitle: 'Pending', tooltipTitleColor: 'ph-orange-100', tooltipBody: 'Your job is currently pending', iconClass: 'material-icons', iconName: 'pending', iconStatus: 'pending', columnMarker: false },
         ]
     }
   ]
@@ -376,56 +376,56 @@ export class TablesComponent implements OnInit {
     {
       appName: 'Aurora',
       appURL: 'https://dev.core.angloamerican.com/aurora',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     },
     {
       appName: 'Aurora Curve Manager',
       appURL: 'https://dev.core.angloamerican.com/curvemanager',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     },
     {
       appName: 'Aurora Intraday Reporting',
       appURL: 'https://dev.core.angloamerican.com/intradayreporting/exposure',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     },
     {
       appName: 'Aurora Option Pricer',
       appURL: 'https://dev.core.angloamerican.com/tradingview/pricer',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     },
     {
       appName: 'BANC',
       appURL: 'https://dev.core.angloamerican.com/banc',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     },
     {
       appName: 'Command Queue',
       appURL: 'https://dev.core.angloamerican.com/cq/activity',
-      statusOne: 'bg-aa-green-100',
-      statusTwo: 'bg-aa-green-100',
-      statusThree: 'bg-aa-orange-50',
-      statusFour: 'bg-aa-red-100',
-      statusFive: 'bg-aa-green-100'
+      statusOne: 'bg-ph-green-100',
+      statusTwo: 'bg-ph-green-100',
+      statusThree: 'bg-ph-orange-50',
+      statusFour: 'bg-ph-red-100',
+      statusFive: 'bg-ph-green-100'
     }
   ];
 

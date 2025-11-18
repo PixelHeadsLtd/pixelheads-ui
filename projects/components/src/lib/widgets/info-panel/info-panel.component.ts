@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 @Component({
-  selector: 'aa-info-panel',
+  selector: 'ph-info-panel',
   templateUrl: './info-panel.component.html',
   styleUrls: ['./info-panel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

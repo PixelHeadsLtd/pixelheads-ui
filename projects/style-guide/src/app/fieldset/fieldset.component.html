@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Fieldset</h1>
-  <aa-alert alertClass="error max-width-unset" alertText="Please ensure ALL fieldset inputs are wrapped in div.field label"></aa-alert>
+  <ph-alert alertClass="error max-width-unset" alertText="Please ensure ALL fieldset inputs are wrapped in div.field label"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -14,7 +14,7 @@
         </div>
         <div>
           <fieldset>
-            <aa-tooltip 
+            <ph-tooltip 
             [includeLegend]="true"
             labelName="Radio button"
             class="margin-top-1"
@@ -26,7 +26,7 @@
           >
             <h4>My radio buttons</h4>
             <p>Add your details here</p>
-          </aa-tooltip>
+          </ph-tooltip>
             <div class="field radio">
               <label [ngClass]="{checked: myRadios==='yes'}">
                 <input [(ngModel)]="myRadios" name="myRadios" type="radio" value="yes">
@@ -113,13 +113,13 @@
       
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
     
-    <aa-blade 
+    <ph-blade 
       [blockPageUI]="false"
       [toggleBlade]="toggleBlade"
       [suppressAutoClose]="false"
@@ -132,9 +132,9 @@
       (bladeOpen)="bladeIsOpen($event)"
       >
       <article class="blade-content">
-        <a href="https://gist.github.com/angloux/4e6f7537babfe54d86ab2198c096c4fe" target="_blank">View Gist on GitHub</a>
-        <app-gist src="angloux/4e6f7537babfe54d86ab2198c096c4fe"></app-gist>
+        <a href="https://gist.github.com/PixelHeadsLtd/041acf9385e6f450de9bc926cacdeec3" target="_blank">View Gist on GitHub</a>
+        <app-gist src="PixelHeadsLtd/041acf9385e6f450de9bc926cacdeec3"></app-gist>
       </article>
-    </aa-blade>
+    </ph-blade>
   
 </section>

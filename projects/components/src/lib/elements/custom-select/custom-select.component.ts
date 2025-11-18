@@ -11,7 +11,7 @@ export interface SelectOption {
 }
 
 @Component({
-  selector: 'aa-custom-select',
+  selector: 'ph-custom-select',
   templateUrl: './custom-select.component.html',
   styleUrls: ['./custom-select.component.scss'],
   providers: [

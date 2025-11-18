@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Textarea</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -56,7 +56,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showTextarea=true; showTextareaAutoresize=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showTextarea=true; showTextareaAutoresize=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -72,7 +72,7 @@
       </div>
       <div class="field boxed">
         <label for="text-area-2">Textarea auto-resize</label>
-        <textarea id="text-area-2" class="auto-resize" [aaTextareaAutoresize]></textarea>
+        <textarea id="text-area-2" class="auto-resize" [phTextareaAutoresize]></textarea>
       </div>
     </section>
 
@@ -96,7 +96,7 @@
           </tr>
           <tr>
             <td datalabel="Element">Textarea</td>
-            <td datalabel="Attribute">[aaTextareaAutoresize]</td>
+            <td datalabel="Attribute">[phTextareaAutoresize]</td>
             <td datalabel="Type">Directive</td>
             <td datalabel="Default">N/A</td>
           </tr>
@@ -107,7 +107,7 @@
           </tr>
           <tr>
             <td datalabel="Element">Form control</td>
-            <td datalabel="Attribute">[aaTextareaAutoresize]</td>
+            <td datalabel="Attribute">[phTextareaAutoresize]</td>
             <td datalabel="Type">AbstractControl</td>
             <td datalabel="Default">N/A</td>
           </tr>
@@ -117,14 +117,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showTextarea=false; showTextareaAutoresize=true">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showTextarea=false; showTextareaAutoresize=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -138,12 +138,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showTextarea">
-      <a href="https://gist.github.com/angloux/1768ae600cabe08d21ff4124f5ae28ef" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/1768ae600cabe08d21ff4124f5ae28ef"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/a2452b245608c0503143a499904b3e52" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/a2452b245608c0503143a499904b3e52"></app-gist>
     </div>
     <div *ngIf="showTextareaAutoresize">
-      <a href="https://gist.github.com/angloux/892a3d906c73f3cd7ccc40a41c5a77c4" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/892a3d906c73f3cd7ccc40a41c5a77c4"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/0ab64116a92dd5f0e8ec2f31b2a7b16c" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/0ab64116a92dd5f0e8ec2f31b2a7b16c"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

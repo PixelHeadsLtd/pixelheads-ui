@@ -31,91 +31,91 @@ export class SelectComponent {
       display: 'Please select',
       showIcon: true,
       icon: 'calendar_month',
-      iconColor: 'aa-light-blue-100',
+      iconColor: 'ph-light-blue-100',
     },
     {
       id: 'jan',
       display: 'January',
       showIcon: true,
       icon: 'ac_unit',
-      iconColor: 'aa-light-blue-50'
+      iconColor: 'ph-light-blue-50'
     },
     {
       id: 'feb',
       display: 'February',
       showIcon: true,
       icon: 'ac_unit',
-      iconColor: 'aa-light-blue-50'
+      iconColor: 'ph-light-blue-50'
     },
     {
       id: 'mar',
       display: 'March',
       showIcon: true,
       icon: 'emoji_nature',
-      iconColor: 'aa-orange-100'
+      iconColor: 'ph-orange-100'
     },
     {
       id: 'apr',
       display: 'April',
       showIcon: true,
       icon: 'emoji_nature',
-      iconColor: 'aa-orange-100'
+      iconColor: 'ph-orange-100'
     },
     {
       id: 'may',
       display: 'May',
       showIcon: true,
       icon: 'emoji_nature',
-      iconColor: 'aa-orange-100'
+      iconColor: 'ph-orange-100'
     },
     {
       id: 'jun',
       display: 'June',
       showIcon: true,
       icon: 'beach_access',
-      iconColor: 'aa-red-100'
+      iconColor: 'ph-red-100'
     },
     {
       id: 'jul',
       display: 'July',
       showIcon: true,
       icon: 'beach_access',
-      iconColor: 'aa-red-100'
+      iconColor: 'ph-red-100'
     },
     {
       id: 'aug',
       display: 'August',
       showIcon: true,
       icon: 'beach_access',
-      iconColor: 'aa-red-100'
+      iconColor: 'ph-red-100'
     },
     {
       id: 'sep',
       display: 'September',
       showIcon: true,
       icon: 'spa',
-      iconColor: 'aa-ochre-100'
+      iconColor: 'ph-ochre-100'
     },
     {
       id: 'oct',
       display: 'October',
       showIcon: true,
       icon: 'spa',
-      iconColor: 'aa-ochre-100'
+      iconColor: 'ph-ochre-100'
     },
     {
       id: 'nov',
       display: 'November',
       showIcon: true,
       icon: 'spa',
-      iconColor: 'aa-ochre-100'
+      iconColor: 'ph-ochre-100'
     },
     {
       id: 'dec',
       display: 'December',
       showIcon: true,
       icon: 'ac_unit',
-      iconColor: 'aa-light-blue-50'
+      iconColor: 'ph-light-blue-50'
     }
   ];
 

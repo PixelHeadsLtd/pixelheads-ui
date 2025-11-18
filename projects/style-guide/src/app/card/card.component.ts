@@ -18,7 +18,6 @@ export class CardComponent {
   showCardOptional: boolean = false;
   showCardMini: boolean = false;
   showAvatar: boolean = false;
-  showCardList: boolean = false;
   showCardDetailed: boolean = false;
   toggleBlade: boolean = false;
   cardDescription: string = 'This is the card description, it must not exceed two lines, therefore we are truncating large descriptions';

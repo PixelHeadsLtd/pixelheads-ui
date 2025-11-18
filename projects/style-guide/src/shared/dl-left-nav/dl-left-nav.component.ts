@@ -66,9 +66,8 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'border_top', title: 'Blade top', routerLink: '/blade-top' },
           { iconName: 'check_box_outline_blank', title: 'Custom wrapper', routerLink: '/custom-wrapper' },
           { iconName: 'filter_alt', title: 'Filter', routerLink: '/filter' },
-          { iconName: 'view_week', title: 'Flex', routerLink: '/flex' },
-          { iconName: 'call_to_action', title: 'Footer', routerLink: '/footer' },
-          { customClass: 'flip-y', iconName: 'call_to_action', title: 'Header', routerLink: '/header' },
+          { iconName: 'border_clear', title: 'Modal', routerLink: '/modal' },
+          { iconName: 'border_outer', title: 'Overlay', routerLink: '/overlay' },
           { iconName: 'block', title: 'UI block', routerLink: '/ui-block' }
         ]
     },
@@ -77,9 +76,6 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
       color: 'orange', iconName: 'menu_open', title: 'Navigation', isExpandable: true, nestedItems:
         [
           { iconName: 'more_vert', title: 'Context menu', routerLink: '/context-menu' },
-          { iconName: 'menu_open', title: 'Nav context', routerLink: '/nav-context' },
-          { iconName: 'linear_scale', title: 'Progress indicator', routerLink: '/progress-indicator' },
-          { iconName: 'format_list_numbered_rtl', title: 'Progress indicator LH', routerLink: '/progress-indicator-lh' },
           { iconName: 'start', title: 'Stepper', routerLink: '/stepper' },
           { iconName: 'pivot_table_chart', title: 'Tab navigation', routerLink: '/tab-navigation' },
           { iconName: 'account_tree', title: 'Tree menu', routerLink: '/tree-menu' }
@@ -98,6 +94,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'insert_emoticon', title: 'Icons', routerLink: '/icons' },
           { iconName: 'history_toggle_off', title: 'Progress bar', routerLink: '/progress-bar' },
           { iconName: 'forward_10', title: 'Progress circle', routerLink: '/progress-circle' },
+          { iconName: 'linear_scale', title: 'Progress indicator', routerLink: '/progress-indicator' },
           { iconName: 'check_circle', title: 'Status indicator', routerLink: '/status-indicator' },
           { iconName: 'loyalty', title: 'Tags', routerLink: '/tags' }
         ]
@@ -115,14 +112,11 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'face', title: 'Icon picker', routerLink: '/icon-picker' },
           { iconName: 'fact_check', title: 'Info panel', routerLink: '/info-panel' },
           { iconName: 'checklist_rtl', title: 'List selectable', routerLink: '/list-selectable' },
-          { iconName: 'border_clear', title: 'Modal', routerLink: '/modal' },
-          { iconName: 'border_outer', title: 'Overlay', routerLink: '/overlay' },
           { iconName: 'sms', title: 'Popover', routerLink: '/popover' },
           { iconName: 'short_text', title: 'Summary top', routerLink: '/summary-top' },
           { iconName: 'admin_panel_settings', title: 'Toastr', routerLink: '/toastr' },
           { iconName: 'mode_comment', title: 'Tooltip', routerLink: '/tooltip' },
-          { iconName: 'question_answer', title: 'Tooltip dynamic', routerLink: '/tooltip-dynamic' },
-          { iconName: 'sentiment_satisfied_alt', title: 'User feedback', routerLink: '/user-feedback' }
+          { iconName: 'question_answer', title: 'Tooltip dynamic', routerLink: '/tooltip-dynamic' }
         ]
     },
     // MODIFIERS
@@ -147,31 +141,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'edit_note', title: 'Editorial content', routerLink: '/editorial-content' },
           { iconName: 'text_format', title: 'Typography', routerLink: '/typography' }
         ]
-    },
-    // THIRD PARTY COMPONENTS
-    {
-      color: 'green reversed', iconName: 'widgets', title: 'Third-party components', isExpandable: true, nestedItems:
-        [
-          { iconName: 'table_rows', title: 'Ag grid', routerLink: '/ag-grid' },
-          { iconName: 'insights', title: 'High charts', routerLink: '/high-charts' },
-          { iconName: 'edit_calendar', title: 'Ngb datepicker', routerLink: '/ngb-datepicker' },
-          { iconName: 'hourglass_top', title: 'Ngb timepicker', routerLink: '/ngb-timepicker' },
-          { iconName: 'checklist', title: 'Ng select', routerLink: '/ng-select' },
-          { iconName: 'edit_note', title: 'Ngx quill', routerLink: '/ngx-quill' }
-        ]
-    },
-    // PAGE TEMPLATES
-    { soloItem: true, color: 'green reversed solo-menu-item', iconName: 'view_quilt', title: 'Page templates', routerLink: '/page-templates' },
-    // ADDENDUM
-    {
-      color: 'green reversed', iconName: 'subject', title: 'Addendum', routerLink: '/page-templates', isExpandable: true, nestedItems:
-        [
-          { iconName: 'view_comfy', title: 'Elements alignment', routerLink: '/elements-alignment' },
-          { iconName: 'block', title: 'Unauthorised', routerLink: '/unauthorised' }
-        ]
-    },
-    // GO TO DESIGN PRINCIPLES
-    { soloItem: true, color: 'burgundy solo-menu-item', iconName: 'psychology', title: 'Visit Design Principles', isHref: true, hRef: 'https://design-principles.netlify.app/designprinciples/' },
+    }
   ];
 
   constructor(private toggleService: ToggleService, private router: Router) {

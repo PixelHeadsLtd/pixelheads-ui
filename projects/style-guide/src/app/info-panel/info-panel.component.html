@@ -28,56 +28,56 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-info-panel</td>
+            <td datalabel="Element">ph-info-panel</td>
             <td datalabel="Attribute">panelWidth</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">20</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-info-panel</td>
+            <td datalabel="Element">ph-info-panel</td>
             <td datalabel="Attribute">panelHeight</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">12.5</td>
           </tr>
           <ng-container *ngIf="showMore">
           <tr>
-            <td datalabel="Element">aa-info-panel</td>
+            <td datalabel="Element">ph-info-panel</td>
             <td datalabel="Attribute">panelStatus</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">info, approved,<br/>pending, rejected</td>
           </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">custom-header</td>
               <td datalabel="Type">HTML</td>
               <td datalabel="Default">Your markup</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">custom-content</td>
               <td datalabel="Type">HTML</td>
               <td datalabel="Default">Your markup</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">custom-footer</td>
               <td datalabel="Type">HTML</td>
               <td datalabel="Default">Your markup</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">preventOpacity</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">false</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">[roundedCorners]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel</td>
+              <td datalabel="Element">ph-info-panel</td>
               <td datalabel="Attribute">[removeHeaderBorder]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
@@ -93,13 +93,13 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=true; showInfoPanelStacked=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=true; showInfoPanelStacked=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
     </div>
     <div class="flex-group flex-start margin-top-2">
-      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="info">
+      <ph-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="info">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -117,12 +117,12 @@
         <ng-container custom-footer>
           <div class="flex-group space-between">
             <div class="material-icons">thumb_up</div>
-            <button class="material-icons aa-light-blue-100">create</button>
+            <button class="material-icons ph-light-blue-100">create</button>
           </div>
         </ng-container>
-      </aa-info-panel>
+      </ph-info-panel>
 
-      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="approved">
+      <ph-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="approved">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -140,12 +140,12 @@
         <ng-container custom-footer>
           <div class="flex-group space-between">
             <div class="material-icons">thumb_up</div>
-            <button class="material-icons aa-light-blue-100">create</button>
+            <button class="material-icons ph-light-blue-100">create</button>
           </div>
         </ng-container>
-      </aa-info-panel>
+      </ph-info-panel>
 
-      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="pending">
+      <ph-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="pending">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -163,12 +163,12 @@
         <ng-container custom-footer>
           <div class="flex-group space-between">
             <div class="material-icons">thumb_up</div>
-            <button class="material-icons aa-light-blue-100">create</button>
+            <button class="material-icons ph-light-blue-100">create</button>
           </div>
         </ng-container>
-      </aa-info-panel>
+      </ph-info-panel>
 
-      <aa-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="rejected">
+      <ph-info-panel panelWidth="20rem" panelHeight="12.5rem" panelStatus="rejected">
         <ng-container custom-header>
           <section class="flex-group space-between">
             <div class="flex-group flex-start flex-align-center">
@@ -189,13 +189,13 @@
         <ng-container custom-footer>
           <div class="flex-group space-between">
             <div class="material-icons">thumb_up</div>
-            <button class="material-icons aa-light-blue-100">create</button>
+            <button class="material-icons ph-light-blue-100">create</button>
           </div>
         </ng-container>
-      </aa-info-panel>
+      </ph-info-panel>
     </div>
     <div class="flex-group flex-start">
-      <aa-info-panel
+      <ph-info-panel
         panelWidth="30rem"
         panelHeight="20rem"
         panelStatus="info"
@@ -219,10 +219,10 @@
         <ng-container custom-footer>
           <div class="flex-group space-between">
             <div class="material-icons">thumb_up</div>
-            <button class="material-icons aa-light-blue-100">create</button>
+            <button class="material-icons ph-light-blue-100">create</button>
           </div>
         </ng-container>
-      </aa-info-panel>
+      </ph-info-panel>
     </div>
   </section>
 
@@ -252,38 +252,38 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-info-panel-stacked</td>
+              <td datalabel="Element">ph-info-panel-stacked</td>
               <td datalabel="Attribute">[successForward]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">successForward</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-info-panel-stacked</td>
+              <td datalabel="Element">ph-info-panel-stacked</td>
               <td datalabel="Attribute">[warningForward]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">warningForward</td>
             </tr>
             <ng-container *ngIf="showMoreTwo">
               <tr>
-                <td datalabel="Element">aa-info-panel-stacked</td>
+                <td datalabel="Element">ph-info-panel-stacked</td>
                 <td datalabel="Attribute">[errorForward]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">errorForward</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-info-panel-stacked</td>
+                <td datalabel="Element">ph-info-panel-stacked</td>
                 <td datalabel="Attribute">[resetAll]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">resetAll</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-info-panel-stacked</td>
+                <td datalabel="Element">ph-info-panel-stacked</td>
                 <td datalabel="Attribute">wrapperWidth</td>
                 <td datalabel="Type">Number</td>
                 <td datalabel="Default">21</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-info-panel-stacked</td>
+                <td datalabel="Element">ph-info-panel-stacked</td>
                 <td datalabel="Attribute">wrapperHeight</td>
                 <td datalabel="Type">Number</td>
                 <td datalabel="Default">13.5</td>
@@ -294,7 +294,7 @@
                 </td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-info-panel-stacked</td>
+                <td datalabel="Element">ph-info-panel-stacked</td>
                 <td datalabel="Attribute">[fullWidth]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">True</td>
@@ -310,14 +310,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=false; showInfoPanelStacked=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showInfoPanel=false; showInfoPanelStacked=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </div>
 
       <div class="margin-top-2 margin-bottom-2">
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [rejectedForward]="rejectedForward"
           [resetAll]="resetAll"
@@ -325,7 +325,7 @@
           wrapperWidth="100%"
           wrapperHeight="25rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsFive; let i = index"
             [preventOpacity]="false"
             (click)="panelFiveClicked(i)"
@@ -342,7 +342,7 @@
                 </div>
                 <div class="flex-group flex-end">
                   <div class="alert-shield pending-red">In progress</div>
-                  <button class="material-icons aa-light-blue-100">create</button>
+                  <button class="material-icons ph-light-blue-100">create</button>
                 </div>
               </section>
             </ng-container>
@@ -402,8 +402,8 @@
                 </div>
             </section>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
       </div>
 
       <div class="flex-group flex-start margin-top-1">
@@ -459,7 +459,7 @@
 
       <div class="flex-group flex-start margin-top-2">
         <!--Note - wrapperWidth and wrapperHeight must be 1rem bigger than nested info-panel-->
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
@@ -470,7 +470,7 @@
           wrapperWidth="21rem"
           wrapperHeight="13.5rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsOne; let i = index"
             (click)="panelOneClicked(i)"
             [ngClass]="{'selected' : panelOneIndex===i}"
@@ -496,13 +496,13 @@
             <ng-container custom-footer>
               <div class="flex-group space-between">
                 <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+                <button class="material-icons ph-light-blue-100">{{p.footerIconTwo}}</button>
               </div>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
 
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
@@ -513,7 +513,7 @@
           wrapperWidth="21rem"
           wrapperHeight="13.5rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsTwo; let i = index"
             (click)="panelTwoClicked(i)"
             [ngClass]="{'selected' : panelTwoIndex===i}"
@@ -539,13 +539,13 @@
             <ng-container custom-footer>
               <div class="flex-group space-between">
                 <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+                <button class="material-icons ph-light-blue-100">{{p.footerIconTwo}}</button>
               </div>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
 
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
@@ -556,7 +556,7 @@
           wrapperWidth="20rem"
           wrapperHeight="13.5rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsThree; let i = index"
             (click)="panelThreeClicked(i)"
             [ngClass]="{'selected' : panelThreeIndex===i}"
@@ -582,13 +582,13 @@
             <ng-container custom-footer>
               <div class="flex-group space-between">
                 <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+                <button class="material-icons ph-light-blue-100">{{p.footerIconTwo}}</button>
               </div>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
 
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
@@ -599,7 +599,7 @@
           wrapperWidth="21rem"
           wrapperHeight="13.5rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsFour; let i = index"
             (click)="panelFourClicked(i)"
             [ngClass]="{'selected' : panelFourIndex===i}"
@@ -625,13 +625,13 @@
             <ng-container custom-footer>
               <div class="flex-group space-between">
                 <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+                <button class="material-icons ph-light-blue-100">{{p.footerIconTwo}}</button>
               </div>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
 
-        <aa-info-panel-stacked
+        <ph-info-panel-stacked
           [approvedForward]="approvedForward"
           [pendingForward]="pendingForward"
           [rejectedForward]="rejectedForward"
@@ -642,7 +642,7 @@
           wrapperWidth="21rem"
           wrapperHeight="13.5rem"
         >
-          <aa-info-panel
+          <ph-info-panel
             *ngFor="let p of infoPanelItemsFive; let i = index"
             (click)="panelFiveClicked(i)"
             [ngClass]="{'selected' : panelFiveIndex===i}"
@@ -668,16 +668,16 @@
             <ng-container custom-footer>
               <div class="flex-group space-between">
                 <div class="material-icons">{{p.footerIconOne}}</div>
-                <button class="material-icons aa-light-blue-100">{{p.footerIconTwo}}</button>
+                <button class="material-icons ph-light-blue-100">{{p.footerIconTwo}}</button>
               </div>
             </ng-container>
-          </aa-info-panel>
-        </aa-info-panel-stacked>
+          </ph-info-panel>
+        </ph-info-panel-stacked>
       </div>
     </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -691,12 +691,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showInfoPanel">
-      <a href="https://gist.github.com/angloux/f12973e6d3da23f18a1447d3b5296228" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/f12973e6d3da23f18a1447d3b5296228"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/5630bd98fc6b19f92448fdeb8fbc700f" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/5630bd98fc6b19f92448fdeb8fbc700f"></app-gist>
     </div>
     <div *ngIf="showInfoPanelStacked">
-      <a href="https://gist.github.com/angloux/4db73a253140135b45d39eabe0081d79" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/4db73a253140135b45d39eabe0081d79"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/d82807f10a386c2e2e03fa1d38c65dc1" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/d82807f10a386c2e2e03fa1d38c65dc1"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

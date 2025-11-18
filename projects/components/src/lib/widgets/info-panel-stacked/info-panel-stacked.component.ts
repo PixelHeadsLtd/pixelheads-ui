@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-info-panel-stacked',
+  selector: 'ph-info-panel-stacked',
   templateUrl: './info-panel-stacked.component.html',
   styleUrls: ['./info-panel-stacked.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

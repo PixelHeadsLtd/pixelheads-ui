@@ -1,0 +1,78 @@
+.ph-stepper {
+    padding: 1.25rem;
+    background-color: _colour(ph-white-100);
+    .ph-stepper-header {
+        padding-left: 0;
+        li {
+            list-style: none;
+            a {
+                position: relative;
+                padding-left: 2rem;
+                text-decoration: none;
+                color: _colour(ph-grey-100);
+                label {
+                    opacity: .4;
+                    padding: .25rem 0 0 0;
+                }
+                &.current-step {
+                    font-family: _font(family-medium);
+                    .ph-step-status {
+                        background-color: _colour(ph-blue-100);
+                    }
+                    label {
+                        opacity: 1;
+                    }
+                }
+                .ph-step-status {
+                    position: absolute;
+                    left: 0;
+                    border-radius: 50%;
+                    background-color: _colour(trans-pink-to-plum);
+                    color: _palette(white);
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    line-height: 1.5rem;
+                    align-items: center;
+                    text-align: center;
+
+                    &.material-icons,
+                    &.material-icons-outlined {
+                        z-index: 1;
+                        font-size: _font(size-regular);
+                        background-color: _palette(ph-green-100);
+                    }
+                }
+            }
+        }
+    }
+    .ph-stepper-content {
+        overflow: hidden;
+        padding: 0 0 1.5rem 0;
+
+        .ph-steps {
+            transform: translate3d(100%, 0, 0);
+            transition: transform 1s ease ;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+
+            &.selected {
+                transform: none;
+                visibility: inherit;
+                outline: 0;
+                overflow: visible;
+                height: initial;
+            }
+        }
+
+        .error[role=alert],
+        .success[role=alert] {
+            margin-top: 1.5rem;
+        }
+    }
+    .ph-stepper-footer {
+        .field {
+            padding: 0;
+        }
+    }
+}

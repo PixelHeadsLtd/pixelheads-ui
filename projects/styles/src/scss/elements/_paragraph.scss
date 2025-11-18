@@ -1,6 +1,6 @@
 p {
     margin: 0;
-    color: _colour(aa-grey-100);
+    color: _colour(ph-grey-100);
     line-height: 1.15rem;
     &.small {
       font-size: _font(size-small);
@@ -8,6 +8,6 @@ p {
     }
 }
 
-p + p:not(.aa-csh p) {
+p + p:not(.ph-csh p) {
   margin-top: 1rem;
 }

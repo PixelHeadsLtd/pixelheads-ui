@@ -1,7 +1,7 @@
 {
-  "name": "@angloamerican/styles",
+  "name": "@pixelheads-ui/styles",
   "version": "0.0.0-set-in-pipeline",
-  "description": "Anglo American stylesheets",
+  "description": "PixelHeads UI - Stylesheets",
   "files": [
     "src/scss/**/*",
     "src/assets/**/*"

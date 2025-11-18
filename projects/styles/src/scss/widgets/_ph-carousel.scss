@@ -1,0 +1,39 @@
+
+.carousel-count {
+    position: absolute;
+    z-index: 1;
+    bottom: .5rem;
+    font-size: _font(size-small);
+    color: _colour(ph-blue-100);
+    margin: 0;
+}
+
+.ph-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    .ph-carousel-content {
+        padding: 0;
+
+        .ph-carousel-item {
+            padding: 0;
+            margin-right: 0;
+            height: 100%;
+
+            h1, h2, h3 {
+                margin-top: .25rem;
+            }
+        }
+    }
+}
+
+.ph-carousel-footer {
+    padding: 1rem;
+
+    button {
+        &.disable-first,
+        &.disable-last {
+            opacity: .3;
+        }
+    }
+}

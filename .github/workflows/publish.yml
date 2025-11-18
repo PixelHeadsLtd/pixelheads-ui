@@ -1,0 +1,52 @@
+name: Publish Design System
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/styles/**"
+      - "projects/components/**"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Set up Node
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        registry-url: https://npm.pkg.github.com/
+
+    # Install dependencies
+    - name: Install
+      run: npm install
+
+    # Build Angular libraries
+    - name: Build
+      run: npm run build
+
+    # Version bump (patch by default, can be changed to minor/major)
+    - name: Bump version
+      run: |
+        cd projects/styles
+        npm version patch --git-tag-version=false --commit-hooks=false
+        cd ../components
+        npm version patch --git-tag-version=false --commit-hooks=false
+
+    # Publish Styles package
+    - name: Publish Styles
+      run: npm publish dist/styles --access restricted
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Publish Components package
+    - name: Publish Components
+      run: npm publish dist/components --access restricted
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

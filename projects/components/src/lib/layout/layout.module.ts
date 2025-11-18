@@ -5,45 +5,42 @@ import { RouterModule } from '@angular/router';
 import { BladeComponent } from './blade/blade.component';
 import { BladeFooterComponent } from './blade-footer/blade-footer.component';
 import { BladeBottomComponent } from './blade-bottom/blade-bottom.component';
-import { BladeBottomLegacyComponent } from './blade-bottom-legacy/blade-bottom-legacy.component';
 import { BladeTopComponent } from './blade-top/blade-top.component';
-import { FooterComponent } from './footer/footer.component';
 import { ProjectTourComponent } from './project-tour/project-tour.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
-import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
-import { GraphicComponent } from './unauthorised/graphic.component';
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
-import { FilterComponent } from './filter/filter.component'
+import { FilterComponent } from './filter/filter.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import { OverlayComponent } from './overlay/overlay.component';
 
 @NgModule({
   declarations: [
     BladeComponent,
-    FooterComponent,
     BladeFooterComponent,
     BladeBottomComponent,
-    BladeBottomLegacyComponent,
     BladeTopComponent,
     ProjectTourComponent,
     UiBlockComponent,
-    UnauthorisedComponent,
-    GraphicComponent,
     CustomWrapperComponent,
-    FilterComponent
+    FilterComponent,
+    ModalComponent,
+    ModalDialogComponent,
+    OverlayComponent
   ],
   imports: [CommonModule, RouterModule, ReactiveFormsModule],
   exports: [
     BladeComponent,
-    FooterComponent,
     BladeFooterComponent,
     BladeBottomComponent,
-    BladeBottomLegacyComponent,
     BladeTopComponent,
     ProjectTourComponent,
     UiBlockComponent,
-    UnauthorisedComponent,
-    GraphicComponent,
     CustomWrapperComponent,
-    FilterComponent
+    FilterComponent,
+    ModalComponent,
+    ModalDialogComponent,
+    OverlayComponent
   ],
 })
 export class LayoutModule {}

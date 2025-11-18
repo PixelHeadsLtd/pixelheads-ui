@@ -10,11 +10,11 @@ markup to override Bootstrap's "_reboot.scss"
 that's currently installed in CORE & used for 3rd party
 components that rely on Bootstrap. So far these are: 
 ngb-datepicker, ng-select and ag-grid */
-aa-blade, 
+ph-blade, 
 aside, 
 section,
 article,
-.aa-card,
+.ph-card,
 .blade-top,
 .info-panel-content {
   &:not(

@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter, Renderer2, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'aa-blade-top',
+  selector: 'ph-blade-top',
   templateUrl: './blade-top.component.html',
   styleUrls: ['./blade-top.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

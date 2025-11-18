@@ -35,49 +35,49 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">[showOverlay]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">minWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your min width in % or rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">maxWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your max width in % or rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">zIndex</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">999</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">topPos</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">default set in css</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">rightPos</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">default set in css</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">bottomPos</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">default set in css</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-overlay</td>
+            <td datalabel="Element">ph-overlay</td>
             <td datalabel="Attribute">leftPos</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">default set in css</td>
@@ -100,14 +100,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -120,17 +120,17 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/ae6121d6c18efd318200b00e36802d8f" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/ae6121d6c18efd318200b00e36802d8f"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/aba6c3a43e1b16b80804d22f759f7575" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/aba6c3a43e1b16b80804d22f759f7575"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>
 
-<aa-overlay
+<ph-overlay
   [showOverlay]="showOverlay"
   [zIndex]="999"
 >
   <ng-container overlay-header>
-    <section class="aa-overlay-header flex-group space-between">
+    <section class="ph-overlay-header flex-group space-between">
       <div class="flex-group flex-start">
         <div class="card-image-container">
           <div class="card-image fingerprint">
@@ -154,12 +154,12 @@
   </ng-container>
 
   <ng-container overlay-content>
-    <aa-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
-      <aa-tab-navigation-item tabName="Overview" [enableIcons]="false" iconName="" iconColour="">
-        <ng-template aaTabNavigationContent>
+    <ph-tab-navigation [ngTemplate]="true" [displayTabContent]="false" (tabChanged)="tabChanged($event)">
+      <ph-tab-navigation-item tabName="Overview" [enableIcons]="false" iconName="" iconColour="">
+        <ng-template phTabNavigationContent>
           <h2 class="boxed">Contact information</h2>
           <div class="flex-group flex-start">
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -169,8 +169,8 @@
               <ng-container content>
                 <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -180,8 +180,8 @@
               <ng-container content>
                 <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -191,8 +191,8 @@
               <ng-container content>
                 <span>+442079688744</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -202,8 +202,8 @@
               <ng-container content>
                 <span>Tatooine, Western Dune Sea</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -213,8 +213,8 @@
               <ng-container content>
                 <span>Rebel Alliance</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -224,12 +224,12 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
           <h2>Organisation</h2>
           <div>
             <h5>Manager</h5>
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -242,11 +242,11 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
           <h5>Yoda manages</h5>
           <div class="flex-group flex-start">
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -259,8 +259,8 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -273,8 +273,8 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -287,17 +287,17 @@
               <ng-container content>
                 <span>Sith Lord</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
           <h2>Files</h2>
           <p>Sorry, no files have been uploaded just yet.</p>
         </ng-template>
-      </aa-tab-navigation-item>
-      <aa-tab-navigation-item tabName="Contact" [enableIcons]="false" iconName="" iconColour="">
-        <ng-template aaTabNavigationContent>
+      </ph-tab-navigation-item>
+      <ph-tab-navigation-item tabName="Contact" [enableIcons]="false" iconName="" iconColour="">
+        <ng-template phTabNavigationContent>
           <h2 class="boxed">Contact information</h2>
           <div class="flex-group flex-start">
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -307,8 +307,8 @@
               <ng-container content>
                 <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -318,8 +318,8 @@
               <ng-container content>
                 <a href="obi-wan@kenobi.com">obi-wan&#64;kenobi.com</a>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -329,8 +329,8 @@
               <ng-container content>
                 <span>+442079688744</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -340,8 +340,8 @@
               <ng-container content>
                 <span>Tatooine, Western Dune Sea</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -351,8 +351,8 @@
               <ng-container content>
                 <span>Rebel Alliance</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsIcon]="true"
@@ -362,16 +362,16 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
         </ng-template>
-      </aa-tab-navigation-item>
-      <aa-tab-navigation-item tabName="Organisation" [tabDisabled]="false" [enableIcons]="false" iconName="" iconColour="">
-        <ng-template aaTabNavigationContent>
+      </ph-tab-navigation-item>
+      <ph-tab-navigation-item tabName="Organisation" [tabDisabled]="false" [enableIcons]="false" iconName="" iconColour="">
+        <ng-template phTabNavigationContent>
           <h2 class="boxed">Organisation</h2>
           <div>
             <h5>Manager</h5>
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -384,11 +384,11 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
           <h5>Yoda manages</h5>
           <div class="flex-group flex-start">
-            <aa-card
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -401,8 +401,8 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -415,8 +415,8 @@
               <ng-container content>
                 <span>Jedi Master</span>
               </ng-container>
-            </aa-card>
-            <aa-card
+            </ph-card>
+            <ph-card
               routerLink="/card"
               [cardMini]="true"
               [showAsProfile]="true"
@@ -429,20 +429,20 @@
               <ng-container content>
                 <span>Sith Lord</span>
               </ng-container>
-            </aa-card>
+            </ph-card>
           </div>
         </ng-template>
-      </aa-tab-navigation-item>
-      <aa-tab-navigation-item tabName="Files" [tabDisabled]="false" [enableIcons]="false" iconName="" iconColour="">
-        <ng-template aaTabNavigationContent>
+      </ph-tab-navigation-item>
+      <ph-tab-navigation-item tabName="Files" [tabDisabled]="false" [enableIcons]="false" iconName="" iconColour="">
+        <ng-template phTabNavigationContent>
           <h2 class="boxed">Files</h2>
           <p>Sorry, no files are available just yet.</p>
         </ng-template>
-      </aa-tab-navigation-item>
-    </aa-tab-navigation>
+      </ph-tab-navigation-item>
+    </ph-tab-navigation>
 
-    <section *ngIf="activeTab" class="aa-overlay-content">
+    <section *ngIf="activeTab" class="ph-overlay-content">
       <ng-template *ngTemplateOutlet="activeTab.templateRef"></ng-template>
     </section>
   </ng-container>
-</aa-overlay>
+</ph-overlay>

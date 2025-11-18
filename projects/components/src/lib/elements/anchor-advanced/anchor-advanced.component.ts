@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-anchor-advanced',
+  selector: 'ph-anchor-advanced',
   templateUrl: './anchor-advanced.component.html',
   styleUrl: './anchor-advanced.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

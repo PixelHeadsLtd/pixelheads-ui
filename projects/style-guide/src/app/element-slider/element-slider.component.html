@@ -9,7 +9,7 @@
           <h2>Element slider</h2>
           <div class="describe margin-bottom-1">
             <p>
-                A handy widget to display single-row form elements 
+                Look over to the right of the page and you will see our handy El to display single-row form elements 
                 which can be tucked away to help unclutter the page
             </p>
           </div>
@@ -28,8 +28,8 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-element-slider</td>
-                <td datalabel="Attribute">aa-element-slider</td>
+                <td datalabel="Element">ph-element-slider</td>
+                <td datalabel="Attribute">ph-element-slider</td>
                 <td datalabel="Type">Component</td>
                 <td datalabel="Default">N/A</td>
               </tr>
@@ -37,7 +37,7 @@
           </table>
         </section>
 
-        <aa-element-slider class="margin-top-1">
+        <ph-element-slider class="margin-top-1">
             <form class="flex-group">
                 <div class="field boxed">
                     <label>Choose status</label>
@@ -53,17 +53,17 @@
                     <input type="text" placeholder="Name"/>
                 </div>
             </form>
-        </aa-element-slider>
+        </ph-element-slider>
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </section>
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -76,9 +76,9 @@
         (bladeOpen)="bladeIsOpen($event)"
         >
         <article class="blade-content">
-          <a href="https://gist.github.com/angloux/98f547986e54f7d0439615740a480860" target="_blank">View Gist on GitHub</a>
-          <app-gist src="angloux/98f547986e54f7d0439615740a480860"></app-gist>
+          <a href="https://gist.github.com/PixelHeadsLtd/47487ef1321196d2af67ce2d84ddf3c0" target="_blank">View Gist on GitHub</a>
+          <app-gist src="PixelHeadsLtd/47487ef1321196d2af67ce2d84ddf3c0"></app-gist>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

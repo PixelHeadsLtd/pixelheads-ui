@@ -23,8 +23,6 @@ import { RouterModule } from '@angular/router';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionFancyComponent } from './accordion-fancy/accordion-fancy.component';
 import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
-import { AgGridModule } from 'ag-grid-angular';
-import { AgGridComponent } from './ag-grid/ag-grid.component';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AnchorComponent } from './anchor/anchor.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,9 +36,6 @@ import { FeatureboxComponent } from './feature-box/feature-box.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardComponent } from './card/card.component';
 import { CarouselComponent } from './carousel/carousel.component';
-import { CustomTooltipComponent } from './ag-grid/custom-tooltip.component';
-import { CustomValidationTooltipComponent } from './ag-grid/custom-validation-tooltip.component';
-import { CustomCardComponent } from './ag-grid/custom-card.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
@@ -56,8 +51,6 @@ import { FileUploadDirective } from './file-upload/file-upload.directive';
 import { FilterComponent } from './filter/filter.component';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { ColumnFilterPipe } from '../pipes/column-filter-pipe';
-import { FlexComponent } from './flex/flex.component';
-import { FooterComponent } from './footer/footer.component';
 import { IconsComponent } from './icons/icons.component';
 import { InputComponent } from './input/input.component';
 import { InputTextareaComponent } from './input-textarea/input-textarea.component';
@@ -80,9 +73,7 @@ import { TextComponent } from './text/text.component'
 import { TickerComponent } from './ticker/ticker.component'
 import { PaddingComponent } from './padding/padding.component';
 import { DlPopoverComponent } from './popover/popover.component';
-import { PageTemplatesComponent } from './page-templates/page-templates.component';
 import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
-import { ProgressIndicatorLhComponent } from './progress-indicator-lh/progress-indicator-lh.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { ProgressCircleComponent } from './progress-circle/progress-circle.component';
 import { ReleaseNotesComponentsComponent } from '../release-notes/release-notes-components.component';
@@ -98,28 +89,15 @@ import { TreeMenuComponent } from './tree-menu/tree-menu.component';
 import { TypographyComponent } from './typography/typography.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
 import { WidthsComponent } from './widths/widths.component';
-import { NavContextComponent } from './nav-context/nav-context.component';
-import { NgbDatepickerComponent } from './ngb-datepicker/ngb-datepicker.component';
-import { NgbTimepickerComponent } from './ngb-timepicker/ngb-timepicker.component';
-import { NgSelectComponent } from './ng-select/ng-select.component';
-import { HtmlEmailComponent } from './html-email/html-email.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
 import { ValidationComponent } from './validation/validation.component';
 import { IconPickerComponent } from './icon-picker/icon-picker.component';
 import { InfoPanelComponent } from './info-panel/info-panel.component';
-import { ElementsAlignmentComponent } from './elements-alignment/elements-alignment.component';
-import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { HighlightDirective } from '../directives/highlight.directive';
 import { SliderComponent } from './slider/slider.component';
-import { HeaderComponent } from './header/header.component';
-import { AvatarComponent } from './ag-grid/avatar.component'
-import { EllipsisContextMenuComponent } from './ag-grid/ellipsis-context-menu/ellipsis-context-menu.component';
 import { ToastrComponent } from './toastr/toastr.component';
 import { TreeComponent } from './tree-menu/tree/tree.component';
 import { CommentsComponent } from './comments/comments.component';
-import { NgxQuillComponent } from './ngx-quill/ngx-quill.component';
-import { QuestionsAndAnswersComponent } from './questions-and-answers/questions-and-answers.component';
-import { UnauthorisedComponent } from './unauthorised/unauthorised.component';
 import { MiscComponent } from './misc/misc.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { UiBlockComponent } from './ui-block/ui-block.component';
@@ -127,7 +105,6 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
 import { CounterComponent } from './counter/counter.component';
 import { ClickOutsideDirective } from '../directives/click-outside.directive';
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
-import { HighChartsComponent } from './high-charts/high-charts.component';
 import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.component';
 import { RotatingSphereComponent } from './landing-page/rotating-sphere.component';
 import { RangeSliderComponent } from './range-slider/range-slider.component';
@@ -145,7 +122,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     AccordionComponent,
     AccordionFancyComponent,
     ActionsSummaryComponent,
-    AgGridComponent,
     AlertsComponent,
     AnchorComponent,
     BladeComponent,
@@ -157,9 +133,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     FeatureboxComponent,
     CardComponent,
     CarouselComponent,
-    CustomCardComponent,
-    CustomTooltipComponent,
-    CustomValidationTooltipComponent,
     CheckboxComponent,
     ColoursComponent,
     ContextMenuComponent,
@@ -171,13 +144,11 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     FilterComponent,
     FilterPipe,
     ColumnFilterPipe,
-    FlexComponent,
     FieldComponent,
     ValidationComponent,
     FieldsetComponent,
     FileUploadComponent,
     FileUploadDirective,
-    FooterComponent,
     IconPickerComponent,
     IconsComponent,
     InputComponent,
@@ -198,10 +169,8 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     TabSubPageTwoComponent,
     TabSubPageThreeComponent,
     TickerComponent,
-    PageTemplatesComponent,
     PaddingComponent,
     ProgressIndicatorComponent,
-    ProgressIndicatorLhComponent,
     DlPopoverComponent,
     ProgressBarComponent,
     ProgressCircleComponent,
@@ -218,30 +187,17 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     TypographyComponent,
     TooltipComponent,
     WidthsComponent,
-    NavContextComponent,
-    NgbDatepickerComponent,
-    NgbTimepickerComponent,
-    NgSelectComponent,
-    HtmlEmailComponent,
     InputRadioComponent,
     InfoPanelComponent,
-    ElementsAlignmentComponent,
-    UserFeedbackComponent,
     HighlightDirective,
     SliderComponent,
-    HeaderComponent,
     BorderRadiusComponent,
     BorderComponent,
-    AvatarComponent,
-    EllipsisContextMenuComponent,
     ToastrComponent,
     TreeComponent,
     CommentsComponent,
     TextComponent,
-    NgxQuillComponent,
     CarouselComponent,
-    QuestionsAndAnswersComponent,
-    UnauthorisedComponent,
     MiscComponent,
     ListSelectableComponent,
     UiBlockComponent,
@@ -249,7 +205,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     CounterComponent,
     ClickOutsideDirective,
     CustomWrapperComponent,
-    HighChartsComponent,
     TooltipDynamicComponent,
     RotatingSphereComponent,
     RangeSliderComponent,
@@ -281,8 +236,7 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     WidgetsModule,
     DragDropModule,
     HighchartsChartModule,
-    QuillModule.forRoot(),
-    AgGridModule
+    QuillModule.forRoot()
   ],
   exports: [],
   bootstrap: [AppComponent]

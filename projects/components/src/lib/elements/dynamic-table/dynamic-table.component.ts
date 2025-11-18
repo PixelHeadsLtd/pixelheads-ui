@@ -12,7 +12,7 @@ export interface ButtonClickEvent {
 }
 
 @Component({
-  selector: 'aa-dynamic-table',
+  selector: 'ph-dynamic-table',
   templateUrl: './dynamic-table.component.html',
   styleUrls: ['./dynamic-table.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

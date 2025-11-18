@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-actions-summary',
+  selector: 'ph-actions-summary',
   templateUrl: './actions-summary.component.html',
   styleUrls: ['./actions-summary.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,7 +1,7 @@
 .blade-bottom {
   position: fixed;
   bottom: 0;
-  background-color: _colour(aa-grey-2);
+  background-color: _colour(ph-grey-2);
   transition: all 0.25s linear;
   top: 100%;
     &.show {
@@ -40,7 +40,7 @@
 
             span.mask {
               position: absolute;
-              background-color: _colour(aa-white-100);
+              background-color: _colour(ph-white-100);
               border-bottom: solid 1px #002776;
               width: 100%;
               top: -2.5rem;
@@ -68,7 +68,7 @@
 
     .pin {
       transform: rotate(0deg);
-      color: _colour(aa-red-100);
+      color: _colour(ph-red-100);
       margin: 0 .25rem 0 0;
       padding: .5rem;
     }
@@ -113,8 +113,8 @@
 }
 
 .blade-bottom-header {
-  background-color: _colour(aa-white-100);
-  border-bottom: 2px solid _colour(aa-light-blue-30);
+  background-color: _colour(ph-white-100);
+  border-bottom: 2px solid _colour(ph-light-blue-30);
   padding: 0 0 0 1.25rem;
   height: 3.25rem;
 
@@ -132,7 +132,7 @@
   .material-icons,
   .material-icons-outlined {
     font-size: 1.85rem;
-    color: _colour(aa-blue-100);
+    color: _colour(ph-blue-100);
     position: relative;
     z-index: 1;
     -webkit-user-select: none;
@@ -163,7 +163,7 @@
     z-index: 1;
   }
 
-  aa-tab-navigation,
+  ph-tab-navigation,
   .tab-navigation {
     border-bottom: none;
     background-color: transparent;

@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'aa-toastr-item',
+  selector: 'ph-toastr-item',
   templateUrl: './toastr-item.component.html',
   styleUrls: ['./toastr-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

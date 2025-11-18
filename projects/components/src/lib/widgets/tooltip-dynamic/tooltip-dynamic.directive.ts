@@ -14,10 +14,10 @@ import { TooltipDynamicComponent } from './tooltip-dynamic.component';
 import { TooltipDynamicPosition } from './tooltip-dynamic.enums';
 
 @Directive({
-  selector: '[aaTooltip]'
+  selector: '[phTooltip]'
 })
 export class TooltipDynamicDirective implements OnDestroy {
-  @Input() aaTooltip: string | string[] = '';
+  @Input() phTooltip: string | string[] = '';
   @Input() position: TooltipDynamicPosition = TooltipDynamicPosition.DEFAULT;
   @Input() tooltipWidth: string = 'auto';
   @Input() tooltipStatus: string = '';
@@ -66,7 +66,7 @@ export class TooltipDynamicDirective implements OnDestroy {
     if (this.componentRef && this.position === TooltipDynamicPosition.DYNAMIC) {
       this.componentRef.instance.left = event.clientX;
       this.componentRef.instance.top = event.clientY;
-      this.componentRef.instance.tooltip = this.aaTooltip;
+      this.componentRef.instance.tooltip = this.phTooltip;
     }
   }
 
@@ -102,7 +102,7 @@ export class TooltipDynamicDirective implements OnDestroy {
   private setTooltipComponentProperties() {
     if (this.componentRef) {
       const instance = this.componentRef.instance as TooltipDynamicComponent;
-      instance.tooltip = this.aaTooltip;
+      instance.tooltip = this.phTooltip;
       instance.position = this.position;
       instance.tooltipWidth = this.tooltipWidth;
       instance.tooltipStatus = this.tooltipStatus;

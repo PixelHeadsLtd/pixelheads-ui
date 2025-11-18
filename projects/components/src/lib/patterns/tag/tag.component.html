@@ -1,43 +1,43 @@
 <section 
-    id="aa-tag"
+    id="ph-tag"
     *ngIf="!isShaped" 
-    class="aa-tag"
+    class="ph-tag"
     [ngClass]="{
-        'bg-aa-red-100' : isRed,
-        'bg-aa-orange-100' : isOrange,
-        'bg-aa-green-100' : isGreen,
-        'bg-aa-blue-100' : isBlue,
-        'bg-aa-light-blue-100' : isLightBlue,
-        'bg-aa-plum-100' : isPlum,
-        'bg-aa-ochre-100' : isOchre,
-        'bg-aa-white-100' : isWhite,
-        'bg-aa-grey-100' : isBlack,
-        'bg-aa-pink-100' : isPink
+        'bg-ph-red-100' : isRed,
+        'bg-ph-orange-100' : isOrange,
+        'bg-ph-green-100' : isGreen,
+        'bg-ph-blue-100' : isBlue,
+        'bg-ph-light-blue-100' : isLightBlue,
+        'bg-ph-plum-100' : isPlum,
+        'bg-ph-ochre-100' : isOchre,
+        'bg-ph-white-100' : isWhite,
+        'bg-ph-grey-100' : isBlack,
+        'bg-ph-pink-100' : isPink
     }"
 >
-    <div *ngIf="!isWhite" class="material-icons aa-white-100">loyalty</div>
-    <div *ngIf="isWhite" class="material-icons aa-blue-100">loyalty</div>
-    <span *ngIf="!isWhite" class="aa-white-100">{{tagText}}</span>
-    <span *ngIf="isWhite" class="aa-blue-100">{{tagText}}</span>
-    <a *ngIf="!isWhite" class="anchor-close aa-white-100" (click)="onRemove($event)"></a>
-    <a *ngIf="isWhite" class="anchor-close aa-blue-100" (click)="onRemove($event)"></a>
+    <div *ngIf="!isWhite" class="material-icons ph-white-100">loyalty</div>
+    <div *ngIf="isWhite" class="material-icons ph-blue-100">loyalty</div>
+    <span *ngIf="!isWhite" class="ph-white-100">{{tagText}}</span>
+    <span *ngIf="isWhite" class="ph-blue-100">{{tagText}}</span>
+    <a *ngIf="!isWhite" class="anchor-close ph-white-100" (click)="onRemove($event)"></a>
+    <a *ngIf="isWhite" class="anchor-close ph-blue-100" (click)="onRemove($event)"></a>
 </section>
 
 <section 
-    id="aa-tag-shaped"
+    id="ph-tag-shaped"
     *ngIf="isShaped"
-    class="aa-tag-shaped"
+    class="ph-tag-shaped"
     [ngClass]="{
-        'bg-aa-red-100' : isRed,
-        'bg-aa-orange-100' : isOrange,
-        'bg-aa-green-100' : isGreen,
-        'bg-aa-blue-100' : isBlue,
-        'bg-aa-light-blue-100' : isLightBlue,
-        'bg-aa-plum-100' : isPlum,
-        'bg-aa-ochre-100' : isOchre,
-        'bg-aa-white-100' : isWhite,
-        'bg-aa-grey-100' : isBlack,
-        'bg-aa-pink-100' : isPink
+        'bg-ph-red-100' : isRed,
+        'bg-ph-orange-100' : isOrange,
+        'bg-ph-green-100' : isGreen,
+        'bg-ph-blue-100' : isBlue,
+        'bg-ph-light-blue-100' : isLightBlue,
+        'bg-ph-plum-100' : isPlum,
+        'bg-ph-ochre-100' : isOchre,
+        'bg-ph-white-100' : isWhite,
+        'bg-ph-grey-100' : isBlack,
+        'bg-ph-pink-100' : isPink
     }"
 >
     <span>{{tagText}}</span>

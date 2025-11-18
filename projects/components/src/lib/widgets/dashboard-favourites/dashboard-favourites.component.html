@@ -1,4 +1,4 @@
-<article id="aa-dashboard-favs" class="dashboard-favourite flex-group flex-align-center">
+<article id="ph-dashboard-favs" class="dashboard-favourite flex-group flex-align-center">
   <div *ngIf="!materialIcons" class="font-awesome {{favIconClass}}"></div>
   <div *ngIf="materialIcons" class="material-icons {{iconColour}}">{{favIconClass}}</div>
   <a (click)="onAnchorClick($event)" [attr.href]="favouritesURL">{{(favouritesTitle.length>35)? (favouritesTitle | slice:0:35)+'...':(favouritesTitle)}}</a>

@@ -13,42 +13,42 @@
 
             <div class="flex-group flex-start">
 
-                <aa-toastr 
+                <ph-toastr 
                     (toastAdded)="handleToastAdded($event)" 
                     (toastRemoved)="handleToastRemoved($event)"
                     [zIndex]="100"
                     [toastDelay]="5000"
                 >
-                </aa-toastr>
+                </ph-toastr>
 
-                <aa-button
+                <ph-button
                     (buttonClick)="showSuccessToaster()"
                     fieldClass="label-hidden"
-                    buttonClass="bg-aa-green-100 aa-white-100 bd-aa-green-100"
+                    buttonClass="bg-ph-green-100 ph-white-100 bd-ph-green-100"
                     buttonText="Show success"
                     >
-                </aa-button>
-                <aa-button
+                </ph-button>
+                <ph-button
                     (buttonClick)="showWarningToaster()"
                     fieldClass="label-hidden"
-                    buttonClass="bg-aa-orange-100 aa-white-100 bd-aa-orange-100"
+                    buttonClass="bg-ph-orange-100 ph-white-100 bd-ph-orange-100"
                     buttonText="Show warning"
                     >
-                </aa-button>
-                <aa-button
+                </ph-button>
+                <ph-button
                     (buttonClick)="showErrorToaster()"
                     fieldClass="label-hidden"
-                    buttonClass="bg-aa-red-100 aa-white-100 bd-aa-red-100"
+                    buttonClass="bg-ph-red-100 ph-white-100 bd-ph-red-100"
                     buttonText="Show error"
                     >
-                </aa-button>
-                <aa-button
+                </ph-button>
+                <ph-button
                     (buttonClick)="showInfoToaster()"
                     fieldClass="label-hidden"
-                    buttonClass="bg-aa-light-blue-100 aa-white-100 bd-aa-light-blue-100"
+                    buttonClass="bg-ph-light-blue-100 ph-white-100 bd-ph-light-blue-100"
                     buttonText="Show info"
                     >
-                </aa-button>
+                </ph-button>
             </div>
         </section>
 
@@ -71,15 +71,15 @@
                     </tr>
                     <tr>
                         <td datalabel="Element">Article</td>
-                        <td datalabel="Attribute">aa-toastr</td>
+                        <td datalabel="Attribute">ph-toastr</td>
                         <td datalabel="Type">class</td>
-                        <td datalabel="Default">aa-toastr</td>
+                        <td datalabel="Default">ph-toastr</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">Section repeater</td>
-                        <td datalabel="Attribute">aa-toastr-content</td>
+                        <td datalabel="Attribute">ph-toastr-content</td>
                         <td datalabel="Type">class</td>
-                        <td datalabel="Default">aa-toastr-content</td>
+                        <td datalabel="Default">ph-toastr-content</td>
                     </tr>
                     <tr>
                         <td datalabel="Element">Section repeater</td>
@@ -117,13 +117,13 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-            <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+            <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
                 <span class="material-icons">visibility</span><span>View gist</span>
             </button>
         </nav>
     </section>
 
-    <aa-blade
+    <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -136,9 +136,9 @@
         (bladeOpen)="bladeIsOpen($event)"
     >
         <article class="blade-content">
-            <a href="https://gist.github.com/angloux/1cc8971c036b29d7c76a36ec92b7e583" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/1cc8971c036b29d7c76a36ec92b7e583"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/1cc8971c036b29d7c76a36ec92b7e583" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/1cc8971c036b29d7c76a36ec92b7e583"></app-gist>
         </article>
-    </aa-blade>
+    </ph-blade>
 
 </section>

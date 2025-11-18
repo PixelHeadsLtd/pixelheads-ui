@@ -79,19 +79,6 @@ export class BladeBottomComponent implements AfterContentChecked  {
     this.gridColumnApi.autoSizeColumns(allColumnIds);
   }
 
-  onGridReady(params: any) {
-    this.gridApi = params.api;
-    this.gridColumnApi = params.columnApi;
-
-    this.http
-      .get(
-        'https://raw.githubusercontent.com/ag-grid/ag-grid/master/packages/ag-grid-docs/src/olympicWinnersSmall.json'
-      )
-      .subscribe(data => {
-        this.rowData = data;
-      });
-  }
-
   toggleBladeBottom() {
     this.isOpen = !this.isOpen;
   }

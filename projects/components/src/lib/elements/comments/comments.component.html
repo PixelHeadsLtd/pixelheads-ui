@@ -1,6 +1,6 @@
 <div 
- id="aa-comments"
- class="aa-comments position-relative"
+ id="ph-comments"
+ class="ph-comments position-relative"
  [ngClass]="{'position-right' : positionRight}"
 >
   <button 
@@ -19,13 +19,13 @@
     comments-panel
     box-shadow
     border-radius-0-25
-    bg-aa-white-100
+    bg-ph-white-100
     position-absolute"
     [class.show-comments]="makeComments"
     [ngStyle]="{'width' : panelWidth}"
   >
     <p
-      class="margin-top-0 margin-bottom-1 italic aa-blue-100"
+      class="margin-top-0 margin-bottom-1 italic ph-blue-100"
       *ngIf="!comments.length && !makeComments"
     >There are currently no comments
     </p>
@@ -67,14 +67,14 @@
                 </div>
                 <div 
                 class="comment-details margin-right-0 flex-group space-between flex-align-center">
-                  <div class="italic flex-group flex-start flex-align-center aa-grey-25 padding-top-0-25">
+                  <div class="italic flex-group flex-start flex-align-center ph-grey-25 padding-top-0-25">
                     <span title="{{ cmt.userName }}">{{ cmt.userName }}</span>
                     <span title="{{ cmt.currentDate | DateFormatPipe }}">{{ cmt.currentDate | DateFormatPipe }}</span>
                   </div>
                  
                   <button
                     *ngIf="canDelete"
-                    class="material-icons aa-red-100 transparent"
+                    class="material-icons ph-red-100 transparent"
                     (click)="removeComment($event, i)"
                     >
                       delete_forever

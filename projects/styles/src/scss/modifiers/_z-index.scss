@@ -1,10 +1,10 @@
 .loading-spinner,
 .loading-spinner-page,
-.aa-modal,
+.ph-modal,
 .user-feedback,
-.aa-ip-results,
+.ph-ip-results,
 .ng-tooltip,
-.aa-tooltip:hover div {z-index: 999999}
+.ph-tooltip:hover div {z-index: 999999}
 
 footer,
 .toast-container,
@@ -17,7 +17,7 @@ footer,
 
 .blade.show-blade {z-index: 20}
 
-.aa-blade-modal {z-index: 19}
+.ph-blade-modal {z-index: 19}
 
 .hover-card,
 .file-upload input[type="file"],
@@ -32,7 +32,7 @@ footer,
   ol {div {z-index: 1;} &:before {z-index: 0}}
 }
 
-.aa-popover .arrow,
+.ph-popover .arrow,
 .info-panel-stacked .background {z-index: -1}
 
 

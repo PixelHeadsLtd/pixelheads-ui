@@ -2,31 +2,31 @@ $font-path: '../../assets/fonts';
 
 /* AA Smart Sans */
 @font-face {
-  font-family: "aa-smart-sans-light";
+  font-family: "ph-smart-sans-light";
   font-style: normal;
   font-weight: normal;
-  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Light.woff") format("truetype");
+  src: url("#{$font-path}/ph-smart-sans/woff/AASmartSans-Light.woff") format("truetype");
 }
 
 @font-face {
-  font-family: "aa-smart-sans-regular";
+  font-family: "ph-smart-sans-regular";
   font-style: normal;
   font-weight: normal;
-  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Regular.woff") format("truetype");
+  src: url("#{$font-path}/ph-smart-sans/woff/AASmartSans-Regular.woff") format("truetype");
 }
 
 @font-face {
-  font-family: "aa-smart-sans-medium";
+  font-family: "ph-smart-sans-medium";
   font-style: normal;
   font-weight: normal;
-  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-SemiBold.woff") format("truetype");
+  src: url("#{$font-path}/ph-smart-sans/woff/AASmartSans-SemiBold.woff") format("truetype");
 }
 
 @font-face {
-  font-family: "aa-smart-sans-bold";
+  font-family: "ph-smart-sans-bold";
   font-weight: normal;
   font-style: normal;
-  src: url("#{$font-path}/aa-smart-sans/woff/AASmartSans-Bold.woff") format("truetype");
+  src: url("#{$font-path}/ph-smart-sans/woff/AASmartSans-Bold.woff") format("truetype");
 }
 
 /* Din */

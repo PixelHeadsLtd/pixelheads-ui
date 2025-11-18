@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-alert-shield',
+  selector: 'ph-alert-shield',
   templateUrl: './alert-shield.component.html',
   styleUrls: ['./alert-shield.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

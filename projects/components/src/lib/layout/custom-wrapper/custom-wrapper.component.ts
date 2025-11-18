@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-custom-wrapper',
+  selector: 'ph-custom-wrapper',
   templateUrl: './custom-wrapper.component.html',
   styleUrls: ['./custom-wrapper.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

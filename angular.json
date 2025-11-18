@@ -7,7 +7,7 @@
       "root": "projects/components",
       "sourceRoot": "projects/components/src",
       "projectType": "library",
-      "prefix": "aa",
+      "prefix": "ph",
       "schematics": {
         "@schematics/angular:component": {
           "changeDetection": "OnPush"

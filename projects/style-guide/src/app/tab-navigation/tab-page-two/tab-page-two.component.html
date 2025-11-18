@@ -9,7 +9,7 @@
 
 <div class="blades-data">
   <h3 class="boxed">Mixing accordions and regular form elements</h3>
-  <aa-accordion
+  <ph-accordion
   [disabled]="true"
   (open)="showBodyOne = true"
   [dragable]="false"
@@ -20,9 +20,9 @@
   [iconsEnabled]="true"
   iconName="account_balance"
   coreIconClass=""
-  customBgColor="bg-aa-blue-sky-100"
+  customBgColor="bg-ph-blue-sky-100"
   >
-    <aa-accordion
+    <ph-accordion
     [disabled]="false"
     (open)="showNestedOne = true"
     [dragable]="false"
@@ -41,8 +41,8 @@
         <label>Last name</label>
         <input type="text"/>
       </div>
-  </aa-accordion>
-  <aa-accordion
+  </ph-accordion>
+  <ph-accordion
     [disabled]="false"
     (open)="showNestedTwo = true"
     [dragable]="false"
@@ -62,8 +62,8 @@
         <label>Phone</label>
         <input type="text"/>
       </div>
-  </aa-accordion>
-  <aa-accordion
+  </ph-accordion>
+  <ph-accordion
     [disabled]="false"
     (open)="showNestedThree = true"
     [dragable]="false"
@@ -83,9 +83,9 @@
         <label>Country</label>
         <input type="text"/>
       </div>
-  </aa-accordion>
-  </aa-accordion>
-  <aa-accordion
+  </ph-accordion>
+  </ph-accordion>
+  <ph-accordion
   [disabled]="false"
   (open)="showBodyTwo = true"
   [dragable]="false"
@@ -96,15 +96,15 @@
   [iconsEnabled]="true"
   iconName="people"
   coreIconClass=""
-  customBgColor="bg-aa-blue-sky-100"
+  customBgColor="bg-ph-blue-sky-100"
   >
   <div header-custom><div class="alert-shield small info">Custom content</div></div>
     <div class="field boxed">
       <label>Comments</label>
       <textarea></textarea>
     </div>
-  </aa-accordion>
-  <aa-accordion
+  </ph-accordion>
+  <ph-accordion
   [disabled]="false"
   (open)="showBodyThree = true"
   [dragable]="false"
@@ -124,8 +124,8 @@
       as these are modified in css.
     </p>
   </div>
-  </aa-accordion>
-  <aa-accordion
+  </ph-accordion>
+  <ph-accordion
   [disabled]="false"
   (open)="showBodyFour = true"
   [dragable]="false"
@@ -140,7 +140,7 @@
   <div class="field boxed">
     <h3>Standard blade</h3>
     <p>
-      Please refer to the gist file. You have to make sure that the aa-tab-navigation component 
+      Please refer to the gist file. You have to make sure that the ph-tab-navigation component 
       sits just above the blade-content wrapper. Then ensure that your router-outlet sits 
       inside the blade-content wrapper. 
     </p>
@@ -152,7 +152,7 @@
       to the custom-blade gist file.
     </p>
   </div>
-  </aa-accordion>
+  </ph-accordion>
   <div class="field">
       <label>First name</label>
       <input type="text"/>

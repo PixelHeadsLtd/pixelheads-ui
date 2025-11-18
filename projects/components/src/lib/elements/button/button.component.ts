@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, HostListener, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'aa-button',
+  selector: 'ph-button',
   templateUrl: './button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

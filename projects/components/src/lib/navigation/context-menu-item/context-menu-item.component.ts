@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'aa-context-menu-item',
+  selector: 'ph-context-menu-item',
   templateUrl: './context-menu-item.component.html',
   styleUrls: ['./context-menu-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

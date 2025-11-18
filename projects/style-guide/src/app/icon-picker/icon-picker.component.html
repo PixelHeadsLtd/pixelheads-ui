@@ -13,12 +13,12 @@
           To add a default icon, add icon name to <strong>selectedIcon</strong></p>
       </div>
       
-      <aa-icon-picker 
+      <ph-icon-picker 
         [showLabel]="true" 
         labelName="Icon picker" 
         selectedIcon="beach_access"
         >
-      </aa-icon-picker>
+      </ph-icon-picker>
 
     </section>
       
@@ -35,19 +35,19 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-icon-picker</td>
+            <td datalabel="Element">ph-icon-picker</td>
             <td datalabel="Attribute">showLabel</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-icon-picker</td>
+            <td datalabel="Element">ph-icon-picker</td>
             <td datalabel="Attribute">labelName</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your label name</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-icon-picker</td>
+            <td datalabel="Element">ph-icon-picker</td>
             <td datalabel="Attribute">selectedIcon</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">selectedIcon</td>
@@ -58,14 +58,14 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade 
+<ph-blade 
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -78,7 +78,7 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/733f2e42f6959f481fcc736ca277cda2" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/733f2e42f6959f481fcc736ca277cda2"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/31535a440e9290e01e52b1d625c73ba1" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/31535a440e9290e01e52b1d625c73ba1"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

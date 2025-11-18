@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>File upload</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -13,7 +13,7 @@
           define your file documnet types with fileUploadExtention.
         </p>
       </div>
-      <aa-file-upload
+      <ph-file-upload
         fileUploadLabel="Upload your file..."
         fileUploadId="fileUploadId"
         fileUploadName="fileUploadName.pdf"
@@ -23,14 +23,14 @@
         [truncateFileName]="true"
         truncateWidth="11rem"
         >
-      </aa-file-upload>
+      </ph-file-upload>
 
       <h2 class="margin-top-2">Custom icon and colour version</h2>
-      <aa-file-upload
+      <ph-file-upload
         [customButton]="true"
         iconName="file_upload"
-        bgColor="bg-aa-orange-100"
-        textColor="aa-white-100"
+        bgColor="bg-ph-orange-100"
+        textColor="ph-white-100"
         fileUploadLabel="Upload your file..."
         fileUploadId="fileUploadId"
         fileUploadName="fileUploadName.pdf"
@@ -40,7 +40,7 @@
         [truncateFileName]="true"
         truncateWidth="11rem"
         >
-      </aa-file-upload>
+      </ph-file-upload>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -56,49 +56,49 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fieldClass</td>
             <td datalabel="Type">Class</td>
             <td datalabel="Default">.boxed</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fileUploadLabel</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Upload your file...</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fileUploadId</td>
             <td datalabel="Type">Id</td>
             <td datalabel="Default">Your Id</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fileUploadExtentions</td>
             <td datalabel="Type">File type</td>
             <td datalabel="Default">.csv,.xlsx,.xls,.pdf</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fileUploadText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Choose file...</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">fileUploadName</td>
             <td>String</td>
             <td datalabel="Default">fileUploadName.pdf</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">truncateFileName</td>
             <td>Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">truncateWidth</td>
             <td>Number</td>
             <td datalabel="Default">Your width</td>
@@ -109,28 +109,28 @@
             </td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">[customButton]</td>
             <td>Boolean</td>
             <td datalabel="Default">True</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">bgColor</td>
             <td>any</td>
-            <td datalabel="Default">Use one of our <a routerLink="/colours">bg-aa colours here</a></td>
+            <td datalabel="Default">Use one of our <a routerLink="/colours">bg-ph colours here</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">iconName</td>
             <td>String</td>
             <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Your chosen icon name</a></td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-file-upload</td>
+            <td datalabel="Element">ph-file-upload</td>
             <td datalabel="Attribute">iconColor</td>
             <td>String</td>
-            <td datalabel="Default">Use one of our <a routerLink="/colours">aa colours here</a></td>
+            <td datalabel="Default">Use one of our <a routerLink="/colours">ph colours here</a></td>
           </tr>
         </tbody>
       </table>
@@ -138,7 +138,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showBasic=true; showDragDrop=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showBasic=true; showDragDrop=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -158,7 +158,7 @@
         appDragDropUpload 
         (fileDropped)="onFileDropped($event)"
         class="
-        aa-file-upload-container 
+        ph-file-upload-container 
         margin-bottom-1
         flex-group 
         flex-column 
@@ -183,7 +183,7 @@
           multiple
           (change)="fileBrowseHandler($event)"
         />
-        <div class="fa-solid fa-arrow-up-from-bracket size-xxxl aa-grey-10"></div>
+        <div class="fa-solid fa-arrow-up-from-bracket size-xxxl ph-grey-10"></div>
         <h2 class="margin-top-1 margin-bottom-0">Drag and drop file</h2>
         <h3 class="margin-top-0-5 margin-bottom-0-5">or</h3>
         <button class="secondary">Browse for file</button>
@@ -193,11 +193,11 @@
         <h4 class="margin-bottom-0-25 margin-top-0-25">
           {{ file?.name }}
         </h4>
-        <p class="aa-grey-25">
+        <p class="ph-grey-25">
           {{ formatBytes(file?.size) }}
         </p>
         <div class="flex-group flex-align-center flex-nowrap width-100">
-          <aa-progress-bar
+          <ph-progress-bar
             progressId="progressBar"
             [complete]="file?.progress"
             maxWidth=""
@@ -206,12 +206,12 @@
             leftSideText=""
             rightSideText=""
           >
-          </aa-progress-bar>
+          </ph-progress-bar>
           <div 
             class="
             material-icons 
             cursor-pointer
-            aa-red-100 
+            ph-red-100 
             size-medium 
             max-width-1" 
             (click)="deleteFile(i)"
@@ -253,14 +253,14 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showBasic=false; showDragDrop=true">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showBasic=false; showDragDrop=true">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -274,12 +274,12 @@
   >
   <article class="blade-content">
     <div *ngIf="showBasic">
-      <a href="https://gist.github.com/angloux/4385c2e940bed171da9891b8a980a0fa" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/4385c2e940bed171da9891b8a980a0fa"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/7d15bd335739ac7a87f375e4adaec8a3" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/7d15bd335739ac7a87f375e4adaec8a3"></app-gist>
     </div>
     <div *ngIf="showDragDrop">
-      <a href="https://gist.github.com/angloux/a172983949e1ddd05c5be2724d848256" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/a172983949e1ddd05c5be2724d848256"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/ee0b96f9ef80c631db5647c2b55bcebb" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/ee0b96f9ef80c631db5647c2b55bcebb"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

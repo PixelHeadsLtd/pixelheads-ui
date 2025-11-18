@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'aa-field',
+  selector: 'ph-field',
   templateUrl: './field.component.html',
   styleUrls: ['./field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

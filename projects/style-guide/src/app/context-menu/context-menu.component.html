@@ -15,11 +15,11 @@
       
       <div class="flex-group flex-start margin-top-0-25">
         <h3 class="boxed">This is context-menu</h3>
-        <aa-context-menu [showOnLeft]="false" minWidth="11.5rem">
-          <aa-context-menu-item menuItemText="Design Language home" routerLink="/"></aa-context-menu-item>
-          <aa-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></aa-context-menu-item>
-          <aa-context-menu-item menuItemText="View blades" routerLink="/blade"></aa-context-menu-item>
-        </aa-context-menu>
+        <ph-context-menu [showOnLeft]="false" minWidth="11.5rem">
+          <ph-context-menu-item menuItemText="Design Language home" routerLink="/"></ph-context-menu-item>
+          <ph-context-menu-item menuItemText="See our buttons" routerLink="/buttons"></ph-context-menu-item>
+          <ph-context-menu-item menuItemText="View blades" routerLink="/blade"></ph-context-menu-item>
+        </ph-context-menu>
       </div>
 
     </section>
@@ -37,31 +37,31 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-context-menu</td>
+            <td datalabel="Element">ph-context-menu</td>
             <td datalabel="Attribute">[showOnLeft]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-context-menu</td>
+            <td datalabel="Element">ph-context-menu</td>
             <td datalabel="Attribute">minWidth</td>
             <td datalabel="Type">any</td>
             <td datalabel="Default">11.5rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-context-menu</td>
+            <td datalabel="Element">ph-context-menu</td>
             <td datalabel="Attribute">[noWrap]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-context-menu-item</td>
+            <td datalabel="Element">ph-context-menu-item</td>
             <td datalabel="Attribute">menuItemText</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your text</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-context-menu-item</td>
+            <td datalabel="Element">ph-context-menu-item</td>
             <td datalabel="Attribute">routerLink</td>
             <td datalabel="Type">Link</td>
             <td datalabel="Default">Your path</td>
@@ -72,14 +72,14 @@
     
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
   </section>
 </section>
 
-<aa-blade 
+<ph-blade 
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -92,7 +92,7 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/432b009c9a8116539c70002f6bedc9e8" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/432b009c9a8116539c70002f6bedc9e8"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/4ffdbffba2a88563f38a1bd2939946b1" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/4ffdbffba2a88563f38a1bd2939946b1"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

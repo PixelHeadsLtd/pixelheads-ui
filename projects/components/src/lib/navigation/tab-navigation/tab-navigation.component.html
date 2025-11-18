@@ -1,12 +1,12 @@
 <!-- ROUTER-OUTLET ONLY -->
-<nav id="aa-tab-nav-router-outlet" *ngIf="routerOutlet" class="tab-navigation">
+<nav id="ph-tab-nav-router-outlet" *ngIf="routerOutlet" class="tab-navigation">
   <ul>
     <ng-content select="[list-items]"></ng-content>
   </ul>
 </nav>
 
 <!-- NG-TEMPLATE ONLY -->
-<nav id="aa-tab-nav-ng-template" *ngIf="ngTemplate" class="tab-navigation">
+<nav id="ph-tab-nav-ng-template" *ngIf="ngTemplate" class="tab-navigation">
   <ul>
     <ng-container *ngFor="let tab of contentTabs">
       <li [ngClass]="{ 'tab-disabled' : tab.tabDisabled }">
@@ -22,7 +22,7 @@
             <span class="material-icons {{tab.iconColour}}">{{tab.iconName}}</span>
             <span 
               *ngIf="tab.enableTooltip" 
-              class="aa-tooltip position-fixed z-index-10"
+              class="ph-tooltip position-fixed z-index-10"
               [ngStyle]="{
                 'margin-left' : tab.tooltipXPos,
                 'margin-top' : tab.tooltipYPos
@@ -55,12 +55,12 @@
 </nav>
 
 <!-- INFO-PANEL NG-TEMPLATE -->
-<div id="aa-tab-nav-info-panel" *ngIf="tabInfo">
+<div id="ph-tab-nav-info-panel" *ngIf="tabInfo">
   <nav class="tab-navigation-info" [ngClass]="{'minimize': toggleFullscreen}">
     <div class="float-right flex-group">
       <div class="flex-align-center">
-        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="!toggleFullscreen" class="transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0">close_fullscreen</button>
-        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="toggleFullscreen" class="transparent small material-icons aa-blue-100 padding-left-0-5 padding-right-0">open_in_full</button>
+        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="!toggleFullscreen" class="transparent small material-icons ph-blue-100 padding-left-0-5 padding-right-0">close_fullscreen</button>
+        <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="toggleFullscreen" class="transparent small material-icons ph-blue-100 padding-left-0-5 padding-right-0">open_in_full</button>
       </div>
     </div>
     <ul class="flex-group flex-center">
@@ -83,7 +83,7 @@
 </div>
 
 <!-- INFO PANEL ROUTER-OUTLET -->
-<nav id="aa-tab-nav-info-panel-ro" *ngIf="tabInfoRouterOutlet" class="tab-navigation-info" [ngClass]="{'minimize': toggleFullscreen}">
+<nav id="ph-tab-nav-info-panel-ro" *ngIf="tabInfoRouterOutlet" class="tab-navigation-info" [ngClass]="{'minimize': toggleFullscreen}">
   <div class="float-right flex-group">
     <div class="flex-align-center">
       <button (click)="toggleFullscreen=!toggleFullscreen" *ngIf="!toggleFullscreen" class="material-icons">close_fullscreen</button>

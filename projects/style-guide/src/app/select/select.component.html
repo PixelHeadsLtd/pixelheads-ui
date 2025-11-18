@@ -1,6 +1,6 @@
 <section class="control-bar flex-group space-between">
   <h1>Select</h1>
-  <aa-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></aa-alert>
+  <ph-alert alertClass="error" alertText="Please ensure ALL elements are wrapped in div.field"></ph-alert>
 </section>
 
 <section class="content-container padding-0">
@@ -61,7 +61,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); dataList=true; standardSelect=false; customSelect=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); dataList=true; standardSelect=false; customSelect=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -189,7 +189,7 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); dataList=false; standardSelect=true; customSelect=false ">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); dataList=false; standardSelect=true; customSelect=false ">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -205,23 +205,23 @@
         <section class="flex-group">
           <div class="field boxed">
             <label>Month start</label>
-            <aa-custom-select
+            <ph-custom-select
                 [options]="optionArray"
                 (optionSelected)="onOptionSelected()"
                 [selectedIndex]="defaultStart"
                 maxHeight="14.5rem"
             >
-            </aa-custom-select>
+            </ph-custom-select>
           </div>
           <div class="field boxed">
             <label>Month end</label>
-            <aa-custom-select
+            <ph-custom-select
                 [options]="optionArray"
                 (optionSelected)="onOptionSelected()"
                 [selectedIndex]="defaultEnd"
                 maxHeight="14.5rem"
             >
-            </aa-custom-select>
+            </ph-custom-select>
           </div>
         </section>
       </section>
@@ -239,25 +239,25 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-custom-select</td>
+              <td datalabel="Element">ph-custom-select</td>
               <td datalabel="Attribute">[options]</td>
               <td datalabel="Type">Array</td>
               <td datalabel="Default">Your array</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-custom-select</td>
+              <td datalabel="Element">ph-custom-select</td>
               <td datalabel="Attribute">[selectedIndex]</td>
               <td datalabel="Type">Number</td>
               <td datalabel="Default">The selected index</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-custom-select</td>
+              <td datalabel="Element">ph-custom-select</td>
               <td datalabel="Attribute">(optionSelected)</td>
               <td datalabel="Type">Function</td>
               <td datalabel="Default">Your events</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-custom-select</td>
+              <td datalabel="Element">ph-custom-select</td>
               <td datalabel="Attribute">maxHeight</td>
               <td datalabel="Type">Number</td>
               <td datalabel="Default">Set the max height for scrolling</td>
@@ -268,14 +268,14 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); dataList=false; standardSelect=false; customSelect=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); dataList=false; standardSelect=false; customSelect=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
     </section>
 </section>
 
-<aa-blade
+<ph-blade
   [blockPageUI]="false"
   [toggleBlade]="toggleBlade"
   [suppressAutoClose]="false"
@@ -289,16 +289,16 @@
   >
   <article class="blade-content">
     <div *ngIf="dataList">
-      <a href="https://gist.github.com/angloux/d50913b7862cd92c14a53cb7eb013633" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/d50913b7862cd92c14a53cb7eb013633"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/d50913b7862cd92c14a53cb7eb013633" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/d50913b7862cd92c14a53cb7eb013633"></app-gist>
     </div>
     <div *ngIf="standardSelect">
-      <a href="https://gist.github.com/angloux/3de1370b449eddbd1624e44965dcd1e8" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/3de1370b449eddbd1624e44965dcd1e8"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/3de1370b449eddbd1624e44965dcd1e8" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/3de1370b449eddbd1624e44965dcd1e8"></app-gist>
     </div>
     <div *ngIf="customSelect">
-      <a href="https://gist.github.com/angloux/87fb1380f4b423ab8b2230250a4b1165" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/87fb1380f4b423ab8b2230250a4b1165"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/87fb1380f4b423ab8b2230250a4b1165" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/87fb1380f4b423ab8b2230250a4b1165"></app-gist>
     </div>
   </article>
-</aa-blade>
+</ph-blade>

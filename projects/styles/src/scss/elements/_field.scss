@@ -10,7 +10,7 @@
         position: absolute;
         right: 0;
         top: -.15rem;
-        background-color: _colour(aa-light-blue-5);
+        background-color: _colour(ph-light-blue-5);
         border-radius: .25rem;
         font-family: _font(family-light);
         font-size: _font(size-small);
@@ -20,7 +20,7 @@
       }
     }
 
-    aa-tooltip {
+    ph-tooltip {
       label {
         width: calc(100% - 1.75rem);
       }
@@ -34,11 +34,11 @@
     textarea,
     select, 
     .ng-select-container {
-      border: 1px solid _palette(aa-red-100)!important;
+      border: 1px solid _palette(ph-red-100)!important;
       &:focus {
         outline: 0;
-        border: 1px solid _palette(aa-red-100);
-        box-shadow: 0 0 3pt 1pt _palette(aa-red-50);
+        border: 1px solid _palette(ph-red-100);
+        box-shadow: 0 0 3pt 1pt _palette(ph-red-50);
       }
     }
   }
@@ -46,13 +46,13 @@
   .confirmation {
     padding: .5rem 0 0 0;
     p {
-      color: _colour(aa-light-blue-100);
+      color: _colour(ph-light-blue-100);
     }
     .material-icons,
     .material-icons-outlined {
       margin: 0 .25rem 0 0;
       font-size: 1.6rem;
-      color: _colour(aa-light-blue-100)
+      color: _colour(ph-light-blue-100)
     }
   }
 
@@ -119,8 +119,8 @@
 
 .field-read-only {
   padding: 0.5rem 0.5rem 0.5rem 0.75rem;
-  background-color: _palette(aa-light-blue-5);
-  border: 1px solid _palette(aa-light-blue-5);
+  background-color: _palette(ph-light-blue-5);
+  border: 1px solid _palette(ph-light-blue-5);
   font-size: 0.8125rem;
 }
 
@@ -129,7 +129,7 @@
   .error {
     border: none;
     background-color: transparent;
-    color: _palette(aa-red-100);
+    color: _palette(ph-red-100);
     font-size: _font(size-default);
     padding: 0.25rem 0;
   }

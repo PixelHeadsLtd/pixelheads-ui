@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'aa-alert',
+  selector: 'ph-alert',
   templateUrl: './alert.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

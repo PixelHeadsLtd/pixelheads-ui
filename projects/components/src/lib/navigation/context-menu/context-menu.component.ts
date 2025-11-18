@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, HostListener, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'aa-context-menu',
+  selector: 'ph-context-menu',
   templateUrl: './context-menu.component.html',
   styleUrls: ['./context-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -2,7 +2,7 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { ToastService, Toast } from '../../services/toastr.service';
 
 @Component({
-  selector: 'aa-toastr',
+  selector: 'ph-toastr',
   templateUrl: './toastr.component.html',
   styleUrls: ['./toastr.component.scss']
 })

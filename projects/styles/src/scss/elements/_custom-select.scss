@@ -1,4 +1,4 @@
-.aa-custom-select {
+.ph-custom-select {
     position: relative;
     button {
         @include chevron-down;
@@ -6,9 +6,9 @@
         min-height: 2.1rem;
         font-family: _font(family-medium);
         width: 100%;
-        background-color: _colour(aa-white-100);
-        color: _colour(aa-grey-100);
-        border: 1px solid _colour(aa-grey-25);
+        background-color: _colour(ph-white-100);
+        color: _colour(ph-grey-100);
+        border: 1px solid _colour(ph-grey-25);
         text-align: left;
         white-space: nowrap;
         padding: .25rem 2.5rem .25rem .5rem;
@@ -18,12 +18,12 @@
         }
     }
 
-    .aa-custom-select-dropdown {
+    .ph-custom-select-dropdown {
         display: none;
         overflow: auto;
         position: absolute;
         z-index: 1;
-        background-color: _colour(aa-white-100);
+        background-color: _colour(ph-white-100);
         border-radius: .25rem;
         margin-top: .25rem;
         min-width: 100%;
@@ -39,19 +39,19 @@
             border-radius: 0;
             text-align: left;
             padding: .4rem .5rem;
-            color: _colour(aa-grey-100);
+            color: _colour(ph-grey-100);
             font-family: _font(family-regular);
             font-size: _font(size-default);
 
             &:hover {
-                background-color: _colour(aa-grey-5);
+                background-color: _colour(ph-grey-5);
             }
             &.selected {
-                background-color: _colour(aa-blue-100);
-                color: _colour(aa-white-100);
+                background-color: _colour(ph-blue-100);
+                color: _colour(ph-white-100);
                 .material-icons,
                 .material-icons-outlined {
-                    color: _palette(aa-white-100)!important;
+                    color: _palette(ph-white-100)!important;
                 }
             }
             .material-icons,
@@ -62,7 +62,7 @@
     }
 }
 
-.aa-highlight {
-    background-color: _palette(aa-pink-25)!important;
-    border-left: 6px solid _palette(aa-pink-100)!important;
+.ph-highlight {
+    background-color: _palette(ph-pink-25)!important;
+    border-left: 6px solid _palette(ph-pink-100)!important;
 }

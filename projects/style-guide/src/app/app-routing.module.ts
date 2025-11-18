@@ -31,16 +31,11 @@ import {BladeBottomComponent} from './blade-bottom/blade-bottom.component';
 import {BladeTopComponent} from './blade-top/blade-top.component';
 import {CustomWrapperComponent} from './custom-wrapper/custom-wrapper.component';
 import {FilterComponent} from './filter/filter.component';
-import {FlexComponent} from './flex/flex.component';
-import {FooterComponent} from './footer/footer.component';
-import {HeaderComponent} from './header/header.component';
 import {UiBlockComponent} from './ui-block/ui-block.component';
 
 // Navigation
 import {ContextMenuComponent} from './context-menu/context-menu.component';
-import {NavContextComponent} from './nav-context/nav-context.component';
 import {ProgressIndicatorComponent} from './progress-indicator/progress-indicator.component';
-import {ProgressIndicatorLhComponent} from './progress-indicator-lh/progress-indicator-lh.component';
 import {StepperComponent} from './stepper/stepper.component'; // STEPPER NOT YET RELEASED
 import {TreeMenuComponent} from './tree-menu/tree-menu.component';
 import {TabNavigationComponent} from './tab-navigation/tab-navigation.component';
@@ -83,7 +78,6 @@ import {DlPopoverComponent} from './popover/popover.component';
 import {SummaryTopComponent} from './summary-top/summary-top.component';
 import {ToastrComponent} from './toastr/toastr.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
-import {UserFeedbackComponent} from './user-feedback/user-feedback.component';
 
 // Modifiers
 import {BorderComponent} from './border/border.component';
@@ -99,31 +93,11 @@ import {WidthsComponent} from './widths/widths.component';
 import {EditorialComponent} from './editorial/editorial.component';
 import {TypographyComponent} from './typography/typography.component';
 
-// Third-party components
-import {AgGridComponent} from './ag-grid/ag-grid.component';
-import {NgbDatepickerComponent} from './ngb-datepicker/ngb-datepicker.component';
-import {NgbTimepickerComponent} from './ngb-timepicker/ngb-timepicker.component';
-import {NgSelectComponent} from './ng-select/ng-select.component';
-import {NgxQuillComponent} from './ngx-quill/ngx-quill.component';
-import {HighChartsComponent} from './high-charts/high-charts.component';
-
-// Email Templates
-import {HtmlEmailComponent} from './html-email/html-email.component';
-
-// Common Q&A's
-import {QuestionsAndAnswersComponent} from './questions-and-answers/questions-and-answers.component';
-
-// Addendum
-import {ElementsAlignmentComponent} from './elements-alignment/elements-alignment.component';
-import {PageTemplatesComponent} from './page-templates/page-templates.component';
-import {UnauthorisedComponent} from './unauthorised/unauthorised.component';
-
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'accordion', component: AccordionComponent },
   { path: 'accordion-fancy', component: AccordionFancyComponent },
   { path: 'actions-summary', component: ActionsSummaryComponent },
-  { path: 'ag-grid', component: AgGridComponent },
   { path: 'alerts', component: AlertsComponent },
   { path: 'anchor', component: AnchorComponent },
   { path: 'blade', component: BladeComponent, children: [
@@ -154,9 +128,6 @@ const routes: Routes = [
   { path: 'fieldset', component: FieldsetComponent },
   { path: 'file-upload', component: FileUploadComponent },
   { path: 'filter', component: FilterComponent },
-  { path: 'flex', component: FlexComponent },
-  { path: 'footer', component: FooterComponent },
-  { path: 'header', component: HeaderComponent },
   { path: 'icons', component: IconsComponent },
   { path: 'input', component: InputComponent },
   { path: 'input-radio', component: InputRadioComponent },
@@ -171,8 +142,6 @@ const routes: Routes = [
   { path: 'markup', component: MarkupComponent },
   { path: 'misc', component: MiscComponent },
   { path: 'modal', component: ModalComponent },
-  { path: 'nav-context', component: NavContextComponent },
-  { path: 'ngx-quill', component: NgxQuillComponent },
   { path: 'overlay', component: OverlayComponent },
   { path: 'range-slider', component: RangeSliderComponent },
   { path: 'tab-navigation', component: TabNavigationComponent, children: [
@@ -184,10 +153,8 @@ const routes: Routes = [
     { path: 'tab-sub-page-three', component: TabSubPageThreeComponent }
   ] },
   { path: 'padding', component: PaddingComponent },
-  { path: 'page-templates', component: PageTemplatesComponent },
   { path: 'widths', component: WidthsComponent },
   { path: 'progress-indicator', component: ProgressIndicatorComponent },
-  { path: 'progress-indicator-lh', component: ProgressIndicatorLhComponent },
   { path: 'popover', component: DlPopoverComponent },
   { path: 'progress-bar', component: ProgressBarComponent },
   { path: 'progress-circle', component: ProgressCircleComponent },
@@ -205,16 +172,7 @@ const routes: Routes = [
   { path: 'tooltip-dynamic', component: TooltipDynamicComponent },
   { path: 'tree-menu', component: TreeMenuComponent },
   { path: 'ui-block', component: UiBlockComponent },
-  { path: 'user-feedback', component: UserFeedbackComponent },
   { path: 'typography', component: TypographyComponent },
-  { path: 'ng-select', component: NgSelectComponent },
-  { path: 'ngb-datepicker', component: NgbDatepickerComponent },
-  { path: 'ngb-timepicker', component: NgbTimepickerComponent },
-  { path: 'questions-and-answers', component: QuestionsAndAnswersComponent },
-  { path: 'html-email', component: HtmlEmailComponent },
-  { path: 'elements-alignment', component: ElementsAlignmentComponent },
-  { path: 'unauthorised', component: UnauthorisedComponent },
-  { path: 'high-charts', component: HighChartsComponent },
   { path: 'multi-select', component: MultiSelectComponent }
 ];
 

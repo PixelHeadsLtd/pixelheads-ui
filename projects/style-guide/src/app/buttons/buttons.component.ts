@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 export class ButtonsComponent {
   selectedIcon: string = 'visibility';
-  selectedColor: string = 'bg-aa-light-blue-100';
+  selectedColor: string = 'bg-ph-light-blue-100';
   settingsClicked: boolean = false;
   showBtnMenu: boolean = false;
   showPub: boolean = false;

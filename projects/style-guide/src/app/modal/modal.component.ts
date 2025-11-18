@@ -11,8 +11,6 @@ import { switchMap } from 'rxjs/operators';
 export class ModalComponent implements OnInit, OnDestroy {
   toggleBlade: boolean = false;
   toggleModal: boolean = false;
-  showDynamicVersion: boolean = false;
-  showLegacyVersion: boolean = false;
   
   private modalSubscription: Subscription = new Subscription();
 

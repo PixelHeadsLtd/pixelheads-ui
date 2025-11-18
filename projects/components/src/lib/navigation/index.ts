@@ -2,8 +2,6 @@ export * from './navigation.module';
 export * from './context-menu/context-menu.component';
 export * from './context-menu-item/context-menu-item.component';
 export * from './nav-context/nav-context.component';
-export * from './progress-indicator/progress-indicator.component';
-export * from './progress-indicator-advanced/progress-indicator-advanced.component';
 export * from './stepper/stepper.component';
 export * from './tab-navigation/tab-navigation.component';
 export * from './tab-navigation-item/tab-navigation-item.component';

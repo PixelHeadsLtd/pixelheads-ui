@@ -13,13 +13,13 @@
         &:hover,
         &:active,
         &:focus {
-            border-color: _colour(aa-light-blue-30);
+            border-color: _colour(ph-light-blue-30);
         }
     }
     ul {
-        box-shadow: 0 0 3pt 1pt _colour(aa-light-blue-15);
-        border: 1px solid _colour(aa-grey-5);
-        background: _colour(aa-white-100);
+        box-shadow: 0 0 3pt 1pt _colour(ph-light-blue-15);
+        border: 1px solid _colour(ph-grey-5);
+        background: _colour(ph-white-100);
         position: absolute;
         z-index: 999;
         left: 1.75rem;
@@ -39,16 +39,16 @@
         a {
             font-family: _font(family-regular);
             font-size: _font(size-default);
-            color: _colour(aa-light-blue-100);
+            color: _colour(ph-light-blue-100);
             width: 100%;
             text-decoration: none;
             padding: .35rem 1rem;
             display: inline-block;
             &:hover {
-                background-color: _colour(aa-light-blue-5);
+                background-color: _colour(ph-light-blue-5);
             }
             &:active {
-                color: _colour(aa-blue-100);
+                color: _colour(ph-blue-100);
             }
         }
     }

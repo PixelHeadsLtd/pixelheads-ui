@@ -1,11 +1,11 @@
 <form 
-    id="aa-filter"
+    id="ph-filter"
     [ngStyle]="{'width': 'calc(' + setWidth + ' + ' + offsetAdjacentContentPos + ')'}" 
     [formGroup]="myForm" 
     (ngSubmit)="submitForm()"
 >
     <article 
-            class="aa-filter flex-group flex-start"
+            class="ph-filter flex-group flex-start"
             [ngClass]="{
                 'flex-column flex-nowrap padding-top-1-25 padding-right-0-5' : verticalDisplay,
                 'space-between' : (spaceBetween && !verticalDisplay),

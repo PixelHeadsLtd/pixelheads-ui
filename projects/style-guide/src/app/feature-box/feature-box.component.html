@@ -13,7 +13,7 @@
           we also have .feature in <a routerLink="/editorial-content">editorial content.</a> </p>
       </div>
 
-      <aa-feature-box>
+      <ph-feature-box>
         <div class="flex-group flex-start">
           <div class="field boxed">
             <button class="primary">Hello</button>
@@ -22,10 +22,10 @@
             <button class="secondary">Goodbye</button>
           </div>
         </div>
-      </aa-feature-box>
+      </ph-feature-box>
 
       <h3>Feature box solid</h3>
-      <aa-feature-box [isSolid]="true">
+      <ph-feature-box [isSolid]="true">
         <div class="flex-group flex-start">
           <div class="field boxed">
             <button class="primary">Hello</button>
@@ -34,7 +34,7 @@
             <button class="secondary">Goodbye</button>
           </div>
         </div>
-      </aa-feature-box>
+      </ph-feature-box>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -52,7 +52,7 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-feature-box</td>
+            <td datalabel="Element">ph-feature-box</td>
             <td datalabel="Attribute">[isSolid]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">True</td>
@@ -64,7 +64,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-        class="custom-icons bg-aa-light-blue-100"
+        class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           featureBox=true;
@@ -89,7 +89,7 @@
         </p>
       </div>
 
-      <aa-feature-box
+      <ph-feature-box
         fbStatus="error"
       >
         <p class="padding-bottom-0-25">[borderOrange]=true</p>
@@ -101,7 +101,7 @@
             <button class="secondary">Goodbye</button>
           </div>
         </div>
-      </aa-feature-box>
+      </ph-feature-box>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -119,7 +119,7 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-feature-box</td>
+            <td datalabel="Element">ph-feature-box</td>
             <td datalabel="Attribute">fbStatus</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">.error, .pending, .success</td>
@@ -131,7 +131,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-        class="custom-icons bg-aa-light-blue-100"
+        class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           featureBox=false;
@@ -159,7 +159,7 @@
         </div>
 
         <div class="flex-group flex-start">
-          <aa-feature-box
+          <ph-feature-box
             *ngFor="let item of featureBoxArray"
             [includeHeader]="true"
             [enableScrolling]="item.scolling"
@@ -182,17 +182,17 @@
                   class="flex-group space-between flex-nowrap flex-align-center"
                 >
                   <span>{{item.name}}</span>
-                  <aa-alert-shield
+                  <ph-alert-shield
                     [alertShieldSmall]="true"
                     [noWrap]="true"
                     minWidth="12rem"
                     [alertShieldStatus]="item.status"
                     [alertShieldText]="item.text"
                   >
-                  </aa-alert-shield>
+                  </ph-alert-shield>
               </div>
             </ng-container>
-          </aa-feature-box>
+          </ph-feature-box>
         </div>
       </section>
 
@@ -211,55 +211,55 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">[includeHeader]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">[enableScrolling]</td>
               <td datalabel="Type">Boolean</td>
               <td datalabel="Default">True</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">fbStatus</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">.error, .pending, .success</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">fbWidth</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">Your width in rem or %</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">fbHeight</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">Your height in rem or %</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">marginTop</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">Your margin-top in rem</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">marginBottom</td>
               <td datalabel="Type">Any</td>
               <td datalabel="Default">Your margin-bottom in rem</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">iconName</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default"><a target="_blank" href="https://fonts.google.com/icons?icon.set=Material+Icons&icon.style=Filled">Your icon name</a></td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-feature-box</td>
+              <td datalabel="Element">ph-feature-box</td>
               <td datalabel="Attribute">fbTitle</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Your title</td>
@@ -271,7 +271,7 @@
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
         <button
-          class="custom-icons bg-aa-light-blue-100"
+          class="custom-icons bg-ph-light-blue-100"
           (click)="
             bladeIsOpen(true);
             featureBox=false;
@@ -293,7 +293,7 @@
         <p>This is .feature-box to contain elements with approval status.</p>
       </div>
 
-      <aa-feature-box fbWidth="30rem">
+      <ph-feature-box fbWidth="30rem">
         <div class="field boxed">
           <label>Reason</label>
           <textarea>Some reason here...</textarea>
@@ -306,9 +306,9 @@
             <button class="cancel">Cancel</button>
           </div>
         </div>
-      </aa-feature-box>
+      </ph-feature-box>
 
-      <aa-feature-box fbStatus="error" marginTop="1rem" fbWidth="30rem">
+      <ph-feature-box fbStatus="error" marginTop="1rem" fbWidth="30rem">
         <div class="field boxed">
           <label>Reason</label>
           <textarea>Some reason here...</textarea>
@@ -321,7 +321,7 @@
             <button class="cancel">Cancel</button>
           </div>
         </div>
-      </aa-feature-box>
+      </ph-feature-box>
     </section>
 
     <section class="flex-2 col-right flex-start">
@@ -339,19 +339,19 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-feature-box</td>
+            <td datalabel="Element">ph-feature-box</td>
             <td datalabel="Attribute">fbStatus</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">.error, .pending, .success</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-feature-box</td>
+            <td datalabel="Element">ph-feature-box</td>
             <td datalabel="Attribute">marginTop</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your margin-top in rem</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-feature-box</td>
+            <td datalabel="Element">ph-feature-box</td>
             <td datalabel="Attribute">fbWidth</td>
             <td datalabel="Type">Any</td>
             <td datalabel="Default">Your width in rem or %</td>
@@ -363,7 +363,7 @@
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
       <button
-        class="custom-icons bg-aa-light-blue-100"
+        class="custom-icons bg-ph-light-blue-100"
         (click)="
           bladeIsOpen(true);
           featureBox=false;
@@ -378,7 +378,7 @@
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -392,20 +392,20 @@
 >
   <article class="blade-content">
     <div *ngIf="featureBox">
-      <a href="https://gist.github.com/angloux/8de5885db91a49f49bb92943e4b2a8d1" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/8de5885db91a49f49bb92943e4b2a8d1"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/c07577b38fcbd6e38946c6c8a07eb3ae" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/c07577b38fcbd6e38946c6c8a07eb3ae"></app-gist>
     </div>
     <div *ngIf="featureBoxCustomBorder">
-      <a href="https://gist.github.com/angloux/06d969123eb65527ed466afb95161e7d" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/06d969123eb65527ed466afb95161e7d"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/a688acdc4913b32f7448bc5eefb3f5da" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/a688acdc4913b32f7448bc5eefb3f5da"></app-gist>
     </div>
     <div *ngIf="featureBoxCustomContent">
-      <a href="https://gist.github.com/angloux/602a7d33d69e9461c6e1be269be79caf" target="_blank">View Gist on GitHub</a>
-      <app-gist src="angloux/602a7d33d69e9461c6e1be269be79caf"></app-gist>
+      <a href="https://gist.github.com/PixelHeadsLtd/4be53903e59276b3a581f90d36128b45" target="_blank">View Gist on GitHub</a>
+      <app-gist src="PixelHeadsLtd/4be53903e59276b3a581f90d36128b45"></app-gist>
     </div>
       <div *ngIf="featureBoxApproval">
-        <a href="https://gist.github.com/angloux/1eb6f5a7ce929aa08b9d9bbb3c54f534" target="_blank">View Gist on GitHub</a>
-        <app-gist src="angloux/1eb6f5a7ce929aa08b9d9bbb3c54f534"></app-gist>
+        <a href="https://gist.github.com/PixelHeadsLtd/ad79f953f1a173e97fef4b7ca11426b7" target="_blank">View Gist on GitHub</a>
+        <app-gist src="PixelHeadsLtd/ad79f953f1a173e97fef4b7ca11426b7"></app-gist>
       </div>
   </article>
-</aa-blade>
+</ph-blade>

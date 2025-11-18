@@ -1,7 +1,7 @@
 import { Directive, TemplateRef } from '@angular/core';
 
 @Directive({
-  selector: '[aaCarouselItem]'
+  selector: '[phCarouselItem]'
 })
 export class CarouselItemDirective {
 

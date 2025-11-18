@@ -1,12 +1,10 @@
-@import '~ag-grid-community/styles/ag-grid.css';
-@import '~ag-grid-community/styles/ag-theme-balham.css';
 @import './typography/fonts';
 @import './elements/scrollbars';
 
 body {
   // *Note: We wouldn't normally use the !important attribute BUT it is neccessary
   // here on the body to forcefully override some 3rd party css such as Bootstrap
-  font-family: 'aa-smart-sans-regular', 'din-regular', Helvetica, sans-serif!important;
+  font-family: 'ph-smart-sans-regular', 'din-regular', Helvetica, sans-serif!important;
   line-height: initial!important;
   letter-spacing: .015rem!important;
   font-size: 13px!important;
@@ -46,11 +44,9 @@ body {
     @import './lib/functions';
     @import './lib/vars';
     @import './lib/elements-dark';
-    @import './lib/ag-theme-anglo-vars';
-    @import './widgets/ag-grid';
     @import 'style-imports';
     background-color: _colour(trans-grey-2-to-black);
-    color: _colour(aa-grey-100);
+    color: _colour(ph-grey-100);
     min-width: _breakpoint(breakpoint-320);
   }
 
@@ -59,11 +55,9 @@ body {
     @import './lib/functions';
     @import './lib/vars';
     @import './lib/elements-light';
-    @import './lib/ag-theme-anglo-vars';
-    @import './widgets/ag-grid';
     @import 'style-imports';
-    background-color: _colour(aa-grey-2);
-    color: _colour(aa-grey-100);
+    background-color: _colour(ph-grey-2);
+    color: _colour(ph-grey-100);
     min-width: _breakpoint(breakpoint-320);
   }
 }

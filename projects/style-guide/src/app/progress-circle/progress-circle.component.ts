@@ -79,7 +79,7 @@ export class ProgressCircleComponent {
     {
       customProgressCircle: true,
       panelHeight: '13rem',
-      customHeaderClass: 'bg-aa-red-5',
+      customHeaderClass: 'bg-ph-red-5',
       title: 'My custom header with truncation',
       value: '200/1000',
       percent: '10',
@@ -92,7 +92,7 @@ export class ProgressCircleComponent {
     {
       customProgressCircle: true,
       panelHeight: '13rem',
-      customHeaderClass: 'bg-aa-green-5',
+      customHeaderClass: 'bg-ph-green-5',
       title: 'My custom header with truncation',
       value: '200/1000',
       percent: '40',
@@ -105,7 +105,7 @@ export class ProgressCircleComponent {
     {
       customProgressCircle: true,
       panelHeight: '13rem',
-      customHeaderClass: 'bg-aa-orange-5',
+      customHeaderClass: 'bg-ph-orange-5',
       title: 'My custom header with truncation',
       value: '200/1000',
       percent: '60',
@@ -118,7 +118,7 @@ export class ProgressCircleComponent {
     {
       customProgressCircle: true,
       panelHeight: '13rem',
-      customHeaderClass: 'bg-aa-light-blue-5',
+      customHeaderClass: 'bg-ph-light-blue-5',
       title: 'My custom header with truncation',
       value: '200/1000',
       percent: '90',

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 @Component({
-  selector: 'aa-nav-context',
+  selector: 'ph-nav-context',
   templateUrl: './nav-context.component.html',
   styleUrls: ['./nav-context.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

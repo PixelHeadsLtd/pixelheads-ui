@@ -1,5 +1,5 @@
 <section class="control-bar">
-    <aa-anchor-back [anchorBackText]="'Style guide'" routerLink=""></aa-anchor-back>
+    <ph-anchor-back [anchorBackText]="'Style guide'" routerLink=""></ph-anchor-back>
     <h1>Anchor</h1>
 </section>
 
@@ -13,7 +13,7 @@
           <p>Anchor sits inside the control-bar above the h1.</p>
         </div>
         <div>
-          <aa-anchor-back anchorBackText="Previous page title"></aa-anchor-back>
+          <ph-anchor-back anchorBackText="Previous page title"></ph-anchor-back>
         </div>
       </section>
 
@@ -30,13 +30,13 @@
           </thead>
           <tbody>
             <tr>
-              <td datalabel="Element">aa-anchor-back</td>
+              <td datalabel="Element">ph-anchor-back</td>
               <td datalabel="Attribute">anchorBackText</td>
               <td datalabel="Type">String</td>
               <td datalabel="Default">Previous page title</td>
             </tr>
             <tr>
-              <td datalabel="Element">aa-anchor-back</td>
+              <td datalabel="Element">ph-anchor-back</td>
               <td datalabel="Attribute">routerLink</td>
               <td datalabel="Type">Path</td>
               <td datalabel="Default">Your path</td>
@@ -47,7 +47,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-        <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showAnchor=true; showAnchorAdv=false">
+        <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showAnchor=true; showAnchorAdv=false">
           <span class="material-icons">visibility</span><span>View gist</span>
         </button>
       </nav>
@@ -61,7 +61,7 @@
           </div>
 
           <section class="flex-group flex-start">
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [routerLink]="routerLink"
               [width]="15"
               [pink]="true"
@@ -71,9 +71,9 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
 
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [anchorURL]="anchorURL"
               [width]="15"
               [lime]="true"
@@ -83,9 +83,9 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
 
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [anchorURL]="anchorURL"
               [width]="15"
               [orange]="true"
@@ -95,9 +95,9 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
 
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [anchorURL]="anchorURL"
               [width]="15"
               [blue]="true"
@@ -107,9 +107,9 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
 
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [anchorURL]="anchorURL"
               [width]="15"
               [yellow]="true"
@@ -119,9 +119,9 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
 
-            <aa-anchor-advanced
+            <ph-anchor-advanced
               [anchorURL]="anchorURL"
               [width]="15"
               [green]="true"
@@ -131,7 +131,7 @@
               contentType="View recent"
 
             >
-            </aa-anchor-advanced>
+            </ph-anchor-advanced>
           </section>
 
         </section>
@@ -149,49 +149,49 @@
             </thead>
             <tbody>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">[routerLink]</td>
                 <td datalabel="Type">Route</td>
                 <td datalabel="Default">Your router link</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">[anchorURL]</td>
                 <td datalabel="Type">URL</td>
                 <td datalabel="Default">Your anchor url</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">width</td>
                 <td datalabel="Type">Number</td>
                 <td datalabel="Default">15 is recommended</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">icon</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default"><a href="https://fonts.google.com/icons?icon.set=Material+Icons" target="_blank">Your material-icon name</a></td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">title</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Your title</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">desc</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Your description</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">contentType</td>
                 <td datalabel="Type">String</td>
                 <td datalabel="Default">Your content type description</td>
               </tr>
               <tr>
-                <td datalabel="Element">aa-anchor-advanced</td>
+                <td datalabel="Element">ph-anchor-advanced</td>
                 <td datalabel="Attribute">[lime]</td>
                 <td datalabel="Type">Boolean</td>
                 <td datalabel="Default">Colours incl: pink, blue, orange, yellow, green and lime</td>
@@ -202,14 +202,14 @@
 
         <!-- mini menu -->
         <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true); showAnchor=false; showAnchorAdv=true">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); showAnchor=false; showAnchorAdv=true">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
       </section>
 
 
-      <aa-blade
+      <ph-blade
         [blockPageUI]="false"
         [toggleBlade]="toggleBlade"
         [suppressAutoClose]="false"
@@ -223,14 +223,14 @@
         >
         <article class="blade-content">
           <div *ngIf="showAnchor">
-            <a href="https://gist.github.com/angloux/9e6c8132425e1a4a431014747fbe029b" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/9e6c8132425e1a4a431014747fbe029b"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/b4474193c7e2cff6c34f5c4946f636de" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/b4474193c7e2cff6c34f5c4946f636de"></app-gist>
           </div>
           <div *ngIf="showAnchorAdv">
-            <a href="https://gist.github.com/angloux/241ce4d13c50e069e8c0531ef3cb709f" target="_blank">View Gist on GitHub</a>
-            <app-gist src="angloux/241ce4d13c50e069e8c0531ef3cb709f"></app-gist>
+            <a href="https://gist.github.com/PixelHeadsLtd/8dd24bd71a708c2d907979dd80b0da37" target="_blank">View Gist on GitHub</a>
+            <app-gist src="PixelHeadsLtd/8dd24bd71a708c2d907979dd80b0da37"></app-gist>
           </div>
         </article>
-      </aa-blade>
+      </ph-blade>
 
 </section>

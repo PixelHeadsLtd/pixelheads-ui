@@ -16,7 +16,7 @@
         </p>
       </div>
 
-      <aa-button
+      <ph-button
         *ngIf="!verticalDisplay"
         (buttonClick)="verticalDisplay= !verticalDisplay"
         fieldClass="boxed margin-bottom-1"
@@ -25,9 +25,9 @@
         [showLabel]="false"
         buttonLabel="Primary"
         buttonText="Show vertical display">
-      </aa-button>
+      </ph-button>
 
-      <aa-button
+      <ph-button
         *ngIf="verticalDisplay"
         (buttonClick)="verticalDisplay= !verticalDisplay"
         fieldClass="boxed margin-bottom-1"
@@ -36,77 +36,77 @@
         [showLabel]="false"
         buttonLabel="Primary"
         buttonText="Show default display">
-      </aa-button>
+      </ph-button>
 
       <div *ngIf="verticalDisplay">
         <div>
           <h3>Vertical display</h3>
-          <aa-summary-top [displayBlock]="false" [verticalDisplay]="true">
-            <aa-summary-top-list
+          <ph-summary-top [displayBlock]="false" [verticalDisplay]="true">
+            <ph-summary-top-list
               [highlight]="true"
               class="component"
               itemTitle="Employee name"
               itemDescription="Paul Smith">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Role"
               itemDescription="Project Manager">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Department"
               itemDescription="Security"
               [divider]="true">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Country"
               itemDescription="United Kingdom">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               [truncate]="true"
               maxWidth="10rem"
               itemTitle="Enabling truncation"
               itemDescription="Set 'truncate' to true then add a 'maxWidth' value">
-            </aa-summary-top-list>
-          </aa-summary-top>
+            </ph-summary-top-list>
+          </ph-summary-top>
         </div>
 
         <div class="margin-top-2">
           <h3>Vertical display (displayBlock="true)"</h3>
-          <aa-summary-top [displayBlock]="true" [verticalDisplay]="true">
-            <aa-summary-top-list
+          <ph-summary-top [displayBlock]="true" [verticalDisplay]="true">
+            <ph-summary-top-list
               [highlight]="true"
               class="component"
               itemTitle="Employee name"
               itemDescription="Paul Smith">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Role"
               itemDescription="Project Manager">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Department"
               itemDescription="Security"
               [divider]="true">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               itemTitle="Country"
               itemDescription="United Kingdom">
-            </aa-summary-top-list>
-            <aa-summary-top-list
+            </ph-summary-top-list>
+            <ph-summary-top-list
               class="component"
               [truncate]="true"
               maxWidth="10rem"
               itemTitle="Enabling truncation"
               itemDescription="Set 'truncate' to true then add a 'maxWidth' value">
-            </aa-summary-top-list>
-          </aa-summary-top>
+            </ph-summary-top-list>
+          </ph-summary-top>
         </div>
       </div>
     </section>
@@ -124,55 +124,55 @@
         </thead>
         <tbody>
           <tr>
-            <td datalabel="Element">aa-summary-top</td>
+            <td datalabel="Element">ph-summary-top</td>
             <td datalabel="Attribute">N/A</td>
             <td datalabel="Type">Component</td>
             <td datalabel="Default">N/A</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top</td>
+            <td datalabel="Element">ph-summary-top</td>
             <td datalabel="Attribute">displayBlock</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top</td>
+            <td datalabel="Element">ph-summary-top</td>
             <td datalabel="Attribute">verticalDisplay</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">false</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">[highlight]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">[divider]</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">itemTitle</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your title</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">itemDescription</td>
             <td datalabel="Type">String</td>
             <td datalabel="Default">Your Descripton</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">truncate</td>
             <td datalabel="Type">Boolean</td>
             <td datalabel="Default">False</td>
           </tr>
           <tr>
-            <td datalabel="Element">aa-summary-top-list</td>
+            <td datalabel="Element">ph-summary-top-list</td>
             <td datalabel="Attribute">maxWidth (Only if using truncate)</td>
             <td datalabel="Type">Number</td>
             <td datalabel="Default">Your number</td>
@@ -183,83 +183,83 @@
 
     <!-- mini menu -->
     <nav class="mini-menu flex-group flex-end">
-      <button class="custom-icons bg-aa-light-blue-100" (click)="bladeIsOpen(true)">
+      <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
         <span class="material-icons">visibility</span><span>View gist</span>
       </button>
     </nav>
     </div>
     <div class="margin-top-2" *ngIf="!verticalDisplay">
       <h3>Default (most used)</h3>
-      <aa-summary-top [displayBlock]="false" [verticalDisplay]="false">
-        <aa-summary-top-list
+      <ph-summary-top [displayBlock]="false" [verticalDisplay]="false">
+        <ph-summary-top-list
           [highlight]="true"
           class="component"
           itemTitle="Employee name"
           itemDescription="Paul Smith">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Role"
           itemDescription="Project Manager">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Department"
           itemDescription="Security"
           [divider]="true">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Country"
           itemDescription="United Kingdom">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           [truncate]="true"
           maxWidth="10rem"
           itemTitle="Enabling truncation"
           itemDescription="Set 'truncate' to true then add a 'maxWidth' value">
-        </aa-summary-top-list>
-      </aa-summary-top>
+        </ph-summary-top-list>
+      </ph-summary-top>
     </div>
     <div class="margin-top-2" *ngIf="!verticalDisplay">
       <h3>Block display (blockDisplay="true")</h3>
-      <aa-summary-top [displayBlock]="true" [verticalDisplay]="false">
-        <aa-summary-top-list
+      <ph-summary-top [displayBlock]="true" [verticalDisplay]="false">
+        <ph-summary-top-list
           [highlight]="true"
           class="component"
           itemTitle="Employee name"
           itemDescription="Paul Smith">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Role"
           itemDescription="Project Manager">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Department"
           itemDescription="Security"
           [divider]="true">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           itemTitle="Country"
           itemDescription="United Kingdom">
-        </aa-summary-top-list>
-        <aa-summary-top-list
+        </ph-summary-top-list>
+        <ph-summary-top-list
           class="component"
           [truncate]="true"
           maxWidth="10rem"
           itemTitle="Enabling truncation"
           itemDescription="Set 'truncate' to true then add a 'maxWidth' value">
-        </aa-summary-top-list>
-      </aa-summary-top>
+        </ph-summary-top-list>
+      </ph-summary-top>
     </div>
   </section>
 </section>
 
-<aa-blade
+<ph-blade
     [blockPageUI]="false"
     [toggleBlade]="toggleBlade"
     [suppressAutoClose]="false"
@@ -272,7 +272,7 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <a href="https://gist.github.com/angloux/fbd89ac223536d0c7ca2190bde8f5b18" target="_blank">View Gist on GitHub</a>
-    <app-gist src="angloux/fbd89ac223536d0c7ca2190bde8f5b18"></app-gist>
+    <a href="https://gist.github.com/PixelHeadsLtd/fbd89ac223536d0c7ca2190bde8f5b18" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/fbd89ac223536d0c7ca2190bde8f5b18"></app-gist>
   </article>
-</aa-blade>
+</ph-blade>

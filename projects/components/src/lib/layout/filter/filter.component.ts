@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, Output, EventEmitter } from 
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'aa-filter',
+  selector: 'ph-filter',
   templateUrl: './filter.component.html',
   styleUrl: './filter.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

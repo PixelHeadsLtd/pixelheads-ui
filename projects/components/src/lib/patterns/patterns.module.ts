@@ -10,6 +10,7 @@ import { StatusIndicatorComponent } from './status-indicator/status-indicator.co
 import { CounterComponent } from './counter/counter.component';
 import { TagComponent } from './tag/tag.component';
 import { FeatureBoxComponent } from './feature-box/feature-box.component';
+import { ProgressIndicatorComponent } from './progress-indicator/progress-indicator.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FeatureBoxComponent } from './feature-box/feature-box.component';
     StatusIndicatorComponent,
     CounterComponent,
     TagComponent,
-    FeatureBoxComponent
+    FeatureBoxComponent,
+    ProgressIndicatorComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { FeatureBoxComponent } from './feature-box/feature-box.component';
     StatusIndicatorComponent,
     CounterComponent,
     TagComponent,
-    FeatureBoxComponent
+    FeatureBoxComponent,
+    ProgressIndicatorComponent
   ]
 })
 export class PatternsModule { }

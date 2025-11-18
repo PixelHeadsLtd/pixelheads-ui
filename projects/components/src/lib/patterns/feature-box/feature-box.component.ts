@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-feature-box',
+  selector: 'ph-feature-box',
   templateUrl: './feature-box.component.html',
   styleUrls: ['./feature-box.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

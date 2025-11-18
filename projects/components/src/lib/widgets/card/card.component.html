@@ -1,7 +1,7 @@
 <article 
-  id="aa-card"
+  id="ph-card"
   *ngIf="!cardOptional && !cardMini && !cardDetailed" 
-  class="aa-card flex-group width-control box-shadow" 
+  class="ph-card flex-group width-control box-shadow" 
   [ngStyle]="{
     'z-index' : zIndex,
     'top' : topPos,
@@ -15,7 +15,7 @@
   <div>
     <h3 title="{{cardName}}">{{cardName}}</h3>
     <p title="{{cardRole}}">{{cardRole}}</p>
-    <div class="aa-toolbar">
+    <div class="ph-toolbar">
       <ng-content select="[card-menu]"></ng-content>
     </div>
   </div>
@@ -23,7 +23,7 @@
 
 <article 
   *ngIf="cardOptional" 
-  class="aa-card-opt box-shadow" 
+  class="ph-card-opt box-shadow" 
   [ngStyle]="{'z-index' : zIndex}"
 >
     <div class="flex-group flex-end flex-align-center">
@@ -56,7 +56,7 @@
 
 <article 
   *ngIf="cardDetailed" 
-  class="aa-card card-detailed flex-group flex-nowrap box-shadow" 
+  class="ph-card card-detailed flex-group flex-nowrap box-shadow" 
   [ngStyle]="{
     'z-index' : zIndex,
     'top' : topPos,

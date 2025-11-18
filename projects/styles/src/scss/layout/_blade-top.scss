@@ -12,7 +12,7 @@
     .material-icons,
     .material-icons-outlined {
       color: _palette(white);
-      background-color: _palette(aa-blue-100);
+      background-color: _palette(ph-blue-100);
     }
   }
 
@@ -34,7 +34,7 @@
             div {
               border-bottom: none;
               span {
-                background-color: _palette(aa-light-blue-100);
+                background-color: _palette(ph-light-blue-100);
                 width: 100%;
               }
             }
@@ -42,7 +42,7 @@
            td {
               text-align: left;
               padding: .25rem 1rem .25rem .75rem;
-              border-bottom: 1px solid _palette(aa-light-blue-60);
+              border-bottom: 1px solid _palette(ph-light-blue-60);
            }
            tr {
             &:last-child {
@@ -56,7 +56,7 @@
     }
 
     h1, h2, h3, label, p, span:not(button span), dt, dd, th, td {
-      color: _palette(aa-white-100);
+      color: _palette(ph-white-100);
       margin-left: 0;
     }
     
@@ -76,19 +76,19 @@
     button {
       &.primary,
       &.secondary {
-        border-color: _colour(aa-white-100)!important;
+        border-color: _colour(ph-white-100)!important;
       }
       &.material-icons,
       &.material-icons-outlined {
         &:hover, &:focus {
-          background-color: _palette(aa-light-blue-100);
+          background-color: _palette(ph-light-blue-100);
         }
       }
     }
     
     .flag {
-      box-shadow: 0 0 3pt 0 _palette(aa-grey-50);
-      border: 1px solid _palette(aa-white-100);
+      box-shadow: 0 0 3pt 0 _palette(ph-grey-50);
+      border: 1px solid _palette(ph-white-100);
       position: absolute;
       top: 1rem;
       right: 0;
@@ -99,7 +99,7 @@
     .user-profile {
       border-radius: 50%;
       overflow: hidden;
-      background-color: _palette(aa-blue-100);
+      background-color: _palette(ph-blue-100);
     img {
       object-fit: cover;
       outline: none;

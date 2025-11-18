@@ -109,11 +109,6 @@ export class BladeComponent implements AfterContentChecked {
       tabName: 'Expose min/max tab',
       tabId: 'tab5',
       showTabFiveContent: true
-    },
-    {
-      tabName: 'suppressAutoClose',
-      tabId: 'tab6',
-      showTabSixContent: true
     }
   ]
 

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'aa-project-tour',
+  selector: 'ph-project-tour',
   templateUrl: './project-tour.component.html',
   styleUrls: ['./project-tour.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

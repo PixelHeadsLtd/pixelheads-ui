@@ -5,9 +5,9 @@
     width: fit-content;
     border-width: 2px;
     border-style: solid;
-    border-color: _colour(aa-light-blue-15);
+    border-color: _colour(ph-light-blue-15);
     border-radius: .5rem;
-    background-color: _colour(aa-white-100);
+    background-color: _colour(ph-white-100);
 
     h4 {
         border-radius: 1rem;
@@ -30,7 +30,7 @@
                 padding: 0;
             }
             &:not(:last-child) {
-                border-bottom: 2px solid _colour(aa-light-blue-15);
+                border-bottom: 2px solid _colour(ph-light-blue-15);
             }
         }
     }
@@ -39,27 +39,27 @@
         padding: 0 .75rem;
         margin: 0;
         &:not(:last-child, .flex-column section) {
-            border-right: 2px solid _colour(aa-light-blue-15);
+            border-right: 2px solid _colour(ph-light-blue-15);
         }
     }
 
     .default {
-        border-color: _colour(aa-blue-100);
+        border-color: _colour(ph-blue-100);
     }
 
     .not-started {
-        border-color: _colour(aa-grey-25);
+        border-color: _colour(ph-grey-25);
     }
 
     .approved {
-        border-color: _palette(aa-green-100);
+        border-color: _palette(ph-green-100);
     }
 
     .rejected {
-        border-color: _palette(aa-red-100);
+        border-color: _palette(ph-red-100);
     }
 
     .pending {
-        border-color: _palette(aa-orange-100);
+        border-color: _palette(ph-orange-100);
     }
 }
