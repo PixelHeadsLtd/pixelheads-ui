@@ -1,6 +1,6 @@
 # Notes
 
-# Run style-guide
+# Run pixelheads-ui
 
 - cd workspace
 

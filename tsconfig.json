@@ -24,8 +24,8 @@
       "dom"
     ],
     "paths": {
-      "@angloamerican/components": [ "dist/components" ],
-      "@angloamerican/components/*": [ "dist/components/*" ]
+      "@pixelheads/ui": [ "projects/components/src/public-api.ts" ],
+      "@pixelheads/ui/*": [ "projects/components/src/lib/*" ]
     }
   },
   "angularCompilerOptions": {

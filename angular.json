@@ -47,9 +47,9 @@
         }
       }
     },
-    "style-guide": {
-      "root": "projects/style-guide/",
-      "sourceRoot": "projects/style-guide/src",
+    "pixelheads-ui": {
+      "root": "projects/pixelheads-ui/",
+      "sourceRoot": "projects/pixelheads-ui/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -57,19 +57,19 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/style-guide",
-            "index": "projects/style-guide/src/index.html",
-            "main": "projects/style-guide/src/main.ts",
-            "polyfills": "projects/style-guide/src/polyfills.ts",
-            "tsConfig": "projects/style-guide/tsconfig.app.json",
+            "outputPath": "dist/pixelheads-ui",
+            "index": "projects/pixelheads-ui/src/index.html",
+            "main": "projects/pixelheads-ui/src/main.ts",
+            "polyfills": "projects/pixelheads-ui/src/polyfills.ts",
+            "tsConfig": "projects/pixelheads-ui/tsconfig.app.json",
             "assets": [
-              "projects/style-guide/src/favicon.ico",
-              "projects/style-guide/src/assets",
-              "projects/style-guide/src/web.config"
+              "projects/pixelheads-ui/src/favicon.ico",
+              "projects/pixelheads-ui/src/assets",
+              "projects/pixelheads-ui/src/web.config"
             ],
             "styles": [
               "projects/styles/src/scss/styles.scss",
-              "projects/style-guide/src/styles.scss",
+              "projects/pixelheads-ui/src/styles.scss",
               "node_modules/quill/dist/quill.core.css",
               "node_modules/quill/dist/quill.bubble.css",
               "node_modules/quill/dist/quill.snow.css"
@@ -89,8 +89,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/style-guide/src/environments/environment.ts",
-                  "with": "projects/style-guide/src/environments/environment.prod.ts"
+                  "replace": "projects/pixelheads-ui/src/environments/environment.ts",
+                  "with": "projects/pixelheads-ui/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -115,18 +115,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "style-guide:build"
+            "buildTarget": "pixelheads-ui:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "style-guide:build:production"
+              "buildTarget": "pixelheads-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "style-guide:build"
+            "buildTarget": "pixelheads-ui:build"
           }
         },
         "test": {
@@ -140,22 +140,22 @@
               "./node_modules/quill/dist/quill.min.js",
               "./node_modules/postscribe/dist/postscribe.min.js"
             ],
-            "tsConfig": "projects/style-guide/tsconfig.spec.json"
+            "tsConfig": "projects/pixelheads-ui/tsconfig.spec.json"
           }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/style-guide/**/*.ts",
-              "projects/style-guide/**/*.html"
+              "projects/pixelheads-ui/**/*.ts",
+              "projects/pixelheads-ui/**/*.html"
             ]
           }
         }
       }
     }
   },
-  "defaultProject": "style-guide",
+  "defaultProject": "pixelheads-ui",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"

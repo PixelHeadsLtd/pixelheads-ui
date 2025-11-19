@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build:style-guide"
-  publish = "dist/style-guide"
+  command = "npm run build:pixelheads-ui"
+  publish = "dist/pixelheads-ui"
 
 [build.environment]
   NODE_VERSION = "20"

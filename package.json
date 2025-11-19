@@ -10,7 +10,7 @@
     "ng": "ng",
     "start": "ng serve --port 4200",
     "build": "ng build",
-    "build:style-guide": "ng build style-guide",
+    "build:pixelheads-ui": "ng build pixelheads-ui",
     "test": "ng test",
     "lint": "ng lint"
   },
