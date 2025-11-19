@@ -1,4 +1,4 @@
-Anglo American styles
+Pixelheads UIn styles
 
 
 Bump the package version in package.json

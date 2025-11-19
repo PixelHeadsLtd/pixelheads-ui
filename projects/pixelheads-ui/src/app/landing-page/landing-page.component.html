@@ -463,10 +463,6 @@
         <div class="material-icons ph-green-100">check_box</div>
         <p>Checkbox</p>
       </a>
-      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
-        <div class="material-icons ph-green-100">chat</div>
-        <p>Comments</p>
-      </a>
       <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/field">
         <div class="material-icons ph-green-100">view_stream</div>
         <p>Field</p>
@@ -503,17 +499,9 @@
         <div class="material-icons ph-green-100">toggle_off</div>
         <p>Slider</p>
       </a>
-      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
-        <div class="material-icons ph-green-100">grid_on</div>
-        <p>Table</p>
-      </a>
       <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/input-textarea">
         <div class="material-icons ph-green-100">subject</div>
         <p>Textarea</p>
-      </a>
-      <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/ticker">
-        <div class="material-icons ph-green-100">text_rotation_none</div>
-        <p>Ticker</p>
       </a>
       <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/validation">
         <div class="material-icons ph-green-100">fact_check</div>
@@ -589,17 +577,13 @@
         <div class="material-icons ph-blue-100">filter_alt</div>
         <p>Filter</p>
       </a>
-      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/flex">
-        <div class="material-icons ph-blue-100">view_week</div>
-        <p>Flex</p>
+      <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/modal">
+        <div class="material-icons ph-blue-100">border_clear</div>
+        <p>Modal</p>
       </a>
-      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/footer">
-        <div class="material-icons ph-blue-100">call_to_action</div>
-        <p>Footer</p>
-      </a>
-      <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/header">
-        <div class="material-icons ph-blue-100 flip-y">call_to_action</div>
-        <p>Header</p>
+      <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/overlay">
+        <div class="material-icons ph-blue-100">border_outer</div>
+        <p>Overlay</p>
       </a>
       <a (click)="openLayoutNav()" class="call-to-action flex-center" routerLink="/ui-block">
         <div class="material-icons ph-blue-100">block</div>
@@ -652,14 +636,6 @@
       <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/context-menu">
         <div class="material-icons ph-orange-100">more_vert</div>
         <p>Context menu</p>
-      </a>
-      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/nav-context">
-        <div class="material-icons ph-orange-100">menu_open</div>
-        <p>Nav context</p>
-      </a>
-      <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator">
-        <div class="material-icons ph-orange-100 small">linear_scale</div>
-        <p>Progress indicatior</p>
       </a>
       <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/stepper">
         <div class="material-icons ph-orange-100">arrow_right_alt</div>
@@ -757,9 +733,17 @@
           <div class="material-icons ph-plum-100">forward_10</div>
           <p>Progress circle</p>
         </a>
+        <a (click)="openNavigationNav()" class="call-to-action flex-center" routerLink="/progress-indicator">
+          <div class="material-icons ph-plum-100 small">linear_scale</div>
+          <p>Progress indicatior</p>
+        </a>
         <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/status-indicator">
           <div class="material-icons ph-plum-100">check_circle</div>
           <p>Status indicator</p>
+        </a>
+        <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/tables">
+          <div class="material-icons ph-plum-100">grid_on</div>
+          <p>Table</p>
         </a>
         <a (click)="openPatternsNav()" class="call-to-action flex-center" routerLink="/tags">
           <div class="material-icons ph-plum-100">loyalty</div>
@@ -828,6 +812,10 @@
           <div class="material-icons ph-light-blue-100">recent_actors</div>
           <p>Carousel</p>
         </a>
+        <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/comments">
+          <div class="material-icons ph-light-blue-100">chat</div>
+          <p>Comments</p>
+        </a>
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/element-slider">
           <div class="material-icons ph-light-blue-100">chevron_left</div>
           <p>Element slider</p>
@@ -848,14 +836,6 @@
           <div class="material-icons ph-light-blue-100">checklist_rtl</div>
           <p>List selectable</p>
         </a>
-        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/modal">
-          <div class="material-icons ph-light-blue-100">border_clear</div>
-          <p>Modal</p>
-        </a>
-        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/overlay">
-          <div class="material-icons ph-light-blue-100">border_outer</div>
-          <p>Overlay</p>
-        </a>
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/popover">
           <div class="material-icons ph-light-blue-100">sms</div>
           <p>Popover</p>
@@ -863,6 +843,10 @@
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/summary-top">
           <div class="material-icons ph-light-blue-100">short_text</div>
           <p>Summary top</p>
+        </a>
+        <a (click)="openElementsNav()" class="call-to-action flex-center" routerLink="/ticker">
+          <div class="material-icons ph-light-blue-100">text_rotation_none</div>
+          <p>Ticker</p>
         </a>
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/toastr">
           <div class="material-icons ph-light-blue-100">admin_panel_settings</div>
@@ -875,10 +859,6 @@
         <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/tooltip-dynamic">
           <div class="material-icons ph-light-blue-100">question_answer</div>
           <p>Tooltip dynamic</p>
-        </a>
-        <a (click)="openWidgetsNav()" class="call-to-action flex-center" routerLink="/user-feedback">
-          <div class="material-icons ph-light-blue-100">sentiment_satisfied_alt</div>
-          <p>User feedback</p>
         </a>
       </div>
     </section>
@@ -943,7 +923,7 @@
                     <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fcomponents/versions" target="_blank">Latest Components version</a>
                   </p>
                   <p class="margin-top-0-25">
-                    <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/9.0.20/versions" target="_blank">Latest Anglo Framework (dark-mode requires 11.2^)</a>
+                    <a href="https://angloteamproject.visualstudio.com/CoreTeamProject/_artifacts/feed/Core/Npm/@angloamerican%2Fanglo-angular-framework/9.0.20/versions" target="_blank">Latest Pixelheads Framework (dark-mode requires 11.2^)</a>
                   </p>
                 </div>
         
@@ -959,7 +939,7 @@
                 </ol>
                 <p>Replacing X with the required version</p>
         
-                <h2 class="margin-bottom-0-5">Anglo Angular Framework</h2>
+                <h2 class="margin-bottom-0-5">Pixelheads Angular Framework</h2>
                 <ol class="code">
                   <li>1. npm install &#64;angloamerican/anglo-angular-framework&#64;X.X.X</li>
                 </ol>
@@ -967,7 +947,7 @@
         
                 <h2 class="margin-bottom-0-5">Configure your app files</h2>
                 <h3>Add the Design Language Styles</h3>
-                <p>In your project <strong class="ph-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Anglo one is last.</p>
+                <p>In your project <strong class="ph-red-100">angular.json</strong> call the styles file from the node package.<br/>Ensure the Pixelheads one is last.</p>
                 <ol class="code margin-top-0-5">
                   <li>"styles": [</li>
                   <li>&nbsp;&nbsp;&nbsp;&nbsp;"path/to/all/other/scss/files.scss",</li>
