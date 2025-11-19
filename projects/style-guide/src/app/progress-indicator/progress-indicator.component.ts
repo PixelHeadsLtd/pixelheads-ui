@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class ProgressIndicatorComponent {
 
   toggleBlade:boolean = false;
-  progressIndicator: boolean = false;
-  progressIndicatorIcons: boolean = false;
   showCurrent: boolean = false;
   showVisited: boolean = false;
   showIncomplete: boolean = false;

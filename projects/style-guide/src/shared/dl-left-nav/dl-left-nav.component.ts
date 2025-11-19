@@ -41,7 +41,6 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'insert_link', title: 'Anchor', routerLink: '/anchor' },
           { iconName: 'gamepad', title: 'Button', routerLink: '/buttons' },
           { iconName: 'check_box', title: 'Checkbox', routerLink: '/checkbox' },
-          { iconName: 'chat', title: 'Comments', routerLink: '/comments' },
           { iconName: 'view_stream', title: 'Field', routerLink: '/field' },
           { iconName: 'web', title: 'Fieldset', routerLink: '/fieldset' },
           { iconName: 'backup', title: 'File upload', routerLink: '/file-upload' },
@@ -51,9 +50,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'hdr_strong', title: 'Range slider', routerLink: '/range-slider' },
           { iconName: 'rule', title: 'Select', routerLink: '/select' },
           { iconName: 'toggle_off', title: 'Slider', routerLink: '/slider' },
-          { iconName: 'grid_on', title: 'Table', routerLink: '/tables' },
           { iconName: 'subject', title: 'Textarea', routerLink: '/input-textarea' },
-          { iconName: 'text_rotation_none', title: 'Ticker', routerLink: '/ticker' },
           { iconName: 'fact_check', title: 'Validation', routerLink: '/validation' }
         ]
     },
@@ -96,6 +93,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'forward_10', title: 'Progress circle', routerLink: '/progress-circle' },
           { iconName: 'linear_scale', title: 'Progress indicator', routerLink: '/progress-indicator' },
           { iconName: 'check_circle', title: 'Status indicator', routerLink: '/status-indicator' },
+          { iconName: 'grid_on', title: 'Table', routerLink: '/tables' },
           { iconName: 'loyalty', title: 'Tags', routerLink: '/tags' }
         ]
     },
@@ -107,6 +105,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'view_list', title: 'Accordion fancy', routerLink: '/accordion-fancy' },
           { iconName: 'account_box', title: 'Card', routerLink: '/card' },
           { iconName: 'recent_actors', title: 'Carousel', routerLink: '/carousel' },
+          { iconName: 'chat', title: 'Comments', routerLink: '/comments' },
           { customClass: 'flip-y', iconName: 'filter_list', title: 'Element slider', routerLink: '/element-slider' },
           { iconName: 'star', title: 'Favourites', routerLink: '/favourites' },
           { iconName: 'face', title: 'Icon picker', routerLink: '/icon-picker' },
@@ -114,6 +113,7 @@ export class DlLeftNavComponent implements OnInit, OnDestroy {
           { iconName: 'checklist_rtl', title: 'List selectable', routerLink: '/list-selectable' },
           { iconName: 'sms', title: 'Popover', routerLink: '/popover' },
           { iconName: 'short_text', title: 'Summary top', routerLink: '/summary-top' },
+          { iconName: 'text_rotation_none', title: 'Ticker', routerLink: '/ticker' },
           { iconName: 'admin_panel_settings', title: 'Toastr', routerLink: '/toastr' },
           { iconName: 'mode_comment', title: 'Tooltip', routerLink: '/tooltip' },
           { iconName: 'question_answer', title: 'Tooltip dynamic', routerLink: '/tooltip-dynamic' }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommentArray } from 'projects/components/src/lib/elements/comments/comments.component';
+import { CommentArray } from '@angloamerican/components';
 
 @Component({
   selector: 'app-comments',

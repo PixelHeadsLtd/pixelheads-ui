@@ -28,6 +28,10 @@ import { TooltipDynamicDirective } from './tooltip-dynamic/tooltip-dynamic.direc
 import { UserFeedbackComponent } from './user-feedback/user-feedback.component';
 import { ListSelectableComponent } from './list-selectable/list-selectable.component';
 import { OrderByPipe } from '../pipes/order-by';
+import { CommentsComponent } from './comments/comments.component';
+import { DateFormatPipe } from '../pipes/date-pipe';
+import { TickerComponent } from './ticker/ticker.component';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +61,10 @@ import { OrderByPipe } from '../pipes/order-by';
     TooltipDynamicDirective,
     UserFeedbackComponent,
     ListSelectableComponent,
-    OrderByPipe
+    OrderByPipe,
+    CommentsComponent,
+    DateFormatPipe,
+    TickerComponent
   ],
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   providers: [ToastService],
@@ -88,7 +95,10 @@ import { OrderByPipe } from '../pipes/order-by';
     TooltipDynamicDirective,
     UserFeedbackComponent,
     ListSelectableComponent,
-    OrderByPipe
+    OrderByPipe,
+    CommentsComponent,
+    DateFormatPipe,
+    TickerComponent
   ]
 })
 export class WidgetsModule {}

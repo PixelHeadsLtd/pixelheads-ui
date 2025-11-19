@@ -26,4 +26,6 @@ export * from './tooltip-dynamic/tooltip-dynamic.enums';
 export * from './user-feedback/user-feedback.component';
 export * from '../pipes/icon-filter';
 export * from '../directives/carousel/carousel-item.directive';
-
+export * from './comments/comments.component';
+export * from '../pipes/date-pipe';
+export * from './ticker/ticker.component';

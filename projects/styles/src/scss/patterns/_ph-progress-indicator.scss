@@ -138,7 +138,7 @@
 
 // NEW ADVANCED VERSION
 .ph-progress-indicator {
-  ph-progress-indicator-advanced {
+  ph-progress-indicator {
     margin-right: 0;
     &:last-child {
       flex: none;
@@ -157,7 +157,7 @@
     }
 
     &:not(:last-child):after,
-    &:not(.ph-progress-indicator ph-progress-indicator-advanced:last-child .indicator-item):after {
+    &:not(.ph-progress-indicator ph-progress-indicator:last-child .indicator-item):after {
       content: "";
       height: 1px;
       background-color: _colour(ph-grey-10);

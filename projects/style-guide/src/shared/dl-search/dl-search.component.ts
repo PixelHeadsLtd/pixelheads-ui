@@ -73,13 +73,6 @@ export class DlSearchComponent {
       heading: 'Elements and inputs',
       icon: 'check_box',
       iconColour: 'bg-ph-green-80',
-      link: 'comments',
-    },
-    {
-      id: 'ElementsAndInputs',
-      heading: 'Elements and inputs',
-      icon: 'check_box',
-      iconColour: 'bg-ph-green-80',
       link: 'field',
     },
     {
@@ -106,7 +99,7 @@ export class DlSearchComponent {
     {
       id: 'ElementsAndInputs',
       heading: 'Elements and inputs',
-      icon: 'checklist',
+      icon: 'check_box',
       iconColour: 'bg-ph-green-80',
       link: 'multi-select',
     },
@@ -120,7 +113,7 @@ export class DlSearchComponent {
     {
       id: 'ElementsAndInputs',
       heading: 'Elements and inputs',
-      icon: 'hdr_strong',
+      icon: 'check_box',
       iconColour: 'bg-ph-green-80',
       link: 'range-slider',
     },
@@ -143,21 +136,7 @@ export class DlSearchComponent {
       heading: 'Elements and inputs',
       icon: 'check_box',
       iconColour: 'bg-ph-green-80',
-      link: 'tables',
-    },
-    {
-      id: 'ElementsAndInputs',
-      heading: 'Elements and inputs',
-      icon: 'check_box',
-      iconColour: 'bg-ph-green-80',
       link: 'input-textarea',
-    },
-    {
-      id: 'ElementsAndInputs',
-      heading: 'Elements and inputs',
-      icon: 'text_rotation_none',
-      iconColour: 'bg-ph-green-80',
-      link: 'ticker',
     },
     {
       id: 'ElementsAndInputs',
@@ -212,7 +191,7 @@ export class DlSearchComponent {
         {
       id: 'Layout',
       heading: 'Layout',
-      icon: 'touch_app',
+      icon: 'dashboard',
       iconColour: 'bg-ph-blue-100',
       link: 'modal',
     },
@@ -310,8 +289,8 @@ export class DlSearchComponent {
         {
       id: 'Patterns',
       heading: 'Patterns',
-      icon: 'touch_app',
-      iconColour: 'bg-ph-blue-100',
+      icon: 'apps',
+      iconColour: 'bg-ph-light-blue-100',
       link: 'overlay',
     },
     {
@@ -331,7 +310,7 @@ export class DlSearchComponent {
         {
       id: 'Patterns',
       heading: 'Patterns',
-      icon: 'menu_open',
+      icon: 'apps',
       iconColour: 'bg-ph-plum-100',
       link: 'progress-indicator',
     },
@@ -341,6 +320,13 @@ export class DlSearchComponent {
       icon: 'apps',
       iconColour: 'bg-ph-plum-100',
       link: 'status-indicator',
+    },
+    {
+      id: 'Patterns',
+      heading: 'Patterns',
+      icon: 'apps',
+      iconColour: 'bg-ph-green-80',
+      link: 'tables',
     },
     {
       id: 'Patterns',
@@ -379,6 +365,13 @@ export class DlSearchComponent {
       icon: 'touch_app',
       iconColour: 'bg-ph-light-blue-100',
       link: 'carousel',
+    },
+        {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-ph-light-blue-80',
+      link: 'comments',
     },
     {
       id: 'Widgets',
@@ -435,6 +428,13 @@ export class DlSearchComponent {
       icon: 'touch_app',
       iconColour: 'bg-ph-light-blue-100',
       link: 'summary-top',
+    },
+    {
+      id: 'Widgets',
+      heading: 'Widgets',
+      icon: 'touch_app',
+      iconColour: 'bg-ph-green-80',
+      link: 'ticker',
     },
     {
       id: 'Widgets',

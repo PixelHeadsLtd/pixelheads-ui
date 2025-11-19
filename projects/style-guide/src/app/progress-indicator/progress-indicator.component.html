@@ -128,7 +128,7 @@
 
       <!-- mini menu -->
       <nav class="mini-menu flex-group flex-end">
-          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true); progressIndicator=true; progressIndicatorIcons=false">
+          <button class="custom-icons bg-ph-light-blue-100" (click)="bladeIsOpen(true)">
             <span class="material-icons">visibility</span><span>View gist</span>
           </button>
         </nav>
@@ -209,13 +209,7 @@
     (bladeOpen)="bladeIsOpen($event)"
   >
   <article class="blade-content">
-    <div *ngIf="progressIndicator">
-      <a href="https://gist.github.com/PixelHeadsLtd/c731c7e7af543ce49b210c442fbb4952" target="_blank">View Gist on GitHub</a>
-      <app-gist src="PixelHeadsLtd/c731c7e7af543ce49b210c442fbb4952"></app-gist>
-    </div>
-    <div *ngIf="progressIndicatorIcons">
-      <a href="https://gist.github.com/PixelHeadsLtd/166d065af3e4273089273a6fdcb3bc35" target="_blank">View Gist on GitHub</a>
-      <app-gist src="PixelHeadsLtd/166d065af3e4273089273a6fdcb3bc35"></app-gist>
-    </div>
+    <a href="https://gist.github.com/PixelHeadsLtd/d171f87a835da53376afba81fb2ad09b" target="_blank">View Gist on GitHub</a>
+    <app-gist src="PixelHeadsLtd/d171f87a835da53376afba81fb2ad09b"></app-gist>
   </article>
 </ph-blade>
