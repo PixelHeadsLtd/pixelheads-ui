@@ -3,8 +3,8 @@ import { AppComponent } from './app.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { FormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { DateFormatPipe } from '../pipes/date-pipe';
-import { AppIconsPipe } from '../pipes/app-icons.pipe';
+import { DateFormatPipe } from '../shared/pipes/date-pipe';
+import { AppIconsPipe } from '../shared/pipes/app-icons.pipe';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Router } from '@angular/router';
 

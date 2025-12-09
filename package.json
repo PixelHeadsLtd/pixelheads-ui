@@ -9,8 +9,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4200",
+
     "build": "ng build",
-    "build:pixelheads-ui": "ng build pixelheads-ui",
+    "build:components": "ng build components",
+    "build:styles": "node tools/build-styles.js",
+
+    "publish:components": "npm run build:components && cd dist/components && npm publish --access public",
+    "publish:styles": "npm run build:styles && cd dist/styles && npm publish --access public",
+
+    "publish:all": "npm run publish:components && npm run publish:styles",
+
     "test": "ng test",
     "lint": "ng lint"
   },

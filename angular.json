@@ -1,7 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+
   "newProjectRoot": "projects",
+
   "projects": {
     "components": {
       "root": "projects/components",
@@ -29,10 +31,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "projects/components/tsconfig.spec.json"
           }
         },
@@ -47,36 +46,57 @@
         }
       }
     },
+    "styles": {
+      "root": "projects/styles",
+      "sourceRoot": "projects/styles/src",
+      "projectType": "library",
+      "prefix": "ph",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/styles/tsconfig.lib.json",
+            "project": "projects/styles/ng-package.json"
+          }
+        }
+      }
+    },
     "pixelheads-ui": {
-      "root": "projects/pixelheads-ui/",
-      "sourceRoot": "projects/pixelheads-ui/src",
+      "root": "apps/pixelheads-ui",
+      "sourceRoot": "apps/pixelheads-ui/src",
       "projectType": "application",
       "prefix": "app",
+
       "schematics": {},
+
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/pixelheads-ui",
-            "index": "projects/pixelheads-ui/src/index.html",
-            "main": "projects/pixelheads-ui/src/main.ts",
-            "polyfills": "projects/pixelheads-ui/src/polyfills.ts",
-            "tsConfig": "projects/pixelheads-ui/tsconfig.app.json",
+            "index": "apps/pixelheads-ui/src/index.html",
+            "main": "apps/pixelheads-ui/src/main.ts",
+            "polyfills": "apps/pixelheads-ui/src/polyfills.ts",
+            "tsConfig": "apps/pixelheads-ui/tsconfig.app.json",
+
             "assets": [
-              "projects/pixelheads-ui/src/favicon.ico",
-              "projects/pixelheads-ui/src/assets",
-              "projects/pixelheads-ui/src/web.config"
+              "apps/pixelheads-ui/src/favicon.ico",
+              "apps/pixelheads-ui/src/assets",
+              "apps/pixelheads-ui/src/web.config"
             ],
+
             "styles": [
               "projects/styles/src/scss/styles.scss",
-              "projects/pixelheads-ui/src/styles.scss",
+              "apps/pixelheads-ui/src/styles.scss",
               "node_modules/quill/dist/quill.core.css",
               "node_modules/quill/dist/quill.bubble.css",
               "node_modules/quill/dist/quill.snow.css"
             ],
+
             "scripts": [
-              "./node_modules/postscribe/dist/postscribe.min.js"
+              "node_modules/postscribe/dist/postscribe.min.js"
             ],
+
             "aot": true,
             "vendorChunk": true,
             "extractLicenses": false,
@@ -89,8 +109,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/pixelheads-ui/src/environments/environment.ts",
-                  "with": "projects/pixelheads-ui/src/environments/environment.prod.ts"
+                  "replace": "apps/pixelheads-ui/src/environments/environment.ts",
+                  "with": "apps/pixelheads-ui/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -112,6 +132,7 @@
           },
           "defaultConfiguration": ""
         },
+
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
@@ -123,44 +144,47 @@
             }
           }
         },
+
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "buildTarget": "pixelheads-ui:build"
           }
         },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "scripts": [
-              "./node_modules/quill/dist/quill.min.js",
-              "./node_modules/postscribe/dist/postscribe.min.js"
+              "node_modules/quill/dist/quill.min.js",
+              "node_modules/postscribe/dist/postscribe.min.js"
             ],
-            "tsConfig": "projects/pixelheads-ui/tsconfig.spec.json"
+            "tsConfig": "apps/pixelheads-ui/tsconfig.spec.json"
           }
         },
+
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/pixelheads-ui/**/*.ts",
-              "projects/pixelheads-ui/**/*.html"
+              "apps/pixelheads-ui/**/*.ts",
+              "apps/pixelheads-ui/**/*.html"
             ]
           }
         }
       }
     }
   },
+
   "defaultProject": "pixelheads-ui",
+
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"
     }
   },
+
   "cli": {
     "analytics": false
   }

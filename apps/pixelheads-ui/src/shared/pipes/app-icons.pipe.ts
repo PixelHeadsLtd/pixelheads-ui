@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { AppIconsData } from '../class/app-icons-data';
+import { AppIconsData } from '../../class/app-icons-data';
 
 @Pipe({ name: 'filterCoreApps' })
 export class AppIconsPipe implements PipeTransform {

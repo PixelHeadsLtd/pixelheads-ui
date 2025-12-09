@@ -1,9 +1,19 @@
 {
   "name": "@pixelheads-ui/styles",
-  "version": "0.0.0-set-in-pipeline",
-  "description": "PixelHeads UI - Stylesheets",
+  "version": "0.1.0",
+  "description": "PixelHeads UI - Global SCSS styles, variables, tokens, utilities",
+  "author": "PixelHeads Ltd",
+  "license": "MIT",
   "files": [
     "src/scss/**/*",
     "src/assets/**/*"
+  ],
+  "keywords": [
+    "scss",
+    "design system",
+    "design tokens",
+    "pixelheads",
+    "ui kit",
+    "stylesheets"
   ]
 }

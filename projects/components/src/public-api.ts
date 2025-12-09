@@ -2,7 +2,6 @@
  * Public API Surface of components
  */
 export * from './lib/directives/index';
-
 export * from './lib/animations/index';
 export * from './lib/elements/index';
 export * from './lib/layout/index';

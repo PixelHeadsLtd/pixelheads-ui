@@ -15,7 +15,6 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { AppIconsPipe } from '../pipes/app-icons.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,7 @@ import { RouterModule } from '@angular/router';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionFancyComponent } from './accordion-fancy/accordion-fancy.component';
 import { ActionsSummaryComponent } from './actions-summary/actions-summary.component';
+import { AgGridModule } from 'ag-grid-angular';
 import { AlertsComponent } from './alerts/alerts.component';
 import { AnchorComponent } from './anchor/anchor.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -41,16 +41,12 @@ import { ColoursComponent } from './colours/colours.component';
 import { ContextMenuComponent } from './context-menu/context-menu.component';
 import { ElementSliderComponent } from './element-slider/element-slider.component';
 import { FavouritesComponent } from './favourites/favourites.component';
-import { DateFormatPipe } from '../pipes/date-pipe';
-import { NGBDateFormatPipe } from '../pipes/ngb-date-pipe';
 import { EditorialComponent } from './editorial/editorial.component';
 import { FieldComponent } from './field/field.component';
 import { FieldsetComponent } from './fieldset/fieldset.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { FileUploadDirective } from './file-upload/file-upload.directive';
 import { FilterComponent } from './filter/filter.component';
-import { FilterPipe } from '../pipes/filter.pipe';
-import { ColumnFilterPipe } from '../pipes/column-filter-pipe';
 import { IconsComponent } from './icons/icons.component';
 import { InputComponent } from './input/input.component';
 import { InputTextareaComponent } from './input-textarea/input-textarea.component';
@@ -79,7 +75,7 @@ import { ProgressCircleComponent } from './progress-circle/progress-circle.compo
 import { ReleaseNotesComponentsComponent } from '../release-notes/release-notes-components.component';
 import { ReleaseNotesStylesComponent } from '../release-notes/release-notes-styles.component';
 import { SelectComponent } from './select/select.component';
-import { SharedModule } from './shared/shared.module';
+import { PixelheadsSharedModule } from '../shared/pixelheads-shared.module';
 import { AlertShieldsComponent } from './alert-shields/alert-shields.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { SummaryTopComponent } from './summary-top/summary-top.component';
@@ -93,7 +89,6 @@ import { InputRadioComponent } from './input-radio/input-radio.component';
 import { ValidationComponent } from './validation/validation.component';
 import { IconPickerComponent } from './icon-picker/icon-picker.component';
 import { InfoPanelComponent } from './info-panel/info-panel.component';
-import { HighlightDirective } from '../directives/highlight.directive';
 import { SliderComponent } from './slider/slider.component';
 import { ToastrComponent } from './toastr/toastr.component';
 import { TreeComponent } from './tree-menu/tree/tree.component';
@@ -103,22 +98,15 @@ import { ListSelectableComponent } from './list-selectable/list-selectable.compo
 import { UiBlockComponent } from './ui-block/ui-block.component';
 import { StatusIndicatorComponent } from './status-indicator/status-indicator.component';
 import { CounterComponent } from './counter/counter.component';
-import { ClickOutsideDirective } from '../directives/click-outside.directive';
 import { CustomWrapperComponent } from './custom-wrapper/custom-wrapper.component';
 import { TooltipDynamicComponent } from './tooltip-dynamic/tooltip-dynamic.component';
 import { RotatingSphereComponent } from './landing-page/rotating-sphere.component';
 import { RangeSliderComponent } from './range-slider/range-slider.component';
-import { DlHeaderComponent } from '../shared/dl-header/dl-header.component';
-import { DlLeftNavComponent } from '../shared/dl-left-nav/dl-left-nav.component';
-import { DlAppsBladeComponent } from '../shared/dl-apps-blade/dl-apps-blade.component';
-import { DlLoginBladeComponent } from '../shared/dl-login-blade/dl-login-blade.component';
-import { DlSearchComponent } from '../shared/dl-search/dl-search.component';
 import { MultiSelectComponent } from './multi-select/multi-select.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppIconsPipe,
     AccordionComponent,
     AccordionFancyComponent,
     ActionsSummaryComponent,
@@ -138,12 +126,8 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     ContextMenuComponent,
     ElementSliderComponent,
     FavouritesComponent,
-    DateFormatPipe,
-    NGBDateFormatPipe,
     EditorialComponent,
     FilterComponent,
-    FilterPipe,
-    ColumnFilterPipe,
     FieldComponent,
     ValidationComponent,
     FieldsetComponent,
@@ -189,7 +173,6 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     WidthsComponent,
     InputRadioComponent,
     InfoPanelComponent,
-    HighlightDirective,
     SliderComponent,
     BorderRadiusComponent,
     BorderComponent,
@@ -203,16 +186,10 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     UiBlockComponent,
     StatusIndicatorComponent,
     CounterComponent,
-    ClickOutsideDirective,
     CustomWrapperComponent,
     TooltipDynamicComponent,
     RotatingSphereComponent,
     RangeSliderComponent,
-    DlHeaderComponent,
-    DlLeftNavComponent,
-    DlAppsBladeComponent,
-    DlLoginBladeComponent,
-    DlSearchComponent,
     MultiSelectComponent
   ],
   imports: [
@@ -225,7 +202,7 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
-    SharedModule,
+    PixelheadsSharedModule,
     AnimationsModule,
     NgSelectModule,
     DirectivesModule,
@@ -236,7 +213,8 @@ import { MultiSelectComponent } from './multi-select/multi-select.component';
     WidgetsModule,
     DragDropModule,
     HighchartsChartModule,
-    QuillModule.forRoot()
+    QuillModule.forRoot(),
+    AgGridModule
   ],
   exports: [],
   bootstrap: [AppComponent]
