@@ -13,6 +13,7 @@
     "build": "ng build",
     "build:components": "ng build components",
     "build:styles": "node tools/build-styles.js",
+    "build:pixelheads-ui": "ng build pixelheads-ui",
 
     "publish:components": "npm run build:components && cd dist/components && npm publish --access public",
     "publish:styles": "npm run build:styles && cd dist/styles && npm publish --access public",
